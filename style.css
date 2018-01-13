@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+p {  
+	font-family: Arial; 
+}
+
+header {
+}
+
+.logo {
+	max-width:90%;
+    max-height:90%;
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    margin:auto;
+}
+
+main {
+	text-align: center; 
+	font-size: 150%;
+}
+
+.wps {
+	color: fuchsia;
+}
+
+
+footer {
+	text-align: left;
+	font-size: 100%;
+}
+
+.contacts {
+	position: absolute;
+	top: 10%;
+    left: 0;
+ /*   border: 0.2em solid black;*/
+ 	outline: 0.2em solid black;
+ 	outline-offset: -0.1em;
+}
+
+.contacts mark {
+    background-color: black;
+    color: white;
+}
