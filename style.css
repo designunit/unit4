@@ -23,7 +23,7 @@ body {
 }
 
 p {  
-    font-family: Regular; 
+	font-family: Regular; 
 }
 
 p.small {
@@ -51,8 +51,8 @@ b {
 }
 
 /*h2 {  
-    font-family: Proxima Nova;
-    font-size: 150%;
+	font-family: Proxima Nova;
+	font-size: 150%;
 }
 */
 a:link, a:visited { 
@@ -70,18 +70,19 @@ a:hover {
 }
 
 header {
-    text-align: left;
-    font-size: 100%;
+	text-align: left;
+	font-size: 100%;
 }
 
 /*.contacts {
-    position: absolute;
-    top: 2em;
+	position: absolute;
+	top: 2em;
     left: 0;
     border: 0.2em solid black;
-    outline: 0.2em solid black;
-    outline-offset: -0.1em;
+ 	outline: 0.2em solid black;
+ 	outline-offset: -0.1em;
 }
+
 .contacts mark {
     background-color: black;
     color: white;
@@ -100,12 +101,12 @@ header {
 }
 
 main {
-    text-align: left;
-    color: black;
+	text-align: left;
+	color: black;
 }
 
 .logo {
-    max-width:90%;
+	max-width:90%;
     max-height:90%;
     position:absolute;
     top:0; left:0; right:0; bottom:0;
@@ -113,7 +114,7 @@ main {
 }
 
 /*.menu {
-    max-width:50%;
+	max-width:50%;
     max-height:50%;
     position:absolute;
     top:0%; left:0%; right:0; bottom:0;
@@ -122,9 +123,9 @@ main {
 */
 
 .container {
-    position: absolute;
-    top:10em; left: 5%;
-    overflow-x: auto;
+	position: absolute;
+	top:10em; left: 5%;
+	overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
 
@@ -145,7 +146,7 @@ main {
 }
 
 footer {
-    position:absolute;
-    bottom: 1em;
+	position:absolute;
+	bottom: 1em;
     left: 5%;
 }
