@@ -11,9 +11,47 @@ p {
 	font-family: Proxima Nova; 
 }
 
+p.small {
+    line-height: 120%;
+}
+
+p.big {
+    line-height: 200%;
+}
+
+p.break-word {
+    width: 20em;
+    overflow-wrap: break-word;
+}
+
+p.copyright {
+    color: grey;
+    text-align: left;
+    font-size: 80%;
+}
+
+b {
+    font-style: bold;
+    font-size: 150%;
+}
+
 h2 {  
 	font-family: Proxima Nova;
 	font-size: 150%;
+}
+
+a:link, a:visited { 
+    color: black;
+    text-decoration: none;
+    cursor: auto;
+}
+
+a:active { 
+    color: magenta;
+}
+
+a:hover {
+    color: magenta;
 }
 
 header {
@@ -21,11 +59,11 @@ header {
 	font-size: 100%;
 }
 
-.contacts {
+/*.contacts {
 	position: absolute;
 	top: 2em;
     left: 0;
- /*   border: 0.2em solid black;*/
+    border: 0.2em solid black;
  	outline: 0.2em solid black;
  	outline-offset: -0.1em;
 }
@@ -34,17 +72,17 @@ header {
     background-color: black;
     color: white;
 }
-
+*/
 .contact {
-	position: absolute;
-	top: 2em;
-    left: 0;
+    position: absolute;
+    top: 2em;
+    right: 0;
 }
 
 .home {
-	position: absolute;
-	top: 2em;
-    right: 2em;
+    position: absolute;
+    top: 2em;
+    left: 5em;
 }
 
 main {
@@ -60,13 +98,14 @@ main {
     margin:auto;
 }
 
-.menu {
+/*.menu {
 	max-width:50%;
     max-height:50%;
     position:absolute;
     top:0%; left:0%; right:0; bottom:0;
     margin:auto;
 }
+*/
 
 .container {
 	position: absolute;
@@ -78,13 +117,15 @@ main {
 }
 
 .block { 
-    width:23em; 
+    width:20em; 
     height:35em; 
     float:left; 
-    margin-right:1em; 
-    text-align:left;
-    display: inline-block
+    margin-right:5em;
+    display: inline-block;
     vertical-align: top;
+/*    overflow-x: hidden;
+    overflow-y: auto;*/
+/*    word-wrap: break-word;*/
 
  /*   border: 1px solid black;*/
 }
@@ -94,10 +135,3 @@ footer {
 	bottom: 1em;
     left: 5em;
 }
-
-.copyright {
-	color: grey;
-	text-align: left;
-	font-size: 80%;
-}
-
