@@ -82,7 +82,7 @@ header {
 .home {
     position: absolute;
     top: 2em;
-    left: 5em;
+    left: 5%;
 }
 
 main {
@@ -109,7 +109,7 @@ main {
 
 .container {
 	position: absolute;
-	top:10em; left: 5em;
+	top:10em; left: 5%;
 	overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -133,5 +133,5 @@ main {
 footer {
 	position:absolute;
 	bottom: 1em;
-    left: 5em;
+    left: 5%;
 }
