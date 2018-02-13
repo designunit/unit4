@@ -132,10 +132,10 @@ main {
 }
 
 .block { 
-    width:20em; 
-    height:35em; 
+    width:15em; 
+    height:15em; 
     float:left; 
-    margin-right:5em;
+    margin-right:2em;
     display: inline-block;
     vertical-align: top;
 /*    overflow-x: hidden;
