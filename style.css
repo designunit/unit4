@@ -69,6 +69,10 @@ a:hover {
     color: magenta;
 }
 
+a svg:hover #partners { 
+    fill: magenta;
+}
+
 header {
 	text-align: left;
 	font-size: 100%;
@@ -125,17 +129,15 @@ main {
 .container {
 	position: absolute;
 	top:10em; left: 5%;
-	overflow-x: auto;
-    overflow-y: hidden;
+	overflow-x: hidden;
+    overflow-y: auto;
     white-space: nowrap;
-
 }
 
 .block { 
-    width:20em; 
-    height:35em; 
+    width:15em; 
     float:left; 
-    margin-right:5em;
+    margin-right:2em;
     display: inline-block;
     vertical-align: top;
 /*    overflow-x: hidden;
