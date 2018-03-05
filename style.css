@@ -31,6 +31,7 @@ p.small {
 }
 
 p.big {
+    font-family: Thin;
     line-height: 200%;
 }
 
@@ -104,17 +105,17 @@ header {
     left: 5%;
 }
 
-main {
-	text-align: left;
-	color: black;
-}
-
 .logo {
 	max-width:90%;
     max-height:90%;
     position:absolute;
     top:0; left:0; right:0; bottom:0;
     margin:auto;
+}
+
+.logo-partners {
+/*    margin-top:1em;*/
+    margin-bottom:2em;
 }
 
 /*.menu {
@@ -134,10 +135,10 @@ main {
     white-space: nowrap;
 }
 
-.block { 
+.block-txt { 
     width:15em; 
     float:left; 
-    margin-right:2em;
+    margin-right:5em;
     display: inline-block;
     vertical-align: top;
 /*    overflow-x: hidden;
@@ -145,6 +146,14 @@ main {
 /*    word-wrap: break-word;*/
 
  /*   border: 1px solid black;*/
+}
+
+.block-img { 
+/*    width:50%; */
+    float:left; 
+    margin-right:5em;
+    display: inline-block;
+    vertical-align: top;
 }
 
 footer {
