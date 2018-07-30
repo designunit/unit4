@@ -1,8 +1,19 @@
 import react from 'react'
 import MainLogo from '../components/MainLogo'
+import Contact from '../components/Contact'
+
+import DefaultLayout from '../components/DefaultLayout';
 
 export default () => (
-    <div>
-        <MainLogo/>
-    </div>
+    <DefaultLayout
+        logo={false}
+    >
+        <Contact
+            mix='contact--dark'
+            href="mailto:inbox@unit4.io"
+        >
+            inbox@unit4.io
+        </Contact>
+        <MainLogo />
+    </DefaultLayout>
 )
