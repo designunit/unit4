@@ -1,7 +1,8 @@
 import react from 'react'
+import MainLogo from '../components/MainLogo'
 
 export default () => (
     <div>
-        unit4
+        <MainLogo/>
     </div>
 )
