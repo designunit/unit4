@@ -1,63 +1,41 @@
 import react from 'react'
 import DefaultLayout from '../components/DefaultLayout';
 import Title from '../components/Title';
+import Gallery from '../components/Gallery';
 
 export default ({ children }) => (
     <DefaultLayout>
-        <div className="container">
-            <Title caption="repository">РЕПОЗИТОРИЙ</Title>
+        <Title caption="repository">РЕПОЗИТОРИЙ</Title>
 
-            <div className="gallery">
-                <div className="icon">
-                    <a href="/repository/chistopol">
-                        <img src="/static/repository/chistopol/links/01.jpg" className="icon-img" />
-
-                        <div className="icon-overlay">
-                            <div className="icon-text"><p>KARL MARX<br />BOULEVARD<br />PHASE #1</p></div>
-                        </div>
-                    </a>
-                </div>
-
-                <div className="icon">
-                    <a href="/chistopol2.0">
-                        <img src="/static/repository/chistopol2.0/links/01.jpg" className="icon-img" />
-                        <div className="icon-overlay">
-                            <div className="icon-text"><p>KARL MARX<br />BOULEVARD<br />PHASE #2</p></div>
-                        </div>
-                    </a>
-                </div>
-
-                <div className="icon">
-                    <a href="/kemb">
-                        <img src="/static/repository/kemb/links/01.jpg" className="icon-img" />
-                        <div className="icon-overlay">
-                            <div className="icon-text"><p>KARPOVKA<br />EMBANKMENT</p></div>
-                        </div>
-                    </a>
-                </div>
-
-                <div className="icon">
-                    <a href="/krvostok">
-                        <img src="/static/repository/krvostok/links/01.jpg" className="icon-img" />
-                        <div className="icon-overlay">
-                            <div className="icon-text"><p>RED EAST</p></div>
-                        </div>
-                    </a>
-                </div>
-
-                <div className="icon">
-                    <a href="/trollgardens">
-                        <img src="/static/repository/trollgardens/links/01.jpg" className="icon-img" />
-                        <div className="icon-overlay">
-                            <div className="icon-text"><p>TROLL GARDENS</p></div>
-                        </div>
-                    </a>
-                </div>
-
-                <div className="icon">
-
-                </div>
-            </div>
-        </div>
+        <Gallery
+            theme='interactive'
+            items={[
+                {
+                    href: '/repository/chistopol',
+                    src: '/static/repository/chistopol/01.jpg',
+                    text: 'KARL MARX\nBOULEVARD\nPHASE #1',
+                },
+                {
+                    href: '/repository/chistopol2.0',
+                    src: '/static/repository/chistopol2.0/01.jpg',
+                    text: 'KARL MARX\nBOULEVARD\nPHASE #2',
+                },
+                {
+                    href: '/repository/kemb',
+                    src: '/static/repository/kemb/01.jpg',
+                    text: 'KARPOVKA\nEMBANKMENT',
+                },
+                {
+                    href: '/repository/krvostok',
+                    src: '/static/repository/krvostok/01.jpg',
+                    text: 'RED EAST',
+                },
+                {
+                    href: '/repository/trollgardens',
+                    src: '/static/repository/trollgardens/01.jpg',
+                    text: 'TROLL GARDENS',
+                },
+            ]}
+        />
     </DefaultLayout>
 )

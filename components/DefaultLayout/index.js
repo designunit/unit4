@@ -5,7 +5,7 @@ import '../../style.less'
 import './styles.less'
 
 export default ({ logo = true, children }) => (
-    <div>
+    <div className="layout">
         {!logo ? null : (
             <header>
                 <a className="home" href="/main" title="logo">

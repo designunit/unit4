@@ -12,7 +12,7 @@ const MenuItem = ({ href, mainText, secondText }) => (
 
 export default () => (
     <DefaultLayout>
-        <ul className="container">
+        <ul>
             <MenuItem
                 href="/about"
                 mainText="О НАС"
