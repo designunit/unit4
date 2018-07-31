@@ -16,8 +16,8 @@ export default ({ children }) => (
                     text: 'KARL MARX\nBOULEVARD\nPHASE #1',
                 },
                 {
-                    href: '/repository/chistopol2.0',
-                    src: '/static/repository/chistopol2.0/01.jpg',
+                    href: '/repository/chistopol2',
+                    src: '/static/repository/chistopol2/01.jpg',
                     text: 'KARL MARX\nBOULEVARD\nPHASE #2',
                 },
                 {
