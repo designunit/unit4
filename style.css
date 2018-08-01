@@ -4,7 +4,7 @@ body {
     width: 100%;
     height: 100%;
 
-    overflow: hidden;
+/*    overflow: hidden;*/
 }
 
 @font-face {
@@ -32,7 +32,11 @@ p.small {
 
 p.big {
     font-family: Thin;
+<<<<<<< HEAD
     line-height: 200%;
+=======
+    line-height: 140%;
+>>>>>>> dev
 }
 
 p.break-word {
@@ -63,15 +67,15 @@ a:link, a:visited {
 }
 
 a:active { 
-    color: magenta;
+    color: #FF0066;
 }
 
 a:hover {
-    color: magenta;
+    color: #FF0066;
 }
 
 a svg:hover #partners { 
-    fill: magenta;
+    fill: #FF0066;
 }
 
 header {
@@ -106,7 +110,7 @@ header {
 }
 
 .logo {
-	max-width:90%;
+    max-width:90%;
     max-height:90%;
     position:absolute;
     top:0; left:0; right:0; bottom:0;
@@ -130,17 +134,109 @@ header {
 .container {
 	position: absolute;
 	top:10em; left: 5%;
-	overflow-x: hidden;
-    overflow-y: auto;
-    white-space: nowrap;
+	overflow-x: auto;
+/*  overflow-y: auto;*/
+/*  white-space: nowrap;*/
 }
 
+<<<<<<< HEAD
 .block-txt { 
     width:15em; 
     float:left; 
     margin-right:5em;
+=======
+.gallery {
+  position: absolute;
+  top:15em; 
+  left: 450px;
+  min-width: 430px;
+  max-width: 860px;
+  overflow-x: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    .gallery {
+        width: 95%;
+        left: 5%
+
+    }
+}
+
+.proposal {
+  position: absolute;
+  top:15em;
+  left: 450px;
+  min-width: 430px;
+  max-width: 1260px; 
+  overflow-x: auto;
+}
+
+@media only screen and (max-width: 1550px) {
+    .proposal {
+        width: 95%;
+        left: 5%
+
+    }
+}
+
+
+.proposal-img {
+  width: 860px;
+  float:left; 
+  object-fit: cover;
+  margin-right: 15px;
+}  
+
+/*@media only screen and (max-width: 1400px) {
+    .proposal-txt {
+        width: 645px;
+    }
+}*/
+
+@media only screen and (max-width: 1400px) {
+    .proposal-img {
+        width: 95%;
+        left: 5%;
+        max-width: 860px;
+        margin-right: 0px;
+    }
+}
+
+
+.proposal-txt { 
+    width:20%;
+    float:left; 
+    vertical-align: top;
+    text-align: justify;
+    overflow-x: auto;
+}
+
+/*@media only screen and (max-width: 1400px) {
+    .proposal-txt {
+        width: 645px;
+    }
+}*/
+
+@media only screen and (max-width: 1550px) {
+    .proposal-txt {
+        width: 95%;
+        max-width: 860px;
+        left: 5%;
+    }
+}
+
+
+
+
+.block-txt { 
+    width:15em;
+/*    height: 20em;*/ 
+    float:left; 
+/*    margin-right:5em;*/
+>>>>>>> dev
     display: inline-block;
     vertical-align: top;
+    text-align: justify;
 /*    overflow-x: hidden;
     overflow-y: auto;*/
 /*    word-wrap: break-word;*/
@@ -159,5 +255,140 @@ header {
 footer {
 	position:absolute;
 	bottom: 1em;
-    left: 5%;
+  left: 5%;
 }
+
+
+
+
+/* repository, squere icon, link */
+
+.icon {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-bottom: 15px;
+    margin-right: 15px;
+/*    overflow-x: auto; */
+}
+
+
+.icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-filter: grayscale(100%); 
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.icon-img-proposal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.icon-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #FF0066;
+}
+
+
+.icon:hover .icon-overlay {
+  opacity: 1;
+}
+
+.icon-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* column */
+.col-container {
+    display: table;
+    position: absolute;
+    top:10em; left: 5%;
+    width: 100%;
+}
+.col {
+    top: 0;
+    display: table-cell;
+    padding-right: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .col { 
+      display: block;
+      width: 100%;
+    }
+      }
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -50px;
+  color: magenta;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 1s;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 6px;
+  width: 6px;
+  margin: 0 5px;
+  background-color: black;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: magenta;
+}
+
+
+
