@@ -6,14 +6,14 @@ import DefaultLayout from '../components/DefaultLayout';
 
 export default () => (
     <DefaultLayout
-        logo={false}
+
     >
-        <Contact
+        {/* <Contact
             mix='contact--dark'
             href="mailto:inbox@unit4.io"
         >
             inbox@unit4.io
-        </Contact>
+        </Contact> */}
         <MainLogo />
     </DefaultLayout>
 )

@@ -6,8 +6,8 @@ import Contact from '../components/Contact';
 
 export default () => (
     <DefaultLayout>
-        <div className="container">
-            <Title caption="partners">ПАРТНЕРЫ</Title>
+    
+            <Title>ПАРТНЕРЫ</Title>
 
             <TextBlock>
                 <div className="logo-partners">
@@ -28,6 +28,6 @@ export default () => (
                     </a>
                 </div>
             </TextBlock>
-        </div>
+    
     </DefaultLayout>
 )

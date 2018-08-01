@@ -6,8 +6,7 @@ import Contact from '../components/Contact';
 
 export default () => (
     <DefaultLayout>
-        <div className="container">
-            <Title caption="contacts">КОНТАКТЫ</Title>
+            <Title>КОНТАКТЫ</Title>
 
             <TextBlock>
                 <Contact
@@ -19,6 +18,5 @@ export default () => (
                     +7 921 9980303
                 </p>
             </TextBlock>
-        </div>
     </DefaultLayout>
 )
