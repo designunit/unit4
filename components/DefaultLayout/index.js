@@ -6,18 +6,20 @@ import './styles.less'
 
 export default ({ logo = true, children }) => (
     <div className="layout">
-        {!logo ? null : (
-            <header>
-                <a className="home" href="/main" title="logo">
-                    <img src="/static/icon_menu.svg" height="25px" width="25px" />
-                </a>
-            </header>
-        )}
+        <div className="layout-content">
+            {!logo ? null : (
+                <header>
+                    <a className="home" href="/main" title="logo">
+                        <img src="/static/icon_menu.svg" height="25px" width="25px" />
+                    </a>
+                </header>
+            )}
 
-        <main>
-            {children}
-        </main>
+            <main>
+                {children}
+            </main>
 
-        <Footer/>
+            <Footer />
+        </div>
     </div>
 )
