@@ -1,7 +1,10 @@
 const withLess = require('@zeit/next-less')
 
-const debug = process.env.NODE_ENV !== "production";
+const production = process.env.NODE_ENV === 'production';
+const repo = 'designunit4'
 
 module.exports = withLess({
-	assetPrefix: !debug ? '/designunit4/' : '',
+	assetPrefix: production
+		? `/${repo}`
+		: '',
 })
