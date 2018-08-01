@@ -1,2 +1,5 @@
 *.ini
 *.db 
+.next
+node_modules
+out

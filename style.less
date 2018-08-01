@@ -1,0 +1,275 @@
+:root {
+    --link-color-default: white;
+    --link-color-active: #ff0066;
+    --font-main-family: Bold;
+    --font-main-size: 150%;
+    --font-second-family: Thin;
+    --font-second-size: 120%;
+    --font-normal-family: Regular;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    font-family: Thin; 
+}
+
+p {
+    margin: 0;
+}
+
+@font-face {
+    font-family: Regular;
+    src: url("/static/fonts/Proxima Nova Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Thin;
+    src: url("/static/fonts/Proxima Nova Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Bold;
+    src: url("/static/fonts/Proxima Nova Bold.otf") format("opentype");
+}
+
+.menu-item {
+    p {
+        margin: 0;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--link-color-active);
+        }
+    }
+
+    margin-bottom: 12px;
+}
+
+.menu-item--main {
+    font-family: var(--font-main-family);
+    font-size: var(--font-main-size);
+}
+
+.menu-item--second {
+    font-family: var(--font-second-family);
+    line-height: var(--font-second-size);
+}
+
+// p.break-word {
+//     width: 20em;
+//     overflow-wrap: break-word;
+// }
+
+// /*h2 {  
+// 	font-family: Proxima Nova;
+// 	font-size: 150%;
+// }
+// */
+// a:link, a:visited { 
+//     color: black;
+//     text-decoration: none;
+//     cursor: pointer;
+// }
+
+// a:active { 
+//     color: #FF0066;
+// }
+
+// a:hover {
+//     color: #FF0066;
+// }
+
+// a svg:hover #partners { 
+//     fill: #FF0066;
+// }
+
+// header {
+// 	text-align: left;
+// 	font-size: 100%;
+// }
+
+// /*.contacts {
+// 	position: absolute;
+// 	top: 2em;
+//     left: 0;
+//     border: 0.2em solid black;
+//  	outline: 0.2em solid black;
+//  	outline-offset: -0.1em;
+// }
+
+// .contacts mark {
+//     background-color: black;
+//     color: white;
+// }
+// */
+
+.logo-partners {
+    margin-bottom:2em;
+}
+
+// /*.menu {
+// 	max-width:50%;
+//     max-height:50%;
+//     position:absolute;
+//     top:0%; left:0%; right:0; bottom:0;
+//     margin:auto;
+// }
+// */
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+	position: absolute;
+	top:10em; left: 5%;
+	overflow-x: auto;
+/*  overflow-y: auto;*/
+/*  white-space: nowrap;*/
+}
+
+// .proposal {
+//   position: absolute;
+//   top:15em;
+//   left: 450px;
+//   min-width: 430px;
+//   max-width: 1260px; 
+//   overflow-x: auto;
+// }
+
+// @media only screen and (max-width: 1550px) {
+//     .proposal {
+//         width: 95%;
+//         left: 5%
+
+//     }
+// }
+
+// .proposal-img {
+//   width: 860px;
+//   float:left; 
+//   object-fit: cover;
+//   margin-right: 15px;
+// }  
+
+// /*@media only screen and (max-width: 1400px) {
+//     .proposal-txt {
+//         width: 645px;
+//     }
+// }*/
+
+// @media only screen and (max-width: 1400px) {
+//     .proposal-img {
+//         width: 95%;
+//         left: 5%;
+//         max-width: 860px;
+//         margin-right: 0px;
+//     }
+// }
+
+// .proposal-txt { 
+//     width:20%;
+//     float:left; 
+//     vertical-align: top;
+//     text-align: justify;
+//     overflow-x: auto;
+// }
+
+// /*@media only screen and (max-width: 1400px) {
+//     .proposal-txt {
+//         width: 645px;
+//     }
+// }*/
+
+// @media only screen and (max-width: 1550px) {
+//     .proposal-txt {
+//         width: 95%;
+//         max-width: 860px;
+//         left: 5%;
+//     }
+// }
+
+// .block-img { 
+// /*    width:50%; */
+//     float: left; 
+//     margin-right:5em;
+//     display: inline-block;
+//     vertical-align: top;
+// }
+
+// /* repository, squere icon, link */
+
+// /* column */
+// .col-container {
+//     display: table;
+//     position: absolute;
+//     top:10em; left: 5%;
+//     width: 100%;
+// }
+// .col {
+//     top: 0;
+//     display: table-cell;
+//     padding-right: 30px;
+// }
+
+// @media only screen and (max-width: 1000px) {
+//     .col { 
+//       display: block;
+//       width: 100%;
+//     }
+//       }
+
+// /* Slideshow container */
+// .slideshow-container {
+//   max-width: 1500px;
+//   position: relative;
+//   margin: auto;
+// }
+
+// /* Next & previous buttons */
+// .prev, .next {
+//   cursor: pointer;
+//   position: absolute;
+//   top: 50%;
+//   width: auto;
+//   padding: 10px;
+//   margin-top: -50px;
+//   color: magenta;
+//   font-weight: bold;
+//   font-size: 18px;
+//   transition: 1s;
+// }
+
+// /* Position the "next button" to the right */
+// .next {
+//   right: 0;
+// }
+
+
+// /* The dots/bullets/indicators */
+// .dot {
+//   cursor: pointer;
+//   height: 6px;
+//   width: 6px;
+//   margin: 0 5px;
+//   background-color: black;
+//   display: inline-block;
+//   transition: background-color 0.6s ease;
+// }
+
+// .active {
+//   background-color: magenta;
+// }
+
+
+
