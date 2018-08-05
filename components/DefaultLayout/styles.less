@@ -1,5 +1,5 @@
 .layout {
-    max-width: 960px;
+    // max-width: 960px;
 
     position: absolute;
     width: 100%;
@@ -15,7 +15,6 @@
     }
 
     main {
-        // padding-top: 100px;
         flex: 1;
     }
 
@@ -25,11 +24,17 @@
     }
 }
 
+.layout--center {
+    main {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .layout-content {
     display: flex;
     flex-direction: column;
 
-    width: 100%;
     min-height: 100vh;
 
     padding: 0 50px;
