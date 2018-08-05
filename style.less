@@ -6,6 +6,9 @@
     --font-second-family: Thin;
     --font-second-size: 120%;
     --font-normal-family: Regular;
+    --font-size-normal: 18px;
+
+    --content-padding: 0;
 }
 
 body {
@@ -15,6 +18,8 @@ body {
     height: 100%;
 
     font-family: Thin; 
+    line-height: 25px;
+    font-size: var(--font-size-normal);
 }
 
 p {
@@ -281,5 +286,8 @@ ul {
 //   background-color: magenta;
 // }
 
-
-
+@media screen and (max-width: 31.25em) {
+    :root {
+        --content-padding: 0 15px;
+    }
+}
