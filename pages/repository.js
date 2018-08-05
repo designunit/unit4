@@ -13,7 +13,7 @@ export default ({ children }) => (
                 {
                     href: '/repository/trollgardens',
                     src: '/static/repository/trollgardens/01.jpg',
-                    text: 'ТРОЛЛЕВЫЕ \n САДЫ',
+                    text: 'САДЫ ТРОЛЛЕЙ',
                 },
                 {
                     href: '/repository/chistopol2',
