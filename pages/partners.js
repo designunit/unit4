@@ -2,13 +2,13 @@ import react from 'react'
 import DefaultLayout from '../components/DefaultLayout';
 import Title from '../components/Title';
 import TextBlock from '../components/TextBlock';
-import Contact from '../components/Contact';
+import Article from '../components/Article';
 
 export default () => (
     <DefaultLayout>
-    
-            <Title>ПАРТНЕРЫ</Title>
+        <Title>ПАРТНЕРЫ</Title>
 
+        <Article>
             <TextBlock>
                 <div className="logo-partners">
                     <a href="http://www.mlaplus.com/" target="_blank" title="www.mlaplus.com">
@@ -28,6 +28,6 @@ export default () => (
                     </a>
                 </div>
             </TextBlock>
-    
+        </Article>
     </DefaultLayout>
 )

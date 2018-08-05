@@ -3,11 +3,13 @@ import DefaultLayout from '../components/DefaultLayout';
 import Title from '../components/Title';
 import TextBlock from '../components/TextBlock';
 import Contact from '../components/Contact';
+import Article from '../components/Article';
 
 export default () => (
     <DefaultLayout>
-            <Title>КОНТАКТЫ</Title>
+        <Title>КОНТАКТЫ</Title>
 
+        <Article>
             <TextBlock>
                 <Contact
                     href="mailto:inbox@unit4.io"
@@ -18,5 +20,6 @@ export default () => (
                     +7 921 9980303
                 </p>
             </TextBlock>
+        </Article>
     </DefaultLayout>
 )
