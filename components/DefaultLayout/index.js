@@ -18,9 +18,9 @@ const MenuItem = ({ href, mainText, secondText }) => (
 
 export default ({ logo = true, center = true, children }) => (
     <div className={className('layout', {
-        'layout--center': center,
+        'layout--center': false,
     })}>
-        <div className="layout-content">
+        <div className="content">
             {!logo ? null : (
                 <header>
                     <a className="home" href="/index" title="logo">
@@ -47,14 +47,12 @@ export default ({ logo = true, center = true, children }) => (
                             href="/contact"
                             secondText="контакты"
                         />
-                    </ul>                    
+                    </ul>
                 </header>
             )}
 
             <main>
-                <div className='content'>
-                    {children}
-                </div>
+                {children}
             </main>
 
             <Footer />
