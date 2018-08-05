@@ -1,4 +1,4 @@
-import react from 'react'
+import className from 'classnames'
 import Footer from '../Footer'
 
 import '../../style.less'
@@ -16,8 +16,10 @@ const MenuItem = ({ href, mainText, secondText }) => (
 
 
 
-export default ({ logo = true, children }) => (
-    <div className="layout">
+export default ({ logo = true, center = true, children }) => (
+    <div className={className('layout', {
+        'layout--center': center,
+    })}>
         <div className="layout-content">
             {!logo ? null : (
                 <header>
@@ -50,7 +52,9 @@ export default ({ logo = true, children }) => (
             )}
 
             <main>
-                {children}
+                <div className='content'>
+                    {children}
+                </div>
             </main>
 
             <Footer />
