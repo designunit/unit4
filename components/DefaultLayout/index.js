@@ -15,6 +15,7 @@ const MenuItem = ({ href, mainText, secondText }) => (
 )
 
 
+
 export default ({ logo = true, children }) => (
     <div className="layout">
         <div className="layout-content">
