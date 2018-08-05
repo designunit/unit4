@@ -8,16 +8,17 @@ const GalleryItem = ({ src, alt }) => (
 )
 
 const InteractiveGalleryItem = ({ src, href, text }) => (
-    <div className="gallery-item">
-        <a href={href}>
+    <a href={href}>
+        <div className="gallery-item">
+
             <img src={src} />
             <div className="gallery-item--overlay">
                 <div className="gallery-item--text">
                     {text}
                 </div>
             </div>
-        </a>
-    </div>
+        </div>
+    </a>
 )
 
 export default ({ items, theme = 'default' }) => {
