@@ -24,6 +24,7 @@
   "homepage": "https://github.com/destroytheimage/designunit4#readme",
   "dependencies": {
     "@zeit/next-less": "^0.3.0",
+    "classnames": "^2.2.6",
     "less": "^3.8.0",
     "next": "^6.1.1",
     "react": "^16.4.1",
