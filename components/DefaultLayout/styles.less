@@ -27,8 +27,6 @@
 }
 
 .content {
-    min-width: 500px;
-
     width: 65%;
     margin: 0 auto;
 
@@ -40,6 +38,12 @@
     padding: 0 50px;
 }
 
+@media screen and (max-width: 960px) {
+    .content {
+        width: 80%;
+    }
+}
+
 @media screen and (max-width: 31.25em) {
     .layout {
         header {
@@ -47,13 +51,8 @@
         }
     }
 
-    .layout-content {
-        padding: 0;
-    }
-}
-
-@media screen and (max-width: 960px) {
     .content {
-        width: 80%;
+        width: 100%;
+        padding: 0;
     }
 }
