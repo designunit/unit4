@@ -16,7 +16,7 @@ const MenuItem = ({ href, mainText, secondText }) => (
 
 
 
-export default ({ logo = true, center = false, children }) => (
+export default ({ logo = true, center = true, children }) => (
     <div className={className('layout', {
         'layout--center': center,
     })}>
