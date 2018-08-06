@@ -9,7 +9,7 @@ import Image from '../../components/Image'
 
 export default ({ children }) => (
     <DefaultLayout>
-        <Title>БУЛЬВАР КАРЛА МАРКСА</Title>
+        <Title>БУЛЬВАР КАРЛА МАРКСА ФАЗА #1</Title>
 
         <Article>
         <ul>
