@@ -1,5 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { YMInitializer } from 'react-yandex-metrika'
+import YMetrika from '../components/YMetrika'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -16,8 +16,8 @@ export default class MyDocument extends Document {
           <link rel="icon" href="/static/favicon1.png" type="image/x-icon" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           
-          <YMInitializer
-            accounts={['47295549']}
+          <YMetrika
+            account={47295549}
           />
         </Head>
         <body>
