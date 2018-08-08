@@ -1,20 +1,20 @@
 .text-block { 
-    width: 50%;
-/*    height: 20em;*/ 
-    // float:left; 
-/*    margin-right:5em;*/
-    // display: inline-block;
-    // vertical-align: top;
-    // text-align: justify;
-    // word-wrap: break-word;
+    --text-block-width: 50%;
 
+    min-width: 300px;
+    width: var(--text-block-width);
     hyphens: auto;
-
     margin-bottom: 1em;
+}
 
-/*    overflow-x: hidden;
-    overflow-y: auto;*/
-/*    word-wrap: break-word;*/
+@media screen and (max-width: 1280px) {
+    .text-block { 
+        --text-block-width: 40%;
+    }
+}
 
- /*   border: 1px solid black;*/
+@media screen and (max-width: 31.25em) {
+    .text-block { 
+        --text-block-width: 100%;
+    }
 }
