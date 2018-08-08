@@ -20,17 +20,29 @@ export default ({ children }) => (
                 {
                     href: '/repository/chistopol2',
                     src: '/static/repository/chistopol2/01.jpg',
-                    text: 'БУЛЬВАР\nЧИСТОПОЛЬ\nФАЗА #2',
+                    text: (
+                        <span>
+                            БУЛЬВАР ЧИСТОПОЛЬ
+                            <br/>
+                            ФАЗА #2
+                        </span>
+                    ),
                 },
                 {
                     href: '/repository/kemb',
                     src: '/static/repository/kemb/01.jpg',
-                    text: 'НАБЕРЕЖНАЯ\nКАРПОВКИ',
+                    text: 'НАБЕРЕЖНАЯ КАРПОВКИ',
                 },
                 {
                     href: '/repository/chistopol',
                     src: 'https://unit4.io/files/chistopol/01.jpg',
-                    text: 'БУЛЬВАР\nЧИСТОПОЛЬ\nФАЗА #1',
+                    text: (
+                        <span>
+                            БУЛЬВАР ЧИСТОПОЛЬ
+                            <br/>
+                            ФАЗА #1
+                        </span>
+                    ),
                 },
             ]}
         />
