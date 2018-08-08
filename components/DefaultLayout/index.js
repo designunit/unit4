@@ -1,20 +1,26 @@
 import className from 'classnames'
 import Footer from '../Footer'
+import LinkActive from 'next-link-active';
 
 import '../../style.less'
 import './styles.less'
 
-
-const MenuItem = ({ href, mainText, secondText }) => (
+const MenuItem = ({ href, text }) => (
     <li className="menu-item">
-        <a href={href}>
-            <p className="menu-item--main">{mainText}</p>
-            <p className="menu-item--second">{secondText}</p>
-        </a>
+        <LinkActive href={href} passHref>
+            {active => active
+                ? (
+                    <span className="menu-item--content active">
+                        {text}
+                    </span>
+                ) : (
+                    <a className="menu-item--content">
+                        {text}
+                    </a>
+                )}
+        </LinkActive>
     </li>
 )
-
-
 
 export default ({ logo = true, center = true, children }) => (
     <div className={className('layout', {
@@ -23,29 +29,29 @@ export default ({ logo = true, center = true, children }) => (
         <div className="content">
             {!logo ? null : (
                 <header>
-                    <a className="home" href="/index" title="logo">
+                    <a className="home" href="/" title="logo">
                         <img src="/static/icon_menu.svg" height="25px" width="25px" />
                     </a>
 
                     <ul className="menu">
                         <MenuItem
                             href="/about"
-                            secondText="о нас"
+                            text="о нас"
                         />
 
                         <MenuItem
                             href="/repository"
-                            secondText="репозиторий"
+                            text="репозиторий"
                         />
 
                         <MenuItem
                             href="/partners"
-                            secondText="партнеры"
+                            text="партнеры"
                         />
 
                         <MenuItem
                             href="/contact"
-                            secondText="контакты"
+                            text="контакты"
                         />
                     </ul>
                 </header>
