@@ -4,6 +4,6 @@ import './styles.less'
 
 export default () => (
     <footer>
-        <p className="copyright">© 2018, design unit 4</p>
+        <p className="copyright">© 2018 design unit 4</p>
     </footer>
 )

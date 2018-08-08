@@ -18,7 +18,7 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           
           <YMetrika
-            account={47295549}
+            account={'47295549'}
           />
         </Head>
         <body>
