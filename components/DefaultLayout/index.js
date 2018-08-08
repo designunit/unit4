@@ -23,7 +23,7 @@ const MenuItem = ({ href, text }) => (
     </li>
 )
 
-export default ({ logo = true, center = true, title = 'unit4', children }) => (
+export default ({ logo = true, center = true, title = 'design unit4', children }) => (
     <div className={className('layout', {
         'layout--center': false,
     })}>
