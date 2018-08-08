@@ -1,12 +1,14 @@
 :root {
     --link-color-default: white;
     --link-color-active: #ff0066;
-    --font-main-family: Bold;
+    --font-main-family: 'Roboto', sans-serif;
     --font-main-size: 150%;
-    --font-second-family: Thin;
-    --font-second-size: 120%;
-    --font-normal-family: Regular;
-    --font-size-normal: 18px;
+    --font-second-family: 'Roboto', sans-serif;
+    --font-second-size: 1em;
+    --font-normal-family: 'Roboto', sans-serif;
+    --font-normal-weight: 100;
+    --font-normal-size: 18px;
+    --font-normal-line-height: 30px;
 
     --content-padding: 0;
 }
@@ -17,65 +19,14 @@ body {
     width: 100%;
     height: 100%;
 
-    font-family: Thin; 
-    line-height: 25px;
-    font-size: var(--font-size-normal);
+    font-family: var(--font-normal-family);
+    font-weight: var(--font-normal-weight);
+    line-height: var(--font-normal-line-height);
+    font-size: var(--font-normal-size);
 }
 
 p {
     margin: 0;
-}
-
-@font-face {
-    font-family: Regular;
-    src: url("/static/fonts/Proxima Nova Regular.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Thin;
-    src: url("/static/fonts/Proxima Nova Thin.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Bold;
-    src: url("/static/fonts/Proxima Nova Bold.otf") format("opentype");
-}
-
-.menu-item {
-    p {
-        margin: 0;
-    }
-
-    a {
-        color: black;
-        text-decoration: none;
-
-        &:hover {
-            color: var(--link-color-active);
-        }
-
-        &:active {
-            color: var(--link-color-active);
-        }
-    }
-
-    margin-bottom: 6px;
-    
-}
-
-// .target {
-//         color: var(--link-color-active);
-//     }
-
-
-.menu-item--main {
-    font-family: var(--font-main-family);
-    font-size: var(--font-main-size);
-}
-
-.menu-item--second {
-    font-family: var(--font-second-family);
-    font-size: var(--font-second-size);
 }
 
 // p.break-word {
