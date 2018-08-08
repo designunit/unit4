@@ -1,10 +1,11 @@
-import react from 'react'
-
 import './styles.less'
 
-export default ({href, children, mix}) => (
+export default ({href, target, children, mix}) => (
     <span className={`contact ${mix}`}>
-        <a href={href}>
+        <a
+            href={href}
+            target={target}
+        >
             {children}
         </a>
     </span>
