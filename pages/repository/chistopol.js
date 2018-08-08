@@ -30,17 +30,20 @@ export default ({ children }) => (
                 Три площади с навесами и павильонами, тематические кулуары, серия малых архитектурных форм и дизайн оборудования отсылают к важным смысловым аспектам жизни и истории города: агрокультура, часовой завод "Восток", велокультура и компоненты умного города. 
                 </p>
 
-        {/* <Image src='https://unit4.io/files/chistopol/02.jpg'/> */}
-        <Image src='https://unit4.io/files/chistopol/03.jpg'/>
+        <Image src='https://unit4.io/files/chistopol/02.jpg'/>
         <Image src='https://unit4.io/files/chistopol/04.jpg'/>
+        <Image src='https://unit4.io/files/chistopol/03.jpg'/>
+        {/* <Image src='https://unit4.io/files/chistopol/17.jpg'/> */}
         <Image src='https://unit4.io/files/chistopol/05.jpg'/>
         <Image src='https://unit4.io/files/chistopol/06.jpg'/>
+        <Image src='https://unit4.io/files/chistopol/16.jpg'/>
         <Image src='https://unit4.io/files/chistopol/07.jpg'/>
         <Image src='https://unit4.io/files/chistopol/08.jpg'/>
         <Image src='https://unit4.io/files/chistopol/09.jpg'/>
         <Image src='https://unit4.io/files/chistopol/10.jpg'/>
         <Image src='https://unit4.io/files/chistopol/11.jpg'/>
         <Image src='https://unit4.io/files/chistopol/12.jpg'/>
+        <Image src='https://unit4.io/files/chistopol/14.jpg'/>
         <Image src='https://unit4.io/files/chistopol/15.jpg'/>
 
 

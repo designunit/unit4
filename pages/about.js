@@ -29,6 +29,13 @@ export default () => (
                     Мы знаем силу дизайна и щедро делимся ею.
                 </p>
             </TextBlock>
+
+            <TextBlock>    
+                <p>Данияр Юсупов<br/>
+                Владимир Петросян<br/>
+                Надежда Кузнецова<br/>
+                Елизавета Владимирова</p>
+            </TextBlock>
         </Article>
     </DefaultLayout>
 )

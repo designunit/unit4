@@ -35,7 +35,7 @@ export default ({ children }) => (
         <Image src='https://unit4.io/files/chistopol2/02.jpg'/>
         <Image src='https://unit4.io/files/chistopol2/03.jpg'/>
         <Image src='https://unit4.io/files/chistopol2/04.jpg'/>
-        <Image src='https://unit4.io/files/chistopol2/05.jpg'/>
+        {/* <Image src='https://unit4.io/files/chistopol2/05.jpg'/> */}
         <Image src='https://unit4.io/files/chistopol2/06.jpg'/>
         <Image src='https://unit4.io/files/chistopol2/07.jpg'/>
         

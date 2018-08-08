@@ -24,22 +24,20 @@ export default ({ children }) => (
         </ul>
 
             
-            {/* <Image src='https://unit4.io/files/trollgardens/02.jpg'/> */}
-
-            <Image src='https://unit4.io/files/trollgardens/03.jpg'/>
+            <Image src='https://unit4.io/files/trollgardens/02.jpg'/>
 
             <p>5 минут прогулки, и вы на мосту над темной водой в чаще леса. С другой стороны лесного пруда - водный комплекс с сауной. В лесу - странноватого вида сооружение, там занимаются восточной гимнастикой. Дорожка из деревянной брусчатки ведет к другому похожему сооружению - его облепили дети, а на площади перед ним жители возводят вантовую стелу к празднику. Запах ольховых шишек. 
             </p>
 
-            <Image src='https://unit4.io/files/trollgardens/04.jpg'/>
-
-            
+            <Image src='https://unit4.io/files/trollgardens/03.jpg'/>
+            <Image src='https://unit4.io/files/trollgardens/04.jpg'/>           
             <Image src='https://unit4.io/files/trollgardens/05.jpg'/>
             <Image src='https://unit4.io/files/trollgardens/06.jpg'/>
             <Image src='https://unit4.io/files/trollgardens/07.jpg'/>
             <Image src='https://unit4.io/files/trollgardens/08.jpg'/>
             <Image src='https://unit4.io/files/trollgardens/09.jpg'/>
             <Image src='https://unit4.io/files/trollgardens/10.jpg'/>
+            <Image src='https://unit4.io/files/trollgardens/11.jpg'/>
 
         </Article>
     </DefaultLayout>

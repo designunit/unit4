@@ -4,10 +4,10 @@ import Title from '../components/Title';
 import TextBlock from '../components/TextBlock';
 import Article from '../components/Article';
 
-const Partner = ({ href, title, src }) => (
+const Partner = ({ href, title, src, height }) => (
     <p className="logo-partners">
         <a href={href} target="_blank" title={title}>
-            <img src={src} height="22px" />
+            <img src={src} height={height}/>
         </a>
     </p>
 )
@@ -22,18 +22,21 @@ export default () => (
                     href='http://www.mlaplus.com/'
                     title='www.mlaplus.com'
                     src='/static/logo_mla+.svg'
+                    height='22px'
                 />
 
                 <Partner
                     href='http://www.knappt.com/'
                     title='www.knappt.com'
                     src='/static/logo_knappt.svg'
+                    height='30px'
                 />
 
                 <Partner
                     href='https://vk.com/divometallspb'
                     title='vk.com/divometallspb'
                     src='/static/logo_divo_metall.svg'
+                    height='35px'
                 />
            </TextBlock>
         </Article>

@@ -20,7 +20,7 @@ export default ({ children }) => (
                 {
                     href: '/repository/chistopol2',
                     src: '/static/repository/chistopol2/01.jpg',
-                    text: 'БУЛЬВАР \n ЧИСТОПОЛЬ\nФАЗА #2',
+                    text: 'БУЛЬВАР\nЧИСТОПОЛЬ\nФАЗА #2',
                 },
                 {
                     href: '/repository/kemb',
