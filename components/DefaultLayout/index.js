@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import className from 'classnames'
 import Footer from '../Footer'
 import LinkActive from 'next-link-active';
@@ -22,10 +23,14 @@ const MenuItem = ({ href, text }) => (
     </li>
 )
 
-export default ({ logo = true, center = true, children }) => (
+export default ({ logo = true, center = true, title = 'unit4', children }) => (
     <div className={className('layout', {
         'layout--center': false,
     })}>
+        <Head>
+            <title>{title}</title>
+        </Head>
+
         <div className="content">
             {!logo ? null : (
                 <header>
