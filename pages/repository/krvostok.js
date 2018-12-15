@@ -3,19 +3,36 @@ import DefaultLayout from '../../components/DefaultLayout'
 import Title from '../../components/Title'
 import Article from '../../components/Article'
 import Gallery from '../../components/Gallery'
+import Image from '../../components/Image'
 
 export default ({ children }) => (
     <DefaultLayout>
-        <Title caption="Red East">RED EAST</Title>
+        <Title>КРАСНЫЙ ВОСТОК</Title>
 
-        <Gallery
-            items={[
-                { src: "/static/repository/krvostok/01.jpg" },
-                { src: "/static/repository/krvostok/02.jpg" },
-                { src: "/static/repository/krvostok/03.jpg" },
-                { src: "/static/repository/krvostok/04.jpg" },
-                { src: "/static/repository/krvostok/05.jpg" },
-            ]}
-        />
+        <Article>
+
+        <ul>
+            <p>Концепция общественных пространств территории завода «Красный Восток»
+                <br/>Казань, Республика Татарстан</p>
+            
+            <p>заказчик: ООО «КЕЙ КАПИТАЛ»
+            <br/>партнеры: MLA+ СПб</p>
+            <p>июль 2018 - закрытый тендер</p>
+
+        </ul>
+
+            <Image src='https://unit4.io/files/krvostok/05.jpg'/>
+
+            <p>Ключевые принципы предлагаемой концепции: мультисценарность использования пространства, разномасштабность функций в открытом городском пространстве, баланс постоянных и временных функций, раскрытие видов на озеро Кабан, идентичность комплекса.</p>
+            
+            <Image src='https://unit4.io/files/krvostok/02.jpg'/>
+
+
+            <p>Наиболее заметная часть решения - мультифункциональный портал на рельсах, формирующий сценарии использования территории и фиксирующий главное видовое раскрытие на озеро Кабан. Идентичность и наследование образа функций комплекса достигается использованием клинкерного мощения в тон кирпичным корпусам. В элементах конструкций и оборудования благоустройства используется красная медь - отсыл к оборудованию пивоварни. К той же идентичности отсылают сплошные посадки овса, ячменя и хмеля, что контрастно выделяет их на фоне клинкера и меди.</p>
+
+            <Image src='https://unit4.io/files/krvostok/03.jpg'/>
+            <Image src='https://unit4.io/files/krvostok/04.jpg'/>
+
+        </Article>
     </DefaultLayout>
 )

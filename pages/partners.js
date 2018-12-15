@@ -32,12 +32,7 @@ export default () => (
                     height='30px'
                 />
 
-                <Partner
-                    href='https://vk.com/divometallspb'
-                    title='vk.com/divometallspb'
-                    src='/static/logo_divo_metall.svg'
-                    height='35px'
-                />
+
            </TextBlock>
         </Article>
     </DefaultLayout >

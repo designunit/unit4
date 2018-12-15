@@ -12,6 +12,16 @@ export default ({ children }) => (
         <Gallery
             theme='interactive'
             items={[
+            	{
+                    href: '/repository/samarapark',
+                    src: 'https://unit4.io/files/samarapark/11.jpg',
+                    text: 'ПАРК ЗАГОРОДНЫЙ',
+                },
+            	{
+                    href: '/repository/krvostok',
+                    src: 'https://unit4.io/files/krvostok/01.jpg',
+                    text: 'КРАСНЫЙ ВОСТОК',
+                },
                 {
                     href: '/repository/trollgardens',
                     src: '/static/repository/trollgardens/01.jpg',
@@ -32,6 +42,11 @@ export default ({ children }) => (
                     href: '/repository/kemb',
                     src: '/static/repository/kemb/01.jpg',
                     text: 'НАБЕРЕЖНАЯ КАРПОВКИ',
+                },
+                {
+                    href: '/repository/model4',
+                    src: 'https://unit4.io/files/model4/01.jpg',
+                    text: 'МОДЕЛЬ : : 4',
                 },
                 {
                     href: '/repository/chistopol',
