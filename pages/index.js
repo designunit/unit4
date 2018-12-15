@@ -5,9 +5,7 @@ import Contact from '../components/Contact'
 import DefaultLayout from '../components/DefaultLayout';
 
 export default () => (
-    <DefaultLayout
-
-    >
+    <DefaultLayout>
         <MainLogo />
     </DefaultLayout>
 )
