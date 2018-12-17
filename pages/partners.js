@@ -24,6 +24,7 @@ export default () => (
                     src='/static/logo_mla+.svg'
                     height='22px'
                 />
+                <p>Проектируют и планируют города.</p>
 
                 <Partner
                     href='http://www.knappt.com/'
@@ -31,6 +32,7 @@ export default () => (
                     src='/static/logo_knappt.svg'
                     height='30px'
                 />
+                <p>Проектируют и производят изделия из бетона, фибробетона, стеклофибробетона, стеклофиброгипса и композитных материалов.</p>
 
 
            </TextBlock>
