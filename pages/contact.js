@@ -1,4 +1,6 @@
 import react from 'react'
+import Icon from '@mdi/react'
+import { mdiFacebookBox } from '@mdi/js'
 import DefaultLayout from '../components/DefaultLayout';
 import Title from '../components/Title';
 import TextBlock from '../components/TextBlock';
@@ -25,13 +27,21 @@ export default () => (
                         href="https://yandex.ru/maps/2/saint-petersburg/?spn=0.964737%2C0.271155&z=14&l=map&mode=search&ll=30.332637%2C59.934321&text=%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2013-15&sll=30.313497%2C59.938531&sspn=1.448822%2C0.432058"
                         target="_blank"
                     >
-                        design unit 4<br/>
-                        Гражданская улица, 13-15<br/>
-                        Санкт-Петербург<br/>
+                        design unit 4<br />
+                        Гражданская улица, 13-15<br />
+                        Санкт-Петербург<br />
                         Россия
                     </Contact>
                 </p>
             </TextBlock>
+
+            <a
+                href={'https://www.facebook.com/designunit4'}
+            >
+                <Icon path={mdiFacebookBox}
+                    size={1}
+                />
+            </a>
 
             <TextBlock>
                 <p>
@@ -41,7 +51,7 @@ export default () => (
                 </p>
             </TextBlock>
 
-            
+
         </Article>
     </DefaultLayout>
 )
