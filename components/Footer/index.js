@@ -16,15 +16,6 @@ export default () => (
             &nbsp; &nbsp;
 
             <Contact
-                href="https://issuu.com/unit4"
-                mix="light"
-            >
-                issuu
-            </Contact>
-
-            &nbsp; &nbsp;
-
-            <Contact
                 href="mailto:inbox@unit4.io"
                 mix="light"
             >

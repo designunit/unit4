@@ -1,6 +1,9 @@
 import react from 'react'
 import Icon from '@mdi/react'
 import { mdiFacebookBox } from '@mdi/js'
+import { mdiVimeo } from '@mdi/js'
+import { mdiBehance } from '@mdi/js'
+import { mdiInstagram } from '@mdi/js'
 import DefaultLayout from '../components/DefaultLayout';
 import Title from '../components/Title';
 import TextBlock from '../components/TextBlock';
@@ -35,13 +38,7 @@ export default () => (
                 </p>
             </TextBlock>
 
-            <a
-                href={'https://www.facebook.com/designunit4'}
-            >
-                <Icon path={mdiFacebookBox}
-                    size={1}
-                />
-            </a>
+            
 
             <TextBlock>
                 <p>
@@ -50,6 +47,38 @@ export default () => (
                     </Contact>
                 </p>
             </TextBlock>
+
+            <a
+                href={'https://www.facebook.com/designunit4'}
+            >
+                <Icon path={mdiFacebookBox}
+                    size={1}
+                />
+            </a>
+            &nbsp; &nbsp;
+            <a
+                href={'https://www.instagram.com/designunit4/'}
+            >
+                <Icon path={mdiInstagram}
+                    size={1}
+                />
+            </a>
+            &nbsp; &nbsp;
+            <a
+                href={'https://www.behance.net/designunit4'}
+            >
+                <Icon path={mdiBehance}
+                    size={1}
+                />
+            </a>
+            &nbsp; &nbsp;
+            <a
+                href={'https://vimeo.com/designunit4'}
+            >
+                <Icon path={mdiVimeo}
+                    size={1}
+                />
+            </a>
 
 
         </Article>
