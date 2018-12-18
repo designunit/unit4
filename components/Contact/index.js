@@ -1,6 +1,6 @@
 import './styles.less'
 
-export default ({href, target, children, mix}) => (
+export default ({ href, target, children, mix }) => (
     <span className={`contact ${mix}`}>
         <a
             href={href}
