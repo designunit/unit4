@@ -17,6 +17,11 @@ export default ({ children }) => (
                     src: 'https://unit4.io/files/samarapark/11.jpg',
                     text: 'ПАРК ЗАГОРОДНЫЙ',
                 },
+                {
+                    href: '/repository/garagescreen',
+                    src: 'https://unit4.io/files/garagescreen/02.gif',
+                    text: 'GARAGE SCREEN',
+                },
             	{
                     href: '/repository/krvostok',
                     src: 'https://unit4.io/files/krvostok/01.jpg',
@@ -24,12 +29,12 @@ export default ({ children }) => (
                 },
                 {
                     href: '/repository/trollgardens',
-                    src: '/static/repository/trollgardens/01.jpg',
+                    src: 'https://unit4.io/files/trollgardens/05.jpg',
                     text: 'САДЫ ТРОЛЛЕЙ',
                 },
                 {
                     href: '/repository/chistopol2',
-                    src: '/static/repository/chistopol2/01.jpg',
+                    src: 'https://unit4.io/files/chistopol2/07.jpg',
                     text: (
                         <span>
                             БУЛЬВАР ЧИСТОПОЛЬ
@@ -40,7 +45,7 @@ export default ({ children }) => (
                 },
                 {
                     href: '/repository/kemb',
-                    src: '/static/repository/kemb/01.jpg',
+                    src: 'https://unit4.io/files/kemb/01.jpg',
                     text: 'НАБЕРЕЖНАЯ КАРПОВКИ',
                 },
                 {
@@ -50,7 +55,7 @@ export default ({ children }) => (
                 },
                 {
                     href: '/repository/chistopol',
-                    src: 'https://unit4.io/files/chistopol/01.jpg',
+                    src: 'https://unit4.io/files/chistopol/02.jpg',
                     text: (
                         <span>
                             БУЛЬВАР ЧИСТОПОЛЬ
