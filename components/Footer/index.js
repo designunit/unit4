@@ -10,7 +10,7 @@ export default () => (
                 href="https://www.facebook.com/designunit4/"
                 mix="light"
             >
-                fb  
+                fb
             </Contact>
 
             &nbsp; &nbsp;
@@ -19,7 +19,7 @@ export default () => (
                 href="https://issuu.com/unit4"
                 mix="light"
             >
-                issuu  
+                issuu
             </Contact>
 
             &nbsp; &nbsp;
@@ -30,7 +30,7 @@ export default () => (
             >
                 inbox@unit4.io
             </Contact>
-            
+
         </p>
     </footer>
 )
