@@ -7,7 +7,7 @@ import Image from '../../components/Image'
 
 export default ({ children }) => (
     <DefaultLayout>
-        <Title>D SCND</Title>
+        <Title>D : : SCND</Title>
 
         <Article>
             

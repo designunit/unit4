@@ -20,7 +20,18 @@ export default ({ children }) => (
                 {
                     href: '/repository/garagescreen',
                     src: 'https://unit4.io/files/garagescreen/02.gif',
-                    text: 'GARAGE SCREEN',
+                    text: (
+                        <span>
+                            GARAGE SCREEN
+                            <br/>
+                            COMPETITION
+                        </span>
+                    ),
+                },
+                {
+                    href: '/repository/krvostok',
+                    src: 'https://unit4.io/files/d_scnd/03.jpg',
+                    text: 'D : : SCND',
                 },
             	{
                     href: '/repository/krvostok',
