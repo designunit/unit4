@@ -1,6 +1,6 @@
 import react from 'react'
 import Icon from '@mdi/react'
-import { mdiFacebookBox } from '@mdi/js'
+import { mdiFacebook } from '@mdi/js'
 import { mdiVimeo } from '@mdi/js'
 import { mdiBehance } from '@mdi/js'
 import { mdiInstagram } from '@mdi/js'
@@ -50,35 +50,44 @@ export default () => (
 
             <a
                 href={'https://www.facebook.com/designunit4'}
+                target="_blank"
             >
-                <Icon path={mdiFacebookBox}
-                    size={1}
-                />
-            </a>
-            &nbsp; &nbsp;
-            <a
-                href={'https://www.instagram.com/designunit4/'}
-            >
-                <Icon path={mdiInstagram}
-                    size={1}
-                />
-            </a>
-            &nbsp; &nbsp;
-            <a
-                href={'https://www.behance.net/designunit4'}
-            >
-                <Icon path={mdiBehance}
+                <Icon path={mdiFacebook}
                     size={1}
                 />
             </a>
             &nbsp; &nbsp;
             <a
                 href={'https://vimeo.com/designunit4'}
+                target="_blank"
             >
                 <Icon path={mdiVimeo}
+                    size={0.9}
+                />
+            </a>
+            &nbsp; &nbsp;
+
+            <a
+                href={'https://www.instagram.com/unit4.io/'}
+                target="_blank"
+            >
+                <Icon path={mdiInstagram}
                     size={1}
                 />
             </a>
+            &nbsp; &nbsp;
+
+
+            <a
+                href={'https://www.behance.net/designunit4'}
+                target="_blank"
+            >
+                <Icon path={mdiBehance}
+                    size={1}
+                />
+            </a>
+            
+            
 
 
         </Article>
