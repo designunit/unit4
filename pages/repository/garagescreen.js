@@ -7,7 +7,7 @@ import Image from '../../components/Image'
 
 export default ({ children }) => (
     <DefaultLayout>
-        <Title>GARAGE SCREEN</Title>
+        <Title>GARAGE SCREEN COMPETITION</Title>
 
         <Article>
 
@@ -33,8 +33,7 @@ export default ({ children }) => (
 
         </Article>
         <Article>
-                <p>оставшееся "за кадром" 
-                <br/>бэкстейдж</p>
+                
                 <iframe src="https://player.vimeo.com/video/299973652" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
                 <p>музыка: <i>Jonny Greenwood Convergence</i>

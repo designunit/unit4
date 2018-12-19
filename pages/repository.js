@@ -29,7 +29,7 @@ export default ({ children }) => (
                     ),
                 },
                 {
-                    href: '/repository/krvostok',
+                    href: '/repository/d_scnd',
                     src: 'https://unit4.io/files/d_scnd/03.jpg',
                     text: 'D : : SCND',
                 },
