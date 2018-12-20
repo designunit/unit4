@@ -23,6 +23,7 @@ export default ({ children }) => (
             <p>2017 концепция, эскизный проект, авторский надзор, реализация</p>
 
             <a href={'https://issuu.com/unit4/docs/karl_marx_boulevard'}
+            target="_blank"
             >[ материалы эскизного проекта по ссылке ]</a>
 
         </ul>
