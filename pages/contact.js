@@ -27,7 +27,7 @@ export default () => (
             <TextBlock>
                 <p>
                     <Contact
-                        href="https://yandex.ru/maps/2/saint-petersburg/?spn=0.964737%2C0.271155&z=14&l=map&mode=search&ll=30.332637%2C59.934321&text=%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2013-15&sll=30.313497%2C59.938531&sspn=1.448822%2C0.432058"
+                        href="https://yandex.ru/maps/2/saint-petersburg/?l=map&ll=30.317140%2C59.929746&mode=search&oid=223730420096&ol=biz&sctx=ZAAAAAgBEAAaKAoSCTxGgVcuUD5AEYKigXHT9k1AEhIJ%2FOUBAGAmcD8RQjBwLRG6Uj8iBAABAgQoCjAAONqnkb2rl6WHiQFAuJ4BSAFVzczMPlgAagJydXAAnQHNzMw9oAEAqAEA&sll=30.317140%2C59.929746&spn=0.964737%2C0.271155&sspn=0.095620%2C0.027718&text=Design%20Unit%204&z=14.4"
                         target="_blank"
                     >
                         design unit 4<br />
@@ -52,18 +52,18 @@ export default () => (
                 href={'https://www.facebook.com/designunit4'}
                 target="_blank"
             >
-                <Icon path={mdiFacebook}
-                    size={1}
-                />
+            <svg width="40" height="40">
+                <use href="../static/icons/sprite.svg#fb"></use>
+            </svg>
             </a>
+
             &nbsp; &nbsp;
             <a
                 href={'https://vimeo.com/designunit4'}
-                target="_blank"
-            >
-                <Icon path={mdiVimeo}
-                    size={0.9}
-                />
+                target="_blank">
+                <svg width="40" height="40">
+                <use href="../static/icons/sprite.svg#vimeo"></use>
+            </svg>
             </a>
             &nbsp; &nbsp;
 
@@ -71,9 +71,9 @@ export default () => (
                 href={'https://www.instagram.com/unit4.io/'}
                 target="_blank"
             >
-                <Icon path={mdiInstagram}
-                    size={1}
-                />
+                <svg width="40" height="40">
+                <use href="../static/icons/sprite.svg#insta"></use>
+            </svg>
             </a>
             &nbsp; &nbsp;
 
@@ -81,15 +81,25 @@ export default () => (
             <a
                 href={'https://www.behance.net/designunit4'}
                 target="_blank"
+
             >
-                <Icon path={mdiBehance}
-                    size={1}
-                />
+                <svg width="40" height="40">
+                <use href="../static/icons/sprite.svg#be"></use>
+            </svg>
+            </a>
+
+            &nbsp; &nbsp;
+
+            <a
+                href={'https://issuu.com/unit4'}
+                target="_blank"
+            >
+                <svg width="40" height="40">
+                <use href="../static/icons/sprite.svg#issuu"></use>
+            </svg>
             </a>
             
             
-
-
         </Article>
     </DefaultLayout>
 )
