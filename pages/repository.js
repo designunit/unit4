@@ -12,6 +12,11 @@ export default ({ children }) => (
         <Gallery
             theme='interactive'
             items={[
+                {
+                    href: '/repository/square_zemtsova',
+                    src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg',
+                    text: 'СКВЕР ЗЕМЦОВА',
+                },
             	{
                     href: '/repository/samarapark',
                     src: 'https://unit4.io/files/samarapark/11.jpg',
