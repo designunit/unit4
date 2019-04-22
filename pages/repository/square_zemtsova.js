@@ -62,11 +62,45 @@ export default ({ children }) => (
                 <br />Эти преобразования ответят на запросы и требования горожан и города при соблюдении следующих шагов.
             </p>
 
-            <Image src='https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg' />
+            <SwitchImage
+                images={[
+                    {
+                        src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg',
+                        buttonText: 'Скрыть комментарии',
+                    },
+                    {
+                        src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_nocomments.jpg',
+                        buttonText: 'Показать комментарии',
+                    },
+                ]}
+            />
 
-            <Image src='https://spb.city4people.ru/static/img_c4p/project3/todo2-after_.jpg?e' />
+            <SwitchImage
+                images={[
+                    {
+                        src: 'https://spb.city4people.ru/static/img_c4p/project3/todo2-after_.jpg?e',
+                        buttonText: 'Скрыть комментарии',
+                    },
+                    {
+                        src: 'https://spb.city4people.ru/static/img_c4p/project3/todo2-after_nocomments.jpg?e',
+                        buttonText: 'Показать комментарии',
+                    },
+                ]}
+            />
 
-            <Image src='https://spb.city4people.ru/static/img_c4p/project3/todo3-after_.jpg' />
+            <SwitchImage
+                images={[
+                    {
+                        src: 'https://spb.city4people.ru/static/img_c4p/project3/todo3-after_.jpg',
+                        buttonText: 'Скрыть комментарии',
+                    },
+                    {
+                        src: 'https://spb.city4people.ru/static/img_c4p/project3/todo3-after_nocomments.jpg',
+                        buttonText: 'Показать комментарии',
+                    },
+                ]}
+            />
+            
         </Article>
     </DefaultLayout>
 
