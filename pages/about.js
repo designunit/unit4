@@ -1,11 +1,10 @@
 import react from 'react'
-import DefaultLayout from '../components/DefaultLayout';
 import Title from '../components/Title';
 import TextBlock from '../components/TextBlock';
 import Article from '../components/Article';
 
 export default () => (
-    <DefaultLayout>
+    <>
         <Title>О НАС</Title>
 
         <Article>
@@ -37,5 +36,5 @@ export default () => (
                 Елизавета Владимирова</p>
             </TextBlock>
         </Article>
-    </DefaultLayout>
+    </>
 )

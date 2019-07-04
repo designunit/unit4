@@ -4,7 +4,6 @@ import { mdiFacebook } from '@mdi/js'
 import { mdiVimeo } from '@mdi/js'
 import { mdiBehance } from '@mdi/js'
 import { mdiInstagram } from '@mdi/js'
-import DefaultLayout from '../components/DefaultLayout';
 import Title from '../components/Title';
 import TextBlock from '../components/TextBlock';
 import Contact from '../components/Contact';
@@ -12,7 +11,7 @@ import Article from '../components/Article';
 
 
 export default () => (
-    <DefaultLayout>
+    <>
         <Title>КОНТАКТЫ</Title>
 
         <Article>
@@ -91,5 +90,5 @@ export default () => (
 
 
         </Article>
-    </DefaultLayout>
+    </>
 )

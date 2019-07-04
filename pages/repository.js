@@ -1,12 +1,9 @@
 import react from 'react'
-import DefaultLayout from '../components/DefaultLayout';
 import Title from '../components/Title';
 import Gallery from '../components/Gallery';
 
 export default ({ children }) => (
-    <DefaultLayout
-        center={true}
-    >
+    <>
         <Title>РЕПОЗИТОРИЙ</Title>
 
         <Gallery
@@ -82,5 +79,5 @@ export default ({ children }) => (
                 },
             ]}
         />
-    </DefaultLayout>
+    </>
 )

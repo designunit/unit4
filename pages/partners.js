@@ -1,5 +1,4 @@
 import react from 'react'
-import DefaultLayout from '../components/DefaultLayout';
 import Title from '../components/Title';
 import TextBlock from '../components/TextBlock';
 import Article from '../components/Article';
@@ -13,7 +12,7 @@ const Partner = ({ href, title, src, height }) => (
 )
 
 export default () => (
-    <DefaultLayout>
+    <>
         <Title>ПАРТНЕРЫ</Title>
 
         <Article>
@@ -40,5 +39,5 @@ export default () => (
 
            </TextBlock>
         </Article>
-    </DefaultLayout >
+    </ >
 )

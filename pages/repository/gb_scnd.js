@@ -1,12 +1,11 @@
 import react from 'react'
-import DefaultLayout from '../../components/DefaultLayout'
 import Title from '../../components/Title'
 import Article from '../../components/Article'
 import Gallery from '../../components/Gallery'
 import Image from '../../components/Image'
 
 export default ({ children }) => (
-    <DefaultLayout>
+    <>
         <Title>КОНЦЕПЦИЯ ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ</Title>
 
         <Article>
@@ -69,5 +68,5 @@ export default ({ children }) => (
                 <p>Концепции дизайна открытых городских пространств наглядно демонстрируют каким образом ценности и смыслы, содержащиеся в Концепции, выраженные через решения Дизайн-кода, «спускаются» на уровень архитектурного и ландшафтного дизайна конкретных городских пространств. Концепции дизайна открытых городских пространств содержат примеры решений для всех типов открытых городских пространств, встречающихся в проекте.</p>
 
         </Article>
-    </DefaultLayout>
+    </>
 )

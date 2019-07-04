@@ -1,5 +1,4 @@
 import react from 'react'
-import DefaultLayout from '../../components/DefaultLayout'
 import Title from '../../components/Title'
 import Article from '../../components/Article'
 import Gallery from '../../components/Gallery'
@@ -7,7 +6,7 @@ import Image from '../../components/Image'
 import SwitchImage from '../../components/SwitchImage'
 
 export default ({ children }) => (
-    <DefaultLayout>
+    <>
         <Title>СКВЕР ЗЕМЦОВА</Title>
 
         <Article>
@@ -102,7 +101,7 @@ export default ({ children }) => (
             />
             
         </Article>
-    </DefaultLayout>
+    </>
 
     //    <DefaultLayout>
     //         <Title caption="Karpovka Embankment">KARPOVKA EMBANKMENT</Title>

@@ -1,12 +1,11 @@
 import react from 'react'
-import DefaultLayout from '../../components/DefaultLayout'
 import Title from '../../components/Title'
 import Article from '../../components/Article'
 import Gallery from '../../components/Gallery'
 import Image from '../../components/Image'
 
 export default ({ children }) => (
-    <DefaultLayout>
+    <>
         <Title>GARAGE SCREEN COMPETITION</Title>
 
         <Article>
@@ -40,5 +39,5 @@ export default ({ children }) => (
                 <br/>бэкстейдж камера: <i>mi YDXJ01FM</i></p>
 
         </Article>
-    </DefaultLayout>
+    </>
 )

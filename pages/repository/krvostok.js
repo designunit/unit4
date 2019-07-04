@@ -1,12 +1,11 @@
 import react from 'react'
-import DefaultLayout from '../../components/DefaultLayout'
 import Title from '../../components/Title'
 import Article from '../../components/Article'
 import Gallery from '../../components/Gallery'
 import Image from '../../components/Image'
 
 export default ({ children }) => (
-    <DefaultLayout>
+    <>
         <Title>КРАСНЫЙ ВОСТОК</Title>
 
         <Article>
@@ -34,5 +33,5 @@ export default ({ children }) => (
             <Image src='https://unit4.io/files/krvostok/04.jpg'/>
 
         </Article>
-    </DefaultLayout>
+    </>
 )
