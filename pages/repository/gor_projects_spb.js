@@ -49,12 +49,12 @@ export default ({ children }) => (
             <SwitchImage
                 images={[
                     {
-                        src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg',
-                        buttonText: 'Скрыть комментарии',
+                        src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_nocomments.jpg',
+                        buttonText: 'до',
                     },
                     {
-                        src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_nocomments.jpg',
-                        buttonText: 'Показать комментарии',
+                        src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-before_nocomments.jpg',
+                        buttonText: 'после',
                     },
                 ]}
             />
@@ -82,12 +82,12 @@ export default ({ children }) => (
             <SwitchImage
                 images={[
                     {
-                        src: 'https://spb.city4people.ru/static/img_c4p/project_elf/todo2-after_.jpg',
-                        buttonText: 'Скрыть комментарии',
+                        src: 'https://spb.city4people.ru/static/img_c4p/project_elf/todo2-after_nocomments.jpg',
+                        buttonText: 'до',
                     },
                     {
-                        src: 'https://spb.city4people.ru/static/img_c4p/project_elf/todo2-after_nocomments.jpg',
-                        buttonText: 'Показать комментарии',
+                        src: 'https://spb.city4people.ru/static/img_c4p/project_elf/todo2-before_nocomments.jpg',
+                        buttonText: 'после',
                     },
                 ]}
             />
@@ -116,12 +116,12 @@ export default ({ children }) => (
             <SwitchImage
                 images={[
                     {
-                        src: 'https://spb.city4people.ru/static/img_c4p/project_domprutkova/todo2-after_.jpg',
-                        buttonText: 'Скрыть комментарии',
+                        src: 'https://spb.city4people.ru/static/img_c4p/project_domprutkova/todo2-after_nocomments.jpg',
+                        buttonText: 'до',
                     },
                     {
-                        src: 'https://spb.city4people.ru/static/img_c4p/project_domprutkova/todo2-after_nocomments.jpg',
-                        buttonText: 'Показать комментарии',
+                        src: 'https://spb.city4people.ru/static/img_c4p/project_domprutkova/todo2-before_nocomments.jpg',
+                        buttonText: 'после',
                     },
                 ]}
             />
@@ -147,12 +147,12 @@ export default ({ children }) => (
             <SwitchImage
                 images={[
                     {
-                        src: 'https://spb.city4people.ru/static/img_c4p/project_panelki/todo3-after_.jpg',
-                        buttonText: 'Скрыть комментарии',
+                        src: 'https://spb.city4people.ru/static/img_c4p/project_panelki/todo3-after_nocomments.jpg',
+                        buttonText: 'до',
                     },
                     {
-                        src: 'https://spb.city4people.ru/static/img_c4p/project_panelki/todo3-after_nocomments.jpg',
-                        buttonText: 'Показать комментарии',
+                        src: 'https://spb.city4people.ru/static/img_c4p/project_panelki/todo3-before_nocomments.jpg',
+                        buttonText: 'после',
                     },
                 ]}
             />
