@@ -13,9 +13,27 @@ export default ({ children }) => (
             theme='interactive'
             items={[
                 {
-                    href: '/repository/square_zemtsova',
+                    href: '/repository/delta',
+                    src: 'https://unit4.io/files/delta/delta.jpg',
+                    text: 'БЛАГОУСТРОЙСТВО ЖИЛОГО РАЙОНА ДЕЛЬТА',
+                },
+                {
+                    href: '/repository/gor_projects_spb',
                     src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg',
-                    text: 'СКВЕР ЗЕМЦОВА',
+                    text: (
+                        <span>
+                            ГОРОДСКИЕ
+                            <br/>
+                            ПРОЕКТЫ
+                            <br/>
+                            В СПб
+                        </span>
+                    ),
+                },
+                {
+                    href: '/repository/gb_scnd',
+                    src: 'https://unit4.io/files/gb_scnd/gb.jpg',
+                    text: 'КОНЦЕПЦИЯ ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ',
                 },
             	{
                     href: '/repository/samarapark',
@@ -36,7 +54,7 @@ export default ({ children }) => (
                 {
                     href: '/repository/d_scnd',
                     src: 'https://unit4.io/files/d_scnd/03.jpg',
-                    text: 'D : : SCND',
+                    text: 'ДИЗАЙН ДВОРОВ ЖИЛОГО РАЙОНА СКАНДИНАВИЯ',
                 },
             	{
                     href: '/repository/krvostok',
