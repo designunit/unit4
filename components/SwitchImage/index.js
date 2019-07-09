@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Image from '../Image'
+import './styles.less'
 
 export default ({ images }) => {
     const [index, setIndex] = useState(0)
@@ -10,11 +11,13 @@ export default ({ images }) => {
 
     return (
         <div className='switch-image'>
+            <div className='image-text'>
             <button
                 onClick={() => setIndex(nextIndex)}
             >
                 {buttonText}
             </button>
+            </div>
 
             <Image
                 src={image.src}
