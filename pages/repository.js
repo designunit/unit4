@@ -18,6 +18,11 @@ export default ({ children }) => (
                     text: 'БЛАГОУСТРОЙСТВО ЖИЛОГО РАЙОНА ДЕЛЬТА',
                 },
                 {
+                    href: '/repository/yoshkola',
+                    src: 'https://unit4.io/files/yoshkola/yoshk.gif',
+                    text: 'ЙО’школа',
+                },
+                {
                     href: '/repository/gor_projects_spb',
                     src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg',
                     text: (
