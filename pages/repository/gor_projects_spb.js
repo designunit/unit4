@@ -50,11 +50,11 @@ export default ({ children }) => (
                 images={[
                     {
                         src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_nocomments.jpg',
-                        buttonText: 'до',
+                        buttonText: 'показать до',
                     },
                     {
                         src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-before_nocomments.jpg',
-                        buttonText: 'после',
+                        buttonText: 'показать после',
                     },
                 ]}
             />
@@ -83,11 +83,11 @@ export default ({ children }) => (
                 images={[
                     {
                         src: 'https://spb.city4people.ru/static/img_c4p/project_elf/todo2-after_nocomments.jpg',
-                        buttonText: 'до',
+                        buttonText: 'показать до',
                     },
                     {
                         src: 'https://spb.city4people.ru/static/img_c4p/project_elf/todo2-before_nocomments.jpg',
-                        buttonText: 'после',
+                        buttonText: 'показать после',
                     },
                 ]}
             />
@@ -117,11 +117,11 @@ export default ({ children }) => (
                 images={[
                     {
                         src: 'https://spb.city4people.ru/static/img_c4p/project_domprutkova/todo2-after_nocomments.jpg',
-                        buttonText: 'до',
+                        buttonText: 'показать до',
                     },
                     {
                         src: 'https://spb.city4people.ru/static/img_c4p/project_domprutkova/todo2-before_nocomments.jpg',
-                        buttonText: 'после',
+                        buttonText: 'показать после',
                     },
                 ]}
             />
@@ -148,11 +148,11 @@ export default ({ children }) => (
                 images={[
                     {
                         src: 'https://spb.city4people.ru/static/img_c4p/project_panelki/todo3-after_nocomments.jpg',
-                        buttonText: 'до',
+                        buttonText: 'показать до',
                     },
                     {
                         src: 'https://spb.city4people.ru/static/img_c4p/project_panelki/todo3-before_nocomments.jpg',
-                        buttonText: 'после',
+                        buttonText: 'показать после',
                     },
                 ]}
             />
