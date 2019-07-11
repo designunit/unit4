@@ -2,6 +2,7 @@ import react from 'react'
 import DefaultLayout from '../components/DefaultLayout';
 import Title from '../components/Title';
 import TextBlock from '../components/TextBlock';
+import Column from '../components/Column';
 import Article from '../components/Article';
 import Image from '../components/Image'
 
@@ -46,19 +47,23 @@ export default () => (
                 </p>
             </TextBlock>
 
-            
-
             <TextBlock>    
                 <p>Данияр Юсупов<br/>
                 Владимир Петросян<br/>
                 Надежда Кузнецова<br/>
-                Елизавета Владимирова<br/>
+                Елизавета Владимирова</p>
+                <p>
                 Марина Цай<br/>
                 Сергей Барышев<br/>
                 Николай Медведенко<br/>
                 Роман Тимашев<br/>
-                Григорий Балуев</p>
+                Григорий Балуев
+                </p>
             </TextBlock>
+
         </Article>
+
+        
+
     </DefaultLayout>
 )
