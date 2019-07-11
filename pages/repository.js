@@ -13,6 +13,21 @@ export default ({ children }) => (
             theme='interactive'
             items={[
                 {
+                    href: '/repository/application_manual',
+                    src: 'https://unit4.io/files/app_manual/manual.jpg',
+                    text: (
+                        <span>
+                            МЕТОДИЧЕСКИЕ
+                            <br/>
+                            РЕКОМЕНДАЦИИ
+                            <br/>
+                            ПО ПОДГОТОВКЕ
+                            <br/>
+                            ЗАЯВКИ
+                        </span>
+                    ),
+                },
+                {
                     href: '/repository/delta',
                     src: 'https://unit4.io/files/delta/delta.jpg',
                     text: 'БЛАГОУСТРОЙСТВО ЖИЛОГО РАЙОНА ДЕЛЬТА',
@@ -90,7 +105,7 @@ export default ({ children }) => (
                 {
                     href: '/repository/model4',
                     src: 'https://unit4.io/files/model4/01.jpg',
-                    text: 'МОДЕЛЬ : : 4',
+                    text: 'СЕРИЯ ИЗДЕЛИЙ МОДЕЛЬ : : 4',
                 },
                 {
                     href: '/repository/chistopol',
