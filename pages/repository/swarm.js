@@ -1,5 +1,4 @@
 import react from 'react'
-import DefaultLayout from '../../components/DefaultLayout'
 import Title from '../../components/Title'
 import Article from '../../components/Article'
 import Gallery from '../../components/Gallery'
@@ -7,7 +6,7 @@ import Image from '../../components/Image'
 import TextBlock from '../../components/TextBlock'
 
 export default ({ children }) => (
-    <DefaultLayout>
+    <>
         <Title>ПРОГРАММНЫЕ РЕШЕНИЯ:<br/>ИНСТРУМЕНТЫ ПРОЕКТИРОВАНИЯ И АНАЛИЗА ГОРОДСКОЙ СРЕДЫ</Title>
 
         <Article>
@@ -50,5 +49,5 @@ export default ({ children }) => (
 
 
         
-    </DefaultLayout>
+    </>
 )
