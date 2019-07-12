@@ -4,7 +4,7 @@ import Title from '../../components/Title'
 import Article from '../../components/Article'
 import Gallery from '../../components/Gallery'
 import Image from '../../components/Image'
-import TextBlock from '../../components/TextBlock';
+import TextBlock from '../../components/TextBlock'
 
 export default ({ children }) => (
     <DefaultLayout>
@@ -21,9 +21,9 @@ export default ({ children }) => (
             <p>2019 - консалтинг, презентационные материалы, комплекс услуг по разработке методических рекомендаций и типовых шаблонов практических кейсов.</p>
 
         </ul>
-
+        <TextBlock>
             <Image src='https://unit4.io/files/app_manual/manual.jpg'/>
-
+        </TextBlock>
             
         </Article>
         <Article>
