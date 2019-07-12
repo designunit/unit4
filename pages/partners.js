@@ -3,7 +3,7 @@ import Title from '../components/Title';
 import TextBlock from '../components/TextBlock';
 import Article from '../components/Article';
 
-const Partner = ({ href, title, src, height }) => (
+export const Partner = ({ href, title, src, height }) => (
     <p className="logo-partners">
         <a href={href} target="_blank" title={title}>
             <img src={src} height={height}/>
