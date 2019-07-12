@@ -41,5 +41,3 @@ export const Title: React.FC<ITitleProps> = ({caption, children}) => (
         </p>
     </div>
 )
-
-export default Title

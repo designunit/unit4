@@ -1,5 +1,5 @@
 import react from 'react'
-import Title from '../../components/Title'
+import { Title } from '../../src/components/Title'
 import Article from '../../components/Article'
 import Gallery from '../../components/Gallery'
 import TextBlock from '../../components/TextBlock';

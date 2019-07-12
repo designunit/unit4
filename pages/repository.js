@@ -1,5 +1,5 @@
 import react from 'react'
-import Title from '../components/Title';
+import { Title } from '../src/components/Title'
 import Gallery from '../components/Gallery';
 
 export default ({ children }) => (
