@@ -1,5 +1,4 @@
 import react from 'react'
-import DefaultLayout from '../../components/DefaultLayout'
 import Title from '../../components/Title'
 import Article from '../../components/Article'
 import Gallery from '../../components/Gallery'
@@ -7,7 +6,7 @@ import Image from '../../components/Image'
 import TextBlock from '../../components/TextBlock'
 
 export default ({ children }) => (
-    <DefaultLayout>
+    <>
         <Title>МЕТОДИЧЕСКИЕ РЕКОМЕНДАЦИИ ПО ПОДГОТОВКЕ ГРАФИЧЕСКИХ МАТЕРИАЛОВ КОНКУРСНОЙ ЗАЯВКИ МУНИЦИПАЛЬНОГО ОБРАЗОВАНИЯ ДЛЯ УЧАСТИЯ ВО ВСЕРОССИЙСКОМ КОНКУРСЕ ЛУЧШИХ ПРОЕКТОВ СОЗДАНИЯ КОМФОРТНОЙ ГОРОДСКОЙ СРЕДЫ В ИСТОРИЧЕСКИХ ПОСЕЛЕНИЯХ И МАЛЫХ ГОРОДАХ, ПРОВОДИМОГО В 2020 ГОДУ.</Title>
 
         <Article>
@@ -56,5 +55,5 @@ export default ({ children }) => (
 
         </Article>
     
-    </DefaultLayout>
+    </>
 )
