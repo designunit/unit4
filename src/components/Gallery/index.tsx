@@ -1,13 +1,25 @@
-import react from 'react'
+import * as React from 'react'
 import './styles.less'
 
-const GalleryItem = ({ src, alt }) => (
+export interface IGalleryItem {
+    src: string
+    alt: string
+    href?: string
+    text?: string
+}
+
+export interface IGallery {
+    items: IGalleryItem[]
+    theme: 'default' | 'interactive'
+}
+
+const GalleryItem: React.FC<IGalleryItem> = ({ src, alt }) => (
     <div className="gallery-item">
         <img src={src} />
     </div>
 )
 
-const InteractiveGalleryItem = ({ src, href, text }) => (
+const InteractiveGalleryItem: React.FC<IGalleryItem> = ({ src, href, text }) => (
     <a href={href}>
         <div className="gallery-item">
 
@@ -21,7 +33,7 @@ const InteractiveGalleryItem = ({ src, href, text }) => (
     </a>
 )
 
-export default ({ items, theme = 'default' }) => {
+export const Gallery: React.FC<IGallery> = ({ items, theme = 'default' }) => {
     const Item = theme === 'default'
         ? GalleryItem
         : InteractiveGalleryItem

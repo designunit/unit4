@@ -1,7 +1,6 @@
 import react from 'react'
 import { Title } from '../../src/components/Title'
 import Article from '../../components/Article'
-import Gallery from '../../components/Gallery'
 import Image from '../../components/Image'
 
 export default ({ children }) => (

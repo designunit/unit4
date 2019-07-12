@@ -1,6 +1,6 @@
 import react from 'react'
 import { Title } from '../src/components/Title'
-import Gallery from '../components/Gallery';
+import { Gallery } from '../src/components/Gallery'
 
 export default ({ children }) => (
     <>
