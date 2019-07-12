@@ -10,9 +10,52 @@ export default ({ children }) => (
             theme='interactive'
             items={[
                 {
-                    href: '/repository/square_zemtsova',
+                    href: '/repository/application_manual',
+                    src: 'https://unit4.io/files/app_manual/manual.jpg',
+                    text: (
+                        <span>
+                            МЕТОДИЧЕСКИЕ
+                            <br/>
+                            РЕКОМЕНДАЦИИ
+                            <br/>
+                            ПО ПОДГОТОВКЕ
+                            <br/>
+                            ЗАЯВКИ
+                        </span>
+                    ),
+                },
+                {
+                    href: '/repository/delta',
+                    src: 'https://unit4.io/files/delta/delta.jpg',
+                    text: 'БЛАГОУСТРОЙСТВО ЖИЛОГО РАЙОНА ДЕЛЬТА',
+                },
+                {
+                    href: '/repository/yoshkola',
+                    src: 'https://unit4.io/files/yoshkola/yoshk.gif',
+                    text: 'ЙО’школа',
+                },
+                {
+                    href: '/repository/gor_projects_spb',
                     src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg',
-                    text: 'СКВЕР ЗЕМЦОВА',
+                    text: (
+                        <span>
+                            ГОРОДСКИЕ
+                            <br/>
+                            ПРОЕКТЫ
+                            <br/>
+                            В СПб
+                        </span>
+                    ),
+                },
+                {
+                    href: '/repository/swarm',
+                    src: 'https://unit4.io/files/swarm/swarm.jpg',
+                    text: 'МУЛЬТИАГЕНТНАЯ СИСТЕМА SWARM',
+                },
+                {
+                    href: '/repository/gb_scnd',
+                    src: 'https://unit4.io/files/gb_scnd/gb.jpg',
+                    text: 'КОНЦЕПЦИЯ ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ',
                 },
             	{
                     href: '/repository/samarapark',
@@ -33,7 +76,7 @@ export default ({ children }) => (
                 {
                     href: '/repository/d_scnd',
                     src: 'https://unit4.io/files/d_scnd/03.jpg',
-                    text: 'D : : SCND',
+                    text: 'ДИЗАЙН ДВОРОВ ЖИЛОГО РАЙОНА СКАНДИНАВИЯ',
                 },
             	{
                     href: '/repository/krvostok',
@@ -64,7 +107,7 @@ export default ({ children }) => (
                 {
                     href: '/repository/model4',
                     src: 'https://unit4.io/files/model4/01.jpg',
-                    text: 'МОДЕЛЬ : : 4',
+                    text: 'СЕРИЯ ИЗДЕЛИЙ МОДЕЛЬ : : 4',
                 },
                 {
                     href: '/repository/chistopol',

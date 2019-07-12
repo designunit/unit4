@@ -27,6 +27,17 @@ export default () => (
                 <p>Архитектура, градостроительство, консалтинг.</p>
                 <br/>
 
+                
+                <Partner
+                    href='https://gorsreda86.ugraces.ru/'
+                    title='www.knappt.com'
+                    src='/static/HMAO_logo_bw.svg'
+                    height='130px'
+                />
+
+                <p>Центр компетенций по вопросам городской среды Ханты-Мансийского автономного округа.</p>
+                <br/>
+
                 <Partner
                     href='http://www.knappt.com/'
                     title='www.knappt.com'

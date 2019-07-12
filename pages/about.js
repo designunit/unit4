@@ -1,7 +1,9 @@
 import react from 'react'
 import Title from '../components/Title';
 import TextBlock from '../components/TextBlock';
+import Column from '../components/Column';
 import Article from '../components/Article';
+import Image from '../components/Image'
 
 export default () => (
     <>
@@ -12,6 +14,21 @@ export default () => (
                 <p>
                     design unit 4 aka Проектная группа 4 созвана в 2016.
                 </p>
+                <Image src='https://unit4.io/files/about/team.jpg'/>
+            </TextBlock>
+            
+            <h2>
+                Аналитика и консалтинг<br/>
+                Градостроительное и архитектурное проектирование<br/>
+                Социально-культурное проектирование<br/>
+                Дизайн городской среды<br/>
+                Архитектурное проектирование<br/>
+                Предметный дизайн<br/>
+                Брендинг<br/>
+                Авторский надзор
+            </h2>
+
+            <TextBlock> 
                 <p>
                     Концепция студии базируется на специфике предприятия креативной индустрии
                     и передовых средств поддержки и тестирования проектных решений. Что позволяет
@@ -34,7 +51,15 @@ export default () => (
                 Владимир Петросян<br/>
                 Надежда Кузнецова<br/>
                 Елизавета Владимирова</p>
+                <p>
+                Марина Цай<br/>
+                Сергей Барышев<br/>
+                Николай Медведенко<br/>
+                Роман Тимашев<br/>
+                Григорий Балуев
+                </p>
             </TextBlock>
+
         </Article>
     </>
 )
