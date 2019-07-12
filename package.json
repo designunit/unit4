@@ -28,13 +28,15 @@
     "@zeit/next-less": "^1.0.1",
     "classnames": "^2.2.6",
     "less": "^3.9.0",
-    "next": "^8.1.0",
+    "next": "^9.0.1",
     "next-link-active": "^1.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.0.21",
-    "@next/mdx": "^8.1.0"
+    "@next/mdx": "^8.1.0",
+    "@types/react": "^16.8.23",
+    "typescript": "^3.5.3"
   }
 }
