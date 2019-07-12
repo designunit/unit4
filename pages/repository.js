@@ -51,6 +51,11 @@ export default ({ children }) => (
                     ),
                 },
                 {
+                    href: '/repository/swarm',
+                    src: 'https://unit4.io/files/swarm/swarm.jpg',
+                    text: 'МУЛЬТИАГЕНТНАЯ СИСТЕМА SWARM',
+                },
+                {
                     href: '/repository/gb_scnd',
                     src: 'https://unit4.io/files/gb_scnd/gb.jpg',
                     text: 'КОНЦЕПЦИЯ ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ',
