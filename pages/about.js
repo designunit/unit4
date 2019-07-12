@@ -1,8 +1,7 @@
-import react from 'react'
-import Title from '../components/Title';
-import TextBlock from '../components/TextBlock';
-import Column from '../components/Column';
-import Article from '../components/Article';
+import React from 'react'
+import Title from '../components/Title'
+import TextBlock from '../components/TextBlock'
+import Article from '../components/Article'
 import Image from '../components/Image'
 
 export default () => (
