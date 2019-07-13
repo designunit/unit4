@@ -25,9 +25,11 @@
   "dependencies": {
     "@mdi/js": "^3.6.95",
     "@mdi/react": "^1.1.0",
+    "@types/lodash": "^4.14.136",
     "@zeit/next-less": "^1.0.1",
     "classnames": "^2.2.6",
     "less": "^3.9.0",
+    "lodash": "^4.17.14",
     "next": "^9.0.1",
     "next-link-active": "^1.0.1",
     "react": "^16.8.6",
