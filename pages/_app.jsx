@@ -4,6 +4,7 @@ import DefaultLayout from '../components/DefaultLayout'
 import Article from '../components/Article'
 
 import 'antd/dist/antd.css'
+import '../src/style.less'
 
 export default class MyApp extends App {
     render() {

@@ -3,7 +3,6 @@ import className from 'classnames'
 import Footer from '../Footer'
 import LinkActive from 'next-link-active';
 
-import '../../style.less'
 import './styles.less'
 
 const MenuItem = ({ href, text }) => (
