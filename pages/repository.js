@@ -7,7 +7,9 @@ export default ({ children }) => (
         <Title>РЕПОЗИТОРИЙ</Title>
 
         <Gallery
-            theme='interactive'
+            style={{
+                marginBottom: 50,
+            }}
             items={[
                 {
                     href: '/repository/application_manual',
