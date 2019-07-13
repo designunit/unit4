@@ -50,9 +50,40 @@ export default ({ children }) => (
                     ),
                 },
                 {
+                    href: '/repository/boulevard_scnd',
+                    src: 'https://unit4.io/files/boulevard_scnd/boulevard.jpg',
+                    text: (
+                        <span>
+                            БУЛЬВАР
+                            <br/>
+                            ЖИЛОГО РАЙОНА
+                            <br/>
+                            СКАНДИНАВИЯ
+                        </span>
+                    ),
+                },
+                {
+                    href: '/repository/park_scnd',
+                    src: 'https://unit4.io/files/park_scnd/park.jpg',
+                    text: (
+                        <span>
+                            ПАРК
+                            <br/>
+                            ЖИЛОГО РАЙОНА
+                            <br/>
+                            СКАНДИНАВИЯ
+                        </span>
+                    ),
+                },
+                {
                     href: '/repository/swarm',
                     src: 'https://unit4.io/files/swarm/swarm.jpg',
                     text: 'МУЛЬТИАГЕНТНАЯ СИСТЕМА SWARM',
+                },
+                {
+                    href: '/repository/dc_scnd',
+                    src: 'https://unit4.io/files/dc_scnd/dc.jpg',
+                    text: 'ДИЗАЙН-КОД ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ',
                 },
                 {
                     href: '/repository/gb_scnd',
@@ -78,7 +109,15 @@ export default ({ children }) => (
                 {
                     href: '/repository/d_scnd',
                     src: 'https://unit4.io/files/d_scnd/03.jpg',
-                    text: 'ДИЗАЙН ДВОРОВ ЖИЛОГО РАЙОНА СКАНДИНАВИЯ',
+                    text: (
+                        <span>
+                            ДВОРЫ
+                            <br/>
+                            ЖИЛОГО РАЙОНА
+                            <br/>
+                            СКАНДИНАВИЯ
+                        </span>
+                    ),
                 },
             	{
                     href: '/repository/krvostok',

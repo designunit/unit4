@@ -5,7 +5,5 @@ import Contact from '../components/Contact'
 export default () => (
     <>
         <MainLogo />
-    </DefaultLayout>
-        {/* <UnitCanvas /> */}
     </>
 )
