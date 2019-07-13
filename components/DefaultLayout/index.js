@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import className from 'classnames'
-import Footer from '../Footer'
+import { Footer } from '../../src/components/Footer'
 import LinkActive from 'next-link-active';
 
 import './styles.less'
