@@ -29,7 +29,7 @@ export default ({ children }) => (
                 {
                     href: '/repository/delta',
                     src: 'https://unit4.io/files/delta/delta.jpg',
-                    text: 'БЛАГОУСТРОЙСТВО ЖИЛОГО РАЙОНА ДЕЛЬТА',
+                    text: 'БЛАГОУСТРОЙСТВО ЖИЛОГО КОМПЛЕКСА COMCITY',
                 },
                 {
                     href: '/repository/yoshkola',
