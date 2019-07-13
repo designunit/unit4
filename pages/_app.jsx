@@ -3,6 +3,8 @@ import App, { Container } from 'next/app'
 import DefaultLayout from '../components/DefaultLayout'
 import Article from '../components/Article'
 
+import 'antd/dist/antd.css'
+
 export default class MyApp extends App {
     render() {
         const { Component, pageProps } = this.props
