@@ -42,7 +42,7 @@ export default ({ children }) => (
         </Article>
 
         <Article>
-                    <p><strong>ОГРАЖДЕНИЕ ИЗ КОРТЕН-СТАЛИ</strong></p>
+                    <h2>ОГРАЖДЕНИЕ ИЗ КОРТЕН-СТАЛИ</h2>
                     <p>Ограждение перфорированное со встроенной линейной подсветкой</p>
                     
                     <Image src='https://unit4.io/files/model4/01.jpg'/>
@@ -51,7 +51,7 @@ export default ({ children }) => (
             </Article> 
             <Article>
                                     
-                    <p><strong>УРНА-СВЕТИЛЬНИК</strong></p>
+                    <h2>УРНА-СВЕТИЛЬНИК</h2>
                     <p>Урна из кортен-стали / стали с покрытием полимочевиной с перфорацией.</p>
                     <Image src='https://unit4.io/files/model4/04.jpg'/>
                     <Image src='https://unit4.io/files/model4/05.jpg'/>
@@ -64,7 +64,7 @@ export default ({ children }) => (
             </Article> 
             <Article>
                     
-                    <p><strong>НАВЕС</strong></p> 
+                    <h2>НАВЕС</h2> 
                     <p>Металлокаркас с обшивкой из кортен-стали, покрытие полимочевиной по аквапанели</p>
                     <Image src='https://unit4.io/files/model4/09.jpg'/>
                     <Image src='https://unit4.io/files/model4/21.gif'/>
@@ -72,7 +72,7 @@ export default ({ children }) => (
                     
             </Article> 
             <Article>
-                    <p><strong>БОЛЛАРД-СВЕТИЛЬНИК</strong></p>
+                    <h2>БОЛЛАРД-СВЕТИЛЬНИК</h2>
                     <p>Ограничитель из кортен-стали</p>
                     <Image src='https://unit4.io/files/model4/12.jpg'/>
                     <Image src='https://unit4.io/files/model4/13.jpg'/>
@@ -82,7 +82,7 @@ export default ({ children }) => (
 
             <Article>
 
-                    <p><strong>СКАМЬИ ИЗ ФИБРОБЕТОНА</strong></p>                
+                    <h2>СКАМЬИ ИЗ ФИБРОБЕТОНА</h2>                
                     <p>Скамьи модульные фибробетонные с покрытием полимочевиной со встроенными розетками</p>
                     <Image src='https://unit4.io/files/model4/16.jpg'/>
                     <Image src='https://unit4.io/files/model4/17.jpg'/>

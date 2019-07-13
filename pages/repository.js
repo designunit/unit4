@@ -12,6 +12,11 @@ export default ({ children }) => (
             }}
             items={[
                 {
+                    href: '/repository/delta',
+                    src: 'https://unit4.io/files/delta/delta.jpg',
+                    text: 'БЛАГОУСТРОЙСТВО ЖИЛОГО КОМПЛЕКСА COMCITY',
+                },
+                {
                     href: '/repository/application_manual',
                     src: 'https://unit4.io/files/app_manual/manual.jpg',
                     text: (
@@ -19,22 +24,8 @@ export default ({ children }) => (
                             МЕТОДИЧЕСКИЕ
                             <br/>
                             РЕКОМЕНДАЦИИ
-                            <br/>
-                            ПО ПОДГОТОВКЕ
-                            <br/>
-                            ЗАЯВКИ
                         </span>
                     ),
-                },
-                {
-                    href: '/repository/delta',
-                    src: 'https://unit4.io/files/delta/delta.jpg',
-                    text: 'БЛАГОУСТРОЙСТВО ЖИЛОГО КОМПЛЕКСА COMCITY',
-                },
-                {
-                    href: '/repository/yoshkola',
-                    src: 'https://unit4.io/files/yoshkola/yoshk.gif',
-                    text: 'ЙО’школа',
                 },
                 {
                     href: '/repository/gor_projects_spb',
@@ -49,6 +40,12 @@ export default ({ children }) => (
                         </span>
                     ),
                 },
+                {
+                    href: '/repository/yoshkola',
+                    src: 'https://unit4.io/files/yoshkola/yoshk.gif',
+                    text: 'ЙО’школа',
+                },
+                
                 {
                     href: '/repository/boulevard_scnd',
                     src: 'https://unit4.io/files/boulevard_scnd/boulevard.jpg',
