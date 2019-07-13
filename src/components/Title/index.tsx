@@ -13,17 +13,9 @@ export const Title: React.FC<ITitleProps> = ({caption, children}) => (
                 padding: var(--content-padding);
             }
 
-            h1 {
-                margin: 0;
-
-                font-family: var(--font-main-family);
-                font-size: var(--font-main-size);
-            }
-
             .title-caption {
                 margin: 0;
 
-                font-family: var(--font-second-family);
                 line-height: var(--font-second-size);
             }
         `}</style>
