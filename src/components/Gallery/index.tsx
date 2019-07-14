@@ -65,6 +65,12 @@ const GalleryItem: React.FC<IGalleryItem> = props => (
                 text-align: center;
                 padding: 5px;
             }
+
+            @media screen and (max-width: 31.25em) {
+                .gallery-item--text {
+                    font-size: 1em;
+                }
+            }
         `}</style>
 
         <img
@@ -85,24 +91,29 @@ export const Gallery: React.FC<IGallery> = props => (
         style={props.style}
     >
         <style jsx>{`
+            .gallery {
+                --cell-size-min: 200px;
+                --grid-gap: 10px;
+
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(var(--cell-size-min), 1fr));
+                grid-auto-rows: 1fr;
+                grid-gap: var(--grid-gap);
+            }
+
+            .gallery > *:first-child {
+                grid-row: 1 / 1;
+                grid-column: 1 / 1;
+            }
+
+            @media screen and (max-width: 31.25em) {
                 .gallery {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                    grid-auto-rows: 1fr;
-                    grid-gap: 10px;
+                    --item-right-margin: 0;
+                    --cell-size-min: 150px;
+                    --grid-gap: 5px;
                 }
-
-                .gallery > *:first-child {
-                    grid-row: 1 / 1;
-                    grid-column: 1 / 1;
-                }
-
-                @media screen and (max-width: 31.25em) {
-                    .gallery {
-                        --item-right-margin: 0;
-                    }
-                }
-            `}</style>
+            }
+        `}</style>
 
         {props.items.map(x => (
             <GalleryItem
