@@ -2,7 +2,7 @@ import React from 'react'
 import { Title } from '../src/components/Title'
 import TextBlock from '../components/TextBlock'
 import Article from '../components/Article'
-import Image from '../components/Image'
+import { Image } from '../src/components/Image'
 
 export default () => (
     <Article>

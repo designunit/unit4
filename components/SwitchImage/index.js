@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Image from '../Image'
+import { Image } from '../../src/components/Image'
 import './styles.less'
 
 export default ({ images }) => {
