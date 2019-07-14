@@ -2,7 +2,7 @@ import * as React from 'react'
 
 export interface IImageProps {
     src: string
-    alt: string
+    alt?: string
 }
 
 export const Image: React.FC<IImageProps> = ({ src, alt }) => (
