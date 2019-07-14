@@ -105,10 +105,24 @@ a {
 // }
 // */
 
+// LIST STYLE
+
 ul {
-    margin: 0;
-    padding: 0;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;
 }
+
+ul li:before {
+    content: "/";
+    display: block;
+    float: left;
+    width: 0.75em;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
 
 .container {
 	position: absolute;
