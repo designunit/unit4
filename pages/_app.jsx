@@ -1,6 +1,6 @@
 import React from 'react'
 import App, { Container } from 'next/app'
-import DefaultLayout from '../components/DefaultLayout'
+import DefaultLayout from '../src/components/DefaultLayout'
 import Article from '../components/Article'
 
 import 'antd/dist/antd.less'
