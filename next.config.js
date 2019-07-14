@@ -16,5 +16,5 @@ module.exports = withMdx(withCss(withLess({
         modifyVars: themeVariables,
     },
     assetPrefix: '',
-    pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+    pageExtensions: ['js', 'jsx', 'md', 'mdx', 'tsx'],
 })))
