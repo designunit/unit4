@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { isUndefined } from 'util'
+import Media from 'react-media'
 import { times, constant } from 'lodash'
 import { Row, Col } from 'antd'
 import { Image, IImageProps } from '../Image'
@@ -31,29 +32,24 @@ export const ImageSet: React.FC<IImageSetProps> = props => {
 
     return (
         <div>
-            <Row
-                gutter={16}
-            >
-                {props.items.map((x, i) => (
-                    <Col span={span[i]} key={i}>
-                        <Image {...getImage(x)} />
-                    </Col>
-                ))}
-            </Row>
-
-            {/* <Row>
-            <Col md={8} xl={10}>
-                Col1
-            </Col>
-
-            <Col md={8} xl={10}>
-                Col1
-            </Col>
-
-            <Col md={8} xl={4}>
-                Col1
-            </Col>
-        </Row> */}
-        </div>
+            <Media query={'screen and (max-width: 31.25em)'}>
+                {match => match
+                    ? (
+                        props.items.map((x, i) => (
+                            <Image {...getImage(x)} />
+                        ))
+                    ) : (
+                        <Row
+                            gutter={16}
+                        >
+                            {props.items.map((x, i) => (
+                                <Col span={span[i]} key={i}>
+                                    <Image {...getImage(x)} />
+                                </Col>
+                            ))}
+                        </Row>
+                    )}
+            </Media>
+        </div >
     )
 }
