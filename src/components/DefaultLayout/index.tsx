@@ -20,7 +20,7 @@ export default ({ logo = true, center = true, title = 'design unit4', children }
                         <img src="/static/icon_menu.svg" height="25px" width="25px" />
                     </a>
 
-                    <Menu
+                    <Menu vertical
                         items={[
                             {
                                 href: "/about",
