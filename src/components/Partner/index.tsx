@@ -11,7 +11,12 @@ export const Partner: React.FC<PartnerProps> = ({ href, title, src, ...props }) 
     <div className={'partner'}>
         <style jsx>{`
             .partner {
-                margin-bottom: 5em;
+                margin-bottom: var(--margin-m);
+            }
+
+            img {
+                display: block;
+                margin-bottom: var(--margin-s);
             }
         `}</style>
 

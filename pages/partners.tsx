@@ -1,10 +1,11 @@
-import React from 'react'
+import * as React from 'react'
+import { NextPage } from 'next'
 import { Title } from '../src/components/Title'
 import { Partner } from '../src/components/Partner'
-import TextBlock from '../components/TextBlock';
-import Article from '../components/Article';
+import TextBlock from '../components/TextBlock'
+import Article from '../components/Article'
 
-export default () => (
+const Page: NextPage = () => (
     <>
         <Title>ПАРТНЕРЫ</Title>
 
@@ -16,7 +17,9 @@ export default () => (
                     src='/static/logo_mla+.svg'
                     imageHeight='22px'
                 >
-                    <p>Архитектура, градостроительство, консалтинг.</p>
+                    <p>
+                        Архитектура, градостроительство, консалтинг.
+                    </p>
                 </Partner>
                 
                 <Partner
@@ -25,7 +28,10 @@ export default () => (
                     src='/static/HMAO_logo_bw.svg'
                     imageHeight='130px'
                 >
-                    <p>Центр компетенций по вопросам городской среды Ханты-Мансийского автономного округа - Югры.</p>
+                    <p>
+                        Центр компетенций по вопросам городской среды
+                        Ханты-Мансийского автономного округа - Югры.
+                    </p>
                 </Partner>
 
                 <Partner
@@ -34,9 +40,14 @@ export default () => (
                     src='/static/logo_knappt.svg'
                     imageHeight='30px'
                 >
-                    <p>Проектируют и производят изделия из бетона, фибробетона, стеклофибробетона, стеклофиброгипса и композитных материалов.</p>
+                    <p>
+                        Проектируют и производят изделия из бетона, фибробетона,
+                        стеклофибробетона, стеклофиброгипса и композитных материалов.
+                    </p>
                 </Partner>
            </TextBlock>
         </Article>
     </ >
 )
+
+export default Page
