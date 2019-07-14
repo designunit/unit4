@@ -1,14 +1,11 @@
-FROM node:10 as build
+FROM node:12-alpine as build
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN npm i
+RUN npm ci
 
 COPY next.config.js ./
-COPY static ./static
-COPY components ./components
-COPY pages ./pages
-COPY style.less ./
+COPY . .
 RUN npm run build && npm run export
 
 
