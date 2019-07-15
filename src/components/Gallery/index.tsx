@@ -29,7 +29,7 @@ const GalleryItem: React.FC<IGalleryItem> = props => (
                 object-fit: cover;
 
                 filter: sepia(100%) hue-rotate(260deg);
-                filter: grayscale(100%); 
+                filter: grayscale(100%);
             }
 
             .image {
@@ -42,10 +42,10 @@ const GalleryItem: React.FC<IGalleryItem> = props => (
                 left: 0;
                 width: 100%;
                 height: 100%;
-            
+
                 opacity: 0.9;
                 transition: .5s ease;
-                
+
                 background-color: rgba(255, 0, 102, .7);
 
                 display: flex;
@@ -77,8 +77,8 @@ const GalleryItem: React.FC<IGalleryItem> = props => (
             src={props.src}
         />
 
-        <div className="image-overlay">
-            <div className="gallery-item--text">
+        <div className='image-overlay'>
+            <div className='gallery-item--text'>
                 {props.text}
             </div>
         </div>
