@@ -42,7 +42,7 @@ export default ({ children }) => (
                 },
                 {
                     href: '/repository/yoshkola',
-                    src: 'https://unit4.io/files/yoshkola/yoshk.gif',
+                    src: 'https://unit4.io/files/yoshkola/04.jpg',
                     text: 'ЙО’школа',
                 },
                 
@@ -118,7 +118,7 @@ export default ({ children }) => (
                 },
             	{
                     href: '/repository/krvostok',
-                    src: 'https://unit4.io/files/krvostok/06.gif',
+                    src: 'https://unit4.io/files/krvostok/01.jpg',
                     text: 'КРАСНЫЙ ВОСТОК',
                 },
                 {
