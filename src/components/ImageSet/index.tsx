@@ -1,9 +1,9 @@
-import { Col, Row } from 'antd'
 import { constant, times } from 'lodash'
 import * as React from 'react'
-import Media from 'react-media'
 import { isUndefined } from 'util'
+import { Fotorama, IFotoramaOptions } from '../Fotorama'
 import { IImageProps, Image } from '../Image'
+import { ImageColumnsLayout } from './ImageColumnsLayout'
 
 export function getImage(item: string | IImageProps): IImageProps {
     if (typeof item === 'string') {
@@ -20,43 +20,32 @@ export interface IImageSetLayout {
 }
 
 export interface IImageSetProps {
-    items: Array<IImageProps | string>
-    layout?: IImageSetLayout
+    items: string[]// Array<IImageProps | string>
+    layout?: IImageSetLayout | {
+        slider: IFotoramaOptions,
+    }
 }
 
 export const ImageSet: React.FC<IImageSetProps> = props => {
+    if (!isUndefined(props.layout) && 'slider' in props.layout) {
+        return (
+            <Fotorama
+                items={props.items}
+                options={props.layout.slider}
+            />
+        )
+    }
+
     const size = props.items.length
-    const span = isUndefined(props.layout)
+    const layout = props.layout as IImageSetLayout
+    const span = isUndefined(layout)
         ? times(size, constant(24 / size))
-        : props.layout.span
+        : layout.span
 
     return (
-        <div>
-            <style jsx>{`
-                div {
-                    width: 100%;
-                    display: flex;
-                }
-            `}</style>
-
-            <Media query={'screen and (max-width: 31.25em)'}>
-                {match => match
-                    ? (
-                        props.items.map((x, i) => (
-                            <Image {...getImage(x)} />
-                        ))
-                    ) : (
-                        <Row
-                            gutter={16}
-                        >
-                            {props.items.map((x, i) => (
-                                <Col span={span[i]} key={i}>
-                                    <Image {...getImage(x)} />
-                                </Col>
-                            ))}
-                        </Row>
-                    )}
-            </Media>
-        </div >
+        <ImageColumnsLayout
+            items={props.items.map(getImage)}
+            span={span}
+        />
     )
 }
