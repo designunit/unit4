@@ -1,5 +1,5 @@
-import * as React from 'react'
 import LinkActive from 'next-link-active'
+import * as React from 'react'
 
 export interface IMenuItemProps {
     href: string
