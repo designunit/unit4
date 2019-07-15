@@ -12,7 +12,7 @@ export const Image: React.FC<IImageProps> = ({ src, alt }) => (
                 width: 100%;
             }
         `}</style>
-        
+
         <img
             src={src}
             alt={alt}
