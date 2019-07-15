@@ -29,45 +29,52 @@ const GalleryItem: React.FC<IGalleryItem> = props => (
                 object-fit: cover;
 
                 filter: sepia(100%) hue-rotate(260deg);
-                filter: grayscale(100%);
+                filter: grayscale(100%) contrast(0.75) brightness(1.25);
             }
 
             .image {
                 position: relative;
             }
 
-            .image-overlay {
+            .image::after {
+                content: '';
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
 
-                opacity: 0.9;
                 transition: .5s ease;
 
-                background-color: rgba(255, 0, 102, .7);
+                background-color: #f91b86;
+                mix-blend-mode: multiply;
+            }
+
+            .label {
+                z-index: 1;
+                pointer-events: none;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
 
                 display: flex;
                 justify-content: center;
                 align-items: center;
-            }
-
-            .image-overlay:hover {
-                opacity: 1;
-            }
-
-            .gallery-item--text {
-                font-family: var(--font-normal-family);
 
                 color: white;
+                font-family: var(--font-normal-family);
+                font-weight: bolder;
                 font-size: 1.2em;
                 text-align: center;
+
                 padding: 5px;
             }
 
             @media screen and (max-width: 31.25em) {
-                .gallery-item--text {
+                .label {
                     font-size: 1em;
                 }
             }
@@ -77,10 +84,8 @@ const GalleryItem: React.FC<IGalleryItem> = props => (
             src={props.src}
         />
 
-        <div className='image-overlay'>
-            <div className='gallery-item--text'>
-                {props.text}
-            </div>
+        <div className='label'>
+            {props.text}
         </div>
     </a>
 )
