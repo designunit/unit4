@@ -1,9 +1,9 @@
-import * as React from 'react'
 import { NextPage } from 'next'
-import { Title } from '../src/components/Title'
-import { Partner } from '../src/components/Partner'
-import TextBlock from '../components/TextBlock'
+import * as React from 'react'
 import Article from '../components/Article'
+import TextBlock from '../components/TextBlock'
+import { Partner } from '../src/components/Partner'
+import { Title } from '../src/components/Title'
 
 const Page: NextPage = () => (
     <>
@@ -21,7 +21,7 @@ const Page: NextPage = () => (
                         Архитектура, градостроительство, консалтинг.
                     </p>
                 </Partner>
-                
+
                 <Partner
                     href='https://gorsreda86.ugraces.ru/'
                     title='www.knappt.com'
