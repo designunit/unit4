@@ -1,9 +1,9 @@
+import { Col, Row } from 'antd'
+import { constant, times } from 'lodash'
 import * as React from 'react'
-import { isUndefined } from 'util'
 import Media from 'react-media'
-import { times, constant } from 'lodash'
-import { Row, Col } from 'antd'
-import { Image, IImageProps } from '../Image'
+import { isUndefined } from 'util'
+import { IImageProps, Image } from '../Image'
 
 export function getImage(item: string | IImageProps): IImageProps {
     if (typeof item === 'string') {
