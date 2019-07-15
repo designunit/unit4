@@ -32,6 +32,13 @@ export const ImageSet: React.FC<IImageSetProps> = props => {
 
     return (
         <div>
+            <style jsx>{`
+                div {
+                    width: 100%;
+                    display: flex;
+                }
+            `}</style>
+
             <Media query={'screen and (max-width: 31.25em)'}>
                 {match => match
                     ? (
