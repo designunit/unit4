@@ -79,7 +79,7 @@ export default ({ children }) => (
                 },
                 {
                     href: '/repository/dc_scnd',
-                    src: 'https://unit4.io/files/dc_scnd/dc.jpg',
+                    src: 'https://unit4.io/files/dc_scnd/dc.gif',
                     text: 'ДИЗАЙН-КОД ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ',
                 },
                 {
@@ -89,7 +89,7 @@ export default ({ children }) => (
                 },
             	{
                     href: '/repository/samarapark',
-                    src: 'https://unit4.io/files/samarapark/11.jpg',
+                    src: 'https://unit4.io/files/samarapark/10.jpg',
                     text: 'ПАРК ЗАГОРОДНЫЙ',
                 },
                 {
@@ -118,7 +118,7 @@ export default ({ children }) => (
                 },
             	{
                     href: '/repository/krvostok',
-                    src: 'https://unit4.io/files/krvostok/01.jpg',
+                    src: 'https://unit4.io/files/krvostok/06.gif',
                     text: 'КРАСНЫЙ ВОСТОК',
                 },
                 {
