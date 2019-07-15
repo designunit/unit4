@@ -1,10 +1,14 @@
 import { NextPage } from 'next'
+import dynamic from 'next/dynamic'
 import * as React from 'react'
-import MainLogo from '../components/MainLogo'
+
+const UnitCanvasDynamic = dynamic(() => import('../src/components/UnitCanvas'), {
+    ssr: false,
+})
 
 const Page: NextPage = () => (
     <>
-        <MainLogo />
+        <UnitCanvasDynamic/>
     </>
 )
 
