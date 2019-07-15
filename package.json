@@ -25,6 +25,7 @@
   "dependencies": {
     "@mdi/js": "^3.6.95",
     "@mdi/react": "^1.1.0",
+    "@svgr/webpack": "^4.3.2",
     "@types/lodash": "^4.14.136",
     "@zeit/next-less": "^1.0.1",
     "antd": "^3.20.2",

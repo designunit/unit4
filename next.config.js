@@ -17,4 +17,12 @@ module.exports = withMdx(withCss(withLess({
     },
     assetPrefix: '',
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'tsx'],
+    webpack(config) {
+        config.module.rules.push({
+            test: /\.svg$/,
+            use: ['@svgr/webpack'],
+        });
+
+        return config;
+    }
 })))
