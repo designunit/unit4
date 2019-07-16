@@ -14,7 +14,7 @@ export default ({ children }) => (
                 {
                     href: '/repository/delta',
                     src: 'https://unit4.io/files/delta/delta.jpg',
-                    text: 'БЛАГОУСТРОЙСТВО ЖИЛОГО КОМПЛЕКСА COMCITY',
+                    text: 'БЛАГОУСТРОЙСТВО ЖК COMCITY МОСКВА',
                 },
                 {
                     href: '/repository/application_manual',
@@ -24,26 +24,26 @@ export default ({ children }) => (
                             МЕТОДИЧЕСКИЕ
                             <br/>
                             РЕКОМЕНДАЦИИ
+                            <br/>
+                            ХМАО
                         </span>
                     ),
                 },
                 {
                     href: '/repository/gor_projects_spb',
                     src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg',
-                    text: (
-                        <span>
-                            ГОРОДСКИЕ
-                            <br/>
-                            ПРОЕКТЫ
-                            <br/>
-                            В СПб
-                        </span>
-                    ),
+                    text: 'КОНЦЕПЦИИ spb.city4people.ru',
                 },
                 {
                     href: '/repository/yoshkola',
                     src: 'https://unit4.io/files/yoshkola/04.jpg',
-                    text: 'ЙО’школа',
+                    text: (
+                        <span>
+                            IT ШКОЛА
+                            <br/>
+                            ЙОШКАР-ОЛА
+                        </span>
+                    ),
                 },
                 
                 {
@@ -75,7 +75,7 @@ export default ({ children }) => (
                 {
                     href: '/repository/swarm',
                     src: 'https://unit4.io/files/swarm/swarm.jpg',
-                    text: 'МУЛЬТИАГЕНТНАЯ СИСТЕМА SWARM',
+                    text: 'МОДЕЛИРОВАНИЕ ПЕШЕХОДНЫХ ПОТОКОВ SWARM',
                 },
                 {
                     href: '/repository/dc_scnd',
@@ -90,7 +90,7 @@ export default ({ children }) => (
             	{
                     href: '/repository/samarapark',
                     src: 'https://unit4.io/files/samarapark/10.jpg',
-                    text: 'ПАРК ЗАГОРОДНЫЙ',
+                    text: 'ПАРК ЗАГОРОДНЫЙ САМАРА',
                 },
                 {
                     href: '/repository/garagescreen',
@@ -121,7 +121,11 @@ export default ({ children }) => (
                     src: 'https://unit4.io/files/krvostok/01.jpg',
                     text: (
                         <span>
-                            ЗАВОД
+                            КОНЦЕПЦИЯ 
+                            <br/>
+                            БЛАГОУСТРОЙСТВА
+                            <br/>
+                            ЗАВОДА
                             <br/>
                             КРАСНЫЙ ВОСТОК
                         </span>
@@ -139,6 +143,8 @@ export default ({ children }) => (
                         <span>
                             БУЛЬВАР ЧИСТОПОЛЬ
                             <br/>
+                            ТАТАРСТАН
+                            <br/>
                             ФАЗА #2
                         </span>
                     ),
@@ -146,7 +152,7 @@ export default ({ children }) => (
                 {
                     href: '/repository/kemb',
                     src: 'https://unit4.io/files/kemb/01.jpg',
-                    text: 'НАБЕРЕЖНАЯ КАРПОВКИ',
+                    text: 'ИССЛЕДОВАНИЕ НАБЕРЕЖНОЙ КАРПОВКИ',
                 },
                 {
                     href: '/repository/model4',
@@ -159,6 +165,8 @@ export default ({ children }) => (
                     text: (
                         <span>
                             БУЛЬВАР ЧИСТОПОЛЬ
+                            <br/>
+                            ТАТАРСТАН
                             <br/>
                             ФАЗА #1
                         </span>

@@ -51,6 +51,8 @@ export default () => (
             <p>
                 Мы знаем силу дизайна и щедро делимся ею.
             </p>
+            <p> <a href={'https://issuu.com/unit4/docs/design_unit_4_portfolio'} target="_blank">Компетенции студии</a>
+            <br/><a href={'https://issuu.com/unit4/docs/mla_design_unit_4_products'} target="_blank">Линейка продуктов по развитию городской среды </a></p>
         </TextBlock>
 
         <TextBlock>    
