@@ -20,6 +20,12 @@ const GalleryItem: React.FC<IGalleryItem> = props => (
         <style jsx>{`
             a {
                 display: block;
+
+                overflow: hidden;
+            }
+
+            a:hover img {
+                transform: scale(1);
             }
 
             img {
@@ -30,6 +36,9 @@ const GalleryItem: React.FC<IGalleryItem> = props => (
 
                 filter: sepia(100%) hue-rotate(260deg);
                 filter: grayscale(100%) contrast(0.75) brightness(1.25);
+
+                transition: 0.25s ease;
+                transform: scale(1);
             }
 
             .image {
@@ -76,6 +85,10 @@ const GalleryItem: React.FC<IGalleryItem> = props => (
             @media screen and (max-width: 31.25em) {
                 .label {
                     font-size: 1em;
+                }
+
+                img {
+                    transform: scale(1.1);
                 }
             }
         `}</style>
