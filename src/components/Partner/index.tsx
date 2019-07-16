@@ -1,13 +1,13 @@
 import * as React from 'react'
 
-export interface PartnerProps {
+export interface IPartnerProps {
     href: string
     title: string
     src: string
     imageHeight: number | string
 }
 
-export const Partner: React.FC<PartnerProps> = ({ href, title, src, ...props }) => (
+export const Partner: React.FC<IPartnerProps> = ({ href, title, src, ...props }) => (
     <div className={'partner'}>
         <style jsx>{`
             .partner {
