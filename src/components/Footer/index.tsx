@@ -1,7 +1,5 @@
 import * as React from 'react'
 
-import Contact from '../../../components/Contact'
-
 export const Footer: React.FC = () => (
     <footer>
         <style jsx>{`
@@ -13,20 +11,27 @@ export const Footer: React.FC = () => (
                 font-size: var(--font-second-size);
             }
 
+            a {
+                color: var(--color-light);
+            }
+
+            a:hover {
+                color: var(--link-color-active);
+            }
+
             .copyright {
                 color: var(--color-light);
             }
         `}</style>
 
-        <p className="copyright">© 2017-2019 design unit 4</p>
+        <p className='copyright'>© 2017-2019 design unit 4</p>
         <p>
-            <Contact
-                href="mailto:inbox@unit4.io"
-                mix="light"
+            <a
+                href='mailto:inbox@unit4.io'
                 target={'_blank'}
             >
                 inbox@unit4.io
-            </Contact>
+            </a>
         </p>
     </footer>
 )

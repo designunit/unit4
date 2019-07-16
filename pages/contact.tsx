@@ -5,7 +5,6 @@ import { mdiInstagram } from '@mdi/js'
 import Icon from '@mdi/react'
 import { NextPage } from 'next'
 import Article from '../components/Article'
-import Contact from '../components/Contact'
 import TextBlock from '../components/TextBlock'
 import { Title } from '../src/components/Title'
 
@@ -17,33 +16,27 @@ const Page: NextPage = () => (
 
         <Article>
             <TextBlock>
-                <p>
-                    <Contact href='mailto:inbox@unit4.io'>
-                        inbox@unit4.io
-                    </Contact>
-                </p>
+                <a href='mailto:inbox@unit4.io'>
+                    inbox@unit4.io
+                </a>
             </TextBlock>
 
             <TextBlock>
-                <p>
-                    <Contact
-                        href={maps}
-                        target='_blank'
-                    >
-                        ООО "дизайн юнит 4"<br />
-                        Гражданская улица, 13-15<br />
-                        Санкт-Петербург<br />
-                        Россия
-                    </Contact>
-                </p>
+                <a
+                    href={maps}
+                    target='_blank'
+                >
+                    ООО "дизайн юнит 4"<br />
+                    Гражданская улица, 13-15<br />
+                    Санкт-Петербург<br />
+                    Россия
+                </a>
             </TextBlock>
 
             <TextBlock>
-                <p>
-                    <Contact href='tel:79219980303'>
-                        +7 921 9980303
-                    </Contact>
-                </p>
+                <a href='tel:79219980303'>
+                    +7 921 9980303
+                </a>
             </TextBlock>
 
             <a
