@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import * as React from 'react'
-import Article from '../components/Article'
 import TextBlock from '../components/TextBlock'
+import { Article } from '../src/components/Article'
 import { Partner } from '../src/components/Partner'
 import { Title } from '../src/components/Title'
 
@@ -45,7 +45,7 @@ const Page: NextPage = () => (
                         стеклофибробетона, стеклофиброгипса и композитных материалов.
                     </span>
                 </Partner>
-           </TextBlock>
+            </TextBlock>
         </Article>
     </ >
 )

@@ -1,7 +1,7 @@
 import React from 'react'
 import App, { Container } from 'next/app'
 import DefaultLayout from '../src/components/DefaultLayout'
-import Article from '../components/Article'
+import { Article } from '../src/components/Article'
 
 import 'antd/dist/antd.less'
 import '../src/style.less'
@@ -12,11 +12,11 @@ export default class MyApp extends App {
         const isMdx = Component.hasOwnProperty('isMDXComponent') ? Component.isMDXComponent : false
         const content = isMdx ? (
             <Article>
-                <Component {...pageProps}/>
+                <Component {...pageProps} />
             </Article>
         ) : (
-            <Component {...pageProps}/>
-        )
+                <Component {...pageProps} />
+            )
 
         return (
             <Container>

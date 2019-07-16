@@ -1,6 +1,6 @@
 import react from 'react'
 import { Title } from '../../src/components/Title'
-import Article from '../../components/Article'
+import { Article } from '../../src/components/Article'
 import { Image } from '../../src/components/Image'
 import SwitchImage from '../../components/SwitchImage'
 
@@ -98,7 +98,7 @@ export default ({ children }) => (
                     },
                 ]}
             />
-            
+
         </Article>
     </>
 )
