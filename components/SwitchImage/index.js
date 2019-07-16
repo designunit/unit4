@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Image } from '../../src/components/Image'
-import './styles.less'
 
 export default ({ images }) => {
     const [index, setIndex] = useState(0)
@@ -11,6 +10,24 @@ export default ({ images }) => {
 
     return (
         <div className='switch-image'>
+            <style jsx>{`
+                button {
+                    background-color: rgba(255, 0, 102, 0.7);
+                    min-width: 200px;
+                    border: none;
+                    color: white;
+                    padding: 4px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    background-color: rgba(255, 0, 102, 1);
+                }
+            `}</style>
+
             <div className='image-text'>
                 <button
                     onClick={() => setIndex(nextIndex)}
