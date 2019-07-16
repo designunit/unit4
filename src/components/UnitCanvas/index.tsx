@@ -65,6 +65,8 @@ export default class UnitCanvas extends React.Component<{}, {}> {
                         height: 100%;
 
                         z-index: -1;
+
+                        mix-blend-mode: multiply;
                     }
 
                     img {

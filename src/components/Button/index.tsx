@@ -15,7 +15,7 @@ export const Button: React.FC<Props> = props => {
                     cursor: pointer;
                     min-width: 200px;
                     background-color: var(--link-color-default);
-                    color: white;
+                    color: var(--color-text-opposite);
                     padding: 0px;
                     text-align: center;
                     text-decoration: none;
@@ -23,15 +23,16 @@ export const Button: React.FC<Props> = props => {
                     border: 4px solid var(--link-color-default);
 
                     outline: 0;
+                    transition: .25s ease;
                 }
 
                 button:hover {
-                    background-color: var(--link-color-active-light);
-                    border-color: var(--link-color-active-light);
+                    background-color: var(--link-color-active);
+                    border-color: var(--link-color-active);
                 }
 
                 button:focus {
-                    border-color: rgb(102, 0, 255);
+                    border-color: var(--link-color-focus);
                 }
 
                 button:disabled {

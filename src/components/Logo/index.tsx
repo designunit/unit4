@@ -19,7 +19,8 @@ export const Logo: React.SFC<ILogoProps> = props => (
                 top: -5px;
                 left: -5px;
 
-                background-color: white;
+                fill: var(--color-text);
+                background-color: var(--color-background);
                 padding: 5px;
             }
         `}</style>

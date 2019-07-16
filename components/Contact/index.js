@@ -1,12 +1,12 @@
 import './styles.less'
 
-export default ({ href, target, children, mix }) => (
-    <span className={`contact ${mix}`}>
+export default (props) => (
+    <span className={`contact ${props.mix}`}>
         <a
-            href={href}
-            target={target}
+            href={props.href}
+            target={props.target}
         >
-            {children}
+            {props.children}
         </a>
     </span>
 )

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Svg from 'react-inlinesvg'
 
 export interface IPartnerProps {
     href: string
@@ -14,16 +15,16 @@ export const Partner: React.FC<IPartnerProps> = ({ href, title, src, ...props })
                 margin-bottom: var(--margin-m);
             }
 
-            img {
-                display: block;
+            a {
                 margin-bottom: var(--margin-s);
+                display: block;
             }
         `}</style>
 
         <a href={href} target={'_blank'} title={title}>
-            <img
+            <Svg
+                className={'partner-logo'}
                 src={src}
-                height={props.imageHeight}
             />
         </a>
 

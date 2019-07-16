@@ -15,7 +15,7 @@ export const MenuItem: React.FC<IMenuItemProps> = ({ href, text }) => (
             }
 
             li a {
-                color: black;
+                color: var(--color-text);
                 text-decoration: none;
             }
 
@@ -34,19 +34,19 @@ export const MenuItem: React.FC<IMenuItemProps> = ({ href, text }) => (
             }
 
             .link-body.active {
-                background-color: black;
-                color: white;
+                background-color: var(--color-background-opposite);
+                color: var(--color-text-opposite);
             }
         `}</style>
 
         <LinkActive href={href} passHref>
             {active => active
                 ? (
-                    <span className="link-body active">
+                    <span className='link-body active'>
                         {text}
                     </span>
                 ) : (
-                    <a className="link-body">
+                    <a className='link-body'>
                         {text}
                     </a>
                 )

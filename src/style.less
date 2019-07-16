@@ -4,10 +4,12 @@
     --font-family: 'Roboto', sans-serif;
 
     --color-text: black;
+    --color-text-opposite: white;
+    --color-background: white;
+    --color-background-opposite: black;
 
-    --link-color-default: rgb(248, 27, 133);
-    --link-color-active: rgb(255, 0, 40);
-    --link-color-active-light: rgb(248, 27, 100);
+    --link-color-default: var(--color-text);
+    --link-color-active: rgb(248, 27, 133);
     --link-color-inactive: #ccc;
     --link-color-focus: rgb(102, 0, 255);
     --font-main-family: var(--font-family);
@@ -27,23 +29,59 @@
     --content-padding: 0;
 }
 
+svg.icon-link {
+    fill: var(--color-text);
+}
+
+svg.icon-link:hover {
+    path {
+        fill: var(--link-color-active);
+    }
+}
+
+.partner-logo {
+    display: block;
+    width: 200px;
+    fill: var(--color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: white;
+        --color-text-opposite: black;
+
+        --color-background: rgb(20, 20, 30);
+        --color-background-opposite: white;
+    }
+}
+
 body {
     font-family: var(--font-normal-family);
     font-weight: var(--font-normal-weight);
     line-height: var(--font-normal-line-height);
     font-size: var(--font-normal-size);
 
+    background-color: var(--color-background);
     color: var(--color-text);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 900;
     line-height: var(--font-main-line-height);
 
     color: var(--color-text);
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: var(--margin-m);
     margin-bottom: var(--margin-s);
     padding: var(--content-padding);
@@ -66,7 +104,7 @@ a {
         color: var(--link-color-active);
 
         svg {
-            fill: var(--link-color-default);
+            fill: var(--link-color-active);
         }
     }
 
@@ -86,7 +124,7 @@ ul {
 }
 
 ul li:before {
-    content: "/";
+    content: '/';
     display: block;
     float: left;
     width: 0.75em;
@@ -94,11 +132,11 @@ ul li:before {
     font-weight: bolder;
 }
 
-
 .container {
-	position: absolute;
-	top:10em; left: 5%;
-	overflow-x: auto;
+    position: absolute;
+    top: 10em;
+    left: 5%;
+    overflow-x: auto;
 }
 
 @media screen and (max-width: 31.25em) {

@@ -1,13 +1,13 @@
-import * as React from 'react'
 import className from 'classnames'
-import { MenuItem, IMenuItemProps } from './MenuItem'
+import * as React from 'react'
+import { IMenuItemProps, MenuItem } from './MenuItem'
 
 export interface IMenuProps {
     items: IMenuItemProps[]
     vertical?: boolean
 }
 
-export const Menu: React.FC<IMenuProps> = ({ items, vertical=false }) => (
+export const Menu: React.FC<IMenuProps> = ({ items, vertical= false }) => (
     <menu className={className({
         vertical,
     })}>
@@ -17,7 +17,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical=false }) => (
                 list-style: none;
                 margin: 0;
 
-                background-color: white;
+                background-color: var(--color-background);
 
                 position: relative;
                 top: -10px;

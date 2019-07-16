@@ -14,12 +14,12 @@ const Page: NextPage = () => (
                 <Partner
                     href='http://www.mlaplus.com/'
                     title='www.mlaplus.com'
-                    src='/static/logo_mla+.svg'
+                    src='/static/logo_mla.svg'
                     imageHeight='22px'
                 >
-                    <p>
+                    <span>
                         Архитектура, градостроительство, консалтинг.
-                    </p>
+                    </span>
                 </Partner>
 
                 <Partner
@@ -28,10 +28,10 @@ const Page: NextPage = () => (
                     src='/static/HMAO_logo_bw.svg'
                     imageHeight='130px'
                 >
-                    <p>
+                    <span>
                         Центр компетенций по вопросам городской среды
                         Ханты-Мансийского автономного округа - Югры.
-                    </p>
+                    </span>
                 </Partner>
 
                 <Partner
@@ -40,10 +40,10 @@ const Page: NextPage = () => (
                     src='/static/logo_knappt.svg'
                     imageHeight='30px'
                 >
-                    <p>
+                    <span>
                         Проектируют и производят изделия из бетона, фибробетона,
                         стеклофибробетона, стеклофиброгипса и композитных материалов.
-                    </p>
+                    </span>
                 </Partner>
            </TextBlock>
         </Article>
