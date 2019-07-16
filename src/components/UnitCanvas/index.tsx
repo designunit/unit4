@@ -51,14 +51,6 @@ export default class UnitCanvas extends React.Component {
         // // cancelAnimationFrame() won't throw an error
     }
 
-    public drawLogo(ctx, x, y, s) {
-        const w = 20
-        ctx.fillRect(x, y, w, w)
-        ctx.fillRect(x + s, y, w, w)
-        ctx.fillRect(x + s, y + s, w, w)
-        ctx.fillRect(x, y + s, w, w)
-    }
-
     public loop = () => {
         const ctx = this.ctx
         const canvas = this.canvas
@@ -108,7 +100,7 @@ export default class UnitCanvas extends React.Component {
 
     public render() {
         return (
-            <div className='unit-canvas'>
+            <div>
                 <style jsx>{`
                     div {
                         display: flex;
