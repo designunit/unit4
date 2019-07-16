@@ -66,6 +66,10 @@ export default class UnitCanvas extends React.Component {
 
         const image = this.imgRef.current
 
+        if (!image) {
+            return this.stopLoop()
+        }
+
         if (image.complete) {
             const dx = Math.cos(this.angle)
             const dy = Math.sin(this.angle)
