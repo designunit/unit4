@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import className from 'classnames'
+import Head from 'next/head'
 import { Footer } from '../Footer'
 import { Menu } from '../Menu'
 
@@ -13,30 +13,30 @@ export default ({ logo = true, center = true, title = 'design unit4', children }
             <title>{title}</title>
         </Head>
 
-        <div className="content">
+        <div className='content'>
             {!logo ? null : (
                 <header>
-                    <a className="home" href="/" title="logo">
-                        <img src="/static/icon_menu.svg" height="25px" width="25px" />
+                    <a className='home' href='/' title='logo'>
+                        <img src='/static/icon_menu.svg' height='25px' width='25px' />
                     </a>
 
                     <Menu vertical
                         items={[
                             {
-                                href: "/about",
-                                text: "о нас",
+                                href: '/about',
+                                text: 'о нас',
                             },
                             {
-                                href: "/repository",
-                                text: "репозиторий",
+                                href: '/repository',
+                                text: 'репозиторий',
                             },
                             {
-                                href: "/partners",
-                                text: "партнеры",
+                                href: '/partners',
+                                text: 'партнеры',
                             },
                             {
-                                href: "/contact",
-                                text: "контакты",
+                                href: '/contact',
+                                text: 'контакты',
                             },
                         ]}
                     />
