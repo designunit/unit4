@@ -1,6 +1,7 @@
 import className from 'classnames'
 import Head from 'next/head'
 import { Footer } from '../Footer'
+import { Logo } from '../Logo'
 import { Menu } from '../Menu'
 
 import './styles.less'
@@ -16,9 +17,9 @@ export default ({ logo = true, center = true, title = 'design unit4', children }
         <div className='content'>
             {!logo ? null : (
                 <header>
-                    <a className='home' href='/' title='logo'>
-                        <img src='/static/icon_menu.svg' height='25px' width='25px' />
-                    </a>
+                    <Logo
+                        href={'/'}
+                    />
 
                     <Menu vertical
                         items={[
