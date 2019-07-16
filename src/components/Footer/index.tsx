@@ -19,19 +19,19 @@ export const Footer: React.FC = () => (
                 color: var(--link-color-active);
             }
 
-            .copyright {
+            section {
                 color: var(--color-light);
             }
         `}</style>
 
-        <p className='copyright'>© 2017-2019 design unit 4</p>
-        <p>
+        <section>© 2017-2019 design unit 4</section>
+        <section>
             <a
                 href='mailto:inbox@unit4.io'
                 target={'_blank'}
             >
                 inbox@unit4.io
             </a>
-        </p>
+        </section>
     </footer>
 )
