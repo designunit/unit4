@@ -14,6 +14,7 @@ export const ImageColumnsLayout: React.FC<IImageSetProps> = props => (
             div {
                 width: 100%;
                 display: flex;
+                flex-direction: column;
             }
         `}</style>
 
