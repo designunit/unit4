@@ -1,35 +1,33 @@
 import * as React from 'react'
 
-export default class UnitCanvas extends React.Component {
+export default class UnitCanvas extends React.Component<{}, {}> {
     public running = false
 
     private angle: number
     private frameId: number
+    private frame: number
 
     private canvas: HTMLCanvasElement
     private ctx: CanvasRenderingContext2D
 
     private imgRef: React.RefObject<HTMLImageElement>
+    private stopTimeout: NodeJS.Timeout
 
-    constructor(props) {
+    constructor(props: {}) {
         super(props)
 
+        this.angle = Math.random() * 2 * Math.PI
         this.imgRef = React.createRef()
     }
 
     public componentDidMount() {
-        this.angle = Math.random() * 2 * Math.PI
+        window.addEventListener('resize', this.onResize)
 
-        this.startLoop()
-
-        setTimeout(() => {
-            this.stopLoop()
-        }, 5000)
+        this.init()
     }
 
     public componentWillUnmount() {
-        console.log('UNMOUNT')
-
+        window.removeEventListener('resize', this.onResize)
         this.stopLoop()
     }
 
@@ -40,62 +38,12 @@ export default class UnitCanvas extends React.Component {
 
         this.frameId = window.requestAnimationFrame(this.loop)
         this.running = true
-        // if (!this._frameId) {
-        // }
     }
 
     public stopLoop() {
+        window.cancelAnimationFrame(this.frameId)
+
         this.running = false
-        // window.cancelAnimationFrame(this._frameId);
-        // // Note: no need to worry if the loop has already been cancelled
-        // // cancelAnimationFrame() won't throw an error
-    }
-
-    public loop = () => {
-        const ctx = this.ctx
-        const canvas = this.canvas
-        const frame = this.frameId
-
-        const image = this.imgRef.current
-
-        if (!image) {
-            return this.stopLoop()
-        }
-
-        if (image.complete) {
-            const dx = Math.cos(this.angle)
-            const dy = Math.sin(this.angle)
-            const s = 4
-            const x = frame * dx * s
-            const y = frame * dy * s
-
-            ctx.drawImage(
-                image,
-                image.offsetLeft + x,
-                image.offsetTop + y,
-                image.offsetWidth,
-                image.offsetHeight,
-            )
-        }
-
-        if (this.running) {
-            this.frameId = window.requestAnimationFrame(this.loop)
-        }
-    }
-
-    public onRef = canvas => {
-        if (!canvas) {
-            return
-        }
-        this.canvas = canvas
-        this.ctx = this.canvas.getContext('2d')
-
-        const dimension = [
-            document.documentElement.clientWidth,
-            document.documentElement.clientHeight,
-        ]
-        canvas.width = dimension[0]
-        canvas.height = dimension[1]
     }
 
     public render() {
@@ -137,5 +85,61 @@ export default class UnitCanvas extends React.Component {
                 />
             </div>
         )
+    }
+
+    private onResize = () => {
+        this.stopLoop()
+        this.init()
+    }
+
+    private loop = () => {
+        const ctx = this.ctx
+        const image = this.imgRef.current
+
+        if (!image) {
+            return this.stopLoop()
+        }
+
+        if (image.complete) {
+            const dx = Math.cos(this.angle)
+            const dy = Math.sin(this.angle)
+            const s = 4
+            const x = this.frame * dx * s
+            const y = this.frame * dy * s
+
+            ctx.drawImage(
+                image,
+                image.offsetLeft + x,
+                image.offsetTop + y,
+                image.offsetWidth,
+                image.offsetHeight,
+            )
+            this.frame ++
+        }
+
+        if (this.running) {
+            this.frameId = window.requestAnimationFrame(this.loop)
+        }
+    }
+
+    private onRef = (canvas: HTMLCanvasElement) => {
+        if (!canvas) {
+            return
+        }
+        this.canvas = canvas
+        this.ctx = this.canvas.getContext('2d')
+    }
+
+    private init() {
+        this.canvas.width = document.documentElement.clientWidth
+        this.canvas.height = document.documentElement.clientHeight
+
+        this.frame = 0
+        this.startLoop()
+
+        clearTimeout(this.stopTimeout)
+        this.stopTimeout = setTimeout(() => {
+            this.stopLoop()
+        }, 5000)
     }
 }
