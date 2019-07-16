@@ -5,8 +5,11 @@
 
     --color-text: black;
 
-    --link-color-default: rgb(255, 72, 147);
-    --link-color-active: rgb(255, 0, 47);
+    --link-color-default: rgb(248, 27, 133);
+    --link-color-active: rgb(255, 0, 40);
+    --link-color-active-light: rgb(248, 27, 100);
+    --link-color-inactive: #ccc;
+    --link-color-focus: rgb(102, 0, 255);
     --font-main-family: var(--font-family);
     --font-main-size: 2em;
     --font-main-line-height: 1.2em;
@@ -65,6 +68,11 @@ a {
         svg {
             fill: var(--link-color-active);
         }
+    }
+
+    &:focus {
+        color: var(--link-color-focus);
+        outline: 0;
     }
 }
 
