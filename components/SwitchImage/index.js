@@ -12,11 +12,11 @@ export default ({ images }) => {
     return (
         <div className='switch-image'>
             <div className='image-text'>
-            <button
-                onClick={() => setIndex(nextIndex)}
-            >
-                {buttonText}
-            </button>
+                <button
+                    onClick={() => setIndex(nextIndex)}
+                >
+                    {buttonText}
+                </button>
             </div>
 
             <Image
