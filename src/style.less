@@ -5,8 +5,8 @@
 
     --color-text: black;
 
-    --link-color-default: white;
-    --link-color-active: #ff0066;
+    --link-color-default: rgb(255, 72, 147);
+    --link-color-active: rgb(255, 0, 47);
     --font-main-family: var(--font-family);
     --font-main-size: 2em;
     --font-main-line-height: 1.2em;
@@ -55,7 +55,13 @@ p {
 }
 
 a {
+    text-decoration: underline;
+    color: var(--link-color-default);
+
     &:hover {
+        text-decoration: underline;
+        color: var(--link-color-active);
+
         svg {
             fill: var(--link-color-active);
         }
