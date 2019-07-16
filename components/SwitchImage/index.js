@@ -12,19 +12,15 @@ export default ({ images }) => {
         <div className='switch-image'>
             <style jsx>{`
                 button {
-                    background-color: rgba(255, 0, 102, 0.7);
+                    background-color: rgba(255, 0, 102, 1);
                     min-width: 200px;
                     border: none;
                     color: white;
-                    padding: 4px;
+                    padding: 2px;
                     text-align: center;
                     text-decoration: none;
                     display: inline-block;
                     cursor: pointer;
-                }
-
-                button:hover {
-                    background-color: rgba(255, 0, 102, 1);
                 }
             `}</style>
 

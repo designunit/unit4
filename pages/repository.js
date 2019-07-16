@@ -119,7 +119,13 @@ export default ({ children }) => (
             	{
                     href: '/repository/krvostok',
                     src: 'https://unit4.io/files/krvostok/01.jpg',
-                    text: 'КРАСНЫЙ ВОСТОК',
+                    text: (
+                        <span>
+                            ЗАВОД
+                            <br/>
+                            КРАСНЫЙ ВОСТОК
+                        </span>
+                    ),
                 },
                 {
                     href: '/repository/trollgardens',
