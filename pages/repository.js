@@ -73,6 +73,11 @@ export default ({ children }) => (
                     ),
                 },
                 {
+                    href: '/repository/shelter',
+                    src: 'https://unit4.io/files/shelter/01.jpg',
+                    text: 'ИНСТАЛЛЯЦИЯ NEST WIND SHELTER',
+                },
+                {
                     href: '/repository/swarm',
                     src: 'https://unit4.io/files/swarm/swarm.jpg',
                     text: 'МОДЕЛИРОВАНИЕ ПЕШЕХОДНЫХ ПОТОКОВ SWARM',
