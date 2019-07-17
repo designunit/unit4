@@ -35,6 +35,7 @@
     "next": "^9.0.1",
     "next-link-active": "^1.0.1",
     "react": "^16.8.6",
+    "react-compare-image": "^1.3.0",
     "react-dom": "^16.8.6",
     "react-inlinesvg": "^0.8.4",
     "react-media": "^1.9.2"
