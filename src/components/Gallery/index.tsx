@@ -1,18 +1,26 @@
+import className from 'classnames'
 import * as React from 'react'
 
 export interface IGalleryItem {
     src: string
-    alt: string
+    alt?: string
     href?: string
-    text?: string
+    text?: string | React.ReactNode
+}
+
+export interface IGalleryItemProps extends IGalleryItem {
+    smallLabel: boolean
 }
 
 export interface IGallery {
     items: IGalleryItem[]
     style?: React.CSSProperties
+    minCellSize?: number
+    smallLabel?: boolean
+    gridGap?: number
 }
 
-const GalleryItem: React.FC<IGalleryItem> = props => (
+const GalleryItem: React.FC<IGalleryItemProps> = props => (
     <a
         className={'image'}
         href={props.href}
@@ -82,6 +90,11 @@ const GalleryItem: React.FC<IGalleryItem> = props => (
                 padding: 5px;
             }
 
+            .label.small {
+                font-size: 0.8em;
+                line-height: 1.6em;
+            }
+
             @media screen and (max-width: 31.25em) {
                 .label {
                     font-size: 0.8em;
@@ -97,21 +110,23 @@ const GalleryItem: React.FC<IGalleryItem> = props => (
             src={props.src}
         />
 
-        <div className='label'>
+        <div className={className('label', {
+            small: props.smallLabel,
+        })}>
             {props.text}
         </div>
     </a>
 )
 
-export const Gallery: React.FC<IGallery> = props => (
+export const Gallery: React.FC<IGallery> = ({ gridGap = 10, minCellSize = 200, smallLabel = false, ...props }) => (
     <div
         className={'gallery'}
         style={props.style}
     >
         <style jsx>{`
             .gallery {
-                --cell-size-min: 200px;
-                --grid-gap: 10px;
+                --cell-size-min: ${minCellSize}px;
+                --grid-gap: ${gridGap}px;
 
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(var(--cell-size-min), 1fr));
@@ -140,6 +155,7 @@ export const Gallery: React.FC<IGallery> = props => (
                 text={x.text}
                 alt={x.alt}
                 href={x.href}
+                smallLabel={smallLabel}
             />
         ))}
     </div>
