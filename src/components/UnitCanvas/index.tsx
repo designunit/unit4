@@ -1,6 +1,10 @@
 import * as React from 'react'
 
-export default class UnitCanvas extends React.Component<{}, {}> {
+export interface IUnitCanvasProps {
+    marginTop: number
+}
+
+export default class UnitCanvas extends React.Component<IUnitCanvasProps, {}> {
     public running = false
 
     private angle: number
@@ -13,7 +17,7 @@ export default class UnitCanvas extends React.Component<{}, {}> {
     private imgRef: React.RefObject<HTMLImageElement>
     private stopTimeout: NodeJS.Timeout
 
-    constructor(props: {}) {
+    constructor(props: IUnitCanvasProps) {
         super(props)
 
         this.angle = -(Math.random() * Math.PI)
@@ -71,7 +75,7 @@ export default class UnitCanvas extends React.Component<{}, {}> {
 
                     img {
                         width: 100%;
-                        margin-top: 80px;
+                        margin-top: ${this.props.marginTop}px;
 
                         filter: invert(100%);
                     }
