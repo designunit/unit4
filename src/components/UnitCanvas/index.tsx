@@ -16,7 +16,7 @@ export default class UnitCanvas extends React.Component<{}, {}> {
     constructor(props: {}) {
         super(props)
 
-        this.angle = Math.random() * 2 * Math.PI
+        this.angle = -(Math.random() * Math.PI)
         this.imgRef = React.createRef()
     }
 
@@ -105,7 +105,7 @@ export default class UnitCanvas extends React.Component<{}, {}> {
         if (image.complete) {
             const dx = Math.cos(this.angle)
             const dy = Math.sin(this.angle)
-            const s = 4
+            const s = 2
             const x = this.frame * dx * s
             const y = this.frame * dy * s
 
@@ -142,6 +142,6 @@ export default class UnitCanvas extends React.Component<{}, {}> {
         clearTimeout(this.stopTimeout)
         this.stopTimeout = setTimeout(() => {
             this.stopLoop()
-        }, 5000)
+        }, 15000)
     }
 }
