@@ -84,7 +84,7 @@ const GalleryItem: React.FC<IGalleryItem> = props => (
 
             @media screen and (max-width: 31.25em) {
                 .label {
-                    font-size: 1em;
+                    font-size: 0.8em;
                 }
 
                 img {
