@@ -21,7 +21,13 @@ const Page: NextPage = () => (
                 }
 
                 div {
-                    width: 60%;
+                    width: 75%;
+                }
+
+                @media screen and (max-width: 31.25em) {
+                    div {
+                        width: 100%;
+                    }
                 }
             `}</style>
 
@@ -53,6 +59,17 @@ const Page: NextPage = () => (
                             href: '/repository/gor_projects_spb',
                             src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg',
                             text: 'КОНЦЕПЦИИ spb.city4people.ru',
+                        },
+                        {
+                            href: '/repository/yoshkola',
+                            src: 'https://unit4.io/files/yoshkola/04.jpg',
+                            text: (
+                                <>
+                                    IT ШКОЛА
+                                    <br />
+                                    ЙОШКАР-ОЛА
+                                </>
+                            ),
                         },
                     ]}
                 />
