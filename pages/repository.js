@@ -12,6 +12,19 @@ export default ({ children }) => (
             }}
             items={[
                 {
+                    href: '/repository/hovrinka',
+                    src: 'https://unit4.io/files/hovrinka/hovrinka.jpg',
+                    text: (
+                        <span>
+                            СОЦИАЛЬНО-КУЛЬТУРНЫЙ
+                            <br/>
+                            ЦЕНТР
+                            <br/>
+                            ХОВРИНКА
+                        </span>
+                    ),
+                },
+                {
                     href: '/repository/delta',
                     src: 'https://unit4.io/files/delta/delta.jpg',
                     text: 'БЛАГОУСТРОЙСТВО ЖК COMCITY МОСКВА',
