@@ -40,11 +40,6 @@ const Page: NextPage<IPageProps> = props => {
                     flex: 1;
                     padding-bottom: var(--margin-m);
                 }
-
-                .dataviz-block section p {
-                    font-size: 1em;
-                    line-height: 1.5em;
-                }
             `}</style>
 
             <div className={'wrapper'}>
