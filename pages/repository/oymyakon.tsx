@@ -26,22 +26,23 @@ const Page: NextPage<IPageProps> = props => {
                 }
 
                 .wrapper {
-                    width: 95%;
+                    width: 90%;
                 }
 
                 .dataviz-block {
                     display: flex;
+                    flex-direction: column;
 
-                    margin-bottom: var(--margin-m);
+                    margin-bottom: var(--margin-s);
                 }
 
                 .dataviz-block section {
                     flex: 1;
-                    padding-left: 20px;
+                    padding-bottom: var(--margin-m);
                 }
 
                 .dataviz-block section p {
-                    font-size: 0.8em;
+                    font-size: 1em;
                     line-height: 1.5em;
                 }
             `}</style>
@@ -55,17 +56,17 @@ const Page: NextPage<IPageProps> = props => {
                 <h1>ОЙМЯКОН : : сценарии стратегии</h1>
 
                 <div className={'dataviz-block'}>
+                    <h3>ФАЗА ЗАПУСКА</h3>
                     <Sankey
                         showLegend={false}
                         style={{
                             marginBottom: 50,
-                            flex: 3,
+                            // flex: 3,
                         }}
                         data={sankeyDataStage1}
                         defaultColorSet={defaultColorSet}
                     />
                     <section>
-                        <h3>ФАЗА ЗАПУСКА</h3>
 
                         <p>
                             Cочетает компоненты слабого сценария с начинаниями из сильного.
@@ -83,20 +84,17 @@ const Page: NextPage<IPageProps> = props => {
                 </div>
 
                 <div className={'dataviz-block'}>
-
+                    <h3>ФАЗА ЗРЕЛОСТИ</h3>
                     <Sankey
                         showLegend={false}
                         style={{
                             marginBottom: 50,
-                            flex: 3,
+                            // flex: 3,
                         }}
                         data={sankeyDataStage2}
                         defaultColorSet={defaultColorSet}
                     />
-
                     <section>
-                        <h3>ФАЗА ЗРЕЛОСТИ</h3>
-
                         <p>
                             Реализует компоненты сильного сценария, закладывает основы перехода к целевому.
                         </p>
@@ -108,21 +106,17 @@ const Page: NextPage<IPageProps> = props => {
                 </div>
 
                 <div className={'dataviz-block'}>
+                    <h3>ЦЕЛЕВОЙ СЦЕНАРИЙ</h3>
                     <Sankey
                         showLegend={false}
                         style={{
                             marginBottom: 50,
-                            flex: 3,
+                            // flex: 3,
                         }}
                         data={sankeyDataStage3}
                         defaultColorSet={defaultColorSet}
                     />
-
                     <section>
-                        <h3>
-                            ЦЕЛЕВОЙ СЦЕНАРИЙ
-                        </h3>
-
                         <p>
                             В целевом сценарии практически все гостевые центры функционируют как научно-исследовательские резиденции. Основное снабжение осуществляется грузовыми воздушными дронами. Срочное пассажирское сообщение осуществляется пассажирскими воздушными дронами и электромоторной малой авиацией. Регулярное рейсовое пассажирское сообщение осуществляется пассажирскими дирижаблями и наземными пассажирскими дронами. Рейсовые дирижабли и наземные дроны также регулярно перевозят товары, продукты, материалы и отходы. Наземные дроны в комплектации мобильный съют при поддержке грузовых воздушных дронов осуществляют отдаленные гостевые и научные экспедиции.
                         </p>
