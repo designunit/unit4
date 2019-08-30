@@ -12,6 +12,19 @@ export default ({ children }) => (
             }}
             items={[
                 {
+                    href: '/repository/oys',
+                    src: 'https://unit4.io/files/oy/01.jpg',
+                    text: (
+                        <span>
+                            ОЙМЯКОН
+                            <br/>
+                            п(о)люс
+                            <br/>
+                            со-временности
+                        </span>
+                    ),
+                },
+                {
                     href: '/repository/hovrinka',
                     src: 'https://unit4.io/files/hovrinka/hovrinka.jpg',
                     text: (
