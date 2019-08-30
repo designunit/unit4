@@ -1,4 +1,5 @@
 import { NextPage } from 'next'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import * as React from 'react'
 import {
@@ -7,7 +8,11 @@ import {
     sankeyDataStage3,
 } from '../../src/app/oymyakon/data'
 import { defaultColorSet } from '../../src/app/oymyakon/dataviz'
-import { Sankey } from '../../src/components/Dataviz/Sankey'
+// import Sankey from '../../src/components/Dataviz/Sankey'
+
+const Sankey = dynamic(() => import('../../src/components/Dataviz/Sankey'), {
+    ssr: false,
+})
 
 // import '../src/style.css'
 
