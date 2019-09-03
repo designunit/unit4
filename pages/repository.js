@@ -12,8 +12,8 @@ export default ({ children }) => (
             }}
             items={[
                 {
-                    href: '/repository/oys',
-                    src: 'https://unit4.io/files/oy/01.jpg',
+                    href: '/repository/oy',
+                    src: 'https://unit4.io/files/oy/viz_gulag.jpg',
                     text: (
                         <span>
                             ОЙМЯКОН
