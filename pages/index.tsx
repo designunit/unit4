@@ -17,9 +17,10 @@ const Page: NextPage = () => (
             <style jsx>{`
                 section {
                     display: flex;
-                    justify-content: center;
+                    flex-direction: column;
 
-                    margin: 4em 0 2em;
+                    padding: 0 5px;
+                    margin: 5em auto;
                 }
 
                 div {
@@ -31,50 +32,23 @@ const Page: NextPage = () => (
                         width: 100%;
                     }
                 }
+
+                a:link, a:visited {
+                    background-color:  #ff0066;
+                    color: white;
+                    text-decoration: none;
+                    padding: 0 8px;
+                }
+
+                a:hover, a:active {
+                    background-color: black;
+                  }
             `}</style>
 
             <div>
-                <Gallery
-                    minCellSize={150}
-                    gridGap={20}
-                    smallLabel={true}
-                    items={[
-                        {
-                            href: '/repository/hovrinka',
-                            src: 'https://unit4.io/files/hovrinka/hovrinka.jpg',
-                            text: (
-                                <>
-                                    СОЦИАЛЬНО-КУЛЬТУРНЫЙ
-                                    <br />
-                                    ЦЕНТР
-                                    <br />
-                                    ХОВРИНКА
-                                </>
-                            ),
-                        },
-                        {
-                            href: '/repository/delta',
-                            src: 'https://unit4.io/files/delta/delta.jpg',
-                            text: 'БЛАГОУСТРОЙСТВО ЖК COMCITY МОСКВА',
-                        },
-                        {
-                            href: '/repository/gor_projects_spb',
-                            src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg',
-                            text: 'КОНЦЕПЦИИ spb.city4people.ru',
-                        },
-                        {
-                            href: '/repository/yoshkola',
-                            src: 'https://unit4.io/files/yoshkola/04.jpg',
-                            text: (
-                                <>
-                                    IT ШКОЛА
-                                    <br />
-                                    ЙОШКАР-ОЛА
-                                </>
-                            ),
-                        },
-                    ]}
-                />
+            30 | 08 | 2019 <a href={'/repository/oy'}>Оймякон : : п(о)люс со-временности</a><br/>
+            12 | 08 | 2019 <a href={'/repository/hovrinka'}>социально-культурный центр Ховринка</a><br/>
+            28 | 07 | 2019 <a href={'/repository/'}>благоустройство ЖК ComCity</a><br/>
             </div>
         </section>
     </>
