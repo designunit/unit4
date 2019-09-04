@@ -52,9 +52,22 @@ export default () => (
                 Мы знаем силу дизайна и щедро делимся ею.
             </p>
             <p>
-                <a href={'https://issuu.com/unit4/docs/design_unit_4_studio'} target="_blank">Студия</a>
-                <br /><a href={'https://issuu.com/unit4/docs/design_unit_4_portfolio'} target="_blank">Компетенции студии</a>
-                <br /><a href={'https://issuu.com/unit4/docs/mla_design_unit_4_products'} target="_blank">Линейка продуктов по развитию городской среды </a>
+            <style jsx>{`
+                a:link, a:visited {
+                    background-color:  #ff0066;
+                    color: white;
+                    text-decoration: none;
+                    padding: 0 8px;
+                }
+
+                a:hover, a:active {
+                    background-color: black;
+                  }
+            `}</style>
+
+                <a href={'https://issuu.com/unit4/docs/design_unit_4_studio'} target="_blank">студия</a>
+                <br /><a href={'https://issuu.com/unit4/docs/design_unit_4_portfolio'} target="_blank">компетенции</a>
+                <br /><a href={'https://issuu.com/unit4/docs/mla_design_unit_4_products'} target="_blank">линейка продуктов по развитию городской среды </a>
             </p>
         </TextBlock>
 
