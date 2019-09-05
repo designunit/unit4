@@ -29,7 +29,7 @@ interface ISankeyProps {
 const NivoSankey = ResponsiveSankey as any
 // const Sankey = ResponsiveSankey
 
-const Sankey: React.FC<ISankeyProps> = ({
+export const Sankey: React.FC<ISankeyProps> = ({
     layout = 'horizontal',
     labelLayout = 'horizontal',
     ...props },
@@ -131,5 +131,3 @@ const Sankey: React.FC<ISankeyProps> = ({
         </Ratio>
     )
 }
-
-export default Sankey

@@ -7,16 +7,8 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
 import { Article } from '../../src/components/Article'
-import { WideBlock } from '../../src/components/WideBlock'
 
-import {
-    sankeyDataStage1,
-    sankeyDataStage2,
-    sankeyDataStage3,
-} from '../../src/app/oymyakon/data'
-import { defaultColorSet } from '../../src/app/oymyakon/dataviz'
-
-const Sankey = dynamic(() => import('../../src/components/Dataviz/Sankey'), {
+const DatavizStage = dynamic(() => import('../../src/app/oymyakon/DatavizStage'), {
     ssr: false,
 })
 
@@ -24,18 +16,6 @@ interface IPageProps {
 }
 
 const Page: NextPage<IPageProps> = props => {
-    const sankeyAspectRatio = 2.5
-    const sankeyStyle: React.CSSProperties = {
-        backgroundColor: 'white',
-        color: 'black',
-        marginBottom: 50,
-        minWidth: 1200,
-        padding: 10,
-    }
-    const sankeyWrapperStyle: React.CSSProperties = {
-        overflowX: 'auto',
-    }
-
     return (
         <Article>
             <Head>
@@ -46,15 +26,7 @@ const Page: NextPage<IPageProps> = props => {
 
             <h3>ФАЗА ЗАПУСКА</h3>
 
-            <WideBlock style={sankeyWrapperStyle}>
-                <Sankey
-                    containerAspectRatio={sankeyAspectRatio}
-                    showLegend={false}
-                    style={sankeyStyle}
-                    data={sankeyDataStage1}
-                    defaultColorSet={defaultColorSet}
-                />
-            </WideBlock>
+            <DatavizStage stage={1} />
 
             <p>
                 Cочетает компоненты слабого сценария с начинаниями из сильного.
@@ -78,15 +50,7 @@ const Page: NextPage<IPageProps> = props => {
 
             <h3>ФАЗА ЗРЕЛОСТИ</h3>
 
-            <WideBlock style={sankeyWrapperStyle}>
-                <Sankey
-                    containerAspectRatio={sankeyAspectRatio}
-                    showLegend={false}
-                    style={sankeyStyle}
-                    data={sankeyDataStage2}
-                    defaultColorSet={defaultColorSet}
-                />
-            </WideBlock>
+            <DatavizStage stage={2} />
 
             <p>
                 Реализует компоненты сильного сценария, закладывает основы перехода к целевому.
@@ -105,15 +69,7 @@ const Page: NextPage<IPageProps> = props => {
 
             <h3>ЦЕЛЕВОЙ СЦЕНАРИЙ</h3>
 
-            <WideBlock style={sankeyWrapperStyle}>
-                <Sankey
-                    containerAspectRatio={sankeyAspectRatio}
-                    showLegend={false}
-                    style={sankeyStyle}
-                    data={sankeyDataStage3}
-                    defaultColorSet={defaultColorSet}
-                />
-            </WideBlock>
+            <DatavizStage stage={3} />
 
             <p>
                 В целевом сценарии практически все гостевые центры функционируют как научно-исследовательские резиденции.
