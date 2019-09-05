@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import className from 'classnames'
 import Head from 'next/head'
 import { Footer } from '../Footer'
@@ -6,16 +8,22 @@ import { Menu } from '../Menu'
 
 import './styles.less'
 
-export default ({ logo = true, center = true, title = 'design unit4', children }) => (
+export interface IDefaultLayoutProps {
+    showHeader: boolean
+    center: boolean
+    title: string
+}
+
+export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => (
     <div className={className('layout', {
         'layout--center': false,
     })}>
         <Head>
-            <title>{title}</title>
+            <title>{props.title}</title>
         </Head>
 
         <div className='content'>
-            {!logo ? null : (
+            {!props.showHeader ? null : (
                 <header>
                     <Logo
                         href={'/'}
@@ -45,7 +53,7 @@ export default ({ logo = true, center = true, title = 'design unit4', children }
             )}
 
             <main>
-                {children}
+                {props.children}
             </main>
 
             <Footer />
