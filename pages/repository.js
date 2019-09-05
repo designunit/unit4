@@ -12,7 +12,7 @@ export default ({ children }) => (
             }}
             items={[
                 {
-                    href: '/repository/oy',
+                    href: '/repository/oymyakon',
                     src: 'https://unit4.io/files/oy/viz_gulag.jpg',
                     text: (
                         <span>
