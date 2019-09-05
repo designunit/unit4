@@ -1,7 +1,11 @@
+import * as React from 'react'
+
 import { NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import * as React from 'react'
+
+import { WideBlock } from '../../src/components/WideBlock'
+
 import {
     sankeyDataStage1,
     sankeyDataStage2,
@@ -22,6 +26,14 @@ interface IPageProps {
 }
 
 const Page: NextPage<IPageProps> = props => {
+    const sankeyAspectRatio = 2.5
+    const sankeyStyle = {
+        backgroundColor: 'white',
+        color: 'black',
+        marginBottom: 50,
+        padding: 10,
+    }
+
     return (
         <main className={props.className}>
             <style jsx>{`
@@ -57,15 +69,16 @@ const Page: NextPage<IPageProps> = props => {
 
                 <div className={'dataviz-block'}>
                     <h3>ФАЗА ЗАПУСКА</h3>
-                    <Sankey
-                        showLegend={false}
-                        style={{
-                            marginBottom: 50,
-                            // flex: 3,
-                        }}
-                        data={sankeyDataStage1}
-                        defaultColorSet={defaultColorSet}
-                    />
+                    <WideBlock>
+                        <Sankey
+                            containerAspectRatio={sankeyAspectRatio}
+                            showLegend={false}
+                            style={sankeyStyle}
+                            data={sankeyDataStage1}
+                            defaultColorSet={defaultColorSet}
+                        />
+                    </WideBlock>
+
                     <section>
 
                         <p>
@@ -85,15 +98,15 @@ const Page: NextPage<IPageProps> = props => {
 
                 <div className={'dataviz-block'}>
                     <h3>ФАЗА ЗРЕЛОСТИ</h3>
-                    <Sankey
-                        showLegend={false}
-                        style={{
-                            marginBottom: 50,
-                            // flex: 3,
-                        }}
-                        data={sankeyDataStage2}
-                        defaultColorSet={defaultColorSet}
-                    />
+                    <WideBlock>
+                        <Sankey
+                            containerAspectRatio={sankeyAspectRatio}
+                            showLegend={false}
+                            style={sankeyStyle}
+                            data={sankeyDataStage2}
+                            defaultColorSet={defaultColorSet}
+                        />
+                    </WideBlock>
                     <section>
                         <p>
                             Реализует компоненты сильного сценария, закладывает основы перехода к целевому.
@@ -107,15 +120,15 @@ const Page: NextPage<IPageProps> = props => {
 
                 <div className={'dataviz-block'}>
                     <h3>ЦЕЛЕВОЙ СЦЕНАРИЙ</h3>
-                    <Sankey
-                        showLegend={false}
-                        style={{
-                            marginBottom: 50,
-                            // flex: 3,
-                        }}
-                        data={sankeyDataStage3}
-                        defaultColorSet={defaultColorSet}
-                    />
+                    <WideBlock>
+                        <Sankey
+                            containerAspectRatio={sankeyAspectRatio}
+                            showLegend={false}
+                            style={sankeyStyle}
+                            data={sankeyDataStage3}
+                            defaultColorSet={defaultColorSet}
+                        />
+                    </WideBlock>
                     <section>
                         <p>
                             В целевом сценарии практически все гостевые центры функционируют как научно-исследовательские резиденции. Основное снабжение осуществляется грузовыми воздушными дронами. Срочное пассажирское сообщение осуществляется пассажирскими воздушными дронами и электромоторной малой авиацией. Регулярное рейсовое пассажирское сообщение осуществляется пассажирскими дирижаблями и наземными пассажирскими дронами. Рейсовые дирижабли и наземные дроны также регулярно перевозят товары, продукты, материалы и отходы. Наземные дроны в комплектации мобильный съют при поддержке грузовых воздушных дронов осуществляют отдаленные гостевые и научные экспедиции.

@@ -1,5 +1,6 @@
 import { ResponsiveSankey } from '@nivo/sankey'
 import * as React from 'react'
+import Ratio from 'react-ratio'
 
 export interface INivoNode {
     id: string,
@@ -22,6 +23,7 @@ interface ISankeyProps {
     showLegend: boolean
     layout?: 'vertical' | 'horizontal'
     labelLayout?: 'vertical' | 'horizontal'
+    containerAspectRatio: number
 }
 
 const NivoSankey = ResponsiveSankey as any
@@ -70,14 +72,10 @@ const Sankey: React.FC<ISankeyProps> = ({
     }
 
     return (
-        <div style={props.style}>
-            <style jsx>{`
-                div {
-                    width: 100%;
-                    height: 500px;
-                }
-            `}</style>
-
+        <Ratio
+            style={props.style}
+            ratio={props.containerAspectRatio}
+        >
             <NivoSankey
                 data={data}
                 margin={margin}
@@ -130,7 +128,7 @@ const Sankey: React.FC<ISankeyProps> = ({
                     },
                 ]}
             />
-        </div>
+        </Ratio>
     )
 }
 
