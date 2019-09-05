@@ -25,11 +25,15 @@ interface IPageProps {
 
 const Page: NextPage<IPageProps> = props => {
     const sankeyAspectRatio = 2.5
-    const sankeyStyle = {
+    const sankeyStyle: React.CSSProperties = {
         backgroundColor: 'white',
         color: 'black',
         marginBottom: 50,
+        minWidth: 1200,
         padding: 10,
+    }
+    const sankeyWrapperStyle: React.CSSProperties = {
+        overflowX: 'auto',
     }
 
     return (
@@ -56,7 +60,7 @@ const Page: NextPage<IPageProps> = props => {
 
             <div className={'dataviz-block'}>
                 <h3>ФАЗА ЗАПУСКА</h3>
-                <WideBlock>
+                <WideBlock style={sankeyWrapperStyle}>
                     <Sankey
                         containerAspectRatio={sankeyAspectRatio}
                         showLegend={false}
@@ -92,7 +96,7 @@ const Page: NextPage<IPageProps> = props => {
 
             <div className={'dataviz-block'}>
                 <h3>ФАЗА ЗРЕЛОСТИ</h3>
-                <WideBlock>
+                <WideBlock style={sankeyWrapperStyle}>
                     <Sankey
                         containerAspectRatio={sankeyAspectRatio}
                         showLegend={false}
@@ -121,7 +125,7 @@ const Page: NextPage<IPageProps> = props => {
 
             <div className={'dataviz-block'}>
                 <h3>ЦЕЛЕВОЙ СЦЕНАРИЙ</h3>
-                <WideBlock>
+                <WideBlock style={sankeyWrapperStyle}>
                     <Sankey
                         containerAspectRatio={sankeyAspectRatio}
                         showLegend={false}
