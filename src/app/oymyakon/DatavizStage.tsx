@@ -25,7 +25,6 @@ export default (props: IDatavizStageProps) => {
     const sankeyStyle: React.CSSProperties = {
         backgroundColor: 'white',
         color: 'black',
-        marginBottom: 50,
         minWidth: 1200,
         padding: 10,
     }
