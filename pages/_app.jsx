@@ -18,14 +18,6 @@ export default class MyApp extends App {
                 <Component {...pageProps} />
             )
 
-        if (pageProps['layout'] === 'none') {
-            return (
-                <Container>
-                    {content}
-                </Container>
-            )
-        }
-
         return (
             <Container>
                 <DefaultLayout
