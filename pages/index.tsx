@@ -21,6 +21,7 @@ const Page: NextPage = () => (
             style={{
                 padding: 'var(--content-padding)',
             }}
+            size={'small'}
             items={[
                 {
                     date: new Date('2019-08-30'),
