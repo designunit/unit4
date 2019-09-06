@@ -1,9 +1,9 @@
 import React from 'react'
-import { Title } from '../src/components/Title'
+import SwitchImage from '../components/SwitchImage'
 import TextBlock from '../components/TextBlock'
 import { Article } from '../src/components/Article'
 import { Image } from '../src/components/Image'
-import SwitchImage from '../components/SwitchImage'
+import { Title } from '../src/components/Title'
 
 export default () => (
     <Article>
@@ -22,12 +22,12 @@ export default () => (
         <SwitchImage
             images={[
                 {
-                    src: 'https://unit4.io/files/about/team.jpg',
                     buttonText: 'добавить чёткости',
+                    src: 'https://unit4.io/files/about/team.jpg',
                 },
                 {
-                    src: 'https://unit4.io/files/about/team.gif',
                     buttonText: 'stop it',
+                    src: 'https://unit4.io/files/about/team.gif',
                 },
             ]}
         />
@@ -65,9 +65,9 @@ export default () => (
                   }
             `}</style>
 
-                <a href={'https://issuu.com/unit4/docs/design_unit_4_studio'} target="_blank">студия</a>
-                <br /><a href={'https://issuu.com/unit4/docs/design_unit_4_portfolio'} target="_blank">компетенции</a>
-                <br /><a href={'https://issuu.com/unit4/docs/mla_design_unit_4_products'} target="_blank">линейка продуктов по развитию городской среды </a>
+                <a href={'https://issuu.com/unit4/docs/design_unit_4_studio'} target='_blank'>студия</a>
+                <br /><a href={'https://issuu.com/unit4/docs/design_unit_4_portfolio'} target='_blank'>компетенции</a>
+                <br /><a href={'https://issuu.com/unit4/docs/mla_design_unit_4_products'} target='_blank'>линейка продуктов по развитию городской среды </a>
             </p>
         </TextBlock>
 
