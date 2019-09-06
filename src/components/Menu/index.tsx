@@ -16,6 +16,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical= false }) => (
                 text-align: right;
                 list-style: none;
                 margin: 0;
+                padding: 0;
 
                 background-color: var(--color-background);
 
