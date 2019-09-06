@@ -20,22 +20,22 @@ const Page: NextPage = () => (
             {
                 date: new Date('2019-08-30'),
                 href: '/repository/oymyakon',
-                title: 'Оймякон : : п(о)люс со-временности',
+                text: 'Оймякон : : п(о)люс со-временности',
             },
             {
                 date: new Date('2019-08-25'),
                 href: '/repository/gor_projects_spb',
-                title: 'Концепции spb.city4people.ru',
+                text: 'Концепции spb.city4people.ru',
             },
             {
                 date: new Date('2019-08-12'),
                 href: '/repository/hovrinka',
-                title: 'Социально-культурный центр Ховринка',
+                text: 'Социально-культурный центр Ховринка',
             },
             {
                 date: new Date('2019-07-28'),
                 href: '/repository/delta',
-                title: 'Благоустройство ЖК ComCity',
+                text: 'Благоустройство ЖК ComCity',
             },
         ]} />
     </>

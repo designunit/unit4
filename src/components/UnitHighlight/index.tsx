@@ -6,7 +6,7 @@ export interface IUnitHighlightProps {
     items: Array<{
         date?: Date,
         href: string,
-        title: string,
+        text: string,
     }>
 }
 
@@ -57,7 +57,7 @@ export const UnitHighlight: React.FC<IUnitHighlightProps> = ({ newWindow = false
                                 href={x.href}
                                 target={newWindow ? '_blank' : null}
                             >
-                                {x.title}
+                                {x.text}
                             </a>
                         </span>
                     </li>

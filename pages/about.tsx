@@ -56,15 +56,15 @@ export default () => (
 
         <UnitHighlight newWindow items={[
             {
-                title: 'студия',
+                text: 'студия',
                 href: 'https://issuu.com/unit4/docs/design_unit_4_studio',
             },
             {
-                title: 'компетенции',
+                text: 'компетенции',
                 href: 'https://issuu.com/unit4/docs/design_unit_4_portfolio',
             },
             {
-                title: 'линейка продуктов по развитию городской среды',
+                text: 'линейка продуктов по развитию городской среды',
                 href: 'https://issuu.com/unit4/docs/mla_design_unit_4_products',
             },
         ]} />
