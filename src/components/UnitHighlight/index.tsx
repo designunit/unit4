@@ -50,7 +50,7 @@ export const UnitHighlight: React.FC<IUnitHighlightProps> = ({ newWindow = false
 
                 a:link, a:visited {
                     background-color:  #ff0066;
-                    color: var(--color-text);
+                    color: white;
                 }
 
                 a:hover, a:active {
