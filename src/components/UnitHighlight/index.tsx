@@ -5,7 +5,7 @@ export interface IUnitHighlightProps {
     newWindow?: boolean
     items: Array<{
         date?: Date,
-        url: string,
+        href: string,
         title: string,
     }>
 }
@@ -46,7 +46,7 @@ export const UnitHighlight: React.FC<IUnitHighlightProps> = ({ newWindow = false
 
             <ul>
                 {props.items.map(x => (
-                    <li key={x.url}>
+                    <li key={x.href}>
                         {!x.date ? null : (
                             <span className={'date'}>
                                 {dateFormatterRef.current.format(x.date)}
@@ -54,7 +54,7 @@ export const UnitHighlight: React.FC<IUnitHighlightProps> = ({ newWindow = false
                         )}
                         <span className={'link'}>
                             <a
-                                href={x.url}
+                                href={x.href}
                                 target={newWindow ? '_blank' : null}
                             >
                                 {x.title}
