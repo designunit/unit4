@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 export interface IUnitCanvasProps {
-    marginTop: number
+    style?: React.CSSProperties
 }
 
 export default class UnitCanvas extends React.Component<IUnitCanvasProps, {}> {
@@ -52,7 +52,7 @@ export default class UnitCanvas extends React.Component<IUnitCanvasProps, {}> {
 
     public render() {
         return (
-            <div>
+            <div style={this.props.style}>
                 <style jsx>{`
                     div {
                         display: flex;
@@ -75,8 +75,6 @@ export default class UnitCanvas extends React.Component<IUnitCanvasProps, {}> {
 
                     img {
                         width: 100%;
-                        margin-top: ${this.props.marginTop}px;
-
                         filter: invert(100%);
                     }
                 `}</style>

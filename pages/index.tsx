@@ -9,7 +9,10 @@ const UnitCanvasDynamic = dynamic(() => import('../src/components/UnitCanvas'), 
 const Page: NextPage = () => (
     <>
         <UnitCanvasDynamic
-            marginTop={50}
+            style={{
+                marginBottom: 50,
+                marginTop: 50,
+            }}
         />
     </>
 )
