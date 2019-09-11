@@ -1,21 +1,41 @@
 import { NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import * as React from 'react'
+import { MobileFallback } from '../src/components/MobileFallback'
 import { UnitHighlight } from '../src/components/UnitHighlight'
-
-const UnitCanvasDynamic = dynamic(() => import('../src/components/UnitCanvas'), {
-    ssr: false,
-})
+import { WideBlock } from '../src/components/WideBlock'
 
 const Page: NextPage = () => (
     <>
-        <UnitCanvasDynamic
-            style={{
-                marginBottom: 50,
-                marginTop: 50,
-                padding: 'var(--content-padding)',
-            }}
-        />
+        <MobileFallback
+            mobile={(
+                <img
+                    width={'100%'}
+                    src={'https://raw.githubusercontent.com/tmshv/popcode/master/sketches/unit4_z3/preview.png'}
+                    style={{
+                        marginBottom: 50,
+                    }}
+                />
+            )}
+        >
+            <WideBlock
+                style={{
+                    marginBottom: 30,
+                }}
+            >
+                <iframe
+                    height={300}
+                    style={{
+                        backgroundColor: 'none',
+                        width: '100%',
+                    }}
+                    scrolling={'no'}
+                    title={'xeIKs'}
+                    src={'//tmshv.github.io/popcode/unit4_z3/'}
+                    frameBorder={'no'}
+                />
+            </WideBlock>
+        </MobileFallback>
 
         <UnitHighlight
             style={{
