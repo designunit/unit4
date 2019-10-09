@@ -5,7 +5,7 @@ export interface IPartnerProps {
     href: string
     title: string
     src: string
-    imageHeight: number | string
+    imageWidth?: number | string
 }
 
 export const Partner: React.FC<IPartnerProps> = ({ href, title, src, ...props }) => (
@@ -24,6 +24,9 @@ export const Partner: React.FC<IPartnerProps> = ({ href, title, src, ...props })
         <a href={href} target={'_blank'} title={title}>
             <Svg
                 className={'partner-logo'}
+                style={{
+                    width: props.imageWidth,
+                }}
                 src={src}
             />
         </a>
