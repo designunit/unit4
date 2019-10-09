@@ -1,5 +1,5 @@
 import React from 'react'
-import SwitchImage from '../components/SwitchImage'
+import { SwitchImage } from '../src/components/SwitchImage'
 import TextBlock from '../components/TextBlock'
 import { Article } from '../src/components/Article'
 import { Image } from '../src/components/Image'
