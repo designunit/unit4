@@ -35,6 +35,19 @@ const Page: NextPage = () => (
                 </Partner>
 
                 <Partner
+                    href='http://urbanica.spb.ru/'
+                    title='urbanica.spb.ru'
+                    src='/static/urbanica_logo.svg'
+                    imageHeight='200px'
+                >
+                    <span>
+                        Институт территориального планирования Урбаника.
+                        <br/>
+                        Cпециализируется на градостроительном проектированиии и консалтинге.
+                    </span>
+                </Partner>
+
+                <Partner
                     href='http://www.knappt.com/'
                     title='www.knappt.com'
                     src='/static/logo_knappt.svg'
