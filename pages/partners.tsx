@@ -15,7 +15,6 @@ const Page: NextPage = () => (
                     href='http://www.mlaplus.com/'
                     title='www.mlaplus.com'
                     src='/static/logo_mla.svg'
-                    imageHeight='22px'
                 >
                     <span>
                         Архитектура, градостроительство, консалтинг.
@@ -26,7 +25,7 @@ const Page: NextPage = () => (
                     href='https://gorsreda86.ugraces.ru/'
                     title='www.knappt.com'
                     src='/static/HMAO_logo_bw.svg'
-                    imageHeight='130px'
+                    imageWidth={300}
                 >
                     <span>
                         Центр компетенций по вопросам городской среды
@@ -38,7 +37,7 @@ const Page: NextPage = () => (
                     href='http://urbanica.spb.ru/'
                     title='urbanica.spb.ru'
                     src='/static/urbanica_logo.svg'
-                    imageHeight='200px'
+                    imageWidth={400}
                 >
                     <span>
                         Институт территориального планирования Урбаника.
@@ -51,7 +50,6 @@ const Page: NextPage = () => (
                     href='http://www.knappt.com/'
                     title='www.knappt.com'
                     src='/static/logo_knappt.svg'
-                    imageHeight='30px'
                 >
                     <span>
                         Проектируют и производят изделия из бетона, фибробетона,
