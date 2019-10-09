@@ -1,11 +1,12 @@
 import * as React from 'react'
+
 import Head from 'next/head'
 
 export interface ITitleProps {
     caption?: string
 }
 
-export const Title: React.FC<ITitleProps> = ({caption, children}) => (
+export const Title: React.FC<ITitleProps> = ({ caption, children }) => (
     <div className={'title'}>
         <style jsx>{`
             .title {
@@ -27,7 +28,7 @@ export const Title: React.FC<ITitleProps> = ({caption, children}) => (
         <h1>
             {children}
         </h1>
-        
+
         <p className={'title-caption'}>
             {caption}
         </p>
