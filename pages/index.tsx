@@ -44,14 +44,14 @@ const Page: NextPage = () => (
             size={'small'}
             items={[
                 {
+                    date: new Date('2019-10-01'),
+                    href: '/repository/uray_ppi',
+                    text: 'Исследование города Урай ХМАО',
+                },
+                {
                     date: new Date('2019-08-30'),
                     href: '/repository/oymyakon',
                     text: 'Оймякон : : п(о)люс со-временности',
-                },
-                {
-                    date: new Date('2019-08-25'),
-                    href: '/repository/gor_projects_spb',
-                    text: 'Концепции spb.city4people.ru',
                 },
                 {
                     date: new Date('2019-08-12'),
