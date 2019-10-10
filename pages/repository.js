@@ -12,6 +12,17 @@ export default ({ children }) => (
             }}
             items={[
                 {
+                    href: '/repository/heterotopia',
+                    src: 'https://unit4.io/files/heterotopia/heterotopia.gif',
+                    text: (
+                        <span>
+                            ГЕТЕРОТОПИИ
+                            <br/>
+                            СО-ВРЕМЕННОСТИ
+                        </span>
+                    ),
+                },
+                {
                     href: '/repository/oymyakon',
                     src: 'https://unit4.io/files/oy/viz_gulag.jpg',
                     text: (
