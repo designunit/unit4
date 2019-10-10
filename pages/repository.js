@@ -12,6 +12,17 @@ export default ({ children }) => (
             }}
             items={[
                 {
+                    href: '/repository/uray_ppi',
+                    src: 'https://unit4.io/files/uray_ppi/urai.jpg',
+                    text: (
+                        <span>
+                            ИССЛЕДОВАНИЕ
+                            <br/>
+                            УРАЙ ХМАО
+                        </span>
+                    ),
+                },
+                {
                     href: '/repository/heterotopia',
                     src: 'https://unit4.io/files/heterotopia/heterotopia.gif',
                     text: (
