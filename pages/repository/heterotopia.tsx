@@ -7,7 +7,7 @@ import { Article } from '../../src/components/Article'
 import { Image } from '../../src/components/Image'
 import { WideBlock } from '../../src/components/WideBlock'
 
-function withHeterotopiaGradient() {
+function useHeterotopiaGradient() {
     const angle = 90
     let colors: Array<[number, string]> = [
         [Math.random(), '#ff00ff'],
@@ -24,7 +24,7 @@ function withHeterotopiaGradient() {
 }
 
 const HeterotopiaTitle: React.FC = props => {
-    const linearGradient = withHeterotopiaGradient()
+    const linearGradient = useHeterotopiaGradient()
 
     return (
         <h2 style={{
