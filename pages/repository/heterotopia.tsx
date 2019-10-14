@@ -7,6 +7,45 @@ import { Article } from '../../src/components/Article'
 import { Image } from '../../src/components/Image'
 import { WideBlock } from '../../src/components/WideBlock'
 
+function withHeterotopiaGradient() {
+    const angle = 90
+    let colors: Array<[number, string]> = [
+        [Math.random(), '#ff00ff'],
+        [Math.random(), '#1ac4ff'],
+        [Math.random(), '#ff7e00'],
+    ]
+    colors = colors.sort(() => -1 + Math.random() * 2)
+    colors[0][0] = 0
+    colors[2][0] = 1
+
+    const gradient = colors
+        .map(([value, color]) => `${color} ${value * 100}%`)
+    return `linear-gradient(${angle}deg, ${gradient.join(', ')})`
+}
+
+const HeterotopiaTitle: React.FC = props => {
+    const linearGradient = withHeterotopiaGradient()
+
+    return (
+        <h2 style={{
+            background: linearGradient,
+        }}>
+            <style jsx>{`
+                h2 {
+                    display: inline;
+
+                    font-size: var(--font-h2-size);
+                    text-transform: uppercase;
+                    padding: 2px 2px;
+                    background: rgb(255,0,255);
+                }
+            `}</style>
+
+            {props.children}
+        </h2>
+    )
+}
+
 const Page: NextPage = () => (
     <>
         <Head><title>ГЕТЕРОТОПИИ СО-ВРЕМЕННОСТИ</title></Head>
@@ -30,16 +69,6 @@ const Page: NextPage = () => (
                 b {
                     text-transform: uppercase;
                     margin: 0 2px;
-                    color: var(--color-text-opposite);
-                    background-color: var(--color-background-opposite);
-                }
-
-                h2 {
-                    display: inline;
-
-                    font-size: var(--font-h2-size);
-                    text-transform: uppercase;
-                    padding: 2px 2px;
                     color: var(--color-text-opposite);
                     background-color: var(--color-background-opposite);
                 }
@@ -68,7 +97,7 @@ const Page: NextPage = () => (
 
             <Image src='https://unit4.io/files/heterotopia/heterotopia_02.jpg' />
 
-            <h2>тематика экспозиционной части</h2>
+            <HeterotopiaTitle>тематика экспозиционной части</HeterotopiaTitle>
             <ul>
                 <li>Образ будущего в настоящем</li>
                 <li>Образ будущего в прошедшем</li>
@@ -78,7 +107,7 @@ const Page: NextPage = () => (
                 <li>Образ прошлого в настоящем</li>
             </ul>
 
-            <h2>тематика событийной части</h2>
+            <HeterotopiaTitle>тематика событийной части</HeterotopiaTitle>
             <ul>
                 <li>Конец просвещения / Фигура мастера</li>
                 <li>Новые х 10</li>
@@ -92,7 +121,7 @@ const Page: NextPage = () => (
 
             <Image src='https://unit4.io/files/heterotopia/heterotopia_03.jpg' />
 
-            <h2>Все доступное пространство подразделяется на четыре зоны:</h2>
+            <HeterotopiaTitle>Все доступное пространство подразделяется на четыре зоны:</HeterotopiaTitle>
             <ul>
                 <li>кураторская экспозиция/детская зона/залы - центральный каньон, тканевая инсталляция, общая площадь 1000 м2</li>
                 <li>мастерские/регионы/конкурсы - картонные ребристые панели, общая площадь 1150 м2</li>
