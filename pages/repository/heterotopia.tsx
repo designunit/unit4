@@ -1,3 +1,5 @@
+// tslint:disable: max-line-length
+
 import { NextPage } from 'next'
 import Head from 'next/head'
 import * as React from 'react'
@@ -12,7 +14,7 @@ const Page: NextPage = () => (
 
             <WideBlock
                 style={{
-                    textAlign: "center",
+                    textAlign: 'center',
                 }}
             >
                 <iframe
@@ -25,18 +27,21 @@ const Page: NextPage = () => (
             </WideBlock>
 
             <style jsx>{`
-            b {
-                text-transform: uppercase;    
-                margin: 2px;
-                color: #fff;
-                background-color: #000;
+                b {
+                    text-transform: uppercase;
+                    margin: 0 2px;
+                    color: var(--color-text-opposite);
+                    background-color: var(--color-background-opposite);
                 }
-            h2 {
-                font-size: 20px;
-                text-transform: uppercase;    
-                margin: 2px;
-                color: #fff;
-                background-color: #000;
+
+                h2 {
+                    display: inline;
+
+                    font-size: var(--font-h2-size);
+                    text-transform: uppercase;
+                    padding: 2px 2px;
+                    color: var(--color-text-opposite);
+                    background-color: var(--color-background-opposite);
                 }
             `}</style>
 
@@ -94,9 +99,8 @@ const Page: NextPage = () => (
                 <li>коммерческая экспозиция - картонные ребристые панели, общая площадь 200 м2</li>
                 <li>дирекция фестиваля - общая площадь 80 м2</li>
             </ul>
-
         </Article>
-    </ >
+    </>
 )
 
 export default Page
