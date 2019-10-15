@@ -30,6 +30,10 @@ export const UnitHighlight: React.FC<IUnitHighlightProps> = ({ newWindow = false
                     padding-left: 0;
                 }
 
+                ul li:before {
+                    content: '';
+                }
+
                 li {
                     display: flex;
                     align-items: flex-start;
