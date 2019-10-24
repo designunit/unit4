@@ -1,8 +1,11 @@
-import react from 'react'
-import { Title } from '../src/components/Title'
-import { Gallery } from '../src/components/Gallery'
+import * as React from 'react'
 
-export default ({ children }) => (
+import { NextPage } from 'next'
+
+import { Gallery } from '../src/components/Gallery'
+import { Title } from '../src/components/Title'
+
+const Page: NextPage = () => (
     <>
         <Title>РЕПОЗИТОРИЙ</Title>
 
@@ -93,7 +96,6 @@ export default ({ children }) => (
                         </span>
                     ),
                 },
-                
                 {
                     href: '/repository/boulevard_scnd',
                     src: 'https://unit4.io/files/boulevard_scnd/boulevard.jpg',
@@ -140,7 +142,7 @@ export default ({ children }) => (
                     src: 'https://unit4.io/files/gb_scnd/gb.jpg',
                     text: 'КОНЦЕПЦИЯ ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ',
                 },
-            	{
+                {
                     href: '/repository/samarapark',
                     src: 'https://unit4.io/files/samarapark/10.jpg',
                     text: 'ПАРК ЗАГОРОДНЫЙ САМАРА',
@@ -169,7 +171,7 @@ export default ({ children }) => (
                         </span>
                     ),
                 },
-            	{
+                {
                     href: '/repository/krvostok',
                     src: 'https://unit4.io/files/krvostok/01.jpg',
                     text: (
@@ -229,3 +231,5 @@ export default ({ children }) => (
         />
     </>
 )
+
+export default Page
