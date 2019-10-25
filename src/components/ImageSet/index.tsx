@@ -1,6 +1,7 @@
 import { constant, times } from 'lodash'
 import * as React from 'react'
 import { isUndefined } from 'util'
+import { resizeImage } from '../../lib/image'
 import { Fotorama, IFotoramaOptions } from '../Fotorama'
 import { IImageProps, Image } from '../Image'
 import { ImageColumnsLayout } from './ImageColumnsLayout'
@@ -20,17 +21,25 @@ export interface IImageSetLayout {
 }
 
 export interface IImageSetProps {
+    size?: number
     items: string[]// Array<IImageProps | string>
     layout?: IImageSetLayout | {
         slider: IFotoramaOptions,
     }
 }
 
-export const ImageSet: React.FC<IImageSetProps> = props => {
+export const ImageSet: React.FC<IImageSetProps> = ({ size = 1500, ...props }) => {
+    // const items = props.items
+
+    const items = props.items.map(item => resizeImage(item, {
+        h: size,
+        w: size,
+    }))
+
     if (!isUndefined(props.layout) && 'slider' in props.layout) {
         return (
             <Fotorama
-                items={props.items}
+                items={items}
                 options={props.layout.slider}
             />
         )
@@ -44,7 +53,7 @@ export const ImageSet: React.FC<IImageSetProps> = props => {
 
     return (
         <ImageColumnsLayout
-            items={props.items.map(getImage)}
+            items={items.map(getImage)}
             span={span}
         />
     )

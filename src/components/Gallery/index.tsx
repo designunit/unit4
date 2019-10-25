@@ -1,4 +1,6 @@
 import * as React from 'react'
+
+import { resizeImage } from '../../lib/image'
 import { GalleryItem } from './GalleryItem'
 
 export interface IGalleryItem {
@@ -49,7 +51,7 @@ export const Gallery: React.FC<IGallery> = ({ gridGap = 10, minCellSize = 200, s
         {props.items.map(x => (
             <GalleryItem
                 key={x.src}
-                src={x.src}
+                src={resizeImage(x.src, { w: 600, h: 600 })}
                 text={x.text}
                 alt={x.alt}
                 href={x.href}
