@@ -31,7 +31,10 @@ export class Fotorama extends React.PureComponent<IFotoramaProps> {
         return (
             <div ref={this.ref}>
                 {this.props.items.map((x, i) => (
-                    <img src={x} />
+                    <img
+                        key={x}
+                        src={x}
+                    />
                 ))}
             </div>
         )
