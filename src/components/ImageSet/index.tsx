@@ -36,10 +36,10 @@ export const ImageSet: React.FC<IImageSetProps> = props => {
         )
     }
 
-    const size = props.items.length
+    const length = props.items.length
     const layout = props.layout as IImageSetLayout
     const span = isUndefined(layout)
-        ? times(size, constant(24 / size))
+        ? times(length, constant(24 / length))
         : layout.span
 
     return (
