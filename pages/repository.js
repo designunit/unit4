@@ -12,6 +12,18 @@ export default ({ children }) => (
             }}
             items={[
                 {
+                    href: '/repository/edu_ugra',
+                    src: 'https://unit4.io/files/edu_ugra/01.jpg',
+                    text: (
+                        <span>
+                            ОБУЧАЮЩИЙ
+                            <br/>
+                            СЕМИНАР ХМАО
+                            <br/> ФКГС
+                        </span>
+                    ),
+                },
+                {
                     href: '/repository/uray_ppi',
                     src: 'https://unit4.io/files/uray_ppi/urai.jpg',
                     text: (
