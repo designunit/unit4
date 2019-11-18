@@ -44,6 +44,11 @@ const Page: NextPage = () => (
             size={'small'}
             items={[
                 {
+                    date: new Date('2019-11-07'),
+                    href: '/repository/edu_ugra',
+                    text: 'Обучающий семинар ФКГС : : ХМАО',
+                },
+                {
                     date: new Date('2019-10-01'),
                     href: '/repository/uray_ppi',
                     text: 'Исследование города Урай ХМАО',
@@ -52,11 +57,6 @@ const Page: NextPage = () => (
                     date: new Date('2019-08-30'),
                     href: '/repository/oymyakon',
                     text: 'Оймякон : : п(о)люс со-временности',
-                },
-                {
-                    date: new Date('2019-08-12'),
-                    href: '/repository/hovrinka',
-                    text: 'Социально-культурный центр Ховринка',
                 },
                 {
                     date: new Date('2019-07-28'),
