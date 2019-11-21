@@ -1,5 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import YMetrika from '../components/YMetrika'
+import { YMetrika } from '../src/components/YMetrika'
 
 export default class MyDocument extends Document {
     static async getInitialProps(ctx) {

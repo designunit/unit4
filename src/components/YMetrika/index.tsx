@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react'
 
-function getMetrika(account) {
+function getMetrika(account: string) {
     return `
         <!-- Yandex.Metrika counter -->
         (function (d, w, c) {
@@ -16,14 +15,14 @@ function getMetrika(account) {
                     });
                 } catch(e) { }
             });
-    
+
             var n = d.getElementsByTagName("script")[0],
                 s = d.createElement("script"),
                 f = function () { n.parentNode.insertBefore(s, n); };
             s.type = "text/javascript";
             s.async = true;
             s.src = "https://mc.yandex.ru/metrika/watch.js";
-    
+
             if (w.opera == "[object Opera]") {
                 d.addEventListener("DOMContentLoaded", f, false);
             } else { f(); }
@@ -32,16 +31,14 @@ function getMetrika(account) {
     `
 }
 
-export default class YMetrika extends Component {
-    static propTypes = {
-        account: PropTypes.string.isRequired,
-    }
+export interface IYMetrikaProps {
+    account: string
+}
 
-    render() {
-        const script = getMetrika(this.props.account)
+export const YMetrika: React.FC<IYMetrikaProps> = props => {
+    const script = getMetrika(props.account)
 
-        return (
-            <script dangerouslySetInnerHTML={{ __html: script }}/>
-        )
-    }
+    return (
+        <script dangerouslySetInnerHTML={{ __html: script }} />
+    )
 }
