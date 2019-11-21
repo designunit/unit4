@@ -1,8 +1,8 @@
 import React from 'react'
-import { SwitchImage } from '../src/components/SwitchImage'
-import TextBlock from '../components/TextBlock'
 import { Article } from '../src/components/Article'
 import { Image } from '../src/components/Image'
+import { SwitchImage } from '../src/components/SwitchImage'
+import { TextBlock } from '../src/components/TextBlock'
 import { Title } from '../src/components/Title'
 import { UnitHighlight } from '../src/components/UnitHighlight'
 

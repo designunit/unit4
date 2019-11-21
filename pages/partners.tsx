@@ -1,8 +1,8 @@
 import { NextPage } from 'next'
 import * as React from 'react'
-import TextBlock from '../components/TextBlock'
 import { Article } from '../src/components/Article'
 import { Partner } from '../src/components/Partner'
+import { TextBlock } from '../src/components/TextBlock'
 import { Title } from '../src/components/Title'
 
 const Page: NextPage = () => (
