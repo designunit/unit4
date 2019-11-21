@@ -1,3 +1,4 @@
+# Build
 FROM node:12-alpine as build
 WORKDIR /app
 
@@ -6,13 +7,23 @@ RUN npm ci
 
 COPY next.config.js ./
 COPY . .
-RUN npm run build && npm run export
+RUN npm run build 
 
 
 # Run
-FROM nginx:stable-alpine
+FROM node:12-alpine
+WORKDIR /app
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY package.json package-lock.json ./
+RUN npm install --production 
 
-WORKDIR /usr/share/nginx/html
-COPY --from=build /app/out /usr/share/nginx/html
+COPY --from=build /app/.next ./.next
+#COPY --from=build /app/build ./build
+#COPY ./static ./static
+
+EXPOSE 80
+ENV PORT 80
+ENV NODE_ENV production
+
+#CMD npm start -p ${PORT}
+CMD ["sh", "-c", "npm start -- -p $PORT"]
