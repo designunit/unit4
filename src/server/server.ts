@@ -19,6 +19,7 @@ function createPageName(name: string, defaultLang: string, lang?: string): strin
 
 app.prepare()
     .then(() => {
+        const defaultLang = nextI18next.config.defaultLanguage
         const server = express()
 
         server.use(nextI18NextMiddleware(nextI18next))
@@ -71,7 +72,7 @@ app.prepare()
             const lang = (req as any).lng
 
             const slug = req.params.slug
-            const actualPage = createPageName(`/repository/${slug}`, nextI18next.config.defaultLanguage, lang)
+            const actualPage = createPageName(`/repository/${slug}`, defaultLang, lang)
             const queryParams = {
                 //     slug: req.params.slug,
             }
