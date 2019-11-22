@@ -17,3 +17,5 @@ export const {
     useTranslation,
     i18n,
 } = instance
+
+export const defaultLanguage = instance.config.defaultLanguage

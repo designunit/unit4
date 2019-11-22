@@ -2,12 +2,20 @@ import * as React from 'react'
 
 import className from 'classnames'
 import Head from 'next/head'
-import { useTranslation } from '../../i18n'
+import { defaultLanguage, useTranslation } from '../../i18n'
 import { Footer } from '../Footer'
 import { Logo } from '../Logo'
 import { Menu } from '../Menu'
 
 import './styles.less'
+
+function useLangUrlPrefix() {
+    const { i18n } = useTranslation()
+    const lang = i18n.language
+    const urlPrefix = lang === defaultLanguage ? '' : '/en'
+
+    return urlPrefix
+}
 
 export interface IDefaultLayoutProps {
     showHeader: boolean
@@ -16,7 +24,8 @@ export interface IDefaultLayoutProps {
 }
 
 export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
+    const langPrefix = useLangUrlPrefix()
 
     return (
         <div className={className('layout', {
@@ -36,19 +45,19 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
                         <Menu vertical
                             items={[
                                 {
-                                    href: '/about',
+                                    href: `${langPrefix}/about`,
                                     text: t('menu-about'),
                                 },
                                 {
-                                    href: '/repository',
+                                    href: `${langPrefix}/repository`,
                                     text: t('menu-repository'),
                                 },
                                 {
-                                    href: '/partners',
+                                    href: `${langPrefix}/partners`,
                                     text: t('menu-partners'),
                                 },
                                 {
-                                    href: '/contact',
+                                    href: `${langPrefix}/contact`,
                                     text: t('menu-contacts'),
                                 },
                             ]}
