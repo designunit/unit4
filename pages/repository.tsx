@@ -4,11 +4,14 @@ import { NextPage } from 'next'
 
 import { Gallery } from '../src/components/Gallery'
 import { Title } from '../src/components/Title'
+import { useTranslation, withTranslation } from '../src/i18n'
 
 const Page: NextPage = () => {
+    const { t } = useTranslation()
+
     return (
         <>
-            <Title>РЕПОЗИТОРИЙ</Title>
+            <Title>{t('Repository')}</Title>
 
             <Gallery
                 style={{
@@ -246,4 +249,4 @@ const Page: NextPage = () => {
     )
 }
 
-export default Page
+export default withTranslation('common')(Page)

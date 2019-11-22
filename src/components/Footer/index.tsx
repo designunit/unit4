@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { LangButton } from '../LangButton'
 
 export const Footer: React.FC = () => (
     <footer>
@@ -32,6 +33,8 @@ export const Footer: React.FC = () => (
             >
                 inbox@unit4.io
             </a>
+
+            <LangButton/>
         </section>
     </footer>
 )
