@@ -10,15 +10,14 @@ const Page: NextPage = () => (
         <Title>ПАРТНЕРЫ</Title>
 
         <Article>
-            <TextBlock>
                 <Partner
                     href='http://www.mlaplus.com/'
                     title='www.mlaplus.com'
                     src='/static/logo_mla.svg'
                 >
-                    <span>
+                    <TextBlock>
                         Архитектура, градостроительство, консалтинг.
-                    </span>
+                    </TextBlock>
                 </Partner>
 
                 <Partner
@@ -27,10 +26,10 @@ const Page: NextPage = () => (
                     src='/static/HMAO_logo_bw.svg'
                     imageWidth={300}
                 >
-                    <span>
+                    <TextBlock>
                         Центр компетенций по вопросам городской среды
                         Ханты-Мансийского автономного округа - Югры.
-                    </span>
+                    </TextBlock>
                 </Partner>
 
                 <Partner
@@ -39,11 +38,11 @@ const Page: NextPage = () => (
                     src='/static/urbanica_logo.svg'
                     imageWidth={400}
                 >
-                    <span>
+                    <TextBlock>
                         Институт территориального планирования Урбаника.
                         <br/>
                         Cпециализируется на градостроительном проектированиии и консалтинге.
-                    </span>
+                    </TextBlock>
                 </Partner>
 
                 <Partner
@@ -51,12 +50,11 @@ const Page: NextPage = () => (
                     title='www.knappt.com'
                     src='/static/logo_knappt.svg'
                 >
-                    <span>
+                    <TextBlock>
                         Проектируют и производят изделия из бетона, фибробетона,
                         стеклофибробетона, стеклофиброгипса и композитных материалов.
-                    </span>
+                    </TextBlock>
                 </Partner>
-            </TextBlock>
         </Article>
     </ >
 )
