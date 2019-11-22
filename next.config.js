@@ -16,6 +16,7 @@ module.exports = withMdx(withCss(withLess({
         modifyVars: themeVariables,
     },
     assetPrefix: '',
+    useFileSystemPublicRoutes: false,
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'tsx'],
     webpack(config) {
         config.module.rules.push({

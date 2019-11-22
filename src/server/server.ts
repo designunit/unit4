@@ -1,12 +1,21 @@
 import express from 'express'
 import next from 'next'
 import nextI18NextMiddleware from 'next-i18next/middleware'
+import { parse } from 'url'
 import nextI18next from '../i18n'
 
 const dev = process.env.NODE_ENV !== 'production'
 const port = process.env.PORT || 3000
 const app = next({ dev })
 const handle = app.getRequestHandler()
+
+function createPageName(name: string, defaultLang: string, lang?: string): string {
+    if (!lang || lang === defaultLang) {
+        return name
+    }
+
+    return `${name}.${lang}`
+}
 
 app.prepare()
     .then(() => {
@@ -50,7 +59,46 @@ app.prepare()
         //     app.render(req, res, actualPage, queryParams)
         // })
 
+        server.get('/', (req, res) => {
+            app.render(req, res, '/', {})
+        })
+
+        server.get('/repository', (req, res) => {
+            app.render(req, res, '/repository', {})
+        })
+
+        server.get('/repository/:slug', (req, res) => {
+            const lang = (req as any).lng
+
+            const slug = req.params.slug
+            const actualPage = createPageName(`/repository/${slug}`, nextI18next.config.defaultLanguage, lang)
+            const queryParams = {
+                //     slug: req.params.slug,
+            }
+
+            console.log('handle repository page', req.url, slug, actualPage, lang, req.query)
+
+            app.render(req, res, actualPage, queryParams)
+        })
+
         server.get('*', (req, res) => {
+            const lang = (req as any).lng
+            console.log('handle request with next', req.url, lang)
+
+            const parsedUrl = parse(req.url, true)
+            const { pathname, query } = parsedUrl
+
+            // if (pathname) {
+            // }
+
+            // if (pathname === '/a') {
+            //     app.render(req, res, '/b', query)
+            // } else if (pathname === '/b') {
+            //     app.render(req, res, '/a', query)
+            // } else {
+            //     handle(req, res, parsedUrl)
+            // }
+
             return handle(req, res)
         })
 
