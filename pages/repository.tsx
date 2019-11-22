@@ -20,9 +20,9 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             ОБУЧАЮЩИЙ
-                            <br/>
+                            <br />
                             СЕМИНАР ХМАО
-                            <br/> ФКГС
+                            <br /> ФКГС
                         </span>
                     ),
                 },
@@ -32,7 +32,7 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             ИССЛЕДОВАНИЕ
-                            <br/>
+                            <br />
                             УРАЙ ХМАО
                         </span>
                     ),
@@ -43,7 +43,7 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             ГЕТЕРОТОПИИ
-                            <br/>
+                            <br />
                             СО-ВРЕМЕННОСТИ
                         </span>
                     ),
@@ -54,9 +54,9 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             ОЙМЯКОН
-                            <br/>
+                            <br />
                             п(о)люс
-                            <br/>
+                            <br />
                             со-временности
                         </span>
                     ),
@@ -67,9 +67,9 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             СОЦИАЛЬНО-КУЛЬТУРНЫЙ
-                            <br/>
+                            <br />
                             ЦЕНТР
-                            <br/>
+                            <br />
                             ХОВРИНКА
                         </span>
                     ),
@@ -85,9 +85,9 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             МЕТОДИЧЕСКИЕ
-                            <br/>
+                            <br />
                             РЕКОМЕНДАЦИИ
-                            <br/>
+                            <br />
                             ХМАО
                         </span>
                     ),
@@ -103,7 +103,7 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             IT ШКОЛА
-                            <br/>
+                            <br />
                             ЙОШКАР-ОЛА
                         </span>
                     ),
@@ -114,9 +114,9 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             БУЛЬВАР
-                            <br/>
+                            <br />
                             ЖИЛОГО РАЙОНА
-                            <br/>
+                            <br />
                             СКАНДИНАВИЯ
                         </span>
                     ),
@@ -127,9 +127,9 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             ПАРК
-                            <br/>
+                            <br />
                             ЖИЛОГО РАЙОНА
-                            <br/>
+                            <br />
                             СКАНДИНАВИЯ
                         </span>
                     ),
@@ -165,7 +165,7 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             GARAGE SCREEN
-                            <br/>
+                            <br />
                             COMPETITION
                         </span>
                     ),
@@ -176,9 +176,9 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             ДВОРЫ
-                            <br/>
+                            <br />
                             ЖИЛОГО РАЙОНА
-                            <br/>
+                            <br />
                             СКАНДИНАВИЯ
                         </span>
                     ),
@@ -188,12 +188,12 @@ const Page: NextPage = () => (
                     src: 'https://unit4.io/files/krvostok/01.jpg',
                     text: (
                         <span>
-                            КОНЦЕПЦИЯ 
-                            <br/>
+                            КОНЦЕПЦИЯ
+                            <br />
                             БЛАГОУСТРОЙСТВА
-                            <br/>
+                            <br />
                             ЗАВОДА
-                            <br/>
+                            <br />
                             КРАСНЫЙ ВОСТОК
                         </span>
                     ),
@@ -209,9 +209,9 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             БУЛЬВАР ЧИСТОПОЛЬ
-                            <br/>
+                            <br />
                             ТАТАРСТАН
-                            <br/>
+                            <br />
                             ФАЗА #2
                         </span>
                     ),
@@ -232,9 +232,9 @@ const Page: NextPage = () => (
                     text: (
                         <span>
                             БУЛЬВАР ЧИСТОПОЛЬ
-                            <br/>
+                            <br />
                             ТАТАРСТАН
-                            <br/>
+                            <br />
                             ФАЗА #1
                         </span>
                     ),
