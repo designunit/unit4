@@ -76,6 +76,12 @@ app.prepare()
             app.render(req, res, page, {})
         })
 
+        server.get('/contact', (req, res) => {
+            const lang = (req as any).lng
+            const page = createPageName('/contact', defaultLang, lang )
+            app.render(req, res, page, {})
+        })
+
         server.get('/repository', (req, res) => {
             app.render(req, res, '/repository', {})
         })
