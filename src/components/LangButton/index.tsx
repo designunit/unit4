@@ -1,4 +1,6 @@
 import * as React from 'react'
+
+import cx from 'classnames'
 import { useTranslation } from '../../i18n'
 
 export interface ILangButtonProps {
@@ -6,20 +8,23 @@ export interface ILangButtonProps {
 }
 
 export const LangButton: React.FC<ILangButtonProps> = props => {
-    // const code = useFlagCode('ru')
-    const { i18n } = useTranslation()
+    const { t, i18n } = useTranslation()
     const lang = i18n.language
-    const onClick = React.useCallback(() => {
-        if (lang === 'en') {
-            switchLanguage('ru')
-        } else {
-            switchLanguage('en')
-        }
-    }, [lang])
+
+    const isCurrentRu = lang === 'ru'
+    const isCurrentEn = lang === 'en'
+
+    const onClickRu = React.useCallback(() => {
+        switchLanguage('ru')
+    }, [])
+
+    const onClickEn = React.useCallback(() => {
+        switchLanguage('en')
+    }, [])
 
     const switchLanguage = React.useCallback((language: string) => {
         i18n.changeLanguage(language)
-            .then(t => {
+            .then(() => {
                 setTimeout(() => {
                     scroll(0, 0)
                     document.location.reload()
@@ -28,30 +33,36 @@ export const LangButton: React.FC<ILangButtonProps> = props => {
     }, [])
 
     return (
-        <button style={props.style} onClick={onClick}>
+        <div style={props.style}>
             <style jsx>{`
                 button {
                     cursor: pointer;
-                    outline: none;
+
                     border: none;
-                    background: none;
-                    padding: 0;
+                    border-radius: 0;
+                    margin: 0;
+                    padding: 2px 10px;
 
-                    display: flex;
-                    justify-content: center;
+                    color: var(--color-text-opposite);
+                    background-color: var(--color-background-opposite);
+                }
 
-                    box-shadow: 0 0 0 2px rgb(0, 83, 108);
+                button.active {
+                    color: var(--color-text);
+                    background-color: var(--link-color-active);
+                }
 
-                    width: 24px;
-                    height: 18px;
-                    overflow: hidden;
+                button:hover {
                 }
             `}</style>
-            {lang}
-            {/* <Flag
-                code={code}
-                height={18}
-            /> */}
-        </button>
+
+            <button className={cx({ active: isCurrentRu })} onClick={onClickRu}>
+                {t('ru')}
+            </button>
+
+            <button className={cx({ active: isCurrentEn })} onClick={onClickEn}>
+                {t('en')}
+            </button>
+        </div>
     )
 }

@@ -21,20 +21,27 @@ export const Footer: React.FC = () => (
             }
 
             section {
+                display: flex;
                 color: var(--color-light);
+                flex-direction: column;
+            }
+
+            section.right {
+                align-items: flex-end;
             }
         `}</style>
 
         <section>© 2017-2019 design unit 4</section>
-        <section>
+        <section className={'right'}>
             <a
                 href='mailto:inbox@unit4.io'
                 target={'_blank'}
             >
                 inbox@unit4.io
             </a>
-
-            <LangButton/>
+            <LangButton style={{
+                marginTop: 10,
+            }}/>
         </section>
     </footer>
 )
