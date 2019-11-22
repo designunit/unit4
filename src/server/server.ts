@@ -64,6 +64,12 @@ app.prepare()
             app.render(req, res, '/', {})
         })
 
+        server.get('/about', (req, res) => {
+            const lang = (req as any).lng
+            const page = createPageName('/about', defaultLang, lang )
+            app.render(req, res, page, {})
+        })
+
         server.get('/repository', (req, res) => {
             app.render(req, res, '/repository', {})
         })
