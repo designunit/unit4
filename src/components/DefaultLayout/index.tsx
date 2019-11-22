@@ -2,20 +2,13 @@ import * as React from 'react'
 
 import className from 'classnames'
 import Head from 'next/head'
-import { defaultLanguage, useTranslation } from '../../i18n'
+import { useLangUrlPrefix } from '../../hooks/useLangUrlPrefix'
+import { useTranslation } from '../../i18n'
 import { Footer } from '../Footer'
 import { Logo } from '../Logo'
 import { Menu } from '../Menu'
 
 import './styles.less'
-
-function useLangUrlPrefix() {
-    const { i18n } = useTranslation()
-    const lang = i18n.language
-    const urlPrefix = lang === defaultLanguage ? '' : '/en'
-
-    return urlPrefix
-}
 
 export interface IDefaultLayoutProps {
     showHeader: boolean
@@ -24,7 +17,7 @@ export interface IDefaultLayoutProps {
 }
 
 export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
     const langPrefix = useLangUrlPrefix()
 
     return (
