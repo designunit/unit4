@@ -11,11 +11,21 @@ export const LangButton: React.FC<ILangButtonProps> = props => {
     const lang = i18n.language
     const onClick = React.useCallback(() => {
         if (lang === 'en') {
-            i18n.changeLanguage('ru')
+            switchLanguage('ru')
         } else {
-            i18n.changeLanguage('en')
+            switchLanguage('en')
         }
     }, [lang])
+
+    const switchLanguage = React.useCallback((language: string) => {
+        i18n.changeLanguage(language)
+            .then(t => {
+                setTimeout(() => {
+                    scroll(0, 0)
+                    document.location.reload()
+                }, 10)
+            })
+    }, [])
 
     return (
         <button style={props.style} onClick={onClick}>
