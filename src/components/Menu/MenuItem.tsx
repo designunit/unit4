@@ -1,14 +1,16 @@
-import LinkActive from 'next-link-active'
 import * as React from 'react'
+
+import { LinkActive } from '../LinkActive'
 
 export interface IMenuItemProps {
     href: string
     text: string
 }
 
-export const MenuItem: React.FC<IMenuItemProps> = ({ href, text }) => (
-    <li>
-        <style jsx>{`
+export const MenuItem: React.FC<IMenuItemProps> = ({ href, text }) => {
+    return (
+        <li>
+            <style jsx>{`
             li {
                 margin: 0;
                 margin-bottom: 5px;
@@ -39,18 +41,19 @@ export const MenuItem: React.FC<IMenuItemProps> = ({ href, text }) => (
             }
         `}</style>
 
-        <LinkActive href={href} passHref>
-            {active => active
-                ? (
-                    <span className='link-body active'>
-                        {text}
-                    </span>
-                ) : (
-                    <a className='link-body'>
-                        {text}
-                    </a>
-                )
-            }
-        </LinkActive>
-    </li>
-)
+            <LinkActive href={href} passHref>
+                {active => active
+                    ? (
+                        <span className='link-body active'>
+                            {text}
+                        </span>
+                    ) : (
+                        <a className='link-body'>
+                            {text}
+                        </a>
+                    )
+                }
+            </LinkActive>
+        </li>
+    )
+}
