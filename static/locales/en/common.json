@@ -1,6 +1,11 @@
 {
     "Repository": "REPOSITORY",
 
+    "menu-about": "about",
+    "menu-repository": "repository",
+    "menu-partners": "partners",
+    "menu-contacts": "contacts",
+
     "repository-edu_ugra": "HMAO FKGS TRAINING SEMINAR",
     "repository-uray_ppi": "HMAO URAY RESEARCH",
     "repository-heterotopia": "CO-TEMPORAL HETEROTOPIES",

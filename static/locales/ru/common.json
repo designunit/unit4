@@ -1,6 +1,11 @@
 {
     "Repository": "РЕПОЗИТОРИЙ",
 
+    "menu-about": "о нас",
+    "menu-repository": "репозиторий",
+    "menu-partners": "партнеры",
+    "menu-contacts": "контакты",
+
     "repository-edu_ugra": "ОБУЧАЮЩИЙ СЕМИНАР ХМАО ФКГС",
     "repository-uray_ppi": "ИССЛЕДОВАНИЕ УРАЙ ХМАО",
     "repository-heterotopia": "ГЕТЕРОТОПИИ СО-ВРЕМЕННОСТИ",
