@@ -23,11 +23,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/edu_ugra/01.jpg',
                         text: (
                             <span>
-                                ОБУЧАЮЩИЙ
-                            <br />
-                                СЕМИНАР ХМАО
-                            <br /> ФКГС
-                        </span>
+                                ОБУЧАЮЩИЙ СЕМИНАР ХМАО ФКГС
+                            </span>
                         ),
                     },
                     {
@@ -35,10 +32,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/uray_ppi/urai.jpg',
                         text: (
                             <span>
-                                ИССЛЕДОВАНИЕ
-                            <br />
-                                УРАЙ ХМАО
-                        </span>
+                                ИССЛЕДОВАНИЕ УРАЙ ХМАО
+                            </span>
                         ),
                     },
                     {
@@ -46,10 +41,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/heterotopia/heterotopia.gif',
                         text: (
                             <span>
-                                ГЕТЕРОТОПИИ
-                            <br />
-                                СО-ВРЕМЕННОСТИ
-                        </span>
+                                ГЕТЕРОТОПИИ СО-ВРЕМЕННОСТИ
+                            </span>
                         ),
                     },
                     {
@@ -57,12 +50,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/oy/viz_gulag.jpg',
                         text: (
                             <span>
-                                ОЙМЯКОН
-                            <br />
-                                п(о)люс
-                            <br />
-                                со-временности
-                        </span>
+                                ОЙМЯКОН п(о)люс со-временности
+                            </span>
                         ),
                     },
                     {
@@ -70,12 +59,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/hovrinka/hovrinka.jpg',
                         text: (
                             <span>
-                                СОЦИАЛЬНО-КУЛЬТУРНЫЙ
-                            <br />
-                                ЦЕНТР
-                            <br />
-                                ХОВРИНКА
-                        </span>
+                                СОЦИАЛЬНО-КУЛЬТУРНЫЙ ЦЕНТР ХОВРИНКА
+                            </span>
                         ),
                     },
                     {
@@ -88,12 +73,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/app_manual/manual.jpg',
                         text: (
                             <span>
-                                МЕТОДИЧЕСКИЕ
-                            <br />
-                                РЕКОМЕНДАЦИИ
-                            <br />
-                                ХМАО
-                        </span>
+                                МЕТОДИЧЕСКИЕ РЕКОМЕНДАЦИИ ХМАО
+                            </span>
                         ),
                     },
                     {
@@ -106,10 +87,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/yoshkola/04.jpg',
                         text: (
                             <span>
-                                IT ШКОЛА
-                            <br />
-                                ЙОШКАР-ОЛА
-                        </span>
+                                IT ШКОЛА ЙОШКАР-ОЛА
+                            </span>
                         ),
                     },
                     {
@@ -117,12 +96,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/boulevard_scnd/boulevard.jpg',
                         text: (
                             <span>
-                                БУЛЬВАР
-                            <br />
-                                ЖИЛОГО РАЙОНА
-                            <br />
-                                СКАНДИНАВИЯ
-                        </span>
+                                БУЛЬВАР ЖИЛОГО РАЙОНА СКАНДИНАВИЯ
+                            </span>
                         ),
                     },
                     {
@@ -130,12 +105,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/park_scnd/park.jpg',
                         text: (
                             <span>
-                                ПАРК
-                            <br />
-                                ЖИЛОГО РАЙОНА
-                            <br />
-                                СКАНДИНАВИЯ
-                        </span>
+                                ПАРК ЖИЛОГО РАЙОНА СКАНДИНАВИЯ
+                            </span>
                         ),
                     },
                     {
@@ -168,10 +139,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/garagescreen/02.gif',
                         text: (
                             <span>
-                                GARAGE SCREEN
-                            <br />
-                                COMPETITION
-                        </span>
+                                GARAGE SCREEN COMPETITION
+                            </span>
                         ),
                     },
                     {
@@ -179,12 +148,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/d_scnd/03.jpg',
                         text: (
                             <span>
-                                ДВОРЫ
-                            <br />
-                                ЖИЛОГО РАЙОНА
-                            <br />
-                                СКАНДИНАВИЯ
-                        </span>
+                                ДВОРЫ ЖИЛОГО РАЙОНА СКАНДИНАВИЯ
+                            </span>
                         ),
                     },
                     {
@@ -192,14 +157,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/krvostok/01.jpg',
                         text: (
                             <span>
-                                КОНЦЕПЦИЯ
-                            <br />
-                                БЛАГОУСТРОЙСТВА
-                            <br />
-                                ЗАВОДА
-                            <br />
-                                КРАСНЫЙ ВОСТОК
-                        </span>
+                                КОНЦЕПЦИЯ БЛАГОУСТРОЙСТВА ЗАВОДА КРАСНЫЙ ВОСТОК
+                            </span>
                         ),
                     },
                     {
@@ -212,12 +171,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/chistopol2/07.jpg',
                         text: (
                             <span>
-                                БУЛЬВАР ЧИСТОПОЛЬ
-                            <br />
-                                ТАТАРСТАН
-                            <br />
-                                ФАЗА #2
-                        </span>
+                                БУЛЬВАР ЧИСТОПОЛЬ ТАТАРСТАН ФАЗА #2
+                            </span>
                         ),
                     },
                     {
@@ -235,12 +190,8 @@ const Page: NextPage = () => {
                         src: 'https://unit4.io/files/chistopol/02.jpg',
                         text: (
                             <span>
-                                БУЛЬВАР ЧИСТОПОЛЬ
-                            <br />
-                                ТАТАРСТАН
-                            <br />
-                                ФАЗА #1
-                        </span>
+                                БУЛЬВАР ЧИСТОПОЛЬ ТАТАРСТАН ФАЗА #1
+                            </span>
                         ),
                     },
                 ]}
