@@ -18,12 +18,11 @@ COPY package.json package-lock.json ./
 RUN npm install --production 
 
 COPY --from=build /app/.next ./.next
-#COPY --from=build /app/build ./build
-#COPY ./static ./static
+COPY --from=build /app/build ./build
+COPY ./static ./static
 
 EXPOSE 80
 ENV PORT 80
 ENV NODE_ENV production
 
-#CMD npm start -p ${PORT}
 CMD ["sh", "-c", "npm start -- -p $PORT"]
