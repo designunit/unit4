@@ -4,5 +4,6 @@
 .next
 node_modules
 out
+build
 .vscode
 .DS_Store
