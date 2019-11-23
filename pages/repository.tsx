@@ -4,244 +4,146 @@ import { NextPage } from 'next'
 
 import { Gallery } from '../src/components/Gallery'
 import { Title } from '../src/components/Title'
+import { useLangUrlPrefix } from '../src/hooks/useLangUrlPrefix'
+import { useTranslation, withTranslation } from '../src/i18n'
 
-const Page: NextPage = () => (
-    <>
-        <Title>РЕПОЗИТОРИЙ</Title>
+const Page: NextPage = () => {
+    const { t } = useTranslation()
+    const lang = useLangUrlPrefix()
 
-        <Gallery
-            style={{
-                marginBottom: 50,
-            }}
-            items={[
-                {
-                    href: '/repository/edu_ugra',
-                    src: 'https://unit4.io/files/edu_ugra/01.jpg',
-                    text: (
-                        <span>
-                            ОБУЧАЮЩИЙ
-                            <br/>
-                            СЕМИНАР ХМАО
-                            <br/> ФКГС
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/uray_ppi',
-                    src: 'https://unit4.io/files/uray_ppi/urai.jpg',
-                    text: (
-                        <span>
-                            ИССЛЕДОВАНИЕ
-                            <br/>
-                            УРАЙ ХМАО
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/heterotopia',
-                    src: 'https://unit4.io/files/heterotopia/heterotopia.gif',
-                    text: (
-                        <span>
-                            ГЕТЕРОТОПИИ
-                            <br/>
-                            СО-ВРЕМЕННОСТИ
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/oymyakon',
-                    src: 'https://unit4.io/files/oy/viz_gulag.jpg',
-                    text: (
-                        <span>
-                            ОЙМЯКОН
-                            <br/>
-                            п(о)люс
-                            <br/>
-                            со-временности
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/hovrinka',
-                    src: 'https://unit4.io/files/hovrinka/hovrinka.jpg',
-                    text: (
-                        <span>
-                            СОЦИАЛЬНО-КУЛЬТУРНЫЙ
-                            <br/>
-                            ЦЕНТР
-                            <br/>
-                            ХОВРИНКА
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/delta',
-                    src: 'https://unit4.io/files/delta/delta.jpg',
-                    text: 'БЛАГОУСТРОЙСТВО ЖК COMCITY МОСКВА',
-                },
-                {
-                    href: '/repository/application_manual',
-                    src: 'https://unit4.io/files/app_manual/manual.jpg',
-                    text: (
-                        <span>
-                            МЕТОДИЧЕСКИЕ
-                            <br/>
-                            РЕКОМЕНДАЦИИ
-                            <br/>
-                            ХМАО
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/gor_projects_spb',
-                    src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg',
-                    text: 'КОНЦЕПЦИИ spb.city4people.ru',
-                },
-                {
-                    href: '/repository/yoshkola',
-                    src: 'https://unit4.io/files/yoshkola/04.jpg',
-                    text: (
-                        <span>
-                            IT ШКОЛА
-                            <br/>
-                            ЙОШКАР-ОЛА
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/boulevard_scnd',
-                    src: 'https://unit4.io/files/boulevard_scnd/boulevard.jpg',
-                    text: (
-                        <span>
-                            БУЛЬВАР
-                            <br/>
-                            ЖИЛОГО РАЙОНА
-                            <br/>
-                            СКАНДИНАВИЯ
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/park_scnd',
-                    src: 'https://unit4.io/files/park_scnd/park.jpg',
-                    text: (
-                        <span>
-                            ПАРК
-                            <br/>
-                            ЖИЛОГО РАЙОНА
-                            <br/>
-                            СКАНДИНАВИЯ
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/shelter',
-                    src: 'https://unit4.io/files/shelter/01.jpg',
-                    text: 'ИНСТАЛЛЯЦИЯ NEST WIND SHELTER',
-                },
-                {
-                    href: '/repository/swarm',
-                    src: 'https://unit4.io/files/swarm/swarm.jpg',
-                    text: 'МОДЕЛИРОВАНИЕ ПЕШЕХОДНЫХ ПОТОКОВ SWARM',
-                },
-                {
-                    href: '/repository/dc_scnd',
-                    src: 'https://unit4.io/files/dc_scnd/dc.gif',
-                    text: 'ДИЗАЙН-КОД ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ',
-                },
-                {
-                    href: '/repository/gb_scnd',
-                    src: 'https://unit4.io/files/gb_scnd/gb.jpg',
-                    text: 'КОНЦЕПЦИЯ ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ',
-                },
-                {
-                    href: '/repository/samarapark',
-                    src: 'https://unit4.io/files/samarapark/10.jpg',
-                    text: 'ПАРК ЗАГОРОДНЫЙ САМАРА',
-                },
-                {
-                    href: '/repository/garagescreen',
-                    src: 'https://unit4.io/files/garagescreen/02.gif',
-                    text: (
-                        <span>
-                            GARAGE SCREEN
-                            <br/>
-                            COMPETITION
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/d_scnd',
-                    src: 'https://unit4.io/files/d_scnd/03.jpg',
-                    text: (
-                        <span>
-                            ДВОРЫ
-                            <br/>
-                            ЖИЛОГО РАЙОНА
-                            <br/>
-                            СКАНДИНАВИЯ
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/krvostok',
-                    src: 'https://unit4.io/files/krvostok/01.jpg',
-                    text: (
-                        <span>
-                            КОНЦЕПЦИЯ 
-                            <br/>
-                            БЛАГОУСТРОЙСТВА
-                            <br/>
-                            ЗАВОДА
-                            <br/>
-                            КРАСНЫЙ ВОСТОК
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/trollgardens',
-                    src: 'https://unit4.io/files/trollgardens/05.jpg',
-                    text: 'САДЫ ТРОЛЛЕЙ',
-                },
-                {
-                    href: '/repository/chistopol2',
-                    src: 'https://unit4.io/files/chistopol2/07.jpg',
-                    text: (
-                        <span>
-                            БУЛЬВАР ЧИСТОПОЛЬ
-                            <br/>
-                            ТАТАРСТАН
-                            <br/>
-                            ФАЗА #2
-                        </span>
-                    ),
-                },
-                {
-                    href: '/repository/kemb',
-                    src: 'https://unit4.io/files/kemb/01.jpg',
-                    text: 'ИССЛЕДОВАНИЕ НАБЕРЕЖНОЙ КАРПОВКИ',
-                },
-                {
-                    href: '/repository/model4',
-                    src: 'https://unit4.io/files/model4/01.jpg',
-                    text: 'СЕРИЯ ИЗДЕЛИЙ МОДЕЛЬ : : 4',
-                },
-                {
-                    href: '/repository/chistopol',
-                    src: 'https://unit4.io/files/chistopol/02.jpg',
-                    text: (
-                        <span>
-                            БУЛЬВАР ЧИСТОПОЛЬ
-                            <br/>
-                            ТАТАРСТАН
-                            <br/>
-                            ФАЗА #1
-                        </span>
-                    ),
-                },
-            ]}
-        />
-    </>
-)
+    return (
+        <>
+            <Title>{t('Repository')}</Title>
 
-export default Page
+            <Gallery
+                style={{
+                    marginBottom: 50,
+                }}
+                items={[
+                    {
+                        href: t(`${lang}/repository/edu_ugra`),
+                        src: 'https://unit4.io/files/edu_ugra/01.jpg',
+                        text: t('repository-edu_ugra'),
+                    },
+                    {
+                        href: t(`${lang}/repository/uray_ppi`),
+                        src: 'https://unit4.io/files/uray_ppi/urai.jpg',
+                        text: t('repository-uray_ppi'),
+                    },
+                    {
+                        href: t(`${lang}/repository/heterotopia`),
+                        src: 'https://unit4.io/files/heterotopia/heterotopia.gif',
+                        text: t('repository-heterotopia'),
+                    },
+                    {
+                        href: t(`${lang}/repository/oymyakon`),
+                        src: 'https://unit4.io/files/oy/viz_gulag.jpg',
+                        text: t('repository-oymyakon'),
+                    },
+                    {
+                        href: t(`${lang}/repository/hovrinka`),
+                        src: 'https://unit4.io/files/hovrinka/hovrinka.jpg',
+                        text: t('repository-hovrinka'),
+                    },
+                    {
+                        href: t(`${lang}/repository/delta`),
+                        src: 'https://unit4.io/files/delta/delta.jpg',
+                        text: t('repository-delta'),
+                    },
+                    {
+                        href: t(`${lang}/repository/application_manual`),
+                        src: 'https://unit4.io/files/app_manual/manual.jpg',
+                        text: t('repository-application_manual'),
+                    },
+                    {
+                        href: t(`${lang}/repository/gor_projects_spb`),
+                        src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg',
+                        text: t('repository-gor_projects_spb'),
+                    },
+                    {
+                        href: t(`${lang}/repository/yoshkola`),
+                        src: 'https://unit4.io/files/yoshkola/04.jpg',
+                        text: t('repository-yoshkola'),
+                    },
+                    {
+                        href: t(`${lang}/repository/boulevard_scnd`),
+                        src: 'https://unit4.io/files/boulevard_scnd/boulevard.jpg',
+                        text: t('repository-boulevard_scnd'),
+                    },
+                    {
+                        href: t(`${lang}/repository/park_scnd`),
+                        src: 'https://unit4.io/files/park_scnd/park.jpg',
+                        text: t('repository-park_scnd'),
+                    },
+                    {
+                        href: t(`${lang}/repository/shelter`),
+                        src: 'https://unit4.io/files/shelter/01.jpg',
+                        text: t('repository-shelter'),
+                    },
+                    {
+                        href: t(`${lang}/repository/swarm`),
+                        src: 'https://unit4.io/files/swarm/swarm.jpg',
+                        text: t('repository-swarm'),
+                    },
+                    {
+                        href: t(`${lang}/repository/dc_scnd`),
+                        src: 'https://unit4.io/files/dc_scnd/dc.gif',
+                        text: t('repository-dc_scnd'),
+                    },
+                    {
+                        href: t(`${lang}/repository/gb_scnd`),
+                        src: 'https://unit4.io/files/gb_scnd/gb.jpg',
+                        text: t('repository-gb_scnd'),
+                    },
+                    {
+                        href: t(`${lang}/repository/samarapark`),
+                        src: 'https://unit4.io/files/samarapark/10.jpg',
+                        text: t('repository-samarapark'),
+                    },
+                    {
+                        href: t(`${lang}/repository/garagescreen`),
+                        src: 'https://unit4.io/files/garagescreen/02.gif',
+                        text: t('repository-garagescreen'),
+                    },
+                    {
+                        href: t(`${lang}/repository/d_scnd`),
+                        src: 'https://unit4.io/files/d_scnd/03.jpg',
+                        text: t('repository-d_scnd'),
+                    },
+                    {
+                        href: t(`${lang}/repository/krvostok`),
+                        src: 'https://unit4.io/files/krvostok/01.jpg',
+                        text: t('repository-krvostok'),
+                    },
+                    {
+                        href: t(`${lang}/repository/trollgardens`),
+                        src: 'https://unit4.io/files/trollgardens/05.jpg',
+                        text: t('repository-trollgardens'),
+                    },
+                    {
+                        href: t(`${lang}/repository/chistopol2`),
+                        src: 'https://unit4.io/files/chistopol2/07.jpg',
+                        text: t('repository-chistopol2'),
+                    },
+                    {
+                        href: t(`${lang}/repository/kemb`),
+                        src: 'https://unit4.io/files/kemb/01.jpg',
+                        text: t('repository-kemb'),
+                    },
+                    {
+                        href: t(`${lang}/repository/model4`),
+                        src: 'https://unit4.io/files/model4/01.jpg',
+                        text: t('repository-model4'),
+                    },
+                    {
+                        href: t(`${lang}/repository/chistopol`),
+                        src: 'https://unit4.io/files/chistopol/02.jpg',
+                        text: t('repository-chistopol'),
+                    },
+                ]}
+            />
+        </>
+    )
+}
+
+export default withTranslation('common')(Page)

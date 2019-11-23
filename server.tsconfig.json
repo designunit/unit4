@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "noEmitOnError": false,
+        "target": "es6",
+        "module": "commonjs",
+        "jsx": "preserve",
+        "outDir": "./build",
+        "strict": false,
+        "esModuleInterop": true
+    },
+    "include": [
+        "src/server/**/*.ts"
+    ]
+}
