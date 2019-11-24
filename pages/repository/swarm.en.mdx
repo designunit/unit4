@@ -1,17 +1,14 @@
 import { Title } from '../../src/components/Title'
 import { ImageSet } from '../../src/components/ImageSet'
 
-<Title>МОДЕЛИРОВАНИЕ ПЕШЕХОДНЫХ ПОТОКОВ SWARM</Title>
+<Title>SWARM PEDESTRIAN FLOWS SIMULATION</Title>
 
+Development of software for the analysis of urban environment and design process optimization <br/>
+May – June 2018
 
-Разработка софта для анализа городской среды и оптимизации процесса проектирования.
+[SWARM](https://swarm.tmshv.com) is a multi-agent system, a mathematical simulation of pedestrian flows, which visualizes their distribution on the territory to be designed.
 
-май-июнь 2018
-
-
-<a href={'https://swarm.tmshv.com/'} target="_blank">SWARM [swarm.tmshv.com]</a> — мультиагентная система — математическая симуляция пешеходных потоков — визуализирует их распределение на территории проектирования.
-
-Результат использования этого инструмента — прогноз распределения пешеходных потоков в границах  проекта, их мощности, а также выявление уровня популярности аттракторов.
+This tool works to create a prediction of how pedestrian flows are going to be distributed within the territory of a project. It also assesses their density and reveals how popular the attractors are.
 
 <ImageSet
     items={[
@@ -22,6 +19,6 @@ import { ImageSet } from '../../src/components/ImageSet'
     }}
 />
 
-Математическая симуляция пешеходных потоков выявляет наиболее оптимальное их распределение на территории жилого района. В симуляции проиллюстрирован фрагмент эпизода суточной миграции: утренний час-пик рабочей недели. Сведения генерального плана и сводного проекта планировки территории использованы для определения расположения источников потока — эмиттеров (выходы из жилых групп), а также точек притяжения потока - аттракторов (остановки общественного транспорта). Совмещение этой информации со сведениями о населенности каждого квартала и жилой группы, а также топологии уличной сети позволяют определить траектории и оценить относительную мощность/интенсивность пешеходных потоков данного эпизода.
+Mathematical simulation of pedestrian flows calculates their optimal distribution on the territory of a residential district. The simulation illustrates a piece of an episode of a 24-hour migration: a morning rush hour during the working week. The site plan and the territorial development plan were used to locate the sources of flows—emitters (exits from residential groups)—and the points to which the flow draws—attractors (public transport stops). Combining this information with the information on population density of each residential quarter and housing group, as well as topology of street network, it is possible to define trajectories and assess relative power / intensity of pedestrian flows within this episode.
 
-Правила, принятые в симуляции: агенты (пользователи) стремятся к ближайшим аттракторам (точкам притяжения); агенты не могут пересекать препятствия; интенсивности эмиттеров (источники потока) пропорциональны емкостям жилых групп.
+The following rules were accepted for this simulation: agents (users) move towards the nearest attractors (points of attraction); agents cannot cross obstacles; intensity of emitters (sources of flows) are proportional to volumes of residential groups.
