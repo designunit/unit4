@@ -35,24 +35,34 @@ export const LangButton: React.FC<ILangButtonProps> = props => {
     return (
         <div style={props.style}>
             <style jsx>{`
+                div {
+                    box-sizing: border-box;
+                }
+
                 button {
                     cursor: pointer;
 
-                    border: none;
+                    border: 1px solid var(--color-text);
                     border-radius: 0;
                     margin: 0;
                     padding: 2px 10px;
 
-                    color: var(--color-text-opposite);
-                    background-color: var(--color-background-opposite);
+                    color: var(--color-text);
+                    background-color: none;
+                }
+
+                button:first-child {
+                    border-right: none;
+                }
+
+                button:last-child {
+                    border-left: none;
                 }
 
                 button.active {
+                    border-color: var(--link-color-active);
                     color: var(--color-text);
                     background-color: var(--link-color-active);
-                }
-
-                button:hover {
                 }
             `}</style>
 
