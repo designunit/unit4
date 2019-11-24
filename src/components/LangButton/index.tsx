@@ -48,7 +48,7 @@ export const LangButton: React.FC<ILangButtonProps> = props => {
                     padding: 2px 10px;
 
                     color: var(--color-text);
-                    background-color: none;
+                    background-color: var(--color-background);
                 }
 
                 button:first-child {
