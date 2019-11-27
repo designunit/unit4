@@ -1,5 +1,5 @@
 import React from 'react'
-import App, { Container } from 'next/app'
+import App from 'next/app'
 import { DefaultLayout } from '../src/components/DefaultLayout'
 import { Article } from '../src/components/Article'
 import { appWithTranslation } from '../src/i18n'
@@ -20,15 +20,13 @@ class MyApp extends App {
             )
 
         return (
-            <Container>
-                <DefaultLayout
-                    showHeader={true}
-                    center={true}
-                    title={'design unit4'}
-                >
-                    {content}
-                </DefaultLayout >
-            </Container>
+            <DefaultLayout
+                showHeader={true}
+                center={true}
+                title={'design unit4'}
+            >
+                {content}
+            </DefaultLayout >
         )
     }
 }

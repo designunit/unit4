@@ -3,6 +3,7 @@ import NextI18Next from 'next-i18next'
 const instance = new NextI18Next({
     defaultLanguage: 'ru',
     otherLanguages: ['en'],
+	localePath: 'public/static/locales',
 
     localeSubpaths: {
         en: 'en',
