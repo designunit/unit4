@@ -26,7 +26,7 @@ const Page: NextPage = () => (
                     href={maps}
                     target='_blank'
                 >
-                    OOO «design unit 4»<br />
+                    «design unit 4» Co. Ltd.<br />
                     13 Grazhdanskaya Street Saint Petersburg, 190031 Russia
                 </a>
             </TextBlock>
