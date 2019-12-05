@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 RUN npm ci
+RUN npx next telemetry disable
 
 COPY next.config.js ./
 COPY . .
