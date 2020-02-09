@@ -21,6 +21,11 @@ const Page: NextPage = () => {
                 }}
                 items={[
                     {
+                        href: t(`${lang}/repository/latlng`),
+                        src: 'https://unit4.io/files/latlng/latlng.gif',
+                        text: t('repository-latlng'),
+                    },
+                    {
                         href: t(`${lang}/repository/edu_ugra`),
                         src: 'https://unit4.io/files/edu_ugra/01.jpg',
                         text: t('repository-edu_ugra'),
