@@ -42,7 +42,7 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
                                     text: t('menu-about'),
                                 },
                                 {
-                                    href: `${langPrefix}/repository`,
+                                    href: `${langPrefix}/`,
                                     text: t('menu-repository'),
                                 },
                                 {
