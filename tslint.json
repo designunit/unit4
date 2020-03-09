@@ -8,6 +8,10 @@
     ],
     "rules": {
         "no-console": false,
+        "interface-name": [
+            true,
+            "never-prefix"
+        ],
         "quotemark": [
             true,
             "single",

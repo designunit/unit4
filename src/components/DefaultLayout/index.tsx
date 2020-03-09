@@ -8,7 +8,7 @@ import { Footer } from '../Footer'
 import { Logo } from '../Logo'
 import { Menu } from '../Menu'
 
-import './styles.less'
+import './styles.css'
 
 export interface IDefaultLayoutProps {
     showHeader: boolean
@@ -42,7 +42,7 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
                                     text: t('menu-about'),
                                 },
                                 {
-                                    href: `${langPrefix}/repository`,
+                                    href: `${langPrefix}/`,
                                     text: t('menu-repository'),
                                 },
                                 {

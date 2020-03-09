@@ -2,24 +2,24 @@
     position: absolute;
     width: 100%;
     height: 100%;
+}
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        padding: var(--content-padding);
+.layout header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--content-padding);
 
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
 
-    main {
-        flex: 1;
-    }
+.layout main {
+    flex: 1;
+}
 
-    footer {
-        padding: var(--content-padding);
-        padding-bottom: 1em;
-    }
+.layout footer {
+    padding: var(--content-padding);
+    padding-bottom: 1em;
 }
 
 .content {
@@ -45,10 +45,8 @@
 }
 
 @media screen and (max-width: 31.25em) {
-    .layout {
-        header {
-            margin-top: 1em;
-        }
+    .layout header {
+        margin-top: 1em;
     }
 
     .content {

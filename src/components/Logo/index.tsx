@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import Svg from './icon.svg'
+import Svg from './logo-unit4.svg'
 
 export interface ILogoProps {
     href: string
@@ -12,16 +12,11 @@ export const Logo: React.SFC<ILogoProps> = props => (
             a {
                 display: block;
 
-                width: 35px;
-                height: 35px;
+                width: 180px;
 
                 position: relative;
-                top: -5px;
-                left: -5px;
-
-                fill: var(--color-text);
-                background-color: var(--color-background);
-                padding: 5px;
+                top: -6px;
+                //left: -12px;
             }
         `}</style>
 

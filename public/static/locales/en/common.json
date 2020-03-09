@@ -1,18 +1,20 @@
 {
     "ru": "Русский",
     "en": "English",
-    "Repository": "REPOSITORY",
+    "Repository": "PROJECTS",
 
     "menu-about": "about",
-    "menu-repository": "repository",
+    "menu-repository": "projects",
     "menu-partners": "partners",
     "menu-contacts": "contacts",
 
+    "highlight-volokolamsk": "MOSCOW TRACT VOLOKOLAMSK",
+    "highlight-latlng": "LATL.NG cloud GIS",
     "highlight-edu_ugra": "Training seminar for state and municipal services in Khanty-Mansi Autonomous Okrug",
-    "highlight-uray_ppi": "Study of Uray city in Khanty-Mansi Autonomous Okrug",
-    "highlight-oymyakon": "Oymyakon : : pole of modernity",
     "highlight-delta": "Landscape design concept for Comcity residential complex in Moscow",
 
+    "repository-volokolamsk": "MOSCOW TRACT VOLOKOLAMSK",
+    "repository-latlng": "LATL.NG cloud GIS",
     "repository-edu_ugra": "TRAINING SEMINAR for state and municipal services",
     "repository-uray_ppi": "STUDY OF URAY CITY YUGRA",
     "repository-heterotopia": "HETEROTOPY OF MODERNITY",

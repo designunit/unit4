@@ -36,10 +36,8 @@ svg.icon-link {
     fill: var(--color-text);
 }
 
-svg.icon-link:hover {
-    path {
-        fill: var(--link-color-active);
-    }
+svg.icon-link:hover path {
+    fill: var(--link-color-active);
 }
 
 .partner-logo {
@@ -67,7 +65,8 @@ body {
     background-color: var(--color-background);
     color: var(--color-text);
 
-    overflow-x: hidden; // fix a issue with wide block on windows to prevent horizonal scrolling
+    /* fix a issue with wide block on windows to prevent horizonal scrolling */
+    overflow-x: hidden;
 }
 
 h1,
@@ -104,26 +103,28 @@ p {
     margin: 0;
 }
 
+/* LINK */
+
 a {
     text-decoration: underline;
     color: var(--link-color-default);
-
-    &:hover {
-        text-decoration: underline;
-        color: var(--link-color-active);
-
-        svg {
-            fill: var(--link-color-active);
-        }
-    }
-
-    &:focus {
-        color: var(--link-color-focus);
-        outline: 0;
-    }
 }
 
-// ARTICLE STYLE
+a:hover {
+    text-decoration: underline;
+    color: var(--link-color-active);
+}
+
+a:hover svg {
+    fill: var(--link-color-active);
+}
+
+a:focus {
+    color: var(--link-color-focus);
+    outline: 0;
+}
+
+/* ARTICLE STYLE */
 
 article {
     margin-bottom: 50px;
@@ -135,24 +136,22 @@ article p {
     hyphens: auto;
 }
 
-article {
-    ul {
-        list-style: none;
-        margin-left: 0;
-        padding-left: 1em;
-        text-indent: -1em;
+article ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;
 
-        margin-bottom: 2em;
-    }
+    margin-bottom: 2em;
+}
 
-    ul li:before {
-        content: '/';
-        display: block;
-        float: left;
-        width: 0.75em;
-        font-size: 1.2em;
-        font-weight: bolder;
-    }
+article ul li:before {
+    content: '/';
+    display: block;
+    float: left;
+    width: 0.75em;
+    font-size: 1.2em;
+    font-weight: bolder;
 }
 
 article li p {
@@ -163,7 +162,7 @@ article .image {
     margin-bottom: 1em;
 }
 
-// MOBILE STYLE
+/* MOBILE STYLE */
 
 @media screen and (max-width: 31.25em) {
     :root {
