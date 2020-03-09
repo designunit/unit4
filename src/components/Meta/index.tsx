@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useLocale } from '../../hooks/useLocale'
+import { resizeImage } from '../../lib/image'
 
 export interface MetaProps {
     title: string
@@ -11,23 +12,28 @@ export interface MetaProps {
 
 export const Meta: React.SFC<MetaProps> = ({ type = 'website', ...props }) => {
     const locale = useLocale()
+    const image = resizeImage(props.image, {
+        fit: 'cover',
+        h: 1200,
+        w: 1200,
+    })
 
     return (
         <Head>
             {/* Search Engine */}
             <meta name='description' content={props.description} />
-            <meta name='image' content={props.image} />
+            <meta name='image' content={image} />
 
             {/* Schema.org for Google */}
             <meta itemProp='name' content={props.title} />
             <meta itemProp='description' content={props.description} />
-            <meta itemProp='image' content={props.image} />
+            <meta itemProp='image' content={image} />
 
             {/* Open Graph general (Facebook, Pinterest & Google+) */}
             <meta property='og:type' content={type} />
             <meta property='og:locale' content={locale} />
             <meta property='og:title' content={props.title} />
-            <meta property='og:image' content={props.image} />
+            <meta property='og:image' content={image} />
             <meta property='og:url' content={props.url} />
             <meta property='og:description' content={props.description} />
             {/* <meta property='og:image:width' content={props.imageWidth.toString()} /> */}
