@@ -13,8 +13,6 @@ export default class MyDocument extends Document {
             <html lang='ru'>
                 <Head>
                     <meta name="yandex-verification" content="6666982025a60ec8" />
-                    <link rel="stylesheet" href="/static/style.css" />
-                    <link rel="stylesheet" href="/_next/static/style.css" />
                     <link rel="icon" href="/static/favicon1.png" type="image/x-icon" />
 
                     <script src={'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'} type={'text/javascript'} />

@@ -5,7 +5,7 @@ import { Article } from '../src/components/Article'
 import { appWithTranslation } from '../src/i18n'
 
 import 'antd/dist/antd.less'
-import '../src/style.less'
+import '../src/style.css'
 
 class MyApp extends App {
     render() {

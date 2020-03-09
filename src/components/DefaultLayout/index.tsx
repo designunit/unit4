@@ -8,7 +8,7 @@ import { Footer } from '../Footer'
 import { Logo } from '../Logo'
 import { Menu } from '../Menu'
 
-import './styles.less'
+import './styles.css'
 
 export interface IDefaultLayoutProps {
     showHeader: boolean
