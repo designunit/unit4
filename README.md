@@ -1,5 +1,4 @@
-# unit4.io
-unit4 wip hosting
+# [unit4.io](https://unit4.io)
 
 ## Run
 
