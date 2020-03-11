@@ -41,7 +41,7 @@ const projects = [
     '/chistopol',
     '/chistopol2',
     '/delta',
-    '/urga-edu',
+    '/ugra-edu',
     '/garagescreen',
     '/gorprojects-spb',
     '/heterotopia',

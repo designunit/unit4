@@ -115,13 +115,19 @@ a:hover {
     color: var(--link-color-active);
 }
 
-a:hover svg {
-    fill: var(--link-color-active);
-}
-
 a:focus {
     color: var(--link-color-focus);
     outline: 0;
+}
+
+/* LINK SVG */
+
+a svg {
+    fill: var(--color-background-opposite);
+}
+
+a:hover svg {
+    fill: var(--link-color-active);
 }
 
 /* ARTICLE STYLE */

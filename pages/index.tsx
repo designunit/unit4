@@ -1,7 +1,4 @@
-import * as React from 'react'
-
 import { NextPage } from 'next'
-
 import { Gallery } from '../src/components/Gallery'
 import { Title } from '../src/components/Title'
 import { useLangUrlPrefix } from '../src/hooks/useLangUrlPrefix'

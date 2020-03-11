@@ -13,6 +13,7 @@ export const Logo: React.SFC<ILogoProps> = props => (
                 display: block;
 
                 width: 180px;
+                height: 36px;
 
                 position: relative;
                 top: -6px;
@@ -20,6 +21,6 @@ export const Logo: React.SFC<ILogoProps> = props => (
             }
         `}</style>
 
-        <Svg/>
+        <Svg />
     </a>
 )

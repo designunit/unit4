@@ -1,6 +1,7 @@
 import './styles.css'
 
 export interface EmbedProp {
+    style?: React.CSSProperties
     src: string,
     ratio?: number,
 }
@@ -10,6 +11,7 @@ export const Embed: React.SFC<EmbedProp> = props => {
 
     return (
         <div className={'embed'} style={{
+            ...props.style,
             paddingBottom: `${r * 100}%`,
         }}>
             <iframe
