@@ -1,4 +1,5 @@
 import { NextPage } from 'next'
+import { Embed } from '../src/components/Embed'
 import { Gallery } from '../src/components/Gallery'
 import { Title } from '../src/components/Title'
 import { useLangUrlPrefix } from '../src/hooks/useLangUrlPrefix'
@@ -10,6 +11,10 @@ const Page: NextPage = () => {
 
     return (
         <>
+            <Embed src={'https://tmshv.github.io/popcode/unit4_z4'} style={{
+                marginBottom: 'var(--margin-l)',
+            }} />
+
             <Title>{t('Repository')}</Title>
 
             <Gallery
