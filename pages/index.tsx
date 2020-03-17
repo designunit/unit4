@@ -11,10 +11,6 @@ const Page: NextPage = () => {
 
     return (
         <>
-            <Embed src={'https://tmshv.github.io/popcode/unit4_z4'} style={{
-                marginBottom: 'var(--margin-l)',
-            }} />
-
             <Title>{t('Repository')}</Title>
 
             <Gallery
