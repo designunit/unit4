@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
         return (
             <html lang='ru'>
                 <Head>
-                    <meta name="yandex-verification" content="6666982025a60ec8" />
+                    <meta name="yandex-verification" content="9248f3170aa2f950" />
                     <link rel="icon" href="/static/favicon1.png" type="image/x-icon" />
 
                     <script src={'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'} type={'text/javascript'} />
