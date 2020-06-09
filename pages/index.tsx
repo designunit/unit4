@@ -29,12 +29,12 @@ const Page: NextPage = () => {
                         text: t('repository-latlng'),
                     },
                     {
-                        href: t(`${lang}/edu_ugra`),
+                        href: t(`${lang}/ugra-edu`),
                         src: 'https://s.tmshv.com/unit4/edu_ugra-01.jpg',
                         text: t('repository-edu_ugra'),
                     },
                     {
-                        href: t(`${lang}/uray_ppi`),
+                        href: t(`${lang}/uray-ppi`),
                         src: 'https://s.tmshv.com/unit4/uray_ppi-urai.jpg',
                         text: t('repository-uray_ppi'),
                     },
@@ -59,12 +59,12 @@ const Page: NextPage = () => {
                         text: t('repository-delta'),
                     },
                     {
-                        href: t(`${lang}/application_manual`),
+                        href: t(`${lang}/application-manual`),
                         src: 'https://s.tmshv.com/unit4/app_manual-manual.jpg',
                         text: t('repository-application_manual'),
                     },
                     {
-                        href: t(`${lang}/gor_projects_spb`),
+                        href: t(`${lang}/gorprojects-spb`),
                         src: 'https://s.tmshv.com/unit4/gorprojects_spb-project3-todo-after_.jpg',
                         text: t('repository-gor_projects_spb'),
                     },
@@ -74,12 +74,12 @@ const Page: NextPage = () => {
                         text: t('repository-yoshkola'),
                     },
                     {
-                        href: t(`${lang}/boulevard_scnd`),
+                        href: t(`${lang}/scnd-boulevard`),
                         src: 'https://s.tmshv.com/unit4/boulevard_scnd-boulevard.jpg',
                         text: t('repository-boulevard_scnd'),
                     },
                     {
-                        href: t(`${lang}/park_scnd`),
+                        href: t(`${lang}/scnd-park`),
                         src: 'https://s.tmshv.com/unit4/park_scnd-park.jpg',
                         text: t('repository-park_scnd'),
                     },
@@ -94,12 +94,12 @@ const Page: NextPage = () => {
                         text: t('repository-swarm'),
                     },
                     {
-                        href: t(`${lang}/dc_scnd`),
+                        href: t(`${lang}/scnd-dc`),
                         src: 'https://s.tmshv.com/unit4/dc_scnd-dc.gif',
                         text: t('repository-dc_scnd'),
                     },
                     {
-                        href: t(`${lang}/gb_scnd`),
+                        href: t(`${lang}/scnd-gb`),
                         src: 'https://s.tmshv.com/unit4/gb_scnd-gb.jpg',
                         text: t('repository-gb_scnd'),
                     },
@@ -114,7 +114,7 @@ const Page: NextPage = () => {
                         text: t('repository-garagescreen'),
                     },
                     {
-                        href: t(`${lang}/d_scnd`),
+                        href: t(`${lang}/scnd-d`),
                         src: 'https://s.tmshv.com/unit4/d_scnd-03.jpg',
                         text: t('repository-d_scnd'),
                     },
