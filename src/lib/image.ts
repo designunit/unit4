@@ -5,6 +5,7 @@ export interface ResizeImage {
 }
 
 export function resizeImage(src: string, options: ResizeImage): string {
-    const fit = options.fit ?? 'inside'
-    return `https://images.weserv.nl/?url=${src}&w=${options.w}&h=${options.h}&fit=${fit}&n=-1`
+    return src
+    // const fit = options.fit ?? 'inside'
+    // return `https://images.weserv.nl/?url=${src}&w=${options.w}&h=${options.h}&fit=${fit}&n=-1`
 }
