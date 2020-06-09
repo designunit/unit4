@@ -65,7 +65,7 @@ const Page: NextPage = () => {
                     },
                     {
                         href: t(`${lang}/gor_projects_spb`),
-                        src: 'https://spb.city4people.ru/static/img_c4p/project3/todo-after_.jpg',
+                        src: 'https://s.tmshv.com/unit4/gorprojects_spb-project3-todo-after_.jpg',
                         text: t('repository-gor_projects_spb'),
                     },
                     {
