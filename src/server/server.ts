@@ -35,6 +35,16 @@ const redirectMap = new Map<string, string>([
     ['/repository/uray_ppi', '/uray-ppi'],
     ['/repository/volokolamsk', '/volokolamsk'],
     ['/repository/yoshkola', '/yoshkola'],
+    ['/application_manual', '/application-manual'],
+    ['/edu_ugra', '/ugra-edu'],
+    ['/gor_projects_spb', '/gorprojects-spb'],
+    ['/park_scnd', '/scnd-park'],
+    ['/boulevard_scnd', '/scnd-boulevard'],
+    ['/gb_scnd', '/scnd-gb'],
+    ['/d_scnd', '/scnd-d'],
+    ['/dc_scnd', '/scnd-dc'],
+    ['/uray_ppi', '/uray-ppi'],
+    ['/model_4', '/model4'],
 ])
 const projects = [
     '/application-manual',
