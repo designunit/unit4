@@ -29,7 +29,6 @@
     "@next/mdx": "^8.1.0",
     "@nivo/sankey": "^0.59.1",
     "@svgr/webpack": "^4.3.3",
-    "@types/lodash": "^4.14.149",
     "@zeit/next-less": "^1.0.1",
     "antd": "^3.25.3",
     "classnames": "^2.2.6",
@@ -47,6 +46,7 @@
     "react-ratio": "^0.1.5"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.149",
     "@types/classnames": "^2.2.9",
     "@types/express": "^4.17.2",
     "@types/react": "^16.9.13",
