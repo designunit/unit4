@@ -20,8 +20,6 @@ export default class MyDocument extends Document {
                     <script src={'https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js'} type={'text/javascript'} />
                     <link rel={'stylesheet'} href={'https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css'} />
 
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
                     <YMetrika
                         account={'47295549'}
                     />
