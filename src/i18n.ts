@@ -1,13 +1,15 @@
 import NextI18Next from 'next-i18next'
+import config from 'next/config'
+// const { localeSubpaths } = config.publicRuntimeConfig
+const localeSubpaths = {
+    en: 'en',
+}
 
 const instance = new NextI18Next({
     defaultLanguage: 'ru',
     otherLanguages: ['en'],
-	localePath: 'public/static/locales',
-
-    localeSubpaths: {
-        en: 'en',
-    },
+    localePath: './public/locales',
+    localeSubpaths,
 })
 
 export default instance

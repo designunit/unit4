@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import cx from 'classnames'
-import { useTranslation } from '../../i18n'
+import { useTranslation } from '@/i18n'
 
 export interface ILangButtonProps {
     style?: React.CSSProperties
@@ -23,13 +23,14 @@ export const LangButton: React.FC<ILangButtonProps> = props => {
     }, [])
 
     const switchLanguage = React.useCallback((language: string) => {
+        // onClick = {() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')}
         i18n.changeLanguage(language)
-            .then(() => {
-                setTimeout(() => {
-                    scroll(0, 0)
-                    document.location.reload()
-                }, 10)
-            })
+            // .then(() => {
+            //     setTimeout(() => {
+            //         scroll(0, 0)
+            //         document.location.reload()
+            //     }, 10)
+            // })
     }, [])
 
     return (

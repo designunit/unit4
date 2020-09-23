@@ -1,4 +1,4 @@
-import { NextPage } from 'next'
+import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
 import { Embed } from '../src/components/Embed'
 import { Gallery } from '../src/components/Gallery'
 import { Title } from '../src/components/Title'
@@ -152,6 +152,15 @@ const Page: NextPage = () => {
             />
         </>
     )
+}
+
+// export const getStaticProps: GetStaticProps = async () => {
+export const setServerSideProps: GetServerSideProps = async () => {
+    return {
+        props: {
+            namespacesRequired: ['common'],
+        }
+    }
 }
 
 export default withTranslation('common')(Page)
