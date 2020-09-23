@@ -1,5 +1,6 @@
 {
     "name": "designunit4",
+    "private": true,
     "version": "1.0.0",
     "description": "unit4 website",
     "main": "index.js",
