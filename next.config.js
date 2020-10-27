@@ -54,7 +54,6 @@ module.exports = withMdx(withCss(withLess({
         return rewrites.map(([source, destination]) => ({
             source,
             destination,
-            permanent: true,
         }))
     },
     i18n: {
