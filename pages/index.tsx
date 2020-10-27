@@ -7,139 +7,146 @@ import { useTranslation } from '@/i18n'
 
 export const createGalleryItems = (lang: string) => {
     const t = (value: string) => value
+    const h = (value: string) => value
 
-    return [
+    const items = [
         {
-            href: t(`${lang}/volokolamsk`),
+            href: '/volokolamsk',
             src: 'https://s.tmshv.com/unit4/volokolamsk-04.jpg',
-            text: t('repository-volokolamsk'),
+            text: 'repository-volokolamsk',
         },
         {
-            href: t(`${lang}/latlng`),
+            href: '/latlng',
             src: 'https://s.tmshv.com/unit4/latlng-latlng.gif',
-            text: t('repository-latlng'),
+            text: 'repository-latlng',
         },
         {
-            href: t(`${lang}/ugra-edu`),
+            href: '/ugra-edu',
             src: 'https://s.tmshv.com/unit4/edu_ugra-01.jpg',
-            text: t('repository-edu_ugra'),
+            text: 'repository-edu_ugra',
         },
         {
-            href: t(`${lang}/uray-ppi`),
+            href: '/uray-ppi',
             src: 'https://s.tmshv.com/unit4/uray_ppi-urai.jpg',
-            text: t('repository-uray_ppi'),
+            text: 'repository-uray_ppi',
         },
         {
-            href: t(`${lang}/heterotopia`),
+            href: '/heterotopia',
             src: 'https://s.tmshv.com/unit4/heterotopia-heterotopia.gif',
-            text: t('repository-heterotopia'),
+            text: 'repository-heterotopia',
         },
         {
-            href: t(`${lang}/oymyakon`),
+            href: '/oymyakon',
             src: 'https://s.tmshv.com/unit4/oymyakon-viz_gulag.jpg',
-            text: t('repository-oymyakon'),
+            text: 'repository-oymyakon',
         },
         {
-            href: t(`${lang}/hovrinka`),
+            href: '/hovrinka',
             src: 'https://s.tmshv.com/unit4/hovrinka-hovrinka.jpg',
-            text: t('repository-hovrinka'),
+            text: 'repository-hovrinka',
         },
         {
-            href: t(`${lang}/delta`),
+            href: '/delta',
             src: 'https://s.tmshv.com/unit4/delta-delta.jpg',
-            text: t('repository-delta'),
+            text: 'repository-delta',
         },
         {
-            href: t(`${lang}/application-manual`),
+            href: '/application-manual',
             src: 'https://s.tmshv.com/unit4/app_manual-manual.jpg',
-            text: t('repository-application_manual'),
+            text: 'repository-application_manual',
         },
         {
-            href: t(`${lang}/gorprojects-spb`),
+            href: '/gorprojects-spb',
             src: 'https://s.tmshv.com/unit4/gorprojects_spb-project3-todo-after_.jpg',
-            text: t('repository-gor_projects_spb'),
+            text: 'repository-gor_projects_spb',
         },
         {
-            href: t(`${lang}/yoshkola`),
+            href: '/yoshkola',
             src: 'https://s.tmshv.com/unit4/yoshkola-04.jpg',
-            text: t('repository-yoshkola'),
+            text: 'repository-yoshkola',
         },
         {
-            href: t(`${lang}/scnd-boulevard`),
+            href: '/scnd-boulevard',
             src: 'https://s.tmshv.com/unit4/boulevard_scnd-boulevard.jpg',
-            text: t('repository-boulevard_scnd'),
+            text: 'repository-boulevard_scnd',
         },
         {
-            href: t(`${lang}/scnd-park`),
+            href: '/scnd-park',
             src: 'https://s.tmshv.com/unit4/park_scnd-park.jpg',
-            text: t('repository-park_scnd'),
+            text: 'repository-park_scnd',
         },
         {
-            href: t(`${lang}/shelter`),
+            href: '/shelter',
             src: 'https://s.tmshv.com/unit4/shelter-01.jpg',
-            text: t('repository-shelter'),
+            text: 'repository-shelter',
         },
         {
-            href: t(`${lang}/swarm`),
+            href: '/swarm',
             src: 'https://s.tmshv.com/unit4/swarm-swarm.jpg',
-            text: t('repository-swarm'),
+            text: 'repository-swarm',
         },
         {
-            href: t(`${lang}/scnd-dc`),
+            href: '/scnd-dc',
             src: 'https://s.tmshv.com/unit4/dc_scnd-dc.gif',
-            text: t('repository-dc_scnd'),
+            text: 'repository-dc_scnd',
         },
         {
-            href: t(`${lang}/scnd-gb`),
+            href: '/scnd-gb',
             src: 'https://s.tmshv.com/unit4/gb_scnd-gb.jpg',
-            text: t('repository-gb_scnd'),
+            text: 'repository-gb_scnd',
         },
         {
-            href: t(`${lang}/samarapark`),
+            href: '/samarapark',
             src: 'https://s.tmshv.com/unit4/samarapark-10.jpg',
-            text: t('repository-samarapark'),
+            text: 'repository-samarapark',
         },
         {
-            href: t(`${lang}/garagescreen`),
+            href: '/garagescreen',
             src: 'https://s.tmshv.com/unit4/garagescreen-02.gif',
-            text: t('repository-garagescreen'),
+            text: 'repository-garagescreen',
         },
         {
-            href: t(`${lang}/scnd-d`),
+            href: '/scnd-d',
             src: 'https://s.tmshv.com/unit4/d_scnd-03.jpg',
-            text: t('repository-d_scnd'),
+            text: 'repository-d_scnd',
         },
         {
-            href: t(`${lang}/krvostok`),
+            href: '/krvostok',
             src: 'https://s.tmshv.com/unit4/krvostok-01.jpg',
-            text: t('repository-krvostok'),
+            text: 'repository-krvostok',
         },
         {
-            href: t(`${lang}/trollgardens`),
+            href: '/trollgardens',
             src: 'https://s.tmshv.com/unit4/trollgardens-05.jpg',
-            text: t('repository-trollgardens'),
+            text: 'repository-trollgardens',
         },
         {
-            href: t(`${lang}/chistopol2`),
+            href: '/chistopol2',
             src: 'https://s.tmshv.com/unit4/chistopol2-07.jpg',
-            text: t('repository-chistopol2'),
+            text: 'repository-chistopol2',
         },
         {
-            href: t(`${lang}/kemb`),
+            href: '/kemb',
             src: 'https://s.tmshv.com/unit4/kemb-01.jpg',
-            text: t('repository-kemb'),
+            text: 'repository-kemb',
         },
         {
-            href: t(`${lang}/model4`),
+            href: '/model4',
             src: 'https://s.tmshv.com/unit4/model4-01.jpg',
-            text: t('repository-model4'),
+            text: 'repository-model4',
         },
         {
-            href: t(`${lang}/chistopol`),
+            href: '/chistopol',
             src: 'https://s.tmshv.com/unit4/chistopol-02.jpg',
-            text: t('repository-chistopol'),
+            text: 'repository-chistopol',
         },
     ]
+
+    return items.map(({ href, text, ...other }) => ({
+        ...other,
+        href: h(href),
+        text: t(text),
+    }))
 }
 
 const Page: NextPage = () => {
