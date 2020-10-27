@@ -1,4 +1,7 @@
 import { SwitchImage } from './components/SwitchImage'
+import { Image } from './components/Image'
+import { ImageSet } from './components/ImageSet'
+import { Meta } from './components/Meta'
 import { TextBlock } from './components/TextBlock'
 import { Title } from './components/Title'
 import { UnitHighlight } from './components/UnitHighlight'
@@ -10,7 +13,11 @@ export const components = {
     //     </div>
     // )
 
+    Title,
     SwitchImage,
+    Image,
+    ImageSet,
+    Meta,
     TextBlock,
     UnitHighlight,
 }
