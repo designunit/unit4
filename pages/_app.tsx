@@ -7,8 +7,18 @@ import '@/i18n'
 
 import 'antd/dist/antd.less'
 import '../src/style.css'
+import { useRouter } from 'next/router'
+import { useTranslation } from 'react-i18next'
+import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
+    const router = useRouter()
+    const { i18n } = useTranslation()
+
+    useEffect(() => {
+        i18n.changeLanguage(router.locale)
+    }, [router.locale])
+
     const isMdx = Component.hasOwnProperty('isMDXComponent') ? Component['isMDXComponent'] : false
     const content = isMdx ? (
         <Article>

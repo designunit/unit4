@@ -1,7 +1,9 @@
 {
-    "translation": {
+    "locale": {
         "ru": "Русский",
-        "en": "English",
+        "en": "English"
+    },
+    "translation": {
         "Repository": "ПРОЕКТЫ",
         "highlight-volokolamsk": "МОСКОВСКИЙ ТРАКТ ВОЛОКОЛАМСК",
         "highlight-latlng": "LATL.NG облачная ГИС",

@@ -1,28 +1,16 @@
-import * as React from 'react'
-
 import cx from 'classnames'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-
-function useLangHrefs() {
-    const router = useRouter()
-    const href = router.asPath.replace(/^\/en/, '')
-
-    return [href, `/en${href}`]
-}
 
 export interface ILangButtonProps {
     style?: React.CSSProperties
 }
 
 export const LangButton: React.FC<ILangButtonProps> = props => {
-    const [ru, en] = useLangHrefs()
-    const { t, i18n } = useTranslation()
-    const lang = i18n.language
-
-    const isCurrentRu = lang === 'ru'
-    const isCurrentEn = lang === 'en'
+    const router = useRouter()
+    const { t } = useTranslation('locale')
+    const locales = router.locales ?? []
 
     return (
         <div style={props.style}>
@@ -58,17 +46,16 @@ export const LangButton: React.FC<ILangButtonProps> = props => {
                 }
             `}</style>
 
-            <Link href={ru}>
-                <a className={cx({ active: isCurrentRu })}>
-                    {t('ru')}
-                </a>
-            </Link>
-
-            <Link href={en}>
-                <a className={cx({ active: isCurrentEn })}>
-                    {t('en')}
-                </a>
-            </Link>
+            {locales.map(locale => router.locale === locale
+                ? (
+                    <span>{t(locale)}</span>
+                ) : (
+                    <Link href={router.pathname} locale={locale}>
+                        <a className={cx({ active: router.locale === locale })}>
+                            {t(locale)}
+                        </a>
+                    </Link>
+                ))}
         </div>
     )
 }

@@ -1,7 +1,9 @@
 {
-    "translation": {
+    "locale": {
         "ru": "Русский",
-        "en": "English",
+        "en": "English"
+    },
+    "translation": {
         "Repository": "PROJECTS",
         "highlight-volokolamsk": "MOSCOW TRACT VOLOKOLAMSK",
         "highlight-latlng": "LATL.NG cloud GIS",
