@@ -5,7 +5,7 @@
     "description": "unit4 website",
     "main": "index.js",
     "scripts": {
-        "dev": "ts-node --project server.tsconfig.json src/server/server.ts",
+        "dev": "next dev",
         "export": "next export",
         "build": "next build",
         "start": "NODE_ENV=production node build/server/server.js",
