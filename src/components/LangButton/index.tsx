@@ -1,9 +1,9 @@
 import * as React from 'react'
 
 import cx from 'classnames'
-import { useTranslation } from '@/i18n'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 
 function useLangHrefs() {
     const router = useRouter()

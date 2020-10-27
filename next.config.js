@@ -1,12 +1,8 @@
 const withCss = require('@zeit/next-css')
 const withLess = require('@zeit/next-less')
 const withMdx = require('@next/mdx')()
-const { nextI18NextRewrites } = require('next-i18next/rewrites')
 
 const production = process.env.NODE_ENV === 'production';
-const localeSubpaths = {
-    en: 'en',
-}
 
 const themeVariables = {
     '@font-family': `'Roboto', sans-serif`,
@@ -86,8 +82,9 @@ module.exports = withMdx(withCss(withLess({
 
     //     return nextI18NextRewrites(localeSubpaths)
     // },
-    publicRuntimeConfig: {
-        localeSubpaths,
+    i18n: {
+        locales: ['ru', 'en'],
+        defaultLocale: 'ru'
     },
     lessLoaderOptions: {
         javascriptEnabled: true,

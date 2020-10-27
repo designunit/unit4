@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { LinkActive } from '../LinkActive'
 
@@ -8,6 +8,8 @@ export interface IMenuItemProps {
 }
 
 export const MenuItem: React.FC<IMenuItemProps> = ({ href, text }) => {
+    const { t } = useTranslation('menu')
+
     return (
         <li>
             <style jsx>{`
@@ -45,11 +47,11 @@ export const MenuItem: React.FC<IMenuItemProps> = ({ href, text }) => {
                 {active => active
                     ? (
                         <span className='link-body active'>
-                            {text}
+                            {t(text)}
                         </span>
                     ) : (
                         <a className='link-body'>
-                            {text}
+                            {t(text)}
                         </a>
                     )
                 }

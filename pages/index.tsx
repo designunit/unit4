@@ -2,13 +2,10 @@ import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
 import { Embed } from '../src/components/Embed'
 import { Gallery } from '../src/components/Gallery'
 import { Title } from '../src/components/Title'
-import { useLangUrlPrefix } from '../src/hooks/useLangUrlPrefix'
-import { useTranslation } from '@/i18n'
+import { useRouter } from 'next/router'
+import { useTranslation } from 'react-i18next'
 
 export const createGalleryItems = (lang: string) => {
-    const t = (value: string) => value
-    const h = (value: string) => value
-
     const items = [
         {
             href: '/volokolamsk',
@@ -142,18 +139,20 @@ export const createGalleryItems = (lang: string) => {
         },
     ]
 
-    return items.map(({ href, text, ...other }) => ({
-        ...other,
-        href: h(href),
-        text: t(text),
-    }))
+    return items
 }
 
 const Page: NextPage = () => {
+    const router = useRouter()
     const { t } = useTranslation()
-    // const lang = useLangUrlPrefix()
-    const lang = ''
-    const items = createGalleryItems(lang)
+    const items = createGalleryItems(router.locale)
+
+    // useEffect(() => {
+    //     i18n.changeLanguage(router.locale, (err, t) => {
+    //         if (err) return console.log('something went wrong loading', err);
+    //         // -> same as i18next.t
+    //     });
+    // }, [router.locale])
 
     return (
         <>
