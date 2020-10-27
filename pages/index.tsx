@@ -143,16 +143,8 @@ export const createGalleryItems = (lang: string) => {
 }
 
 const Page: NextPage = () => {
-    const router = useRouter()
     const { t } = useTranslation()
     const items = createGalleryItems(router.locale)
-
-    // useEffect(() => {
-    //     i18n.changeLanguage(router.locale, (err, t) => {
-    //         if (err) return console.log('something went wrong loading', err);
-    //         // -> same as i18next.t
-    //     });
-    // }, [router.locale])
 
     return (
         <>
