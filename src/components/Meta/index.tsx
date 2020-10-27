@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useLocale } from '../../hooks/useLocale'
+import { useRouter } from 'next/router'
 import { resizeImage } from '../../lib/image'
 
 export interface MetaProps {
@@ -11,7 +11,7 @@ export interface MetaProps {
 }
 
 export const Meta: React.SFC<MetaProps> = ({ type = 'website', ...props }) => {
-    const locale = useLocale()
+    const { locale } = useRouter()
     const image = resizeImage(props.image, {
         fit: 'cover',
         h: 1200,
