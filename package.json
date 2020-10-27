@@ -37,7 +37,6 @@
         "less": "^3.12.2",
         "lodash": "^4.17.20",
         "next": "^10.0.0",
-        "next-i18next": "^6.0.3",
         "react": "^17.0.1",
         "react-compare-image": "^1.4.1",
         "react-dom": "^17.0.1",
