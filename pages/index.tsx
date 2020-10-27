@@ -7,7 +7,8 @@ import { useTranslation, withTranslation } from '../src/i18n'
 
 const Page: NextPage = () => {
     const { t } = useTranslation()
-    const lang = useLangUrlPrefix()
+    // const lang = useLangUrlPrefix()
+    const lang = ''
 
     return (
         <>
@@ -155,12 +156,13 @@ const Page: NextPage = () => {
 }
 
 // export const getStaticProps: GetStaticProps = async () => {
-export const setServerSideProps: GetServerSideProps = async () => {
-    return {
-        props: {
-            namespacesRequired: ['common'],
-        }
-    }
-}
+// export const setServerSideProps: GetServerSideProps = async () => {
+//     return {
+//         props: {
+//             namespacesRequired: ['common'],
+//         }
+//     }
+// }
 
-export default withTranslation('common')(Page)
+// export default withTranslation('common')(Page)
+export default Page

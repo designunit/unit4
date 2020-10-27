@@ -2,36 +2,27 @@ import * as React from 'react'
 
 import cx from 'classnames'
 import { useTranslation } from '@/i18n'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+
+function useLangHrefs() {
+    const router = useRouter()
+    const href = router.asPath.replace(/^\/en/, '')
+
+    return [href, `/en${href}`]
+}
 
 export interface ILangButtonProps {
     style?: React.CSSProperties
 }
 
 export const LangButton: React.FC<ILangButtonProps> = props => {
+    const [ru, en] = useLangHrefs()
     const { t, i18n } = useTranslation()
     const lang = i18n.language
 
     const isCurrentRu = lang === 'ru'
     const isCurrentEn = lang === 'en'
-
-    const onClickRu = React.useCallback(() => {
-        switchLanguage('ru')
-    }, [])
-
-    const onClickEn = React.useCallback(() => {
-        switchLanguage('en')
-    }, [])
-
-    const switchLanguage = React.useCallback((language: string) => {
-        // onClick = {() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')}
-        i18n.changeLanguage(language)
-            // .then(() => {
-            //     setTimeout(() => {
-            //         scroll(0, 0)
-            //         document.location.reload()
-            //     }, 10)
-            // })
-    }, [])
 
     return (
         <div style={props.style}>
@@ -67,13 +58,17 @@ export const LangButton: React.FC<ILangButtonProps> = props => {
                 }
             `}</style>
 
-            <button className={cx({ active: isCurrentRu })} onClick={onClickRu}>
-                {t('ru')}
-            </button>
+            <Link href={ru}>
+                <a className={cx({ active: isCurrentRu })}>
+                    {t('ru')}
+                </a>
+            </Link>
 
-            <button className={cx({ active: isCurrentEn })} onClick={onClickEn}>
-                {t('en')}
-            </button>
+            <Link href={en}>
+                <a className={cx({ active: isCurrentEn })}>
+                    {t('en')}
+                </a>
+            </Link>
         </div>
     )
 }

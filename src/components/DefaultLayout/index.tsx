@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 import className from 'classnames'
 import Head from 'next/head'
 import { useLangUrlPrefix } from '../../hooks/useLangUrlPrefix'
@@ -9,6 +7,8 @@ import { Logo } from '../Logo'
 import { Menu } from '../Menu'
 
 import './styles.css'
+import { LangContext } from '@/context/lang'
+import { useContext } from 'react'
 
 export interface IDefaultLayoutProps {
     showHeader: boolean
@@ -17,8 +17,11 @@ export interface IDefaultLayoutProps {
 }
 
 export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
-    const { t } = useTranslation()
+    // const { t } = useTranslation()
     const langPrefix = useLangUrlPrefix()
+    const l = useContext(LangContext)
+
+    const t = (key: string) => l.translations.has(key) ? l.translations.get(key) : key
 
     return (
         <div className={className('layout', {
