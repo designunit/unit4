@@ -4,6 +4,8 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { YMetrika } from '@/components/YMetrika'
 import '@/i18n'
+import { MDXProvider } from '@mdx-js/react'
+import { components } from '@/mdx'
 
 import 'antd/dist/antd.less'
 import '../src/style.css'
@@ -29,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         )
 
     return (
-        <>
+        <MDXProvider components={components}>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/static/favicon1.png" type="image/x-icon" />
@@ -52,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             >
                 {content}
             </DefaultLayout >
-        </>
+        </MDXProvider>
     )
 }
 
