@@ -12,6 +12,7 @@ const themeVariables = {
 
 module.exports = withMdx(withCss(withLess({
     rewrites: async () => {
+    redirects: async () => {
         const rewrites = [
             ['/repository/application_manual', '/application-manual'],
             ['/repository/chistopol', '/chistopol'],
@@ -54,6 +55,7 @@ module.exports = withMdx(withCss(withLess({
         return rewrites.map(([source, destination]) => ({
             source,
             destination,
+            permanent: true,
         }))
     },
     i18n: {
