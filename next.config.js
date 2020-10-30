@@ -59,6 +59,7 @@ module.exports = withMdx(withCss(withLess({
         }))
     },
     i18n: {
+        localeDetection: false,
         locales: ['ru', 'en'],
         defaultLocale: 'ru'
     },
