@@ -44,7 +44,9 @@
         "react-i18next": "^11.7.3",
         "react-inlinesvg": "^0.8.4",
         "react-media": "^1.10.0",
-        "react-ratio": "^0.1.5"
+        "react-ratio": "^0.1.5",
+        "remark": "^13.0.0",
+        "remark-html": "^13.0.1"
     },
     "devDependencies": {
         "@types/classnames": "^2.2.10",
