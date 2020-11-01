@@ -230,10 +230,6 @@ const Page: NextPage<Props> = props => {
                     return null
                 })}
             </article>
-
-            <pre>
-                {JSON.stringify(props, null, 4)}
-            </pre>
         </div>
     )
 }
