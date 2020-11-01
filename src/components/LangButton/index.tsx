@@ -48,9 +48,9 @@ export const LangButton: React.FC<ILangButtonProps> = props => {
 
             {locales.map(locale => router.locale === locale
                 ? (
-                    <span>{t(locale)}</span>
+                    <span key={locale}>{t(locale)}</span>
                 ) : (
-                    <Link href={router.pathname} locale={locale}>
+                    <Link key={locale} href={router.pathname} locale={locale}>
                         <a className={cx({ active: router.locale === locale })}>
                             {t(locale)}
                         </a>
