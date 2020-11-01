@@ -26,6 +26,7 @@ export interface IImageSetProps {
     layout?: IImageSetLayout | {
         slider: IFotoramaOptions,
     }
+    style?: React.CSSProperties
 }
 
 export const ImageSet: React.FC<IImageSetProps> = ({ size = 1500, ...props }) => {
@@ -41,6 +42,7 @@ export const ImageSet: React.FC<IImageSetProps> = ({ size = 1500, ...props }) =>
             <Fotorama
                 items={items}
                 options={props.layout.slider}
+                style={props.style}
             />
         )
     }
@@ -55,6 +57,7 @@ export const ImageSet: React.FC<IImageSetProps> = ({ size = 1500, ...props }) =>
         <ImageColumnsLayout
             items={items.map(getImage)}
             span={span}
+            style={props.style}
         />
     )
 }
