@@ -5,6 +5,7 @@ import { GetServerSideProps, NextPage } from 'next'
 import ErrorPage from 'next/error'
 import remark from 'remark'
 import html from 'remark-html'
+import { Meta } from '@/components/Meta'
 
 type ImageFormatDto = {
     url: string
@@ -90,7 +91,8 @@ function ensureSlash(value: string): string {
 }
 
 async function getPage(data: any, locale: string) {
-    let { content, excerpt, slug } = data
+    let { content, excerpt, cover, slug } = data
+    cover = one(cover)
     const title = getLocalizedValue(data, locale, 'title')
     content = await getPageContent(content, locale)
 
@@ -98,6 +100,7 @@ async function getPage(data: any, locale: string) {
         content,
         excerpt,
         title,
+        cover,
     }
 }
 
@@ -136,7 +139,10 @@ function getLocalizedValue(data: any, locale: string, field: string): any {
 
 type Props = {
     title: string
+    excerpt: string
     data: any
+    cover: ImageDto
+    slug: string
 }
 
 const Page: NextPage<Props> = props => {
@@ -146,10 +152,19 @@ const Page: NextPage<Props> = props => {
         )
     }
 
+    const url = `https://unit4.io${props.slug}`
+
     return (
         <div>
             <article>
                 <Title>{props.title}</Title>
+                <Meta
+                    title={props.title}
+                    description={props.excerpt}
+                    image={props.cover.formats.large.url}
+                    // image={''}
+                    url={url}
+                />
 
                 {props.data.content.map((item: ComponentDto, i) => {
                     const id = i // todo plz use item.id
@@ -231,6 +246,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
             props: {
                 title: '',
                 data: null,
+                excerpt: null,
+                slug: null,
+                cover: null,
             }
         }
     }
@@ -243,6 +261,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
                 props: {
                     title: '',
                     data: null,
+                    excerpt: null,
+                    slug,
+                    cover: null,
                 }
             }
         }
@@ -252,6 +273,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
                 props: {
                     title: '',
                     data: null,
+                    excerpt: null,
+                    slug,
+                    cover: null,
                 }
             }
         }
@@ -262,6 +286,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
             props: {
                 data,
                 title: data.title,
+                excerpt: data.excerpt,
+                slug,
+                cover: data.cover,
             }
         }
     } catch (error) {
@@ -269,6 +296,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
             props: {
                 title: '',
                 data: null,
+                excerpt: null,
+                slug,
+                cover: null,
             }
         }
     }
