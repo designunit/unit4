@@ -1,22 +1,17 @@
-import * as React from 'react'
-
-import { WithRouterProps } from 'next/dist/client/with-router'
 import Link, { LinkProps } from 'next/link'
-import { withRouter } from 'next/router'
+import { useRouter } from 'next/router'
 
-export interface ILinkActiveProps {
+type Props = LinkProps & {
     children: (active: boolean) => React.ReactNode
 }
 
-type Props = LinkProps & WithRouterProps & ILinkActiveProps
-
-export const LinkActive = withRouter((props: Props) => {
-    const { router, children } = props
+export const LinkActive: React.FC<Props> = props => {
+    const router = useRouter()
     const href = props.href || props.as
 
     return (
         <Link {...props}>
-            {children(href === router.asPath)}
+            {props.children(href === router.asPath)}
         </Link>
     )
-})
+}

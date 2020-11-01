@@ -1,22 +1,21 @@
-import NextI18Next from 'next-i18next'
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
-const instance = new NextI18Next({
-    defaultLanguage: 'ru',
-    otherLanguages: ['en'],
-	localePath: 'public/static/locales',
+import ru from './ru.json'
+import en from './en.json'
 
-    localeSubpaths: {
-        en: 'en',
-    },
-})
+i18n
+    .use(initReactI18next) // passes i18n down to react-i18next
+    .init({
+        resources: {
+            ru,
+            en,
+        },
+        defaultNS: 'translation',
+        // lng: "en",
+        // fallbackLng: 'ru',
 
-export default instance
-
-export const {
-    appWithTranslation,
-    withTranslation,
-    useTranslation,
-    i18n,
-} = instance
-
-export const defaultLanguage = instance.config.defaultLanguage
+        // interpolation: {
+        // escapeValue: false
+        // }
+    })

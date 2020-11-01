@@ -1,0 +1,47 @@
+{
+    "locale": {
+        "ru": "Русский",
+        "en": "English"
+    },
+    "translation": {
+        "Repository": "PROJECTS",
+        "highlight-volokolamsk": "MOSCOW TRACT VOLOKOLAMSK",
+        "highlight-latlng": "LATL.NG cloud GIS",
+        "highlight-edu_ugra": "Training seminar for state and municipal services in Khanty-Mansi Autonomous Okrug",
+        "highlight-delta": "Landscape design concept for Comcity residential complex in Moscow"
+    },
+    "projects": {
+        "volokolamsk": "MOSCOW TRACT VOLOKOLAMSK",
+        "latlng": "LATL.NG cloud GIS",
+        "edu_ugra": "TRAINING SEMINAR for state and municipal services",
+        "uray_ppi": "STUDY OF URAY CITY YUGRA",
+        "heterotopia": "HETEROTOPY OF MODERNITY",
+        "oymyakon": "OYMYAKON pole of modernity",
+        "hovrinka": "HOVRINKA municipal sociocultural center",
+        "delta": "RESIDENTIAL COMPLEX MOSCOW landscape design",
+        "application_manual": "GUIDELINES YUGRA",
+        "gor_projects_spb": "URBAN DESIGN CONCEPTS spb.city4people.ru",
+        "yoshkola": "IT SCHOOL YOSHKAR-OLA",
+        "boulevard_scnd": "СENTRAL PROMENADE SCANDINAVIA landscape design",
+        "park_scnd": "PARK SCANDINAVIA landscape design",
+        "shelter": "NEST WIND SHELTER installation",
+        "swarm": "SWARM pedestrian flows modeling",
+        "dc_scnd": "DESIGN CODE OF URBAN OPEN SPACES",
+        "gb_scnd": "CONCEPT OF URBAN OPEN SPACES",
+        "samarapark": "PARK ZAGORODNIY SAMARA competition",
+        "garagescreen": "GARAGE SCREEN competititon",
+        "d_scnd": "YARDS of SCANDINAVIA landscape design",
+        "krvostok": "KRASNY VOSTOK FACTORY concept of urban spaces",
+        "trollgardens": "TROLL GARDENS public spaces design competition",
+        "chistopol2": "PHASE #2 BOULEVARD Chistopol Tatarstan",
+        "kemb": "STUDY OF KARPOVKA EMBANKMENT",
+        "model4": "MODEL :: 4 product line ",
+        "chistopol": "PHASE #1 BOULEVARD Chistopol Tatarstan"
+    },
+    "menu": {
+        "about": "about",
+        "projects": "projects",
+        "partners": "partners",
+        "contacts": "contacts"
+    }
+}
