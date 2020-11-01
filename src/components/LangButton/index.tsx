@@ -19,39 +19,44 @@ export const LangButton: React.FC<ILangButtonProps> = props => {
                     box-sizing: border-box;
                 }
 
-                button {
-                    cursor: pointer;
+                .button {
+                    text-decoration: none;
 
-                    border: 1px solid var(--color-text);
+                    border: 1px solid rgba(0,0,0,0)
                     border-radius: 0;
                     margin: 0;
-                    padding: 2px 10px;
+                    padding: 5px 10px;
 
                     color: var(--color-text);
                     background-color: var(--color-background);
                 }
 
-                button:first-child {
+                .button:first-child {
                     border-right: none;
                 }
 
-                button:last-child {
+                .button:last-child {
                     border-left: none;
                 }
 
-                button.active {
-                    border-color: var(--link-color-active);
-                    color: var(--color-text);
+                .button.active:hover {
                     background-color: var(--link-color-active);
+                }
+
+                .button.active {
+                    cursor: pointer;
+                    color: var(--color-text-opposite);
+                    border-color: var(--link-color-active);
+                    background-color: var(--color-background-opposite);
                 }
             `}</style>
 
             {locales.map(locale => router.locale === locale
                 ? (
-                    <span key={locale}>{t(locale)}</span>
+                    <span className={'button'} key={locale}>{t(locale)}</span>
                 ) : (
                     <Link key={locale} href={router.pathname} locale={locale}>
-                        <a className={cx({ active: router.locale === locale })}>
+                        <a className={cx('button', 'active')}>
                             {t(locale)}
                         </a>
                     </Link>
