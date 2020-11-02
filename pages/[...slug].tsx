@@ -10,10 +10,28 @@ import { SwitchImage } from '@/components/SwitchImage'
 import { Embed } from '@/components/Embed'
 import { WideBlock } from '@/components/WideBlock'
 
-function getPathParts(path: string): string[]{
+function getPathParts(path: string): string[] {
     return path
         .split('/')
         .filter(Boolean)
+}
+
+async function apiGetPage(slug: string, locale: string): Promise<any> {
+    const url = `https://unit.tmshv.com/unit-4-pages?slug=${slug}`
+    try {
+        const res = await fetch(url)
+        if (!res.ok) {
+            return null
+        }
+        let data = await res.json()
+        if (data.length === 0) {
+            return null
+        }
+
+        return getPage(data[0], locale)
+    } catch (error) {
+        return null
+    }
 }
 
 async function apiGetPaths(): Promise<string[]> {
@@ -379,44 +397,8 @@ export const getStaticProps: GetStaticProps<Props> = async ctx => {
     }
     slug = ensureSlash(one(slug))
 
-    try {
-        const res = await fetch(`https://unit.tmshv.com/unit-4-pages?slug=${slug}`)
-        if (!res.ok) {
-            return {
-                props: {
-                    title: '',
-                    data: null,
-                    excerpt: null,
-                    slug,
-                    cover: null,
-                }
-            }
-        }
-        let data = await res.json()
-        if (data.length === 0) {
-            return {
-                props: {
-                    title: '',
-                    data: null,
-                    excerpt: null,
-                    slug,
-                    cover: null,
-                }
-            }
-        }
-
-        data = await getPage(data[0], locale)
-
-        return {
-            props: {
-                data,
-                title: data.title,
-                excerpt: data.excerpt,
-                slug,
-                cover: data.cover,
-            }
-        }
-    } catch (error) {
+    const data = await apiGetPage(slug, locale)
+    if (!data) {
         return {
             props: {
                 title: '',
@@ -425,6 +407,16 @@ export const getStaticProps: GetStaticProps<Props> = async ctx => {
                 slug,
                 cover: null,
             }
+        }
+    }
+
+    return {
+        props: {
+            data,
+            title: data.title,
+            excerpt: data.excerpt,
+            slug,
+            cover: data.cover,
         }
     }
 }
