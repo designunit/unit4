@@ -505,7 +505,7 @@ export const getStaticProps: GetStaticProps<Props> = async ctx => {
     }
 
     return {
-        revalidate: 1,
+        revalidate: 30,
         props: {
             data,
             title: data.title,
