@@ -136,13 +136,13 @@ article {
     margin-bottom: 50px;
 }
 
-article p {
+article .article-fragment p {
     padding: var(--content-padding);
     margin-bottom: 2em;
     hyphens: auto;
 }
 
-article ul {
+article .article-fragment ul {
     list-style: none;
     margin-left: 0;
     padding-left: 1em;
@@ -151,7 +151,7 @@ article ul {
     margin-bottom: 2em;
 }
 
-article ul li:before {
+article .article-fragment ul li:before {
     content: '/';
     display: block;
     float: left;
@@ -160,7 +160,7 @@ article ul li:before {
     font-weight: bolder;
 }
 
-article li p {
+article .article-fragment li p {
     margin-bottom: 0.5em;
 }
 

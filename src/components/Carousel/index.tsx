@@ -1,17 +1,34 @@
 import { ImageProps } from '@/types'
-import { Fotorama, IFotoramaOptions } from '../Fotorama'
+import Image from 'next/image'
+import { Carousel as Slider } from 'antd'
 
 export type CarouselProps = {
     size?: number
     images: ImageProps[]
-    slider: IFotoramaOptions,
     style?: React.CSSProperties
+
+    transition: 'slide' | 'crossfade'
+    // autoplay?: boolean | number
+    // allowfullscreen?: boolean
 }
 
+const effect = new Map([
+    ['crossfade', 'fade'],
+    ['slide', 'scrollx'],
+])
+
 export const Carousel: React.FC<CarouselProps> = props => (
-    <Fotorama
-        items={props.images}
-        options={props.slider}
-        style={props.style}
-    />
+    <Slider
+        autoplay={true}
+        effect={effect.get(props.transition) as any}
+    >
+        {props.images.map((x, i) => (
+            <Image
+                key={i}
+                src={x.src}
+                width={x.width}
+                height={x.height}
+            />
+        ))}
+    </Slider>
 )

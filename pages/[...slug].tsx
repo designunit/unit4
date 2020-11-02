@@ -357,6 +357,7 @@ const Page: NextPage<Props> = props => {
                         return (
                             <div
                                 key={id}
+                                className={'article-fragment'}
                                 dangerouslySetInnerHTML={{ __html: item.text }} style={{
                                     // marginBottom: '16px',
                                 }}
@@ -402,10 +403,7 @@ const Page: NextPage<Props> = props => {
                             <Carousel
                                 key={id}
                                 images={items}
-                                slider={{
-                                    transition: item.switchType as any,
-                                    autoplay: 2000,
-                                }}
+                                transition={item.switchType as any}
                             />
                         )
                     }
