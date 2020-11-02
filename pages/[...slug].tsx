@@ -116,6 +116,7 @@ type ComponentTwoImagesDto = {
     component: 'unit-4.two-images'
     image1: ImageDto
     image2: ImageDto
+    ratio: number
 }
 
 type ComponentSwitchImageDto = {
@@ -336,11 +337,17 @@ const Page: NextPage<Props> = props => {
                             item.image1.url,
                             item.image2.url,
                         ]
+                        const l = Math.round(24 * item.ratio)
+                        const r = 24 - l
+                        const layout = {
+                            span: [l, r],
+                        }
 
                         return (
                             <ImageSet
                                 key={id}
                                 items={links}
+                                layout={layout}
                                 style={{
                                     // marginBottom: '16px',
                                 }}
