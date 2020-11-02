@@ -10,6 +10,7 @@ import { SwitchImage } from '@/components/SwitchImage'
 import { Embed } from '@/components/Embed'
 import { UnitHighlight } from '@/components/UnitHighlight'
 import { WideBlock } from '@/components/WideBlock'
+import CompareImage from 'react-compare-image'
 
 function getPathParts(path: string): string[] {
     return path
@@ -172,12 +173,10 @@ type ComponentSwitchImageDto = {
 
 type ComponentCompareDto = {
     id: number
-    component: 'unit-4.switch-image'
-    type: string
-    image1: ImageDto
-    image2: ImageDto
-    label1: string
-    label2: string
+    component: 'unit-4.compare'
+    before: ImageDto
+    after: ImageDto
+    startRatio: number
 }
 
 type ComponentEmbedDto = {
@@ -194,6 +193,7 @@ type ComponentDto =
     | ComponentSwitchImageDto
     | ComponentEmbedDto
     | ComponentLinkBlockDto
+    | ComponentCompareDto
 
 async function markdownToHtml(markdown: string) {
     const result = await remark()
@@ -411,6 +411,17 @@ const Page: NextPage<Props> = props => {
                                 style={{
                                     // marginBottom: '16px',
                                 }}
+                            />
+                        )
+                    }
+
+                    if (item.component === 'unit-4.compare') {
+                        return (
+                            <CompareImage
+                                key={id}
+                                sliderPositionPercentage={0.75}
+                                leftImage={item.after.url}
+                                rightImage={item.before.url}
                             />
                         )
                     }
