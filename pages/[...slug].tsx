@@ -392,12 +392,16 @@ const Page: NextPage<Props> = props => {
                     }
 
                     if (item.component === 'unit-4.carousel') {
-                        const items = item.media.map(item => item.url)
+                        const items = item.media.map(item => ({
+                            src: item.url,
+                            width: item.width,
+                            height: item.height,
+                        }))
 
                         return (
                             <Carousel
                                 key={id}
-                                items={items}
+                                images={items}
                                 slider={{
                                     transition: item.switchType as any,
                                     autoplay: 2000,
