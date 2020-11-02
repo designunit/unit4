@@ -82,6 +82,7 @@ type ImageDto = {
     provider_metadata?: object
     created_at: string
     updated_at: string
+    caption?: string
     formats: {
         thumbnail: ImageFormatDto,
         large: ImageFormatDto,
