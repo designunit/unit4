@@ -6,10 +6,11 @@ import { IImageProps, Image } from '../Image'
 export interface IImageSetProps {
     items: IImageProps[]
     span: number[]
+    style?: React.CSSProperties
 }
 
 export const ImageColumnsLayout: React.FC<IImageSetProps> = props => (
-    <div>
+    <div style={props.style}>
         <style jsx>{`
             div {
                 width: 100%;

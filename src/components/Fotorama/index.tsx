@@ -9,6 +9,7 @@ export interface IFotoramaOptions {
 export interface IFotoramaProps {
     items: string[]
     options: IFotoramaOptions
+    style?: React.CSSProperties
 }
 
 export class Fotorama extends React.PureComponent<IFotoramaProps> {
@@ -29,7 +30,7 @@ export class Fotorama extends React.PureComponent<IFotoramaProps> {
 
     public render() {
         return (
-            <div ref={this.ref}>
+            <div style={this.props.style} ref={this.ref}>
                 {this.props.items.map((x, i) => (
                     <img
                         key={x}

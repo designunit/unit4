@@ -55,7 +55,7 @@ export const LangButton: React.FC<ILangButtonProps> = props => {
                 ? (
                     <span className={'button'} key={locale}>{t(locale)}</span>
                 ) : (
-                    <Link key={locale} href={router.pathname} locale={locale}>
+                    <Link key={locale} href={router.asPath} locale={locale}>
                         <a className={cx('button', 'active')}>
                             {t(locale)}
                         </a>
