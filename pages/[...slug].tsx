@@ -8,12 +8,38 @@ import html from 'remark-html'
 import { Meta } from '@/components/Meta'
 import { SwitchImage } from '@/components/SwitchImage'
 import { Embed } from '@/components/Embed'
+import { UnitHighlight } from '@/components/UnitHighlight'
 import { WideBlock } from '@/components/WideBlock'
 
 function getPathParts(path: string): string[] {
     return path
         .split('/')
         .filter(Boolean)
+}
+
+async function apiGetLinkBlock(id: number, locale: string): Promise<any> {
+    const url = `https://unit.tmshv.com/unit-4-link-blocks/${id}`
+    try {
+        const res = await fetch(url)
+        if (!res.ok) {
+            return null
+        }
+        let data = await res.json()
+        if (data.length === 0) {
+            return null
+        }
+
+        return data.items.map((item, i) => ({
+            // "__component": "unit-4.link",
+            component: item.__component,
+            href: item.href,
+            id: i,
+            newTab: item.newTab ?? false,
+            text: getLocalizedValue(item, locale, 'text'),
+        }))
+    } catch (error) {
+        return null
+    }
 }
 
 async function apiGetPage(slug: string, locale: string): Promise<any> {
@@ -91,6 +117,20 @@ type ImageDto = {
     }
 }
 
+type ComponentLinkDto = {
+    id: number
+    component: 'unit-4.link'
+    href: string
+    text: string
+    newTab: boolean
+}
+
+type ComponentLinkBlockDto = {
+    id: number
+    component: 'unit-4.link-block'
+    items: ComponentLinkDto[]
+}
+
 type ComponentTextDto = {
     id: number
     component: 'unit-4.text'
@@ -153,6 +193,7 @@ type ComponentDto =
     | ComponentTwoImagesDto
     | ComponentSwitchImageDto
     | ComponentEmbedDto
+    | ComponentLinkBlockDto
 
 async function markdownToHtml(markdown: string) {
     const result = await remark()
@@ -227,6 +268,16 @@ async function getPageContent(content: any[], locale): Promise<ComponentDto[]> {
                     ratio: item.ratio ?? 0.5,
                 }
             }
+
+            case 'unit-4.link-block': {
+                let items = await apiGetLinkBlock(item.block.id, locale)
+                items = items ?? []
+                return {
+                    component,
+                    items,
+                }
+            }
+
             default:
                 return {
                     component,
@@ -360,6 +411,14 @@ const Page: NextPage<Props> = props => {
                                 style={{
                                     // marginBottom: '16px',
                                 }}
+                            />
+                        )
+                    }
+
+                    if (item.component === 'unit-4.link-block') {
+                        return (
+                            <UnitHighlight
+                                items={item.items}
                             />
                         )
                     }
