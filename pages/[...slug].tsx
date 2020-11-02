@@ -6,6 +6,8 @@ import ErrorPage from 'next/error'
 import remark from 'remark'
 import html from 'remark-html'
 import { Meta } from '@/components/Meta'
+import { SwitchImage } from '@/components/SwitchImage'
+import { Embed } from '@/components/Embed'
 
 type ImageFormatDto = {
     url: string
@@ -49,6 +51,13 @@ type ComponentTextDto = {
     text: string
 }
 
+type ComponentImageDto = {
+    id: number
+    component: 'unit-4.image'
+    image: ImageDto
+    wide: boolean
+}
+
 type ComponentCarouselDto = {
     id: number
     component: 'unit-4.carousel'
@@ -60,12 +69,43 @@ type ComponentCarouselDto = {
 type ComponentTwoImagesDto = {
     id: number
     component: 'unit-4.two-images'
-    type: string
     image1: ImageDto
     image2: ImageDto
 }
 
-type ComponentDto = ComponentTextDto | ComponentCarouselDto | ComponentTwoImagesDto
+type ComponentSwitchImageDto = {
+    id: number
+    component: 'unit-4.switch-image'
+    type: string
+    image1: ImageDto
+    image2: ImageDto
+    label1: string
+    label2: string
+}
+
+type ComponentCompareDto = {
+    id: number
+    component: 'unit-4.switch-image'
+    type: string
+    image1: ImageDto
+    image2: ImageDto
+    label1: string
+    label2: string
+}
+
+type ComponentEmbedDto = {
+    id: number
+    component: 'unit-4.embed'
+    url: string
+}
+
+type ComponentDto =
+    ComponentTextDto
+    | ComponentImageDto
+    | ComponentCarouselDto
+    | ComponentTwoImagesDto
+    | ComponentSwitchImageDto
+    | ComponentEmbedDto
 
 async function markdownToHtml(markdown: string) {
     const result = await remark()
@@ -119,6 +159,19 @@ async function getPageContent(content: any[], locale): Promise<ComponentDto[]> {
                 }
             }
 
+            case 'unit-4.switch-image': {
+                let label1 = getLocalizedValue(item, locale, 'label1')
+                let label2 = getLocalizedValue(item, locale, 'label2')
+
+                return {
+                    component,
+                    label1,
+                    label2,
+                    image1: item.image1,
+                    image2: item.image2,
+                }
+            }
+
             default:
                 return {
                     component,
@@ -153,6 +206,7 @@ const Page: NextPage<Props> = props => {
     }
 
     const url = `https://unit4.io${props.slug}`
+    const coverUrl = props.cover?.formats?.large?.url
 
     return (
         <div>
@@ -161,8 +215,7 @@ const Page: NextPage<Props> = props => {
                 <Meta
                     title={props.title}
                     description={props.excerpt}
-                    image={props.cover.formats.large.url}
-                    // image={''}
+                    image={coverUrl}
                     url={url}
                 />
 
@@ -176,6 +229,24 @@ const Page: NextPage<Props> = props => {
                                 dangerouslySetInnerHTML={{ __html: item.text }} style={{
                                     // marginBottom: '16px',
                                 }}
+                            />
+                        )
+                    }
+
+                    if (item.component === 'unit-4.image') {
+                        return (
+                            <Image
+                                key={id}
+                                src={item.image.url}
+                            />
+                        )
+                    }
+
+                    if (item.component === 'unit-4.embed') {
+                        return (
+                            <Embed
+                                key={id}
+                                src={item.url}
                             />
                         )
                     }
@@ -227,9 +298,35 @@ const Page: NextPage<Props> = props => {
                         )
                     }
 
-                    return null
+                    if (item.component === 'unit-4.switch-image') {
+                        const links = [
+                            {
+                                src: item.image1.url,
+                                buttonText: item.label1,
+                            },
+                            {
+                                src: item.image2.url,
+                                buttonText: item.label2,
+                            },
+                        ]
+                        return (
+                            <SwitchImage
+                                images={links}
+                            />
+                        )
+                    }
+
+                    return (
+                        <pre key={id}>
+                            {JSON.stringify(item, null, 4)}
+                        </pre>
+                    )
                 })}
             </article>
+
+            {/* <pre>
+                {JSON.stringify(props, null, 4)}
+            </pre> */}
         </div>
     )
 }
