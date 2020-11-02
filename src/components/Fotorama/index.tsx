@@ -1,4 +1,6 @@
-import * as React from 'react'
+import { ImageProps } from '@/types'
+import Image from 'next/image'
+import { createRef, PureComponent } from 'react'
 
 export interface IFotoramaOptions {
     transition: 'slide' | 'crossfade'
@@ -7,18 +9,18 @@ export interface IFotoramaOptions {
 }
 
 export interface IFotoramaProps {
-    items: string[]
+    items: ImageProps[]
     options: IFotoramaOptions
     style?: React.CSSProperties
 }
 
-export class Fotorama extends React.PureComponent<IFotoramaProps> {
+export class Fotorama extends PureComponent<IFotoramaProps> {
     private ref: React.RefObject<HTMLDivElement>
 
     constructor(props) {
         super(props)
 
-        this.ref = React.createRef()
+        this.ref = createRef()
     }
 
     public componentDidMount() {
@@ -32,9 +34,11 @@ export class Fotorama extends React.PureComponent<IFotoramaProps> {
         return (
             <div style={this.props.style} ref={this.ref}>
                 {this.props.items.map((x, i) => (
-                    <img
-                        key={x}
-                        src={x}
+                    <Image
+                        key={x.src}
+                        src={x.src}
+                        width={x.width}
+                        height={x.height}
                     />
                 ))}
             </div>
