@@ -13,7 +13,7 @@ import { WideBlock } from '@/components/WideBlock'
 import CompareImage from 'react-compare-image'
 import { useRouter } from 'next/router'
 import { Carousel } from '@/components/Carousel'
-import { IImageProps } from '@/components/Image'
+import { ImageProps } from '@/types'
 
 function getPathParts(path: string): string[] {
     return path
@@ -411,7 +411,7 @@ const Page: NextPage<Props> = props => {
                     }
 
                     if (item.component === 'unit-4.two-images') {
-                        const images: IImageProps[] = [item.image1, item.image2,]
+                        const images: ImageProps[] = [item.image1, item.image2,]
                             .map(x => ({
                                 src: x.url,
                                 width: x.width,
