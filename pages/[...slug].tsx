@@ -1,7 +1,7 @@
 import { ImageSet } from '@/components/ImageSet'
 import { Image } from '@/components/Image'
 import { Title } from '@/components/Title'
-import { GetServerSideProps, NextPage } from 'next'
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import ErrorPage from 'next/error'
 import remark from 'remark'
 import html from 'remark-html'
@@ -9,6 +9,32 @@ import { Meta } from '@/components/Meta'
 import { SwitchImage } from '@/components/SwitchImage'
 import { Embed } from '@/components/Embed'
 import { WideBlock } from '@/components/WideBlock'
+
+function getPathParts(path: string): string[]{
+    return path
+        .split('/')
+        .filter(Boolean)
+}
+
+async function apiGetPaths(): Promise<string[]> {
+    const url = `https://unit.tmshv.com/unit-4-pages/paths`
+
+    try {
+        const res = await fetch(url)
+        if (!res.ok) {
+            return []
+        }
+
+        let data = await res.json()
+        if (data.length === 0) {
+            return []
+        }
+
+        return data.map((x: any) => x.slug)
+    } catch (error) {
+        return []
+    }
+}
 
 type ImageFormatDto = {
     url: string
@@ -337,7 +363,7 @@ const Page: NextPage<Props> = props => {
     )
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
+export const getStaticProps: GetStaticProps<Props> = async ctx => {
     const locale = ctx.locale
     let slug = ctx.params.slug
     if (!slug) {
@@ -400,6 +426,18 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
                 cover: null,
             }
         }
+    }
+}
+
+export const getStaticPaths: GetStaticPaths = async ctx => {
+    const paths = await apiGetPaths()
+    return {
+        fallback: true,
+        paths: paths.map(slug => ({
+            params: {
+                slug: getPathParts(slug),
+            },
+        })),
     }
 }
 
