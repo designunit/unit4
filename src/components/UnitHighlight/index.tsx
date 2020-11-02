@@ -3,15 +3,15 @@ import * as React from 'react'
 export interface IUnitHighlightProps {
     style?: React.CSSProperties
     size?: 'default' | 'small'
-    newWindow?: boolean
     items: Array<{
         date?: Date,
         href: string,
         text: string,
+        newTab?: boolean,
     }>
 }
 
-export const UnitHighlight: React.FC<IUnitHighlightProps> = ({ newWindow = false, size = 'default', ...props }) => {
+export const UnitHighlight: React.FC<IUnitHighlightProps> = ({ size = 'default', ...props }) => {
     const dateFormatterRef = React.useRef(new Intl.DateTimeFormat('ru-RU'))
     const fontSizeRef = React.useRef({
         default: 'var(--font-normal-size)',
@@ -74,7 +74,7 @@ export const UnitHighlight: React.FC<IUnitHighlightProps> = ({ newWindow = false
                         <span className={'link'}>
                             <a
                                 href={x.href}
-                                target={newWindow ? '_blank' : null}
+                                target={x.newTab ? '_blank' : null}
                             >
                                 {x.text}
                             </a>
