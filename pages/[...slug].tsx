@@ -8,6 +8,7 @@ import html from 'remark-html'
 import { Meta } from '@/components/Meta'
 import { SwitchImage } from '@/components/SwitchImage'
 import { Embed } from '@/components/Embed'
+import { WideBlock } from '@/components/WideBlock'
 
 type ImageFormatDto = {
     url: string
@@ -234,11 +235,16 @@ const Page: NextPage<Props> = props => {
                     }
 
                     if (item.component === 'unit-4.image') {
-                        return (
+                        const content = (
                             <Image
                                 key={id}
                                 src={item.image.url}
                             />
+                        )
+                        return !item.wide ? content : (
+                            <WideBlock>
+                                {content}
+                            </WideBlock>
                         )
                     }
 
