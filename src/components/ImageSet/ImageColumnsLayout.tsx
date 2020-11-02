@@ -1,10 +1,10 @@
 import { Col, Row } from 'antd'
 import Media from 'react-media'
-import { IImageProps } from '../Image'
 import Image from 'next/image'
+import { ImageProps } from '@/types'
 
 export interface IImageSetProps {
-    items: IImageProps[]
+    items: ImageProps[]
     span: number[]
     style?: React.CSSProperties
 }
