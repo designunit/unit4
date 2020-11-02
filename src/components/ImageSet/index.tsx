@@ -1,5 +1,5 @@
+import { ImageProps } from '@/types'
 import { constant, times } from 'lodash'
-import { IImageProps } from '../Image'
 import { ImageColumnsLayout } from './ImageColumnsLayout'
 
 export interface IImageSetLayout {
@@ -8,7 +8,7 @@ export interface IImageSetLayout {
 
 export interface IImageSetProps {
     size?: number
-    items: IImageProps[]
+    items: ImageProps[]
     layout?: IImageSetLayout
     style?: React.CSSProperties
 }
