@@ -1,17 +1,18 @@
-import * as React from 'react'
-
 import { Button } from '../Button'
-import { Image } from '../Image'
+import Image from 'next/image'
+import { useCallback, useMemo, useState } from 'react'
 
 export interface IImageItem {
     src: string
+    width: number
+    height: number
     alt?: string
     buttonText?: string
 }
 
 export function useSwitchImage(images: IImageItem[]): [IImageItem, () => void] {
-    const [index, setIndex] = React.useState(0)
-    const switchImage = React.useCallback(
+    const [index, setIndex] = useState(0)
+    const switchImage = useCallback(
         () => {
             setIndex(
                 (index + 1) % images.length,
@@ -19,7 +20,7 @@ export function useSwitchImage(images: IImageItem[]): [IImageItem, () => void] {
         },
         [index, images],
     )
-    const image = React.useMemo(
+    const image = useMemo(
         () => images[index],
         [images, index],
     )
@@ -33,7 +34,7 @@ export interface ISwitchImageProps {
 
 export const SwitchImage: React.FC<ISwitchImageProps> = props => {
     const [image, switchImage] = useSwitchImage(props.images)
-    const buttonText = React.useMemo(
+    const buttonText = useMemo(
         () => image.buttonText ? image.buttonText : 'Click',
         [image],
     )
@@ -50,6 +51,8 @@ export const SwitchImage: React.FC<ISwitchImageProps> = props => {
 
             <Image
                 src={image.src}
+                width={image.width}
+                height={image.height}
                 alt={image.alt}
             />
         </div>

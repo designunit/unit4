@@ -1,7 +1,7 @@
 import { Col, Row } from 'antd'
-import * as React from 'react'
 import Media from 'react-media'
-import { IImageProps, Image } from '../Image'
+import { IImageProps } from '../Image'
+import Image from 'next/image'
 
 export interface IImageSetProps {
     items: IImageProps[]
@@ -23,7 +23,12 @@ export const ImageColumnsLayout: React.FC<IImageSetProps> = props => (
             {match => match
                 ? (
                     props.items.map((x, i) => (
-                        <Image {...x } />
+                        <Image
+                            key={i}
+                            src={x.src}
+                            width={x.width}
+                            height={x.height}
+                        />
                     ))
                 ) : (
                     <Row
@@ -31,7 +36,12 @@ export const ImageColumnsLayout: React.FC<IImageSetProps> = props => (
                     >
                         {props.items.map((x, i) => (
                             <Col span={props.span[i]} key={i}>
-                                <Image {...x} />
+                                <Image
+                                    key={i}
+                                    src={x.src}
+                                    width={x.width}
+                                    height={x.height}
+                                />
                             </Col>
                         ))}
                     </Row>

@@ -1,5 +1,5 @@
 import { ImageSet } from '@/components/ImageSet'
-import { Image } from '@/components/Image'
+import Image from 'next/image'
 import { Title } from '@/components/Title'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import ErrorPage from 'next/error'
@@ -12,6 +12,8 @@ import { UnitHighlight } from '@/components/UnitHighlight'
 import { WideBlock } from '@/components/WideBlock'
 import CompareImage from 'react-compare-image'
 import { useRouter } from 'next/router'
+import { Carousel } from '@/components/Carousel'
+import { IImageProps } from '@/components/Image'
 
 function getPathParts(path: string): string[] {
     return path
@@ -261,6 +263,21 @@ async function getPageContent(content: any[], locale): Promise<ComponentDto[]> {
                 }
             }
 
+            case 'unit-4.carousel': {
+                if (item.media.length === 1) {
+                    return {
+                        component: 'unit-4.image',
+                        image: item.media[0],
+                        wide: item.wide,
+                    }
+                }
+
+                return {
+                    component,
+                    ...item,
+                }
+            }
+
             case 'unit-4.two-images': {
                 return {
                     component,
@@ -348,10 +365,14 @@ const Page: NextPage<Props> = props => {
                     }
 
                     if (item.component === 'unit-4.image') {
+                        const img = item.image
                         const content = (
                             <Image
                                 key={id}
-                                src={item.image.url}
+                                src={img.url}
+                                width={img.width}
+                                height={img.height}
+                                quality={85}
                             />
                         )
                         return !item.wide ? content : (
@@ -371,40 +392,27 @@ const Page: NextPage<Props> = props => {
                     }
 
                     if (item.component === 'unit-4.carousel') {
-                        const links = item.media.map(item => item.url)
-
-                        if (links.length === 1) {
-                            return (
-                                <Image
-                                    key={id}
-                                    src={links[0]}
-                                />
-                            )
-                        }
+                        const items = item.media.map(item => item.url)
 
                         return (
-                            <ImageSet
+                            <Carousel
                                 key={id}
-                                items={links}
-                                layout={{
-                                    slider: {
-                                        // transition: 'crossfade',
-                                        transition: item.switchType as any,
-                                        autoplay: 2000,
-                                    }
-                                }}
-                                style={{
-                                    // marginBottom: '16px',
+                                items={items}
+                                slider={{
+                                    transition: item.switchType as any,
+                                    autoplay: 2000,
                                 }}
                             />
                         )
                     }
 
                     if (item.component === 'unit-4.two-images') {
-                        const links = [
-                            item.image1.url,
-                            item.image2.url,
-                        ]
+                        const images: IImageProps[] = [item.image1, item.image2,]
+                            .map(x => ({
+                                src: x.url,
+                                width: x.width,
+                                height: x.height,
+                            }))
                         const l = Math.round(24 * item.ratio)
                         const r = 24 - l
                         const layout = {
@@ -414,11 +422,8 @@ const Page: NextPage<Props> = props => {
                         return (
                             <ImageSet
                                 key={id}
-                                items={links}
+                                items={images}
                                 layout={layout}
-                                style={{
-                                    // marginBottom: '16px',
-                                }}
                             />
                         )
                     }
@@ -446,10 +451,14 @@ const Page: NextPage<Props> = props => {
                         const links = [
                             {
                                 src: item.image1.url,
+                                width: item.image1.width,
+                                height: item.image1.height,
                                 buttonText: item.label1,
                             },
                             {
                                 src: item.image2.url,
+                                width: item.image2.width,
+                                height: item.image2.height,
                                 buttonText: item.label2,
                             },
                         ]

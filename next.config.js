@@ -11,6 +11,10 @@ const themeVariables = {
 }
 
 module.exports = withMdx(withCss(withLess({
+    images: {
+        deviceSizes: [320, 420, 768, 1024, 2000, 2800],
+        domains: ['unitcdn.tmshv.com'],
+    },
     redirects: async () => {
         const rewrites = [
             ['/repository/application_manual', '/application-manual'],
