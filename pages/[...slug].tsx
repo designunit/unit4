@@ -11,6 +11,7 @@ import { Embed } from '@/components/Embed'
 import { UnitHighlight } from '@/components/UnitHighlight'
 import { WideBlock } from '@/components/WideBlock'
 import CompareImage from 'react-compare-image'
+import { useRouter } from 'next/router'
 
 function getPathParts(path: string): string[] {
     return path
@@ -305,6 +306,13 @@ type Props = {
 }
 
 const Page: NextPage<Props> = props => {
+    const router = useRouter()
+    if (router.isFallback) {
+        return (
+            <div>loading</div>
+        )
+    }
+
     if (!props.data) {
         return (
             <ErrorPage statusCode={404} />
