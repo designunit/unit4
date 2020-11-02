@@ -218,6 +218,14 @@ async function getPageContent(content: any[], locale): Promise<ComponentDto[]> {
                 }
             }
 
+            case 'unit-4.two-images': {
+                return {
+                    component,
+                    image1: item.image1,
+                    image2: item.image2,
+                    ratio: item.ratio ?? 0.5,
+                }
+            }
             default:
                 return {
                     component,
