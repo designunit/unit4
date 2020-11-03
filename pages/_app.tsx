@@ -2,7 +2,6 @@ import 'antd/dist/antd.css'
 import '@/style.css'
 
 import { DefaultLayout } from '@/components/DefaultLayout'
-import { Article } from '@/components/Article'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { YMetrika } from '@/components/YMetrika'
@@ -18,15 +17,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     useEffect(() => {
         i18n.changeLanguage(router.locale)
     }, [router.locale])
-
-    const isMdx = Component.hasOwnProperty('isMDXComponent') ? Component['isMDXComponent'] : false
-    const content = isMdx ? (
-        <Article>
-            <Component {...pageProps} />
-        </Article>
-    ) : (
-            <Component {...pageProps} />
-        )
 
     return (
         <>
@@ -45,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 center={true}
                 title={'design unit4'}
             >
-                {content}
+                <Component {...pageProps} />
             </DefaultLayout >
         </>
     )
