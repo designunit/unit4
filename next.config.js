@@ -1,14 +1,4 @@
-const withMdx = require('@next/mdx')()
-
-const production = process.env.NODE_ENV === 'production';
-
-const themeVariables = {
-    '@font-family': `'Roboto', sans-serif`,
-    '@font-size-base': '18px',
-    '@text-color': 'black',
-}
-
-module.exports = withMdx({
+module.exports = {
     images: {
         deviceSizes: [320, 420, 768, 1024, 2000, 2800],
         domains: ['unitcdn.tmshv.com'],
@@ -64,12 +54,7 @@ module.exports = withMdx({
         locales: ['ru', 'en'],
         defaultLocale: 'ru'
     },
-    lessLoaderOptions: {
-        javascriptEnabled: true,
-        modifyVars: themeVariables,
-    },
     assetPrefix: '',
-    pageExtensions: ['js', 'jsx', 'md', 'mdx', 'tsx'],
     webpack(config) {
         config.module.rules.push({
             test: /\.svg$/,
@@ -78,4 +63,4 @@ module.exports = withMdx({
 
         return config;
     }
-})
+}
