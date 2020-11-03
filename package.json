@@ -6,10 +6,8 @@
     "main": "index.js",
     "scripts": {
         "dev": "next dev",
-        "export": "next export",
         "build": "next build",
         "start": "NODE_ENV=production node build/server/server.js",
-        "deploy": "next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -26,16 +24,11 @@
     "dependencies": {
         "@mdi/js": "^3.9.97",
         "@mdi/react": "^1.4.0",
-        "@mdx-js/loader": "^1.6.19",
         "@mdx-js/react": "^1.6.19",
-        "@next/mdx": "^10.0.0",
         "@nivo/sankey": "^0.59.1",
-        "@svgr/webpack": "^4.3.3",
-        "@zeit/next-less": "^1.0.1",
         "antd": "^4.8.0",
         "classnames": "^2.2.6",
         "i18next": "^19.8.3",
-        "less": "^3.12.2",
         "lodash": "^4.17.20",
         "next": "^10.0.0",
         "react": "^17.0.1",
@@ -49,13 +42,15 @@
         "remark-html": "^13.0.1"
     },
     "devDependencies": {
+        "@mdx-js/loader": "^1.6.19",
+        "@next/mdx": "^10.0.0",
+        "@svgr/webpack": "^4.3.3",
         "@types/classnames": "^2.2.10",
         "@types/lodash": "^4.14.162",
         "@types/node": "^14.14.5",
         "@types/react": "^16.9.53",
         "@types/react-dom": "^16.9.8",
         "@types/react-inlinesvg": "^0.8.1",
-        "@zeit/next-css": "^1.0.1",
         "tslint": "^5.20.1",
         "typescript": "^4.0.5"
     }

@@ -1,5 +1,3 @@
-const withCss = require('@zeit/next-css')
-const withLess = require('@zeit/next-less')
 const withMdx = require('@next/mdx')()
 
 const production = process.env.NODE_ENV === 'production';
@@ -10,7 +8,7 @@ const themeVariables = {
     '@text-color': 'black',
 }
 
-module.exports = withMdx(withCss(withLess({
+module.exports = withMdx({
     images: {
         deviceSizes: [320, 420, 768, 1024, 2000, 2800],
         domains: ['unitcdn.tmshv.com'],
@@ -80,4 +78,4 @@ module.exports = withMdx(withCss(withLess({
 
         return config;
     }
-})))
+})

@@ -1,17 +1,17 @@
+import 'antd/dist/antd.css'
+import '@/style.css'
+
 import { DefaultLayout } from '@/components/DefaultLayout'
 import { Article } from '@/components/Article'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { YMetrika } from '@/components/YMetrika'
-import '@/i18n'
 import { MDXProvider } from '@mdx-js/react'
 import { components } from '@/mdx'
-
-import 'antd/dist/antd.less'
-import '../src/style.css'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
+import '@/i18n'
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter()

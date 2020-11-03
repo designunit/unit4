@@ -1,10 +1,9 @@
-import className from 'classnames'
 import Head from 'next/head'
 import { Footer } from '../Footer'
 import { Logo } from '../Logo'
 import { Menu } from '../Menu'
 
-import './styles.css'
+import s from './layout.module.css'
 
 export interface IDefaultLayoutProps {
     showHeader: boolean
@@ -14,14 +13,12 @@ export interface IDefaultLayoutProps {
 
 export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
     return (
-        <div className={className('layout', {
-            'layout--center': false,
-        })}>
+        <div className={s.layout}>
             <Head>
                 <title>{props.title}</title>
             </Head>
 
-            <div className='content'>
+            <div className={s.content}>
                 {!props.showHeader ? null : (
                     <header>
                         <Logo

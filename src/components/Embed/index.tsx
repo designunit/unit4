@@ -1,4 +1,4 @@
-import './styles.css'
+import s from './embed.module.css'
 
 export interface EmbedProp {
     style?: React.CSSProperties
@@ -6,11 +6,11 @@ export interface EmbedProp {
     ratio?: number,
 }
 
-export const Embed: React.SFC<EmbedProp> = props => {
+export const Embed: React.FC<EmbedProp> = props => {
     const r = props.ratio ?? 544 / 869
 
     return (
-        <div className={'embed'} style={{
+        <div className={s.embed} style={{
             ...props.style,
             paddingBottom: `${r * 100}%`,
         }}>
