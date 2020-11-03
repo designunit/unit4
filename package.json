@@ -24,7 +24,6 @@
     "dependencies": {
         "@mdi/js": "^3.9.97",
         "@mdi/react": "^1.4.0",
-        "@mdx-js/react": "^1.6.19",
         "@nivo/sankey": "^0.59.1",
         "antd": "^4.8.0",
         "classnames": "^2.2.6",
@@ -42,7 +41,6 @@
         "remark-html": "^13.0.1"
     },
     "devDependencies": {
-        "@mdx-js/loader": "^1.6.19",
         "@svgr/webpack": "^4.3.3",
         "@types/classnames": "^2.2.10",
         "@types/lodash": "^4.14.162",

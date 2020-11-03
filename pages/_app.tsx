@@ -6,8 +6,6 @@ import { Article } from '@/components/Article'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { YMetrika } from '@/components/YMetrika'
-import { MDXProvider } from '@mdx-js/react'
-import { components } from '@/mdx'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
@@ -31,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         )
 
     return (
-        <MDXProvider components={components}>
+        <>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/static/favicon1.png" type="image/x-icon" />
@@ -49,7 +47,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             >
                 {content}
             </DefaultLayout >
-        </MDXProvider>
+        </>
     )
 }
 
