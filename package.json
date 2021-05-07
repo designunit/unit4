@@ -28,7 +28,7 @@
         "antd": "^4.8.0",
         "classnames": "^2.2.6",
         "i18next": "^19.8.3",
-        "lodash": "^4.17.20",
+        "lodash": "^4.17.21",
         "next": "^10.0.0",
         "react": "^17.0.1",
         "react-compare-image": "^1.4.1",
