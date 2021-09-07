@@ -14,7 +14,7 @@ export const DoubleBlock = ({ left, right, ...props }) => {
                     <div>
                         <span
                             style={{
-                                marginRight: '1rem',
+                                marginRight: '2rem',
                             }}
                         >
                             /
