@@ -1,11 +1,10 @@
-import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
-import { Embed } from '../src/components/Embed'
-import { Gallery } from '../src/components/Gallery'
+import { NextPage } from 'next'
 import { Title } from '../src/components/Title'
-import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
-import { TextBlock } from '@/components/TextBlock'
-import Link from 'next/link'
+import React from 'react'
+import { Table } from '@/components/Index/Table'
+import { ThreeButtons } from '@/components/Index/ThreeButtons'
+import { DoubleBlock } from '@/components/Index/DoubleBlock'
 
 const items = [
     {
@@ -140,137 +139,6 @@ const items = [
     },
 ]
 
-const IndexDoubleBlock = ({ left, right, ...props }) => {
-    return (
-        <div style={{
-            width: '100%',
-            display: 'flex',
-            flexFlow: 'column',
-        }}>
-            <div style={{
-                alignSelf: 'flex-start',
-                display: 'flex',
-                flexFlow: 'column',
-            }}>
-                {left.map(x => (
-                    <div>
-                        {x}
-                    </div>
-                ))}
-            </div>
-            <div style={{
-
-            }}>
-                <div style={{
-                    marginLeft: 'auto',
-                    display: 'flex',
-                    alignSelf: 'flex-end',
-                }}>
-                    <div style={{
-                        flex: '1 0 33%',
-                    }} />
-
-                    <div style={{
-                        marginLeft: 'auto',
-                        display: 'flex',
-                        flexFlow: 'column',
-                    }}>
-                        {right}
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
-
-
-const table = [
-    {
-        name: 'Открытый международном архитектурном конкурсе Москомархитектуры и ГК «А101» на разработку концепции общественных пространств площадью 100 га на территории ЖК «Скандинавия» в Новой Москве',
-        href: '/latlng',
-        status: 'первое место',
-        year: '2017',
-        location: 'Москва',
-    },
-    {
-        name: 'Открытый международном архитектурном конкурсе Москомархитектуры и ГК «А101» на разработку концепции общественных пространств площадью 100 га на территории ЖК «Скандинавия» в Новой Москве',
-        href: '/latlng',
-        status: 'первое место',
-        year: '2017',
-        location: 'Москва',
-    },
-    {
-        name: 'Открытый международном архитектурном конкурсе Москомархитектуры и ГК «А101» на разработку концепции общественных пространств площадью 100 га на территории ЖК «Скандинавия» в Новой Москве',
-        href: '/latlng',
-        status: 'первое место',
-        year: '2017',
-        location: 'Москва',
-    },
-    {
-        name: 'Открытый международном архитектурном конкурсе Москомархитектуры и ГК «А101» на разработку концепции общественных пространств площадью 100 га на территории ЖК «Скандинавия» в Новой Москве',
-        href: '/latlng',
-        status: 'первое место',
-        year: '2017',
-        location: 'Москва',
-    },
-]
-
-const Table = () => (
-    <div style={{
-        display: 'flex',
-        flexFlow: 'column',
-    }}>
-        {table.map(x => (
-            <div style={{
-                display: 'flex',
-                flexFlow: 'nowrap',
-                alignItems: 'center',
-                justifyContent: 'center',
-            }}>
-                <Link
-                    href={x.href}
-                >
-                    <a style={{
-                        padding: '8px 0',
-                        flex: '1 0 50%',
-                    }}>
-                        {x.name}
-                    </a>
-                </Link>
-                <div style={{
-                    width: 0,
-                    margin: '0 16px',
-                    borderRight: 'solid 1px var(--color-background-opposite)',
-                    alignSelf: 'stretch',
-                }} />
-                <div>
-                    {x.status}
-                </div>
-                <div style={{
-                    width: 0,
-                    margin: '0 16px',
-                    borderRight: 'solid 1px var(--color-background-opposite)',
-                    alignSelf: 'stretch',
-                }} />
-                <div>
-                    {x.year}
-                </div>
-                <div style={{
-                    width: 0,
-                    margin: '0 16px',
-                    borderRight: 'solid 1px var(--color-background-opposite)',
-                    alignSelf: 'stretch',
-                }} />
-                <div>
-                    {x.location}
-                </div>
-            </div>
-        ))}
-
-    </div>
-
-)
-
 const Page: NextPage = () => {
     const { t } = useTranslation()
 
@@ -293,12 +161,14 @@ const Page: NextPage = () => {
                         background: 'conic-gradient(from 188.75deg at 60.16% 50.19%, rgba(255, 0, 102, 0) -15.49deg, #38DEC2 28.34deg, #0047CB 91.88deg, #D0103A 181.87deg, #FF1B0D 306.52deg, rgba(255, 0, 102, 0) 344.51deg, #38DEC2 388.34deg)',
                         width: 600,
                         height: 300,
+                        maxWidth: '100%',
                     }}
                 />
                 <h1
                     style={{
+                        padding: '0 16px',
                         textAlign: 'right',
-                        fontSize: 22,
+                        fontSize: 20,
                         fontWeight: 400,
                     }}
                 >
@@ -306,7 +176,6 @@ const Page: NextPage = () => {
                 </h1>
                 <Title
                     mode='multiline'
-                    caption='Данияр Юсупов, основатель студии'
                 >
                     <div>
                         «Знаем силу дизайна
@@ -315,72 +184,27 @@ const Page: NextPage = () => {
                         и щедро делимся ею»
                     </div>
                 </Title>
+                <div style={{
+                    position: 'relative',
+                    marginTop: '-3.5rem',
+                    marginLeft: '45%',
+                    fontSize: 12,
+                }}>
+                    Данияр Юсупов, основатель студии
+                </div>
             </div>
 
             <div style={{
                 position: 'relative',
             }}>
-                <div style={{
-                    position: 'sticky',
-                    top: 0,
-                    zIndex: 2,
-                    display: 'flex',
-                    flexWrap: 'nowrap',
-                    gap: 10,
-                    paddingTop: 10,
-                    marginBottom: '6rem',
-                }}>
-                    {[
-                        {
-                            text: 'СРЕДОВОЕ ПРОЕКТИРОВАНИЕ',
-                            src: '/static/wip.png'
-                        },
-                        {
-                            text: 'ОБРАЗОВАНИЕ',
-                            src: '/static/wip.png'
-                        },
-                        {
-                            text: 'СОФТ',
-                            src: '/static/wip.png'
-                        },
-                    ].map(x => (
-                        <div style={{
-                            position: 'relative',
-                            flex: '1 0 30%',
-                            height: 170,
-                        }}>
-                            <img
-                                src={x.src}
-                                style={{
-                                    display: 'block',
-                                    objectFit: 'cover',
-                                    width: '100%',
-                                    height: '100%',
-                                    filter: '',
-                                }}
-                            />
-                            <div style={{
-                                position: 'absolute',
-                                top: 0,
-                                width: '100%',
-                                height: '100%',
-                                background: '#FF006666',
-                            }} />
-                            <span style={{
-                                position: 'absolute',
-                                zIndex: 2,
-                                top: '50%',
-                                left: '50%',
-                                transform: 'translate(-50%, -50%)',
-                                textAlign: 'center',
-                            }}>
+                <ThreeButtons />
 
-                                {x.text}
-                            </span>
-                        </div>
-                    ))}
-                </div>
-
+                <span id='enviromental-design'
+                    style={{
+                        position: 'relative',
+                        bottom: '12rem',
+                    }}
+                />
                 <Title
                     mode='multiline'
                 >
@@ -389,7 +213,6 @@ const Page: NextPage = () => {
                     </div>
                     <div
                         style={{
-                            marginBottom: vertOffset,
                             paddingLeft: '20%',
                         }}
                     >
@@ -397,7 +220,7 @@ const Page: NextPage = () => {
                     </div>
                 </Title>
 
-                <IndexDoubleBlock
+                <DoubleBlock
                     left={[
                         '/ проекты городской среды',
                         '/ мастерпланы развития территорий',
@@ -417,6 +240,12 @@ const Page: NextPage = () => {
                     )}
                 />
 
+                <span id='education'
+                    style={{
+                        position: 'relative',
+                        bottom: '12rem',
+                    }}
+                />
                 <Title
                     crossed
                 >
@@ -429,7 +258,7 @@ const Page: NextPage = () => {
                         Образование
                     </div>
                 </Title>
-                <IndexDoubleBlock
+                <DoubleBlock
                     left={[
                         '/ образовательные программы',
                         '/ профессиональные воркшопы',
@@ -444,6 +273,13 @@ const Page: NextPage = () => {
                         </>
                     )}
                 />
+
+                <span id='soft'
+                    style={{
+                        position: 'relative',
+                        bottom: '12rem',
+                    }}
+                />
                 <Title
                     crossed
                 >
@@ -456,7 +292,7 @@ const Page: NextPage = () => {
                         Софт
                     </div>
                 </Title>
-                <IndexDoubleBlock
+                <DoubleBlock
                     left={[
                         '/ инструменты городских исследований ',
                         '/ софт оптимизации процесса проектирования',
@@ -499,7 +335,7 @@ const Page: NextPage = () => {
                         каждого.
                     </div>
                 </Title>
-                <IndexDoubleBlock
+                <DoubleBlock
                     left={[]}
                     right={(
                         <>

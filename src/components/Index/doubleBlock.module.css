@@ -1,0 +1,14 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+@media screen and (max-width: 960px) {
+    .emptyLeft {
+        display: none;
+    }
+    .container {
+        padding: 0 16px;
+    }
+}
