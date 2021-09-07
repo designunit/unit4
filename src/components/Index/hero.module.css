@@ -4,20 +4,9 @@
     margin-bottom: 6rem;
 }
 
-.caption {
-    position: relative;
-    margin-top: -3.5rem;
-    margin-left: 50%;
-    font-size: 12px;
-}
-
 @media screen and (max-width: 960px) {
     .container {
-        /* 75vh */
         height: 350px;
         margin-bottom: 2rem;
-    }
-    .caption {
-        margin-left: 40%;
     }
 }

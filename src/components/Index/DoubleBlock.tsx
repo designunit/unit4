@@ -12,6 +12,13 @@ export const DoubleBlock = ({ left, right, ...props }) => {
             }}>
                 {left.map(x => (
                     <div>
+                        <span
+                            style={{
+                                marginRight: '1rem',
+                            }}
+                        >
+                            /
+                        </span>
                         {x}
                     </div>
                 ))}

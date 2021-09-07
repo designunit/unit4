@@ -7,6 +7,7 @@ import { ThreeButtons } from '@/components/Index/ThreeButtons'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
 import { Hero } from '@/components/Index/Hero'
 import { Waypoint } from 'react-waypoint'
+import Media from 'react-media'
 
 const items = [
     {
@@ -166,34 +167,39 @@ const Page: NextPage = () => {
                     }}
                 />
 
-
-                <Title
-                    mode='multiline'
-                >
-                    <div
-                        style={{ marginTop: vertOffset }}
-                    >
-                        Средовое
-                    </div>
-                    <div
-                        style={{
-                            paddingLeft: '20%',
-                        }}
-                    >
-                        проектирование
-                    </div>
-                </Title>
+                <Media queries={{
+                    mobile: "(max-width: 31.25em)",
+                }}>
+                    {matches => (
+                        <Title
+                            mode='multiline'
+                        >
+                            <div
+                                style={{ marginTop: vertOffset }}
+                            >
+                                Средовое
+                            </div>
+                            <div
+                                style={{
+                                    paddingLeft: matches.mobile ? 'none' : '20%',
+                                }}
+                            >
+                                проектирование
+                            </div>
+                        </Title>
+                    )}
+                </Media>
                 <Waypoint
                     onEnter={() => setThree('#enviromental-design')}
                 >
                     <div>
                         <DoubleBlock
                             left={[
-                                '/ проекты городской среды',
-                                '/ мастерпланы развития территорий',
-                                '/ экспертиза средовых проектов',
-                                '/ разработка дизайн-кода',
-                                '/ проекты образовательных сред',
+                                'проекты городской среды',
+                                'мастерпланы развития территорий',
+                                'экспертиза средовых проектов',
+                                'разработка дизайн-кода',
+                                'проекты образовательных сред',
                             ]}
                             right={(
                                 <>
@@ -216,28 +222,34 @@ const Page: NextPage = () => {
                     }}
                 />
 
-                <Title
-                    crossed
-                >
-                    <div
-                        style={{
-                            margin: '4rem 0',
-                            marginLeft: '33%'
-                        }}
-                    >
-                        Образование
-                    </div>
-                </Title>
+                <Media queries={{
+                    mobile: "(max-width: 31.25em)",
+                }}>
+                    {matches => (
+                        <Title
+                            crossed
+                        >
+                            <div
+                                style={{
+                                    margin: '4rem 0',
+                                    marginLeft: matches.mobile ? 'none' : '33%',
+                                }}
+                            >
+                                Образование
+                            </div>
+                        </Title>
+                    )}
+                </Media>
                 <Waypoint
                     onEnter={() => setThree('#education')}
                 >
                     <div>
                         <DoubleBlock
                             left={[
-                                '/ образовательные программы',
-                                '/ профессиональные воркшопы',
-                                '/ тематические экскурсии',
-                                '/ организация цеховых конференций',
+                                'образовательные программы',
+                                'профессиональные воркшопы',
+                                'тематические экскурсии',
+                                'организация цеховых конференций',
                             ]}
                             right={(
                                 <>
@@ -256,27 +268,33 @@ const Page: NextPage = () => {
                         bottom: '12rem',
                     }}
                 />
+                <Media queries={{
+                    mobile: "(max-width: 31.25em)",
+                }}>
+                    {matches => (
+                        <Title
+                            crossed
+                        >
+                            <div
+                                style={{
+                                    margin: '4rem 0',
+                                    marginLeft: matches.mobile ? 'none' : '66%',
+                                }}
+                            >
+                                Софт
+                            </div>
+                        </Title>
 
-                <Title
-                    crossed
-                >
-                    <div
-                        style={{
-                            margin: '4rem 0',
-                            marginLeft: '66%',
-                        }}
-                    >
-                        Софт
-                    </div>
-                </Title>
+                    )}
+                </Media>
                 <Waypoint
                     onEnter={() => setThree('#soft')}
                 >
                     <div>
                         <DoubleBlock
                             left={[
-                                '/ инструменты городских исследований ',
-                                '/ софт оптимизации процесса проектирования',
+                                'инструменты городских исследований ',
+                                'софт оптимизации процесса проектирования',
                             ]}
                             right={(
                                 <>
@@ -344,15 +362,22 @@ const Page: NextPage = () => {
                         marginTop: vertOffset,
                     }}
                 >
-                    Проектируем среды,
+                    «Знаем силу дизайна
                 </div>
-                <div style={{ paddingLeft: '30%' }}>
-                    которые влияют
-                </div>
-                <div style={{ paddingLeft: '10%' }}>
-                    на жизнь людей
+                <div style={{ paddingLeft: '20%' }}>
+                    и щедро делимся ею»
                 </div>
             </Title>
+            <div
+                style={{
+                    position: 'relative',
+                    marginTop: '-3.5rem',
+                    marginLeft: '50%',
+                    fontSize: '12px',
+                }}
+            >
+                Данияр Юсупов, основатель студии
+            </div>
         </>
     )
 }

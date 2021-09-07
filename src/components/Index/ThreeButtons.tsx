@@ -3,17 +3,17 @@ import s from './threeButtons.module.css'
 const buttons = [
     {
         text: 'СРЕДОВОЕ ПРОЕКТИРОВАНИЕ',
-        src: '/static/wip.png',
+        src: '/static/indexDesign.jpg',
         href: '#enviromental-design',
     },
     {
         text: 'ОБРАЗОВАНИЕ',
-        src: '/static/wip.png',
+        src: '/static/indexEducation.jpg',
         href: '#education',
     },
     {
         text: 'СОФТ',
-        src: '/static/wip.png',
+        src: '/static/indexSoft.jpg',
         href: '#soft',
     },
 ]
@@ -27,8 +27,8 @@ export const ThreeButtons = ({ state }) => (
                 href={x.href}
                 onClick={e => {
                     if (!document) return
-                    e.preventDefault();
-                    const destination = document.querySelector(x.href as string);
+                    e.preventDefault()
+                    const destination = document.querySelector(x.href as string)
                     if (destination) {
                         destination.scrollIntoView({
                             behavior: 'smooth',
@@ -47,17 +47,18 @@ export const ThreeButtons = ({ state }) => (
                         objectFit: 'cover',
                         width: '100%',
                         height: '100%',
-                        filter: '',
+                        filter: x.href == state ? 'grayscale(1)' : '',
+                        transition: 'filter .5s ease'
                     }}
                 />
-                <div style={{
+                {/* <div style={{
                     position: 'absolute',
                     top: 0,
                     width: '100%',
                     height: '100%',
                     background: x.href == state ? 'transparent' : '#FF006666',
                     transition: 'background .5s ease',
-                }} />
+                }} /> */}
                 <span
                     className={s.text}
                 >
