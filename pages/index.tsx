@@ -334,7 +334,7 @@ const Page: NextPage = () => {
                     и поддерживаются амбиции
                 </div>
                 <div style={{ paddingLeft: '50%' }}>
-                    каждого.
+                    каждого
                 </div>
             </Title>
             <DoubleBlock

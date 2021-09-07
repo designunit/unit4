@@ -19,6 +19,7 @@ export const Hero = () => (
             }}
         />
         <h1
+            className={s.mobileHidden}
             style={{
                 padding: '0 16px',
                 textAlign: 'right',
@@ -32,13 +33,13 @@ export const Hero = () => (
             mode='multiline'
         >
             <div>
-                Проектируем среды,
+                Cоздаем
             </div>
             <div style={{ paddingLeft: '30%' }}>
-                которые влияют
+                добавленное качество
             </div>
             <div style={{ paddingLeft: '10%' }}>
-                на жизнь людей
+                материального окружения
             </div>
         </Title>
     </div>

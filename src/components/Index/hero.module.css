@@ -5,6 +5,10 @@
 }
 
 @media screen and (max-width: 960px) {
+    .mobileHidden {
+        display: none;
+    }
+    
     .container {
         height: 350px;
         margin-bottom: 2rem;
