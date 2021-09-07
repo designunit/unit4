@@ -21,7 +21,7 @@ const buttons = [
 export const ThreeButtons = () => (
     <div
         className={s.container}
-        >
+    >
         {buttons.map(x => (
             <a
                 href={x.href}
@@ -57,17 +57,9 @@ export const ThreeButtons = () => (
                     height: '100%',
                     background: '#FF006666',
                 }} />
-                <span style={{
-                    position: 'absolute',
-                    zIndex: 2,
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    textAlign: 'center',
-                    fontSize: 30,
-                    fontWeight: 700,
-                }}>
-
+                <span
+                    className={s.text}
+                >
                     {x.text}
                 </span>
             </a>
