@@ -372,7 +372,7 @@ const Page: NextPage = () => {
                 style={{
                     position: 'relative',
                     marginTop: '-3.5rem',
-                    marginLeft: '50%',
+                    marginLeft: '40%',
                     fontSize: '12px',
                 }}
             >
