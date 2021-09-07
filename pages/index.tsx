@@ -5,6 +5,7 @@ import React from 'react'
 import { Table } from '@/components/Index/Table'
 import { ThreeButtons } from '@/components/Index/ThreeButtons'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
+import { Hero } from '@/components/Index/Hero'
 
 const items = [
     {
@@ -146,53 +147,9 @@ const Page: NextPage = () => {
 
     return (
         <>
-            <div style={{
-                position: 'relative',
-                height: '50vh',
-                overflow: 'hidden',
-                marginBottom: vertOffset,
-            }}>
-                <div
-                    style={{
-                        position: 'absolute',
-                        right: 0,
-                        bottom: 0,
-                        zIndex: -1,
-                        background: 'conic-gradient(from 188.75deg at 60.16% 50.19%, rgba(255, 0, 102, 0) -15.49deg, #38DEC2 28.34deg, #0047CB 91.88deg, #D0103A 181.87deg, #FF1B0D 306.52deg, rgba(255, 0, 102, 0) 344.51deg, #38DEC2 388.34deg)',
-                        width: 600,
-                        height: 300,
-                        maxWidth: '100%',
-                    }}
-                />
-                <h1
-                    style={{
-                        padding: '0 16px',
-                        textAlign: 'right',
-                        fontSize: 20,
-                        fontWeight: 400,
-                    }}
-                >
-                    Мы проектная студия design unit 4
-                </h1>
-                <Title
-                    mode='multiline'
-                >
-                    <div>
-                        «Знаем силу дизайна
-                    </div>
-                    <div style={{ paddingLeft: '20%' }}>
-                        и щедро делимся ею»
-                    </div>
-                </Title>
-                <div style={{
-                    position: 'relative',
-                    marginTop: '-3.5rem',
-                    marginLeft: '45%',
-                    fontSize: 12,
-                }}>
-                    Данияр Юсупов, основатель студии
-                </div>
-            </div>
+            <Hero
+                vertOffset={vertOffset}
+            />
 
             <div style={{
                 position: 'relative',
