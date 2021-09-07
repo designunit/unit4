@@ -18,7 +18,7 @@ const buttons = [
     },
 ]
 
-export const ThreeButtons = () => (
+export const ThreeButtons = ({ state }) => (
     <div
         className={s.container}
     >
@@ -55,7 +55,8 @@ export const ThreeButtons = () => (
                     top: 0,
                     width: '100%',
                     height: '100%',
-                    background: '#FF006666',
+                    background: x.href == state ? 'transparent' : '#FF006666',
+                    transition: 'background .5s ease',
                 }} />
                 <span
                     className={s.text}
