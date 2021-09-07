@@ -2,23 +2,22 @@ import React from 'react'
 import { Title } from '../Title'
 import s from './hero.module.css'
 
-export const Hero = ({ vertOffset }) => (
+export const Hero = () => (
     <div
         className={s.container}
-        style={{
-            marginBottom: vertOffset,
-        }}>
-        <div
+>
+        <img
+            src='/static/unitZalipuxa.gif'
             style={{
                 position: 'absolute',
                 right: 0,
                 bottom: 0,
                 zIndex: -1,
-                background: 'conic-gradient(from 188.75deg at 60.16% 50.19%, rgba(255, 0, 102, 0) -15.49deg, #38DEC2 28.34deg, #0047CB 91.88deg, #D0103A 181.87deg, #FF1B0D 306.52deg, rgba(255, 0, 102, 0) 344.51deg, #38DEC2 388.34deg)',
-                backgroundBlendMode: 'multiply',
-                width: 600,
-                height: 300,
+                // background: 'conic-gradient(from 188.75deg at 60.16% 50.19%, rgba(255, 0, 102, 0) -15.49deg, #38DEC2 28.34deg, #0047CB 91.88deg, #D0103A 181.87deg, #FF1B0D 306.52deg, rgba(255, 0, 102, 0) 344.51deg, #38DEC2 388.34deg)',
+                width: 700,
+                // height: 300,
                 maxWidth: '100%',
+                objectFit: 'contain',
             }}
         />
         <h1
@@ -41,7 +40,7 @@ export const Hero = ({ vertOffset }) => (
                 и щедро делимся ею»
             </div>
         </Title>
-        <div 
+        <div
             className={s.caption}
         >
             Данияр Юсупов, основатель студии

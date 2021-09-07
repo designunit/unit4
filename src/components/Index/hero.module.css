@@ -1,6 +1,7 @@
 .container {
     position: relative;
-    height: 45vh;
+    height: 40vh;
+    margin-bottom: 6rem;
 }
 
 .caption {
@@ -12,7 +13,9 @@
 
 @media screen and (max-width: 960px) {
     .container {
-        height: 75vh;
+        /* 75vh */
+        height: 50vh;
+        margin-bottom: 2rem;
     }
     .caption {
         margin-left: 40%;

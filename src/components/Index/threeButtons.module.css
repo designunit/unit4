@@ -6,7 +6,6 @@
     flex-wrap: nowrap;
     gap: 10px;
     padding-top: 10px;
-    margin-bottom: 6rem;
 }
 
 @media screen and (max-width: 960px) {

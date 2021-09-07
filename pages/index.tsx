@@ -143,13 +143,11 @@ const items = [
 const Page: NextPage = () => {
     const { t } = useTranslation()
 
-    const vertOffset = '8rem'
+    const vertOffset = '6rem'
 
     return (
         <>
-            <Hero
-                vertOffset={vertOffset}
-            />
+            <Hero />
 
             <div style={{
                 position: 'relative',
@@ -165,7 +163,9 @@ const Page: NextPage = () => {
                 <Title
                     mode='multiline'
                 >
-                    <div>
+                    <div
+                        style={{ marginTop: vertOffset }}
+                    >
                         Средовое
                     </div>
                     <div
@@ -263,50 +263,51 @@ const Page: NextPage = () => {
                     )}
                 />
 
-                <Title
-                    mode='multiline'
-                >
-                    <div
-                        style={{
-                            marginTop: vertOffset,
-                        }}
-                    >
-                        Команда студии
-                    </div>
-                    <div style={{ paddingLeft: '30%' }}>
-                        сформировалась
-                    </div>
-                    <div>
-                        как экосистема с plug-in
-                    </div>
-                    <div style={{ paddingLeft: '50%' }}>
-                        структурой,
-                    </div>
-                    <div>
-                        где инициируются
-                    </div>
-                    <div style={{ paddingLeft: '10%' }}>
-                        и поддерживаются амбиции
-                    </div>
-                    <div style={{ paddingLeft: '50%' }}>
-                        каждого.
-                    </div>
-                </Title>
-                <DoubleBlock
-                    left={[]}
-                    right={(
-                        <>
-                            <div
-                                style={{
-                                    margin: '4rem 0',
-                                }}
-                            >
-                                В своих проектах мы создаем добавленное качество материального окружения. Важно конструировать такие пространства, которые не только поддерживают уже сложившиеся практики, но и инициируют новые.
-                            </div>
-                        </>
-                    )}
-                />
             </div>
+
+            <Title
+                mode='multiline'
+            >
+                <div
+                    style={{
+                        marginTop: vertOffset,
+                    }}
+                >
+                    Команда студии
+                </div>
+                <div style={{ paddingLeft: '30%' }}>
+                    сформировалась
+                </div>
+                <div>
+                    как экосистема с plug-in
+                </div>
+                <div style={{ paddingLeft: '50%' }}>
+                    структурой,
+                </div>
+                <div>
+                    где инициируются
+                </div>
+                <div style={{ paddingLeft: '10%' }}>
+                    и поддерживаются амбиции
+                </div>
+                <div style={{ paddingLeft: '50%' }}>
+                    каждого.
+                </div>
+            </Title>
+            <DoubleBlock
+                left={[]}
+                right={(
+                    <>
+                        <div
+                            style={{
+                                margin: '4rem 0',
+                            }}
+                        >
+                            В своих проектах мы создаем добавленное качество материального окружения. Важно конструировать такие пространства, которые не только поддерживают уже сложившиеся практики, но и инициируют новые.
+                        </div>
+                    </>
+                )}
+            />
 
             <Table />
 

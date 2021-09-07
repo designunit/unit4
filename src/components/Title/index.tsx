@@ -7,14 +7,15 @@ export interface ITitleProps {
     caption?: string
     mode?: null | 'multiline'
     crossed?: boolean
-    offsets?: number[]
 }
 
-export const Title: React.FC<ITitleProps> = ({ caption, children, mode, offsets, crossed = false }) => (
+export const Title: React.FC<ITitleProps> = ({ caption, children, mode, crossed = false }) => (
     <div className={s.title}>
-        <Head>
-            <title>{children}</title>
-        </Head>
+        {!(mode || crossed) && (
+            <Head>
+                <title>{children}</title>
+            </Head>
+        )}
 
         <h1 className={cx(s.h1, mode == 'multiline' && s.multiline, crossed && s.crossed)}>
             {children}
