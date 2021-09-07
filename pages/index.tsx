@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import { Title } from '../src/components/Title'
 import { useTranslation } from 'react-i18next'
-import React from 'react'
+import React, { useState } from 'react'
 import { Table } from '@/components/Index/Table'
 import { ThreeButtons } from '@/components/Index/ThreeButtons'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
@@ -145,6 +145,7 @@ const Page: NextPage = () => {
 
     const vertOffset = '6rem'
 
+    const [three, setThree] = useState(null)
     return (
         <>
             <Hero />
@@ -160,6 +161,7 @@ const Page: NextPage = () => {
                         bottom: '12rem',
                     }}
                 />
+
                 <Title
                     mode='multiline'
                 >
@@ -203,6 +205,7 @@ const Page: NextPage = () => {
                         bottom: '12rem',
                     }}
                 />
+
                 <Title
                     crossed
                 >

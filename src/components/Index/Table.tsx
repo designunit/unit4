@@ -89,7 +89,6 @@ export const Table = () => (
                     </a>
                 </Link>
                 <div
-                    className={s.mobileHidden}
                     style={{
                         width: 0,
                         margin: '0 16px',
@@ -97,11 +96,7 @@ export const Table = () => (
                         alignSelf: 'stretch',
                     }} />
                 <div
-                    className={s.mobileHidden}
-                    style={{
-                        flex: '0 0 20%',
-                        textAlign: 'center',
-                    }}
+                    className={s.status}
                 >
                     {x.status}
                 </div>
