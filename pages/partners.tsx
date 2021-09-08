@@ -60,7 +60,11 @@ const items = [
 
 const Page: NextPage = () => (
     <>
-        <Title>ПАРТНЕРЫ</Title>
+        <Title
+            crossed
+        >
+            ПАРТНЕРЫ
+        </Title>
 
         <Gallery
             border
