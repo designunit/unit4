@@ -1,12 +1,12 @@
 import React from 'react'
-import { Title } from '../Title'
+import { Loud } from '../Loud'
 import s from './hero.module.css'
 
 export const Hero = () => (
     <div
         className={s.container}
     >
-        <img
+        {/* <img
             src='/static/unitZalipuxa.gif'
             style={{
                 position: 'absolute',
@@ -17,21 +17,19 @@ export const Hero = () => (
                 maxWidth: '100%',
                 objectFit: 'contain',
             }}
-        />
-        <h1
+        /> */}
+        <div
             className={s.mobileHidden}
             style={{
-                padding: '0 16px',
                 textAlign: 'right',
                 fontSize: 20,
                 fontWeight: 400,
+                marginBottom: 50,
             }}
         >
             проектная студия design unit 4
-        </h1>
-        <Title
-            mode='multiline'
-        >
+        </div>
+        <Loud mode='multiline'>
             <div>
                 Cоздаем
             </div>
@@ -41,6 +39,6 @@ export const Hero = () => (
             <div style={{ paddingLeft: '10%' }}>
                 материального окружения
             </div>
-        </Title>
+        </Loud>
     </div>
 )
