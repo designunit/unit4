@@ -38,7 +38,7 @@ export const ThreeButtons = ({ state }) => (
                 style={{
                     position: 'relative',
                     flex: '1 0 30%',
-                    height: 170,
+                    height: 130,
                 }}>
                 <img
                     src={x.src}
