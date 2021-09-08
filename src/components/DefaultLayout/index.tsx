@@ -32,7 +32,7 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
                                     text: 'about',
                                 },
                                 {
-                                    href: '/',
+                                    href: '/projects',
                                     text: 'projects',
                                 },
                                 {
