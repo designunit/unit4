@@ -9,7 +9,7 @@ const items = [
         src: 'https://s.tmshv.com/unit4/volokolamsk-04.jpg',
         text: <>
             <span>
-                без ссылки
+                Без ссылки
             </span>
             <span>
                 вторая строка

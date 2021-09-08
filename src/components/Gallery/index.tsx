@@ -44,7 +44,8 @@ export const Gallery: React.FC<IGallery> = ({ gridGap = 10, minCellSize = 200, s
                 .gallery {
                     --item-right-margin: 0;
                     --cell-size-min: 150px;
-                    --grid-gap: 5px;
+                    --grid-gap: 8px;
+                    padding: 0 8px;
                 }
             }
         `}</style>
