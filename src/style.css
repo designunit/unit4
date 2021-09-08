@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
 :root {
     --color-light: #b3b3b3;
 
@@ -46,7 +48,7 @@ svg.icon-link:hover path {
     fill: var(--color-text);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --color-text: white;
         --color-text-opposite: black;
@@ -54,7 +56,7 @@ svg.icon-link:hover path {
         --color-background: rgb(20, 20, 30);
         --color-background-opposite: white;
     }
-}
+} */
 
 body {
     font-family: var(--font-normal-family);

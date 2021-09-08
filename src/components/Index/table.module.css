@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-flow: column;
+}
+
+.name {
+    padding: 8px 0;
+    flex: 0 0 50%;
+}
+
+.status {
+    flex: 0 0 20%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1280px) {
+    .name {
+        flex: 1 0 60%;
+        padding: 16px 0;
+    }
+    .status {
+        flex: 1 0 30%;
+    }
+    .mobileHidden {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 31.25em) {
+    .container {
+        padding: 0 16px;;
+    }
+}
