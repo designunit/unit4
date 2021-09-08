@@ -13,7 +13,7 @@ export const Hero = () => (
                 right: 0,
                 bottom: 0,
                 zIndex: -1,
-                width: 700,
+                width: 600,
                 maxWidth: '100%',
                 objectFit: 'contain',
             }}
