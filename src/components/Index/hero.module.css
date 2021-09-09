@@ -1,6 +1,5 @@
 .container {
     position: relative;
-    height: 40vh;
     margin-bottom: 6rem;
 }
 
@@ -8,9 +7,8 @@
     .mobileHidden {
         display: none;
     }
-    
+
     .container {
-        height: 350px;
         margin-bottom: 2rem;
     }
 }
