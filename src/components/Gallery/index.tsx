@@ -17,9 +17,10 @@ export interface IGallery {
     smallLabel?: boolean
     gridGap?: number
     border?: boolean
+    imgStyle?: React.CSSProperties
 }
 
-export const Gallery: React.FC<IGallery> = ({ gridGap = 10, minCellSize = 200, smallLabel = false, border = false, ...props }) => (
+export const Gallery: React.FC<IGallery> = ({ gridGap = 10, minCellSize = 200, smallLabel = false, border = false, imgStyle, ...props }) => (
     <div
         className={'gallery'}
         style={props.style}
@@ -59,6 +60,7 @@ export const Gallery: React.FC<IGallery> = ({ gridGap = 10, minCellSize = 200, s
                 href={x.href}
                 smallLabel={smallLabel}
                 border={border}
+                imgStyle={imgStyle}
             />
         ))}
     </div>

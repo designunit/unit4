@@ -7,6 +7,7 @@ import s from './GalleryItem.module.css'
 export interface IGalleryItemProps extends IGalleryItem {
     smallLabel: boolean
     border?: boolean
+    imgStyle?: React.CSSProperties
 }
 
 const ImageContainer: React.FC<Partial<IGalleryItemProps>> = ({ href, border, children }) => (
@@ -25,7 +26,7 @@ const ImageContainer: React.FC<Partial<IGalleryItemProps>> = ({ href, border, ch
     </>
 )
 
-export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, border = false, ...props }) => (
+export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, border = false, imgStyle, ...props }) => (
     <ImageContainer
         href={href}
         border={border}
@@ -36,6 +37,7 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
             <img
                 className={s.img}
                 src={src}
+                style={imgStyle}
             />
         </div>
         <div className={className(s.label, {

@@ -3,33 +3,69 @@ import { NextPage } from 'next'
 import React from 'react'
 import { Title } from '../src/components/Title'
 
+const ItemText = ({ title, text }) => (
+    <>
+        <span
+            style={{
+                fontSize: 17,
+                textTransform: 'uppercase',
+                marginBottom: '.5rem',
+            }}
+        >
+            {title}
+        </span>
+        <span
+            style={{
+                fontSize: 12,
+                lineHeight: '19px',
+                textDecoration: 'none',
+            }}
+        >
+            {text}
+        </span>
+    </>
+)
+
 const items = [
     {
-        // href: '/volokolamsk',
-        src: 'https://s.tmshv.com/unit4/volokolamsk-04.jpg',
-        text: <>
-            <span>
-                Без ссылки
-            </span>
-            <span>
-                вторая строка
-            </span>
-        </>,
+        src: '/static/partners/городские проекты 1.svg',
+        text: (
+            <ItemText
+                title='Городские проекты'
+                text='Фонд привлекает внимание к городским темам для формирования общественного запроса на удобные города и высокое качество жизни.'
+            />
+        ),
+        href: 'https://city4people.ru/about-project',
     },
     {
-        href: '/latlng',
-        src: 'https://s.tmshv.com/unit4/latlng-latlng.gif',
-        text: 'latlng',
+        src: '/static/partners/ispring 1.svg',
+        text: (
+            <ItemText
+                title='iSpring'
+                text='Разработчик решений для корпоративного обучения.'
+            />
+        ),
+        href: 'https://www.ispring.ru/',
     },
     {
-        href: '/ugra-edu',
-        src: 'https://s.tmshv.com/unit4/edu_ugra-01.jpg',
-        text: 'edu_ugra',
+        src: '/static/partners/Агентство стратегического развития «ЦЕНТР» 1.svg',
+        text: (
+            <ItemText
+                title='Агенство стратегического развития “Центр”'
+                text='Стратегическое развитие территорий и качества городской среды.'
+            />
+        ),
+        href: 'https://www.centeragency.org/ru',
     },
     {
-        href: '/uray-ppi',
-        src: 'https://s.tmshv.com/unit4/uray_ppi-urai.jpg',
-        text: 'uray_ppi',
+        src: '/static/partners/Knight Frank 1.svg',
+        text: (
+            <ItemText
+                title='Knight Frank'
+                text='Агенство по недвижимости, консалтинг по жилой и коммерческой недвижимости.'
+            />
+        ),
+        href: 'https://www.knightfrank.ru/',
     },
     {
         href: '/heterotopia',
@@ -68,6 +104,10 @@ const Page: NextPage = () => (
 
         <Gallery
             border
+            imgStyle={{
+                objectFit: 'contain',
+                padding: 10,
+            }}
             style={{
                 marginBottom: 50,
             }}
