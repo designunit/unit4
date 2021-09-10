@@ -8,6 +8,7 @@ import { DoubleBlock } from '@/components/Index/DoubleBlock'
 import { Hero } from '@/components/Index/Hero'
 import { Waypoint } from 'react-waypoint'
 import Media from 'react-media'
+import { Loud } from '@/components/Loud'
 
 const Page: NextPage = () => {
     const { t } = useTranslation()
@@ -175,7 +176,7 @@ const Page: NextPage = () => {
                 </Waypoint>
             </div>
 
-            <Title
+            <Loud
                 mode='multiline'
             >
                 <div
@@ -203,7 +204,7 @@ const Page: NextPage = () => {
                 <div style={{ paddingLeft: '50%' }}>
                     каждого
                 </div>
-            </Title>
+            </Loud>
             <DoubleBlock
                 left={[]}
                 right={(
@@ -221,7 +222,7 @@ const Page: NextPage = () => {
 
             <Table />
 
-            <Title
+            <Loud
                 mode='multiline'
             >
                 <div
@@ -234,12 +235,12 @@ const Page: NextPage = () => {
                 <div style={{ paddingLeft: '20%' }}>
                     и щедро делимся ею»
                 </div>
-            </Title>
+            </Loud>
             <div
                 style={{
                     position: 'relative',
-                    marginTop: '-3.5rem',
-                    marginLeft: '40%',
+                    top: '-2rem',
+                    marginLeft: '50%',
                     fontSize: '12px',
                 }}
             >
