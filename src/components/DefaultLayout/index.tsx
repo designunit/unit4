@@ -20,32 +20,34 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
 
             <div className={s.content}>
                 {!props.showHeader ? null : (
-                    <header>
-                        <Logo
-                            href={'/'}
-                        />
+                    <>
+                        <header>
+                            <Logo
+                                href={'/'}
+                            />
 
-                        <Menu vertical
-                            items={[
-                                {
-                                    href: '/about',
-                                    text: 'about',
-                                },
-                                {
-                                    href: '/projects',
-                                    text: 'projects',
-                                },
-                                {
-                                    href: '/partners',
-                                    text: 'partners',
-                                },
-                                {
-                                    href: '/contact',
-                                    text: 'contacts',
-                                },
-                            ]}
-                        />
-                    </header>
+                            <Menu
+                                items={[
+                                    {
+                                        href: '/about',
+                                        text: 'about',
+                                    },
+                                    {
+                                        href: '/projects',
+                                        text: 'projects',
+                                    },
+                                    {
+                                        href: '/partners',
+                                        text: 'partners',
+                                    },
+                                    {
+                                        href: '/contact',
+                                        text: 'contacts',
+                                    },
+                                ]}
+                            />
+                        </header>
+                    </>
                 )}
 
                 <main>

@@ -1,6 +1,6 @@
 .container {
     position: sticky;
-    top: 10px;
+    top: calc(90px + 10px);
     z-index: 2;
     display: flex;
     flex-wrap: nowrap;
