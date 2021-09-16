@@ -41,6 +41,18 @@ export const MenuItem: React.FC<IMenuItemProps> = ({ href, text }) => {
                 background-color: var(--color-background-opposite);
                 color: var(--color-text-opposite);
             }
+
+            @media screen and (max-width: 31.25em) {
+                li > :is(a, span) {
+                    font-size: 36px;
+                    color: var(--color-text-opposite);
+                    text-transform: uppercase;
+                }
+                .active {
+                    text-decoration: underline;
+                    text-decoration-color: var(--color-text-opposite);
+                }
+            }
         `}</style>
 
             <LinkActive href={href} passHref>

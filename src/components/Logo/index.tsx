@@ -16,8 +16,9 @@ export const Logo: React.SFC<ILogoProps> = props => (
                 height: 36px;
 
                 position: relative;
-                top: -6px;
+                // top: -6px;
                 //left: -12px;
+                z-index: 1;
             }
         `}</style>
 
