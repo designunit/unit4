@@ -15,21 +15,16 @@ def save_dir_init(directory):
         os.makedirs(directory)
 
 
-def get_all_pages(json_list):
-    return [i.get('slug') for i in json_list]
-
-
-def save_mdx_files(slug_filename, json_data, lang_flag=False):
+def save_mdx_files(slug_filename, json_data, en_flag=False):
     save_dir_init("data")
     json_contents = json_data[0]
-
     excerpt = json_contents.get("excerpt")
 
     title_key = "title"
     text_key = "text"
     filename = f"./data/{slug_filename}.ru.mdx"
 
-    if lang_flag:
+    if en_flag:
         title_key += "_en"
         text_key += "_en"
         filename = f"./data/{slug_filename}.en.mdx"
@@ -53,14 +48,21 @@ def save_mdx_files(slug_filename, json_data, lang_flag=False):
 
 
 def main():
-    paths = rq.get(PATHS_URL).json()
-    all_pages = get_all_pages(paths)
+    if rq.get(PATHS_URL).ok:
+        paths = rq.get(PATHS_URL).json()
+
+    all_pages = [i.get('slug') for i in paths]
 
     for page in tqdm(all_pages):
-        slug_filename = page.replace("/", "")
-        json_page_data = json.loads(rq.get(f"{CONTENT_PAGE_URL}{page}").text)
-        save_mdx_files(slug_filename, json_page_data)
-        save_mdx_files(slug_filename, json_page_data, True)
+        slug = page.replace("/", "")
+
+        try:
+            json_page_data = rq.get(f"{CONTENT_PAGE_URL}/{slug}").json()
+        except Exception as e:
+            print(e)
+
+        save_mdx_files(slug, json_page_data)
+        save_mdx_files(slug, json_page_data, True)
 
 
 if __name__ == "__main__":
