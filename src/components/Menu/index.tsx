@@ -64,7 +64,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                 .mobileMenuAnchor {
                     display: none;
                     position: absolute;
-                    bottom: 0;
+                    top:0;
                     right: 0;
                     width: 0;
                     height: 0;
@@ -73,7 +73,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
 
                 .mobileMenuContainer {
                     position: absolute;
-                    top: -4em;
+                    top: 0;
                     left: ${mobileOpen ? '-100vw' : 0};
                     width: 100vw;
                     height: 100vh;
