@@ -5,13 +5,14 @@ import { LinkActive } from '../LinkActive'
 export interface IMenuItemProps {
     href: string
     text: string
+    onClick?: () => void
 }
 
-export const MenuItem: React.FC<IMenuItemProps> = ({ href, text }) => {
+export const MenuItem: React.FC<IMenuItemProps> = ({ href, text, onClick }) => {
     const { t } = useTranslation('menu')
 
     return (
-        <li>
+        <li onClick={onClick}>
             <style jsx>{`
             li {
                 margin: 0;

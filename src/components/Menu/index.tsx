@@ -128,6 +128,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                             <MenuItem
                                 key={i}
                                 {...x}
+                                onClick={() => setMobileOpen(false)}
                             />
                         ))}
                     </menu>
