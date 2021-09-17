@@ -74,7 +74,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                 .mobileMenuContainer {
                     position: absolute;
                     top: 0;
-                    left: 0;
+                    left: ${mobileOpen ? '-100vw' : 0};
                     width: 100vw;
                     height: 100vh;
                     padding-top: 120px;
@@ -82,8 +82,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                     flex-flow: column;
                     background: var(--color-background-opposite);
                     color: var(--color-text-opposite);
-                    transform: translateX(${mobileOpen ? '-100vw' : 0});
-                    transition: transform .5s ease;
+                    transition: left .5s ease;
                 }
 
                 .mobileMenu {

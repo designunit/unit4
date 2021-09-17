@@ -58,6 +58,10 @@ svg.icon-link:hover path {
     }
 } */
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--font-normal-family);
     font-weight: var(--font-normal-weight);
