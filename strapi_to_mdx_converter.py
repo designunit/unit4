@@ -48,8 +48,10 @@ def save_mdx_files(slug_filename, json_data, en_flag=False):
 
 
 def main():
-    if rq.get(PATHS_URL).ok:
-        paths = rq.get(PATHS_URL).json()
+    resp = rq.get(PATHS_URL)
+
+    if resp.ok:
+        paths = resp.json()
 
     all_pages = [i.get('slug') for i in paths]
 
