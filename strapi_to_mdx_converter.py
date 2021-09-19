@@ -48,7 +48,10 @@ def save_mdx_files(slug_filename, json_data, en_flag=False):
 
 
 def main():
-    resp = rq.get(PATHS_URL)
+    try:
+        resp = rq.get(PATHS_URL)
+    except Exception as e:
+        exit(e)
 
     if resp.ok:
         paths = resp.json()
