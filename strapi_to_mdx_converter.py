@@ -54,11 +54,11 @@ def main():
         exit(e)
 
     if resp.status_code != 200:
-        exit()
-    else:
-        all_pages = [i.get('slug') for i in resp.json()]
+        exit(1)
 
     try:
+        all_pages = [i.get('slug') for i in resp.json()]
+
         for page in tqdm(all_pages):
             slug = page.replace("/", "")
 
