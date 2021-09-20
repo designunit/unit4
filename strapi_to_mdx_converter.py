@@ -53,21 +53,26 @@ def main():
     except Exception as e:
         exit(e)
 
-    if resp.ok:
-        paths = resp.json()
+    if resp.status_code != 200:
+        exit()
+    else:
+        all_pages = [i.get('slug') for i in resp.json()]
 
-    all_pages = [i.get('slug') for i in paths]
+    try:
+        for page in tqdm(all_pages):
+            slug = page.replace("/", "")
 
-    for page in tqdm(all_pages):
-        slug = page.replace("/", "")
+            try:
+                json_page_data = rq.get(f"{CONTENT_PAGE_URL}/{slug}").json()
+            except Exception as e:
+                print(e)
+                continue
 
-        try:
-            json_page_data = rq.get(f"{CONTENT_PAGE_URL}/{slug}").json()
-        except Exception as e:
-            print(e)
+            save_mdx_files(slug, json_page_data)
+            save_mdx_files(slug, json_page_data, True)
 
-        save_mdx_files(slug, json_page_data)
-        save_mdx_files(slug, json_page_data, True)
+    except KeyboardInterrupt:
+        exit()
 
 
 if __name__ == "__main__":
