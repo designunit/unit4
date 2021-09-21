@@ -12,7 +12,7 @@ export const MenuItem: React.FC<IMenuItemProps> = ({ href, text, onClick }) => {
     const { t } = useTranslation('menu')
 
     return (
-        <li onClick={onClick}>
+        <li>
             <style jsx>{`
             li {
                 margin: 0;
@@ -59,11 +59,15 @@ export const MenuItem: React.FC<IMenuItemProps> = ({ href, text, onClick }) => {
             <LinkActive href={href} passHref>
                 {active => active
                     ? (
-                        <span className='link-body active'>
+                        <span className='link-body active' 
+                            onClick={onClick}
+                        >
                             {t(text)}
                         </span>
                     ) : (
-                        <a className='link-body'>
+                        <a className='link-body'
+                            onClick={onClick}
+                        >
                             {t(text)}
                         </a>
                     )
