@@ -60,6 +60,7 @@ svg.icon-link:hover path {
 
 html {
     overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body {
