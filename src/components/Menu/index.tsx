@@ -1,6 +1,7 @@
 import className from 'classnames'
 import * as React from 'react'
 import { Contacts } from '../Contacts'
+import { Logo } from '../Logo'
 import { IMenuItemProps, MenuItem } from './MenuItem'
 
 export interface IMenuProps {
@@ -108,6 +109,12 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                     }
                 }
             `}</style>
+
+            <Logo
+                href={'/'}
+                invert={mobileOpen}
+            />
+            
             <button className='mobileButton'
                 onClick={() => setMobileOpen(!mobileOpen)}
             >

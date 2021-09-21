@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { Footer } from '../Footer'
-import { Logo } from '../Logo'
 import { Menu } from '../Menu'
 
 import s from './layout.module.css'
@@ -22,10 +21,6 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
                 {!props.showHeader ? null : (
                     <>
                         <header>
-                            <Logo
-                                href={'/'}
-                            />
-
                             <Menu
                                 items={[
                                     {
