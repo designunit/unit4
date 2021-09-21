@@ -6,11 +6,10 @@ import s from './GalleryItem.module.css'
 
 export interface IGalleryItemProps extends IGalleryItem {
     smallLabel: boolean
-    border?: boolean
-    imgStyle?: React.CSSProperties
+    mode: 'partners' | 'about'
 }
 
-const ImageContainer: React.FC<Partial<IGalleryItemProps>> = ({ href, border, children }) => (
+const ImageContainer: React.FC<Partial<IGalleryItemProps>> = ({ href, children }) => (
     <>
         {href ? (
             <Link href={href}>
@@ -26,18 +25,20 @@ const ImageContainer: React.FC<Partial<IGalleryItemProps>> = ({ href, border, ch
     </>
 )
 
-export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, border = false, imgStyle, ...props }) => (
+export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, mode, ...props }) => (
     <ImageContainer
         href={href}
-        border={border}
     >
         <div
-            className={border && s.border}
+            className={className(mode == 'partners' && s.border)}
         >
             <img
                 className={s.img}
                 src={src}
-                style={imgStyle}
+                style={mode == 'partners' ? {
+                    objectFit: 'contain',
+                    padding: 10,
+                } : {}}
             />
         </div>
         <div className={className(s.label, {
