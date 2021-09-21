@@ -73,6 +73,7 @@ body {
 
     /* fix a issue with wide block on windows to prevent horizonal scrolling */
     overflow-x: hidden;
+    height: 100%;
 }
 
 h1,
