@@ -60,7 +60,6 @@ svg.icon-link:hover path {
 
 html {
     overflow-x: hidden;
-    overflow-x: clip;
 }
 
 body {
@@ -202,5 +201,9 @@ article .image {
     article ul {
         padding-left: 1.5em;
         padding-right: 1em;
+    }
+
+    body::-webkit-scrollbar:horizontal {
+        height: 0px;
     }
 }
