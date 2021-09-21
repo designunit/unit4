@@ -1,36 +1,14 @@
 import { Gallery } from '@/components/Gallery'
+import { GalleryItemText } from '@/components/Gallery/GalleryItemText'
 import { NextPage } from 'next'
 import React from 'react'
 import { Title } from '../src/components/Title'
-
-const ItemText = ({ title, text }) => (
-    <>
-        <span
-            style={{
-                fontSize: 17,
-                textTransform: 'uppercase',
-                marginBottom: '.5rem',
-            }}
-        >
-            {title}
-        </span>
-        <span
-            style={{
-                fontSize: 12,
-                lineHeight: '19px',
-                textDecoration: 'none',
-            }}
-        >
-            {text}
-        </span>
-    </>
-)
 
 const items = [
     {
         src: '/static/partners/городские проекты 1.svg',
         text: (
-            <ItemText
+            <GalleryItemText
                 title='Городские проекты'
                 text='Фонд привлекает внимание к городским темам для формирования общественного запроса на удобные города и высокое качество жизни.'
             />
@@ -40,7 +18,7 @@ const items = [
     {
         src: '/static/partners/ispring 1.svg',
         text: (
-            <ItemText
+            <GalleryItemText
                 title='iSpring'
                 text='Разработчик решений для корпоративного обучения.'
             />
@@ -50,7 +28,7 @@ const items = [
     {
         src: '/static/partners/Агентство стратегического развития «ЦЕНТР» 1.svg',
         text: (
-            <ItemText
+            <GalleryItemText
                 title='Агенство стратегического развития “Центр”'
                 text='Стратегическое развитие территорий и качества городской среды.'
             />
@@ -60,7 +38,7 @@ const items = [
     {
         src: '/static/partners/Knight Frank 1.svg',
         text: (
-            <ItemText
+            <GalleryItemText
                 title='Knight Frank'
                 text='Агенство по недвижимости, консалтинг по жилой и коммерческой недвижимости.'
             />
@@ -103,11 +81,7 @@ const Page: NextPage = () => (
         </Title>
 
         <Gallery
-            border
-            imgStyle={{
-                objectFit: 'contain',
-                padding: 10,
-            }}
+            mode='partners'
             style={{
                 marginBottom: 50,
             }}

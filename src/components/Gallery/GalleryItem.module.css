@@ -3,6 +3,13 @@
     display: flex;
     flex-flow: column;
     overflow: hidden;
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.container:hover {
+    text-decoration: none;
 }
 
 .container:hover .img {                
@@ -55,9 +62,5 @@
 @media screen and (max-width: 31.25em) {
     .label {
         font-size: 0.8em;
-    }
-
-    .img {
-        transform: scale(1.1);
     }
 }
