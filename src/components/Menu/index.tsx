@@ -4,6 +4,7 @@ import Media from 'react-media'
 import { Contacts } from '../Contacts'
 import { Logo } from '../Logo'
 import { IMenuItemProps, MenuItem } from './MenuItem'
+import MobileMenu from './mobileMenu.svg'
 
 export interface IMenuProps {
     items: IMenuItemProps[]
@@ -72,6 +73,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
 
                 .mobileMenuContainer {
                     position: absolute;
+                    z-index: 0;
                     top: 0;
                     left: ${mobileOpen ? 0 : '100vw'};
                     width: 100vw;
@@ -85,6 +87,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                 .mobileMenu {
                     top: 0;
                     width: 100%;
+                    height: 100%;
                     left: 0;
                     background: none;
                     display: flex;
