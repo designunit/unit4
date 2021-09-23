@@ -90,16 +90,12 @@
     flex: 0 0 calc(50% - var(--grid-gap) * .5);
 }
 
-@media screen and (max-width: 31.25em) {
-    .label {
-        font-size: 0.8em;
-    }
-
+@media screen and (max-width: 960px) {
     :is(.col4, .col2, .col1) {
-        grid-column-end: span 4;
+        grid-column-end: span 2;
         flex-flow: column;
     }
-    
+
     :is(.col4, .col2, .col1) > div:first-child {
         height: 50%;
         flex: 0 0 50%;
@@ -110,5 +106,16 @@
 
     :is(.col4, .col2, .col1) > .label {
         flex: 1 0 50%;
+    }
+}
+
+@media screen and (max-width: 31.25em) {
+    .label {
+        font-size: 0.8em;
+    }
+
+    :is(.col4, .col2, .col1) {
+        grid-column-end: span 4;
+        flex-flow: column;
     }
 }

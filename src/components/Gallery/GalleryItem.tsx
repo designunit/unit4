@@ -26,27 +26,30 @@ const ImageContainer: React.FC<Partial<{ href: string, className?: string }>> = 
 )
 
 export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, mode, index, ...props }) => {
-    const getClassByIndex = () => {
-        const indexCycled = index % 6
-        switch (indexCycled) {
-            case 0:
-                return s.col4
-            case 3:
-            case 4:
-            case 5:
-                return s.col2
-            case 2:
-            case 1:
-                return s.col1
-            default:
-                return null
-        }
-    }
+    const getClassByIndex = React.useCallback(
+        () => {
+            const indexCycled = index % 6
+            switch (indexCycled) {
+                case 0:
+                    return s.col4
+                case 3:
+                case 4:
+                case 5:
+                    return s.col2
+                case 2:
+                case 1:
+                    return s.col1
+                default:
+                    return null
+            }
+        },
+        [index]
+    )
 
     return (
         <ImageContainer
             href={href}
-            className={cx(mode == 'projects' && s.border, mode == 'projects' && getClassByIndex())}
+            className={mode == 'projects' && cx(s.border, getClassByIndex())}
         >
             <div
                 className={cx(mode == 'partners' && s.border)}
