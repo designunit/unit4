@@ -146,7 +146,7 @@ const Page: NextPage = () => {
             <Title>{t('Repository')}</Title>
 
             <Gallery
-                mode='partners'
+                mode='projects'
                 style={{
                     marginBottom: 50,
                 }}
