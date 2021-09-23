@@ -4,7 +4,6 @@ import Media from 'react-media'
 import { Contacts } from '../Contacts'
 import { Logo } from '../Logo'
 import { IMenuItemProps, MenuItem } from './MenuItem'
-import MobileMenu from './mobileMenu.svg'
 
 export interface IMenuProps {
     items: IMenuItemProps[]
@@ -96,7 +95,6 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
     
                 @media screen and (max-width: 31.25em) {
                     menu {
-                        display: none;
                         gap: 52px;
                     }
                 }
@@ -112,7 +110,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
             <Media queries={{
                 mobile: "(max-width: 31.25em)",
             }}>
-                {matches => matches.mobile && (
+                {matches => matches.mobile ? (
                     <>
                         <button className='mobileButton'
                             onClick={() => setMobileOpen(!mobileOpen)}
@@ -151,19 +149,19 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                             </div>
                         </div>
                     </>
+                ) : (
+                    <menu className={className({
+                        vertical,
+                    })}>
+                        {items.map((x, i) => (
+                            <MenuItem
+                                key={i}
+                                {...x}
+                            />
+                        ))}
+                    </menu>
                 )}
             </Media>
-
-            <menu className={className({
-                vertical,
-            })}>
-                {items.map((x, i) => (
-                    <MenuItem
-                        key={i}
-                        {...x}
-                    />
-                ))}
-            </menu>
         </>
     )
 }
