@@ -34,15 +34,13 @@ const Page: NextPage<PageDefinition> = props => {
 
     return (
         <div>
+            <Meta
+                title={props.excerpt}
+                description={null}
+                image={null}
+                url={`https://unit4.io${props.slug}`}
+            />
             <article>
-                <Title>{props.excerpt}</Title>
-                <Meta
-                    title={props.excerpt}
-                    description={null}
-                    image={null}
-                    url={`https://unit4.io${props.slug}`}
-                />
-
                 <MDXRemote {...props.source} components={mdxComponents} />
             </article>
         </div>
