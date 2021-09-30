@@ -113,9 +113,4 @@
     .label {
         font-size: 0.8em;
     }
-
-    :is(.col4, .col2, .col1) {
-        grid-column-end: span 4;
-        flex-flow: column;
-    }
 }

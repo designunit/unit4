@@ -9,7 +9,7 @@ export interface IGalleryItemProps extends IGalleryItem {
     index?: number
 }
 
-const ImageContainer: React.FC<Partial<{ href: string, className?: string }>> = ({ href, className, children }) => (
+const Container: React.FC<Partial<{ href: string, className?: string }>> = ({ href, className, children }) => (
     <>
         {href ? (
             <Link href={href}>
@@ -32,13 +32,16 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
             switch (indexCycled) {
                 case 0:
                     return s.col4
+                    
+                case 1:
+                case 2:
+                    return s.col1
+
                 case 3:
                 case 4:
                 case 5:
                     return s.col2
-                case 2:
-                case 1:
-                    return s.col1
+                    
                 default:
                     return null
             }
@@ -46,18 +49,21 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
         [index]
     )
 
+    const isModePartners = mode === 'partners'
+    const isModeProjects = mode === 'projects'
+
     return (
-        <ImageContainer
+        <Container
             href={href}
-            className={mode == 'projects' && cx(s.border, getClassByIndex())}
+            className={isModeProjects && cx(s.border, getClassByIndex())}
         >
             <div
-                className={cx(mode == 'partners' && s.border)}
+                className={cx(isModePartners && s.border)}
             >
                 <img
                     className={s.img}
                     src={src}
-                    style={mode == 'partners' ? {
+                    style={isModePartners ? {
                         objectFit: 'contain',
                         padding: 10,
                     } : {}}
@@ -68,6 +74,6 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
             })}>
                 {text}
             </div>
-        </ImageContainer>
+        </Container>
     )
 }
