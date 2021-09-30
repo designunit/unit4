@@ -1,4 +1,3 @@
-import { ImageProps } from '@/types'
 import { constant, times } from 'lodash'
 import { ImageColumnsLayout } from './ImageColumnsLayout'
 
