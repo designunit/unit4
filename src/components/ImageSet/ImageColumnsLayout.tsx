@@ -2,11 +2,11 @@ import s from './image-set.module.css'
 
 import { Col, Row } from 'antd'
 import Media from 'react-media'
-import Image from 'next/image'
 import { ImageProps } from '@/types'
+import { Image } from '@/components/Image'
 
 export interface IImageSetProps {
-    items: ImageProps[]
+    items: string[]
     span: number[]
     style?: React.CSSProperties
 }
@@ -20,9 +20,7 @@ export const ImageColumnsLayout: React.FC<IImageSetProps> = props => (
                 <Col span={props.span[i]} key={i}>
                     <Image
                         key={i}
-                        src={x.src}
-                        width={x.width}
-                        height={x.height}
+                        src={x}
                     />
                 </Col>
             ))}

@@ -11,11 +11,18 @@ import { MDXRemote } from 'next-mdx-remote'
 import { Image } from '@/components/Image'
 import { UnitHighlight } from '@/components/UnitHighlight'
 import { Carousel } from 'antd'
+import DatavizStage from '@/app/oymyakon/DatavizStage'
+import { ImageSet } from '@/components/ImageSet'
+import { WideBlock } from '@/components/WideBlock'
 
 const mdxComponents = {
     Image,
     Carousel,
-    UnitHighlight
+    UnitHighlight,
+    Title,
+    DatavizStage,
+    ImageSet,
+    WideBlock,
 }
 
 const Page: NextPage<PageDefinition> = props => {

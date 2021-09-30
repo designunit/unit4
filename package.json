@@ -24,7 +24,7 @@
     "dependencies": {
         "@mdi/js": "^3.9.97",
         "@mdi/react": "^1.4.0",
-        "@nivo/sankey": "^0.63.1",
+        "@nivo/sankey": "^0.73.0",
         "antd": "^4.8.0",
         "classnames": "^2.2.6",
         "gray-matter": "^4.0.3",

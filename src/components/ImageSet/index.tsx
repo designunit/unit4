@@ -8,7 +8,7 @@ export interface IImageSetLayout {
 
 export interface IImageSetProps {
     size?: number
-    items: ImageProps[]
+    items: string[]
     layout?: IImageSetLayout
     style?: React.CSSProperties
 }
@@ -16,7 +16,7 @@ export interface IImageSetProps {
 export const ImageSet: React.FC<IImageSetProps> = ({ size = 1500, ...props }) => {
     const length = props.items.length
     const layout = props.layout as IImageSetLayout
-    const span = layout === undefined
+    const span = layout === undefined || layout.span === undefined
         ? times(length, constant(24 / length))
         : layout.span
 
