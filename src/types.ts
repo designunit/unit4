@@ -11,3 +11,10 @@ export type PageDefinition = {
     slug: string
     [name: string]: any
 }
+
+export type ImageProps = {
+    src: string
+    alt?: string
+    width: number
+    height: number
+}
