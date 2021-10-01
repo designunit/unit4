@@ -59,6 +59,10 @@ const Page: NextPage = () => {
                 </Media>
                 <InView
                     onChange={(inView) => inView && setThree('#enviromental-design')}
+                    style={{
+                        position: 'relative',
+                        bottom: '-50vh'
+                    }}
                 />
                 <div>
                     <DoubleBlock
@@ -109,6 +113,10 @@ const Page: NextPage = () => {
                 </Media>
                 <InView
                     onChange={(inView) => inView && setThree('#education')}
+                    style={{
+                        position: 'relative',
+                        bottom: '-50vh'
+                    }}
                 />
                 <div>
                     <DoubleBlock
@@ -155,6 +163,10 @@ const Page: NextPage = () => {
                 </Media>
                 <InView
                     onChange={(inView) => inView && setThree('#soft')}
+                    style={{
+                        position: 'relative',
+                        bottom: '-50vh'
+                    }}
                 />
                 <div>
                     <DoubleBlock
