@@ -73,7 +73,7 @@ export const Table = () => (
         className={s.container}
     >
         {table.map((x, i) => (
-            <>
+            <React.Fragment key={i}>
                 <Link
                     href={x.href}
                 >
@@ -102,7 +102,7 @@ export const Table = () => (
                 >
                     {x.location}
                 </div>
-            </>
+            </React.Fragment>
         ))}
 
     </div>

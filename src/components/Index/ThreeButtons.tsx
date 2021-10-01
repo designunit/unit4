@@ -22,8 +22,9 @@ export const ThreeButtons = ({ state }) => (
     <div
         className={s.container}
     >
-        {buttons.map(x => (
+        {buttons.map((x, i) => (
             <a
+                key={i}
                 href={x.href}
                 onClick={e => {
                     if (!document) return

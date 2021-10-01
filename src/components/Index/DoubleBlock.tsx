@@ -10,8 +10,8 @@ export const DoubleBlock = ({ left, right, ...props }) => {
                 display: 'flex',
                 flexFlow: 'column',
             }}>
-                {left.map(x => (
-                    <li>
+                {left.map((x,i) => (
+                    <li key={i}>
                         {x}
                     </li>
                 ))}
