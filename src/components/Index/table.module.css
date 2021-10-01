@@ -1,10 +1,10 @@
 .container {
-    display: flex;
-    flex-flow: column;
+    display: grid;
+    grid-template-columns: 50fr 20fr 10fr 20fr;
+    gap: 0 1px;
 }
 
 .name {
-    padding: 8px 0;
     flex: 0 0 50%;
 }
 
@@ -13,14 +13,33 @@
     text-align: center;
 }
 
+.year { 
+    flex: 0 0 10%;
+    text-align: center;
+}
+
+.container > * {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name, .status, .year {
+    border-right: solid 1px var(--color-background-opposite);
+}
+
 @media screen and (max-width: 1280px) {
-    .name {
-        flex: 1 0 60%;
-        padding: 16px 0;
+    .container {
+        grid-template-columns: 2fr 1fr;
+    }
+    .container > * {
+        padding: 1rem 8px;
     }
     .status {
-        flex: 1 0 30%;
+        border-right: none;
     }
+
     .mobileHidden {
         display: none;
     }
@@ -28,6 +47,6 @@
 
 @media screen and (max-width: 31.25em) {
     .container {
-        padding: 0 16px;;
+        padding: 0 16px;
     }
 }
