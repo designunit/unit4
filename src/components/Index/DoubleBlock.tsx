@@ -5,24 +5,17 @@ export const DoubleBlock = ({ left, right, ...props }) => {
         <div
             className={s.container}
         >
-            <div style={{
+            <ul style={{
                 alignSelf: 'flex-start',
                 display: 'flex',
                 flexFlow: 'column',
             }}>
                 {left.map(x => (
-                    <div>
-                        <span
-                            style={{
-                                marginRight: '2rem',
-                            }}
-                        >
-                            /
-                        </span>
+                    <li>
                         {x}
-                    </div>
+                    </li>
                 ))}
-            </div>
+            </ul>
             <div style={{
                 marginTop: '1rem',
                 marginLeft: 'auto',
