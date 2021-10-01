@@ -39,6 +39,12 @@
     .status {
         border-right: none;
     }
+    .name {
+        padding-left: 0;
+    }
+    .status {
+        padding-right: 0;
+    }
 
     .mobileHidden {
         display: none;
