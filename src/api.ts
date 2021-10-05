@@ -101,6 +101,7 @@ async function getPage(path: string): Promise<PageDefinition | null> {
             content,
         }
     } catch (error) {
+        console.error(`${getSlugFromPath(path)} getPage() err: `, error)
         return null
     }
 }
