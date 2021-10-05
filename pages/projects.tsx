@@ -26,11 +26,11 @@ const items = [
         src: 'https://s.tmshv.com/unit4/uray_ppi-urai.jpg',
         text: 'uray_ppi',
     },
-    {
-        href: '/heterotopia',
-        src: 'https://s.tmshv.com/unit4/heterotopia-heterotopia.gif',
-        text: 'heterotopia',
-    },
+    // {
+    //     href: '/heterotopia',
+    //     src: 'https://s.tmshv.com/unit4/heterotopia-heterotopia.gif',
+    //     text: 'heterotopia',
+    // },
     {
         href: '/oymyakon',
         src: 'https://s.tmshv.com/unit4/oymyakon-viz_gulag.jpg',
@@ -46,11 +46,11 @@ const items = [
         src: 'https://s.tmshv.com/unit4/delta-delta.jpg',
         text: 'delta',
     },
-    {
-        href: '/application-manual',
-        src: 'https://s.tmshv.com/unit4/app_manual-manual.jpg',
-        text: 'application_manual',
-    },
+    // {
+    //     href: '/application-manual',
+    //     src: 'https://s.tmshv.com/unit4/app_manual-manual.jpg',
+    //     text: 'application_manual',
+    // },
     {
         href: '/gorprojects-spb',
         src: 'https://s.tmshv.com/unit4/gorprojects_spb-project3-todo-after_.jpg',
