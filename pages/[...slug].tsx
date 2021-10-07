@@ -90,7 +90,7 @@ export const getStaticProps: GetStaticProps<Props> = async ctx => {
     }
 
     return {
-        revalidate: 30,
+        // revalidate: 30,
         props: {
             ...def,
             source,
@@ -112,7 +112,7 @@ export const getStaticPaths: GetStaticPaths = async ctx => {
                     locale,
                 }
             }),
-        fallback: true,
+        fallback: false,
     }
 }
 
