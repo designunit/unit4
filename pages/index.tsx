@@ -6,7 +6,6 @@ import { Table } from '@/components/Index/Table'
 import { ThreeButtons } from '@/components/Index/ThreeButtons'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
 import { Hero } from '@/components/Index/Hero'
-import Media from 'react-media'
 import { Loud } from '@/components/Loud'
 import { InView } from 'react-intersection-observer'
 
@@ -35,28 +34,13 @@ const Page: NextPage = () => {
                     }}
                 />
 
-                <Media queries={{
-                    mobile: "(max-width: 31.25em)",
-                }}>
-                    {matches => (
-                        <Title
-                            mode='multiline'
-                        >
-                            <div
-                                style={{ marginTop: vertOffset }}
-                            >
-                                Средовое
-                            </div>
-                            <div
-                                style={{
-                                    paddingLeft: matches.mobile ? 'none' : '20%',
-                                }}
-                            >
-                                проектирование
-                            </div>
-                        </Title>
-                    )}
-                </Media>
+                <div style={{
+                    marginTop: vertOffset,
+                }} />
+                <Title multiline>
+                    Средовое <br />
+                    проектирование
+                </Title>
                 <InView
                     onChange={(inView) => inView && setThree('#enviromental-design')}
                     style={{
@@ -93,24 +77,15 @@ const Page: NextPage = () => {
                     }}
                 />
 
-                <Media queries={{
-                    mobile: "(max-width: 31.25em)",
-                }}>
-                    {matches => (
-                        <Title
-                            crossed
-                        >
-                            <div
-                                style={{
-                                    margin: '4rem 0',
-                                    marginLeft: matches.mobile ? 'none' : '33%',
-                                }}
-                            >
-                                Образование
-                            </div>
-                        </Title>
-                    )}
-                </Media>
+                <div
+                    style={{
+                        margin: '4rem 0',
+                    }}
+                />
+                <Title multiline >
+                    Образование
+
+                </Title>
                 <InView
                     onChange={(inView) => inView && setThree('#education')}
                     style={{
@@ -142,25 +117,16 @@ const Page: NextPage = () => {
                         bottom: '12rem',
                     }}
                 />
-                <Media queries={{
-                    mobile: "(max-width: 31.25em)",
-                }}>
-                    {matches => (
-                        <Title
-                            crossed
-                        >
-                            <div
-                                style={{
-                                    margin: '4rem 0',
-                                    marginLeft: matches.mobile ? 'none' : '66%',
-                                }}
-                            >
-                                Софт
-                            </div>
-                        </Title>
 
-                    )}
-                </Media>
+
+                <div
+                    style={{
+                        margin: '4rem 0',
+                    }}
+                />
+                <Title multiline >
+                    Софт
+                </Title>
                 <InView
                     onChange={(inView) => inView && setThree('#soft')}
                     style={{
@@ -185,34 +151,19 @@ const Page: NextPage = () => {
                 </div>
             </div>
 
-            <Loud
-                mode='multiline'
-            >
-                <div
-                    style={{
-                        marginTop: vertOffset,
-                    }}
-                >
-                    Команда студии
-                </div>
-                <div style={{ paddingLeft: '30%' }}>
-                    сформировалась
-                </div>
-                <div>
-                    как экосистема с plug-in
-                </div>
-                <div style={{ paddingLeft: '50%' }}>
-                    структурой,
-                </div>
-                <div>
-                    где инициируются
-                </div>
-                <div style={{ paddingLeft: '10%' }}>
-                    и поддерживаются амбиции
-                </div>
-                <div style={{ paddingLeft: '50%' }}>
-                    каждого
-                </div>
+            <div
+                style={{
+                    marginTop: vertOffset,
+                }}
+            />
+            <Loud>
+                Команда студии <br />
+                сформировалась <br />
+                как экосистема с plug-in <br />
+                структурой, <br />
+                где инициируются <br />
+                и поддерживаются амбиции <br />
+                каждого
             </Loud>
             <DoubleBlock
                 left={[]}
@@ -231,26 +182,23 @@ const Page: NextPage = () => {
 
             <Table />
 
-            <Loud
-                mode='multiline'
-            >
-                <div
-                    style={{
-                        marginTop: vertOffset,
-                    }}
-                >
-                    «Знаем силу дизайна
-                </div>
-                <div style={{ paddingLeft: '20%' }}>
-                    и щедро делимся ею»
-                </div>
+
+            <div
+                style={{
+                    marginTop: vertOffset,
+                }}
+            />
+            <Loud>
+                «Знаем силу дизайна <br />
+                и щедро делимся ею»
             </Loud>
             <div
                 style={{
-                    position: 'relative',
-                    top: '-2rem',
-                    marginLeft: '50%',
                     fontSize: '12px',
+                    textTransform: 'none',
+                    marginTop: '-3rem',
+                    marginBottom: vertOffset,
+                    padding: 'var(--content-padding)',
                 }}
             >
                 Данияр Юсупов, основатель студии

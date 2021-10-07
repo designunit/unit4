@@ -29,16 +29,10 @@ export const Hero = () => (
         >
             проектная студия design unit 4
         </div>
-        <Loud mode='multiline'>
-            <div>
-                Cоздаем
-            </div>
-            <div style={{ paddingLeft: '30%' }}>
-                добавленное качество
-            </div>
-            <div style={{ paddingLeft: '10%' }}>
-                материального окружения
-            </div>
+        <Loud>
+            Cоздаем <br />
+            добавленное качество <br />
+            материального окружения
         </Loud>
     </div>
 )

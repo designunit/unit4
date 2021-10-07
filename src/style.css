@@ -191,7 +191,7 @@ article .image {
 
 @media screen and (max-width: 31.25em) {
     :root {
-        --content-padding: 0 0.5em;
+        --content-padding: 0 0.5rem;
     }
 
     article ul {

@@ -5,23 +5,22 @@ import cx from 'classnames'
 
 export interface ITitleProps {
     caption?: string
-    mode?: null | 'multiline'
-    crossed?: boolean
+    multiline?: boolean
 }
 
-export const Title: React.FC<ITitleProps> = ({ caption, children, mode, crossed = false }) => (
+export const Title: React.FC<ITitleProps> = ({ caption, children, multiline = false }) => (
     <div className={s.title}>
-        {!(mode || crossed) && (
-            <Head>
+        <Head>
+            {!multiline && (
                 <title>{children}</title>
-            </Head>
-        )}
+            )}
+        </Head>
 
-        <h1 className={cx(s.h1, mode == 'multiline' && s.multiline, crossed && s.crossed)}>
+        <h1 className={cx(s.h1, multiline && s.multiline)}>
             {children}
         </h1>
 
-        <p className={cx(s['title-caption'], mode == 'multiline' && s.multilineCaption)}>
+        <p className={cx(s['title-caption'])}>
             {caption}
         </p>
     </div>
