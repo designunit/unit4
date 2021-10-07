@@ -29,17 +29,15 @@ const mdxComponents = {
     HeterotopiaTitle,
 }
 
-const Page: NextPage<PageDefinition> = props => {
+type Props = PageDefinition & {
+    contentLocale: string
+}
+
+const Page: NextPage<Props> = props => {
     const router = useRouter()
     if (router.isFallback) {
         return (
             <div>loading</div>
-        )
-    }
-
-    if (!props.source) {
-        return (
-            <ErrorPage statusCode={404} />
         )
     }
 
@@ -51,6 +49,12 @@ const Page: NextPage<PageDefinition> = props => {
                 image={null}
                 url={`https://unit4.io${props.slug}`}
             />
+
+            {/* TODO */}
+            {/* {props.contentLocale === router.locale ? null : (
+                <div>Warning! Locale is different</div>
+            )} */}
+
             <article>
                 <MDXRemote {...props.source} components={mdxComponents} />
             </article>
@@ -58,15 +62,19 @@ const Page: NextPage<PageDefinition> = props => {
     )
 }
 
-export const getStaticProps: GetStaticProps<PageDefinition> = async ctx => {
+export const getStaticProps: GetStaticProps<Props> = async ctx => {
     let slug = ''
     if (ctx.params) {
         slug = (ctx.params!.slug! as string[]).join('/')
     }
     slug = '/' + slug
 
-    const page = await getPageBySlug(ctx.locale, slug)
-
+    let contentLocale = ctx.locale
+    let page = await getPageBySlug(ctx.locale, slug)
+    if (!page) {
+        page = await getPageBySlug('ru', slug)
+        contentLocale = 'ru'
+    }
     if (!page) {
         return {
             notFound: true,
@@ -75,12 +83,18 @@ export const getStaticProps: GetStaticProps<PageDefinition> = async ctx => {
 
     const { content, ...def } = page
     const source = await serialize(content)
+    if (!source) {
+        return {
+            notFound: true,
+        }
+    }
 
     return {
         revalidate: 30,
         props: {
             ...def,
             source,
+            contentLocale,
         }
     }
 }
