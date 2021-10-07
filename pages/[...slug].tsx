@@ -14,6 +14,8 @@ import { Carousel } from 'antd'
 import DatavizStage from '@/app/oymyakon/DatavizStage'
 import { ImageSet } from '@/components/ImageSet'
 import { WideBlock } from '@/components/WideBlock'
+import { HeterotopiaTitle } from '@/app/heterotopia/HeterotopiaTitle'
+import { HeterotopiaHighlight } from '@/app/heterotopia/HeterotopiaHighlight'
 
 const mdxComponents = {
     Image,
@@ -23,6 +25,8 @@ const mdxComponents = {
     DatavizStage,
     ImageSet,
     WideBlock,
+    HeterotopiaHighlight,
+    HeterotopiaTitle,
 }
 
 const Page: NextPage<PageDefinition> = props => {
