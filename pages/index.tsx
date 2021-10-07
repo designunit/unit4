@@ -27,6 +27,9 @@ const Page: NextPage = () => {
                     state={three}
                 />
 
+                <div style={{
+                    marginTop: vertOffset,
+                }} />
                 <span id='enviromental-design'
                     style={{
                         position: 'relative',
@@ -34,9 +37,6 @@ const Page: NextPage = () => {
                     }}
                 />
 
-                <div style={{
-                    marginTop: vertOffset,
-                }} />
                 <Title multiline>
                     Средовое <br />
                     проектирование
@@ -70,6 +70,11 @@ const Page: NextPage = () => {
                     />
                 </div>
 
+                <div
+                    style={{
+                        margin: '4rem 0',
+                    }}
+                />
                 <span id='education'
                     style={{
                         position: 'relative',
@@ -77,11 +82,6 @@ const Page: NextPage = () => {
                     }}
                 />
 
-                <div
-                    style={{
-                        margin: '4rem 0',
-                    }}
-                />
                 <Title multiline >
                     Образование
 
@@ -111,17 +111,15 @@ const Page: NextPage = () => {
                     />
                 </div>
 
+                <div
+                    style={{
+                        margin: '4rem 0',
+                    }}
+                />
                 <span id='soft'
                     style={{
                         position: 'relative',
                         bottom: '12rem',
-                    }}
-                />
-
-
-                <div
-                    style={{
-                        margin: '4rem 0',
                     }}
                 />
                 <Title multiline >

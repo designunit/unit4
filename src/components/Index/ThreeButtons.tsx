@@ -1,4 +1,5 @@
 import s from './threeButtons.module.css'
+import Image from 'next/image'
 
 const buttons = [
     {
@@ -40,17 +41,13 @@ export const ThreeButtons = ({ state }) => (
                     position: 'relative',
                     flex: '1 0 30%',
                     height: 130,
-                }}>
-                <img
+                }}
+            >
+                <Image
                     src={x.src}
-                    style={{
-                        display: 'block',
-                        objectFit: 'cover',
-                        width: '100%',
-                        height: '100%',
-                        filter: x.href == state ? 'grayscale(1)' : '',
-                        transition: 'filter .5s ease'
-                    }}
+                    className={`${s.img} ${x.href == state && s.imgSelected}`}
+                    layout='fill'
+                    objectFit='cover'
                 />
                 {/* <div style={{
                     position: 'absolute',

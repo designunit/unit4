@@ -7,6 +7,17 @@
     gap: 10px;
 }
 
+.img {
+    transition: filter .5s ease;
+}
+.img:hover {
+    filter: grayscale(1);
+}
+
+.imgSelected {
+    filter: grayscale(1);
+}
+
 .text {
     position: absolute;
     z-index: 2;
