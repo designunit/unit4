@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/static/favicon1.png" type="image/x-icon" />
+                <link rel="icon" href="/static/favicon.png" type="image/x-icon" />
 
                 <meta name="yandex-verification" content="9248f3170aa2f950" />
                 {/* <YMetrika
