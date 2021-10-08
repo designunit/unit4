@@ -46,29 +46,164 @@ const items = [
         href: 'https://www.knightfrank.ru/',
     },
     {
-        href: '/heterotopia',
-        src: 'https://s.tmshv.com/unit4/heterotopia-heterotopia.gif',
-        text: 'heterotopia',
+        src: '/static/partners/включи волоколамск 1.svg',
+        text: (
+            <GalleryItemText
+                title='Включи Волоколамск'
+                text='Общественное движение жителей города Волоколамска.'
+            />
+        ),
+        href: 'https://включиволоколамск.рф',
     },
     {
-        href: '/scnd-boulevard',
-        src: 'https://s.tmshv.com/unit4/boulevard_scnd-boulevard.jpg',
-        text: 'boulevard_scnd',
+        src: '/static/partners/сергей киселев и ко 1.svg',
+        text: (
+            <GalleryItemText
+                title='АМ Сергей Киселев и партнеры'
+                text={null}
+            />
+        ),
+        href: 'http://sk-p.ru/',
     },
     {
-        href: '/scnd-park',
-        src: 'https://s.tmshv.com/unit4/park_scnd-park.jpg',
-        text: 'park_scnd',
+        src: '/static/partners/8 lines 1.svg',
+        text: (
+            <GalleryItemText
+                title='8 линий'
+                text={null}
+            />
+        ),
+        href: 'http://www.llllllll.ru/',
     },
     {
-        href: '/shelter',
-        src: 'https://s.tmshv.com/unit4/shelter-01.jpg',
-        text: 'shelter',
+        src: '/static/partners/STUDIO MISHIN 1.svg',
+        text: (
+            <GalleryItemText
+                title='Studio mishin'
+                text={null}
+            />
+        ),
+        href: null,
     },
     {
-        href: '/swarm',
-        src: 'https://s.tmshv.com/unit4/swarm-swarm.jpg',
-        text: 'swarm',
+        src: '/static/partners/Краснокамская администрация 1.svg',
+        text: (
+            <GalleryItemText
+                title='Администрация Краснокамского городского округа'
+                text={null}
+            />
+        ),
+        href: null,
+    },
+    {
+        src: '/static/partners/Нягань администрация 1.svg',
+        text: (
+            <GalleryItemText
+                title='Администрация города Нягань'
+                text={null}
+            />
+        ),
+        href: null,
+    },
+    {
+        src: '/static/partners/Питкяранта администрация 1.svg',
+        text: (
+            <GalleryItemText
+                title='Администрация Питкярантского муниципального района'
+                text={null}
+            />
+        ),
+        href: 'http://апмр.рф/',
+    },
+    {
+        src: '/static/partners/ВТура администрания 1.svg',
+        text: (
+            <GalleryItemText
+                title='Администрация Городского округа Верхняя Тура'
+                text={null}
+            />
+        ),
+        href: 'https://www.v-tura.ru/',
+    },
+    {
+        src: '/static/partners/gerb-min 1.svg',
+        text: (
+            <GalleryItemText
+                title='Администрация Волховского района Ленинградской области'
+                text={null}
+            />
+        ),
+        href: null,
+    },
+    {
+        src: '/static/partners/мла 1.svg',
+        text: (
+            <GalleryItemText
+                title='МЛА+'
+                text={null}
+            />
+        ),
+        href: null,
+    },
+    {
+        src: '/static/partners/knappt 1.svg',
+        text: (
+            <GalleryItemText
+                title='knappt'
+                text={null}
+            />
+        ),
+        href: null,
+    },
+    {
+        src: '/static/partners/центр компетенций 1.svg',
+        text: (
+            <GalleryItemText
+                title='Центр компетенций'
+                text={null}
+            />
+        ),
+        href: null,
+    },
+    {
+        src: '/static/partners/УЖКХ ГО Дербент 1.svg',
+        text: (
+            <GalleryItemText
+                title='УЖКХ ГО Дербент'
+                text={null}
+            />
+        ),
+        href: null,
+    },
+    {
+        src: '/static/partners/y2pjhthufgs_750_auto_jpg_5_80 1.svg',
+        text: (
+            <GalleryItemText
+                title='АНО “Центр городского развития Мурманской области"'
+                text={null}
+            />
+        ),
+        href: null,
+    },
+    {
+        src: '/static/partners/урбаника 1.svg',
+        text: (
+            <GalleryItemText
+                title='ИТП урбаника'
+                text={null}
+            />
+        ),
+        href: null,
+    },
+    {
+        src: '/static/partners/KINGLAB 1.svg',
+        text: (
+            <GalleryItemText
+                title='KINGLAB'
+                text={null}
+            />
+        ),
+        href: 'https://kinglab.com/',
     },
 ]
 
