@@ -15,8 +15,8 @@
     --link-color-inactive: #ccc;
     --link-color-focus: #ff0066;
     --font-main-family: var(--font-family);
-    --font-main-size: 50px;
-    --font-main-line-height: 57px;
+    --font-main-size: 2em;
+    --font-main-line-height: 1.2em;
     --font-h2-family: var(--font-family);
     --font-h2-size: 1.5em;
     --font-h2-line-height: 1.2em;

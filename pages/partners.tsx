@@ -209,9 +209,7 @@ const items = [
 
 const Page: NextPage = () => (
     <>
-        <Title
-            crossed
-        >
+        <Title>
             ПАРТНЕРЫ
         </Title>
 
