@@ -3,6 +3,7 @@ import Link from 'next/link'
 import * as React from 'react'
 import { IGalleryItem } from '.'
 import s from './GalleryItem.module.css'
+import Ratio from 'react-ratio'
 
 export interface IGalleryItemProps extends IGalleryItem {
     smallLabel: boolean
@@ -32,7 +33,7 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
             switch (indexCycled) {
                 case 0:
                     return s.col4
-                    
+
                 case 1:
                 case 2:
                     return s.col1
@@ -41,7 +42,7 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
                 case 4:
                 case 5:
                     return s.col2
-                    
+
                 default:
                     return null
             }
@@ -60,14 +61,27 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
             <div
                 className={cx(isModePartners && s.border)}
             >
-                <img
-                    className={s.img}
-                    src={src}
-                    style={isModePartners ? {
-                        objectFit: 'contain',
-                        padding: 10,
-                    } : {}}
-                />
+                {isModeProjects && (
+                    <img
+                        src={src}
+                        className={s.img}
+                    />
+                )}
+                {isModePartners && (
+                    <Ratio
+                        contentClassName={s.img}
+                    >
+                        <img
+                            src={src}
+                            style={{
+                                objectFit: 'contain',
+                                padding: 10,
+                                width: '100%',
+                                height: '100%',
+                            }}
+                        />
+                    </Ratio>
+                )}
             </div>
             <div className={cx(s.label, {
                 small: smallLabel,
