@@ -57,11 +57,11 @@ export const ThreeButtons = ({ state }) => (
                     background: x.href == state ? 'transparent' : '#FF006666',
                     transition: 'background .5s ease',
                 }} /> */}
-                <div
+                <span
                     className={s.text}
                 >
                     {x.text}
-                </div>
+                </span>
             </a>
         ))}
     </div>

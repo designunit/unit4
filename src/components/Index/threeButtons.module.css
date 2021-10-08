@@ -33,6 +33,11 @@
     pointer-events: none;
 }
 
+@media screen and (max-width: 1280px) {
+    .text {
+        font-size: 16px;
+    }
+}
 
 @media screen and (max-width: 960px) {
     .container {
