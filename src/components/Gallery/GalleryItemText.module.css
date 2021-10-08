@@ -1,0 +1,18 @@
+.title {
+    font-size: 17px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.text {
+    font-size: 12px;
+    line-height: 19px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 31.25em) {
+    .text {
+        display: none;
+    }
+}
