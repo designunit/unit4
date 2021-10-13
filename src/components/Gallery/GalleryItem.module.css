@@ -3,9 +3,11 @@
     display: flex;
     flex-flow: column;
     overflow: hidden;
-    cursor: pointer;
 
     text-decoration: none;
+}
+.container a {
+    cursor: pointer;
 }
 
 .container:hover {

@@ -10,7 +10,12 @@ export interface IGalleryItemProps extends IGalleryItem {
     index?: number
 }
 
-const Container: React.FC<Partial<{ href: string, className?: string }>> = ({ href, className, children }) => (
+type ContainerProps = Partial<{
+    href: string,
+    className?: string
+}>
+
+const Container: React.FC<ContainerProps> = ({ href, className, children }) => (
     <>
         {href ? (
             <Link href={href}>
@@ -27,28 +32,25 @@ const Container: React.FC<Partial<{ href: string, className?: string }>> = ({ hr
 )
 
 export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, mode, index, ...props }) => {
-    const getClassByIndex = React.useCallback(
-        () => {
-            const indexCycled = index % 6
-            switch (indexCycled) {
-                case 0:
-                    return s.col4
+    const getClassByIndex = React.useCallback(() => {
+        const indexCycled = index % 6
+        switch (indexCycled) {
+            case 0:
+                return s.col4
 
-                case 1:
-                case 2:
-                    return s.col1
+            case 1:
+            case 2:
+                return s.col1
 
-                case 3:
-                case 4:
-                case 5:
-                    return s.col2
+            case 3:
+            case 4:
+            case 5:
+                return s.col2
 
-                default:
-                    return null
-            }
-        },
-        [index]
-    )
+            default:
+                return null
+        }
+    }, [index])
 
     const isModePartners = mode === 'partners'
     const isModeProjects = mode === 'projects'
