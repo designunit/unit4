@@ -4,6 +4,9 @@ import Media from 'react-media'
 import { Contacts } from '../Contacts'
 import { Logo } from '../Logo'
 import { IMenuItemProps, MenuItem } from './MenuItem'
+import s from './index.module.css'
+import { Icon } from '@mdi/react'
+import { mdiFacebook, mdiInstagram, mdiVimeo } from '@mdi/js'
 
 export interface IMenuProps {
     items: IMenuItemProps[]
@@ -14,92 +17,6 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
     const [mobileOpen, setMobileOpen] = React.useState(false)
     return (
         <>
-            <style jsx>{`
-                menu {
-                    text-align: right;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-    
-                    background-color: var(--color-background);
-    
-                    position: relative;
-                    left: 10px;
-    
-                    display: flex;
-                    flex-direction: row;
-                    gap: 28px;
-                }
-    
-                menu.vertical {
-                    flex-direction: column;
-                }
-    
-                .mobileButton {    
-                    position: relative;
-                    width: 36px;
-                    height: 36px;
-                    z-index: 1;
-    
-                    background: none;
-                    border: none;
-                    padding: 0;
-                }
-
-                .mobileButton > svg {
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    transition: opacity .5s ease;
-                }
-                .mobileButton > :nth-child(1) {
-                    opacity: ${mobileOpen ? 0 : 1};
-                }
-                .mobileButton > :nth-child(2) {
-                    opacity: ${mobileOpen ? 1 : 0};
-                }
-
-                .mobileMenuAnchor {
-                    position: absolute;
-                    top:0;
-                    right: 0;
-                    width: 100vw;
-                    height: 100vh;
-                    overflow: visible;
-                }
-
-                .mobileMenuContainer {
-                    position: absolute;
-                    z-index: 0;
-                    top: 0;
-                    left: ${mobileOpen ? 0 : '100vw'};
-                    width: 100vw;
-                    height: 100vh;
-                    padding-top: 120px;
-                    background: var(--color-background-opposite);
-                    color: var(--color-text-opposite);
-                    transition: left .5s ease;
-                }
-
-                .mobileMenu {
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    left: 0;
-                    background: none;
-                    display: flex;
-                    flex-flow: column;
-                }
-    
-                @media screen and (max-width: 31.25em) {
-                    menu {
-                        gap: 52px;
-                    }
-                }
-            `}</style>
-
             <div onClick={() => setMobileOpen(false)}>
                 <Logo
                     href={'/'}
@@ -112,23 +29,27 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
             }}>
                 {matches => matches.mobile ? (
                     <>
-                        <button className='mobileButton'
+                        <button className={s.mobileButton}
                             onClick={() => setMobileOpen(!mobileOpen)}
                         >
-                            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ opacity: mobileOpen ? 0 : 1 }} >
                                 <path d="M12 5L36 5L36 9.5L12 9.5L12 5ZM2.59078e-06 16.25L36 16.25L36 20.75L2.94047e-06 20.75L2.59078e-06 16.25ZM12 27.5L36 27.5L36 32L12 32L12 27.5Z"
                                     fill="var(--color-background-opposite)"
                                 />
                             </svg>
-                            <svg viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ opacity: mobileOpen ? 1 : 0 }} >
                                 <path d="M0.362179 26.2739L25.818 0.818019L29 4L16.2721 16.7279L3.54416 29.4558L0.362179 26.2739Z" fill="var(--color-background)" />
                                 <path d="M25.456 29.6378L0.000148177 4.18198L3.18213 1L15.91 13.7279L28.638 26.4558L25.456 29.6378Z" fill="var(--color-background)" />
                             </svg>
                         </button>
 
-                        <div className='mobileMenuAnchor'>
-                            <div className='mobileMenuContainer'>
-                                <menu className='mobileMenu'>
+                        <div className={s.mobileMenuAnchor}>
+                            <div className={s.mobileMenuContainer}
+                                style={{
+                                    left: mobileOpen ? 0 : '100vw',
+                                }}
+                            >
+                                <menu className={className(s.menu, s.mobileMenu)}>
                                     {items.map((x, i) => (
                                         <MenuItem
                                             key={i}
@@ -150,9 +71,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                         </div>
                     </>
                 ) : (
-                    <menu className={className({
-                        vertical,
-                    })}>
+                    <menu className={className(s.menu, vertical && s.vertical)}>
                         {items.map((x, i) => (
                             <MenuItem
                                 key={i}

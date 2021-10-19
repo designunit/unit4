@@ -1,0 +1,76 @@
+.menu {
+    text-align: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--color-background);
+
+    position: relative;
+    left: 10px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+}
+
+.menu.vertical {
+    flex-direction: column;
+}
+
+.mobileButton {    
+    position: relative;
+    width: 36px;
+    height: 36px;
+    z-index: 1;
+
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.mobileButton > svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity .5s ease;
+}
+
+.mobileMenuAnchor {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: visible;
+}
+
+.mobileMenuContainer {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 120px;
+    background: var(--color-background-opposite);
+    color: var(--color-text-opposite);
+    transition: left .5s ease;
+}
+
+.mobileMenu {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: none;
+    display: flex;
+    flex-flow: column;
+}
+
+@media screen and (max-width: 31.25em) {
+    .menu {
+        gap: 52px;
+    }
+}
