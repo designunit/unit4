@@ -33,7 +33,6 @@
         "next": "^11.1.1",
         "react": "^17.0.1",
         "react-compare-image": "^1.4.1",
-        "react-div-100vh": "^0.6.0",
         "react-dom": "^17.0.1",
         "react-i18next": "^11.7.3",
         "react-inlinesvg": "^0.8.4",

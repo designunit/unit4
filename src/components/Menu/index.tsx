@@ -7,7 +7,6 @@ import s from './index.module.css'
 import { Icon } from '@mdi/react'
 import { mdiFacebook, mdiInstagram, mdiVimeo } from '@mdi/js'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
-import Div100vh from 'react-div-100vh'
 
 export interface IMenuProps {
     items: IMenuItemProps[]
@@ -56,7 +55,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                         </button>
 
                         <div className={s.mobileMenuAnchor}>
-                            <Div100vh className={s.mobileMenuContainer}
+                            <div className={s.mobileMenuContainer}
                                 style={{
                                     left: mobileOpen ? 0 : '100vw',
                                 }}
@@ -117,7 +116,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                                         </a>
                                     </div>
                                 </div>
-                            </Div100vh>
+                            </div>
                         </div>
                     </>
                 ) : (
