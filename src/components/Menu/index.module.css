@@ -52,7 +52,6 @@
     z-index: 0;
     top: 0;
     width: 100vw;
-    height: 100vh;
     padding-top: 120px;
     background: var(--color-background-opposite);
     color: var(--color-text-opposite);
@@ -76,6 +75,7 @@
     display: flex;
     justify-content: space-between;
     padding: var(--content-padding);
+    padding-bottom: 1rem;
 }
 .links {
     display: flex;
