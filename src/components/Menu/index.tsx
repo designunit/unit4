@@ -6,6 +6,7 @@ import { IMenuItemProps, MenuItem } from './MenuItem'
 import s from './index.module.css'
 import { Icon } from '@mdi/react'
 import { mdiFacebook, mdiInstagram, mdiVimeo } from '@mdi/js'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
 export interface IMenuProps {
     items: IMenuItemProps[]
@@ -14,6 +15,17 @@ export interface IMenuProps {
 
 export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
     const [mobileOpen, setMobileOpen] = React.useState(false)
+
+    const menuRef = React.useRef(null)
+    React.useEffect(() => {
+        if (!menuRef.current) {
+            return
+        }
+        mobileOpen
+            ? disableBodyScroll(menuRef.current)
+            : enableBodyScroll(menuRef.current)
+    }, [mobileOpen, menuRef])
+
     return (
         <>
             <div onClick={() => setMobileOpen(false)}>
@@ -48,7 +60,9 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                                     left: mobileOpen ? 0 : '100vw',
                                 }}
                             >
-                                <menu className={className(s.menu, s.mobileMenu)}>
+                                <menu className={className(s.menu, s.mobileMenu)}
+                                    ref={menuRef}
+                                >
                                     {items.map((x, i) => (
                                         <MenuItem
                                             key={i}
