@@ -1,7 +1,6 @@
 import className from 'classnames'
 import * as React from 'react'
 import Media from 'react-media'
-import { Contacts } from '../Contacts'
 import { Logo } from '../Logo'
 import { IMenuItemProps, MenuItem } from './MenuItem'
 import s from './index.module.css'
@@ -58,14 +57,50 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                                         />
                                     ))}
                                 </menu>
-                                <div style={{
-                                    position: 'absolute',
-                                    bottom: 0,
-                                    width: '100%',
-                                }}>
-                                    <Contacts
-                                        reverse
-                                    />
+                                <div className={s.contacts}>
+                                    <div className={s.icons}>
+                                        <a
+                                            href={'https://www.instagram.com/unit4.io/'}
+                                            target='_blank'
+                                        >
+                                            <Icon
+                                                path={mdiInstagram}
+                                                size={1.25}
+                                            />
+                                        </a>
+                                        <a
+                                            href={'https://www.facebook.com/designunit4'}
+                                            target='_blank'
+                                        >
+                                            <Icon
+                                                path={mdiFacebook}
+                                                size={1.25}
+                                            />
+                                        </a>
+                                        <a
+                                            href={'https://vimeo.com/designunit4'}
+                                            target='_blank'
+                                        >
+                                            <Icon
+                                                path={mdiVimeo}
+                                                size={1.25}
+                                            />
+                                        </a>
+                                    </div>
+                                    <div className={s.links} >
+                                        <a
+                                            href='mailto:inbox@unit4.io'
+                                            target={'_blank'}
+                                        >
+                                            inbox @unit4.io
+                                        </a>
+                                        <a
+                                            href='tel:+79219980303'
+                                            target={'_blank'}
+                                        >
+                                            +7 921 9980303
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

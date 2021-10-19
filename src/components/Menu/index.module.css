@@ -69,6 +69,29 @@
     flex-flow: column;
 }
 
+.contacts {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--content-padding);
+}
+.links {
+    display: flex;
+    flex-flow: column;
+    gap: 8px;
+    text-align: right;
+}
+.icons {
+    display: flex;
+    align-items: end;
+    gap: 16px;
+}
+.icons > a, .links > a {
+    color: var(--color-text-opposite);
+}
+
 @media screen and (max-width: 31.25em) {
     .menu {
         gap: 52px;
