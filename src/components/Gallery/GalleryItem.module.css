@@ -14,8 +14,16 @@
     text-decoration: none;
 }
 
-.container:hover .img {                
+.container:hover .gray {                
     filter: grayscale(0%);
+}
+
+.border:hover  {
+    border-color: #f91b86;
+}
+
+.gray {
+    filter: grayscale(100%);
 }
 
 .img {
@@ -26,8 +34,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    filter: grayscale(100%);
 
     transition: filter .5s ease;
 }
@@ -57,10 +63,6 @@
 .border {
     border: solid 1px var(--color-background-opposite);
     transition: all .5s ease;
-}
-
-.container:hover .border  {
-    border-color: #f91b86;
 }
 
 .col4 {

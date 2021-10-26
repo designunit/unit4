@@ -71,7 +71,7 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
                 )}
                 {isModePartners && (
                     <Ratio
-                        contentClassName={s.img}
+                        contentClassName={cx(s.img, isModePartners && s.gray)}
                     >
                         <img
                             src={src}
@@ -85,11 +85,13 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
                     </Ratio>
                 )}
             </div>
-            <div className={cx(s.label, {
-                small: smallLabel,
-            })}>
-                {text}
-            </div>
+            {isModeProjects && (
+                <div className={cx(s.label, {
+                    small: smallLabel,
+                })}>
+                    {text}
+                </div>
+            )}
         </Container>
     )
 }
