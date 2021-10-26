@@ -176,27 +176,6 @@ const Page: NextPage = () => {
             />
 
             <Table />
-
-            <div
-                style={{
-                    marginTop: vertOffset,
-                }}
-            />
-            <Loud>
-                «Знаем силу дизайна <br />
-                и щедро делимся ею»
-            </Loud>
-            <div
-                style={{
-                    fontSize: '12px',
-                    textTransform: 'none',
-                    marginTop: '-3rem',
-                    marginBottom: vertOffset,
-                    padding: 'var(--content-padding)',
-                }}
-            >
-                Данияр Юсупов, основатель студии
-            </div>
         </>
     )
 }
