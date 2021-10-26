@@ -4,6 +4,9 @@ import { Gallery } from '../src/components/Gallery'
 import { Title } from '../src/components/Title'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
+import React, { useState } from 'react'
+import { ProjectsSelector } from '@/components/ProjectsSelector'
+import { indexOf } from 'lodash'
 
 const items = [
     {
@@ -138,22 +141,50 @@ const items = [
     },
 ]
 
+const tags = [
+    'все',
+    'конкурсы',
+    'эскизы',
+    'тег в три слова',
+    'жопа',
+]
+
 const Page: NextPage = () => {
     const { t } = useTranslation()
 
+    const [tag, setTag] = useState(tags[0])
+
+    const galleryItems = items
+        .filter((x: any, index) => tag === tags[0] ? true : (
+            index % (indexOf(tags, tag) + 1) == 0
+        ))
+        .map((x: any) => ({
+            ...x,
+            text: t(x.text, { ns: 'projects' }),
+        }))
+
     return (
         <>
-            <Title>{t('Repository')}</Title>
+            <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'flex-start'
+            }}>
+                <Title>{t('Repository')}</Title>
+
+                <ProjectsSelector
+                    setTag={setTag}
+                    tags={tags}
+                    selected={tag}
+                />
+            </div>
 
             <Gallery
                 mode='projects'
                 style={{
                     marginBottom: 50,
                 }}
-                items={items.map((x: any) => ({
-                    ...x,
-                    text: t(x.text, { ns: 'projects' }),
-                }))}
+                items={galleryItems}
             />
         </>
     )
