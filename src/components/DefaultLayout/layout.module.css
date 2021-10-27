@@ -14,8 +14,8 @@
     justify-content: space-between;
     padding: var(--content-padding);
 
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 .layout main {
