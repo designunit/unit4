@@ -22,7 +22,7 @@
     },
     "homepage": "https://github.com/destroytheimage/designunit4#readme",
     "dependencies": {
-        "@mdi/js": "^3.9.97",
+        "@mdi/js": "^6.4.95",
         "@mdi/react": "^1.4.0",
         "@nivo/sankey": "^0.63.1",
         "antd": "^4.8.0",
