@@ -107,7 +107,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                                             href='mailto:inbox@unit4.io'
                                             target={'_blank'}
                                         >
-                                            inbox @unit4.io
+                                            inbox@unit4.io
                                         </a>
                                         <a
                                             href='tel:+79219980303'

@@ -1,6 +1,5 @@
 import { mdiFacebook } from '@mdi/js'
 import { mdiVimeo } from '@mdi/js'
-import { mdiBehance } from '@mdi/js'
 import { mdiInstagram } from '@mdi/js'
 import Icon from '@mdi/react'
 import { NextPage } from 'next'
@@ -72,19 +71,6 @@ const Page: NextPage = () => (
                     size={1}
                 />
             </a>
-            &nbsp; &nbsp;
-
-            <a
-                href={'https://www.behance.net/designunit4'}
-                target='_blank'
-            >
-                <Icon
-                    path={mdiBehance}
-                    className={'icon-link'}
-                    size={1}
-                />
-            </a>
-
         </Article>
     </>
 )

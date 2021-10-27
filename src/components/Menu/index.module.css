@@ -72,7 +72,7 @@
 
 .contacts {
     position: absolute;
-    bottom: 0;
+    bottom: 4rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -105,9 +105,3 @@
 }
 
 /* MOBILE SAFARI */
-
-@supports (-webkit-touch-callout: none) {
-    .contacts {
-        bottom: 2rem;
-    }
-}
