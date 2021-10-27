@@ -51,9 +51,9 @@
     position: absolute;
     z-index: 0;
     top: 0;
+    bottom: 0;
     width: 100vw;
-    min-height: 100vh;  
-    min-height: -webkit-fill-available;
+    min-height: 100vh;
     padding-top: 120px;
     background: var(--color-background-opposite);
     color: var(--color-text-opposite);
@@ -103,5 +103,3 @@
         gap: 52px;
     }
 }
-
-/* MOBILE SAFARI */
