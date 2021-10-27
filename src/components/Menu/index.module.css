@@ -34,7 +34,7 @@
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    right: -4px;
     transition: opacity .5s ease;
 }
 
@@ -94,8 +94,20 @@
     color: var(--color-text-opposite);
 }
 
+.cross > path {
+    fill: var(--color-background) !important;
+}
+
 @media screen and (max-width: 31.25em) {
     .menu {
         gap: 52px;
+    }
+}
+
+/* MOBILE SAFARI */
+
+@supports (-webkit-touch-callout: none) {
+    .contacts {
+        bottom: 2rem;
     }
 }
