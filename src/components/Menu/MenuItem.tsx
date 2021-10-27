@@ -16,7 +16,7 @@ export const MenuItem: React.FC<IMenuItemProps> = ({ href, text, onClick }) => {
             <style jsx>{`
             li {
                 margin: 0;
-                margin-bottom: 5px;
+                margin-top: 2px;
             }
 
             li a {
