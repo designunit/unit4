@@ -168,7 +168,9 @@ const Page: NextPage = () => {
             <div style={{
                 display: 'flex',
                 justifyContent: 'space-between',
-                alignItems: 'flex-start'
+                alignItems: 'flex-start',
+                padding: 'var(--content-padding)',
+                paddingLeft: 0,
             }}>
                 <Title>{t('Repository')}</Title>
 
