@@ -3,12 +3,11 @@ import { Title } from '../src/components/Title'
 import { useTranslation } from 'react-i18next'
 import React, { useState } from 'react'
 import { Table } from '@/components/Index/Table'
-import { ThreeButtons } from '@/components/Index/ThreeButtons'
+import { ThreeButton, ThreeButtons } from '@/components/Index/ThreeButtons'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
 import { Hero } from '@/components/Index/Hero'
-import { Loud } from '@/components/Loud'
 import { InView } from 'react-intersection-observer'
-import ColumnGroup from 'rc-table/lib/sugar/ColumnGroup'
+import Media from 'react-media'
 
 const Page: NextPage = () => {
     const { t } = useTranslation()
@@ -38,10 +37,17 @@ const Page: NextPage = () => {
                     }}
                 />
 
-                <Title>
-                    Средовое <br />
-                    проектирование
-                </Title>
+                <Media query={'screen and (max-width: 31.25em)'}>
+                    {match => match ? (
+                        <ThreeButton index={0} />
+                    ) : (
+
+                        <Title>
+                            Средовое <br />
+                            проектирование
+                        </Title>
+                    )}
+                </Media>
                 <InView
                     onChange={(inView) => inView && setThree('#enviromental-design')}
                     style={{
@@ -83,10 +89,14 @@ const Page: NextPage = () => {
                     }}
                 />
 
-                <Title >
-                    Образование
-
-                </Title>
+                <Media query={'screen and (max-width: 31.25em)'}>
+                    {match => match ? (
+                        <ThreeButton index={1} />
+                    ) : (<Title >
+                        Образование
+                    </Title>
+                    )}
+                </Media>
                 <InView
                     onChange={(inView) => inView && setThree('#education')}
                     style={{
@@ -123,9 +133,15 @@ const Page: NextPage = () => {
                         bottom: '12rem',
                     }}
                 />
-                <Title >
-                    Софт
-                </Title>
+                <Media query={'screen and (max-width: 31.25em)'}>
+                    {match => match ? (
+                        <ThreeButton index={2} />
+                    ) : (
+                        <Title >
+                            Софт
+                        </Title>
+                    )}
+                </Media>
                 <InView
                     onChange={(inView) => inView && setThree('#soft')}
                     style={{

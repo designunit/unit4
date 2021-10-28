@@ -66,3 +66,47 @@ export const ThreeButtons = ({ state }) => (
         ))}
     </div>
 )
+
+export const ThreeButton = ({ index }) => {
+    const x = buttons[index]
+    return (
+        <div
+            style={{
+                display: 'flex',
+                marginBottom: 50,
+            }}
+        >
+            <a
+                key={index}
+                href={x.href}
+                onClick={e => {
+                    if (!document) return
+                    e.preventDefault()
+                    const destination = document.querySelector(x.href as string)
+                    if (destination) {
+                        destination.scrollIntoView({
+                            behavior: 'smooth',
+                        })
+                    }
+                }}
+                style={{
+                    position: 'relative',
+                    flex: '1 0 30%',
+                    height: 130,
+                }}
+            >
+                <Image
+                    src={x.src}
+                    className={`${s.img}`}
+                    layout='fill'
+                    objectFit='cover'
+                />
+                <span
+                    className={s.text}
+                >
+                    {x.text}
+                </span>
+            </a>
+        </div>
+    )
+}
