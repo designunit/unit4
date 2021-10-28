@@ -25,7 +25,7 @@ export const Hero = () => (
                     textTransform: 'none'
                 }}
             >
-                design unit 4
+                design : : unit 4
             </span>
         </Loud>
     </div>
