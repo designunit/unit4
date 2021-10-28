@@ -76,19 +76,8 @@ export const ThreeButton = ({ index }) => {
                 marginBottom: 50,
             }}
         >
-            <a
+            <div
                 key={index}
-                href={x.href}
-                onClick={e => {
-                    if (!document) return
-                    e.preventDefault()
-                    const destination = document.querySelector(x.href as string)
-                    if (destination) {
-                        destination.scrollIntoView({
-                            behavior: 'smooth',
-                        })
-                    }
-                }}
                 style={{
                     position: 'relative',
                     flex: '1 0 30%',
@@ -106,7 +95,7 @@ export const ThreeButton = ({ index }) => {
                 >
                     {x.text}
                 </span>
-            </a>
+            </div>
         </div>
     )
 }
