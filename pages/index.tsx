@@ -8,6 +8,7 @@ import { DoubleBlock } from '@/components/Index/DoubleBlock'
 import { Hero } from '@/components/Index/Hero'
 import { Loud } from '@/components/Loud'
 import { InView } from 'react-intersection-observer'
+import ColumnGroup from 'rc-table/lib/sugar/ColumnGroup'
 
 const Page: NextPage = () => {
     const { t } = useTranslation()
@@ -37,7 +38,7 @@ const Page: NextPage = () => {
                     }}
                 />
 
-                <Title multiline>
+                <Title>
                     Средовое <br />
                     проектирование
                 </Title>
@@ -82,7 +83,7 @@ const Page: NextPage = () => {
                     }}
                 />
 
-                <Title multiline >
+                <Title >
                     Образование
 
                 </Title>
@@ -122,7 +123,7 @@ const Page: NextPage = () => {
                         bottom: '12rem',
                     }}
                 />
-                <Title multiline >
+                <Title >
                     Софт
                 </Title>
                 <InView
@@ -154,12 +155,23 @@ const Page: NextPage = () => {
                     marginTop: vertOffset,
                 }}
             />
-            <Loud>
-                Команда студии сформировалась <br />
-                как экосистема с plug-in структурой,<br />
-                где инициируются и поддерживаются <br />
-                амбиции каждого
-            </Loud>
+            <h1
+                style={{
+                    position: 'absolute',
+                    left: -128,
+                    width: 'max-content',
+                    padding: '2rem 0',
+                    paddingBottom: '2rem',
+                    background: 'var(--link-color-active)',
+                    color: 'var(--color-text-opposite)',
+                    textTransform: 'uppercase',
+                    fontSize: 46,
+                }}
+            >
+                Команда студии сформировалась как экосистема с plug-in структурой где инициируются и поддерживаются амбиции каждого
+            </h1>
+            <div style={{ height: '5rem' }} />
+
             <DoubleBlock
                 left={[]}
                 right={(
