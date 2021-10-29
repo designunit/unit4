@@ -58,7 +58,7 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
     return (
         <Container
             href={href}
-            className={isModeProjects && cx(s.border, getClassByIndex())}
+            className={isModeProjects && cx(s.border, s.hoverZoom, getClassByIndex())}
         >
             <div
                 className={cx(isModePartners && s.border)}
