@@ -8,6 +8,7 @@ import { DoubleBlock } from '@/components/Index/DoubleBlock'
 import { Hero } from '@/components/Index/Hero'
 import { InView } from 'react-intersection-observer'
 import Media from 'react-media'
+import { RunningLine } from '@/components/Index/RunningLine'
 
 const Page: NextPage = () => {
     const { t } = useTranslation()
@@ -171,22 +172,20 @@ const Page: NextPage = () => {
                     marginTop: vertOffset,
                 }}
             />
-            <h1
-                style={{
-                    position: 'absolute',
-                    left: -128,
-                    width: 'max-content',
-                    padding: '2rem 0',
-                    paddingBottom: '2rem',
-                    background: 'var(--link-color-active)',
-                    color: 'var(--color-text-opposite)',
-                    textTransform: 'uppercase',
-                    fontSize: 46,
-                }}
-            >
-                Команда студии сформировалась как экосистема с plug-in структурой где инициируются и поддерживаются амбиции каждого
-            </h1>
-            <div style={{ height: '5rem' }} />
+
+            <RunningLine>
+                <h1
+                    style={{
+                        textTransform: 'uppercase',
+                        fontSize: 46,
+                        margin: 0,
+                        color: 'var(--color-text-opposite)',
+                    }}
+                >
+                    Команда студии сформировалась как экосистема с plug-in структурой где инициируются и поддерживаются амбиции каждого
+                </h1>
+            </RunningLine>
+            <div style={{ height: '8rem' }} />
 
             <DoubleBlock
                 left={[]}
