@@ -42,7 +42,7 @@ const Page: NextPage = () => {
                         <ThreeButton index={0} />
                     ) : (
 
-                        <Title>
+                        <Title writeToHead={false}>
                             Средовое <br />
                             проектирование
                         </Title>
@@ -92,9 +92,10 @@ const Page: NextPage = () => {
                 <Media query={'screen and (max-width: 31.25em)'}>
                     {match => match ? (
                         <ThreeButton index={1} />
-                    ) : (<Title >
-                        Образование
-                    </Title>
+                    ) : (
+                        <Title writeToHead={false}>
+                            Образование
+                        </Title>
                     )}
                 </Media>
                 <InView
@@ -137,7 +138,7 @@ const Page: NextPage = () => {
                     {match => match ? (
                         <ThreeButton index={2} />
                     ) : (
-                        <Title >
+                        <Title writeToHead={false}>
                             Софт
                         </Title>
                     )}

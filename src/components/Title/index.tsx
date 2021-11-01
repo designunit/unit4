@@ -5,12 +5,13 @@ import cx from 'classnames'
 
 export interface ITitleProps {
     caption?: string
+    writeToHead?: boolean
 }
 
-export const Title: React.FC<ITitleProps> = ({ caption, children }) => (
+export const Title: React.FC<ITitleProps> = ({ caption, children, writeToHead = false }) => (
     <div className={s.title}>
         <Head>
-            <title>{children}</title>
+            {writeToHead && <title>{children}</title>}
         </Head>
 
         <h1 className={s.h1}>
