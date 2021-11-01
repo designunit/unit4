@@ -14,7 +14,7 @@ const Page: NextPage = () => {
 
     const vertOffset = '6rem'
 
-    const [three, setThree] = useState(null)
+    const [three, setThree] = useState<string>(null)
 
     return (
         <>

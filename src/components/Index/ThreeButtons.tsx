@@ -1,5 +1,6 @@
 import s from './threeButtons.module.css'
 import Image from 'next/image'
+import React from 'react'
 
 const buttons = [
     {
@@ -19,7 +20,7 @@ const buttons = [
     },
 ]
 
-export const ThreeButtons = ({ state }) => (
+export const ThreeButtons: React.FC<{ state: string }> = ({ state }) => (
     <div
         className={s.container}
     >
@@ -67,7 +68,7 @@ export const ThreeButtons = ({ state }) => (
     </div>
 )
 
-export const ThreeButton = ({ index }) => {
+export const ThreeButton: React.FC<{ index: 0 | 1 | 2 }> = ({ index }) => {
     const x = buttons[index]
     return (
         <div
