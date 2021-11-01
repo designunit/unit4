@@ -20,7 +20,7 @@ export interface IDatavizStageProps {
     stage: 1 | 2 | 3
 }
 
-export default (props: IDatavizStageProps) => {
+const DatavizStage = (props: IDatavizStageProps) => {
     const sankeyAspectRatio = 2.5
     const sankeyStyle: React.CSSProperties = {
         backgroundColor: 'white',
@@ -45,3 +45,5 @@ export default (props: IDatavizStageProps) => {
         </WideBlock>
     )
 }
+
+export default DatavizStage
