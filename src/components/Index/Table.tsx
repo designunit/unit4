@@ -104,7 +104,5 @@ export const Table = () => (
                 </div>
             </React.Fragment>
         ))}
-
     </div>
-
 )

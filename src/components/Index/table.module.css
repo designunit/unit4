@@ -25,6 +25,13 @@
     justify-content: center;
 }
 
+.name {
+    padding-left: 0;
+}
+.container > *:last-child {
+    padding-right: 0;
+}
+
 .name, .status, .year {
     border-right: solid 1px var(--color-background-opposite);
 }
@@ -36,12 +43,15 @@
     .container > * {
         padding: 1rem 8px;
     }
+
     .status {
         border-right: none;
     }
+
     .name {
         padding-left: 0;
     }
+
     .status {
         padding-right: 0;
     }
