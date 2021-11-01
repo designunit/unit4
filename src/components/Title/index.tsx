@@ -5,18 +5,15 @@ import cx from 'classnames'
 
 export interface ITitleProps {
     caption?: string
-    multiline?: boolean
 }
 
-export const Title: React.FC<ITitleProps> = ({ caption, children, multiline = false }) => (
+export const Title: React.FC<ITitleProps> = ({ caption, children }) => (
     <div className={s.title}>
         <Head>
-            {!multiline && (
-                <title>{children}</title>
-            )}
+            <title>{children}</title>
         </Head>
 
-        <h1 className={cx(s.h1, multiline && s.multiline)}>
+        <h1 className={s.h1}>
             {children}
         </h1>
 

@@ -9,15 +9,6 @@
     position: relative;
 }
 
-.multiline {
-    color: var(--color-text-opposite);
-    background: var(--color-background-opposite);
-    width: fit-content;
-    box-decoration-break: clone;
-    padding: 0 .5rem;
-    display: inline;
-}
-
 .title-caption {
     margin: 0;
     line-height: var(--font-second-size);
