@@ -8,7 +8,6 @@ import { DoubleBlock } from '@/components/Index/DoubleBlock'
 import { Hero } from '@/components/Index/Hero'
 import { InView } from 'react-intersection-observer'
 import Media from 'react-media'
-import { RunningLine } from '@/components/Index/RunningLine'
 
 const Page: NextPage = () => {
     const { t } = useTranslation()
@@ -159,7 +158,7 @@ const Page: NextPage = () => {
                         right={(
                             <>
                                 <div>
-                                    В каждым проекте мы стремимся создавать особые фичи для оптимизации процесса проектирования. Такая специфика предприятия позволяет сфокусироваться на деталях дизайн-решений.
+                                    В каждом проекте мы стремимся создавать особые фичи для оптимизации процесса проектирования. Такая специфика предприятия позволяет сфокусироваться на деталях дизайн-решений.
                                 </div>
                             </>
                         )}
@@ -167,7 +166,7 @@ const Page: NextPage = () => {
                 </div>
             </div>
 
-            <div
+            {/* <div
                 style={{
                     marginTop: vertOffset,
                 }}
@@ -185,7 +184,7 @@ const Page: NextPage = () => {
                     Команда студии сформировалась как экосистема с plug-in структурой где инициируются и поддерживаются амбиции каждого
                 </h1>
             </RunningLine>
-            <div style={{ height: '8rem' }} />
+            <div style={{ height: '8rem' }} /> */}
 
             <DoubleBlock
                 left={[]}
