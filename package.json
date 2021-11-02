@@ -22,11 +22,12 @@
     },
     "homepage": "https://github.com/destroytheimage/designunit4#readme",
     "dependencies": {
+        "@mdi/js": "^6.4.95",
         "@babel/helper-call-delegate": "^7.12.13",
-        "@mdi/js": "^3.9.97",
         "@mdi/react": "^1.4.0",
         "@nivo/sankey": "^0.73.0",
         "antd": "^4.8.0",
+        "body-scroll-lock": "^4.0.0-beta.0",
         "classnames": "^2.2.6",
         "gray-matter": "^4.0.3",
         "i18next": "^19.8.3",
@@ -46,6 +47,7 @@
     },
     "devDependencies": {
         "@svgr/webpack": "^4.3.3",
+        "@types/body-scroll-lock": "^3.1.0",
         "@types/classnames": "^2.2.11",
         "@types/lodash": "^4.14.164",
         "@types/node": "^14.14.6",

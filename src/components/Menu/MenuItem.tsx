@@ -5,9 +5,10 @@ import { LinkActive } from '../LinkActive'
 export interface IMenuItemProps {
     href: string
     text: string
+    onClick?: () => void
 }
 
-export const MenuItem: React.FC<IMenuItemProps> = ({ href, text }) => {
+export const MenuItem: React.FC<IMenuItemProps> = ({ href, text, onClick }) => {
     const { t } = useTranslation('menu')
 
     return (
@@ -15,7 +16,7 @@ export const MenuItem: React.FC<IMenuItemProps> = ({ href, text }) => {
             <style jsx>{`
             li {
                 margin: 0;
-                margin-bottom: 5px;
+                margin-top: 2px;
             }
 
             li a {
@@ -41,16 +42,32 @@ export const MenuItem: React.FC<IMenuItemProps> = ({ href, text }) => {
                 background-color: var(--color-background-opposite);
                 color: var(--color-text-opposite);
             }
+
+            @media screen and (max-width: 31.25em) {
+                li > :is(a, span) {
+                    font-size: 36px;
+                    color: var(--color-text-opposite);
+                    text-transform: uppercase;
+                }
+                .active {
+                    text-decoration: underline;
+                    text-decoration-color: var(--color-text-opposite);
+                }
+            }
         `}</style>
 
             <LinkActive href={href} passHref>
                 {active => active
                     ? (
-                        <span className='link-body active'>
+                        <span className='link-body active' 
+                            onClick={onClick}
+                        >
                             {t(text)}
                         </span>
                     ) : (
-                        <a className='link-body'>
+                        <a className='link-body'
+                            onClick={onClick}
+                        >
                             {t(text)}
                         </a>
                     )
