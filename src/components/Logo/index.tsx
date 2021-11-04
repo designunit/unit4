@@ -4,6 +4,7 @@ import Svg from './logo-unit4.svg'
 
 export interface ILogoProps {
     href: string
+    invert?: boolean
 }
 
 export const Logo: React.SFC<ILogoProps> = props => (
@@ -16,8 +17,9 @@ export const Logo: React.SFC<ILogoProps> = props => (
                 height: 36px;
 
                 position: relative;
-                top: -6px;
-                //left: -12px;
+                z-index: 1;
+                ${props.invert && 'filter: invert(1);'}
+                transition: filter .5s ease;
             }
         `}</style>
 
