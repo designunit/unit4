@@ -58,6 +58,10 @@ svg.icon-link:hover path {
     }
 } */
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--font-normal-family);
     font-weight: var(--font-normal-weight);
@@ -197,5 +201,9 @@ article .image {
     article ul {
         padding-left: 1.5em;
         padding-right: 1em;
+    }
+
+    body::-webkit-scrollbar:horizontal {
+        height: 0px;
     }
 }
