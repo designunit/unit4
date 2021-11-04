@@ -1,6 +1,6 @@
 .container {
     position: relative;
-    margin-bottom: 6rem;
+    margin: 6rem 0;
 }
 
 @media screen and (max-width: 960px) {
