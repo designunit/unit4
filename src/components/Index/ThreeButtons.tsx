@@ -58,11 +58,13 @@ export const ThreeButtons: React.FC<{ state: string }> = ({ state }) => (
                     background: x.href == state ? 'transparent' : '#FF006666',
                     transition: 'background .5s ease',
                 }} /> */}
-                <span
+                <div
                     className={s.text}
                 >
-                    {x.text}
-                </span>
+                    <span>
+                        {x.text}
+                    </span>
+                </div>
             </a>
         ))}
     </div>
@@ -91,11 +93,13 @@ export const ThreeButton: React.FC<{ index: 0 | 1 | 2 }> = ({ index }) => {
                     layout='fill'
                     objectFit='cover'
                 />
-                <span
+                <div
                     className={s.text}
                 >
-                    {x.text}
-                </span>
+                    <span>
+                        {x.text}
+                    </span>
+                </div>
             </div>
         </div>
     )

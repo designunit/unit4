@@ -25,20 +25,36 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: fit-content;
+    pointer-events: none;
+
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 900;
     color: var(--color-text);
     background: var(--color-text-opposite);
     padding: 0 .5rem;
-    pointer-events: none;
+}
+.text > span {
+    color: var(--color-text);
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 900;
+    box-decoration-break: clone;
+    line-height: var(--font-main-line-height);
 }
 
 @media screen and (max-width: 1280px) {
     .text {
-        font-size: 34px;
-        padding: .25rem .5rem;
+        background-color: transparent;
+        padding: unset;
         width: auto;
     }
+
+    .text > span {
+        background: var(--color-text-opposite);
+        font-size: 34px;
+        padding: 0 .5rem;
+    }
+
     .img:hover {
         filter: none;
     }
