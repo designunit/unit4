@@ -166,19 +166,23 @@ const Page: NextPage = () => {
     return (
         <>
             <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'flex-start',
+                position: 'relative',
                 padding: 'var(--content-padding)',
                 paddingLeft: 0,
             }}>
                 <Title>{t('Repository')}</Title>
 
-                <ProjectsSelector
-                    setTag={setTag}
-                    tags={tags}
-                    selected={tag}
-                />
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    right: 0,
+                }}>
+                    <ProjectsSelector
+                        setTag={setTag}
+                        tags={tags}
+                        selected={tag}
+                    />
+                </div>
             </div>
 
             <Gallery

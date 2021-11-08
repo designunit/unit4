@@ -55,7 +55,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                             />
                         </button>
 
-                        <div className={s.mobileMenuAnchor}>
+                        <div className={className(s.mobileMenuAnchor, mobileOpen && s.isOpen)}>
                             <div className={s.mobileMenuContainer}
                                 style={{
                                     left: mobileOpen ? 0 : '100vw',
