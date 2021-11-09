@@ -203,6 +203,9 @@ const Page: NextPage = () => {
             />
 
             <Table />
+            <div style={{
+                marginTop: vertOffset,
+            }} />
         </>
     )
 }
