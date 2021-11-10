@@ -1,8 +1,6 @@
-import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
-import { Embed } from '../src/components/Embed'
+import { NextPage } from 'next'
 import { Gallery } from '../src/components/Gallery'
 import { Title } from '../src/components/Title'
-import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 import React, { useState } from 'react'
 import { ProjectsSelector } from '@/components/ProjectsSelector'
@@ -155,9 +153,9 @@ const Page: NextPage = () => {
     const [tag, setTag] = useState(tags[0])
 
     const galleryItems = items
-        .filter((x: any, index) => tag === tags[0] ? true : (
-            index % (indexOf(tags, tag) + 1) == 0
-        ))
+        // .filter((x: any, index) => tag === tags[0] ? true : (
+        //     index % (indexOf(tags, tag) + 1) == 0
+        // ))
         .map((x: any) => ({
             ...x,
             text: t(x.text, { ns: 'projects' }),
@@ -172,7 +170,7 @@ const Page: NextPage = () => {
             }}>
                 <Title>{t('Repository')}</Title>
 
-                <div style={{
+                {/* <div style={{
                     position: 'absolute',
                     top: 0,
                     right: 0,
@@ -182,7 +180,7 @@ const Page: NextPage = () => {
                         tags={tags}
                         selected={tag}
                     />
-                </div>
+                </div> */}
             </div>
 
             <Gallery

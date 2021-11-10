@@ -1,6 +1,7 @@
 import { Gallery } from '@/components/Gallery'
 import { NextPage } from 'next'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Title } from '../src/components/Title'
 
 const items = [
@@ -86,23 +87,27 @@ const items = [
     },
 ]
 
-const Page: NextPage = () => (
-    <>
-        <Title>
-            С кем работаем
-        </Title>
+const Page: NextPage = () => {
+    const { t } = useTranslation()
 
-        <Gallery
-            mode='partners'
-            style={{
-                marginBottom: 50,
-            }}
-            items={items.map((x: any) => ({
-                ...x,
-                text: x.text,
-            }))}
-        />
-    </>
-)
+    return (
+        <>
+            <Title>
+                {t('partners', { ns: 'menu' })}
+            </Title>
+
+            <Gallery
+                mode='partners'
+                style={{
+                    marginBottom: 50,
+                }}
+                items={items.map((x: any) => ({
+                    ...x,
+                    text: x.text,
+                }))}
+            />
+        </>
+    )
+}
 
 export default Page
