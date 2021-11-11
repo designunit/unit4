@@ -55,67 +55,65 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                             />
                         </button>
 
-                        <div className={s.mobileMenuAnchor}>
-                            <div className={s.mobileMenuContainer}
-                                style={{
-                                    left: mobileOpen ? 0 : '100vw',
-                                }}
+                        <div className={s.mobileMenuContainer}
+                            style={{
+                                left: mobileOpen ? 0 : '100vw',
+                            }}
+                        >
+                            <menu className={className(s.menu, s.mobileMenu)}
+                                ref={menuRef}
                             >
-                                <menu className={className(s.menu, s.mobileMenu)}
-                                    ref={menuRef}
-                                >
-                                    {items.map((x, i) => (
-                                        <MenuItem
-                                            key={i}
-                                            {...x}
-                                            onClick={() => setMobileOpen(false)}
+                                {items.map((x, i) => (
+                                    <MenuItem
+                                        key={i}
+                                        {...x}
+                                        onClick={() => setMobileOpen(false)}
+                                    />
+                                ))}
+                            </menu>
+                            <div className={s.contacts}>
+                                <div className={s.icons}>
+                                    <a
+                                        href={'https://www.instagram.com/unit4.io/'}
+                                        target='_blank'
+                                    >
+                                        <Icon
+                                            path={mdiInstagram}
+                                            size={1.25}
                                         />
-                                    ))}
-                                </menu>
-                                <div className={s.contacts}>
-                                    <div className={s.icons}>
-                                        <a
-                                            href={'https://www.instagram.com/unit4.io/'}
-                                            target='_blank'
-                                        >
-                                            <Icon
-                                                path={mdiInstagram}
-                                                size={1.25}
-                                            />
-                                        </a>
-                                        <a
-                                            href={'https://www.facebook.com/designunit4'}
-                                            target='_blank'
-                                        >
-                                            <Icon
-                                                path={mdiFacebook}
-                                                size={1.25}
-                                            />
-                                        </a>
-                                        <a
-                                            href={'https://vimeo.com/designunit4'}
-                                            target='_blank'
-                                        >
-                                            <Icon
-                                                path={mdiVimeo}
-                                                size={1.25}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className={s.links} >
-                                        <a
-                                            href='mailto:inbox@unit4.io'
-                                            target={'_blank'}
-                                        >
-                                            inbox@unit4.io
-                                        </a>
-                                        <a
-                                            href='tel:+79219980303'
-                                            target={'_blank'}
-                                        >
-                                            +7 921 9980303
-                                        </a>
-                                    </div>
+                                    </a>
+                                    <a
+                                        href={'https://www.facebook.com/designunit4'}
+                                        target='_blank'
+                                    >
+                                        <Icon
+                                            path={mdiFacebook}
+                                            size={1.25}
+                                        />
+                                    </a>
+                                    <a
+                                        href={'https://vimeo.com/designunit4'}
+                                        target='_blank'
+                                    >
+                                        <Icon
+                                            path={mdiVimeo}
+                                            size={1.25}
+                                        />
+                                    </a>
+                                </div>
+                                <div className={s.links} >
+                                    <a
+                                        href='mailto:inbox@unit4.io'
+                                        target={'_blank'}
+                                    >
+                                        inbox@unit4.io
+                                    </a>
+                                    <a
+                                        href='tel:+79219980303'
+                                        target={'_blank'}
+                                    >
+                                        +7 921 9980303
+                                    </a>
                                 </div>
                             </div>
                         </div>

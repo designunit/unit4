@@ -1,0 +1,26 @@
+.container {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 3rem 0;
+    background: var(--link-color-active);
+    overflow: hidden;
+}
+
+.container > * {
+    flex-shrink: 0;
+    padding-right: 4rem;
+    min-width: 100%;
+    white-space: nowrap;
+    animation: anim 15s infinite linear;
+}
+
+@keyframes anim {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}

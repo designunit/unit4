@@ -37,15 +37,6 @@
     transition: opacity .5s ease;
 }
 
-.mobileMenuAnchor {
-    position: absolute;
-    top:0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: visible;
-}
-
 .mobileMenuContainer {
     position: absolute;
     z-index: 0;

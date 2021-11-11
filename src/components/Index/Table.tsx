@@ -73,15 +73,7 @@ export const Table = () => (
         className={s.container}
     >
         {table.map((x, i) => (
-            <div
-                key={i}
-                style={{
-                    display: 'flex',
-                    flexFlow: 'nowrap',
-                    alignItems: 'center',
-                    justifyContent: 'stretch',
-                }}
-            >
+            <React.Fragment key={i}>
                 <Link
                     href={x.href}
                 >
@@ -92,42 +84,15 @@ export const Table = () => (
                     </a>
                 </Link>
                 <div
-                    style={{
-                        width: 0,
-                        margin: '0 16px',
-                        borderRight: 'solid 1px var(--color-background-opposite)',
-                        alignSelf: 'stretch',
-                    }} />
-                <div
                     className={s.status}
                 >
                     {x.status}
                 </div>
                 <div
-                    className={s.mobileHidden}
-                    style={{
-                        width: 0,
-                        margin: '0 16px',
-                        borderRight: 'solid 1px var(--color-background-opposite)',
-                        alignSelf: 'stretch',
-                    }} />
-                <div
-                    className={s.mobileHidden}
-                    style={{
-                        flex: '0 0 10%',
-                        textAlign: 'center',
-                    }}
+                    className={`${s.mobileHidden} ${s.year}`}
                 >
                     {x.year}
                 </div>
-                <div
-                    className={s.mobileHidden}
-                    style={{
-                        width: 0,
-                        margin: '0 16px',
-                        borderRight: 'solid 1px var(--color-background-opposite)',
-                        alignSelf: 'stretch',
-                    }} />
                 <div
                     className={s.mobileHidden}
                     style={{
@@ -137,9 +102,7 @@ export const Table = () => (
                 >
                     {x.location}
                 </div>
-            </div>
+            </React.Fragment>
         ))}
-
     </div>
-
 )

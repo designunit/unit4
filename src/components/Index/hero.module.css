@@ -1,13 +1,9 @@
 .container {
     position: relative;
-    margin-bottom: 6rem;
+    margin: 6rem 0;
 }
 
 @media screen and (max-width: 960px) {
-    .mobileHidden {
-        display: none;
-    }
-
     .container {
         margin-bottom: 2rem;
     }

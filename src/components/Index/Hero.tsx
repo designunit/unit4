@@ -18,27 +18,15 @@ export const Hero = () => (
                 objectFit: 'contain',
             }}
         /> */}
-        <div
-            className={s.mobileHidden}
-            style={{
-                textAlign: 'right',
-                fontSize: 20,
-                fontWeight: 400,
-                marginBottom: 50,
-            }}
-        >
-            проектная студия design unit 4
-        </div>
-        <Loud mode='multiline'>
-            <div>
-                Cоздаем
-            </div>
-            <div style={{ paddingLeft: '30%' }}>
-                добавленное качество
-            </div>
-            <div style={{ paddingLeft: '10%' }}>
-                материального окружения
-            </div>
+        <Loud>
+            проектная студия<br />
+            <span
+                style={{
+                    textTransform: 'none'
+                }}
+            >
+                design : : unit 4
+            </span>
         </Loud>
     </div>
 )
