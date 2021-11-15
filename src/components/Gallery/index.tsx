@@ -44,13 +44,19 @@ export const Gallery: React.FC<IGallery> = ({ gridGap = 10, minCellSize = 200, s
     
                     display: grid;
                     grid-template-columns: ${isModeProjects ? 'repeat(4, 1fr)' : 'repeat(auto-fill, minmax(var(--cell-size-min), 1fr))'};
-                    grid-auto-rows: ${isModeProjects ? '350px' : '1fr'};
+                    grid-auto-rows: ${isModeProjects ? '500px 350px 350px' : '1fr'};
                     grid-gap: var(--grid-gap);
                 }
     
                 .gallery > *:first-child {
                     grid-row: 1 / 1;
                     grid-column: 1 / 1;
+                }
+
+                @media screen and (max-width: 960px) {
+                    .gallery {
+                        grid-auto-rows: 350px;
+                    }
                 }
     
                 @media screen and (max-width: 31.25em) {

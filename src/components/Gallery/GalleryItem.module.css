@@ -36,6 +36,7 @@
     align-items: center;
     justify-content: center;
 
+
     transition: filter .5s ease, transform .5s ease;
 }
 
@@ -84,6 +85,10 @@
     grid-column-end: span 1;
 }
 
+.col4 > .img {
+    object-position: bottom;
+}
+
 :is(.col4, .col2) {
     flex-flow: row;
     justify-content: space-between;
@@ -117,6 +122,7 @@
     }
     :is(.col4, .col2, .col1) .img {
         height: 100%;
+        object-position: bottom;
     }
 
     :is(.col4, .col2, .col1) > .label {
@@ -125,7 +131,7 @@
 }
 
 @media screen and (max-width: 31.25em) {
-    .label {
-        font-size: 0.8em;
+    :is(.col4, .col2, .col1) {
+        grid-column-end: span 4;
     }
 }
