@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 import { ProjectsSelector } from '@/components/ProjectsSelector'
 import { indexOf } from 'lodash'
 
-const items = [
+export const projects = [
     {
         href: '/volokolamsk',
         src: 'https://s.tmshv.com/unit4/volokolamsk-04.jpg',
@@ -152,7 +152,7 @@ const Page: NextPage = () => {
 
     const [tag, setTag] = useState(tags[0])
 
-    const galleryItems = items
+    const galleryItems = projects
         // .filter((x: any, index) => tag === tags[0] ? true : (
         //     index % (indexOf(tags, tag) + 1) == 0
         // ))
