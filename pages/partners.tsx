@@ -1,57 +1,113 @@
-import { Partner } from '../src/components/Partner'
-import { TextBlock } from '../src/components/TextBlock'
+import { Gallery } from '@/components/Gallery'
+import { NextPage } from 'next'
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Title } from '../src/components/Title'
 
-const Page = () => (
-    <>
-        <Title>ПАРТНЕРЫ</Title>
+const items = [
+    {
+        src: '/static/partners/городские проекты 1.svg',
+        href: 'https://city4people.ru/about-project',
+    },
+    {
+        src: '/static/partners/ispring 1.svg',
+        href: 'https://www.ispring.ru/',
+    },
+    {
+        src: '/static/partners/Агентство стратегического развития «ЦЕНТР» 1.svg',
+        href: 'https://www.centeragency.org/ru',
+    },
+    {
+        src: '/static/partners/Knight Frank 1.svg',
+        href: 'https://www.knightfrank.ru/',
+    },
+    {
+        src: '/static/partners/включи волоколамск 1.svg',
+        href: 'https://включиволоколамск.рф',
+    },
+    {
+        src: '/static/partners/сергей киселев и ко 1.svg',
+        href: 'http://sk-p.ru/',
+    },
+    {
+        src: '/static/partners/8 lines 1.svg',
+        href: 'http://www.llllllll.ru/',
+    },
+    {
+        src: '/static/partners/STUDIO MISHIN 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/Краснокамская администрация 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/Нягань администрация 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/Питкяранта администрация 1.svg',
+        href: 'http://апмр.рф/',
+    },
+    {
+        src: '/static/partners/ВТура администрания 1.svg',
+        href: 'https://www.v-tura.ru/',
+    },
+    {
+        src: '/static/partners/gerb-min 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/мла 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/knappt 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/центр компетенций 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/УЖКХ ГО Дербент 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/y2pjhthufgs_750_auto_jpg_5_80 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/урбаника 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/KINGLAB 1.svg',
+        href: 'https://kinglab.com/',
+    },
+]
 
-        <Partner
-            href='http://www.mlaplus.com/'
-            title='www.mlaplus.com'
-            src='/static/logo_mla.svg'
-        >
-            <TextBlock>
-                Архитектура, градостроительство, консалтинг.
-            </TextBlock>
-        </Partner>
+const Page: NextPage = () => {
+    const { t } = useTranslation()
 
-        <Partner
-            href='https://gorsreda86.ugraces.ru/'
-            title='www.knappt.com'
-            src='/static/HMAO_logo_bw.svg'
-            imageWidth={300}
-        >
-            <TextBlock>
-                Центр компетенций по вопросам городской среды
-                Ханты-Мансийского автономного округа - Югры.
-            </TextBlock>
-        </Partner>
+    return (
+        <>
+            <Title>
+                {t('partners', { ns: 'menu' })}
+            </Title>
 
-        <Partner
-            href='http://urbanica.spb.ru/'
-            title='urbanica.spb.ru'
-            src='/static/urbanica_logo.svg'
-            imageWidth={400}
-        >
-            <TextBlock>
-                Институт территориального планирования Урбаника.
-                <br />
-                Cпециализируется на градостроительном проектированиии и консалтинге.
-            </TextBlock>
-        </Partner>
-
-        <Partner
-            href='http://www.knappt.com/'
-            title='www.knappt.com'
-            src='/static/logo_knappt.svg'
-        >
-            <TextBlock>
-                Проектируют и производят изделия из бетона, фибробетона,
-                стеклофибробетона, стеклофиброгипса и композитных материалов.
-            </TextBlock>
-        </Partner>
-    </>
-)
+            <Gallery
+                mode='partners'
+                style={{
+                    marginBottom: 50,
+                }}
+                items={items.map((x: any) => ({
+                    ...x,
+                    text: x.text,
+                }))}
+            />
+        </>
+    )
+}
 
 export default Page

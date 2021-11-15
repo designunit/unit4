@@ -1,105 +1,97 @@
-import className from 'classnames'
+import cx from 'classnames'
 import Link from 'next/link'
 import * as React from 'react'
 import { IGalleryItem } from '.'
+import s from './GalleryItem.module.css'
+import Ratio from 'react-ratio'
 
 export interface IGalleryItemProps extends IGalleryItem {
     smallLabel: boolean
+    index?: number
 }
 
-export const GalleryItem: React.FC<IGalleryItemProps> = props => (
-    <Link href={props.href}>
-        <a className={'image'}>
-            <style jsx>{`
-                a {
-                    display: block;
+type ContainerProps = Partial<{
+    href: string,
+    className?: string
+}>
 
-                    overflow: hidden;
-                }
-
-                a:hover img {
-                    transform: scale(1);
-                }
-
-                img {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-
-                    filter: sepia(100%) hue-rotate(260deg);
-                    filter: grayscale(100%) contrast(0.75) brightness(1.25);
-
-                    transition: 0.25s ease;
-                    transform: scale(1);
-                }
-
-                .image {
-                    position: relative;
-                }
-
-                .image::after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-
-                    transition: .5s ease;
-
-                    background-color: #f91b86;
-                    mix-blend-mode: multiply;
-                }
-
-                .label {
-                    z-index: 1;
-                    pointer-events: none;
-
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    color: white;
-                    font-family: var(--font-normal-family);
-                    font-weight: bolder;
-                    font-size: 1.2em;
-                    text-align: center;
-
-                    padding: 5px;
-                }
-
-                .label.small {
-                    font-size: 0.8em;
-                    line-height: 1.6em;
-                }
-
-                @media screen and (max-width: 31.25em) {
-                    .label {
-                        font-size: 0.8em;
-                    }
-
-                    img {
-                        transform: scale(1.1);
-                    }
-                }
-            `}</style>
-
-            <img
-                src={props.src}
-            />
-
-            <div className={className('label', {
-                small: props.smallLabel,
-            })}>
-                {props.text}
+const Container: React.FC<ContainerProps> = ({ href, className, children }) => (
+    <>
+        {href ? (
+            <Link href={href}>
+                <a className={cx(s.container, className)}>
+                    {children}
+                </a>
+            </Link>
+        ) : (
+            <div className={cx(s.container, className)}>
+                {children}
             </div>
-        </a>
-    </Link>
+        )}
+    </>
 )
+
+export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, mode, index, ...props }) => {
+    const getClassByIndex = React.useCallback(() => {
+        const indexCycled = index % 6 // Math.floor(Math.random()* 7) 
+        switch (indexCycled) {
+            case 0:
+                return s.col4
+
+            case 1:
+            case 2:
+                return s.col1
+
+            case 3:
+            case 4:
+            case 5:
+                return s.col2
+
+            default:
+                return null
+        }
+    }, [index])
+
+    const isModePartners = mode === 'partners'
+    const isModeProjects = mode === 'projects'
+
+    return (
+        <Container
+            href={href}
+            className={isModeProjects && cx(s.border, s.hoverZoom, getClassByIndex())}
+        >
+            <div
+                className={cx(isModePartners && s.border)}
+            >
+                {isModeProjects && (
+                    <img
+                        src={src}
+                        className={s.img}
+                    />
+                )}
+                {isModePartners && (
+                    <Ratio
+                        contentClassName={cx(s.img, isModePartners && s.gray)}
+                    >
+                        <img
+                            src={src}
+                            style={{
+                                objectFit: 'contain',
+                                padding: 10,
+                                width: '100%',
+                                height: '100%',
+                            }}
+                        />
+                    </Ratio>
+                )}
+            </div>
+            {isModeProjects && (
+                <div className={cx(s.label, {
+                    small: smallLabel,
+                })}>
+                    {text}
+                </div>
+            )}
+        </Container>
+    )
+}

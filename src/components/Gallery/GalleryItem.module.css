@@ -1,0 +1,137 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+
+    text-decoration: none;
+}
+.container a {
+    cursor: pointer;
+}
+
+.container:hover {
+    text-decoration: none;
+}
+
+.container:hover .gray {                
+    filter: grayscale(0%);
+}
+
+.border:hover  {
+    border-color: #f91b86;
+}
+
+.gray {
+    filter: grayscale(100%);
+}
+
+.img {
+    display: block;
+    width: 100%;
+    height: calc(var(--cell-size-min) + var(--grid-gap));
+    object-fit: cover;
+    object-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    transition: filter .5s ease, transform .5s ease;
+}
+
+.hoverZoom > div {
+    position: relative;
+    overflow: hidden;
+}
+.hoverZoom:hover .img {
+    transform: scale(1.25);   
+}
+
+.label {
+    pointer-events: none;
+
+    position: relative;
+
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+
+    color: var(--color-text);
+    font-family: var(--font-normal-family);
+    font-weight: bolder;
+    font-size: 1.2em;
+    
+    padding: .5rem 0;
+}
+
+.label.small {
+    font-size: 0.8em;
+    line-height: 1.6em;
+}
+
+.border {
+    border: solid 1px var(--color-background-opposite);
+    transition: all .5s ease;
+}
+
+.col4 {
+    grid-column-end: span 4;
+}
+.col2 {
+    grid-column-end: span 2;
+}
+.col1 {
+    grid-column-end: span 1;
+}
+
+.col4 > .img {
+    object-position: bottom;
+}
+
+:is(.col4, .col2) {
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+:is(.col4, .col2) .img {
+    height: 100%;
+}
+
+:is(.col4, .col2, .col1) > .label {
+    padding: 5px var(--grid-gap);
+    flex: 1 1 auto;
+}
+
+.col4 > div:first-child {
+    flex: 1 0 calc(75% - 2px);
+}
+.col2 > div:first-child {
+    flex: 0 0 calc(50% - var(--grid-gap) * .5);
+}
+
+@media screen and (max-width: 960px) {
+    :is(.col4, .col2, .col1) {
+        grid-column-end: span 2;
+        flex-flow: column;
+    }
+
+    :is(.col4, .col2, .col1) > div:first-child {
+        height: 50%;
+        flex: 0 0 50%;
+    }
+    :is(.col4, .col2, .col1) .img {
+        height: 100%;
+        object-position: bottom;
+    }
+
+    :is(.col4, .col2, .col1) > .label {
+        flex: 1 0 50%;
+    }
+}
+
+@media screen and (max-width: 31.25em) {
+    :is(.col4, .col2, .col1) {
+        grid-column-end: span 4;
+    }
+}

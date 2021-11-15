@@ -1,11 +1,12 @@
-import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
-import { Embed } from '../src/components/Embed'
+import { NextPage } from 'next'
 import { Gallery } from '../src/components/Gallery'
 import { Title } from '../src/components/Title'
-import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
+import React, { useState } from 'react'
+import { ProjectsSelector } from '@/components/ProjectsSelector'
+import { indexOf } from 'lodash'
 
-const items = [
+export const projects = [
     {
         href: '/volokolamsk',
         src: 'https://s.tmshv.com/unit4/volokolamsk-04.jpg',
@@ -138,21 +139,56 @@ const items = [
     },
 ]
 
+const tags = [
+    'все',
+    'конкурсы',
+    'эскизы',
+    'тег в три слова',
+    'жопа',
+]
+
 const Page: NextPage = () => {
     const { t } = useTranslation()
 
+    const [tag, setTag] = useState(tags[0])
+
+    const galleryItems = projects
+        // .filter((x: any, index) => tag === tags[0] ? true : (
+        //     index % (indexOf(tags, tag) + 1) == 0
+        // ))
+        .map((x: any) => ({
+            ...x,
+            text: t(x.text, { ns: 'projects' }),
+        }))
+
     return (
         <>
-            <Title>{t('Repository')}</Title>
+            <div style={{
+                position: 'relative',
+                padding: 'var(--content-padding)',
+                paddingLeft: 0,
+            }}>
+                <Title>{t('Repository')}</Title>
+
+                {/* <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    right: 0,
+                }}>
+                    <ProjectsSelector
+                        setTag={setTag}
+                        tags={tags}
+                        selected={tag}
+                    />
+                </div> */}
+            </div>
 
             <Gallery
+                mode='projects'
                 style={{
                     marginBottom: 50,
                 }}
-                items={items.map((x: any) => ({
-                    ...x,
-                    text: t(x.text, { ns: 'projects' }),
-                }))}
+                items={galleryItems}
             />
         </>
     )

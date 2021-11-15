@@ -16,6 +16,8 @@ import { ImageSet } from '@/components/ImageSet'
 import { WideBlock } from '@/components/WideBlock'
 import { HeterotopiaTitle } from '@/app/heterotopia/HeterotopiaTitle'
 import { HeterotopiaHighlight } from '@/app/heterotopia/HeterotopiaHighlight'
+import { projects } from './projects'
+import { useTranslation } from 'react-i18next'
 
 const mdxComponents = {
     Image,
@@ -41,12 +43,16 @@ const Page: NextPage<Props> = props => {
         )
     }
 
+    const projectItem = projects.find(x => props.slug === x.href)
+
+    const { t } = useTranslation()
+
     return (
         <div>
             <Meta
-                title={props.excerpt}
-                description={null}
-                image={null}
+                title={projectItem?.text && t(projectItem.text, { ns: 'projects' })}
+                description={props.excerpt}
+                image={projectItem?.src}
                 url={`https://unit4.io${props.slug}`}
             />
 
