@@ -1,4 +1,6 @@
 import s from './threeButtons.module.css'
+import Image from 'next/image'
+import React from 'react'
 
 const buttons = [
     {
@@ -18,12 +20,13 @@ const buttons = [
     },
 ]
 
-export const ThreeButtons = ({ state }) => (
+export const ThreeButtons: React.FC<{ state: string }> = ({ state }) => (
     <div
         className={s.container}
     >
-        {buttons.map(x => (
+        {buttons.map((x, i) => (
             <a
+                key={i}
                 href={x.href}
                 onClick={e => {
                     if (!document) return
@@ -39,17 +42,13 @@ export const ThreeButtons = ({ state }) => (
                     position: 'relative',
                     flex: '1 0 30%',
                     height: 130,
-                }}>
-                <img
+                }}
+            >
+                <Image
                     src={x.src}
-                    style={{
-                        display: 'block',
-                        objectFit: 'cover',
-                        width: '100%',
-                        height: '100%',
-                        filter: x.href == state ? 'grayscale(1)' : '',
-                        transition: 'filter .5s ease'
-                    }}
+                    className={`${s.img} ${x.href == state && s.imgSelected}`}
+                    layout='fill'
+                    objectFit='cover'
                 />
                 {/* <div style={{
                     position: 'absolute',
@@ -59,12 +58,49 @@ export const ThreeButtons = ({ state }) => (
                     background: x.href == state ? 'transparent' : '#FF006666',
                     transition: 'background .5s ease',
                 }} /> */}
-                <span
+                <div
                     className={s.text}
                 >
-                    {x.text}
-                </span>
+                    <span>
+                        {x.text}
+                    </span>
+                </div>
             </a>
         ))}
     </div>
 )
+
+export const ThreeButton: React.FC<{ index: 0 | 1 | 2 }> = ({ index }) => {
+    const x = buttons[index]
+    return (
+        <div
+            style={{
+                display: 'flex',
+                marginBottom: 50,
+            }}
+        >
+            <div
+                key={index}
+                style={{
+                    position: 'relative',
+                    flex: '1 0 30%',
+                    height: 130,
+                }}
+            >
+                <Image
+                    src={x.src}
+                    className={`${s.img}`}
+                    layout='fill'
+                    objectFit='cover'
+                />
+                <div
+                    className={s.text}
+                >
+                    <span>
+                        {x.text}
+                    </span>
+                </div>
+            </div>
+        </div>
+    )
+}
