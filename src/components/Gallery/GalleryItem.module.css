@@ -85,7 +85,7 @@
     grid-column-end: span 1;
 }
 
-.col4 > .img {
+.col4 .img {
     object-position: bottom;
 }
 
