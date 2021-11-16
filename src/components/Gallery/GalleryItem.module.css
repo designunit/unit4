@@ -100,11 +100,14 @@
 
 :is(.col4, .col2, .col1) > .label {
     padding: 5px var(--grid-gap);
-    flex: 1 1 auto;
+    flex: 1 1 50%;
 }
 
 .col4 > div:first-child {
-    flex: 1 0 calc(75% - 2px);
+    flex: 1 1 auto;
+}
+.col4 > .label {
+    flex: 0 0 calc(25% + 2px);
 }
 .col2 > div:first-child {
     flex: 0 0 calc(50% - var(--grid-gap) * .5);

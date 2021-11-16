@@ -1,0 +1,32 @@
+.wide4 {
+    grid-area: wide4;
+}
+.wide2 {
+    grid-area: wide2;
+}
+.wide1 {
+    grid-area: wide1;
+}
+
+.gallery {
+    --cell-size-min: 200px;
+    --grid-gap: 10px;
+
+    display: grid;
+    grid-gap: var(--grid-gap);
+}
+
+@media screen and (max-width: 960px) {
+    .gallery {
+        grid-auto-rows: 350px;
+    }
+}
+
+@media screen and (max-width: 31.25em) {
+    .gallery {
+        --item-right-margin: 0;
+        --cell-size-min: 150px;
+        --grid-gap: 8px;
+        padding: 0 8px;
+    }
+}
