@@ -1,4 +1,6 @@
 import { Gallery } from '@/components/Gallery'
+import { GalleryItem } from '@/components/Gallery/GalleryItem'
+import { resizeImage } from '@/lib/image'
 import { NextPage } from 'next'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
@@ -101,11 +103,19 @@ const Page: NextPage = () => {
                 style={{
                     marginBottom: 50,
                 }}
-                items={items.map((x: any) => ({
-                    ...x,
-                    text: x.text,
-                }))}
-            />
+            >
+                {items.map((x: any, i: number) => (
+                    <GalleryItem
+                        key={x.src}
+                        src={resizeImage(x.src, { w: 600, h: 600 })}
+                        text={x.text}
+                        alt={x.alt}
+                        href={x.href}
+                        smallLabel={x.smallLabel}
+                        mode={'partners'}
+                    />
+                ))}
+            </Gallery>
         </>
     )
 }
