@@ -110,14 +110,20 @@ export const getStaticPaths: GetStaticPaths = async ctx => {
 
     return {
         paths: pages
-            .map(({ slug, locale }) => {
+            .reduce((acc, { slug, locale }) => {
                 const slugNoSlash = slug.split('/').slice(1)
-
-                return {
-                    params: { slug: slugNoSlash },
-                    locale,
-                }
-            }),
+                return [
+                    ...acc,
+                    {
+                        params: { slug: slugNoSlash },
+                        locale: 'ru',
+                    },
+                    {
+                        params: { slug: slugNoSlash },
+                        locale: 'en',
+                    },
+                ]
+            }, []),
         fallback: false,
     }
 }
