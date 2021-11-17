@@ -103,6 +103,13 @@
     flex: 1 1 50%;
 }
 
+:is(.col1, .col2) {
+    grid-row: span 6;
+}
+.col4 {
+    grid-row: span 8;
+}
+
 .col4 > div:first-child {
     flex: 1 1 auto;
 }
@@ -117,6 +124,7 @@
     :is(.col4, .col2, .col1) {
         grid-column-end: span 2;
         flex-flow: column;
+        grid-row: span 6;
     }
 
     :is(.col4, .col2, .col1) > div:first-child {
