@@ -63,11 +63,17 @@
     font-size: 1.2em;
     
     padding: .5rem 0;
+    
+    transition: color .5s ease;
 }
 
 .label.small {
     font-size: 0.8em;
     line-height: 1.6em;
+}
+
+:hover > .label {
+    color: var(--link-color-active);
 }
 
 .border {
