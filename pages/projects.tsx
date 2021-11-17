@@ -167,6 +167,7 @@ const Page: NextPage = () => {
                 position: 'relative',
                 padding: 'var(--content-padding)',
                 paddingLeft: 0,
+                paddingTop: '2rem',
             }}>
                 <Title>{t('Repository')}</Title>
 

@@ -140,11 +140,26 @@ a:hover svg {
 
 article {
     margin-bottom: 50px;
+}
 
-    margin: auto;
-    display: flex;
-    flex-flow: column;
+article > :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    ul,
+) {
     max-width: 960px;
+}
+
+article h1 {
+    margin-top: 2rem;
+}
+
+article h2 {
+    margin-top: var(--margin-s);
 }
 
 article p {
@@ -161,7 +176,9 @@ article ul {
 
     margin-bottom: 2em;
 }
-
+article ul li {
+    margin-bottom: .5em;
+}
 article ul li:before {
     content: '/';
     display: block;
