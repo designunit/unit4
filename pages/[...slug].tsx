@@ -48,7 +48,7 @@ const Page: NextPage<Props> = props => {
     const { t } = useTranslation()
 
     return (
-        <div>
+        <>
             <Meta
                 title={projectItem?.text && t(projectItem.text, { ns: 'projects' })}
                 description={props.excerpt}
@@ -64,7 +64,7 @@ const Page: NextPage<Props> = props => {
             <article>
                 <MDXRemote {...props.source} components={mdxComponents} />
             </article>
-        </div>
+        </>
     )
 }
 

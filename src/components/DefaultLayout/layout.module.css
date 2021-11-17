@@ -14,6 +14,7 @@
     justify-content: space-between;
     padding: var(--content-padding);
 
+    padding: 15%;
     padding-top: .5rem;
     padding-bottom: .5rem;
     margin-bottom: 2rem;
@@ -44,16 +45,29 @@
     .content {
         width: 80%;
     }
+    .layout header {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 }
 
 @media screen and (max-width: 960px) {
     .content {
         width: 90%;
     }
+    .layout header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
 @media screen and (max-width: 31.25em) {
     .content {
         width: 100%;
+    }
+    .layout header {
+        padding: var(--content-padding);
+        padding-top: .5rem;
+        padding-bottom: .5rem;
     }
 }
