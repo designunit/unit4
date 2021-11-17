@@ -140,15 +140,20 @@ a:hover svg {
 
 article {
     margin-bottom: 50px;
+
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    max-width: 960px;
 }
 
-article .article-fragment p {
+article p {
     padding: var(--content-padding);
     margin-bottom: 2em;
     hyphens: auto;
 }
 
-article .article-fragment ul {
+article ul {
     list-style: none;
     margin-left: 0;
     padding-left: 1em;
@@ -157,7 +162,7 @@ article .article-fragment ul {
     margin-bottom: 2em;
 }
 
-article .article-fragment ul li:before {
+article ul li:before {
     content: '/';
     display: block;
     float: left;
@@ -166,7 +171,7 @@ article .article-fragment ul li:before {
     font-weight: bolder;
 }
 
-article .article-fragment li p {
+article li p {
     margin-bottom: 0.5em;
 }
 
