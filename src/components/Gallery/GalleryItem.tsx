@@ -15,7 +15,7 @@ type ContainerProps = Partial<{
     className?: string
 }>
 
-const sizeClassNmaeMap = {
+const sizeClassNameMap = {
     1: s.col1,
     2: s.col2,
     4: s.col4,
@@ -44,7 +44,7 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
     return (
         <Container
             href={href}
-            className={isModeProjects && cx(s.border, s.hoverZoom, sizeClassNmaeMap[size])}
+            className={isModeProjects && cx(s.border, s.hoverZoom, sizeClassNameMap[size])}
         >
             <div
                 className={cx(isModePartners && s.border)}
