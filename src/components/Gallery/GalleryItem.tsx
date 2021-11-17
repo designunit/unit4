@@ -31,7 +31,7 @@ const Container: React.FC<ContainerProps> = ({ href, className, children }) => (
     </>
 )
 
-export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, mode, index, ...props }) => {
+export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, tags, mode, index, ...props }) => {
     const getClassByIndex = React.useCallback(() => {
         const indexCycled = index % 6 // Math.floor(Math.random()* 7) 
         switch (indexCycled) {
@@ -90,6 +90,9 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
                     small: smallLabel,
                 })}>
                     {text}
+                    <div className={s.tags}>
+                        {tags.join(' ')}
+                    </div>
                 </div>
             )}
         </Container>

@@ -152,13 +152,22 @@ const Page: NextPage = () => {
 
     const [tag, setTag] = useState(tags[0])
 
+    const roundZeroToI = (i) => Math.floor(Math.random() * i)
+
     const galleryItems = projects
-        // .filter((x: any, index) => tag === tags[0] ? true : (
-        //     index % (indexOf(tags, tag) + 1) == 0
-        // ))
         .map((x: any) => ({
             ...x,
             text: t(x.text, { ns: 'projects' }),
+            tags: [
+                ['Санкт-Петербург', 'Краснокамск', 'Нижний Новгород', 'Гюмри, Армения'][roundZeroToI(5)],
+                ['2027', '2020', '2019-2020', '2020', '2020'][roundZeroToI(5)],
+                [
+                    ['#соцкульт', '#дизайн-код', '#софт', '#education', '#research', '#masterplan', '#мастерплан'][roundZeroToI(7)],
+                    ['#соцкульт', '#дизайн-код', '#софт', '#education', '#research', '#masterplan', '#мастерплан'][roundZeroToI(7)],
+                    ['#соцкульт', '#дизайн-код', '#софт', '#education', '#research', '#masterplan', '#мастерплан'][roundZeroToI(7)],
+                    ['#соцкульт', '#дизайн-код', '#софт', '#education', '#research', '#masterplan', '#мастерплан'][roundZeroToI(7)],
+                ].slice(0, 1 + roundZeroToI(3)).join(' ')
+            ]
         }))
 
     return (

@@ -56,6 +56,7 @@
     display: flex;
     flex-flow: column;
     align-items: flex-start;
+    justify-content: space-between;
 
     color: var(--color-text);
     font-family: var(--font-normal-family);
@@ -68,6 +69,11 @@
 .label.small {
     font-size: 0.8em;
     line-height: 1.6em;
+}
+
+.tags {
+    font-family: var(--font-second-family);
+    font-size: var(--font-second-size);
 }
 
 .border {
@@ -87,6 +93,10 @@
 
 .col4 > .img {
     object-position: bottom;
+}
+
+.col1 .tags {
+    display: none;
 }
 
 :is(.col4, .col2) {
@@ -127,6 +137,10 @@
 
     :is(.col4, .col2, .col1) > .label {
         flex: 1 0 50%;
+    }
+
+    .col1 .tags {
+        display: flex;
     }
 }
 

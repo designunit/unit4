@@ -9,6 +9,7 @@ export interface IGalleryItem {
     href?: string
     text?: string | React.ReactNode
     mode: 'partners' | 'projects'
+    tags?: string[]
 }
 
 export interface IGallery {
@@ -79,6 +80,7 @@ export const Gallery: React.FC<IGallery> = ({ gridGap = 10, minCellSize = 200, s
                     smallLabel={smallLabel}
                     mode={mode}
                     index={i}
+                    tags={x.tags}
                 />
             ))}
         </div>
