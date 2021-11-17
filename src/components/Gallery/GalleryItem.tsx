@@ -7,13 +7,19 @@ import Ratio from 'react-ratio'
 
 export interface IGalleryItemProps extends IGalleryItem {
     smallLabel: boolean
-    index?: number
+    size?: 1 | 2 | 4
 }
 
 type ContainerProps = Partial<{
     href: string,
     className?: string
 }>
+
+const sizeClassNameMap = {
+    1: s.col1,
+    2: s.col2,
+    4: s.col4,
+}
 
 const Container: React.FC<ContainerProps> = ({ href, className, children }) => (
     <>
@@ -31,34 +37,14 @@ const Container: React.FC<ContainerProps> = ({ href, className, children }) => (
     </>
 )
 
-export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, mode, index, ...props }) => {
-    const getClassByIndex = React.useCallback(() => {
-        const indexCycled = index % 6 // Math.floor(Math.random()* 7) 
-        switch (indexCycled) {
-            case 0:
-                return s.col4
-
-            case 1:
-            case 2:
-                return s.col1
-
-            case 3:
-            case 4:
-            case 5:
-                return s.col2
-
-            default:
-                return null
-        }
-    }, [index])
-
+export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, mode, size, ...props }) => {
     const isModePartners = mode === 'partners'
     const isModeProjects = mode === 'projects'
 
     return (
         <Container
             href={href}
-            className={isModeProjects && cx(s.border, s.hoverZoom, getClassByIndex())}
+            className={isModeProjects && cx(s.border, s.hoverZoom, sizeClassNameMap[size])}
         >
             <div
                 className={cx(isModePartners && s.border)}
