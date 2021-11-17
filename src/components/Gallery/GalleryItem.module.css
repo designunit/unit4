@@ -74,6 +74,14 @@
 .tags {
     font-family: var(--font-second-family);
     font-size: var(--font-second-size);
+    line-height: 25px;
+    display: flex;
+    flex-flow: wrap;
+    gap: .25rem;
+}
+.tags > span {
+    padding: 0 var(--grid-gap);
+    border: solid 1px var(--color-text);
 }
 
 .border {
@@ -109,7 +117,7 @@
 }
 
 :is(.col4, .col2, .col1) > .label {
-    padding: 5px var(--grid-gap);
+    padding: var(--grid-gap);
     flex: 1 1 auto;
 }
 

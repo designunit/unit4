@@ -160,13 +160,13 @@ const Page: NextPage = () => {
             text: t(x.text, { ns: 'projects' }),
             tags: [
                 ['Санкт-Петербург', 'Краснокамск', 'Нижний Новгород', 'Гюмри, Армения'][roundZeroToI(5)],
-                ['2027', '2020', '2019-2020', '2020', '2020'][roundZeroToI(5)],
-                [
-                    ['#соцкульт', '#дизайн-код', '#софт', '#education', '#research', '#masterplan', '#мастерплан'][roundZeroToI(7)],
-                    ['#соцкульт', '#дизайн-код', '#софт', '#education', '#research', '#masterplan', '#мастерплан'][roundZeroToI(7)],
-                    ['#соцкульт', '#дизайн-код', '#софт', '#education', '#research', '#masterplan', '#мастерплан'][roundZeroToI(7)],
-                    ['#соцкульт', '#дизайн-код', '#софт', '#education', '#research', '#masterplan', '#мастерплан'][roundZeroToI(7)],
-                ].slice(0, 1 + roundZeroToI(3)).join(' ')
+                ['2027', '2020', '2019', '2020', '2020'][roundZeroToI(5)],
+                ...[
+                    ['соцкульт', 'дизайн-код', 'софт', 'education', 'research', 'masterplan', 'мастерплан'][roundZeroToI(7)],
+                    ['соцкульт', 'дизайн-код', 'софт', 'education', 'research', 'masterplan', 'мастерплан'][roundZeroToI(7)],
+                    ['соцкульт', 'дизайн-код', 'софт', 'education', 'research', 'masterplan', 'мастерплан'][roundZeroToI(7)],
+                    ['соцкульт', 'дизайн-код', 'софт', 'education', 'research', 'masterplan', 'мастерплан'][roundZeroToI(7)],
+                ].slice(0, 1 + roundZeroToI(3))
             ]
         }))
 

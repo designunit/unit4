@@ -91,7 +91,7 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
                 })}>
                     {text}
                     <div className={s.tags}>
-                        {tags.join(' ')}
+                        {tags.map(x => <span>{x}</span>)}
                     </div>
                 </div>
             )}
