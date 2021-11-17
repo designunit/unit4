@@ -16,34 +16,33 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
             <Head>
                 <title>{props.title}</title>
             </Head>
-
+            {!props.showHeader ? null : (
+                <>
+                    <header>
+                        <Menu
+                            items={[
+                                {
+                                    href: '/about',
+                                    text: 'about',
+                                },
+                                {
+                                    href: '/projects',
+                                    text: 'projects',
+                                },
+                                {
+                                    href: '/partners',
+                                    text: 'partners',
+                                },
+                                {
+                                    href: '/contact',
+                                    text: 'contacts',
+                                },
+                            ]}
+                        />
+                    </header>
+                </>
+            )}
             <div className={s.content}>
-                {!props.showHeader ? null : (
-                    <>
-                        <header>
-                            <Menu
-                                items={[
-                                    {
-                                        href: '/about',
-                                        text: 'about',
-                                    },
-                                    {
-                                        href: '/projects',
-                                        text: 'projects',
-                                    },
-                                    {
-                                        href: '/partners',
-                                        text: 'partners',
-                                    },
-                                    {
-                                        href: '/contact',
-                                        text: 'contacts',
-                                    },
-                                ]}
-                            />
-                        </header>
-                    </>
-                )}
 
                 <main>
                     {props.children}
