@@ -64,6 +64,8 @@
     font-size: 1.2em;
     
     padding: .5rem 0;
+    
+    transition: color .5s ease;
 }
 
 .label.small {
@@ -84,6 +86,10 @@
     border: solid 1px var(--color-text);
 }
 
+:hover > .label {
+    color: var(--link-color-active);
+}
+
 .border {
     border: solid 1px var(--color-background-opposite);
     transition: all .5s ease;
@@ -99,7 +105,7 @@
     grid-column-end: span 1;
 }
 
-.col4 > .img {
+.col4 .img {
     object-position: bottom;
 }
 
@@ -119,10 +125,23 @@
 :is(.col4, .col2, .col1) > .label {
     padding: var(--grid-gap);
     flex: 1 1 auto;
+    padding: 5px var(--grid-gap);
+    flex: 1 1 50%;
+}
+
+:is(.col1, .col2) {
+    grid-row: span 6;
+}
+
+.col4 {
+    grid-row: span 8;
 }
 
 .col4 > div:first-child {
-    flex: 1 0 calc(75% - 2px);
+    flex: 1 1 auto;
+}
+.col4 > .label {
+    flex: 0 0 calc(25% + 2px);
 }
 .col2 > div:first-child {
     flex: 0 0 calc(50% - var(--grid-gap) * .5);
@@ -132,6 +151,7 @@
     :is(.col4, .col2, .col1) {
         grid-column-end: span 2;
         flex-flow: column;
+        grid-row: span 6;
     }
 
     :is(.col4, .col2, .col1) > div:first-child {
