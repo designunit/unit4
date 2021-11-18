@@ -20,15 +20,16 @@ const Page: NextPage = () => {
 
     const getTagsPlaceholder = () => {
         const roundZeroToI = (i) => Math.floor(Math.random() * i)
+
+        const count = 1 + roundZeroToI(3)
         return [
             ['Санкт-Петербург', 'Краснокамск', 'Нижний Новгород', 'Гюмри', 'Питкяранта'][roundZeroToI(5)],
             ['2027', '2020', '2019', '2020', '2020'][roundZeroToI(5)],
-            ...[
-                ['соцкульт', 'дизайн-код', 'софт', 'education', 'research', 'masterplan', 'мастерплан'][roundZeroToI(7)],
-                ['соцкульт', 'дизайн-код', 'софт', 'education', 'research', 'masterplan', 'мастерплан'][roundZeroToI(7)],
-                ['соцкульт', 'дизайн-код', 'софт', 'education', 'research', 'masterplan', 'мастерплан'][roundZeroToI(7)],
-                ['соцкульт', 'дизайн-код', 'софт', 'education', 'research', 'masterplan', 'мастерплан'][roundZeroToI(7)],
-            ].slice(0, 1 + roundZeroToI(3))
+            ...['соцкульт', 'дизайн-код', 'софт', 'education', 'research', 'masterplan', 'мастерплан'].reduce((acc, x, i, arr) => {
+                const index = roundZeroToI(arr.length - 1)
+                const item = arr.splice(index, 1)[0]
+                return i > count ? acc : [...acc, item]
+            }, [])
         ]
     }
 
@@ -70,6 +71,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={4}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -81,6 +83,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={1}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -92,6 +95,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={1}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -103,6 +107,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={2}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -114,6 +119,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={2}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -125,6 +131,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={2}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -136,6 +143,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={4}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -147,6 +155,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={1}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -158,6 +167,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={1}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -169,6 +179,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={2}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -180,6 +191,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={2}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -191,6 +203,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={2}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -202,6 +215,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={4}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -213,6 +227,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={1}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -224,6 +239,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={1}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -235,6 +251,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={2}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -246,6 +263,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={2}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -257,6 +275,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={2}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -268,6 +287,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={4}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -279,6 +299,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={1}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -290,6 +311,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={1}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -301,6 +323,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={2}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -312,6 +335,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={2}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -323,6 +347,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={2}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -334,6 +359,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={4}
+                    tags={getTagsPlaceholder()}
                 />
 
                 <GalleryItem
@@ -345,6 +371,7 @@ const Page: NextPage = () => {
                     smallLabel={false}
                     mode={'projects'}
                     size={1}
+                    tags={getTagsPlaceholder()}
                 />
             </Gallery>
         </>

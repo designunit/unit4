@@ -64,8 +64,6 @@
     font-size: 1.2em;
     
     padding: .5rem 0;
-    
-    transition: color .5s ease;
 }
 
 .label.small {
@@ -86,7 +84,10 @@
     border: solid 1px var(--color-text);
 }
 
-:hover > .label {
+.label > span {
+    transition: color .5s ease;
+}
+:hover > .label > span {
     color: var(--link-color-active);
 }
 
@@ -125,7 +126,7 @@
 :is(.col4, .col2, .col1) > .label {
     padding: var(--grid-gap);
     flex: 1 1 auto;
-    padding: 5px var(--grid-gap);
+    padding: var(--grid-gap);
     flex: 1 1 50%;
 }
 

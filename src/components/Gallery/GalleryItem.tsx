@@ -37,7 +37,7 @@ const Container: React.FC<ContainerProps> = ({ href, className, children }) => (
     </>
 )
 
-export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, mode, tags, size, ...props }) => {
+export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, mode, tags = [], size, ...props }) => {
     const isModePartners = mode === 'partners'
     const isModeProjects = mode === 'projects'
 
@@ -75,7 +75,9 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
                 <div className={cx(s.label, {
                     small: smallLabel,
                 })}>
-                    {text}
+                    <span>
+                        {text}
+                    </span>
                     <div className={s.tags}>
                         {tags.map(x => <span>{x}</span>)}
                     </div>
