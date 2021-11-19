@@ -191,12 +191,14 @@ export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
     const pages = await Promise.all(projects.map(async x => getPageBySlug(ctx.locale, x.href)))
     const data = projects.map((x, i) => {
         const page = pages[i]
-        const { cover: src, title: text, tags, location, year } = page
+        const src = page?.cover ?? null
+        const text = page?.title ?? null
+        const tags = [page?.location ?? null, page?.year ?? null, ...page?.tags ?? []]
         return {
             ...x,
             src,
             text,
-            tags: [location ?? null, year ?? null, ...tags]
+            tags,
         }
     })
 
