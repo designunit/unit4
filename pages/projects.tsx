@@ -154,14 +154,33 @@ const Page: NextPage<IPageProps> = ({ projects }) => {
                     marginBottom: 50,
                 }}
             >
-                {projects.map(x => (
-                    <GalleryItem
-                        key={x.href}
-                        href={x.href}
-                        size={x.size}
-                        mode={'projects'}
-                    />
-                ))}
+                {projects.map((x, i) => {
+                    const indexCycled = i % 6
+                    let autosize = 4
+                    switch (indexCycled) {
+                        case 0:
+                            autosize = 4
+                            break;
+                        case 1:
+                        case 2:
+                            autosize = 1
+
+                        case 3:
+                        case 4:
+                        case 5:
+                            autosize = 2
+                        default:
+                            break;
+                    }
+                    return (
+                        <GalleryItem
+                            key={x.href}
+                            href={x.href}
+                            size={x?.size ?? autosize}
+                            mode={'projects'}
+                        />
+                    )
+                })}
             </Gallery>
         </>
     )
