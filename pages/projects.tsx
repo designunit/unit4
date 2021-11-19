@@ -3,7 +3,8 @@ import { Gallery } from '../src/components/Gallery'
 import { Title } from '../src/components/Title'
 import { useTranslation } from 'react-i18next'
 import React from 'react'
-import { GalleryItem } from '@/components/Gallery/GalleryItem'
+import { GalleryItem, IGalleryItemProps } from '@/components/Gallery/GalleryItem'
+import { getPageBySlug } from '@/api'
 
 const projects: {
     href: string;
@@ -116,13 +117,10 @@ const projects: {
     ]
 
 interface IPageProps {
-    projects: {
-        href: string;
-        size: 1 | 2 | 4;
-    }[]
+    data: Partial<IGalleryItemProps>[]
 }
 
-const Page: NextPage<IPageProps> = ({ projects }) => {
+const Page: NextPage<IPageProps> = ({ data }) => {
     const { t } = useTranslation()
 
     return (
@@ -154,9 +152,9 @@ const Page: NextPage<IPageProps> = ({ projects }) => {
                     marginBottom: 50,
                 }}
             >
-                {projects.map((x, i) => {
+                {data.map((x, i) => {
                     const indexCycled = i % 6
-                    let autosize = 4
+                    let autosize: 1 | 2 | 4 = 4
                     switch (indexCycled) {
                         case 0:
                             autosize = 4
@@ -175,6 +173,9 @@ const Page: NextPage<IPageProps> = ({ projects }) => {
                     return (
                         <GalleryItem
                             key={x.href}
+                            src={x.src}
+                            text={x.text}
+                            tags={x.tags}
                             href={x.href}
                             size={x?.size ?? autosize}
                             mode={'projects'}
@@ -186,10 +187,38 @@ const Page: NextPage<IPageProps> = ({ projects }) => {
     )
 }
 
-export const getStaticProps: GetStaticProps<IPageProps> = async () => {
+export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
+    const pages = await Promise.all(projects.map(async x => getPageBySlug(ctx.locale, x.href)))
+    const data = projects.map((x, i) => {
+        const page = pages[i]
+        const { cover: src, title: text, tags, location, year } = page
+        return {
+            ...x,
+            src,
+            text,
+            tags: [location ?? null, year ?? null, ...tags]
+        }
+    })
+
+    const getTagsPlaceholder = () => {
+        const roundZeroToI = (i) => Math.floor(Math.random() * i)
+
+        const count = 1 + roundZeroToI(3)
+        return [
+            ['Санкт-Петербург', 'Краснокамск', 'Нижний Новгород', 'Гюмри', 'Питкяранта'][roundZeroToI(5)],
+            ['2027', '2020', '2019', '2020', '2020'][roundZeroToI(5)],
+            ...['соцкульт', 'дизайн-код', 'софт', 'education', 'research', 'masterplan', 'мастерплан'].reduce((acc, x, i, arr) => {
+                const index = roundZeroToI(arr.length - 1)
+                const item = arr.splice(index, 1)[0]
+                return i > count ? acc : [...acc, item]
+            }, [])
+        ]
+    }
+
+
     return {
         props: {
-            projects,
+            data,
         }
     }
 }

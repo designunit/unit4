@@ -1,13 +1,16 @@
 import cx from 'classnames'
 import Link from 'next/link'
 import * as React from 'react'
-import { IGalleryItem } from '.'
 import s from './GalleryItem.module.css'
 import Ratio from 'react-ratio'
-import useSWR from 'swr'
-import { useRouter } from 'next/router'
 
-export interface IGalleryItemProps extends IGalleryItem {
+export interface IGalleryItemProps {
+    src: string
+    alt?: string
+    href?: string
+    text?: string | React.ReactNode
+    mode: 'partners' | 'projects'
+    tags?: string[]
     size?: 1 | 2 | 4
 }
 
@@ -38,55 +41,9 @@ const Container: React.FC<ContainerProps> = ({ href, className, children }) => (
     </>
 )
 
-const fetcher = async (url, method, body) => {
-    const res = await fetch(url, { method, body })
-    const data = await res.json()
-
-    if (res.status !== 200) {
-        throw new Error(data.message)
-    }
-    return data
-}
-
-export const GalleryItem: React.FC<any> = ({ href, size, mode, ...props }) => { // IGalleryItemProps
+export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, size, mode, src, tags, text, ...props }) => {
     const isModePartners = mode === 'partners'
     const isModeProjects = mode === 'projects'
-    const router = useRouter()
-
-    const { data, error } = useSWR(
-        [
-            '/api/project',
-            'post',
-            JSON.stringify({
-                slug: href,
-                locale: router.locale,
-            }),
-        ],
-        fetcher,
-    )
-    if (error) {
-        console.error(error)
-    }
-
-    const src = props.src ?? data?.src
-    const tags = data?.tags ?? []
-    const text = data?.text
-
-    const getTagsPlaceholder = () => {
-        const roundZeroToI = (i) => Math.floor(Math.random() * i)
-
-        const count = 1 + roundZeroToI(3)
-        return [
-            ['Санкт-Петербург', 'Краснокамск', 'Нижний Новгород', 'Гюмри', 'Питкяранта'][roundZeroToI(5)],
-            ['2027', '2020', '2019', '2020', '2020'][roundZeroToI(5)],
-            ...['соцкульт', 'дизайн-код', 'софт', 'education', 'research', 'masterplan', 'мастерплан'].reduce((acc, x, i, arr) => {
-                const index = roundZeroToI(arr.length - 1)
-                const item = arr.splice(index, 1)[0]
-                return i > count ? acc : [...acc, item]
-            }, [])
-        ]
-    }
-
     return (
         <Container
             href={href}
@@ -123,7 +80,7 @@ export const GalleryItem: React.FC<any> = ({ href, size, mode, ...props }) => { 
                         {text}
                     </span>
                     <div className={s.tags}>
-                        {tags.map(x => <span>{x}</span>)}
+                        {tags.map((x, i) => <span key={i}>{x}</span>)}
                     </div>
                 </div>
             )}
