@@ -108,7 +108,7 @@ async function getPage(path: string): Promise<PageDefinition | null> {
 
 function getTitle(data: string) {
     const rows = data.split('\n')
-    const p = /^#\s?(.*)$/
+    const p = /#\s?(.*)/
     for (const row of rows) {
         const m = p.exec(row)
         if (!m) {

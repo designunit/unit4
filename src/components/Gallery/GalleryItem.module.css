@@ -18,8 +18,8 @@
     filter: grayscale(0%);
 }
 
-.border:hover  {
-    border-color: #f91b86;
+.border:hover {
+    border-color: var(--link-color-active);
 }
 
 .gray {
