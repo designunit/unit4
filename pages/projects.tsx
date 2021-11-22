@@ -11,6 +11,9 @@ const projects: {
     size?: 1 | 2 | 4
 }[] = [
         {
+            'href': '/nyagan',
+        },
+        {
             'href': '/volokolamsk',
         },
         {
