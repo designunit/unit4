@@ -7,112 +7,86 @@ import { GalleryItem, IGalleryItemProps } from '@/components/Gallery/GalleryItem
 import { getPageBySlug } from '@/api'
 
 const projects: {
-    href: string;
-    size: 1 | 2 | 4;
+    href: string
+    size?: 1 | 2 | 4
 }[] = [
         {
             'href': '/volokolamsk',
-            'size': 4
         },
         {
             'href': '/latlng',
-            'size': 1
         },
         {
             'href': '/ugra-edu',
-            'size': 1
         },
         {
             'href': '/uray-ppi',
-            'size': 2
         },
         {
             'href': '/heterotopia',
-            'size': 2
         },
         {
             'href': '/oymyakon',
-            'size': 2
         },
         {
             'href': '/hovrinka',
-            'size': 4
         },
         {
             'href': '/delta',
-            'size': 1
         },
         {
             'href': '/application-manual',
-            'size': 1
         },
         {
             'href': '/gorprojects-spb',
-            'size': 2
         },
         {
             'href': '/yoshkola',
-            'size': 2
         },
         {
             'href': '/scnd-boulevard',
-            'size': 2
         },
         {
             'href': '/scnd-park',
-            'size': 4
         },
         {
             'href': '/shelter',
-            'size': 1
         },
         {
             'href': '/swarm',
-            'size': 1
         },
         {
             'href': '/scnd-dc',
-            'size': 2
         },
         {
             'href': '/scnd-gb',
-            'size': 2
         },
         {
             'href': '/samarapark',
-            'size': 2
         },
         {
             'href': '/garagescreen',
-            'size': 4
         },
         {
             'href': '/scnd-d',
-            'size': 1
         },
         {
             'href': '/krvostok',
-            'size': 1
         },
         {
             'href': '/trollgardens',
-            'size': 2
         },
         {
             'href': '/chistopol2',
-            'size': 2
         },
         {
             'href': '/kemb',
-            'size': 2
         },
         {
             'href': '/model4',
-            'size': 4
         },
         {
             'href': '/chistopol',
-            'size': 1
         }
     ]
 
@@ -158,17 +132,18 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                     switch (indexCycled) {
                         case 0:
                             autosize = 4
-                            break;
+                            break
                         case 1:
                         case 2:
                             autosize = 1
-
+                            break
                         case 3:
                         case 4:
                         case 5:
                             autosize = 2
+                            break
                         default:
-                            break;
+                            break
                     }
                     return (
                         <GalleryItem
