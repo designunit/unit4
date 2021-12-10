@@ -150,6 +150,7 @@ article > :is(
     h5,
     p,
     ul,
+    ol,
 ) {
     max-width: 960px;
 }
