@@ -16,6 +16,8 @@ import { WideBlock } from '@/components/WideBlock'
 import { HeterotopiaTitle } from '@/app/heterotopia/HeterotopiaTitle'
 import { HeterotopiaHighlight } from '@/app/heterotopia/HeterotopiaHighlight'
 import { NextSeo } from 'next-seo'
+import { useTranslation } from 'react-i18next'
+import { Flex } from '@/components/Flex'
 
 const mdxComponents = {
     Image,
@@ -27,6 +29,7 @@ const mdxComponents = {
     WideBlock,
     HeterotopiaHighlight,
     HeterotopiaTitle,
+    Flex,
 }
 
 type Props = PageDefinition & {

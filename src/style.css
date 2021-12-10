@@ -198,6 +198,12 @@ article .image {
     margin-bottom: 1em;
 }
 
+article iframe {
+    max-width: 100%;
+    margin-bottom: 2em;
+    padding: var(--content-padding);
+}
+
 /* ANT */
 
 .ant-carousel .slick-dots li button {
