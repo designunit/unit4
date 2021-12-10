@@ -51,6 +51,17 @@ const Page: NextPage = () => {
                 }}
             >
                 <GalleryItem
+                    key={'/images/nyagan_1.jpg'}
+                    src={'/images/nyagan_1.jpg'}
+                    text={'ЦЕНТРАЛЬНЫЙ ЛЕС КУЛЬТУРЫ И ОТДЫХА'}
+                    alt={undefined}
+                    href={'/nyagan'}
+                    smallLabel={false}
+                    mode={'projects'}
+                    size={4}
+                />
+
+                <GalleryItem
                     key={'https://s.tmshv.com/unit4/volokolamsk-04.jpg'}
                     src={'https://s.tmshv.com/unit4/volokolamsk-04.jpg'}
                     text={'МОСКОВСКИЙ ТРАКТ ВОЛОКОЛАМСК'}
