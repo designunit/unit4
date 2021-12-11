@@ -53,7 +53,7 @@ const Page: NextPage = () => {
                 <GalleryItem
                     key={'/images/sisu.svg'}
                     src={'/images/sisu.svg'}
-                    text={'Технологичная платформа SISU'}
+                    text={'Сервис SISU'}
                     alt={undefined}
                     href={'/sisu'}
                     smallLabel={false}
