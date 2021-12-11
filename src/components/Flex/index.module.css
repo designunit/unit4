@@ -1,0 +1,24 @@
+.container {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 2em;
+    padding: var(--content-padding);
+
+    max-width: 960px;
+}
+
+.col {
+    flex-flow: column;
+}
+
+.container > * {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+        flex-flow: column;
+    }
+}

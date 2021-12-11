@@ -51,6 +51,28 @@ const Page: NextPage = () => {
                 }}
             >
                 <GalleryItem
+                    key={'/images/sisu.svg'}
+                    src={'/images/sisu.svg'}
+                    text={'Технологичная платформа SISU'}
+                    alt={undefined}
+                    href={'/sisu'}
+                    smallLabel={false}
+                    mode={'projects'}
+                    size={2}
+                />
+
+                <GalleryItem
+                    key={'/images/nyagan_1.jpg'}
+                    src={'/images/nyagan_1.jpg'}
+                    text={'ЦЕНТРАЛЬНЫЙ ЛЕС КУЛЬТУРЫ И ОТДЫХА'}
+                    alt={undefined}
+                    href={'/nyagan'}
+                    smallLabel={false}
+                    mode={'projects'}
+                    size={2}
+                />
+
+                <GalleryItem
                     key={'/images/volokolamsk-04.jpg'}
                     src={'/images/volokolamsk-04.jpg'}
                     text={'МОСКОВСКИЙ ТРАКТ ВОЛОКОЛАМСК'}

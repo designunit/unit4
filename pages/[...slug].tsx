@@ -1,7 +1,6 @@
 import { Title } from '@/components/Title'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import ErrorPage from 'next/error'
-import { Meta } from '@/components/Meta'
 import { useRouter } from 'next/router'
 import { PageDefinition } from '@/types'
 import { getPageBySlug, getPages } from '@/api'
@@ -16,7 +15,9 @@ import { ImageSet } from '@/components/ImageSet'
 import { WideBlock } from '@/components/WideBlock'
 import { HeterotopiaTitle } from '@/app/heterotopia/HeterotopiaTitle'
 import { HeterotopiaHighlight } from '@/app/heterotopia/HeterotopiaHighlight'
+import { NextSeo } from 'next-seo'
 import { useTranslation } from 'react-i18next'
+import { Flex } from '@/components/Flex'
 
 const mdxComponents = {
     Image,
@@ -28,6 +29,7 @@ const mdxComponents = {
     WideBlock,
     HeterotopiaHighlight,
     HeterotopiaTitle,
+    Flex,
 }
 
 type Props = PageDefinition & {
@@ -42,15 +44,21 @@ const Page: NextPage<Props> = props => {
         )
     }
 
-    const { t } = useTranslation()
-
     return (
         <>
-            <Meta
-                title={t(props.slug.split('/')[1], { ns: 'projects' })}
+            <NextSeo
+                title={props.title}
                 description={props.excerpt}
-                image={props.cover}
-                url={`https://unit4.io${props.slug}`}
+                openGraph={{
+                    title: props.title,
+                    description: props.excerpt,
+                    url: `https://unit4.io${props.slug}`,
+                    images: [
+                        {
+                            url: props.cover,
+                        }
+                    ]
+                }}
             />
 
             {/* TODO */}
