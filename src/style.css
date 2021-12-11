@@ -198,6 +198,10 @@ article .image {
 
 /* ANT */
 
+article .ant-carousel {
+    margin-bottom: 2em;
+}
+
 .ant-carousel .slick-dots li button {
     /* width: 100%; */
     height: 5px;

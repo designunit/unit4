@@ -51,8 +51,8 @@ const Page: NextPage = () => {
                 }}
             >
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/volokolamsk-04.jpg'}
-                    src={'https://s.tmshv.com/unit4/volokolamsk-04.jpg'}
+                    key={'/images/volokolamsk-04.jpg'}
+                    src={'/images/volokolamsk-04.jpg'}
                     text={'МОСКОВСКИЙ ТРАКТ ВОЛОКОЛАМСК'}
                     alt={undefined}
                     href={'/volokolamsk'}
@@ -62,8 +62,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/latlng-latlng.gif'}
-                    src={'https://s.tmshv.com/unit4/latlng-latlng.gif'}
+                    key={'/images/latlng.jpg'}
+                    src={'/images/latlng.jpg'}
                     text={'LATL.NG облачная ГИС'}
                     alt={undefined}
                     href={'/latlng'}
@@ -73,8 +73,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/edu_ugra-01.jpg'}
-                    src={'https://s.tmshv.com/unit4/edu_ugra-01.jpg'}
+                    key={'/images/edu_ugra-01.jpg'}
+                    src={'/images/edu_ugra-01.jpg'}
                     text={'ОБУЧАЮЩИЙ СЕМИНАР ХМАО ФКГС'}
                     alt={undefined}
                     href={'/ugra-edu'}
@@ -84,8 +84,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/uray_ppi-urai.jpg'}
-                    src={'https://s.tmshv.com/unit4/uray_ppi-urai.jpg'}
+                    key={'/images/uray_ppi-urai.jpg'}
+                    src={'/images/uray_ppi-urai.jpg'}
                     text={'ИССЛЕДОВАНИЕ УРАЙ ХМАО'}
                     alt={undefined}
                     href={'/uray-ppi'}
@@ -95,8 +95,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/heterotopia-heterotopia.gif'}
-                    src={'https://s.tmshv.com/unit4/heterotopia-heterotopia.gif'}
+                    key={'/images/heterotopia-heterotopia_01.jpg'}
+                    src={'/images/heterotopia-heterotopia_01.jpg'}
                     text={'ГЕТЕРОТОПИИ СО-ВРЕМЕННОСТИ'}
                     alt={undefined}
                     href={'/heterotopia'}
@@ -106,8 +106,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/oymyakon-viz_gulag.jpg'}
-                    src={'https://s.tmshv.com/unit4/oymyakon-viz_gulag.jpg'}
+                    key={'/images/oymyakon-viz_gulag.jpg'}
+                    src={'/images/oymyakon-viz_gulag.jpg'}
                     text={'ОЙМЯКОН п(о)люс со-временности'}
                     alt={undefined}
                     href={'/oymyakon'}
@@ -117,8 +117,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/hovrinka-hovrinka.jpg'}
-                    src={'https://s.tmshv.com/unit4/hovrinka-hovrinka.jpg'}
+                    key={'/images/hovrinka-hovrinka.jpg'}
+                    src={'/images/hovrinka-hovrinka.jpg'}
                     text={'СОЦИАЛЬНО-КУЛЬТУРНЫЙ ЦЕНТР ХОВРИНКА'}
                     alt={undefined}
                     href={'/hovrinka'}
@@ -128,8 +128,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/delta-delta.jpg'}
-                    src={'https://s.tmshv.com/unit4/delta-delta.jpg'}
+                    key={'/images/delta-delta.jpg'}
+                    src={'/images/delta-delta.jpg'}
                     text={'БЛАГОУСТРОЙСТВО ЖК COMCITY МОСКВА'}
                     alt={undefined}
                     href={'/delta'}
@@ -139,8 +139,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/app_manual-manual.jpg'}
-                    src={'https://s.tmshv.com/unit4/app_manual-manual.jpg'}
+                    key={'/images/app_manual-manual.jpg'}
+                    src={'/images/app_manual-manual.jpg'}
                     text={'МЕТОДИЧЕСКИЕ РЕКОМЕНДАЦИИ ХМАО'}
                     alt={undefined}
                     href={'/application-manual'}
@@ -150,8 +150,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/gorprojects_spb-project3-todo-after_.jpg'}
-                    src={'https://s.tmshv.com/unit4/gorprojects_spb-project3-todo-after_.jpg'}
+                    key={'/images/gorprojects_spb-project3-todo-after_.jpg'}
+                    src={'/images/gorprojects_spb-project3-todo-after_.jpg'}
                     text={'КОНЦЕПЦИИ spb.city4people.ru'}
                     alt={undefined}
                     href={'/gorprojects-spb'}
@@ -161,8 +161,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/yoshkola-04.jpg'}
-                    src={'https://s.tmshv.com/unit4/yoshkola-04.jpg'}
+                    key={'/images/yoshkola-04.jpg'}
+                    src={'/images/yoshkola-04.jpg'}
                     text={'IT ШКОЛА ЙОШКАР-ОЛА'}
                     alt={undefined}
                     href={'/yoshkola'}
@@ -172,8 +172,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/boulevard_scnd-boulevard.jpg'}
-                    src={'https://s.tmshv.com/unit4/boulevard_scnd-boulevard.jpg'}
+                    key={'/images/boulevard_scnd-boulevard.jpg'}
+                    src={'/images/boulevard_scnd-boulevard.jpg'}
                     text={'БУЛЬВАР ЖИЛОГО РАЙОНА СКАНДИНАВИЯ'}
                     alt={undefined}
                     href={'/scnd-boulevard'}
@@ -183,8 +183,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/park_scnd-park.jpg'}
-                    src={'https://s.tmshv.com/unit4/park_scnd-park.jpg'}
+                    key={'/images/park_scnd-park.jpg'}
+                    src={'/images/park_scnd-park.jpg'}
                     text={'ПАРК ЖИЛОГО РАЙОНА СКАНДИНАВИЯ'}
                     alt={undefined}
                     href={'/scnd-park'}
@@ -194,8 +194,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/shelter-01.jpg'}
-                    src={'https://s.tmshv.com/unit4/shelter-01.jpg'}
+                    key={'/images/shelter-01.jpg'}
+                    src={'/images/shelter-01.jpg'}
                     text={'ИНСТАЛЛЯЦИЯ NEST WIND SHELTER'}
                     alt={undefined}
                     href={'/shelter'}
@@ -205,8 +205,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/swarm-swarm.jpg'}
-                    src={'https://s.tmshv.com/unit4/swarm-swarm.jpg'}
+                    key={'/images/swarm-swarm.jpg'}
+                    src={'/images/swarm-swarm.jpg'}
                     text={'МОДЕЛИРОВАНИЕ ПЕШЕХОДНЫХ ПОТОКОВ SWARM'}
                     alt={undefined}
                     href={'/swarm'}
@@ -216,8 +216,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/dc_scnd-dc.gif'}
-                    src={'https://s.tmshv.com/unit4/dc_scnd-dc.gif'}
+                    key={'/images/dc_scnd-dc.jpg'}
+                    src={'/images/dc_scnd-dc.jpg'}
                     text={'ДИЗАЙН-КОД ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ'}
                     alt={undefined}
                     href={'/scnd-dc'}
@@ -227,8 +227,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/gb_scnd-gb.jpg'}
-                    src={'https://s.tmshv.com/unit4/gb_scnd-gb.jpg'}
+                    key={'/images/gb_scnd-gb.jpg'}
+                    src={'/images/gb_scnd-gb.jpg'}
                     text={'КОНЦЕПЦИЯ ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ'}
                     alt={undefined}
                     href={'/scnd-gb'}
@@ -238,8 +238,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/samarapark-10.jpg'}
-                    src={'https://s.tmshv.com/unit4/samarapark-10.jpg'}
+                    key={'/images/samarapark-10.jpg'}
+                    src={'/images/samarapark-10.jpg'}
                     text={'ПАРК ЗАГОРОДНЫЙ САМАРА'}
                     alt={undefined}
                     href={'/samarapark'}
@@ -249,8 +249,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/garagescreen-02.gif'}
-                    src={'https://s.tmshv.com/unit4/garagescreen-02.gif'}
+                    key={'/images/garagescreen-01.jpg'}
+                    src={'/images/garagescreen-01.jpg'}
                     text={'GARAGE SCREEN COMPETITION'}
                     alt={undefined}
                     href={'/garagescreen'}
@@ -260,8 +260,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/d_scnd-03.jpg'}
-                    src={'https://s.tmshv.com/unit4/d_scnd-03.jpg'}
+                    key={'/images/d_scnd-03.jpg'}
+                    src={'/images/d_scnd-03.jpg'}
                     text={'ДВОРЫ ЖИЛОГО РАЙОНА СКАНДИНАВИЯ'}
                     alt={undefined}
                     href={'/scnd-d'}
@@ -271,8 +271,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/krvostok-01.jpg'}
-                    src={'https://s.tmshv.com/unit4/krvostok-01.jpg'}
+                    key={'/images/krvostok-01.jpg'}
+                    src={'/images/krvostok-01.jpg'}
                     text={'КОНЦЕПЦИЯ БЛАГОУСТРОЙСТВА ЗАВОДА КРАСНЫЙ ВОСТОК'}
                     alt={undefined}
                     href={'/krvostok'}
@@ -282,8 +282,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/trollgardens-05.jpg'}
-                    src={'https://s.tmshv.com/unit4/trollgardens-05.jpg'}
+                    key={'/images/trollgardens-05.jpg'}
+                    src={'/images/trollgardens-05.jpg'}
                     text={'САДЫ ТРОЛЛЕЙ'}
                     alt={undefined}
                     href={'/trollgardens'}
@@ -293,8 +293,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/chistopol2-07.jpg'}
-                    src={'https://s.tmshv.com/unit4/chistopol2-07.jpg'}
+                    key={'/images/chistopol2-07.jpg'}
+                    src={'/images/chistopol2-07.jpg'}
                     text={'БУЛЬВАР ЧИСТОПОЛЬ ТАТАРСТАН ФАЗА #2'}
                     alt={undefined}
                     href={'/chistopol2'}
@@ -304,8 +304,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/kemb-01.jpg'}
-                    src={'https://s.tmshv.com/unit4/kemb-01.jpg'}
+                    key={'/images/kemb-01.jpg'}
+                    src={'/images/kemb-01.jpg'}
                     text={'ИССЛЕДОВАНИЕ НАБЕРЕЖНОЙ КАРПОВКИ'}
                     alt={undefined}
                     href={'/kemb'}
@@ -315,8 +315,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/model4-01.jpg'}
-                    src={'https://s.tmshv.com/unit4/model4-01.jpg'}
+                    key={'/images/model4-01.jpg'}
+                    src={'/images/model4-01.jpg'}
                     text={'СЕРИЯ ИЗДЕЛИЙ МОДЕЛЬ : : 4'}
                     alt={undefined}
                     href={'/model4'}
@@ -326,8 +326,8 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'https://s.tmshv.com/unit4/chistopol-02.jpg'}
-                    src={'https://s.tmshv.com/unit4/chistopol-02.jpg'}
+                    key={'/images/chistopol-02.jpg'}
+                    src={'/images/chistopol-02.jpg'}
                     text={'БУЛЬВАР ЧИСТОПОЛЬ ТАТАРСТАН ФАЗА #1'}
                     alt={undefined}
                     href={'/chistopol'}
