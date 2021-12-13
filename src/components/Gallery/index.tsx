@@ -20,9 +20,10 @@ export interface IGallery {
 
 export const Gallery: React.FC<IGallery> = ({ smallLabel = false, mode, ...props }) => {
     const isModeProjects = mode === 'projects'
+    const isModePartners = mode === 'partners'
     return (
         <div
-            className={classNames(s.gallery, isModeProjects && s.gridPropjects)}
+            className={classNames(s.gallery, isModeProjects && s.gridPropjects, isModePartners && s.gridPartners)}
             style={{
                 ...props.style,
             }}
