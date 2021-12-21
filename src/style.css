@@ -224,6 +224,9 @@ article .ant-carousel {
     cursor: pointer;
     /* opacity: 0.75; */
 }
+.ant-carousel .slick-dots li::before {
+    content: none;
+} 
 
 /* MOBILE STYLE */
 
