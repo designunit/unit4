@@ -232,6 +232,14 @@ article .ant-carousel {
         --content-padding: 0 0.5rem;
     }
 
+    article > :is(
+        h1,
+        h2,
+        h3,
+    ) {
+        padding: var(--content-padding);
+    }
+
     article ul {
         padding-left: 1.5em;
         padding-right: 1em;
