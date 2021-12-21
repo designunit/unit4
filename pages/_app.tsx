@@ -18,6 +18,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         i18n.changeLanguage(router.locale)
     }, [router.locale])
 
+    // scroll page to top on path change
+    useEffect(() => {
+        if (document) {
+            document.querySelector('body').scrollTo(0, 0)
+        }
+    }, [router.asPath])
+
     return (
         <>
             <Head>
