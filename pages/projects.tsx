@@ -51,6 +51,39 @@ const Page: NextPage = () => {
                 }}
             >
                 <GalleryItem
+                    key={'/images/derbent-preview.jpg'}
+                    src={'/images/derbent-preview.jpg'}
+                    text={'Благоустройство береговой линии города Дербент'}
+                    alt={undefined}
+                    href={'/derbent'}
+                    smallLabel={false}
+                    mode={'projects'}
+                    size={4}
+                />
+
+                <GalleryItem
+                    key={'/images/Kandelaki-preview.jpg'}
+                    src={'/images/Kandelaki-preview.jpg'}
+                    text={'Благоустройство улицы Канделаки'}
+                    alt={undefined}
+                    href={'/kandelaki'}
+                    smallLabel={false}
+                    mode={'projects'}
+                    size={2}
+                />
+                
+                <GalleryItem
+                    key={'/images/zapolyarniy-preview.jpg'}
+                    src={'/images/zapolyarniy-preview.jpg'}
+                    text={'Исследование города Заполярного'}
+                    alt={undefined}
+                    href={'/zapolyarniy'}
+                    smallLabel={false}
+                    mode={'projects'}
+                    size={2}
+                />
+
+                <GalleryItem
                     key={'/images/sisu.svg'}
                     src={'/images/sisu.svg'}
                     text={'Сервис SISU'}
