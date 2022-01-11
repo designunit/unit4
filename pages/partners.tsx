@@ -84,8 +84,12 @@ const items = [
         href: null,
     },
     {
-        src: '/static/partners/KINGLAB 1.svg',
+        src: '/static/partners/kinglab0.svg',
         href: 'https://kinglab.com/',
+    },
+    {
+        src: '/static/partners/knglb0.svg',
+        href: 'https://knglb.com/',
     },
 ]
 

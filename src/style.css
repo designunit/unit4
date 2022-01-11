@@ -150,6 +150,7 @@ article > :is(
     h5,
     p,
     ul,
+    ol,
 ) {
     max-width: 960px;
 }
@@ -175,6 +176,7 @@ article ul {
     text-indent: -1em;
 
     margin-bottom: 2em;
+    margin-left: 2rem;
 }
 article ul li {
     margin-bottom: .5em;
@@ -196,7 +198,17 @@ article .image {
     margin-bottom: 1em;
 }
 
+article iframe {
+    max-width: 100%;
+    margin-bottom: 2em;
+    padding: var(--content-padding);
+}
+
 /* ANT */
+
+article .ant-carousel {
+    margin-bottom: 2em;
+}
 
 .ant-carousel .slick-dots li button {
     /* width: 100%; */
@@ -212,12 +224,23 @@ article .image {
     cursor: pointer;
     /* opacity: 0.75; */
 }
+.ant-carousel .slick-dots li::before {
+    content: none;
+} 
 
 /* MOBILE STYLE */
 
 @media screen and (max-width: 31.25em) {
     :root {
         --content-padding: 0 0.5rem;
+    }
+
+    article > :is(
+        h1,
+        h2,
+        h3,
+    ) {
+        padding: var(--content-padding);
     }
 
     article ul {

@@ -1,0 +1,7 @@
+.image > div {
+    position: relative !important;
+}
+.image > div > img {
+    position: unset !important;
+    height: unset !important;
+}
