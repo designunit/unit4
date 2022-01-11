@@ -8,6 +8,9 @@ import { getPageBySlug } from '@/api'
 
 const projects: { href: string, size?: 1 | 2 | 4 }[] = [
     {
+        'href': '/sisu'
+    },
+    {
         'href': '/nyagan',
     },
     {
