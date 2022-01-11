@@ -6,92 +6,89 @@ import React from 'react'
 import { GalleryItem, IGalleryItemProps } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
 
-const projects: {
-    href: string
-    size?: 1 | 2 | 4
-}[] = [
-        {
-            'href': '/nyagan',
-        },
-        {
-            'href': '/volokolamsk',
-        },
-        {
-            'href': '/latlng',
-        },
-        {
-            'href': '/ugra-edu',
-        },
-        {
-            'href': '/uray-ppi',
-        },
-        {
-            'href': '/heterotopia',
-        },
-        {
-            'href': '/oymyakon',
-        },
-        {
-            'href': '/hovrinka',
-        },
-        {
-            'href': '/delta',
-        },
-        {
-            'href': '/application-manual',
-        },
-        {
-            'href': '/gorprojects-spb',
-        },
-        {
-            'href': '/yoshkola',
-        },
-        {
-            'href': '/scnd-boulevard',
-        },
-        {
-            'href': '/scnd-park',
-        },
-        {
-            'href': '/shelter',
-        },
-        {
-            'href': '/swarm',
-        },
-        {
-            'href': '/scnd-dc',
-        },
-        {
-            'href': '/scnd-gb',
-        },
-        {
-            'href': '/samarapark',
-        },
-        {
-            'href': '/garagescreen',
-        },
-        {
-            'href': '/scnd-d',
-        },
-        {
-            'href': '/krvostok',
-        },
-        {
-            'href': '/trollgardens',
-        },
-        {
-            'href': '/chistopol2',
-        },
-        {
-            'href': '/kemb',
-        },
-        {
-            'href': '/model4',
-        },
-        {
-            'href': '/chistopol',
-        }
-    ]
+const projects: { href: string, size?: 1 | 2 | 4 }[] = [
+    {
+        'href': '/nyagan',
+    },
+    {
+        'href': '/volokolamsk',
+    },
+    {
+        'href': '/latlng',
+    },
+    {
+        'href': '/ugra-edu',
+    },
+    {
+        'href': '/uray-ppi',
+    },
+    {
+        'href': '/heterotopia',
+    },
+    {
+        'href': '/oymyakon',
+    },
+    {
+        'href': '/hovrinka',
+    },
+    {
+        'href': '/delta',
+    },
+    {
+        'href': '/application-manual',
+    },
+    {
+        'href': '/gorprojects-spb',
+    },
+    {
+        'href': '/yoshkola',
+    },
+    {
+        'href': '/scnd-boulevard',
+    },
+    {
+        'href': '/scnd-park',
+    },
+    {
+        'href': '/shelter',
+    },
+    {
+        'href': '/swarm',
+    },
+    {
+        'href': '/scnd-dc',
+    },
+    {
+        'href': '/scnd-gb',
+    },
+    {
+        'href': '/samarapark',
+    },
+    {
+        'href': '/garagescreen',
+    },
+    {
+        'href': '/scnd-d',
+    },
+    {
+        'href': '/krvostok',
+    },
+    {
+        'href': '/trollgardens',
+    },
+    {
+        'href': '/chistopol2',
+    },
+    {
+        'href': '/kemb',
+    },
+    {
+        'href': '/model4',
+    },
+    {
+        'href': '/chistopol',
+    }
+]
 
 interface IPageProps {
     data: Partial<IGalleryItemProps>[]
@@ -153,7 +150,7 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                             key={x.href}
                             src={x.src}
                             text={x.text}
-                            tags={x.tags}
+                            tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
                             href={x.href}
                             size={x?.size ?? autosize}
                             mode={'projects'}
@@ -179,21 +176,6 @@ export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
             tags,
         }
     })
-
-    const getTagsPlaceholder = () => {
-        const roundZeroToI = (i) => Math.floor(Math.random() * i)
-
-        const count = 1 + roundZeroToI(3)
-        return [
-            ['Санкт-Петербург', 'Краснокамск', 'Нижний Новгород', 'Гюмри', 'Питкяранта'][roundZeroToI(5)],
-            ['2027', '2020', '2019', '2020', '2020'][roundZeroToI(5)],
-            ...['соцкульт', 'дизайн-код', 'софт', 'education', 'research', 'masterplan', 'мастерплан'].reduce((acc, x, i, arr) => {
-                const index = roundZeroToI(arr.length - 1)
-                const item = arr.splice(index, 1)[0]
-                return i > count ? acc : [...acc, item]
-            }, [])
-        ]
-    }
 
 
     return {

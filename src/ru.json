@@ -43,5 +43,16 @@
         "projects": "проекты",
         "partners": "партнеры",
         "contacts": "контакты"
+    },
+    "tags": {
+        "open-space": "городская среда",
+        "research": "исследование",
+        "participation": "соцкульт",
+        "architecture": "архитектура",
+        "masterplan": "мастерплан",
+        "design-code": "дизайн-код",
+        "soft": "софт",
+        "education": "образование",
+        "product-design": "предметный дизайн"
     }
 }
