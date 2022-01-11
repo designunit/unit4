@@ -168,7 +168,11 @@ export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
         const page = pages[i]
         const src = page?.cover ?? null
         const text = page?.title ?? null
-        const tags = [page?.location ?? null, page?.year ?? null, ...page?.tags ?? []]
+        const tags = [
+            ...(page?.location ? [page?.location] : []),
+            ...(page?.year ? [page?.year] : []),
+            ...page?.tags ?? []
+        ]
         return {
             ...x,
             src,
