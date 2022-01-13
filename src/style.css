@@ -204,6 +204,11 @@ article iframe {
     padding: var(--content-padding);
 }
 
+
+article > div { /* margin for custom mdx blocks like <Image> */
+    margin-bottom: 1em;
+}
+
 /* ANT */
 
 article .ant-carousel {
