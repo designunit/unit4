@@ -53,6 +53,37 @@ const Page: NextPage = () => {
                 <GalleryItem
                     key={'/images/derbent-preview.jpg'}
                     src={'/images/derbent-preview.jpg'}
+                    text={'Центральные улицы Перми'}
+                    alt={undefined}
+                    href={'/perm'}
+                    smallLabel={false}
+                    mode={'projects'}
+                    size={1}
+                />
+                <GalleryItem
+                    key={'/images/derbent-preview.jpg'}
+                    src={'/images/derbent-preview.jpg'}
+                    text={'Питкяранта для людей'}
+                    alt={undefined}
+                    href={'/pitkyaranta'}
+                    smallLabel={false}
+                    mode={'projects'}
+                    size={1}
+                />
+                <GalleryItem
+                    key={'/images/derbent-preview.jpg'}
+                    src={'/images/derbent-preview.jpg'}
+                    text={'Эпишкола'}
+                    alt={undefined}
+                    href={'/epischool'}
+                    smallLabel={false}
+                    mode={'projects'}
+                    size={1}
+                />
+
+                <GalleryItem
+                    key={'/images/derbent-preview.jpg'}
+                    src={'/images/derbent-preview.jpg'}
                     text={'Благоустройство береговой линии города Дербент'}
                     alt={undefined}
                     href={'/derbent'}
