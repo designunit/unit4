@@ -61,8 +61,8 @@ const Page: NextPage = () => {
                     size={1}
                 />
                 <GalleryItem
-                    key={'/images/derbent-preview.jpg'}
-                    src={'/images/derbent-preview.jpg'}
+                    key={'/images/pitkyaranta-preview.jpg'}
+                    src={'/images/pitkyaranta-preview.jpg'}
                     text={'Питкяранта для людей'}
                     alt={undefined}
                     href={'/pitkyaranta'}
