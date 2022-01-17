@@ -7,6 +7,7 @@ export interface IImageProps {
     size?: number
     src: string
     alt?: string
+    objectFit?: string
 }
 
 export const Image: React.FC<IImageProps> = ({ size = 1500, ...props }) => {
@@ -22,6 +23,8 @@ export const Image: React.FC<IImageProps> = ({ size = 1500, ...props }) => {
                 alt={props.alt}
                 layout='fill'
                 priority // without priority it breaks <Carousel> layout
+                // @ts-ignore // type string is good enough for now
+                objectFit={props.objectFit ?? 'contain'}
             />
         </div>
     )
