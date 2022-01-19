@@ -233,6 +233,28 @@ article .ant-carousel {
     content: none;
 } 
 
+.ant-carousel .slick-prev,
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-prev:focus {
+    left: 8px;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    background-color: black;
+}
+
+.ant-carousel .slick-next,
+.ant-carousel .slick-next:hover,
+.ant-carousel .slick-next:focus {
+    right: 8px;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    background-color: black;
+}
+
 /* MOBILE STYLE */
 
 @media screen and (max-width: 31.25em) {
