@@ -32,9 +32,9 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <link rel="icon" href="/static/favicon.png" type="image/x-icon" />
 
                 <meta name="yandex-verification" content="9248f3170aa2f950" />
-                <YMetrika
+                {/* <YMetrika
                     account={'47295549'}
-                />
+                /> */}
             </Head>
 
             <DefaultLayout
