@@ -8,104 +8,88 @@ import { Title } from '../src/components/Title'
 
 const items = [
     {
-        src: '/static/partners/урбаника.png',
-        href: 'http://urbanica.spb.ru/',
-    },
-    {
-        src: '/static/partners/мла.png',
-        href: 'https://www.mlaplus.com/',
-    },
-    {
-        src: '/static/partners/центр.png',
-        href: 'https://www.centeragency.org/ru',
-    },
-    {
-        src: '/static/partners/zeitplan.png',
-        href: 'https://www.instagram.com/zeitplan_team/',
-    },
-    {
-        src: '/static/partners/kf.png',
-        href: 'https://www.knightfrank.ru/',
-    },
-    {
-        src: '/static/partners/центр компетенций.png',
-        href: 'https://gorsreda86.ugraces.ru/',
-    },
-    {
-        src: '/static/partners/админ_краснокамск.png',
-        href: 'http://krasnokamsk.ru/',
-    },
-    {
-        src: '/static/partners/админ_нягань.png',
-        href: 'http://www.admnyagan.ru/',
-    },
-    {
-        src: '/static/partners/урай.png',
-        href: 'https://uray.ru/',
-    },
-    {
-        src: '/static/partners/центр городского развития.png', // 10
-        href: 'https://www.instagram.com/centrgoroda51/',
-    },
-    {
-        src: '/static/partners/волоколамск.png',
-        href: 'https://включиволоколамск.рф/',
-    },
-    {
-        src: '/static/partners/админ_дербент.png',
-        href: 'http://derbent.ru/',
-    },
-    {
-        src: '/static/partners/админ_тура.png',
-        href: 'https://www.v-tura.ru/',
-    },
-    {
-        src: '/static/partners/институт развития.png',
-        href: 'https://irgsno.ru/',
-    },
-    {
-        src: '/static/partners/админ_волхов.png',
-        href: 'https://volkhov-raion.ru/',
-    },
-    {
-        src: '/static/partners/админ_питкьяранта.png',
-        href: 'http://апмр.рф/',
-    },
-    {
-        src: '/static/partners/ispring.png',
-        href: 'https://www.ispring.ru/',
-    },
-    {
-        src: '/static/partners/сергей киселев.png',
-        href: 'http://sk-p.ru/',
-    },
-    {
-        src: '/static/partners/варламов.png',
+        src: '/static/partners/городские проекты 1.svg',
         href: 'https://city4people.ru/about-project',
     },
     {
-        src: '/static/partners/цементные джунгли.png', // 20
-        href: 'https://cjungle.com/',
+        src: '/static/partners/ispring 1.svg',
+        href: 'https://www.ispring.ru/',
     },
     {
-        src: '/static/partners/мишин.png',
-        href: 'https://www.facebook.com/StudioMishin/',
+        src: '/static/partners/Агентство стратегического развития «ЦЕНТР» 1.svg',
+        href: 'https://www.centeragency.org/ru',
     },
     {
-        src: '/static/partners/эпишкола.png',
-        href: 'http://epischool.ru/',
+        src: '/static/partners/Knight Frank 1.svg',
+        href: 'https://www.knightfrank.ru/',
     },
     {
-        src: '/static/partners/knappt.png',
-        href: 'http://www.knappt.com/',
+        src: '/static/partners/включи волоколамск 1.svg',
+        href: 'https://включиволоколамск.рф',
     },
     {
-        src: '/static/partners/8линий.png',
+        src: '/static/partners/сергей киселев и ко 1.svg',
+        href: 'http://sk-p.ru/',
+    },
+    {
+        src: '/static/partners/8 lines 1.svg',
         href: 'http://www.llllllll.ru/',
     },
     {
-        src: '/static/partners/kinglab.png',
+        src: '/static/partners/STUDIO MISHIN 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/Краснокамская администрация 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/Нягань администрация 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/Питкяранта администрация 1.svg',
+        href: 'http://апмр.рф/',
+    },
+    {
+        src: '/static/partners/ВТура администрания 1.svg',
+        href: 'https://www.v-tura.ru/',
+    },
+    {
+        src: '/static/partners/gerb-min 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/мла 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/knappt 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/центр компетенций 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/УЖКХ ГО Дербент 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/y2pjhthufgs_750_auto_jpg_5_80 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/урбаника 1.svg',
+        href: null,
+    },
+    {
+        src: '/static/partners/kinglab0.svg',
         href: 'https://kinglab.com/',
+    },
+    {
+        src: '/static/partners/knglb0.svg',
+        href: 'https://knglb.com/',
     },
 ]
 
