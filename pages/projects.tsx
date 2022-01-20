@@ -8,31 +8,40 @@ import { getPageBySlug } from '@/api'
 
 const projects: { href: string, size?: 1 | 2 | 4 }[] = [
     {
-        href: '/perm' // 2
+        href: '/perm',
+        size: 2,
     },
     {
-        href: '/pitkyaranta' // 1
+        href: '/pitkyaranta',
+        size: 1,
     },
     {
-        href: '/epischool' // 1
+        href: '/epischool',
+        size: 1,
     },
     {
-        href: '/derbent' // 4
+        href: '/derbent',
+        size: 4,
     },
     {
-        href: '/kandelaki' // 2
+        href: '/kandelaki',
+        size: 2,
     },
     {
-        href: '/zapolyarniy' // 2
+        href: '/zapolyarniy',
+        size: 2,
     },
     {
-        href: '/sisu'
+        href: '/sisu',
+        size: 2,
     },
     {
         href: '/nyagan',
+        size: 2,
     },
     {
         href: '/volokolamsk',
+        size: 4,
     },
     {
         href: '/latlng',
@@ -148,7 +157,7 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                 }}
             >
                 {data.map((x, i) => {
-                    const indexCycled = i % 6
+                    const indexCycled = (i + 4) % 6 // +4 should be removed, its a hack
                     let autosize: 1 | 2 | 4 = 4
                     switch (indexCycled) {
                         case 0:
