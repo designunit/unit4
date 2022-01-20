@@ -51,19 +51,19 @@ const Page: NextPage = () => {
                 }}
             >
                 <GalleryItem
-                    key={'/images/derbent-preview.jpg'}
-                    src={'/images/derbent-preview.jpg'}
-                    text={'Центральные улицы Перми'}
+                    key={'/images/perm-preview.jpg'}
+                    src={'/images/perm-preview.jpg'}
+                    text={'ЦЕНТРАЛЬНЫЕ УЛИЦЫ ПЕРМИ'}
                     alt={undefined}
                     href={'/perm'}
                     smallLabel={false}
                     mode={'projects'}
-                    size={1}
+                    size={2}
                 />
                 <GalleryItem
                     key={'/images/pitkyaranta-preview.jpg'}
                     src={'/images/pitkyaranta-preview.jpg'}
-                    text={'Питкяранта для людей'}
+                    text={'ПИТКЯРАНТА ДЛЯ ЛЮДЕЙ'}
                     alt={undefined}
                     href={'/pitkyaranta'}
                     smallLabel={false}
@@ -71,9 +71,9 @@ const Page: NextPage = () => {
                     size={1}
                 />
                 <GalleryItem
-                    key={'/images/derbent-preview.jpg'}
-                    src={'/images/derbent-preview.jpg'}
-                    text={'Эпишкола'}
+                    key={'/images/epischool-p.jpg'}
+                    src={'/images/epischool-p.jpg'}
+                    text={'ЭПИШКОЛА'}
                     alt={undefined}
                     href={'/epischool'}
                     smallLabel={false}
@@ -82,9 +82,9 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'/images/derbent-preview.jpg'}
-                    src={'/images/derbent-preview.jpg'}
-                    text={'Благоустройство береговой линии города Дербент'}
+                    key={'/images/derbent-01.jpg'}
+                    src={'/images/derbent-01.jpg'}
+                    text={'БЛАГОУСТРОЙСТВО БЕРЕГОВОЙ ЛИНИИ ГОРОДА ДЕРБЕНТ'}
                     alt={undefined}
                     href={'/derbent'}
                     smallLabel={false}
@@ -95,7 +95,7 @@ const Page: NextPage = () => {
                 <GalleryItem
                     key={'/images/Kandelaki-preview.jpg'}
                     src={'/images/Kandelaki-preview.jpg'}
-                    text={'Благоустройство улицы Канделаки'}
+                    text={'БЛАГОУСТРОЙСТВО УЛИЦЫ КАНДЕЛАКИ'}
                     alt={undefined}
                     href={'/kandelaki'}
                     smallLabel={false}
@@ -106,7 +106,7 @@ const Page: NextPage = () => {
                 <GalleryItem
                     key={'/images/zapolyarniy-preview.jpg'}
                     src={'/images/zapolyarniy-preview.jpg'}
-                    text={'Исследование города Заполярного'}
+                    text={'ИССЛЕДОВАНИЕ ГОРОДА ЗАПОЛЯРНОГО'}
                     alt={undefined}
                     href={'/zapolyarniy'}
                     smallLabel={false}
@@ -115,9 +115,9 @@ const Page: NextPage = () => {
                 />
 
                 <GalleryItem
-                    key={'/images/sisu.svg'}
-                    src={'/images/sisu.svg'}
-                    text={'Сервис SISU'}
+                    key={'/images/sisu-preview.jpg'}
+                    src={'/images/sisu-preview.jpg'}
+                    text={'СЕРВИС SISU'}
                     alt={undefined}
                     href={'/sisu'}
                     smallLabel={false}
