@@ -1,4 +1,9 @@
+.image {
+    height: 100%;
+}
+
 .image > div {
+    height: 100%;
     position: relative !important;
 }
 .image > div > img {

@@ -9,15 +9,16 @@ import React from 'react'
 import { MDXRemote } from 'next-mdx-remote'
 import { Image } from '@/components/Image'
 import { UnitHighlight } from '@/components/UnitHighlight'
-import { Carousel } from 'antd'
 import DatavizStage from '@/app/oymyakon/DatavizStage'
 import { ImageSet } from '@/components/ImageSet'
 import { WideBlock } from '@/components/WideBlock'
 import { HeterotopiaTitle } from '@/app/heterotopia/HeterotopiaTitle'
 import { HeterotopiaHighlight } from '@/app/heterotopia/HeterotopiaHighlight'
 import { NextSeo } from 'next-seo'
-import { useTranslation } from 'react-i18next'
 import { Flex } from '@/components/Flex'
+import { BlackHighlight } from '@/components/BlackHighlight'
+import { BeforeAfter } from '@/components/BeforeAfter'
+import { Carousel } from '@/components/Carousel'
 
 const mdxComponents = {
     Image,
@@ -30,6 +31,8 @@ const mdxComponents = {
     HeterotopiaHighlight,
     HeterotopiaTitle,
     Flex,
+    BlackHighlight,
+    BeforeAfter,
 }
 
 type Props = PageDefinition & {
