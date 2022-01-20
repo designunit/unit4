@@ -169,7 +169,7 @@ article ul {
 
     margin-bottom: 2em;
 }
-article ul li {
+article :is(ul, ol) li {
     margin-bottom: .5em;
 }
 article ul li:before {
@@ -179,6 +179,10 @@ article ul li:before {
     width: 0.75em;
     font-size: 1.2em;
     font-weight: bolder;
+}
+
+article ol {
+    padding-left: 1em;
 }
 
 article li p {
