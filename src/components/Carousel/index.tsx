@@ -17,18 +17,33 @@ const effect = new Map([
     ['slide', 'scrollx'],
 ])
 
-export const Carousel: React.FC<CarouselProps> = props => (
+const Left = (props) => (
+    <div {...props}>
+        <Image
+            src={'/static/left.svg'}
+            width={20}
+            height={20}
+        />
+    </div>
+)
+const Right = (props) => (
+    <div {...props}>
+        <Image
+            src={'/static/right.svg'}
+            width={20}
+            height={20}
+        />
+    </div>
+)
+
+export const Carousel: React.FC<CarouselProps> = ({ children, transition = 'crossfade' }) => (
     <Slider
         autoplay={true}
-        effect={effect.get(props.transition) as any}
+        effect={effect.get(transition) as any}
+        arrows
+        prevArrow={<Left />}
+        nextArrow={<Right />}
     >
-        {props.images.map((x, i) => (
-            <Image
-                key={i}
-                src={x.src}
-                width={x.width}
-                height={x.height}
-            />
-        ))}
+        {children}
     </Slider>
 )

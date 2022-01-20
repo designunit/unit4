@@ -8,88 +8,106 @@ import { getPageBySlug } from '@/api'
 
 const projects: { href: string, size?: 1 | 2 | 4 }[] = [
     {
-        'href': '/sisu'
+        href: '/perm' // 2
     },
     {
-        'href': '/nyagan',
+        href: '/pitkyaranta' // 1
     },
     {
-        'href': '/volokolamsk',
+        href: '/epischool' // 1
     },
     {
-        'href': '/latlng',
+        href: '/derbent' // 4
     },
     {
-        'href': '/ugra-edu',
+        href: '/kandelaki' // 2
     },
     {
-        'href': '/uray-ppi',
+        href: '/zapolyarniy' // 2
     },
     {
-        'href': '/heterotopia',
+        href: '/sisu'
     },
     {
-        'href': '/oymyakon',
+        href: '/nyagan',
     },
     {
-        'href': '/hovrinka',
+        href: '/volokolamsk',
     },
     {
-        'href': '/delta',
+        href: '/latlng',
     },
     {
-        'href': '/application-manual',
+        href: '/ugra-edu',
     },
     {
-        'href': '/gorprojects-spb',
+        href: '/uray-ppi',
     },
     {
-        'href': '/yoshkola',
+        href: '/heterotopia',
     },
     {
-        'href': '/scnd-boulevard',
+        href: '/oymyakon',
     },
     {
-        'href': '/scnd-park',
+        href: '/hovrinka',
     },
     {
-        'href': '/shelter',
+        href: '/delta',
     },
     {
-        'href': '/swarm',
+        href: '/application-manual',
     },
     {
-        'href': '/scnd-dc',
+        href: '/gorprojects-spb',
     },
     {
-        'href': '/scnd-gb',
+        href: '/yoshkola',
     },
     {
-        'href': '/samarapark',
+        href: '/scnd-boulevard',
     },
     {
-        'href': '/garagescreen',
+        href: '/scnd-park',
     },
     {
-        'href': '/scnd-d',
+        href: '/shelter',
     },
     {
-        'href': '/krvostok',
+        href: '/swarm',
     },
     {
-        'href': '/trollgardens',
+        href: '/scnd-dc',
     },
     {
-        'href': '/chistopol2',
+        href: '/scnd-gb',
     },
     {
-        'href': '/kemb',
+        href: '/samarapark',
     },
     {
-        'href': '/model4',
+        href: '/garagescreen',
     },
     {
-        'href': '/chistopol',
+        href: '/scnd-d',
+    },
+    {
+        href: '/krvostok',
+    },
+    {
+        href: '/trollgardens',
+    },
+    {
+        href: '/chistopol2',
+    },
+    {
+        href: '/kemb',
+    },
+    {
+        href: '/model4',
+    },
+    {
+        href: '/chistopol',
     }
 ]
 
