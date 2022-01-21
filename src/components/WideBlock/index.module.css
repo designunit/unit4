@@ -1,0 +1,6 @@
+.container {
+    position: relative;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+}

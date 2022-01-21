@@ -140,19 +140,11 @@ a:hover svg {
 
 article {
     margin-bottom: 50px;
-}
-
-article > :is(
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p,
-    ul,
-    ol,
-) {
-    max-width: 960px;
+    
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1000px;
 }
 
 article h1 {
@@ -176,9 +168,8 @@ article ul {
     text-indent: -1em;
 
     margin-bottom: 2em;
-    margin-left: 2rem;
 }
-article ul li {
+article :is(ul, ol) li {
     margin-bottom: .5em;
 }
 article ul li:before {
@@ -188,6 +179,10 @@ article ul li:before {
     width: 0.75em;
     font-size: 1.2em;
     font-weight: bolder;
+}
+
+article ol {
+    padding-left: 1em;
 }
 
 article li p {

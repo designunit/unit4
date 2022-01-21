@@ -10,18 +10,35 @@ export interface IImageSetProps {
 }
 
 export const ImageColumnsLayout: React.FC<IImageSetProps> = props => (
-    <div className={s.container} style={props.style}>
-        <Row
-            gutter={16}
-        >
+    <>
+        <div className={s.container} style={props.style}>
+            <Row
+                gutter={16}
+            >
+                {props.items.map((x, i) => (
+                    <Col span={props.span[i]} key={i}>
+                        <Image
+                            key={i}
+                            src={x}
+                        />
+                    </Col>
+                ))}
+            </Row>
+        </div>
+        <div className={s.containerMobile} style={props.style}>
             {props.items.map((x, i) => (
-                <Col span={props.span[i]} key={i}>
-                    <Image
-                        key={i}
-                        src={x}
-                    />
-                </Col>
+                <Row
+                    gutter={16}
+                    justify='center'
+                >
+                    <Col span={24} key={i}>
+                        <Image
+                            key={i}
+                            src={x}
+                        />
+                    </Col>
+                </Row>
             ))}
-        </Row>
-    </div>
+        </div>
+    </>
 )
