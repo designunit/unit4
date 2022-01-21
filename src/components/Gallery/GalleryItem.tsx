@@ -1,12 +1,16 @@
 import cx from 'classnames'
 import Link from 'next/link'
 import * as React from 'react'
-import { IGalleryItem } from '.'
 import s from './GalleryItem.module.css'
 import Ratio from 'react-ratio'
 
-export interface IGalleryItemProps extends IGalleryItem {
-    smallLabel: boolean
+export interface IGalleryItemProps {
+    src: string
+    alt?: string
+    href?: string
+    text?: string | React.ReactNode
+    mode: 'partners' | 'projects'
+    tags?: string[]
     size?: 1 | 2 | 4
 }
 
@@ -37,10 +41,9 @@ const Container: React.FC<ContainerProps> = ({ href, className, children }) => (
     </>
 )
 
-export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel, text, mode, size, ...props }) => {
+export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, size, mode, src, tags, text, ...props }) => {
     const isModePartners = mode === 'partners'
     const isModeProjects = mode === 'projects'
-
     return (
         <Container
             href={href}
@@ -72,10 +75,13 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, src, smallLabel
                 )}
             </div>
             {isModeProjects && (
-                <div className={cx(s.label, {
-                    small: smallLabel,
-                })}>
-                    {text}
+                <div className={cx(s.label)}>
+                    <span>
+                        {text}
+                    </span>
+                    <div className={s.tags}>
+                        {tags.map((x, i) => <span key={i}>{x}</span>)}
+                    </div>
                 </div>
             )}
         </Container>

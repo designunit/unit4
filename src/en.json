@@ -43,5 +43,16 @@
         "projects": "projects",
         "partners": "partners",
         "contacts": "contacts"
+    },
+    "tags": {
+        "open-space": "open-space",
+        "research": "research",
+        "participation": "participation",
+        "architecture": "architecture",
+        "masterplan": "masterplan",
+        "design-code": "design-code",
+        "soft": "soft",
+        "education": "education",
+        "product-design": "product-design"
     }
 }
