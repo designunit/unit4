@@ -1,25 +1,131 @@
-import { NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
 import { Gallery } from '../src/components/Gallery'
 import { Title } from '../src/components/Title'
 import { useTranslation } from 'react-i18next'
-import React, { useState } from 'react'
-import { GalleryItem } from '@/components/Gallery/GalleryItem'
+import React from 'react'
+import { GalleryItem, IGalleryItemProps } from '@/components/Gallery/GalleryItem'
+import { getPageBySlug } from '@/api'
 
-const tags = [
-    'все',
-    'конкурсы',
-    'эскизы',
-    'тег в три слова',
-    'жопа',
+const projects: { href: string, size?: 1 | 2 | 4 }[] = [
+    {
+        href: '/perm',
+        size: 2,
+    },
+    {
+        href: '/pitkyaranta',
+        size: 1,
+    },
+    {
+        href: '/epischool',
+        size: 1,
+    },
+    {
+        href: '/derbent',
+        size: 4,
+    },
+    {
+        href: '/kandelaki',
+        size: 2,
+    },
+    {
+        href: '/zapolyarniy',
+        size: 2,
+    },
+    {
+        href: '/sisu',
+        size: 2,
+    },
+    {
+        href: '/nyagan',
+        size: 2,
+    },
+    {
+        href: '/volokolamsk',
+        size: 4,
+    },
+    {
+        href: '/latlng',
+    },
+    {
+        href: '/ugra-edu',
+    },
+    {
+        href: '/uray-ppi',
+    },
+    {
+        href: '/heterotopia',
+    },
+    {
+        href: '/oymyakon',
+    },
+    {
+        href: '/hovrinka',
+    },
+    {
+        href: '/delta',
+    },
+    {
+        href: '/application-manual',
+    },
+    {
+        href: '/gorprojects-spb',
+    },
+    {
+        href: '/yoshkola',
+    },
+    {
+        href: '/scnd-boulevard',
+    },
+    {
+        href: '/scnd-park',
+    },
+    {
+        href: '/shelter',
+    },
+    {
+        href: '/swarm',
+    },
+    {
+        href: '/scnd-dc',
+    },
+    {
+        href: '/scnd-gb',
+    },
+    {
+        href: '/samarapark',
+    },
+    {
+        href: '/garagescreen',
+    },
+    {
+        href: '/scnd-d',
+    },
+    {
+        href: '/krvostok',
+    },
+    {
+        href: '/trollgardens',
+    },
+    {
+        href: '/chistopol2',
+    },
+    {
+        href: '/kemb',
+    },
+    {
+        href: '/model4',
+    },
+    {
+        href: '/chistopol',
+    }
 ]
 
-const Page: NextPage = () => {
-    const { t } = useTranslation()
+interface IPageProps {
+    data: Partial<IGalleryItemProps>[]
+}
 
-    const [tag, setTag] = useState(tags[0])
-    // .filter((x: any, index) => tag === tags[0] ? true : (
-    //     index % (indexOf(tags, tag) + 1) == 0
-    // ))
+const Page: NextPage<IPageProps> = ({ data }) => {
+    const { t } = useTranslation()
 
     return (
         <>
@@ -50,390 +156,66 @@ const Page: NextPage = () => {
                     marginBottom: 50,
                 }}
             >
-                <GalleryItem
-                    key={'/images/perm-preview.jpg'}
-                    src={'/images/perm-preview.jpg'}
-                    text={'ЦЕНТРАЛЬНЫЕ УЛИЦЫ ПЕРМИ'}
-                    alt={undefined}
-                    href={'/perm'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-                <GalleryItem
-                    key={'/images/pitkyaranta-preview.jpg'}
-                    src={'/images/pitkyaranta-preview.jpg'}
-                    text={'ПИТКЯРАНТА ДЛЯ ЛЮДЕЙ'}
-                    alt={undefined}
-                    href={'/pitkyaranta'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={1}
-                />
-                <GalleryItem
-                    key={'/images/epischool-p.jpg'}
-                    src={'/images/epischool-p.jpg'}
-                    text={'ЭПИШКОЛА'}
-                    alt={undefined}
-                    href={'/epischool'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={1}
-                />
-
-                <GalleryItem
-                    key={'/images/derbent-01.jpg'}
-                    src={'/images/derbent-01.jpg'}
-                    text={'БЛАГОУСТРОЙСТВО БЕРЕГОВОЙ ЛИНИИ ГОРОДА ДЕРБЕНТ'}
-                    alt={undefined}
-                    href={'/derbent'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={4}
-                />
-
-                <GalleryItem
-                    key={'/images/Kandelaki-preview.jpg'}
-                    src={'/images/Kandelaki-preview.jpg'}
-                    text={'БЛАГОУСТРОЙСТВО УЛИЦЫ КАНДЕЛАКИ'}
-                    alt={undefined}
-                    href={'/kandelaki'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-                
-                <GalleryItem
-                    key={'/images/zapolyarniy-preview.jpg'}
-                    src={'/images/zapolyarniy-preview.jpg'}
-                    text={'ИССЛЕДОВАНИЕ ГОРОДА ЗАПОЛЯРНОГО'}
-                    alt={undefined}
-                    href={'/zapolyarniy'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/sisu-preview.jpg'}
-                    src={'/images/sisu-preview.jpg'}
-                    text={'СЕРВИС SISU'}
-                    alt={undefined}
-                    href={'/sisu'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/nyagan_1.jpg'}
-                    src={'/images/nyagan_1.jpg'}
-                    text={'ЦЕНТРАЛЬНЫЙ ЛЕС КУЛЬТУРЫ И ОТДЫХА'}
-                    alt={undefined}
-                    href={'/nyagan'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/volokolamsk-04.jpg'}
-                    src={'/images/volokolamsk-04.jpg'}
-                    text={'МОСКОВСКИЙ ТРАКТ ВОЛОКОЛАМСК'}
-                    alt={undefined}
-                    href={'/volokolamsk'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={4}
-                />
-
-                <GalleryItem
-                    key={'/images/latlng.jpg'}
-                    src={'/images/latlng.jpg'}
-                    text={'LATL.NG облачная ГИС'}
-                    alt={undefined}
-                    href={'/latlng'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={1}
-                />
-
-                <GalleryItem
-                    key={'/images/edu_ugra-01.jpg'}
-                    src={'/images/edu_ugra-01.jpg'}
-                    text={'ОБУЧАЮЩИЙ СЕМИНАР ХМАО ФКГС'}
-                    alt={undefined}
-                    href={'/ugra-edu'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={1}
-                />
-
-                <GalleryItem
-                    key={'/images/uray_ppi-urai.jpg'}
-                    src={'/images/uray_ppi-urai.jpg'}
-                    text={'ИССЛЕДОВАНИЕ УРАЙ ХМАО'}
-                    alt={undefined}
-                    href={'/uray-ppi'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/heterotopia-heterotopia_01.jpg'}
-                    src={'/images/heterotopia-heterotopia_01.jpg'}
-                    text={'ГЕТЕРОТОПИИ СО-ВРЕМЕННОСТИ'}
-                    alt={undefined}
-                    href={'/heterotopia'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/oymyakon-viz_gulag.jpg'}
-                    src={'/images/oymyakon-viz_gulag.jpg'}
-                    text={'ОЙМЯКОН п(о)люс со-временности'}
-                    alt={undefined}
-                    href={'/oymyakon'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/hovrinka-hovrinka.jpg'}
-                    src={'/images/hovrinka-hovrinka.jpg'}
-                    text={'СОЦИАЛЬНО-КУЛЬТУРНЫЙ ЦЕНТР ХОВРИНКА'}
-                    alt={undefined}
-                    href={'/hovrinka'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={4}
-                />
-
-                <GalleryItem
-                    key={'/images/delta-delta.jpg'}
-                    src={'/images/delta-delta.jpg'}
-                    text={'БЛАГОУСТРОЙСТВО ЖК COMCITY МОСКВА'}
-                    alt={undefined}
-                    href={'/delta'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={1}
-                />
-
-                <GalleryItem
-                    key={'/images/app_manual-manual.jpg'}
-                    src={'/images/app_manual-manual.jpg'}
-                    text={'МЕТОДИЧЕСКИЕ РЕКОМЕНДАЦИИ ХМАО'}
-                    alt={undefined}
-                    href={'/application-manual'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={1}
-                />
-
-                <GalleryItem
-                    key={'/images/gorprojects_spb-project3-todo-after_.jpg'}
-                    src={'/images/gorprojects_spb-project3-todo-after_.jpg'}
-                    text={'КОНЦЕПЦИИ spb.city4people.ru'}
-                    alt={undefined}
-                    href={'/gorprojects-spb'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/yoshkola-04.jpg'}
-                    src={'/images/yoshkola-04.jpg'}
-                    text={'IT ШКОЛА ЙОШКАР-ОЛА'}
-                    alt={undefined}
-                    href={'/yoshkola'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/boulevard_scnd-boulevard.jpg'}
-                    src={'/images/boulevard_scnd-boulevard.jpg'}
-                    text={'БУЛЬВАР ЖИЛОГО РАЙОНА СКАНДИНАВИЯ'}
-                    alt={undefined}
-                    href={'/scnd-boulevard'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/park_scnd-park.jpg'}
-                    src={'/images/park_scnd-park.jpg'}
-                    text={'ПАРК ЖИЛОГО РАЙОНА СКАНДИНАВИЯ'}
-                    alt={undefined}
-                    href={'/scnd-park'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={4}
-                />
-
-                <GalleryItem
-                    key={'/images/shelter-01.jpg'}
-                    src={'/images/shelter-01.jpg'}
-                    text={'ИНСТАЛЛЯЦИЯ NEST WIND SHELTER'}
-                    alt={undefined}
-                    href={'/shelter'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={1}
-                />
-
-                <GalleryItem
-                    key={'/images/swarm-swarm.jpg'}
-                    src={'/images/swarm-swarm.jpg'}
-                    text={'МОДЕЛИРОВАНИЕ ПЕШЕХОДНЫХ ПОТОКОВ SWARM'}
-                    alt={undefined}
-                    href={'/swarm'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={1}
-                />
-
-                <GalleryItem
-                    key={'/images/dc_scnd-dc.jpg'}
-                    src={'/images/dc_scnd-dc.jpg'}
-                    text={'ДИЗАЙН-КОД ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ'}
-                    alt={undefined}
-                    href={'/scnd-dc'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/gb_scnd-gb.jpg'}
-                    src={'/images/gb_scnd-gb.jpg'}
-                    text={'КОНЦЕПЦИЯ ОТКРЫТЫХ ГОРОДСКИХ ПРОСТРАНСТВ'}
-                    alt={undefined}
-                    href={'/scnd-gb'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/samarapark-10.jpg'}
-                    src={'/images/samarapark-10.jpg'}
-                    text={'ПАРК ЗАГОРОДНЫЙ САМАРА'}
-                    alt={undefined}
-                    href={'/samarapark'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/garagescreen-01.jpg'}
-                    src={'/images/garagescreen-01.jpg'}
-                    text={'GARAGE SCREEN COMPETITION'}
-                    alt={undefined}
-                    href={'/garagescreen'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={4}
-                />
-
-                <GalleryItem
-                    key={'/images/d_scnd-03.jpg'}
-                    src={'/images/d_scnd-03.jpg'}
-                    text={'ДВОРЫ ЖИЛОГО РАЙОНА СКАНДИНАВИЯ'}
-                    alt={undefined}
-                    href={'/scnd-d'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={1}
-                />
-
-                <GalleryItem
-                    key={'/images/krvostok-01.jpg'}
-                    src={'/images/krvostok-01.jpg'}
-                    text={'КОНЦЕПЦИЯ БЛАГОУСТРОЙСТВА ЗАВОДА КРАСНЫЙ ВОСТОК'}
-                    alt={undefined}
-                    href={'/krvostok'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={1}
-                />
-
-                <GalleryItem
-                    key={'/images/trollgardens-05.jpg'}
-                    src={'/images/trollgardens-05.jpg'}
-                    text={'САДЫ ТРОЛЛЕЙ'}
-                    alt={undefined}
-                    href={'/trollgardens'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/chistopol2-07.jpg'}
-                    src={'/images/chistopol2-07.jpg'}
-                    text={'БУЛЬВАР ЧИСТОПОЛЬ ТАТАРСТАН ФАЗА #2'}
-                    alt={undefined}
-                    href={'/chistopol2'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/kemb-01.jpg'}
-                    src={'/images/kemb-01.jpg'}
-                    text={'ИССЛЕДОВАНИЕ НАБЕРЕЖНОЙ КАРПОВКИ'}
-                    alt={undefined}
-                    href={'/kemb'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={2}
-                />
-
-                <GalleryItem
-                    key={'/images/model4-01.jpg'}
-                    src={'/images/model4-01.jpg'}
-                    text={'СЕРИЯ ИЗДЕЛИЙ МОДЕЛЬ : : 4'}
-                    alt={undefined}
-                    href={'/model4'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={4}
-                />
-
-                <GalleryItem
-                    key={'/images/chistopol-02.jpg'}
-                    src={'/images/chistopol-02.jpg'}
-                    text={'БУЛЬВАР ЧИСТОПОЛЬ ТАТАРСТАН ФАЗА #1'}
-                    alt={undefined}
-                    href={'/chistopol'}
-                    smallLabel={false}
-                    mode={'projects'}
-                    size={1}
-                />
+                {data.map((x, i) => {
+                    const indexCycled = (i + 4) % 6 // +4 should be removed, its a hack
+                    let autosize: 1 | 2 | 4 = 4
+                    switch (indexCycled) {
+                        case 0:
+                            autosize = 4
+                            break
+                        case 1:
+                        case 2:
+                            autosize = 1
+                            break
+                        case 3:
+                        case 4:
+                        case 5:
+                            autosize = 2
+                            break
+                        default:
+                            break
+                    }
+                    return (
+                        <GalleryItem
+                            key={x.href}
+                            src={x.src}
+                            text={x.text}
+                            tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
+                            href={x.href}
+                            size={x?.size ?? autosize}
+                            mode={'projects'}
+                        />
+                    )
+                })}
             </Gallery>
         </>
     )
 }
 
-// export const getStaticProps: GetStaticProps = async () => {
-// export const setServerSideProps: GetServerSideProps = async () => {
-//     return {
-//         props: {
-//             namespacesRequired: ['common'],
-//         }
-//     }
-// }
+export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
+    const pages = await Promise.all(projects.map(async x => getPageBySlug(ctx.locale, x.href)))
+    const data = projects.map((x, i) => {
+        const page = pages[i]
+        const src = page?.cover ?? null
+        const text = page?.title ?? null
+        const tags = [
+            ...(page?.location ? [page?.location] : []),
+            ...(page?.year ? [page?.year] : []),
+            ...page?.tags ?? []
+        ]
+        return {
+            ...x,
+            src,
+            text,
+            tags,
+        }
+    })
 
-// export default withTranslation('common')(Page)
+
+    return {
+        props: {
+            data,
+        }
+    }
+}
 export default Page

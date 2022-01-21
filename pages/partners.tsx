@@ -131,7 +131,6 @@ const Page: NextPage = () => {
                         text={x.text}
                         alt={x.alt}
                         href={x.href}
-                        smallLabel={x.smallLabel}
                         mode={'partners'}
                     />
                 ))}
