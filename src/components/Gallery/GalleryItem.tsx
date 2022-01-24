@@ -46,8 +46,8 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, size, mode, tag
     const isModePartners = mode === 'partners'
     const isModeProjects = mode === 'projects'
 
-    const src = props.relativeSrc ? props.src.split('https://unit4.io')[1] : props.src
-    console.log(src)
+    const src = !props.src ? props.src : // in ENG props.src is null
+        props.relativeSrc ? props.src.split('https://unit4.io')[1] : props.src
     return (
         <Container
             href={href}
