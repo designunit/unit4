@@ -6,7 +6,12 @@ import React from 'react'
 import { GalleryItem, IGalleryItemProps } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
 
-const projects: { href: string, size?: 1 | 2 | 4 }[] = [
+const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
+    {
+        href: '/bereguray',
+        size: 4,
+        relativeSrc: true,
+    },
     {
         href: '/perm',
         size: 2,
@@ -184,6 +189,7 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                             href={x.href}
                             size={x?.size ?? autosize}
                             mode={'projects'}
+                            relativeSrc={x.relativeSrc}
                         />
                     )
                 })}
