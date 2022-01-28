@@ -8,40 +8,94 @@ import { getPageBySlug } from '@/api'
 
 const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
     {
-        href: '/bereguray',
-        size: 4,
+        href: '/latlng',
+        size: 2,
         relativeSrc: true,
     },
     {
         href: '/perm',
         size: 2,
+        relativeSrc: true,
     },
     {
-        href: '/pitkyaranta',
-        size: 1,
-    },
-    {
-        href: '/epischool',
-        size: 1,
-    },
-    {
-        href: '/derbent',
+        href: '/mur-shmidta',
         size: 4,
+        relativeSrc: true,
     },
     {
-        href: '/kandelaki',
+        href: '/volkhov',
         size: 2,
-    },
-    {
-        href: '/zapolyarniy',
-        size: 2,
+        relativeSrc: true,
     },
     {
         href: '/sisu',
         size: 2,
     },
     {
+        href: '/v-tura',
+        size: 2,
+        relativeSrc: true,
+    },
+    {
+        href: '/pitkyaranta',
+        size: 2,
+    },
+    {
+        href: '/derbent',
+        size: 4,
+    },
+    {
+        href: '/zapolyarniy',
+        size: 1,
+    },
+    {
+        href: '/gyumri',
+        size: 1,
+        relativeSrc: true,
+    },
+    {
+        href: '/kandelaki',
+        size: 2,
+    },
+    {
+        href: '/bereguray',
+        size: 2,
+        relativeSrc: true,
+    },
+    {
+        href: '/sreda800',
+        size: 2,
+        relativeSrc: true,
+    },
+    {
         href: '/nyagan',
+        size: 4,
+    },
+    {
+        href: '/epischool',
+        size: 2,
+    },
+    {
+        href: '/parnas',
+        size: 1,
+        relativeSrc: true,
+    },
+    {
+        href: '/whatever',
+        size: 1,
+        relativeSrc: true,
+    },
+    {
+        href: '/krasnokamsk',
+        size: 1,
+        relativeSrc: true,
+    },
+    {
+        href: '/heterotopia',
+        size: 1,
+    },
+    {
+        href: '/ugra-edu',
         size: 2,
     },
     {
@@ -49,79 +103,92 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
         size: 4,
     },
     {
-        href: '/latlng',
-    },
-    {
-        href: '/ugra-edu',
-    },
-    {
         href: '/uray-ppi',
-    },
-    {
-        href: '/heterotopia',
-    },
-    {
-        href: '/oymyakon',
-    },
-    {
-        href: '/hovrinka',
+        size: 2,
     },
     {
         href: '/delta',
+        size: 2,
     },
     {
-        href: '/application-manual',
+        href: '/hovrinka',
+        size: 1,
     },
     {
         href: '/gorprojects-spb',
+        size: 1,
+    },
+    {
+        href: '/application-manual',
+        size: 2,
+    },
+    {
+        href: '/oymyakon',
+        size: 4,
     },
     {
         href: '/yoshkola',
+        size: 2,
     },
     {
         href: '/scnd-boulevard',
+        size: 1,
     },
     {
         href: '/scnd-park',
+        size: 1,
     },
     {
         href: '/shelter',
+        size: 1,
     },
     {
         href: '/swarm',
+        size: 1,
     },
     {
         href: '/scnd-dc',
+        size: 2,
     },
     {
         href: '/scnd-gb',
+        size: 4,
     },
     {
         href: '/samarapark',
-    },
-    {
-        href: '/garagescreen',
+        size: 2,
     },
     {
         href: '/scnd-d',
+        size: 2,
+    },
+    {
+        href: '/garagescreen',
+        size: 1,
     },
     {
         href: '/krvostok',
-    },
-    {
-        href: '/trollgardens',
+        size: 1,
     },
     {
         href: '/chistopol2',
+        size: 2,
+    },
+    {
+        href: '/trollgardens',
+        size: 4,
     },
     {
         href: '/kemb',
+        size: 2,
     },
     {
         href: '/model4',
+        size: 2,
     },
     {
         href: '/chistopol',
+        size: 2,
     }
 ]
 
