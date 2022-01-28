@@ -25,6 +25,7 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
     {
         href: '/volkhov',
         size: 2,
+        relativeSrc: true,
     },
     {
         href: '/sisu',
@@ -85,10 +86,6 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
         relativeSrc: true,
     },
     {
-        href: '/volokolamsk',
-        size: 4,
-    },
-    {
         href: '/krasnokamsk',
         size: 1,
         relativeSrc: true,
@@ -102,16 +99,16 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
         size: 2,
     },
     {
+        href: '/volokolamsk',
+        size: 4,
+    },
+    {
         href: '/uray-ppi',
         size: 2,
     },
     {
         href: '/delta',
         size: 2,
-    },
-    {
-        href: '/oymyakon',
-        size: 4,
     },
     {
         href: '/hovrinka',
@@ -126,6 +123,10 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
         size: 2,
     },
     {
+        href: '/oymyakon',
+        size: 4,
+    },
+    {
         href: '/yoshkola',
         size: 2,
     },
@@ -136,10 +137,6 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
     {
         href: '/scnd-park',
         size: 1,
-    },
-    {
-        href: '/scnd-gb',
-        size: 4,
     },
     {
         href: '/shelter',
@@ -154,35 +151,44 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
         size: 2,
     },
     {
+        href: '/scnd-gb',
+        size: 4,
+    },
+    {
         href: '/samarapark',
+        size: 2,
+    },
+    {
+        href: '/scnd-d',
+        size: 2,
     },
     {
         href: '/garagescreen',
         size: 1,
     },
     {
-        href: '/scnd-d',
-    },
-    {
         href: '/krvostok',
         size: 1,
+    },
+    {
+        href: '/chistopol2',
+        size: 2,
     },
     {
         href: '/trollgardens',
         size: 4,
     },
     {
-        href: '/chistopol2',
-    },
-    {
         href: '/kemb',
+        size: 2,
     },
     {
         href: '/model4',
-        size: 4,
+        size: 2,
     },
     {
         href: '/chistopol',
+        size: 2,
     }
 ]
 
