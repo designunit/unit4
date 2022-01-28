@@ -8,7 +8,7 @@ import { getPageBySlug } from '@/api'
 
 const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
     {
-        href: '/latlng',
+        href: '/mesto',
         size: 2,
         relativeSrc: true,
     },
