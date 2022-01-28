@@ -110,9 +110,9 @@
     object-position: bottom;
 }
 
-.col1 .tags {
+/* .col1 .tags {
     display: none;
-}
+} */
 
 :is(.col4, .col2) {
     flex-flow: row;
