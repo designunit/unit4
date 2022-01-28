@@ -8,32 +8,22 @@ import { getPageBySlug } from '@/api'
 
 const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
     {
-        href: '/bereguray',
-        size: 4,
+        href: '/latlng',
+        size: 2,
         relativeSrc: true,
     },
     {
         href: '/perm',
         size: 2,
+        relativeSrc: true,
     },
     {
-        href: '/pitkyaranta',
-        size: 1,
-    },
-    {
-        href: '/epischool',
-        size: 1,
-    },
-    {
-        href: '/derbent',
+        href: '/mur-shmidta',
         size: 4,
+        relativeSrc: true,
     },
     {
-        href: '/kandelaki',
-        size: 2,
-    },
-    {
-        href: '/zapolyarniy',
+        href: '/volkhov',
         size: 2,
     },
     {
@@ -41,75 +31,145 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
         size: 2,
     },
     {
-        href: '/nyagan',
+        href: '/v-tura',
         size: 2,
+        relativeSrc: true,
+    },
+    {
+        href: '/pitkyaranta',
+        size: 2,
+    },
+    {
+        href: '/derbent',
+        size: 4,
+    },
+    {
+        href: '/zapolyarniy',
+        size: 1,
+    },
+    {
+        href: '/gyumri',
+        size: 1,
+        relativeSrc: true,
+    },
+    {
+        href: '/kandelaki',
+        size: 2,
+    },
+    {
+        href: '/bereguray',
+        size: 2,
+        relativeSrc: true,
+    },
+    {
+        href: '/sreda800',
+        size: 2,
+        relativeSrc: true,
+    },
+    {
+        href: '/nyagan',
+        size: 4,
+    },
+    {
+        href: '/epischool',
+        size: 2,
+    },
+    {
+        href: '/parnas',
+        size: 1,
+        relativeSrc: true,
+    },
+    {
+        href: '/whatever',
+        size: 1,
+        relativeSrc: true,
     },
     {
         href: '/volokolamsk',
         size: 4,
     },
     {
-        href: '/latlng',
-    },
-    {
-        href: '/ugra-edu',
-    },
-    {
-        href: '/uray-ppi',
+        href: '/krasnokamsk',
+        size: 1,
+        relativeSrc: true,
     },
     {
         href: '/heterotopia',
+        size: 1,
     },
     {
-        href: '/oymyakon',
+        href: '/ugra-edu',
+        size: 2,
     },
     {
-        href: '/hovrinka',
+        href: '/uray-ppi',
+        size: 2,
     },
     {
         href: '/delta',
+        size: 2,
     },
     {
-        href: '/application-manual',
+        href: '/oymyakon',
+        size: 4,
+    },
+    {
+        href: '/hovrinka',
+        size: 1,
     },
     {
         href: '/gorprojects-spb',
+        size: 1,
+    },
+    {
+        href: '/application-manual',
+        size: 2,
     },
     {
         href: '/yoshkola',
+        size: 2,
     },
     {
         href: '/scnd-boulevard',
+        size: 1,
     },
     {
         href: '/scnd-park',
-    },
-    {
-        href: '/shelter',
-    },
-    {
-        href: '/swarm',
-    },
-    {
-        href: '/scnd-dc',
+        size: 1,
     },
     {
         href: '/scnd-gb',
+        size: 4,
+    },
+    {
+        href: '/shelter',
+        size: 1,
+    },
+    {
+        href: '/swarm',
+        size: 1,
+    },
+    {
+        href: '/scnd-dc',
+        size: 2,
     },
     {
         href: '/samarapark',
     },
     {
         href: '/garagescreen',
+        size: 1,
     },
     {
         href: '/scnd-d',
     },
     {
         href: '/krvostok',
+        size: 1,
     },
     {
         href: '/trollgardens',
+        size: 4,
     },
     {
         href: '/chistopol2',
@@ -119,6 +179,7 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
     },
     {
         href: '/model4',
+        size: 4,
     },
     {
         href: '/chistopol',
