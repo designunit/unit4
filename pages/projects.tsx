@@ -70,6 +70,7 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
     {
         href: '/nyagan',
         size: 4,
+        relativeSrc: true,
     },
     {
         href: '/epischool',
