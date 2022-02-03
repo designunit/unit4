@@ -110,9 +110,9 @@
     object-position: bottom;
 }
 
-.col1 .tags {
+/* .col1 .tags {
     display: none;
-}
+} */
 
 :is(.col4, .col2) {
     flex-flow: row;
@@ -148,33 +148,41 @@
     flex: 0 0 calc(50% - var(--grid-gap) * .5);
 }
 
-@media screen and (max-width: 960px) {
-    :is(.col4, .col2, .col1) {
+@media screen and (max-width: 1280px) {
+    :is(.col2, .col1) {
         grid-column-end: span 2;
         flex-flow: column;
         grid-row: span 6;
     }
 
-    :is(.col4, .col2, .col1) > div:first-child {
+    :is(.col2, .col1) > div:first-child {
         height: 50%;
         flex: 0 0 50%;
     }
-    :is(.col4, .col2, .col1) .img {
+    :is(.col2, .col1) .img {
         height: 100%;
         object-position: bottom;
     }
 
-    :is(.col4, .col2, .col1) > .label {
+    :is(.col2, .col1) > .label {
         flex: 1 0 50%;
     }
 
-    .col1 .tags {
-        display: flex;
+    .col4 > .label {
+        flex: 1 0 33%;
     }
 }
 
 @media screen and (max-width: 31.25em) {
     :is(.col4, .col2, .col1) {
         grid-column-end: span 4;
+    }
+
+    .col4 {
+        flex-flow: column;
+        grid-row: span 6;
+    }
+    .col4 > .label {
+        flex: 1 0 50%;
     }
 }

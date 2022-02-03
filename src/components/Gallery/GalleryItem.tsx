@@ -12,6 +12,7 @@ export interface IGalleryItemProps {
     mode: 'partners' | 'projects'
     tags?: string[]
     size?: 1 | 2 | 4
+    relativeSrc?: boolean
 }
 
 type ContainerProps = Partial<{
@@ -41,9 +42,12 @@ const Container: React.FC<ContainerProps> = ({ href, className, children }) => (
     </>
 )
 
-export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, size, mode, src, tags, text, ...props }) => {
+export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, size, mode, tags, text, ...props }) => {
     const isModePartners = mode === 'partners'
     const isModeProjects = mode === 'projects'
+
+    const src = !props.src ? props.src : // in ENG props.src is null
+        props.relativeSrc ? props.src.split('https://unit4.io')[1] : props.src
     return (
         <Container
             href={href}
