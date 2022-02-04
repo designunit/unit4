@@ -3,6 +3,7 @@ import Link from 'next/link'
 import * as React from 'react'
 import s from './GalleryItem.module.css'
 import Ratio from 'react-ratio'
+import Image from 'next/image'
 
 export interface IGalleryItemProps {
     src: string
@@ -54,11 +55,13 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, size, mode, tag
             className={isModeProjects && cx(s.border, s.hoverZoom, sizeClassNameMap[size])}
         >
             <div
-                className={cx(isModePartners && s.border)}
+                className={cx(s.image, isModePartners && s.border)}
             >
                 {isModeProjects && (
-                    <img
+                    <Image
                         src={src}
+                        layout='fill'
+                        objectFit='cover'
                         className={s.img}
                     />
                 )}
@@ -66,14 +69,11 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, size, mode, tag
                     <Ratio
                         contentClassName={cx(s.img, isModePartners && s.gray)}
                     >
-                        <img
+                        <Image
                             src={src}
-                            style={{
-                                objectFit: 'contain',
-                                padding: 10,
-                                width: '100%',
-                                height: '100%',
-                            }}
+                            layout='fill'
+                            objectFit='contain'
+                            className={s.img}
                         />
                     </Ratio>
                 )}

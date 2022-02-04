@@ -11,22 +11,18 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
     {
         href: '/mesto',
         size: 2,
-        relativeSrc: true,
     },
     {
         href: '/perm',
         size: 2,
-        relativeSrc: true,
     },
     {
         href: '/mur-shmidta',
         size: 4,
-        relativeSrc: true,
     },
     {
         href: '/volkhov',
         size: 2,
-        relativeSrc: true,
     },
     {
         href: '/sisu',
@@ -35,7 +31,6 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
     {
         href: '/v-tura',
         size: 2,
-        relativeSrc: true,
     },
     {
         href: '/pitkyaranta',
@@ -52,7 +47,6 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
     {
         href: '/gyumri',
         size: 1,
-        relativeSrc: true,
     },
     {
         href: '/kandelaki',
@@ -61,17 +55,14 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
     {
         href: '/bereguray',
         size: 2,
-        relativeSrc: true,
     },
     {
         href: '/sreda800',
         size: 2,
-        relativeSrc: true,
     },
     {
         href: '/nyagan',
         size: 4,
-        relativeSrc: true,
     },
     {
         href: '/epischool',
@@ -80,17 +71,14 @@ const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
     {
         href: '/parnas',
         size: 1,
-        relativeSrc: true,
     },
     {
         href: '/whatever',
         size: 1,
-        relativeSrc: true,
     },
     {
         href: '/krasnokamsk',
         size: 1,
-        relativeSrc: true,
     },
     {
         href: '/heterotopia',
