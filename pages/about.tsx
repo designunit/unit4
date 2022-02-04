@@ -9,6 +9,7 @@ import { Hero } from '@/components/Index/Hero'
 import { InView } from 'react-intersection-observer'
 import Media from 'react-media'
 import { RunningLine } from '@/components/Index/RunningLine'
+import { Flex } from '@/components/Flex'
 
 const Page: NextPage = () => {
     const { t } = useTranslation()
@@ -169,23 +170,55 @@ const Page: NextPage = () => {
             </div>
 
             <div style={{ height: vertOffset, paddingTop: '4rem', }} >
-
-            <RunningLine>
-                <h1
-                    style={{
-                        textTransform: 'uppercase',
-                        fontSize: 46,
-                        margin: '0',
-                        color: 'var(--color-text-opposite)',
-                    }}
-                >
-                    команда студии / plug-in структура / команда студии / plug-in структура / команда студии / plug-in структура / команда студии / plug-in структура /
-                </h1>
-            </RunningLine>
-
+                <RunningLine>
+                    <h1
+                        style={{
+                            textTransform: 'uppercase',
+                            fontSize: 46,
+                            margin: '0',
+                            color: 'var(--color-text-opposite)',
+                        }}
+                    >
+                        команда студии / plug-in структура / команда студии / plug-in структура / команда студии / plug-in структура / команда студии / plug-in структура /
+                    </h1>
+                </RunningLine>
             </div>
 
             <div style={{ height: '12rem' }} />
+
+            <article style={{ paddingLeft: '1rem' }}>
+                <Flex>
+                    <ul>
+                        {[
+                            'Данияр Юсупов - главный архитектор студии',
+                            'Владимир Петросян - генеральный директор',
+                            'Надежда Кузнецова - куратор проектов',
+                            'Елизавета Владимирова - куратор проектов',
+                        ].map(x => <li>{x}</li>)}
+                    </ul>
+                    <ul>
+                        {[
+                            'Сергей Барышев - граф. дизайнер',
+                            'Роман Тимашев - фулстек-разработчик',
+                            'Григорий Балуев - разработчик',
+                            'Арсений Юсупов - фронтэнд-разработчик',
+                            'Алена Чеусова - архитектор',
+                            'Анастасия Матюшонок - архитектор',
+                            'Виктория Бинковская - архитектор',
+                        ].map(x => <li>{x}</li>)}
+                    </ul>
+                </Flex>
+            </article>
+
+            <div>
+                <p>
+                    С нами работали: Анастасия Славина, Анита Попова, Артем Никитин, Валера Газаров, Вероника Серебрякова, Виктор Сергеев, Джульетта Боброва, Евгений Щукин, Елизавета Челнокова, Кирилл Петров, Марина Цай, Михаил Палькин, Никита Сидоров, Николай Медведенко, Оля Чернякова, Петр Шуба, Соня Шишкина
+                </p>
+            </div>
+
+            <div style={{
+                marginTop: vertOffset,
+            }} />
 
             <Table />
 
