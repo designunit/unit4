@@ -5,11 +5,11 @@ import React, { useState } from 'react'
 import { Table } from '@/components/Index/Table'
 import { ThreeButton, ThreeButtons } from '@/components/Index/ThreeButtons'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
-import { Hero } from '@/components/Index/Hero'
 import { InView } from 'react-intersection-observer'
 import Media from 'react-media'
 import { RunningLine } from '@/components/Index/RunningLine'
 import { Flex } from '@/components/Flex'
+import { Loud } from '@/components/Loud'
 
 const Page: NextPage = () => {
     const { t } = useTranslation()
@@ -20,7 +20,16 @@ const Page: NextPage = () => {
 
     return (
         <>
-            <Hero />
+            <Loud>
+                проектная студия<br />
+                <span
+                    style={{
+                        textTransform: 'none'
+                    }}
+                >
+                    design : : unit 4
+                </span>
+            </Loud>
 
             <div style={{
                 position: 'relative',
