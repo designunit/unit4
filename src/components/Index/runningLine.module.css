@@ -10,7 +10,7 @@
 
 .container > * {
     flex-shrink: 0;
-    padding-right: 4rem;
+    padding-right: .5rem;
     min-width: 100%;
     white-space: nowrap;
     animation: anim 15s infinite linear;

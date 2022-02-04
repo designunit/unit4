@@ -22,12 +22,12 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
                         <Menu
                             items={[
                                 {
-                                    href: '/about',
-                                    text: 'about',
+                                    href: '/',
+                                    text: 'projects',
                                 },
                                 {
-                                    href: '/projects',
-                                    text: 'projects',
+                                    href: '/about',
+                                    text: 'about',
                                 },
                                 {
                                     href: '/partners',

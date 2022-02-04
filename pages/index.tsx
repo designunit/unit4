@@ -1,223 +1,298 @@
-import { NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
+import { Gallery } from '../src/components/Gallery'
 import { Title } from '../src/components/Title'
 import { useTranslation } from 'react-i18next'
-import React, { useState } from 'react'
-import { Table } from '@/components/Index/Table'
-import { ThreeButton, ThreeButtons } from '@/components/Index/ThreeButtons'
-import { DoubleBlock } from '@/components/Index/DoubleBlock'
-import { Hero } from '@/components/Index/Hero'
-import { InView } from 'react-intersection-observer'
-import Media from 'react-media'
+import React from 'react'
+import { GalleryItem, IGalleryItemProps } from '@/components/Gallery/GalleryItem'
+import { getPageBySlug } from '@/api'
+import Image from 'next/image'
+import unitGif from '@/../public/static/unitZalipuxa.gif'
 
-const Page: NextPage = () => {
+const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
+    {
+        href: '/mesto',
+        size: 2,
+        relativeSrc: true,
+    },
+    {
+        href: '/perm',
+        size: 2,
+        relativeSrc: true,
+    },
+    {
+        href: '/mur-shmidta',
+        size: 4,
+        relativeSrc: true,
+    },
+    {
+        href: '/volkhov',
+        size: 2,
+        relativeSrc: true,
+    },
+    {
+        href: '/sisu',
+        size: 2,
+    },
+    {
+        href: '/v-tura',
+        size: 2,
+        relativeSrc: true,
+    },
+    {
+        href: '/pitkyaranta',
+        size: 2,
+    },
+    {
+        href: '/derbent',
+        size: 4,
+    },
+    {
+        href: '/zapolyarniy',
+        size: 1,
+    },
+    {
+        href: '/gyumri',
+        size: 1,
+        relativeSrc: true,
+    },
+    {
+        href: '/kandelaki',
+        size: 2,
+    },
+    {
+        href: '/bereguray',
+        size: 2,
+        relativeSrc: true,
+    },
+    {
+        href: '/sreda800',
+        size: 2,
+        relativeSrc: true,
+    },
+    {
+        href: '/nyagan',
+        size: 4,
+        relativeSrc: true,
+    },
+    {
+        href: '/epischool',
+        size: 2,
+    },
+    {
+        href: '/parnas',
+        size: 1,
+        relativeSrc: true,
+    },
+    {
+        href: '/whatever',
+        size: 1,
+        relativeSrc: true,
+    },
+    {
+        href: '/krasnokamsk',
+        size: 1,
+        relativeSrc: true,
+    },
+    {
+        href: '/heterotopia',
+        size: 1,
+    },
+    {
+        href: '/ugra-edu',
+        size: 2,
+    },
+    {
+        href: '/volokolamsk',
+        size: 4,
+    },
+    {
+        href: '/uray-ppi',
+        size: 2,
+    },
+    {
+        href: '/delta',
+        size: 2,
+    },
+    {
+        href: '/hovrinka',
+        size: 1,
+    },
+    {
+        href: '/gorprojects-spb',
+        size: 1,
+    },
+    {
+        href: '/application-manual',
+        size: 2,
+    },
+    {
+        href: '/oymyakon',
+        size: 4,
+    },
+    {
+        href: '/yoshkola',
+        size: 2,
+    },
+    {
+        href: '/scnd-boulevard',
+        size: 1,
+    },
+    {
+        href: '/scnd-park',
+        size: 1,
+    },
+    {
+        href: '/shelter',
+        size: 1,
+    },
+    {
+        href: '/swarm',
+        size: 1,
+    },
+    {
+        href: '/scnd-dc',
+        size: 2,
+    },
+    {
+        href: '/scnd-gb',
+        size: 4,
+    },
+    {
+        href: '/samarapark',
+        size: 2,
+    },
+    {
+        href: '/scnd-d',
+        size: 2,
+    },
+    {
+        href: '/garagescreen',
+        size: 1,
+    },
+    {
+        href: '/krvostok',
+        size: 1,
+    },
+    {
+        href: '/chistopol2',
+        size: 2,
+    },
+    {
+        href: '/trollgardens',
+        size: 4,
+    },
+    {
+        href: '/kemb',
+        size: 2,
+    },
+    {
+        href: '/model4',
+        size: 2,
+    },
+    {
+        href: '/chistopol',
+        size: 2,
+    }
+]
+
+interface IPageProps {
+    data: Partial<IGalleryItemProps>[]
+}
+
+const Page: NextPage<IPageProps> = ({ data }) => {
     const { t } = useTranslation()
-
-    const vertOffset = '6rem'
-
-    const [three, setThree] = useState<string>(null)
 
     return (
         <>
-            <Hero />
-
             <div style={{
                 position: 'relative',
+                padding: 'var(--content-padding)',
             }}>
-                <ThreeButtons
-                    state={three}
+
+                <Image
+                    src={unitGif}
                 />
 
-                <div style={{
-                    marginTop: vertOffset,
-                }} />
-                <span id='enviromental-design'
-                    style={{
-                        position: 'relative',
-                        bottom: '12rem',
-                    }}
-                />
-
-                <Media query={'screen and (max-width: 31.25em)'}>
-                    {match => match ? (
-                        <ThreeButton index={0} />
-                    ) : (
-
-                        <Title writeToHead={false}>
-                            Средовое <br />
-                            проектирование
-                        </Title>
-                    )}
-                </Media>
-                <InView
-                    onChange={(inView) => inView && setThree('#enviromental-design')}
-                    style={{
-                        position: 'relative',
-                        bottom: '-50vh'
-                    }}
-                />
-                <div>
-                    <DoubleBlock
-                        left={[
-                            'проекты городской среды',
-                            'мастерпланы развития территорий',
-                            'экспертиза средовых проектов',
-                            'разработка дизайн-кода',
-                            'проекты образовательных сред',
-                        ]}
-                        right={(
-                            <>
-                                <div>
-                                    Сейчас по нашим проектам реализуются центральные пространства в нескольких городах: городской пляж и приморский парк в Дербенте, главная улица и скверы Питкяранты, набережная в Урае, лесопарк в Нягани, центральная улица в Волоколамске, а также территории двух жилых комплексов в Москве.
-                                </div>
-                                <div>
-                                    В Чистополе под нашим авторским надзором реализован проект реконструкции бульвара по Президентской программе Республики Татарстан. В результате мы прошли путь от первых скетчей до реализации с разработкой деталей уличного оборудования и уже три года получаем фидбек от проекта, который продолжает развиваться.
-                                </div>
-                            </>
-                        )}
+                {/* <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    right: 0,
+                }}>
+                    <ProjectsSelector
+                        setTag={setTag}
+                        tags={tags}
+                        selected={tag}
                     />
-                </div>
-
-                <div
-                    style={{
-                        margin: '4rem 0',
-                    }}
-                />
-                <span id='education'
-                    style={{
-                        position: 'relative',
-                        bottom: '12rem',
-                    }}
-                />
-
-                <Media query={'screen and (max-width: 31.25em)'}>
-                    {match => match ? (
-                        <ThreeButton index={1} />
-                    ) : (
-                        <Title writeToHead={false}>
-                            Образование
-                        </Title>
-                    )}
-                </Media>
-                <InView
-                    onChange={(inView) => inView && setThree('#education')}
-                    style={{
-                        position: 'relative',
-                        bottom: '-50vh'
-                    }}
-                />
-                <div>
-                    <DoubleBlock
-                        left={[
-                            'образовательные программы',
-                            'профессиональные воркшопы',
-                            'тематические экскурсии',
-                            'организация цеховых конференций',
-                        ]}
-                        right={(
-                            <>
-                                <div>
-                                    Образование во всех смыслах становится базовым компонентом жизни студии: как внутри, так и снаружи. Создание обучающих программ, конференций и воркшопов, экспертное участие в международных грантовых проектах и конкурсах интегрируются в рабочий процесс, становясь его неотъемлемой частью.
-                                </div>
-                            </>
-                        )}
-                    />
-                </div>
-
-                <div
-                    style={{
-                        margin: '4rem 0',
-                    }}
-                />
-                <span id='soft'
-                    style={{
-                        position: 'relative',
-                        bottom: '12rem',
-                    }}
-                />
-                <Media query={'screen and (max-width: 31.25em)'}>
-                    {match => match ? (
-                        <ThreeButton index={2} />
-                    ) : (
-                        <Title writeToHead={false}>
-                            Софт
-                        </Title>
-                    )}
-                </Media>
-                <InView
-                    onChange={(inView) => inView && setThree('#soft')}
-                    style={{
-                        position: 'relative',
-                        bottom: '-50vh'
-                    }}
-                />
-                <div>
-                    <DoubleBlock
-                        left={[
-                            'инструменты городских исследований ',
-                            'софт оптимизации процесса проектирования',
-                        ]}
-                        right={(
-                            <>
-                                <div>
-                                    В каждом проекте мы стремимся создавать особые фичи для оптимизации процесса проектирования. Такая специфика предприятия позволяет сфокусироваться на деталях дизайн-решений.
-                                </div>
-                            </>
-                        )}
-                    />
-                </div>
+                </div> */}
             </div>
 
-            {/* <div
+            <Gallery
+                mode='projects'
                 style={{
-                    marginTop: vertOffset,
+                    marginBottom: 50,
                 }}
-            />
-
-            <RunningLine>
-                <h1
-                    style={{
-                        textTransform: 'uppercase',
-                        fontSize: 46,
-                        margin: 0,
-                        color: 'var(--color-text-opposite)',
-                    }}
-                >
-                    Команда студии сформировалась как экосистема с plug-in структурой где инициируются и поддерживаются амбиции каждого
-                </h1>
-            </RunningLine>
-            <div style={{ height: '8rem' }} /> */}
-
-            <DoubleBlock
-                left={[]}
-                right={(
-                    <>
-                        <div
-                            style={{
-                                margin: '4rem 0',
-                            }}
-                        >
-                            В своих проектах мы создаем добавленное качество материального окружения. Важно конструировать такие пространства, которые не только поддерживают уже сложившиеся практики, но и инициируют новые.
-                        </div>
-                    </>
-                )}
-            />
-
-            <Table />
-            <div style={{
-                marginTop: vertOffset,
-            }} />
+            >
+                {data.map((x, i) => {
+                    const indexCycled = (i + 4) % 6 // +4 should be removed, its a hack
+                    let autosize: 1 | 2 | 4 = 4
+                    switch (indexCycled) {
+                        case 0:
+                            autosize = 4
+                            break
+                        case 1:
+                        case 2:
+                            autosize = 1
+                            break
+                        case 3:
+                        case 4:
+                        case 5:
+                            autosize = 2
+                            break
+                        default:
+                            break
+                    }
+                    return (
+                        <GalleryItem
+                            key={x.href}
+                            src={x.src}
+                            text={x.text}
+                            tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
+                            href={x.href}
+                            size={x?.size ?? autosize}
+                            mode={'projects'}
+                            relativeSrc={x.relativeSrc}
+                        />
+                    )
+                })}
+            </Gallery>
         </>
     )
 }
 
-// export const getStaticProps: GetStaticProps = async () => {
-// export const setServerSideProps: GetServerSideProps = async () => {
-//     return {
-//         props: {
-//             namespacesRequired: ['common'],
-//         }
-//     }
-// }
+export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
+    const pages = await Promise.all(projects.map(async x => getPageBySlug(ctx.locale, x.href)))
+    const data = projects.map((x, i) => {
+        const page = pages[i]
+        const src = page?.cover ?? null
+        const text = page?.title ?? null
+        const tags = [
+            ...(page?.location ? [page?.location] : []),
+            ...(page?.year ? [page?.year] : []),
+            ...page?.tags ?? []
+        ]
+        return {
+            ...x,
+            src,
+            text,
+            tags,
+        }
+    })
 
-// export default withTranslation('common')(Page)
+
+    return {
+        props: {
+            data,
+        }
+    }
+}
 export default Page
