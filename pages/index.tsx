@@ -196,7 +196,8 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                 padding: 'var(--content-padding)',
                 display: 'flex',
                 justifyContent: 'center',
-                marginTop: '-2.5rem',
+                paddingTop: '4rem',
+                paddingBottom: '7rem',
             }}>
 
                 <Image
