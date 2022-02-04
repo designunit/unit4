@@ -1,6 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
 import { Gallery } from '../src/components/Gallery'
-import { Title } from '../src/components/Title'
 import { useTranslation } from 'react-i18next'
 import React from 'react'
 import { GalleryItem, IGalleryItemProps } from '@/components/Gallery/GalleryItem'
@@ -207,6 +206,9 @@ const Page: NextPage<IPageProps> = ({ data }) => {
             <div style={{
                 position: 'relative',
                 padding: 'var(--content-padding)',
+                display: 'flex',
+                justifyContent: 'center',
+                marginTop: '-2.5rem',
             }}>
 
                 <Image
