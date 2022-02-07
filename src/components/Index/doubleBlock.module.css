@@ -22,6 +22,6 @@
 
 @media screen and (max-width: 31.25em) {
     .container {
-        padding: 0 16px;
+        padding: var(--content-padding);
     }
 }

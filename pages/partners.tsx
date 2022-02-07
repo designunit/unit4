@@ -8,15 +8,15 @@ import { Title } from '../src/components/Title'
 
 const items = [
     {
-        src: '/static/partners/урбаника.png',
+        src: '/static/partners/urbanica.png',
         href: 'http://urbanica.spb.ru/',
     },
     {
-        src: '/static/partners/мла.png',
+        src: '/static/partners/mla.png',
         href: 'https://www.mlaplus.com/',
     },
     {
-        src: '/static/partners/центр.png',
+        src: '/static/partners/centr.jpg',
         href: 'https://www.centeragency.org/ru',
     },
     {
@@ -28,47 +28,47 @@ const items = [
         href: 'https://www.knightfrank.ru/',
     },
     {
-        src: '/static/partners/центр компетенций.png',
+        src: '/static/partners/centr comp.jpg',
         href: 'https://gorsreda86.ugraces.ru/',
     },
     {
-        src: '/static/partners/админ_краснокамск.png',
+        src: '/static/partners/admin-kk.png',
         href: 'http://krasnokamsk.ru/',
     },
     {
-        src: '/static/partners/админ_нягань.png',
+        src: '/static/partners/admin-nya.png',
         href: 'http://www.admnyagan.ru/',
     },
     {
-        src: '/static/partners/урай.png',
+        src: '/static/partners/uray.png',
         href: 'https://uray.ru/',
     },
     {
-        src: '/static/partners/центр городского развития.png', // 10
+        src: '/static/partners/centr myrmansk.jpg', // 10
         href: 'https://www.instagram.com/centrgoroda51/',
     },
     {
-        src: '/static/partners/волоколамск.png',
+        src: '/static/partners/volokalamsk.png',
         href: 'https://включиволоколамск.рф/',
     },
     {
-        src: '/static/partners/админ_дербент.png',
+        src: '/static/partners/admin-derb.png',
         href: 'http://derbent.ru/',
     },
     {
-        src: '/static/partners/админ_тура.png',
+        src: '/static/partners/admin-tura.png',
         href: 'https://www.v-tura.ru/',
     },
     {
-        src: '/static/partners/институт развития.png',
+        src: '/static/partners/institut nn.jpg',
         href: 'https://irgsno.ru/',
     },
     {
-        src: '/static/partners/админ_волхов.png',
+        src: '/static/partners/admin-vol.png',
         href: 'https://volkhov-raion.ru/',
     },
     {
-        src: '/static/partners/админ_питкьяранта.png',
+        src: '/static/partners/admin-pit.png',
         href: 'http://апмр.рф/',
     },
     {
@@ -76,23 +76,23 @@ const items = [
         href: 'https://www.ispring.ru/',
     },
     {
-        src: '/static/partners/сергей киселев.png',
+        src: '/static/partners/kiselev.jpg',
         href: 'http://sk-p.ru/',
     },
     {
-        src: '/static/partners/варламов.png',
+        src: '/static/partners/varlamov.png',
         href: 'https://city4people.ru/about-project',
     },
     {
-        src: '/static/partners/цементные джунгли.png', // 20
+        src: '/static/partners/concjung.png', // 20
         href: 'https://cjungle.com/',
     },
     {
-        src: '/static/partners/мишин.png',
+        src: '/static/partners/mishin.png',
         href: 'https://www.facebook.com/StudioMishin/',
     },
     {
-        src: '/static/partners/эпишкола.png',
+        src: '/static/partners/epishkola.jpg',
         href: 'http://epischool.ru/',
     },
     {
@@ -100,7 +100,7 @@ const items = [
         href: 'http://www.knappt.com/',
     },
     {
-        src: '/static/partners/8линий.png',
+        src: '/static/partners/8l.png',
         href: 'http://www.llllllll.ru/',
     },
     {

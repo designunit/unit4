@@ -26,17 +26,11 @@
     filter: grayscale(100%);
 }
 
+.image {
+    min-height: calc(var(--cell-size-min) + var(--grid-gap));
+}
+
 .img {
-    display: block;
-    width: 100%;
-    height: calc(var(--cell-size-min) + var(--grid-gap));
-    object-fit: cover;
-    object-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
     transition: filter .5s ease, transform .5s ease;
 }
 
@@ -119,7 +113,7 @@
     justify-content: space-between;
 }
 
-:is(.col4, .col2) .img {
+:is(.col4, .col2) .image {
     height: 100%;
 }
 
@@ -159,9 +153,8 @@
         height: 50%;
         flex: 0 0 50%;
     }
-    :is(.col2, .col1) .img {
+    :is(.col2, .col1) .image {
         height: 100%;
-        object-position: bottom;
     }
 
     :is(.col2, .col1) > .label {

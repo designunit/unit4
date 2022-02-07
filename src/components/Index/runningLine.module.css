@@ -3,17 +3,22 @@
     left: 0;
     width: 100%;
     display: flex;
-    padding: 3rem 0;
-    background: var(--link-color-active);
+    padding: 2rem 0;
+    background: transparent;
+    /* var(--link-color-active); */
     overflow: hidden;
+
+    border: solid 1px black;
+    border-left: none;
+    border-right: none;
 }
 
 .container > * {
     flex-shrink: 0;
-    padding-right: 4rem;
+    padding-right: .5rem;
     min-width: 100%;
     white-space: nowrap;
-    animation: anim 15s infinite linear;
+    animation: anim 20s infinite linear;
 }
 
 @keyframes anim {
