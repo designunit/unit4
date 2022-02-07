@@ -63,8 +63,14 @@ function getLocaleFromPath(path: string) {
 }
 
 export async function getPageBySlug(lang: Lang | undefined, slug: string) {
-    const path = join(postsDirectory, `${slug}.${lang}.mdx`)
-    const page = await getPage(path)
+    let path = join(postsDirectory, `${slug}.${lang}.mdx`)
+    let page = await getPage(path)
+    
+    if (!page) {
+        path = join(postsDirectory, `${slug}.${'ru'}.mdx`)
+        page = await getPage(path)
+    }
+
     if (page) {
         return page
     }
