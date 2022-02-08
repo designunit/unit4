@@ -146,7 +146,7 @@
     :is(.col2, .col1) {
         grid-column-end: span 2;
         flex-flow: column;
-        grid-row: span 6;
+        grid-row: span 8;
     }
 
     :is(.col2, .col1) > div:first-child {
@@ -162,7 +162,7 @@
     }
 
     .col4 > .label {
-        flex: 1 0 33%;
+        flex: 0 1 calc(50% + .4rem);
     }
 }
 
