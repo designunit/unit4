@@ -5,6 +5,8 @@ module.exports = {
     },
     redirects: async () => {
         const rewrites = [
+            ['/projects', '/'],
+
             ['/repository/application_manual', '/application-manual'],
             ['/repository/chistopol', '/chistopol'],
             ['/repository/chistopol2', '/chistopol2'],
@@ -41,6 +43,7 @@ module.exports = {
             ['/dc_scnd', '/scnd-dc'],
             ['/uray_ppi', '/uray-ppi'],
             ['/model_4', '/model4'],
+            ['/latlng', '/mesto'],
         ]
 
         return rewrites.map(([source, destination]) => ({
