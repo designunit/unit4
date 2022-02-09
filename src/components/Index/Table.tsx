@@ -103,8 +103,7 @@ export const Table = () => (
                 <div
                     className={s.mobileHidden}
                     style={{
-                        flex: '0 0 20%',
-                        textAlign: 'center',
+                        flex: '1 0 20%',
                     }}
                 >
                     {x.location}

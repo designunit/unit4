@@ -34,9 +34,9 @@ const Page: NextPage = () => {
             <div style={{
                 position: 'relative',
             }}>
-                <ThreeButtons
+                {/* <ThreeButtons
                     state={three}
-                />
+                /> */}
 
                 <div style={{
                     marginTop: vertOffset,
@@ -48,17 +48,12 @@ const Page: NextPage = () => {
                     }}
                 />
 
-                <Media query={'screen and (max-width: 31.25em)'}>
-                    {match => match ? (
-                        <ThreeButton index={0} />
-                    ) : (
+                <ThreeButton index={0} />
+                <Title writeToHead={false}>
+                    Средовое <br />
+                    проектирование
+                </Title>
 
-                        <Title writeToHead={false}>
-                            Средовое <br />
-                            проектирование
-                        </Title>
-                    )}
-                </Media>
                 <InView
                     onChange={(inView) => inView && setThree('#enviromental-design')}
                     style={{
@@ -100,15 +95,11 @@ const Page: NextPage = () => {
                     }}
                 />
 
-                <Media query={'screen and (max-width: 31.25em)'}>
-                    {match => match ? (
-                        <ThreeButton index={1} />
-                    ) : (
-                        <Title writeToHead={false}>
-                            Образование
-                        </Title>
-                    )}
-                </Media>
+                <ThreeButton index={1} />
+                <Title writeToHead={false}>
+                    Образование
+                </Title>
+
                 <InView
                     onChange={(inView) => inView && setThree('#education')}
                     style={{
@@ -145,15 +136,13 @@ const Page: NextPage = () => {
                         bottom: '12rem',
                     }}
                 />
-                <Media query={'screen and (max-width: 31.25em)'}>
-                    {match => match ? (
-                        <ThreeButton index={2} />
-                    ) : (
-                        <Title writeToHead={false}>
-                            Софт
-                        </Title>
-                    )}
-                </Media>
+
+
+                <ThreeButton index={2} />
+                <Title writeToHead={false}>
+                    Софт
+                </Title>
+
                 <InView
                     onChange={(inView) => inView && setThree('#soft')}
                     style={{
@@ -207,9 +196,9 @@ const Page: NextPage = () => {
                 <ul>
                     {[
                         ['Сергей Барышев', 'дизайнер'],
-                        ['Роман Тимашев', 'фулстек-разработчик'],
+                        ['Роман Тимашев', 'разработчик'],
                         ['Григорий Балуев', 'разработчик'],
-                        ['Арсений Юсупов', 'фронтэнд-разработчик'],
+                        ['Арсений Юсупов', 'разработчик'],
                         ['Алена Чеусова', 'архитектор'],
                         ['Анастасия Матюшонок', 'архитектор'],
                         ['Виктория Бинковская', 'архитектор'],

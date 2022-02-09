@@ -84,10 +84,11 @@ export const ThreeButton: React.FC<{ index: 0 | 1 | 2 }> = ({ index }) => {
                 style={{
                     position: 'relative',
                     flex: '1 0 30%',
-                    height: 130,
+                    height: 250,
                 }}
             >
                 <Image
+                    quality={100}
                     src={x.src}
                     className={`${s.img}`}
                     layout='fill'
