@@ -4,6 +4,7 @@ import * as React from 'react'
 import s from './GalleryItem.module.css'
 import Ratio from 'react-ratio'
 import Image from 'next/image'
+import { Tags } from './Tags'
 
 export interface IGalleryItemProps {
     src: string
@@ -83,9 +84,11 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, size, mode, tag
                     <span>
                         {text}
                     </span>
-                    <div className={s.tags}>
-                        {tags.map((x, i) => <span key={i}>{x}</span>)}
-                    </div>
+                    {!tags ? null : (
+                        <Tags
+                            items={tags}
+                        />
+                    )}
                 </div>
             )}
         </Container>

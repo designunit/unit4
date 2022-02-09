@@ -65,19 +65,6 @@
     line-height: 1.6em;
 }
 
-.tags {
-    font-family: var(--font-second-family);
-    font-size: var(--font-second-size);
-    line-height: 25px;
-    display: flex;
-    flex-flow: wrap;
-    gap: .25rem;
-}
-.tags > span {
-    padding: 0 var(--grid-gap);
-    border: solid 1px var(--color-text);
-}
-
 .label > span {
     transition: color .5s ease;
 }
@@ -104,9 +91,6 @@
     object-position: bottom;
 }
 
-/* .col1 .tags {
-    display: none;
-} */
 
 :is(.col4, .col2) {
     flex-flow: row;
