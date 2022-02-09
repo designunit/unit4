@@ -1,22 +1,15 @@
 import { NextPage } from 'next'
 import { Title } from '../src/components/Title'
-import { useTranslation } from 'react-i18next'
-import React, { useState } from 'react'
+import React from 'react'
 import { Table } from '@/components/Index/Table'
-import { ThreeButton, ThreeButtons } from '@/components/Index/ThreeButtons'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
-import { InView } from 'react-intersection-observer'
-import Media from 'react-media'
 import { RunningLine } from '@/components/Index/RunningLine'
 import { Flex } from '@/components/Flex'
 import { Loud } from '@/components/Loud'
+import Image from 'next/image'
 
 const Page: NextPage = () => {
-    const { t } = useTranslation()
-
     const vertOffset = '6rem'
-
-    const [three, setThree] = useState<string>(null)
 
     return (
         <>
@@ -34,33 +27,31 @@ const Page: NextPage = () => {
             <div style={{
                 position: 'relative',
             }}>
-                {/* <ThreeButtons
-                    state={three}
-                /> */}
-
                 <div style={{
                     marginTop: vertOffset,
                 }} />
-                <span id='enviromental-design'
+
+                <div
                     style={{
                         position: 'relative',
-                        bottom: '12rem',
+                        height: 250,
+                        marginBottom: '4rem',
                     }}
-                />
+                >
+                    <Image
+                        quality={100}
+                        src={'/static/1.jpg'}
+                        layout='fill'
+                        objectFit='cover'
+                    />
+                </div>
+                {/* <ThreeButton index={0} /> */}
 
-                <ThreeButton index={0} />
                 <Title writeToHead={false}>
                     Средовое <br />
                     проектирование
                 </Title>
 
-                <InView
-                    onChange={(inView) => inView && setThree('#enviromental-design')}
-                    style={{
-                        position: 'relative',
-                        bottom: '-50vh'
-                    }}
-                />
                 <div>
                     <DoubleBlock
                         left={[
@@ -88,25 +79,28 @@ const Page: NextPage = () => {
                         margin: '4rem 0',
                     }}
                 />
-                <span id='education'
+
+                <div
                     style={{
                         position: 'relative',
-                        bottom: '12rem',
+                        height: 250,
+                        marginBottom: '4rem',
                     }}
-                />
+                >
+                    <Image
+                        quality={100}
+                        src={'/static/2.jpg'}
+                        layout='fill'
+                        objectFit='cover'
+                        objectPosition='left center'
+                    />
+                </div>
+                {/* <ThreeButton index={1} /> */}
 
-                <ThreeButton index={1} />
                 <Title writeToHead={false}>
                     Образование
                 </Title>
 
-                <InView
-                    onChange={(inView) => inView && setThree('#education')}
-                    style={{
-                        position: 'relative',
-                        bottom: '-50vh'
-                    }}
-                />
                 <div>
                     <DoubleBlock
                         left={[
@@ -130,26 +124,27 @@ const Page: NextPage = () => {
                         margin: '4rem 0',
                     }}
                 />
-                <span id='soft'
+
+                <div
                     style={{
                         position: 'relative',
-                        bottom: '12rem',
+                        height: 250,
+                        marginBottom: '4rem',
                     }}
-                />
+                >
+                    <Image
+                        quality={100}
+                        src={'/static/3.jpg'}
+                        layout='fill'
+                        objectFit='cover'
+                    />
+                </div>
+                {/* <ThreeButton index={2} /> */}
 
-
-                <ThreeButton index={2} />
                 <Title writeToHead={false}>
                     Софт
                 </Title>
 
-                <InView
-                    onChange={(inView) => inView && setThree('#soft')}
-                    style={{
-                        position: 'relative',
-                        bottom: '-50vh'
-                    }}
-                />
                 <div>
                     <DoubleBlock
                         left={[
