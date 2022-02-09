@@ -199,9 +199,15 @@ article iframe {
     padding: var(--content-padding);
 }
 
-
-article > div { /* margin for custom mdx blocks like <Image> */
+/* margin for custom mdx blocks like <Image> */
+article > div { 
     margin-bottom: 1em;
+}
+div > p {
+    margin-bottom: 0;
+}
+p > p {
+    margin-bottom: 0;
 }
 
 /* ANT */
