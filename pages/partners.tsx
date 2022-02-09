@@ -119,7 +119,6 @@ const Page: NextPage = () => {
             </Title>
 
             <Gallery
-                mode='partners'
                 style={{
                     marginBottom: 50,
                 }}

@@ -1,18 +1,13 @@
-import classNames from 'classnames'
-import * as React from 'react'
 import s from './index.module.css'
 
-export interface IGallery {
+export type GalleryProps = {
     style?: React.CSSProperties
-    mode: 'partners' | 'projects'
 }
 
-export const Gallery: React.FC<IGallery> = ({ mode, ...props }) => {
-    const isModeProjects = mode === 'projects'
-    const isModePartners = mode === 'partners'
+export const Gallery: React.FC<GalleryProps> = props => {
     return (
         <div
-            className={classNames(s.gallery, isModeProjects && s.gridPropjects, isModePartners && s.gridPartners)}
+            className={s.gallery}
             style={{
                 ...props.style,
             }}

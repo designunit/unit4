@@ -218,7 +218,6 @@ const Page: NextPage<IPageProps> = ({ data }) => {
             </div>
 
             <Gallery
-                mode='projects'
                 style={{
                     marginBottom: 50,
                 }}
