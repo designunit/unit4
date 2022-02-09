@@ -25,6 +25,7 @@ export const DoubleBlock = ({ left, right, ...props }) => {
                 <div
                     className={s.emptyLeft}
                 style={{
+                    width: '100%',
                     flex: '1 0 calc(33% + 8px)',
                 }} />
 
