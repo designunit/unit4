@@ -16,15 +16,15 @@ export interface IGalleryItemProps {
     relativeSrc?: boolean
 }
 
-type ContainerProps = Partial<{
-    href: string,
-    className?: string
-}>
-
 const sizeClassNameMap = {
     1: s.col1,
     2: s.col2,
     4: s.col4,
+}
+
+type ContainerProps = {
+    href?: string,
+    className?: string
 }
 
 const Container: React.FC<ContainerProps> = ({ href, className, children }) => (
