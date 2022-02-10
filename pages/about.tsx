@@ -1,22 +1,15 @@
 import { NextPage } from 'next'
 import { Title } from '../src/components/Title'
-import { useTranslation } from 'react-i18next'
-import React, { useState } from 'react'
+import React from 'react'
 import { Table } from '@/components/Index/Table'
-import { ThreeButton, ThreeButtons } from '@/components/Index/ThreeButtons'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
-import { InView } from 'react-intersection-observer'
-import Media from 'react-media'
 import { RunningLine } from '@/components/Index/RunningLine'
 import { Flex } from '@/components/Flex'
 import { Loud } from '@/components/Loud'
+import Image from 'next/image'
 
 const Page: NextPage = () => {
-    const { t } = useTranslation()
-
     const vertOffset = '6rem'
-
-    const [three, setThree] = useState<string>(null)
 
     return (
         <>
@@ -34,38 +27,31 @@ const Page: NextPage = () => {
             <div style={{
                 position: 'relative',
             }}>
-                <ThreeButtons
-                    state={three}
-                />
-
                 <div style={{
                     marginTop: vertOffset,
                 }} />
-                <span id='enviromental-design'
+
+                <div
                     style={{
                         position: 'relative',
-                        bottom: '12rem',
+                        height: 250,
+                        marginBottom: '4rem',
                     }}
-                />
+                >
+                    <Image
+                        quality={100}
+                        src={'/static/1.jpg'}
+                        layout='fill'
+                        objectFit='cover'
+                    />
+                </div>
+                {/* <ThreeButton index={0} /> */}
 
-                <Media query={'screen and (max-width: 31.25em)'}>
-                    {match => match ? (
-                        <ThreeButton index={0} />
-                    ) : (
+                <Title writeToHead={false}>
+                    Средовое <br />
+                    проектирование
+                </Title>
 
-                        <Title writeToHead={false}>
-                            Средовое <br />
-                            проектирование
-                        </Title>
-                    )}
-                </Media>
-                <InView
-                    onChange={(inView) => inView && setThree('#enviromental-design')}
-                    style={{
-                        position: 'relative',
-                        bottom: '-50vh'
-                    }}
-                />
                 <div>
                     <DoubleBlock
                         left={[
@@ -93,29 +79,28 @@ const Page: NextPage = () => {
                         margin: '4rem 0',
                     }}
                 />
-                <span id='education'
-                    style={{
-                        position: 'relative',
-                        bottom: '12rem',
-                    }}
-                />
 
-                <Media query={'screen and (max-width: 31.25em)'}>
-                    {match => match ? (
-                        <ThreeButton index={1} />
-                    ) : (
-                        <Title writeToHead={false}>
-                            Образование
-                        </Title>
-                    )}
-                </Media>
-                <InView
-                    onChange={(inView) => inView && setThree('#education')}
+                <div
                     style={{
                         position: 'relative',
-                        bottom: '-50vh'
+                        height: 250,
+                        marginBottom: '4rem',
                     }}
-                />
+                >
+                    <Image
+                        quality={100}
+                        src={'/static/2.jpg'}
+                        layout='fill'
+                        objectFit='cover'
+                        objectPosition='left center'
+                    />
+                </div>
+                {/* <ThreeButton index={1} /> */}
+
+                <Title writeToHead={false}>
+                    Образование
+                </Title>
+
                 <div>
                     <DoubleBlock
                         left={[
@@ -139,28 +124,27 @@ const Page: NextPage = () => {
                         margin: '4rem 0',
                     }}
                 />
-                <span id='soft'
+
+                <div
                     style={{
                         position: 'relative',
-                        bottom: '12rem',
+                        height: 250,
+                        marginBottom: '4rem',
                     }}
-                />
-                <Media query={'screen and (max-width: 31.25em)'}>
-                    {match => match ? (
-                        <ThreeButton index={2} />
-                    ) : (
-                        <Title writeToHead={false}>
-                            Софт
-                        </Title>
-                    )}
-                </Media>
-                <InView
-                    onChange={(inView) => inView && setThree('#soft')}
-                    style={{
-                        position: 'relative',
-                        bottom: '-50vh'
-                    }}
-                />
+                >
+                    <Image
+                        quality={100}
+                        src={'/static/3.jpg'}
+                        layout='fill'
+                        objectFit='cover'
+                    />
+                </div>
+                {/* <ThreeButton index={2} /> */}
+
+                <Title writeToHead={false}>
+                    Софт
+                </Title>
+
                 <div>
                     <DoubleBlock
                         left={[
@@ -195,37 +179,39 @@ const Page: NextPage = () => {
 
             <div style={{ height: '12rem' }} />
 
-            <article style={{ paddingLeft: '1rem' }}>
-                <Flex>
-                    <ul>
-                        {[
-                            ['Данияр Юсупов', 'главный архитектор студии'],
-                            ['Владимир Петросян', 'генеральный директор'],
-                            ['Надежда Кузнецова', 'куратор проектов'],
-                            ['Елизавета Владимирова', 'куратор проектов'],
-                        ].map(([name, rang]) => <div><span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}</div>)}
-                    </ul>
-                    <ul>
-                        {[
-                            ['Сергей Барышев', 'дизайнер'],
-                            ['Роман Тимашев', 'разработчик'],
-                            ['Григорий Балуев', 'разработчик'],
-                            ['Арсений Юсупов', 'разработчик'],
-                            ['Алена Чеусова', 'архитектор'],
-                            ['Анастасия Матюшонок', 'архитектор'],
-                            ['Виктория Бинковская', 'архитектор'],
-                        ].map(([name, rang]) => <div><span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}</div>)}
-                    </ul>
-                </Flex>
-            </article>
+            <Flex>
+                <ul>
+                    {[
+                        ['Данияр Юсупов', 'главный архитектор студии'],
+                        ['Владимир Петросян', 'генеральный директор'],
+                        ['Надежда Кузнецова', 'главный архитектор'],
+                        ['Елизавета Владимирова', 'главный архитектор'],
+                    ].map(([name, rang]) => <div><span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}</div>)}
+                </ul>
+                <ul>
+                    {[
+                        ['Сергей Барышев', 'дизайнер'],
+                        ['Роман Тимашев', 'разработчик'],
+                        ['Григорий Балуев', 'разработчик'],
+                        ['Арсений Юсупов', 'разработчик'],
+                        ['Алена Чеусова', 'архитектор'],
+                        ['Анастасия Матюшонок', 'архитектор'],
+                        ['Виктория Бинковская', 'архитектор'],
+                    ].map(([name, rang]) => <div><span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}</div>)}
+                </ul>
+            </Flex>
 
-            <p style={{padding: 'var(--content-padding)'}}>
+            <p style={{ padding: 'var(--content-padding)' }}>
                 С нами работали: Анастасия Славина, Анита Попова, Артем Никитин, Валера Газаров, Вероника Серебрякова, Виктор Сергеев, Джульетта Боброва, Евгений Щукин, Елизавета Челнокова, Кирилл Петров, Марина Цай, Михаил Палькин, Никита Сидоров, Николай Медведенко, Оля Чернякова, Петр Шуба, Соня Шишкина
             </p>
 
             <div style={{
                 marginTop: vertOffset,
             }} />
+
+            <Title writeToHead={false}>
+                Победы в конкурсах
+            </Title>
 
             <Table />
 
