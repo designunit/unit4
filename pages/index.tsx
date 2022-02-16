@@ -4,10 +4,9 @@ import { useTranslation } from 'react-i18next'
 import React from 'react'
 import { GalleryItem, IGalleryItemProps } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
-import Image from 'next/image'
-import unitGif from '@/../public/static/unitZalipuxa.gif'
+import { RunningLine } from '@/components/Index/RunningLine'
 
-const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
+const projects: { href: string, size?: 1 | 2 | 4, relativeSrc?: boolean }[] = [
     {
         href: '/mesto',
         size: 2,
@@ -192,29 +191,95 @@ const Page: NextPage<IPageProps> = ({ data }) => {
     return (
         <>
             <div style={{
-                position: 'relative',
-                padding: 'var(--content-padding)',
-                display: 'flex',
-                justifyContent: 'center',
-                paddingTop: '4rem',
-                paddingBottom: '7rem',
-            }}>
-
-                <Image
-                    src={unitGif}
-                />
-
-                {/* <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    right: 0,
-                }}>
-                    <ProjectsSelector
-                        setTag={setTag}
-                        tags={tags}
-                        selected={tag}
-                    />
-                </div> */}
+                height: '24rem',
+            }} >
+                <RunningLine
+                    style={{
+                        padding: '1rem 0 .5rem 0',
+                    }}
+                >
+                    <span>
+                        {['софт', 'предметный дизайн', 'дизайн-код', 'образование', 'соцкульт', 'мастерплан', 'городская среда', 'design :: unit', 'архитектура', 'исследование']
+                            .map(x => (
+                                <span
+                                    style={{
+                                        textTransform: 'uppercase',
+                                        fontSize: 42,
+                                        color: x == 'design :: unit' ? 'black' : 'gray',
+                                        marginRight: '1rem',
+                                    }}
+                                >
+                                    {x}
+                                </span>
+                            ))}
+                    </span>
+                </RunningLine>
+                <RunningLine
+                    style={{
+                        padding: '1rem 0 .5rem 0',
+                        top: '10.5rem',
+                    }}
+                >
+                    <span>
+                        {['городская среда', 'исследование', 'соцкульт', 'архитектура', 'мастерплан', 'дизайн-код', 'софт', 'образование', 'предметный дизайн', 'design :: unit']
+                            .map(x => (
+                                <span
+                                    style={{
+                                        textTransform: 'uppercase',
+                                        fontSize: 42,
+                                        color: x == 'design :: unit' ? 'black' : 'gray',
+                                        marginRight: '1rem',
+                                    }}
+                                >
+                                    {x}
+                                </span>
+                            ))}
+                    </span>
+                </RunningLine>
+                <RunningLine
+                    style={{
+                        padding: '1rem 0 .5rem 0',
+                        top: '15.75rem',
+                    }}
+                >
+                    <span>
+                        {['предметный дизайн', 'софт', 'design :: unit', 'городская среда', 'мастерплан', 'образование', 'дизайн-код', 'исследование', 'архитектура', 'соцкульт']
+                            .map(x => (
+                                <span
+                                    style={{
+                                        textTransform: 'uppercase',
+                                        fontSize: 42,
+                                        color: x == 'design :: unit' ? 'black' : 'gray',
+                                        marginRight: '1rem',
+                                    }}
+                                >
+                                    {x}
+                                </span>
+                            ))}
+                    </span>
+                </RunningLine>
+                <RunningLine
+                    style={{
+                        padding: '1rem 0 .5rem 0',
+                        top: '21rem',
+                    }}
+                >
+                    <span>
+                        {['мастерплан', 'софт', 'design :: unit', 'архитектура', 'соцкульт', 'городская среда', 'предметный дизайн', 'дизайн-код', 'образование', 'исследование']
+                            .map(x => (
+                                <span
+                                    style={{
+                                        textTransform: 'uppercase',
+                                        fontSize: 42,
+                                        color: x == 'design :: unit' ? 'black' : 'gray',
+                                        marginRight: '1rem',
+                                    }}
+                                >
+                                    {x}
+                                </span>
+                            ))}
+                    </span>
+                </RunningLine>
             </div>
 
             <Gallery
