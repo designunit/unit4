@@ -199,13 +199,13 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                     }}
                 >
                     <span>
-                        {['софт', 'предметный дизайн', 'дизайн-код', 'образование', 'соцкульт', 'мастерплан', 'городская среда', 'design :: unit', 'архитектура', 'исследование']
+                        {['софт', 'предметный дизайн', 'дизайн-код', 'образование', 'соцкульт', 'мастерплан', 'городская среда', 'design : : unit', 'архитектура', 'исследование']
                             .map(x => (
                                 <span
                                     style={{
                                         textTransform: 'uppercase',
                                         fontSize: 42,
-                                        color: x == 'design :: unit' ? 'black' : 'gray',
+                                        color: x == 'design : : unit' ? 'black' : 'gray',
                                         marginRight: '1rem',
                                     }}
                                 >
@@ -221,13 +221,13 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                     }}
                 >
                     <span>
-                        {['городская среда', 'исследование', 'соцкульт', 'архитектура', 'мастерплан', 'дизайн-код', 'софт', 'образование', 'предметный дизайн', 'design :: unit']
+                        {['городская среда', 'исследование', 'соцкульт', 'архитектура', 'мастерплан', 'дизайн-код', 'софт', 'образование', 'предметный дизайн', 'design : : unit']
                             .map(x => (
                                 <span
                                     style={{
                                         textTransform: 'uppercase',
                                         fontSize: 42,
-                                        color: x == 'design :: unit' ? 'black' : 'gray',
+                                        color: x == 'design : : unit' ? 'black' : 'gray',
                                         marginRight: '1rem',
                                     }}
                                 >
@@ -243,13 +243,13 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                     }}
                 >
                     <span>
-                        {['предметный дизайн', 'софт', 'design :: unit', 'городская среда', 'мастерплан', 'образование', 'дизайн-код', 'исследование', 'архитектура', 'соцкульт']
+                        {['предметный дизайн', 'софт', 'design : : unit', 'городская среда', 'мастерплан', 'образование', 'дизайн-код', 'исследование', 'архитектура', 'соцкульт']
                             .map(x => (
                                 <span
                                     style={{
                                         textTransform: 'uppercase',
                                         fontSize: 42,
-                                        color: x == 'design :: unit' ? 'black' : 'gray',
+                                        color: x == 'design : : unit' ? 'black' : 'gray',
                                         marginRight: '1rem',
                                     }}
                                 >
@@ -265,13 +265,13 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                     }}
                 >
                     <span>
-                        {['мастерплан', 'софт', 'design :: unit', 'архитектура', 'соцкульт', 'городская среда', 'предметный дизайн', 'дизайн-код', 'образование', 'исследование']
+                        {['мастерплан', 'софт', 'design : : unit', 'архитектура', 'соцкульт', 'городская среда', 'предметный дизайн', 'дизайн-код', 'образование', 'исследование']
                             .map(x => (
                                 <span
                                     style={{
                                         textTransform: 'uppercase',
                                         fontSize: 42,
-                                        color: x == 'design :: unit' ? 'black' : 'gray',
+                                        color: x == 'design : : unit' ? 'black' : 'gray',
                                         marginRight: '1rem',
                                     }}
                                 >
