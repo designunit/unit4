@@ -115,7 +115,7 @@ const Page: NextPage = () => {
     return (
         <>
             <Title>
-                {t('partners', { ns: 'menu' })}
+                С нами работают
             </Title>
 
             <Gallery
