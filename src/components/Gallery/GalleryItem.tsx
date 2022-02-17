@@ -67,7 +67,7 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, size, mode, tag
                 )}
                 {isModePartners && (
                     <Ratio
-                        contentClassName={cx(s.img, isModePartners && s.gray)}
+                        contentClassName={cx(s.img)} // isModePartners && s.gray
                     >
                         <Image
                             src={src}

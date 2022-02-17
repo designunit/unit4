@@ -14,18 +14,9 @@
     text-decoration: none;
 }
 
-.container:hover .gray {                
-    filter: grayscale(0%);
-}
-
 .border:hover {
     border-color: var(--link-color-active);
 }
-
-.gray {
-    filter: grayscale(100%);
-}
-
 .image {
     min-height: calc(var(--cell-size-min) + var(--grid-gap));
 }
