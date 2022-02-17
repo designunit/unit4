@@ -202,16 +202,29 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                     <span>
                         {['софт', 'предметный дизайн', 'дизайн-код', 'образование', 'соцкульт', 'мастерплан', 'городская среда', 'design : : unit', 'архитектура', 'исследование']
                             .map(x => (
-                                <span
-                                    style={{
-                                        textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
-                                        fontSize: 42,
-                                        color: x == 'design : : unit' ? 'black' : 'gray',
-                                        marginRight: '1rem',
-                                    }}
-                                >
-                                    {x}
-                                </span>
+                                <>
+                                    <span
+                                        style={{
+                                            textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
+                                            fontWeight: 'bold',
+                                            fontSize: 46,
+                                            color: x == 'design : : unit' ? 'black' : 'gray',
+                                            marginRight: '1rem',
+                                        }}
+                                    >
+                                        {x}
+                                    </span>
+                                    <span
+                                        style={{
+                                            fontSize: 46,
+                                            fontWeight: 'bold',
+                                            color: 'gray',
+                                            marginRight: '1rem',
+                                        }}
+                                    >
+                                        /
+                                    </span>
+                                </>
                             ))}
                     </span>
                 </RunningLine>
@@ -223,19 +236,36 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                         top: '9.2rem',
                     }}
                 >
-                    <span>
+                    <span
+                        style={{
+                            animationDuration: '60s',
+                        }}
+                    >
                         {['городская среда', 'исследование', 'соцкульт', 'архитектура', 'мастерплан', 'дизайн-код', 'софт', 'образование', 'предметный дизайн', 'design : : unit']
                             .map(x => (
-                                <span
-                                    style={{
-                                        textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
-                                        fontSize: 42,
-                                        color: x == 'design : : unit' ? 'black' : 'gray',
-                                        marginRight: '1rem',
-                                    }}
-                                >
-                                    {x}
-                                </span>
+                                <>
+                                    <span
+                                        style={{
+                                            textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
+                                            fontWeight: 'bold',
+                                            fontSize: 46,
+                                            color: x == 'design : : unit' ? 'black' : 'gray',
+                                            marginRight: '1rem',
+                                        }}
+                                    >
+                                        {x}
+                                    </span>
+                                    <span
+                                        style={{
+                                            fontSize: 46,
+                                            fontWeight: 'bold',
+                                            color: 'gray',
+                                            marginRight: '1rem',
+                                        }}
+                                    >
+                                        /
+                                    </span>
+                                </>
                             ))}
                     </span>
                 </RunningLine>
@@ -246,19 +276,36 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                         top: '13.1rem',
                     }}
                 >
-                    <span>
+                    <span
+                        style={{
+                            animationDuration: '25s',
+                        }}
+                    >
                         {['предметный дизайн', 'софт', 'design : : unit', 'городская среда', 'мастерплан', 'образование', 'дизайн-код', 'исследование', 'архитектура', 'соцкульт']
                             .map(x => (
-                                <span
-                                    style={{
-                                        textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
-                                        fontSize: 42,
-                                        color: x == 'design : : unit' ? 'black' : 'gray',
-                                        marginRight: '1rem',
-                                    }}
-                                >
-                                    {x}
-                                </span>
+                                <>
+                                    <span
+                                        style={{
+                                            textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
+                                            fontWeight: 'bold',
+                                            fontSize: 46,
+                                            color: x == 'design : : unit' ? 'black' : 'gray',
+                                            marginRight: '1rem',
+                                        }}
+                                    >
+                                        {x}
+                                    </span>
+                                    <span
+                                        style={{
+                                            fontSize: 46,
+                                            fontWeight: 'bold',
+                                            color: 'gray',
+                                            marginRight: '1rem',
+                                        }}
+                                    >
+                                        /
+                                    </span>
+                                </>
                             ))}
                     </span>
                 </RunningLine>
@@ -270,19 +317,36 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                         top: '17.05rem',
                     }}
                 >
-                    <span>
+                    <span
+                        style={{
+                            animationDuration: '35s',
+                        }}
+                    >
                         {['мастерплан', 'софт', 'design : : unit', 'архитектура', 'соцкульт', 'городская среда', 'предметный дизайн', 'дизайн-код', 'образование', 'исследование']
                             .map(x => (
-                                <span
-                                    style={{
-                                        textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
-                                        fontSize: 42,
-                                        color: x == 'design : : unit' ? 'black' : 'gray',
-                                        marginRight: '1rem',
-                                    }}
-                                >
-                                    {x}
-                                </span>
+                                <>
+                                    <span
+                                        style={{
+                                            textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
+                                            fontWeight: 'bold',
+                                            fontSize: 46,
+                                            color: x == 'design : : unit' ? 'black' : 'gray',
+                                            marginRight: '1rem',
+                                        }}
+                                    >
+                                        {x}
+                                    </span>
+                                    <span
+                                        style={{
+                                            fontSize: 46,
+                                            fontWeight: 'bold',
+                                            color: 'gray',
+                                            marginRight: '1rem',
+                                        }}
+                                    >
+                                        /
+                                    </span>
+                                </>
                             ))}
                     </span>
                 </RunningLine>
