@@ -191,11 +191,11 @@ const Page: NextPage<IPageProps> = ({ data }) => {
     return (
         <>
             <div style={{
-                height: '19rem',
+                height: '15rem',
             }} >
                 <RunningLine
                     style={{
-                        padding: '1rem 0 .5rem 0',
+                        paddingTop: '1rem',
                         border: 'none',
                     }}
                 >
@@ -207,8 +207,8 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                                         style={{
                                             textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
                                             fontWeight: 'bold',
-                                            fontSize: 46,
-                                            color: x == 'design : : unit' ? 'black' : 'gray',
+                                            fontSize: 42,
+                                            color: x == 'design : : unit' ? 'black' : 'lightgray',
                                             marginRight: '1rem',
                                         }}
                                     >
@@ -216,9 +216,9 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                                     </span>
                                     <span
                                         style={{
-                                            fontSize: 46,
+                                            fontSize: 42,
                                             fontWeight: 'bold',
-                                            color: 'gray',
+                                            color: 'lightgray',
                                             marginRight: '1rem',
                                         }}
                                     >
@@ -231,9 +231,8 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                 <RunningLine
                     direction='right'
                     style={{
-                        padding: '1rem 0 .5rem 0',
                         border: 'none',
-                        top: '9.2rem',
+                        top: '7.1rem',
                     }}
                 >
                     <span
@@ -248,8 +247,8 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                                         style={{
                                             textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
                                             fontWeight: 'bold',
-                                            fontSize: 46,
-                                            color: x == 'design : : unit' ? 'black' : 'gray',
+                                            fontSize: 42,
+                                            color: x == 'design : : unit' ? 'black' : 'lightgray',
                                             marginRight: '1rem',
                                         }}
                                     >
@@ -257,9 +256,9 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                                     </span>
                                     <span
                                         style={{
-                                            fontSize: 46,
+                                            fontSize: 42,
                                             fontWeight: 'bold',
-                                            color: 'gray',
+                                            color: 'lightgray',
                                             marginRight: '1rem',
                                         }}
                                     >
@@ -271,9 +270,8 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                 </RunningLine>
                 <RunningLine
                     style={{
-                        padding: '1rem 0 .5rem 0',
                         border: 'none',
-                        top: '13.1rem',
+                        top: '10rem',
                     }}
                 >
                     <span
@@ -288,8 +286,8 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                                         style={{
                                             textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
                                             fontWeight: 'bold',
-                                            fontSize: 46,
-                                            color: x == 'design : : unit' ? 'black' : 'gray',
+                                            fontSize: 42,
+                                            color: x == 'design : : unit' ? 'black' : 'lightgray',
                                             marginRight: '1rem',
                                         }}
                                     >
@@ -297,9 +295,9 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                                     </span>
                                     <span
                                         style={{
-                                            fontSize: 46,
+                                            fontSize: 42,
                                             fontWeight: 'bold',
-                                            color: 'gray',
+                                            color: 'lightgray',
                                             marginRight: '1rem',
                                         }}
                                     >
@@ -312,9 +310,8 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                 <RunningLine
                     direction='right'
                     style={{
-                        padding: '1rem 0 .5rem 0',
                         border: 'none',
-                        top: '17.05rem',
+                        top: '13rem',
                     }}
                 >
                     <span
@@ -329,8 +326,8 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                                         style={{
                                             textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
                                             fontWeight: 'bold',
-                                            fontSize: 46,
-                                            color: x == 'design : : unit' ? 'black' : 'gray',
+                                            fontSize: 42,
+                                            color: x == 'design : : unit' ? 'black' : 'lightgray',
                                             marginRight: '1rem',
                                         }}
                                     >
@@ -338,9 +335,9 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                                     </span>
                                     <span
                                         style={{
-                                            fontSize: 46,
+                                            fontSize: 42,
                                             fontWeight: 'bold',
-                                            color: 'gray',
+                                            color: 'lightgray',
                                             marginRight: '1rem',
                                         }}
                                     >
