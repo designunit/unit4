@@ -16,7 +16,7 @@ const items = [
         href: 'https://www.mlaplus.com/',
     },
     {
-        src: '/static/partners/centr.jpg',
+        src: '/static/partners/centr-100.jpg',
         href: 'https://www.centeragency.org/ru',
     },
     {
@@ -28,7 +28,7 @@ const items = [
         href: 'https://www.knightfrank.ru/',
     },
     {
-        src: '/static/partners/centr comp.jpg',
+        src: '/static/partners/centr comp-100.jpg',
         href: 'https://gorsreda86.ugraces.ru/',
     },
     {
@@ -44,7 +44,7 @@ const items = [
         href: 'https://uray.ru/',
     },
     {
-        src: '/static/partners/centr myrmansk.jpg', // 10
+        src: '/static/partners/centr myrmansk-100.jpg', // 10
         href: 'https://www.instagram.com/centrgoroda51/',
     },
     {
@@ -60,7 +60,7 @@ const items = [
         href: 'https://www.v-tura.ru/',
     },
     {
-        src: '/static/partners/institut nn.jpg',
+        src: '/static/partners/institut nn-100.jpg',
         href: 'https://irgsno.ru/',
     },
     {
@@ -76,11 +76,11 @@ const items = [
         href: 'https://www.ispring.ru/',
     },
     {
-        src: '/static/partners/kiselev.jpg',
+        src: '/static/partners/kiselev-100.jpg',
         href: 'http://sk-p.ru/',
     },
     {
-        src: '/static/partners/varlamov.png',
+        src: '/static/partners/city project-100.jpg',
         href: 'https://city4people.ru/about-project',
     },
     {
@@ -92,7 +92,7 @@ const items = [
         href: 'https://www.facebook.com/StudioMishin/',
     },
     {
-        src: '/static/partners/epishkola.jpg',
+        src: '/static/partners/epishkola-100.jpg',
         href: 'http://epischool.ru/',
     },
     {
