@@ -7,7 +7,6 @@ export const RunningLine: React.FC<{ style?: CSSProperties, direction?: 'left' |
         <div className={classNames(s.container, direction == 'left' && s.left, direction == 'right' && s.right)} style={style} >
             {children}
             {children}
-            {children}
         </div>
     )
 }

@@ -19,7 +19,7 @@ export const IndexLines: React.FC = () => {
                 let top = '5rem'
                 switch (index) {
                     case 1:
-                        animationDuration = '60s'
+                        animationDuration = '25s'
                         top = '8rem'
                         break;
                     case 2:
@@ -27,7 +27,7 @@ export const IndexLines: React.FC = () => {
                         top = '11rem'
                         break;
                     case 3:
-                        animationDuration = '35s'
+                        animationDuration = '17s'
                         top = '14rem'
                         break;
                     default:
@@ -35,9 +35,11 @@ export const IndexLines: React.FC = () => {
                 }
                 return (
                     <RunningLine
+                        key={index}
                         direction={[0, 2].includes(index) ? 'left' : 'right'}
                         style={{
                             border: 'none',
+                            // border: 'solid 1px red',
                             padding: 0,
                             top,
                             overflow: 'visible',
