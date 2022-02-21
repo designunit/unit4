@@ -15,19 +15,20 @@ export const IndexLines: React.FC = () => {
             paddingBottom: '2rem',
         }}>
             {lines.map((line, index) => {
+                const direction = [0, 2].includes(index) ? 'left' : 'right'
                 let animationDuration = '20s'
                 let top = '5rem'
                 switch (index) {
                     case 1:
-                        animationDuration = '25s'
+                        animationDuration = '60s'
                         top = '8rem'
                         break;
                     case 2:
-                        animationDuration = '25s'
+                        animationDuration = '35s'
                         top = '11rem'
                         break;
                     case 3:
-                        animationDuration = '17s'
+                        animationDuration = '25s'
                         top = '14rem'
                         break;
                     default:
@@ -36,46 +37,40 @@ export const IndexLines: React.FC = () => {
                 return (
                     <RunningLine
                         key={index}
-                        direction={[0, 2].includes(index) ? 'left' : 'right'}
+                        direction={direction}
+                        animationDuration={animationDuration}
                         style={{
                             border: 'none',
-                            // border: 'solid 1px red',
                             padding: 0,
                             top,
                             overflow: 'visible',
                         }}
                     >
-                        <span
-                            style={{
-                                animationDuration,
-                            }}
-                        >
-                            {line.map(x => (
-                                <>
-                                    <span
-                                        style={{
-                                            textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
-                                            fontWeight: 'bold',
-                                            fontSize: 42,
-                                            color: x == 'design : : unit' ? 'black' : 'lightgray',
-                                            marginRight: '1rem',
-                                        }}
-                                    >
-                                        {x}
-                                    </span>
-                                    <span
-                                        style={{
-                                            fontSize: 42,
-                                            fontWeight: 'bold',
-                                            color: 'lightgray',
-                                            marginRight: '1rem',
-                                        }}
-                                    >
-                                        /
-                                    </span>
-                                </>
-                            ))}
-                        </span>
+                        {line.map((x, i) => (
+                            <span key={i}>
+                                <span
+                                    style={{
+                                        textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
+                                        fontWeight: 'bold',
+                                        fontSize: 42,
+                                        color: x == 'design : : unit' ? 'black' : 'lightgray',
+                                        marginRight: '1rem',
+                                    }}
+                                >
+                                    {x}
+                                </span>
+                                <span
+                                    style={{
+                                        fontSize: 42,
+                                        fontWeight: 'bold',
+                                        color: 'lightgray',
+                                        marginRight: '1rem',
+                                    }}
+                                >
+                                    /
+                                </span>
+                            </span>
+                        ))}
                     </RunningLine>
                 )
             })}

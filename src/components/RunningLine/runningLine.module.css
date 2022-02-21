@@ -21,18 +21,27 @@
 }
 
 .left > * {
-    animation: anim 20s infinite linear;
+    animation: animLeft 20s infinite linear;
 }
 
 .right > * {
-    animation: anim 20s infinite linear reverse;
+    animation: animRight 20s infinite linear;
 }
 
-@keyframes anim {
+@keyframes animLeft {
     from {
       transform: translateX(0);
     }
     to {
       transform: translateX(-100%);
+    }
+}
+
+@keyframes animRight {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
     }
 }
