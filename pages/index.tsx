@@ -4,10 +4,9 @@ import { useTranslation } from 'react-i18next'
 import React from 'react'
 import { GalleryItem, IGalleryItemProps } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
-import Image from 'next/image'
-import unitGif from '@/../public/static/unitZalipuxa.gif'
+import { IndexLines } from '@/components/IndexLines'
 
-const projects: { href: string, size?: 1 | 2 | 4 , relativeSrc?: boolean}[] = [
+const projects: { href: string, size?: 1 | 2 | 4, relativeSrc?: boolean }[] = [
     {
         href: '/mesto',
         size: 2,
@@ -191,31 +190,7 @@ const Page: NextPage<IPageProps> = ({ data }) => {
 
     return (
         <>
-            <div style={{
-                position: 'relative',
-                padding: 'var(--content-padding)',
-                display: 'flex',
-                justifyContent: 'center',
-                paddingTop: '4rem',
-                paddingBottom: '7rem',
-            }}>
-
-                <Image
-                    src={unitGif}
-                />
-
-                {/* <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    right: 0,
-                }}>
-                    <ProjectsSelector
-                        setTag={setTag}
-                        tags={tags}
-                        selected={tag}
-                    />
-                </div> */}
-            </div>
+            <IndexLines />
 
             <Gallery
                 mode='projects'

@@ -3,7 +3,7 @@ import { Title } from '../src/components/Title'
 import React from 'react'
 import { Table } from '@/components/Index/Table'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
-import { RunningLine } from '@/components/Index/RunningLine'
+import { RunningLine } from '@/components/RunningLine'
 import { Flex } from '@/components/Flex'
 import { Loud } from '@/components/Loud'
 import Image from 'next/image'
@@ -170,7 +170,7 @@ const Page: NextPage = () => {
                             textTransform: 'uppercase',
                             fontSize: 46,
                             margin: '0',
-                            color: 'black', // 'var(--color-text-opposite)',
+                            color: 'black',
                         }}
                     >
                         команда студии / plug-in структура / команда студии / plug-in структура / команда студии / plug-in структура / команда студии / plug-in структура /
