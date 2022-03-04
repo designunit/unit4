@@ -15,44 +15,54 @@ export const IndexLines: React.FC = () => {
             height: '14rem',
             paddingBottom: '2rem',
         }}>
-            {lines.map((line, index) => {
-                const direction = [0, 2].includes(index) ? 'left' : 'right'
-                let animationDuration = '20s'
-                let top = '5rem'
-                switch (index) {
-                    case 1:
-                        animationDuration = '60s'
-                        top = '8rem'
-                        break;
-                    case 2:
-                        animationDuration = '35s'
-                        top = '11rem'
-                        break;
-                    case 3:
-                        animationDuration = '25s'
-                        top = '14rem'
-                        break;
-                    default:
-                        break;
-                }
-                return (
-                    <RunningLine
-                        key={index}
-                        direction={direction}
-                        animationDuration={animationDuration}
-                        style={{
-                            border: 'none',
-                            padding: 0,
-                            top,
-                            overflow: 'visible',
-                        }}
-                    >
-                        {line.map((x, i) => (
-                            <Line line={x} key={i} />
-                        ))}
-                    </RunningLine>
-                )
-            })}
+            <RunningLine
+                direction={'left'}
+                animationDuration={'20s'}
+                style={{
+                    border: 'none',
+                    padding: 0,
+                    top: '5rem',
+                    overflow: 'visible',
+                }}
+            >
+                <Line line={lines[0]} />
+            </RunningLine>
+            <RunningLine
+                direction={'right'}
+                animationDuration={'60s'}
+                style={{
+                    border: 'none',
+                    padding: 0,
+                    top: '8rem',
+                    overflow: 'visible',
+                }}
+            >
+                <Line line={lines[1]} />
+            </RunningLine>
+            <RunningLine
+                direction={'left'}
+                animationDuration={'35s'}
+                style={{
+                    border: 'none',
+                    padding: 0,
+                    top: '11rem',
+                    overflow: 'visible',
+                }}
+            >
+                <Line line={lines[2]} />
+            </RunningLine>
+            <RunningLine
+                direction={'right'}
+                animationDuration={'25s'}
+                style={{
+                    border: 'none',
+                    padding: 0,
+                    top: '14rem',
+                    overflow: 'visible',
+                }}
+            >
+                <Line line={lines[3]} />
+            </RunningLine>
         </div>
     )
 }

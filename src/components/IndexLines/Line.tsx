@@ -1,15 +1,15 @@
-export const Line = ({ line }) => (
-    <span>
+export const Line = ({ line }) => line.map((x, i) => (
+    <>
         <span
             style={{
-                textTransform: line == 'design : : unit' ? 'lowercase' : 'uppercase',
+                textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
                 fontWeight: 'bold',
                 fontSize: 42,
-                color: line == 'design : : unit' ? 'black' : 'lightgray',
+                color: x == 'design : : unit' ? 'black' : 'lightgray',
                 marginRight: '1rem',
             }}
         >
-            {line}
+            {x}
         </span>
         <span
             style={{
@@ -21,5 +21,5 @@ export const Line = ({ line }) => (
         >
             /
         </span>
-    </span>
-)
+    </>
+))
