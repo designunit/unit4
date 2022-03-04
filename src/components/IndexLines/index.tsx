@@ -1,5 +1,6 @@
 import React from 'react'
 import { RunningLine } from '@/components/RunningLine'
+import { Line } from './Line'
 
 const lines = [
     ['софт', 'предметный дизайн', 'дизайн-код', 'образование', 'соцкульт', 'мастерплан', 'городская среда', 'design : : unit', 'архитектура', 'исследование'],
@@ -47,29 +48,7 @@ export const IndexLines: React.FC = () => {
                         }}
                     >
                         {line.map((x, i) => (
-                            <span key={i}>
-                                <span
-                                    style={{
-                                        textTransform: x == 'design : : unit' ? 'lowercase' : 'uppercase',
-                                        fontWeight: 'bold',
-                                        fontSize: 42,
-                                        color: x == 'design : : unit' ? 'black' : 'lightgray',
-                                        marginRight: '1rem',
-                                    }}
-                                >
-                                    {x}
-                                </span>
-                                <span
-                                    style={{
-                                        fontSize: 42,
-                                        fontWeight: 'bold',
-                                        color: 'lightgray',
-                                        marginRight: '1rem',
-                                    }}
-                                >
-                                    /
-                                </span>
-                            </span>
+                            <Line line={x} key={i} />
                         ))}
                     </RunningLine>
                 )

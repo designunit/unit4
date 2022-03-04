@@ -169,7 +169,7 @@ const Page: NextPage = () => {
                             textTransform: 'uppercase',
                             fontSize: 46,
                             margin: '0',
-                            color: 'black', // 'var(--color-text-opposite)',
+                            color: 'black',
                         }}
                     >
                         команда студии / plug-in структура / команда студии / plug-in структура / команда студии / plug-in структура / команда студии / plug-in структура /
