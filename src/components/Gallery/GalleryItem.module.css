@@ -4,33 +4,28 @@
     flex-flow: column;
     overflow: hidden;
 
-    text-decoration: none;
-}
-.container a {
     cursor: pointer;
+    text-decoration: none;
+    border: solid 1px var(--color-background-opposite);
+    transition: all 0.5s ease;
 }
 
 .container:hover {
     text-decoration: none;
-}
-
-.border:hover {
     border-color: var(--link-color-active);
 }
+.container:hover .img {
+    transform: scale(1.25);
+}
+
 .image {
+    position: relative;
+    overflow: hidden;
     min-height: calc(var(--cell-size-min) + var(--grid-gap));
 }
 
 .img {
     transition: filter 0.5s ease, transform 0.5s ease;
-}
-
-.hoverZoom > div {
-    position: relative;
-    overflow: hidden;
-}
-.hoverZoom:hover .img {
-    transform: scale(1.25);
 }
 
 .label {
@@ -63,11 +58,6 @@
     color: var(--link-color-active);
 }
 
-.border {
-    border: solid 1px var(--color-background-opposite);
-    transition: all 0.5s ease;
-}
-
 .col4 {
     grid-column-end: span 4;
 }
@@ -81,7 +71,6 @@
 .col4 .img {
     object-position: bottom;
 }
-
 
 :is(.col4, .col2) {
     flex-flow: row;

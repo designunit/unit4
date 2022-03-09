@@ -192,13 +192,9 @@ const Page: NextPage<IPageProps> = ({ data }) => {
         <>
             <IndexLines />
 
-            <Gallery
-                style={{
-                    marginBottom: 50,
-                }}
-            >
+            <Gallery>
                 {data.map((x, i) => {
-                    const indexCycled = (i + 4) % 6 // +4 should be removed, its a hack
+                    const indexCycled = i % 6
                     let autosize: 1 | 2 | 4 = 4
                     switch (indexCycled) {
                         case 0:
@@ -224,7 +220,6 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                             tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
                             href={x.href}
                             size={x?.size ?? autosize}
-                            mode={'projects'}
                             relativeSrc={x.relativeSrc}
                         />
                     )
