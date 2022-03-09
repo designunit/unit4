@@ -66,7 +66,14 @@ const table = [
         year: '2021',
         location: 'г. Кемь, Республика Карелия',
     },
-]
+    {
+        name: 'Открытый международный конкурс на разработку архитектурно-градостроительной концепции нового города в Сахалинской области',
+        href: 'https://sakhalinecopolis.ru/',
+        status: 'второе место',
+        year: '2021',
+        location: 'г. Корсаков, Сахалинская область',
+    },
+].reverse()
 
 export const Table = () => (
     <div
@@ -96,8 +103,7 @@ export const Table = () => (
                 <div
                     className={s.mobileHidden}
                     style={{
-                        flex: '0 0 20%',
-                        textAlign: 'center',
+                        flex: '1 0 20%',
                     }}
                 >
                     {x.location}
