@@ -138,7 +138,7 @@
 }
 
 @media screen and (max-width: 31.25em) {
-    /* every project is same size and is fullscreen, also col4 becomes same as others */
+    /* all colX becomes same and fullscreen */
 
     :is(.col4, .col2, .col1) {
         grid-column-end: span 4;

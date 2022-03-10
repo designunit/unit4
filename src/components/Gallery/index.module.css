@@ -25,11 +25,10 @@
         --cell-size-min: 150px;
         --grid-gap: 8px;
         padding: 0 8px;
-
-        grid-auto-rows: 50px;
     }
 }
 
+/* prevent projects to get flatten on 2K+ monitors */
 @media screen and (min-width: 2560px) {
     .gallery {
         grid-auto-rows: min(5vh, 5vh);
