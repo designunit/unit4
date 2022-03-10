@@ -40,7 +40,9 @@ export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, size, tags, tex
                 </div>
                 <div className={s.label}>
                     <span>
-                        {text}
+                        <span>
+                            {text}
+                        </span>
                     </span>
                     {!tags ? null : (
                         <Tags

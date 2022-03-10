@@ -44,11 +44,6 @@
     font-size: 1.2em;
 }
 
-.label.small {
-    font-size: 0.8em;
-    line-height: 1.6em;
-}
-
 .label > span {
     transition: color 0.5s ease;
 }
@@ -93,21 +88,27 @@
 }
 .col4 > .label {
     position: absolute;
+    align-items: flex-end;
     z-index: 1;
     right: 0;
     height: 100%;
-    width: calc(25% + 1px);
+    width: calc(50% + .4rem - var(--grid-gap));
     margin: unset;
+    text-align: right;
 }
-.col4 > .label > span {
-    width: 100%;
-    background-color: white;
+.col4 > .label > span > span {
     padding: var(--grid-gap);
+    line-height: 1.75em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    display: inline;
+    background-color: white;
 }
 
 .col4 > .label > :last-child {
     padding: var(--grid-gap);
     padding-top: 0;
+    justify-content: flex-end;
 }
 
 .col2 > .image {
@@ -131,10 +132,6 @@
         height: 100%;
         flex: 0 0 50%;
     }
-
-    .col4 > .label {
-        width: calc(50% + .4rem - var(--grid-gap));
-    }
 }
 
 @media screen and (max-width: 31.25em) {
@@ -154,10 +151,17 @@
         margin: unset;
         padding: var(--grid-gap);
         width: unset;
+        align-items: flex-start;
+        text-align: left;
 
         flex: 1 0 50%;
     }
+    .col4 > .label > span > span {
+        padding: unset;
+        line-height: unset;
+    }
     .col4 > .label > :last-child {
         padding: unset;
+        justify-content: flex-start;
     }
 }
