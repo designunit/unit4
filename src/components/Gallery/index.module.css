@@ -29,3 +29,9 @@
         grid-auto-rows: 50px;
     }
 }
+
+@media screen and (min-width: 2560px) {
+    .gallery {
+        grid-auto-rows: min(5vh, 5vh);
+    }
+}

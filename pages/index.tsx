@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
-import { Gallery } from '../src/components/Gallery'
+import { Gallery } from '@/components/Gallery'
 import { useTranslation } from 'react-i18next'
 import React from 'react'
 import { GalleryItem, IGalleryItemProps } from '@/components/Gallery/GalleryItem'
