@@ -2,7 +2,7 @@ import { GetStaticProps, NextPage } from 'next'
 import { Gallery } from '@/components/Gallery'
 import { useTranslation } from 'react-i18next'
 import React from 'react'
-import { GalleryItem, IGalleryItemProps } from '@/components/Gallery/GalleryItem'
+import { GalleryItem, GalleryItemProps } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
 import { IndexLines } from '@/components/IndexLines'
 
@@ -182,7 +182,7 @@ const projects: { href: string, size?: 1 | 2 | 4, relativeSrc?: boolean }[] = [
 ]
 
 interface IPageProps {
-    data: Partial<IGalleryItemProps>[]
+    data: Partial<GalleryItemProps>[]
 }
 
 const Page: NextPage<IPageProps> = ({ data }) => {
