@@ -27,6 +27,8 @@
     --font-normal-size: 18px;
     --font-normal-line-height: 30px;
 
+    --animation-scale-factor: 1.1;
+
     --margin-s: 1em;
     --margin-m: 3em;
     --margin-l: 5em;
