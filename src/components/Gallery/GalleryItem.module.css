@@ -90,11 +90,11 @@
     z-index: 1;
     right: 0;
     height: 100%;
-    width: calc(50% + .4rem - var(--grid-gap));
+    width: calc(50% + 0.4rem - var(--grid-gap));
     text-align: right;
 }
 .col4 > .label > span > span {
-    padding: calc(var(--grid-gap) * .4) var(--grid-gap);
+    padding: calc(var(--grid-gap) * 0.4) var(--grid-gap);
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     display: inline;
