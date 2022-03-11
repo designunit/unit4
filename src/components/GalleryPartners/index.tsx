@@ -4,7 +4,7 @@ export type GalleryProps = {
     style?: React.CSSProperties
 }
 
-export const Gallery: React.FC<GalleryProps> = props => {
+export const GalleryPartners: React.FC<GalleryProps> = props => {
     return (
         <div
             className={s.gallery}

@@ -4,33 +4,27 @@
     flex-flow: column;
     overflow: hidden;
 
-    text-decoration: none;
-}
-.container a {
     cursor: pointer;
+    text-decoration: none;
+    border: solid 1px var(--color-background-opposite);
 }
 
 .container:hover {
     text-decoration: none;
-}
-
-.border:hover {
     border-color: var(--link-color-active);
 }
+.container:hover .img {
+    transform: scale(var(--animation-scale-factor));
+}
+
 .image {
+    position: relative;
+    overflow: hidden;
     min-height: calc(var(--cell-size-min) + var(--grid-gap));
 }
 
 .img {
-    transition: filter .5s ease, transform .5s ease;
-}
-
-.hoverZoom > div {
-    position: relative;
-    overflow: hidden;
-}
-.hoverZoom:hover .img {
-    transform: scale(1.25);   
+    transition: filter var(--animation-time) ease, transform var(--animation-time) ease;
 }
 
 .label {
@@ -47,42 +41,21 @@
     font-family: var(--font-normal-family);
     font-weight: bolder;
     font-size: 1.2em;
-    
-    padding: .5rem 0;
-}
 
-.label.small {
-    font-size: 0.8em;
-    line-height: 1.6em;
-}
-
-.tags {
-    font-family: var(--font-second-family);
-    font-size: var(--font-second-size);
-    line-height: 25px;
-    display: flex;
-    flex-flow: wrap;
-    gap: .25rem;
-}
-.tags > span {
-    padding: 0 var(--grid-gap);
-    border: solid 1px var(--color-text);
+    padding: var(--grid-gap);
+    flex: 1 1 50%;
 }
 
 .label > span {
-    transition: color .5s ease;
+    transition: color 0.5s ease;
 }
 :hover > .label > span {
     color: var(--link-color-active);
 }
 
-.border {
-    border: solid 1px var(--color-background-opposite);
-    transition: all .5s ease;
-}
-
 .col4 {
     grid-column-end: span 4;
+    grid-row: span 8;
 }
 .col2 {
     grid-column-end: span 2;
@@ -90,14 +63,6 @@
 .col1 {
     grid-column-end: span 1;
 }
-
-.col4 .img {
-    object-position: bottom;
-}
-
-/* .col1 .tags {
-    display: none;
-} */
 
 :is(.col4, .col2) {
     flex-flow: row;
@@ -108,65 +73,86 @@
     height: 100%;
 }
 
-:is(.col4, .col2, .col1) > .label {
-    padding: var(--grid-gap);
-    flex: 1 1 auto;
-    padding: var(--grid-gap);
-    flex: 1 1 50%;
-}
-
 :is(.col1, .col2) {
     grid-row: span 6;
 }
 
-.col4 {
-    grid-row: span 8;
-}
-
-.col4 > div:first-child {
+.col4 > .image {
     flex: 1 1 auto;
 }
-.col4 > .label {
-    flex: 0 0 calc(25% + 2px);
+.col4 .img {
+    object-position: bottom;
 }
-.col2 > div:first-child {
-    flex: 0 0 calc(50% - var(--grid-gap) * .5);
+.col4 > .label {
+    position: absolute;
+    align-items: flex-end;
+    z-index: 1;
+    right: 0;
+    height: 100%;
+    width: calc(50% + 0.4rem - var(--grid-gap));
+    text-align: right;
+}
+.col4 > .label > span > span {
+    padding: calc(var(--grid-gap) * 0.4) var(--grid-gap);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    display: inline;
+    background-color: white;
+}
+
+.col4 > .label > :last-child {
+    justify-content: flex-end;
+}
+
+.col2 > .image {
+    flex: 0 0 calc(50% - var(--grid-gap) * 0.5);
 }
 
 @media screen and (max-width: 1280px) {
+    /* col1 and col2 becomes same (half-screen) */
+
     :is(.col2, .col1) {
         grid-column-end: span 2;
         flex-flow: column;
         grid-row: span 8;
     }
-
-    :is(.col2, .col1) > div:first-child {
-        height: 50%;
-        flex: 0 0 50%;
-    }
-    :is(.col2, .col1) .image {
-        height: 100%;
-    }
-
     :is(.col2, .col1) > .label {
         flex: 1 0 50%;
+        margin: unset;
+        padding: var(--grid-gap);
     }
-
-    .col4 > .label {
-        flex: 0 1 calc(50% + .4rem);
+    :is(.col2, .col1) > .image {
+        height: 100%;
+        flex: 0 0 50%;
     }
 }
 
 @media screen and (max-width: 31.25em) {
+    /* all colX becomes same and fullscreen */
+
     :is(.col4, .col2, .col1) {
         grid-column-end: span 4;
     }
 
     .col4 {
         flex-flow: column;
-        grid-row: span 6;
+        grid-row: span 8;
     }
     .col4 > .label {
+        position: relative;
+        z-index: unset;
+        padding: var(--grid-gap);
+        width: unset;
+        align-items: flex-start;
+        text-align: left;
+
         flex: 1 0 50%;
+    }
+    .col4 > .label > span > span {
+        line-height: unset;
+        padding: unset;
+    }
+    .col4 > .label > :last-child {
+        justify-content: flex-start;
     }
 }

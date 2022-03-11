@@ -1,9 +1,8 @@
-import { Gallery } from '@/components/Gallery'
-import { GalleryItem } from '@/components/Gallery/GalleryItem'
+import { GalleryPartners } from '@/components/GalleryPartners'
+import { GalleryPartnersItem } from '@/components/GalleryPartners/GalleryPartnersItem'
 import { resizeImage } from '@/lib/image'
 import { NextPage } from 'next'
 import React from 'react'
-import { useTranslation } from 'react-i18next'
 import { Title } from '../src/components/Title'
 
 const items = [
@@ -110,31 +109,21 @@ const items = [
 ]
 
 const Page: NextPage = () => {
-    const { t } = useTranslation()
-
     return (
         <>
             <Title>
                 С нами работают
             </Title>
 
-            <Gallery
-                mode='partners'
-                style={{
-                    marginBottom: 50,
-                }}
-            >
+            <GalleryPartners>
                 {items.map((x: any, i: number) => (
-                    <GalleryItem
+                    <GalleryPartnersItem
                         key={x.src}
                         src={resizeImage(x.src, { w: 600, h: 600 })}
-                        text={x.text}
-                        alt={x.alt}
                         href={x.href}
-                        mode={'partners'}
                     />
                 ))}
-            </Gallery>
+            </GalleryPartners>
         </>
     )
 }

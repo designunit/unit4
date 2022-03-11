@@ -5,19 +5,12 @@
     display: grid;
     grid-gap: var(--grid-gap);
     
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 50px;
-
+    grid-template-columns: repeat(auto-fill, minmax(var(--cell-size-min), 1fr));
+    grid-auto-rows: 1fr;
     grid-auto-flow: dense;
 
     margin-bottom: 50px;
 }
-
-@media screen and (max-width: 960px) {
-    .gallery {
-        grid-auto-rows: 50px;
-    }
-} 
 
 @media screen and (max-width: 31.25em) {
     .gallery {
@@ -25,12 +18,7 @@
         --cell-size-min: 150px;
         --grid-gap: 8px;
         padding: 0 8px;
-    }
-}
-
-/* prevent projects to get flatten on 2K+ monitors */
-@media screen and (min-width: 2560px) {
-    .gallery {
-        grid-auto-rows: min(5vh, 5vh);
+        
+        grid-template-columns: repeat(2, 1fr);
     }
 }

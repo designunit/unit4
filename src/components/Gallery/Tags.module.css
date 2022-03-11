@@ -1,0 +1,15 @@
+.tags {
+    font-family: var(--font-second-family);
+    font-size: var(--font-second-size);
+    line-height: 25px;
+    display: flex;
+    flex-flow: wrap-reverse;
+    gap: .25rem;
+}
+
+.tags > span {
+    padding: 0 var(--grid-gap);
+    border: solid 1px var(--color-text);
+
+    background-color: white;
+}

@@ -18,3 +18,9 @@ export type ImageProps = {
     width: number
     height: number
 }
+
+export enum CardSize {
+    small = 1,
+    medium = 2,
+    big = 4,
+}
