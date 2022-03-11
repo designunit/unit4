@@ -212,6 +212,7 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                         default:
                             break
                     }
+
                     return (
                         <GalleryItem
                             key={x.href}
@@ -220,7 +221,6 @@ const Page: NextPage<IPageProps> = ({ data }) => {
                             tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
                             href={x.href}
                             size={x?.size ?? autosize}
-                            relativeSrc={x.relativeSrc}
                         />
                     )
                 })}
@@ -230,10 +230,12 @@ const Page: NextPage<IPageProps> = ({ data }) => {
 }
 
 export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
+    const defaultSrc = '/static/logo_unit4.jpg'
     const pages = await Promise.all(projects.map(async x => getPageBySlug(ctx.locale, x.href)))
+
     const data = projects.map((x, i) => {
         const page = pages[i]
-        const src = page?.cover ?? null
+        const src = page?.cover ?? defaultSrc
         const text = page?.title ?? null
         const tags = [
             ...(page?.location ? [page?.location] : []),

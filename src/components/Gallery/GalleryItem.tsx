@@ -18,13 +18,9 @@ export type GalleryItemProps = {
     text?: string | React.ReactNode
     tags?: string[]
     size?: 1 | 2 | 4
-    relativeSrc?: boolean
 }
 
 export const GalleryItem: React.FC<GalleryItemProps> = ({ href, size, tags, text, ...props }) => {
-    const src = !props.src ? '/static/logo_unit4.jpg' : // in ENG props.src is null
-        props.relativeSrc ? props.src.split('https://unit4.io')[1] : props.src
-
     return (
         <Link href={href}>
             <a className={cx(s.container, sizeClassNameMap[size])}>
@@ -32,7 +28,7 @@ export const GalleryItem: React.FC<GalleryItemProps> = ({ href, size, tags, text
                     className={s.image}
                 >
                     <Image
-                        src={src}
+                        src={props.src}
                         alt={props.alt}
                         layout='fill'
                         objectFit='cover'
