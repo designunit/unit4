@@ -5,7 +5,13 @@ import s from './GalleryItem.module.css'
 import Image from 'next/image'
 import { Tags } from './Tags'
 
-export interface IGalleryItemProps {
+const sizeClassNameMap = {
+    1: s.col1,
+    2: s.col2,
+    4: s.col4,
+}
+
+export type GalleryItemProps = {
     src: string
     alt?: string
     href?: string
@@ -15,13 +21,7 @@ export interface IGalleryItemProps {
     relativeSrc?: boolean
 }
 
-const sizeClassNameMap = {
-    1: s.col1,
-    2: s.col2,
-    4: s.col4,
-}
-
-export const GalleryItem: React.FC<IGalleryItemProps> = ({ href, size, tags, text, ...props }) => {
+export const GalleryItem: React.FC<GalleryItemProps> = ({ href, size, tags, text, ...props }) => {
     const src = !props.src ? '/static/logo_unit4.jpg' : // in ENG props.src is null
         props.relativeSrc ? props.src.split('https://unit4.io')[1] : props.src
 
