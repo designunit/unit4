@@ -25,7 +25,7 @@
 }
 
 .img {
-    transition: filter 0.5s ease, transform 0.5s ease;
+    transition: filter var(--animation-time) ease, transform var(--animation-time) ease;
 }
 
 .label {

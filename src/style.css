@@ -28,6 +28,7 @@
     --font-normal-line-height: 30px;
 
     --animation-scale-factor: 1.1;
+    --animation-time: 0.25s;
 
     --margin-s: 1em;
     --margin-m: 3em;
