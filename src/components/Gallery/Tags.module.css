@@ -3,7 +3,7 @@
     font-size: var(--font-second-size);
     line-height: 25px;
     display: flex;
-    flex-flow: wrap;
+    flex-flow: wrap-reverse;
     gap: .25rem;
 }
 
