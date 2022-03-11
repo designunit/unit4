@@ -33,6 +33,7 @@ export const GalleryItem: React.FC<GalleryItemProps> = ({ href, size, tags, text
                 >
                     <Image
                         src={src}
+                        alt={props.alt}
                         layout='fill'
                         objectFit='cover'
                         className={s.img}
