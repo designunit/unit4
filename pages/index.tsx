@@ -1,12 +1,22 @@
 import { GetStaticProps, NextPage } from 'next'
 import { Gallery } from '@/components/Gallery'
 import { useTranslation } from 'react-i18next'
-import React from 'react'
-import { GalleryItem, GalleryItemProps } from '@/components/Gallery/GalleryItem'
+import { GalleryItem } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
 import { IndexLines } from '@/components/IndexLines'
+import { CardSize } from '@/types'
+import { useAutoCardSize } from '@/hooks/useAutoCardSize'
 
-const projects: { href: string, size?: 1 | 2 | 4, relativeSrc?: boolean }[] = [
+type ProjectItem = {
+    coverSrc: string
+    title: string
+    href: string
+    caption?: string
+    tags: string[]
+    size?: CardSize
+}
+
+const projects: Partial<ProjectItem>[] = [
     {
         href: '/mesto',
         size: 2,
@@ -182,48 +192,28 @@ const projects: { href: string, size?: 1 | 2 | 4, relativeSrc?: boolean }[] = [
 ]
 
 interface IPageProps {
-    data: Partial<GalleryItemProps>[]
+    projects: ProjectItem[]
 }
 
-const Page: NextPage<IPageProps> = ({ data }) => {
+const Page: NextPage<IPageProps> = ({ projects }) => {
     const { t } = useTranslation()
+    const autosize = useAutoCardSize(6)
 
     return (
         <>
             <IndexLines />
 
             <Gallery>
-                {data.map((x, i) => {
-                    const indexCycled = i % 6
-                    let autosize: 1 | 2 | 4 = 4
-                    switch (indexCycled) {
-                        case 0:
-                            autosize = 4
-                            break
-                        case 1:
-                        case 2:
-                            autosize = 1
-                            break
-                        case 3:
-                        case 4:
-                        case 5:
-                            autosize = 2
-                            break
-                        default:
-                            break
-                    }
-
-                    return (
-                        <GalleryItem
-                            key={x.href}
-                            src={x.src}
-                            text={x.text}
-                            tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
-                            href={x.href}
-                            size={x?.size ?? autosize}
-                        />
-                    )
-                })}
+                {projects.map((x, i) => (
+                    <GalleryItem
+                        key={x.href}
+                        src={x.coverSrc}
+                        text={x.title}
+                        tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
+                        href={x.href}
+                        size={x?.size ?? autosize(i)}
+                    />
+                ))}
             </Gallery>
         </>
     )
@@ -231,30 +221,34 @@ const Page: NextPage<IPageProps> = ({ data }) => {
 
 export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
     const defaultSrc = '/static/logo_unit4.jpg'
-    const pages = await Promise.all(projects.map(async x => getPageBySlug(ctx.locale, x.href)))
+    const pages = await Promise.all(
+        projects.map(async project => getPageBySlug(ctx.locale, project.href!))
+    )
 
-    const data = projects.map((x, i) => {
+    const data = projects.map<ProjectItem>((project, i) => {
         const page = pages[i]
-        const src = page?.cover ?? defaultSrc
-        const text = page?.title ?? null
+        const coverSrc = page?.cover ?? defaultSrc
+        const title = page?.title ?? ''
         const tags = [
             ...(page?.location ? [page?.location] : []),
             ...(page?.year ? [page?.year] : []),
             ...page?.tags ?? []
-        ]
+        ] as string[]
+
         return {
-            ...x,
-            src,
-            text,
+            href: project.href!,
+            size: project.size,
+            coverSrc,
+            title,
             tags,
         }
     })
 
-
     return {
         props: {
-            data,
+            projects: data,
         }
     }
 }
+
 export default Page
