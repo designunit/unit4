@@ -208,7 +208,7 @@ const Page: NextPage<IPageProps> = ({ projects }) => {
                     <GalleryItem
                         key={x.href}
                         src={x.coverSrc}
-                        text={x.title}
+                        title={x.title}
                         tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
                         href={x.href}
                         size={x?.size ?? autosize(i)}
