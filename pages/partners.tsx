@@ -68,7 +68,7 @@ const items = [
         href: 'https://volkhov-raion.ru/',
     },
     {
-        src: '/static/partners/admin-pit.png',
+        src: '/static/partners/pitkiaranta.jpg',
         href: 'http://апмр.рф/',
     },
     {
