@@ -7,6 +7,8 @@ export interface IImageSetProps {
     items: string[]
     span: number[]
     style?: React.CSSProperties
+    width?: number
+    height?: number
 }
 
 export const ImageColumnsLayout: React.FC<IImageSetProps> = props => (
@@ -18,8 +20,9 @@ export const ImageColumnsLayout: React.FC<IImageSetProps> = props => (
                 {props.items.map((x, i) => (
                     <Col span={props.span[i]} key={i}>
                         <Image
-                            key={i}
                             src={x}
+                            width={props.width}
+                            height={props.width}
                         />
                     </Col>
                 ))}
@@ -35,6 +38,8 @@ export const ImageColumnsLayout: React.FC<IImageSetProps> = props => (
                     <Col span={24}>
                         <Image
                             src={x}
+                            width={props.width}
+                            height={props.width}
                         />
                     </Col>
                 </Row>
