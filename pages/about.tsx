@@ -13,15 +13,7 @@ const Page: NextPage = () => {
 
     return (
         <>
-            <Loud>
-                {/* проектная студия<br />
-                <span
-                    style={{
-                        textTransform: 'none'
-                    }}
-                >
-                    design : : unit 4 
-                </span> */}
+            <Loud as={'h1'}>
                 студия средового дизайна
             </Loud>
 
@@ -48,7 +40,7 @@ const Page: NextPage = () => {
                 </div>
                 {/* <ThreeButton index={0} /> */}
 
-                <Title writeToHead={false}>
+                <Title as='h2'>
                     Средовое <br />
                     проектирование
                 </Title>
@@ -98,7 +90,7 @@ const Page: NextPage = () => {
                 </div>
                 {/* <ThreeButton index={1} /> */}
 
-                <Title writeToHead={false}>
+                <Title as={'h2'}>
                     Образование
                 </Title>
 
@@ -142,7 +134,7 @@ const Page: NextPage = () => {
                 </div>
                 {/* <ThreeButton index={2} /> */}
 
-                <Title writeToHead={false}>
+                <Title as={'h2'}>
                     Софт
                 </Title>
 
@@ -165,7 +157,7 @@ const Page: NextPage = () => {
 
             <div style={{ height: vertOffset, paddingTop: '4rem', }} >
                 <RunningLine>
-                    <h1
+                    <h2
                         style={{
                             textTransform: 'uppercase',
                             fontSize: 46,
@@ -174,7 +166,7 @@ const Page: NextPage = () => {
                         }}
                     >
                         команда студии / plug-in структура / команда студии / plug-in структура / команда студии / plug-in структура / команда студии / plug-in структура /
-                    </h1>
+                    </h2>
                 </RunningLine>
             </div>
 
@@ -211,7 +203,7 @@ const Page: NextPage = () => {
                 marginTop: vertOffset,
             }} />
 
-            <Title writeToHead={false}>
+            <Title as={'h2'}>
                 Победы в конкурсах
             </Title>
 
