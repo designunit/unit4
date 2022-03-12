@@ -23,12 +23,16 @@ import dynamic from 'next/dynamic'
 const DatavizStage = dynamic(import('@/app/oymyakon/DatavizStage'), { ssr: false })
 
 const mdxComponents = {
-    Image,
+    Image: props => (
+        <Image {...props} style={{marginBottom: '2em'}} />
+    ),
+    ImageSet: props => (
+        <ImageSet {...props} style={{marginBottom: '2em'}} />
+    ),
     Carousel,
     UnitHighlight,
     Title,
     DatavizStage,
-    ImageSet,
     WideBlock,
     HeterotopiaHighlight,
     HeterotopiaTitle,

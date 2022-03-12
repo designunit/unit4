@@ -1,17 +1,17 @@
 import NextImage from 'next/image'
-import s from './index.module.css'
 
 export type ImageProps = {
     src: string
     alt?: string
     width?: number
     height?: number
+    style?: React.CSSProperties
 }
 
 export const Image: React.FC<ImageProps> = ({ width = 16, height = 10, ...props }) => {
     return (
         <div
-            className={s.image}
+            style={props.style}
         >
             <NextImage
                 src={props.src}
