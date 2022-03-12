@@ -1,30 +1,25 @@
-import * as React from 'react'
-import { resizeImage } from '../../lib/image'
 import NextImage from 'next/image'
-import s from './index.module.css'
 
-export interface IImageProps {
-    size?: number
+export type ImageProps = {
     src: string
     alt?: string
-    objectFit?: string
+    width?: number
+    height?: number
+    style?: React.CSSProperties
 }
 
-export const Image: React.FC<IImageProps> = ({ size = 1500, objectFit = 'contain', ...props }) => {
-    const src = resizeImage(props.src, {
-        h: size,
-        w: size,
-    })
-
+export const Image: React.FC<ImageProps> = ({ width = 16, height = 10, ...props }) => {
     return (
-        <div className={s.image}>
+        <div
+            style={props.style}
+        >
             <NextImage
-                src={src}
+                src={props.src}
                 alt={props.alt}
-                layout='fill'
-                priority // without priority it breaks <Carousel> layout
-                // @ts-ignore // type string is good enough for now
-                objectFit={objectFit}
+                width={width}
+                height={height}
+                layout={'responsive'}
+                objectFit={'cover'}
             />
         </div>
     )

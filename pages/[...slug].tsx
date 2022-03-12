@@ -9,7 +9,6 @@ import React from 'react'
 import { MDXRemote } from 'next-mdx-remote'
 import { Image } from '@/components/Image'
 import { UnitHighlight } from '@/components/UnitHighlight'
-import DatavizStage from '@/app/oymyakon/DatavizStage'
 import { ImageSet } from '@/components/ImageSet'
 import { WideBlock } from '@/components/WideBlock'
 import { HeterotopiaTitle } from '@/app/heterotopia/HeterotopiaTitle'
@@ -19,14 +18,21 @@ import { Flex } from '@/components/Flex'
 import { BlackHighlight } from '@/components/BlackHighlight'
 import { BeforeAfter } from '@/components/BeforeAfter'
 import { Carousel } from '@/components/Carousel'
+import dynamic from 'next/dynamic'
+
+const DatavizStage = dynamic(import('@/app/oymyakon/DatavizStage'), { ssr: false })
 
 const mdxComponents = {
-    Image,
+    Image: props => (
+        <Image {...props} style={{marginBottom: '2em'}} />
+    ),
+    ImageSet: props => (
+        <ImageSet {...props} style={{marginBottom: '2em'}} />
+    ),
     Carousel,
     UnitHighlight,
     Title,
     DatavizStage,
-    ImageSet,
     WideBlock,
     HeterotopiaHighlight,
     HeterotopiaTitle,
