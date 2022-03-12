@@ -28,12 +28,12 @@ export const ImageColumnsLayout: React.FC<IImageSetProps> = props => (
         <div className={s.containerMobile} style={props.style}>
             {props.items.map((x, i) => (
                 <Row
+                    key={i}
                     gutter={16}
                     justify='center'
                 >
-                    <Col span={24} key={i}>
+                    <Col span={24}>
                         <Image
-                            key={i}
                             src={x}
                         />
                     </Col>
