@@ -1,24 +1,23 @@
 import { ImageProps } from '@/types'
 import Image from 'next/image'
-import { Carousel as Slider } from 'antd'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import s from './index.module.css'
 
 export type CarouselProps = {
     size?: number
     images: ImageProps[]
     style?: React.CSSProperties
-
-    transition: 'slide' | 'crossfade'
-    // autoplay?: boolean | number
-    // allowfullscreen?: boolean
 }
 
-const effect = new Map([
-    ['crossfade', 'fade'],
-    ['slide', 'scrollx'],
-])
-
 const Left = (props) => (
-    <div {...props}>
+    <div
+        {...props}
+        className={s.arrow}
+        style={{
+            left: 10,
+        }}
+    >
         <Image
             src={'/static/left.svg'}
             width={20}
@@ -27,7 +26,13 @@ const Left = (props) => (
     </div>
 )
 const Right = (props) => (
-    <div {...props}>
+    <div
+        {...props}
+        className={s.arrow}
+        style={{
+            right: 10,
+        }}
+    >
         <Image
             src={'/static/right.svg'}
             width={20}
@@ -36,11 +41,11 @@ const Right = (props) => (
     </div>
 )
 
-export const Carousel: React.FC<CarouselProps> = ({ children, transition = 'crossfade' }) => (
+export const Carousel: React.FC<CarouselProps> = ({ children }) => (
     <Slider
-        autoplay={true}
-        effect={effect.get(transition) as any}
-        arrows
+        autoplay
+        dots
+        dotsClass={s.dots}
         prevArrow={<Left />}
         nextArrow={<Right />}
     >
