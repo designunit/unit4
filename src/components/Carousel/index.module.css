@@ -1,42 +1,4 @@
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    width: 22px;
-    height: 22px;
-    padding: 2px;
-    background: black;
-    cursor: pointer;
-}
-
-.dots {
-    display: flex !important;
-    justify-content: center;
-    gap: 8px;
-    margin: unset;
-    padding: unset;
-}
-
-.dots > li {
-    display: block;
-    margin: unset;
-}
-
-.dots > li > button {
-    display: block;
-    border: none;
-    width: 20px;
-    height: 20px;
-    overflow: hidden;
-    cursor: pointer;
-    background-color: black;
-    border: solid 1px transparent;
-    padding: unset;
-    transition: all .5s ease;
-}
-
-.dots > li::before {
-    width: 0;
-    content: '';
+.bullet {
+    background-color: black !important;
+    border-radius: unset !important;
 }
