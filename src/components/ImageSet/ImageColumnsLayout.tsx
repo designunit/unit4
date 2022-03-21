@@ -21,8 +21,9 @@ export const ImageColumnsLayout: React.FC<IImageSetProps> = ({ style, items, spa
         >
             {items.map((x, i) => (
                 <Image
+                    key={i}
                     style={{
-                        gridColumnEnd: `span ${span[i]}`
+                        gridColumnEnd: `span ${span[i]}`,
                     }}
                     src={x}
                     width={width}
