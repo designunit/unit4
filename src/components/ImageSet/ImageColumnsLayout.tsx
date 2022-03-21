@@ -1,6 +1,5 @@
 import s from './image-set.module.css'
 
-import { Col, Row } from 'antd'
 import { Image } from '@/components/Image'
 
 export interface IImageSetProps {
@@ -11,38 +10,24 @@ export interface IImageSetProps {
     height?: number
 }
 
-export const ImageColumnsLayout: React.FC<IImageSetProps> = props => (
+export const ImageColumnsLayout: React.FC<IImageSetProps> = ({ style, items, span, width, height = width, ...props }) => (
     <>
-        <div className={s.container} style={props.style}>
-            <Row
-                gutter={16}
-            >
-                {props.items.map((x, i) => (
-                    <Col span={props.span[i]} key={i}>
-                        <Image
-                            src={x}
-                            width={props.width}
-                            height={props.width}
-                        />
-                    </Col>
-                ))}
-            </Row>
-        </div>
-        <div className={s.containerMobile} style={props.style}>
-            {props.items.map((x, i) => (
-                <Row
-                    key={i}
-                    gutter={16}
-                    justify='center'
-                >
-                    <Col span={24}>
-                        <Image
-                            src={x}
-                            width={props.width}
-                            height={props.width}
-                        />
-                    </Col>
-                </Row>
+        <div
+            className={s.container}
+            style={{
+                gap: 16,
+                ...style
+            }}
+        >
+            {items.map((x, i) => (
+                <Image
+                    style={{
+                        gridColumnEnd: `span ${span[i]}`
+                    }}
+                    src={x}
+                    width={width}
+                    height={height}
+                />
             ))}
         </div>
     </>
