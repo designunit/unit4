@@ -71,6 +71,8 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                                 ))}
                             </menu>
                             <div className={s.contacts}>
+                                <div className={s.icons}>
+                                </div>
                                 <div className={s.links} >
                                     <a
                                         href='mailto:inbox@unit4.io'
