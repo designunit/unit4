@@ -4,7 +4,6 @@ import Media from 'react-media'
 import { Logo } from '../Logo'
 import { IMenuItemProps, MenuItem } from './MenuItem'
 import s from './index.module.css'
-import { mdiFacebook, mdiInstagram, mdiVimeo } from '@mdi/js'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import Icon from '@mdi/react'
 import { mdiDragHorizontalVariant, mdiClose } from '@mdi/js'
@@ -73,33 +72,6 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                             </menu>
                             <div className={s.contacts}>
                                 <div className={s.icons}>
-                                    <a
-                                        href={'https://www.instagram.com/unit4.io/'}
-                                        target='_blank'
-                                    >
-                                        <Icon
-                                            path={mdiInstagram}
-                                            size={1.25}
-                                        />
-                                    </a>
-                                    <a
-                                        href={'https://www.facebook.com/designunit4'}
-                                        target='_blank'
-                                    >
-                                        <Icon
-                                            path={mdiFacebook}
-                                            size={1.25}
-                                        />
-                                    </a>
-                                    <a
-                                        href={'https://vimeo.com/designunit4'}
-                                        target='_blank'
-                                    >
-                                        <Icon
-                                            path={mdiVimeo}
-                                            size={1.25}
-                                        />
-                                    </a>
                                 </div>
                                 <div className={s.links} >
                                     <a

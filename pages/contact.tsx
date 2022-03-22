@@ -1,7 +1,3 @@
-import { mdiFacebook } from '@mdi/js'
-import { mdiVimeo } from '@mdi/js'
-import { mdiInstagram } from '@mdi/js'
-import Icon from '@mdi/react'
 import { NextPage } from 'next'
 import { Article } from '../src/components/Article'
 import { TextBlock } from '../src/components/TextBlock'
@@ -37,40 +33,6 @@ const Page: NextPage = () => (
                     +7 921 9980303
                 </a>
             </TextBlock>
-
-            <a
-                href={'https://www.facebook.com/designunit4'}
-                target='_blank'
-            >
-                <Icon
-                    path={mdiFacebook}
-                    className={'icon-link'}
-                    size={1}
-                />
-            </a>
-            &nbsp; &nbsp;
-            <a
-                href={'https://vimeo.com/designunit4'}
-                target='_blank'
-            >
-                <Icon
-                    path={mdiVimeo}
-                    className={'icon-link'}
-                    size={0.9}
-                />
-            </a>
-            &nbsp; &nbsp;
-
-            <a
-                href={'https://www.instagram.com/unit4.io/'}
-                target='_blank'
-            >
-                <Icon
-                    path={mdiInstagram}
-                    className={'icon-link'}
-                    size={1}
-                />
-            </a>
         </Article>
     </>
 )
