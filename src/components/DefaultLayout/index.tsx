@@ -40,10 +40,10 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = props => {
                             ]}
                         />
                     </header>
+                    <div className={s.headerSpacer} />
                 </>
             )}
             <div className={s.content}>
-
                 <main>
                     {props.children}
                 </main>

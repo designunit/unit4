@@ -36,7 +36,7 @@ export const Carousel: React.FC<CarouselProps> = ({ children }) => {
             modules={[Autoplay, Pagination]}
             autoplay={{ delay: 7000 }}
             pagination={{
-                bulletClass: s.bullet,
+                bulletClass: `swiper-pagination-bullet ${s.bullet}`,
                 clickable: true,
             }}
             loop
