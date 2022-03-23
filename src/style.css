@@ -223,25 +223,6 @@ p > p {
     margin-bottom: 0;
 }
 
-/* carousel */
-.swiper-button-prev {
-    background-image: url('/static/left.svg');
-}
-.swiper-button-next {
-    background-image: url('/static/right.svg');
-}
-:is(.swiper-button-prev, .swiper-button-next) {
-    width: 22px !important;
-    height: 22px !important;
-    border: solid 2px black;
-    background-color: black;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-:is(.swiper-button-prev, .swiper-button-next)::after {
-    display: none;
-}
-
 /* MOBILE STYLE */
 
 @media screen and (max-width: 31.25em) {
