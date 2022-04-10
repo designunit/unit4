@@ -4,7 +4,6 @@ import Media from 'react-media'
 import { Logo } from '../Logo'
 import { IMenuItemProps, MenuItem } from './MenuItem'
 import s from './index.module.css'
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import Icon from '@mdi/react'
 import { mdiDragHorizontalVariant, mdiClose } from '@mdi/js'
 
@@ -16,15 +15,13 @@ export interface IMenuProps {
 export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
     const [mobileOpen, setMobileOpen] = React.useState(false)
 
-    const menuRef = React.useRef(null)
     React.useEffect(() => {
-        if (!menuRef.current) {
+        if (!document) {
             return
         }
-        mobileOpen
-            ? disableBodyScroll(menuRef.current)
-            : enableBodyScroll(menuRef.current)
-    }, [mobileOpen, menuRef])
+
+        document.body.style.touchAction = mobileOpen ? 'none' : 'auto'
+    }, [mobileOpen])
 
     return (
         <>
@@ -59,9 +56,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                                 left: mobileOpen ? 0 : '100vw',
                             }}
                         >
-                            <menu className={className(s.menu, s.mobileMenu)}
-                                ref={menuRef}
-                            >
+                            <menu className={className(s.menu, s.mobileMenu)}>
                                 {items.map((x, i) => (
                                     <MenuItem
                                         key={i}

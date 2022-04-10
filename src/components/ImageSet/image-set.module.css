@@ -1,21 +1,14 @@
 .container {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.containerMobile {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
 }
 
 @media screen and (max-width: 960px) {
     .container {
-        display: none;
-    }
-    .containerMobile {
         width: 100%;
-        display: flex;
         gap: 1em;
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        padding: var(--content-padding);
     }
 }

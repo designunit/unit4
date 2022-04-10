@@ -17,17 +17,18 @@ import { NextSeo } from 'next-seo'
 import { Flex } from '@/components/Flex'
 import { BlackHighlight } from '@/components/BlackHighlight'
 import { BeforeAfter } from '@/components/BeforeAfter'
-import { Carousel } from '@/components/Carousel'
 import dynamic from 'next/dynamic'
 
 const DatavizStage = dynamic(import('@/app/oymyakon/DatavizStage'), { ssr: false })
 
+const Carousel = dynamic(() => import('@/components/Carousel').then(x => x.Carousel))
+
 const mdxComponents = {
     Image: props => (
-        <Image {...props} style={{marginBottom: '2em'}} />
+        <Image {...props} style={{ marginBottom: '2em' }} />
     ),
     ImageSet: props => (
-        <ImageSet {...props} style={{marginBottom: '2em'}} />
+        <ImageSet {...props} style={{ marginBottom: '2em' }} />
     ),
     Carousel,
     UnitHighlight,

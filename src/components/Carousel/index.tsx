@@ -1,49 +1,52 @@
 import { ImageProps } from '@/types'
-import Image from 'next/image'
-import { Carousel as Slider } from 'antd'
+import s from './index.module.css'
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
+import { Autoplay, Pagination } from 'swiper'
+import React from 'react'
+
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import 'swiper/css/pagination'
 
 export type CarouselProps = {
     size?: number
     images: ImageProps[]
     style?: React.CSSProperties
-
-    transition: 'slide' | 'crossfade'
-    // autoplay?: boolean | number
-    // allowfullscreen?: boolean
 }
 
-const effect = new Map([
-    ['crossfade', 'fade'],
-    ['slide', 'scrollx'],
-])
+const Arrows = () => {
+    const swiper = useSwiper()
+    return (
+        <>
+            <div
+                className={s.left}
+                onClick={() => swiper.slidePrev()}
+            />
+            <div
+                className={s.right}
+                onClick={() => swiper.slideNext()}
+            />
+        </>
+    )
+}
 
-const Left = (props) => (
-    <div {...props}>
-        <Image
-            src={'/static/left.svg'}
-            width={20}
-            height={20}
-        />
-    </div>
-)
-const Right = (props) => (
-    <div {...props}>
-        <Image
-            src={'/static/right.svg'}
-            width={20}
-            height={20}
-        />
-    </div>
-)
-
-export const Carousel: React.FC<CarouselProps> = ({ children, transition = 'crossfade' }) => (
-    <Slider
-        autoplay={true}
-        effect={effect.get(transition) as any}
-        arrows
-        prevArrow={<Left />}
-        nextArrow={<Right />}
-    >
-        {children}
-    </Slider>
-)
+export const Carousel: React.FC<CarouselProps> = ({ children }) => {
+    return (
+        <Swiper
+            modules={[Autoplay, Pagination]}
+            autoplay={{ delay: 7000 }}
+            pagination={{
+                bulletClass: `swiper-pagination-bullet ${s.bullet}`,
+                clickable: true,
+            }}
+            loop
+        >
+            <Arrows />
+            {React.Children.map(children, (child, i) => (
+                <SwiperSlide key={i}>
+                    {child}
+                </SwiperSlide>
+            ))}
+        </Swiper >
+    )
+}

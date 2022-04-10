@@ -1,0 +1,27 @@
+.left {
+    left: 10px;
+    background-image: url('/static/left.svg');
+}
+.right {
+    right: 10px;
+    background-image: url('/static/right.svg');
+}
+:is(.left, .right) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+
+    width: 22px;
+    height: 22px;
+    border: solid 2px black;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bullet {
+    background-color: black !important;
+    border-radius: unset !important;
+}
