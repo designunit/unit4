@@ -39,7 +39,6 @@
         "react-dom": "^17.0.1",
         "react-i18next": "^11.7.3",
         "react-inlinesvg": "^3.0.1",
-        "react-intersection-observer": "^8.32.1",
         "react-media": "^1.10.0",
         "react-ratio": "^0.1.5",
         "remark": "^13.0.0",
