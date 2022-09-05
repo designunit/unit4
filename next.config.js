@@ -57,7 +57,7 @@ module.exports = {
         locales: ['ru', 'en'],
         defaultLocale: 'ru'
     },
-    assetPrefix: '',
+    assetPrefix: '.',
     webpack(config) {
         config.module.rules.push({
             test: /\.svg$/,
