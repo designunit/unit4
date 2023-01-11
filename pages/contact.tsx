@@ -1,5 +1,5 @@
+import { Flex } from '@/components/Flex'
 import { NextPage } from 'next'
-import { Article } from '../src/components/Article'
 import { TextBlock } from '../src/components/TextBlock'
 import { Title } from '../src/components/Title'
 
@@ -7,9 +7,22 @@ const maps = 'https://yandex.ru/maps/2/saint-petersburg/?spn=0.964737%2C0.271155
 
 const Page: NextPage = () => (
     <>
-        <Title>КОНТАКТЫ</Title>
+        <Title>
+            КОНТАКТЫ
+        </Title>
 
-        <Article>
+        <Flex col
+            style={{
+                padding: 'var(--content-padding)',
+                gap: '1rem',
+            }}
+        >
+            <TextBlock>
+                <b>
+                    ООО «дизайн юнит 4»
+                </b>
+            </TextBlock>
+
             <TextBlock>
                 <a href='mailto:inbox@unit4.io'>
                     inbox@unit4.io
@@ -21,7 +34,6 @@ const Page: NextPage = () => (
                     href={maps}
                     target='_blank'
                 >
-                    ООО "дизайн юнит 4"<br />
                     Гражданская улица, 13-15<br />
                     Санкт-Петербург<br />
                     Россия
@@ -33,7 +45,7 @@ const Page: NextPage = () => (
                     +7 921 9980303
                 </a>
             </TextBlock>
-        </Article>
+        </Flex>
     </>
 )
 
