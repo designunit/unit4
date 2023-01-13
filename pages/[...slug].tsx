@@ -18,6 +18,7 @@ import { Flex } from '@/components/Flex'
 import { BlackHighlight } from '@/components/BlackHighlight'
 import { BeforeAfter } from '@/components/BeforeAfter'
 import dynamic from 'next/dynamic'
+import { ProjectHeader } from '@/components/ProjectHeader'
 
 const DatavizStage = dynamic(import('@/app/oymyakon/DatavizStage'), { ssr: false })
 
@@ -40,6 +41,7 @@ const mdxComponents = {
     Flex,
     BlackHighlight,
     BeforeAfter,
+    ProjectHeader,
 }
 
 type Props = PageDefinition & {
