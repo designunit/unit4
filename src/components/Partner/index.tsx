@@ -1,14 +1,14 @@
-import * as React from 'react'
 import Svg from 'react-inlinesvg'
 
-export interface IPartnerProps {
+export type PartnerProps = {
+    children: React.ReactNode
     href: string
     title: string
     src: string
     imageWidth?: number | string
 }
 
-export const Partner: React.FC<IPartnerProps> = ({ href, title, src, ...props }) => (
+export const Partner: React.FC<PartnerProps> = ({ href, title, src, ...props }) => (
     <div className={'partner'}>
         <style jsx>{`
             .partner {

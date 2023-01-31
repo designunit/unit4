@@ -2,6 +2,7 @@ import { createElement, CSSProperties } from 'react'
 import s from './loud.module.css'
 
 export type LoudProps = {
+    children: React.ReactNode
     style?: CSSProperties
     as?: React.ElementType
 }
