@@ -79,12 +79,11 @@ export async function getPageBySlug(lang: Lang | undefined, slug: string) {
 }
 
 async function getPage(path: string): Promise<PageDefinition | null> {
+    const slug = getSlugFromPath(path)
     try {
         const fileContents = await readFile(path, 'utf8')
         const { data, content } = matter(fileContents)
 
-        // return data['url']
-        const slug = getSlugFromPath(path)
         const title = getTitle(content)
 
         const tags: string[] = data.tags ?? []
@@ -106,8 +105,8 @@ async function getPage(path: string): Promise<PageDefinition | null> {
             slug,
             content,
         }
-    } catch (error) {
-        console.error(`${getSlugFromPath(path)} getPage() err: `, error)
+    } catch (err) {
+        console.error(`Failed to get page ${slug}:`, (err as any as Error).message)
         return null
     }
 }
