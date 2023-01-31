@@ -66,8 +66,8 @@ const Page: NextPage<Props> = props => {
                     images: [
                         {
                             url: props.cover,
-                        }
-                    ]
+                        },
+                    ],
                 }}
             />
 
@@ -116,7 +116,7 @@ export const getStaticProps: GetStaticProps<Props> = async ctx => {
             ...def,
             source,
             contentLocale,
-        }
+        },
     }
 }
 

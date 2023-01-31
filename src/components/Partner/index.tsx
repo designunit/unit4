@@ -21,7 +21,7 @@ export const Partner: React.FC<IPartnerProps> = ({ href, title, src, ...props })
             }
         `}</style>
 
-        <a href={href} target={'_blank'} title={title}>
+        <a href={href} target={'_blank'} title={title} rel="noreferrer">
             <Svg
                 className={'partner-logo'}
                 style={{

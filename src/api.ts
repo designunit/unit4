@@ -13,7 +13,6 @@ const defaultLocale: Lang = 'ru'
 
 const postsDirectory = join(process.cwd(), 'data')
 
-
 export async function getPages() {
     const pattern = join(process.cwd(), 'data', '**/*.md?(x)')
     const files = await getFilesByPattern(pattern, {})
@@ -32,7 +31,7 @@ export async function getPages() {
 
 async function getFilesByPattern(pattern: string, options: any) {
     return new Promise<string[]>((resolve, reject) => {
-        glob(pattern, options, function (er, files: string[]) {
+        glob(pattern, options, function(er, files: string[]) {
             if (er) {
                 return reject(er)
             }

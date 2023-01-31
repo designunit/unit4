@@ -9,7 +9,7 @@ export type LoudProps = {
 export const Loud: React.FC<LoudProps> = ({ as = 'div', ...props }) => {
     return createElement(as, {
         className: s.container,
-        style: props.style
+        style: props.style,
     }, (
         <span className={s.multiline}>
             {props.children}

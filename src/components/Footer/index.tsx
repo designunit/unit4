@@ -35,7 +35,7 @@ export const Footer: React.FC = () => (
         <section className={'right'}>
             <a
                 href='mailto:inbox@unit4.io'
-                target={'_blank'}
+                target={'_blank'} rel="noreferrer"
             >
                 inbox@unit4.io
             </a>

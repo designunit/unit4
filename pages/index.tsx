@@ -188,7 +188,7 @@ const projects: Partial<ProjectItem>[] = [
     {
         href: '/chistopol',
         size: 2,
-    }
+    },
 ]
 
 interface IPageProps {
@@ -232,7 +232,7 @@ export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
         const tags = [
             ...(page?.location ? [page?.location] : []),
             ...(page?.year ? [page?.year] : []),
-            ...page?.tags ?? []
+            ...page?.tags ?? [],
         ] as string[]
 
         return {
@@ -247,7 +247,7 @@ export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
     return {
         props: {
             projects: data,
-        }
+        },
     }
 }
 

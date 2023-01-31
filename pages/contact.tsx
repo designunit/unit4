@@ -19,7 +19,7 @@ const Page: NextPage = () => (
             <TextBlock>
                 <a
                     href={maps}
-                    target='_blank'
+                    target='_blank' rel="noreferrer"
                 >
                     ООО "дизайн юнит 4"<br />
                     Гражданская улица, 13-15<br />

@@ -155,7 +155,7 @@ const Page: NextPage = () => {
                 </div>
             </div>
 
-            <div style={{ height: vertOffset, paddingTop: '4rem', }} >
+            <div style={{ height: vertOffset, paddingTop: '4rem' }} >
                 <RunningLine>
                     <h2
                         style={{
