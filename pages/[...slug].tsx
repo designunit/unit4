@@ -1,6 +1,5 @@
 import { Title } from '@/components/Title'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import ErrorPage from 'next/error'
 import { useRouter } from 'next/router'
 import { PageDefinition } from '@/types'
 import { getPageBySlug, getPages } from '@/api'

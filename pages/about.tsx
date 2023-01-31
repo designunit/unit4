@@ -179,7 +179,11 @@ const Page: NextPage = () => {
                         ['Владимир Петросян', 'генеральный директор'],
                         ['Надежда Кузнецова', 'главный архитектор'],
                         ['Елизавета Владимирова', 'главный архитектор'],
-                    ].map(([name, rang]) => <div><span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}</div>)}
+                    ].map(([name, rang], i) => (
+                        <div key={i}>
+                            <span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}
+                        </div>
+                    ))}
                 </ul>
                 <ul>
                     {[
@@ -192,7 +196,11 @@ const Page: NextPage = () => {
                         ['Анастасия Матюшонок', 'архитектор'],
                         ['Виктория Бинковская', 'архитектор'],
                         ['Роберт Галиакбаров', 'архитектор'],
-                    ].map(([name, rang]) => <div><span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}</div>)}
+                    ].map(([name, rang], i) => (
+                        <div key={i}>
+                            <span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}
+                        </div>
+                    ))}
                 </ul>
             </Flex>
 

@@ -30,6 +30,7 @@
         "@nivo/core": "^0.80.0",
         "@nivo/sankey": "^0.80.0",
         "classnames": "^2.2.6",
+        "glob": "^8.1.0",
         "gray-matter": "^4.0.3",
         "i18next": "^19.8.3",
         "lodash": "^4.17.21",
