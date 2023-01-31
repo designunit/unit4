@@ -1,6 +1,8 @@
-import * as React from 'react'
+export type TextBlockProps = {
+    children: React.ReactNode
+}
 
-export const TextBlock: React.FC = ({children}) => (
+export const TextBlock: React.FC<TextBlockProps> = ({ children }) => (
     <div>
         <style jsx>{`
             div {

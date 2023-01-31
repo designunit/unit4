@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { resizeImage } from '../../lib/image'
 
-export interface MetaProps {
+export type MetaProps = {
     title: string
     description: string
     image: string
@@ -10,7 +10,7 @@ export interface MetaProps {
     type?: string
 }
 
-export const Meta: React.SFC<MetaProps> = ({ type = 'website', ...props }) => {
+export const Meta: React.FC<MetaProps> = ({ type = 'website', ...props }) => {
     const { locale } = useRouter()
     const image = resizeImage(props.image, {
         fit: 'cover',

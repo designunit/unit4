@@ -16,7 +16,7 @@ export const ImageColumnsLayout: React.FC<IImageSetProps> = ({ style, items, spa
             className={s.container}
             style={{
                 gap: 16,
-                ...style
+                ...style,
             }}
         >
             {items.map((x, i) => (

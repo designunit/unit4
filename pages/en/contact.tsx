@@ -23,7 +23,7 @@ const Page: NextPage = () => (
             <TextBlock>
                 <a
                     href={maps}
-                    target='_blank'
+                    target='_blank' rel="noreferrer"
                 >
                     «design unit 4» Co. Ltd.<br />
                     13 Grazhdanskaya Street Saint Petersburg, 190031 Russia
@@ -38,7 +38,7 @@ const Page: NextPage = () => (
 
             <a
                 href={'https://www.facebook.com/designunit4'}
-                target='_blank'
+                target='_blank' rel="noreferrer"
             >
                 <Icon
                     path={mdiFacebook}
@@ -49,7 +49,7 @@ const Page: NextPage = () => (
             &nbsp; &nbsp;
             <a
                 href={'https://vimeo.com/designunit4'}
-                target='_blank'
+                target='_blank' rel="noreferrer"
             >
                 <Icon
                     path={mdiVimeo}
@@ -61,7 +61,7 @@ const Page: NextPage = () => (
 
             <a
                 href={'https://www.instagram.com/unit4.io/'}
-                target='_blank'
+                target='_blank' rel="noreferrer"
             >
                 <Icon
                     path={mdiInstagram}

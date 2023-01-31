@@ -33,7 +33,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
             </div>
 
             <Media queries={{
-                mobile: "(max-width: 31.25em)",
+                mobile: '(max-width: 31.25em)',
             }}>
                 {matches => matches.mobile ? (
                     <>
@@ -71,13 +71,13 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                                 <div className={s.links} >
                                     <a
                                         href='mailto:inbox@unit4.io'
-                                        target={'_blank'}
+                                        target={'_blank'} rel="noreferrer"
                                     >
                                         inbox@unit4.io
                                     </a>
                                     <a
                                         href='tel:+79219980303'
-                                        target={'_blank'}
+                                        target={'_blank'} rel="noreferrer"
                                     >
                                         +7 921 9980303
                                     </a>

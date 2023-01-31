@@ -4,11 +4,11 @@ import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import s from './lang-button.module.css'
 
-export interface ILangButtonProps {
+export type LangButtonProps = {
     style?: React.CSSProperties
 }
 
-export const LangButton: React.FC<ILangButtonProps> = props => {
+export const LangButton: React.FC<LangButtonProps> = props => {
     const router = useRouter()
     const { t } = useTranslation('locale')
     const locales = router.locales ?? []

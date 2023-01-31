@@ -2,12 +2,12 @@ import * as React from 'react'
 
 import Svg from './logo-unit4.svg'
 
-export interface ILogoProps {
+export type LogoProps = {
     href: string
     invert?: boolean
 }
 
-export const Logo: React.SFC<ILogoProps> = props => (
+export const Logo: React.FC<LogoProps> = props => (
     <a href={props.href} title={'logo'}>
         <style jsx>{`
             a {
