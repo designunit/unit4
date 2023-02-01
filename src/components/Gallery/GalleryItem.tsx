@@ -1,10 +1,11 @@
 import cx from 'classnames'
 import Link from 'next/link'
-import * as React from 'react'
 import s from './GalleryItem.module.css'
 import Image from 'next/image'
-import { Tags } from './Tags'
 import type { CardSize } from '@/types'
+import dynamic from 'next/dynamic'
+
+const Tags = dynamic(import('./Tags').then(m => m.Tags))
 
 const sizeClassNameMap: Record<CardSize, string> = {
     1: s.col1,
