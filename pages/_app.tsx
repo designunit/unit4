@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     useEffect(() => {
         i18n.changeLanguage(router.locale)
-    }, [router.locale])
+    }, [i18n, router.locale])
 
     // scroll page to top on path change
     useEffect(() => {

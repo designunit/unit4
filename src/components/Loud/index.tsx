@@ -1,9 +1,9 @@
-import { createElement, CSSProperties } from 'react'
+import { createElement } from 'react'
 import s from './loud.module.css'
 
 export type LoudProps = {
     children: React.ReactNode
-    style?: CSSProperties
+    style?: React.CSSProperties
     as?: React.ElementType
 }
 

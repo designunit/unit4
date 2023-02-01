@@ -1,5 +1,5 @@
-import { Title } from '../src/components/Title'
 import type { NextPage } from 'next'
+import { Title } from '@/components/Title'
 import React from 'react'
 import { Table } from '@/components/Index/Table'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
@@ -34,6 +34,7 @@ const Page: NextPage = () => {
                     <Image
                         quality={100}
                         src={'/static/1.jpg'}
+                        alt={''}
                         layout='fill'
                         objectFit='cover'
                     />
