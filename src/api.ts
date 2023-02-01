@@ -4,7 +4,7 @@ import { join, relative } from 'path'
 import glob from 'glob'
 import matter from 'gray-matter'
 import { parse } from 'date-fns'
-import { PageDefinition } from '@/types'
+import type { PageDefinition } from '@/types'
 
 const readFile = promisify(fs.readFile)
 

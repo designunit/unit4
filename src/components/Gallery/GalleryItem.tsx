@@ -4,7 +4,7 @@ import * as React from 'react'
 import s from './GalleryItem.module.css'
 import Image from 'next/image'
 import { Tags } from './Tags'
-import { CardSize } from '@/types'
+import type { CardSize } from '@/types'
 
 const sizeClassNameMap: Record<CardSize, string> = {
     1: s.col1,

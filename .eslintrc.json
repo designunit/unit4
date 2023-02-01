@@ -61,6 +61,12 @@
                 "destructuredArrayIgnorePattern": "^_"
             }
         ],
+        "@typescript-eslint/consistent-type-imports": [
+            "error",
+            {
+                "prefer": "type-imports"
+            }
+        ],
         "import/no-restricted-paths": [
             "error",
             {

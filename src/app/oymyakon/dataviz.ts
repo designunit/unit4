@@ -1,6 +1,6 @@
 import { flatMap } from 'lodash'
-import { INivoLink } from '../../components/Dataviz/Sankey'
-import { arrayToDomains } from '../../lib/array'
+import type { INivoLink } from '@/components/Dataviz/Sankey'
+import { arrayToDomains } from '@/lib/array'
 
 export function collect(transitions: Array<[number, string[]]>): INivoLink[] {
     const result = flatMap(transitions, link => {

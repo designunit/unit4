@@ -1,7 +1,7 @@
 import { GalleryPartners } from '@/components/GalleryPartners'
 import { GalleryPartnersItem } from '@/components/GalleryPartners/GalleryPartnersItem'
 import { resizeImage } from '@/lib/image'
-import { NextPage } from 'next'
+import type { NextPage } from 'next'
 import React from 'react'
 import { Title } from '../src/components/Title'
 

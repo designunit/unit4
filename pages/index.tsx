@@ -1,10 +1,10 @@
-import { GetStaticProps, NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
+import type { CardSize } from '@/types'
 import { Gallery } from '@/components/Gallery'
 import { useTranslation } from 'react-i18next'
 import { GalleryItem } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
 import { IndexLines } from '@/components/IndexLines'
-import { CardSize } from '@/types'
 import { useAutoCardSize } from '@/hooks/useAutoCardSize'
 
 type ProjectItem = {

@@ -1,7 +1,7 @@
 import '@/style.css'
 
 import { DefaultLayout } from '@/components/DefaultLayout'
-import { AppProps } from 'next/app'
+import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { YMetrika } from '@/components/YMetrika'
 import { useRouter } from 'next/router'

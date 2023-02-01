@@ -1,5 +1,5 @@
-import { NextPage } from 'next'
 import { Title } from '../src/components/Title'
+import type { NextPage } from 'next'
 import React from 'react'
 import { Table } from '@/components/Index/Table'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
