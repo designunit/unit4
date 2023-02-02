@@ -1,4 +1,4 @@
-import { ImageProps } from '@/types'
+import type { ImageProps } from '@/types'
 import s from './index.module.css'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper'
@@ -9,6 +9,7 @@ import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
 
 export type CarouselProps = {
+    children: React.ReactNode
     size?: number
     images: ImageProps[]
     style?: React.CSSProperties

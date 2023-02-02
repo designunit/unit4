@@ -1,11 +1,9 @@
 import { Title } from '@/components/Title'
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import ErrorPage from 'next/error'
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { PageDefinition } from '@/types'
+import type { PageDefinition } from '@/types'
 import { getPageBySlug, getPages } from '@/api'
 import { serialize } from 'next-mdx-remote/serialize'
-import React from 'react'
 import { MDXRemote } from 'next-mdx-remote'
 import { Image } from '@/components/Image'
 import { UnitHighlight } from '@/components/UnitHighlight'
@@ -68,8 +66,8 @@ const Page: NextPage<Props> = props => {
                     images: [
                         {
                             url: props.cover,
-                        }
-                    ]
+                        },
+                    ],
                 }}
             />
 
@@ -118,7 +116,7 @@ export const getStaticProps: GetStaticProps<Props> = async ctx => {
             ...def,
             source,
             contentLocale,
-        }
+        },
     }
 }
 

@@ -1,11 +1,11 @@
-import * as React from 'react'
 import s from './index.module.css'
 
-export interface IWideBlockProps {
+export type WideBlockProps = {
+    children: React.ReactNode
     style?: React.CSSProperties
 }
 
-export const WideBlock: React.FC<IWideBlockProps> = props => (
+export const WideBlock: React.FC<WideBlockProps> = props => (
     <div
         className={s.container}
         style={props.style}

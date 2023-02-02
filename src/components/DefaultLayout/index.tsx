@@ -5,6 +5,7 @@ import { Menu } from '../Menu'
 import s from './layout.module.css'
 
 export interface IDefaultLayoutProps {
+    children: React.ReactNode
     showHeader: boolean
     center: boolean
     title: string

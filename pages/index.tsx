@@ -1,11 +1,13 @@
-import { GetStaticProps, NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
+import type { CardSize } from '@/types'
 import { Gallery } from '@/components/Gallery'
 import { useTranslation } from 'react-i18next'
 import { GalleryItem } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
-import { IndexLines } from '@/components/IndexLines'
-import { CardSize } from '@/types'
 import { useAutoCardSize } from '@/hooks/useAutoCardSize'
+import dynamic from 'next/dynamic'
+
+const IndexLines = dynamic(import( '@/components/IndexLines').then(m => m.IndexLines))
 
 type ProjectItem = {
     coverSrc: string
@@ -188,7 +190,7 @@ const projects: Partial<ProjectItem>[] = [
     {
         href: '/chistopol',
         size: 2,
-    }
+    },
 ]
 
 interface IPageProps {
@@ -232,7 +234,7 @@ export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
         const tags = [
             ...(page?.location ? [page?.location] : []),
             ...(page?.year ? [page?.year] : []),
-            ...page?.tags ?? []
+            ...page?.tags ?? [],
         ] as string[]
 
         return {
@@ -247,7 +249,7 @@ export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
     return {
         props: {
             projects: data,
-        }
+        },
     }
 }
 

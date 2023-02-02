@@ -7,6 +7,6 @@ export type LangContextType = {
 
 export const defaultLang = {
     lang: 'ru',
-    translations: new Map()
+    translations: new Map(),
 }
 export const LangContext = createContext(defaultLang)

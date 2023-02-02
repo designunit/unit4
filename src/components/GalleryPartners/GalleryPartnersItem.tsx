@@ -16,6 +16,7 @@ export const GalleryPartnersItem: React.FC<IGalleryItemProps> = ({ href, src, ..
             <Ratio>
                 <Image
                     src={src}
+                    alt={''}
                     layout='fill'
                     objectFit='contain'
                 />

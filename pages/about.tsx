@@ -1,5 +1,5 @@
-import { NextPage } from 'next'
-import { Title } from '../src/components/Title'
+import type { NextPage } from 'next'
+import { Title } from '@/components/Title'
 import React from 'react'
 import { Table } from '@/components/Index/Table'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
@@ -34,6 +34,7 @@ const Page: NextPage = () => {
                     <Image
                         quality={100}
                         src={'/static/1.jpg'}
+                        alt={''}
                         layout='fill'
                         objectFit='cover'
                     />
@@ -155,7 +156,7 @@ const Page: NextPage = () => {
                 </div>
             </div>
 
-            <div style={{ height: vertOffset, paddingTop: '4rem', }} >
+            <div style={{ height: vertOffset, paddingTop: '4rem' }} >
                 <RunningLine>
                     <h2
                         style={{
@@ -179,7 +180,11 @@ const Page: NextPage = () => {
                         ['Владимир Петросян', 'генеральный директор'],
                         ['Надежда Кузнецова', 'главный архитектор'],
                         ['Елизавета Владимирова', 'главный архитектор'],
-                    ].map(([name, rang]) => <div><span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}</div>)}
+                    ].map(([name, rang], i) => (
+                        <div key={i}>
+                            <span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}
+                        </div>
+                    ))}
                 </ul>
                 <ul>
                     {[
@@ -193,7 +198,11 @@ const Page: NextPage = () => {
                         ['Виктория Бинковская', 'архитектор'],
                         ['Роберт Галиакбаров', 'архитектор'],
                         ['Валентина Ермолаева', 'координатор'],
-                    ].map(([name, rang]) => <div><span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}</div>)}
+                    ].map(([name, rang], i) => (
+                        <div key={i}>
+                            <span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}
+                        </div>
+                    ))}
                 </ul>
             </Flex>
 

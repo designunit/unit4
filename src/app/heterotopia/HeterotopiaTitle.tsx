@@ -1,8 +1,10 @@
-import * as React from 'react'
+import { useHeterotopiaGradient } from './useHeterotopiaGradient'
 
-import {useHeterotopiaGradient} from './useHeterotopiaGradient'
+export type HeterotopiaTitleProps = {
+    children: React.ReactNode
+}
 
-export const HeterotopiaTitle: React.FC = props => {
+export const HeterotopiaTitle: React.FC<HeterotopiaTitleProps> = props => {
     const linearGradient = useHeterotopiaGradient()
 
     return (

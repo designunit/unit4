@@ -1,8 +1,8 @@
-import { CSSProperties } from 'react'
 import s from './index.module.css'
 
 export type BlackHighlightProps = {
-    style?: CSSProperties
+    children: React.ReactNode
+    style?: React.CSSProperties
 }
 
 export const BlackHighlight: React.FC<BlackHighlightProps> = ({ children, style }) => (

@@ -1,7 +1,7 @@
 import '@/style.css'
 
 import { DefaultLayout } from '@/components/DefaultLayout'
-import { AppProps } from 'next/app'
+import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { YMetrika } from '@/components/YMetrika'
 import { useRouter } from 'next/router'
@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     useEffect(() => {
         i18n.changeLanguage(router.locale)
-    }, [router.locale])
+    }, [i18n, router.locale])
 
     // scroll page to top on path change
     useEffect(() => {

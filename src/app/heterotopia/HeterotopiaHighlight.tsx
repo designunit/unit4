@@ -1,6 +1,8 @@
-import * as React from 'react'
+export type HeterotopiaHighlightProps = {
+    children: React.ReactNode
+}
 
-export const HeterotopiaHighlight: React.FC = props => (
+export const HeterotopiaHighlight: React.FC<HeterotopiaHighlightProps> = props => (
     <b>
         <style jsx>{`
             b {
