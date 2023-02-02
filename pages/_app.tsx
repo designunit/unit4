@@ -47,8 +47,8 @@ function MyApp({ Component, pageProps }: AppProps) {
                     images: [
                         {
                             url: '/static/logo_unit4.jpg',
-                        }
-                    ]
+                        },
+                    ],
                 }}
             />
 

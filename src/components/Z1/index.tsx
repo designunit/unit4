@@ -18,6 +18,7 @@ export const Z1: React.FC = () => (
             }
         `}</style>
 
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className='logo' src='/static/logo.gif' alt='design::unit' />
     </div>
 )

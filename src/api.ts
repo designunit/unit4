@@ -105,6 +105,7 @@ async function getPage(path: string): Promise<PageDefinition | null> {
             content,
         }
     } catch (err) {
+        // eslint-disable-next-line no-console
         console.error(`Failed to get page ${slug}:`, (err as any as Error).message)
         return null
     }

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import * as React from 'react'
 
 export interface IUnitCanvasProps {
@@ -86,6 +87,7 @@ export default class UnitCanvas extends React.Component<IUnitCanvasProps, {}> {
                 <img
                     ref={this.imgRef}
                     src={'/static/logo_full.png'}
+                    alt='design unit logo'
                 />
             </div>
         )

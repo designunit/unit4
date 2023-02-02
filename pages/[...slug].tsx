@@ -24,7 +24,7 @@ const Carousel = dynamic(() => import('@/components/Carousel').then(x => x.Carou
 
 const mdxComponents = {
     Image: props => (
-        <Image {...props} style={{ marginBottom: '2em' }} />
+        <Image {...props} style={{ marginBottom: '2em' }} alt={props.alt ?? 'project image'} />
     ),
     ImageSet: props => (
         <ImageSet {...props} style={{ marginBottom: '2em' }} />

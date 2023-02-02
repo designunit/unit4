@@ -87,6 +87,7 @@ const Page: NextPage = () => {
                         layout='fill'
                         objectFit='cover'
                         objectPosition='left center'
+                        alt='design unit team'
                     />
                 </div>
                 {/* <ThreeButton index={1} /> */}
@@ -131,6 +132,7 @@ const Page: NextPage = () => {
                         src={'/static/3.jpg'}
                         layout='fill'
                         objectFit='cover'
+                        alt='design unit project'
                     />
                 </div>
                 {/* <ThreeButton index={2} /> */}
