@@ -41,7 +41,7 @@ async function getFilesByPattern(pattern: string, options: any) {
     })
 }
 
-function getSlugFromPath(path: string) {
+function getSlugFromPath(path: string): string {
     const rel = relative(postsDirectory, path)
     const realSlug = rel
         .replace(/\w{2}\.mdx?$/, '')
@@ -51,7 +51,7 @@ function getSlugFromPath(path: string) {
     return `/${realSlug}`
 }
 
-function getLocaleFromPath(path: string) {
+function getLocaleFromPath(path: string): string {
     const pattern = /(.{2})\.mdx?$/
     const m = pattern.exec(path)
     if (!m) {
