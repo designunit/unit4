@@ -55,15 +55,16 @@ const Page: NextPage<Props> = props => {
     return (
         <>
             <NextSeo
-                title={props.title}
+                title={props.title ?? undefined}
                 description={props.excerpt}
                 openGraph={{
-                    title: props.title,
+                    title: props.title ?? undefined,
                     description: props.excerpt,
                     url: `https://unit4.io${props.slug}`,
-                    images: [
+                    images: !props.cover ? [] : [
                         {
                             url: props.cover,
+                            type: 'image/jpeg',
                         },
                     ],
                 }}
