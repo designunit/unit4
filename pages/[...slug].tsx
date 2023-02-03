@@ -120,7 +120,7 @@ export const getStaticProps: GetStaticProps<Props> = async ctx => {
         props: {
             ...def,
             source,
-            contentLocale,
+            contentLocale: contentLocale!,
         },
     }
 }
