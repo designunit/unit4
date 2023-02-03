@@ -11,14 +11,20 @@ export default class UnitCanvas extends React.Component<IUnitCanvasProps, {}> {
     private frameId: number
     private frame: number
 
-    private canvas: HTMLCanvasElement
-    private ctx: CanvasRenderingContext2D
+    private canvas: HTMLCanvasElement | null
+    private ctx: CanvasRenderingContext2D | null
 
     private imgRef: React.RefObject<HTMLImageElement>
-    private stopTimeout: NodeJS.Timeout
+    private stopTimeout: NodeJS.Timeout | null
 
     constructor(props: IUnitCanvasProps) {
         super(props)
+
+        this.frameId = 0
+        this.frame = 0
+        this.canvas = null
+        this.ctx = null
+        this.stopTimeout = null
 
         this.angle = -(Math.random() * Math.PI)
         this.imgRef = React.createRef()
@@ -97,7 +103,7 @@ export default class UnitCanvas extends React.Component<IUnitCanvasProps, {}> {
     }
 
     private loop = () => {
-        const ctx = this.ctx
+        const ctx = this.ctx!
         const image = this.imgRef.current
 
         if (!image) {
@@ -118,7 +124,7 @@ export default class UnitCanvas extends React.Component<IUnitCanvasProps, {}> {
                 image.offsetWidth,
                 image.offsetHeight,
             )
-            this.frame ++
+            this.frame++
         }
 
         if (this.running) {
@@ -135,13 +141,13 @@ export default class UnitCanvas extends React.Component<IUnitCanvasProps, {}> {
     }
 
     private init() {
-        this.canvas.width = document.documentElement.clientWidth
-        this.canvas.height = document.documentElement.clientHeight
+        this.canvas!.width = document.documentElement.clientWidth
+        this.canvas!.height = document.documentElement.clientHeight
 
         this.frame = 0
         this.startLoop()
 
-        clearTimeout(this.stopTimeout)
+        clearTimeout(this.stopTimeout!)
         this.stopTimeout = setTimeout(() => {
             this.stopLoop()
         }, 15000)
