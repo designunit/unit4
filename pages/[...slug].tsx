@@ -67,6 +67,10 @@ const Page: NextPage<Props> = props => {
                         },
                     ],
                 }}
+                // telegram will show big image with this option
+                twitter={{
+                    cardType: 'summary_large_image',
+                }}
             />
 
             {/* TODO */}
