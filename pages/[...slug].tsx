@@ -122,25 +122,27 @@ export const getStaticProps: GetStaticProps<Props> = async ctx => {
     }
 }
 
-export const getStaticPaths: GetStaticPaths = async ctx => {
+export const getStaticPaths: GetStaticPaths = async () => {
     const pages = await getPages()
-
     return {
         paths: pages
-            .reduce((acc, { slug, locale }) => {
-                const slugNoSlash = slug.split('/').slice(1)
+            .map(({ slug }) => {
+                // trim beginning slash
+                // /path/to/page -> path/to/page
+                return slug.split('/').slice(1)
+            })
+            .flatMap(slug => {
                 return [
-                    ...acc,
                     {
-                        params: { slug: slugNoSlash },
+                        params: { slug },
                         locale: 'ru',
                     },
                     {
-                        params: { slug: slugNoSlash },
+                        params: { slug },
                         locale: 'en',
                     },
                 ]
-            }, []),
+            }),
         fallback: false,
     }
 }
