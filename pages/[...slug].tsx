@@ -6,8 +6,10 @@ import { getPageBySlug, getPages } from '@/api'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import { Image } from '@/components/Image'
+import type { ImageProps } from '@/components/Image'
 import { UnitHighlight } from '@/components/UnitHighlight'
 import { ImageSet } from '@/components/ImageSet'
+import type { ImageSetProps } from '@/components/ImageSet'
 import { WideBlock } from '@/components/WideBlock'
 import { HeterotopiaTitle } from '@/app/heterotopia/HeterotopiaTitle'
 import { HeterotopiaHighlight } from '@/app/heterotopia/HeterotopiaHighlight'
@@ -22,10 +24,10 @@ const DatavizStage = dynamic(import('@/app/oymyakon/DatavizStage'), { ssr: false
 const Carousel = dynamic(() => import('@/components/Carousel').then(x => x.Carousel))
 
 const mdxComponents = {
-    Image: props => (
+    Image: (props: ImageProps) => (
         <Image {...props} style={{ marginBottom: '2em' }} />
     ),
-    ImageSet: props => (
+    ImageSet: (props: ImageSetProps) => (
         <ImageSet {...props} style={{ marginBottom: '2em' }} />
     ),
     Carousel,
