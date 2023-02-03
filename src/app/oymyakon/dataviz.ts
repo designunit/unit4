@@ -20,9 +20,10 @@ export function collect(transitions: Array<[number, string[]]>): INivoLink[] {
             target: link.target,
             value: 0,
         }
-        const value = stored.value + link.value
+        const value = stored!.value + link.value
         acc.set(link.key, {
-            ...stored,
+            source: stored!.source,
+            target: stored!.target,
             value,
         })
         return acc
