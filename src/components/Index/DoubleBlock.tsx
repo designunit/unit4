@@ -1,6 +1,12 @@
 import s from './doubleBlock.module.css'
 
-export const DoubleBlock = ({ left, right, ...props }) => {
+export type DoubleBlockProps = {
+    left: React.ReactNode[]
+    right: React.ReactNode
+}
+
+// TODO: shitty
+export const DoubleBlock: React.FC<DoubleBlockProps> = ({ left, right, ...props }) => {
     return (
         <div
             className={s.container}
@@ -10,7 +16,7 @@ export const DoubleBlock = ({ left, right, ...props }) => {
                 display: 'flex',
                 flexFlow: 'column',
             }}>
-                {left.map((x,i) => (
+                {left.map((x, i) => (
                     <li key={i}>
                         {x}
                     </li>
