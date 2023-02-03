@@ -31,9 +31,9 @@ export async function getPages() {
 
 async function getFilesByPattern(pattern: string, options: any) {
     return new Promise<string[]>((resolve, reject) => {
-        glob(pattern, options, function(er, files: string[]) {
-            if (er) {
-                return reject(er)
+        glob(pattern, options, function(err, files: string[]) {
+            if (err) {
+                return reject(err)
             }
 
             resolve(files)
