@@ -67,6 +67,12 @@
                 "prefer": "type-imports"
             }
         ],
+        "@typescript-eslint/explicit-function-return-type": [
+            "warn",
+            {
+                "allowExpressions": true
+            }
+        ],
         "import/no-restricted-paths": [
             "error",
             {
