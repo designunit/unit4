@@ -74,7 +74,7 @@ export const UnitHighlight: React.FC<UnitHighlightProps> = ({ size = 'default', 
                         <span className={'link'}>
                             <a
                                 href={x.href}
-                                target={x.newTab ? '_blank' : null} rel="noreferrer"
+                                target={x.newTab ? '_blank' : undefined} rel="noreferrer"
                             >
                                 {x.text}
                             </a>
