@@ -116,7 +116,7 @@ const Page: NextPage = () => {
             </Title>
 
             <GalleryPartners>
-                {items.map((x: any, i: number) => (
+                {items.map((x, i) => (
                     <GalleryPartnersItem
                         key={x.src}
                         src={resizeImage(x.src, { w: 600, h: 600 })}
