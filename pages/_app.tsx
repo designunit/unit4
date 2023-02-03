@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     // scroll page to top on path change
     useEffect(() => {
         if (document) {
-            document.querySelector('body').scrollTo(0, 0)
+            document.querySelector('body')!.scrollTo(0, 0)
         }
     }, [router.asPath])
 
