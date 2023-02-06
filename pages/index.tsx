@@ -20,8 +20,12 @@ type ProjectItem = {
 
 const projects: Partial<ProjectItem>[] = [
     {
+        href: '/shvl-spb',
+        size: 2,
+    },
+    {
         href: '/skysoul',
-        size: null,
+        size: 2,
     },
     {
         href: '/mesto',
