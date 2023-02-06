@@ -15,7 +15,7 @@ type ProjectItem = {
     href: string
     caption?: string
     tags: string[]
-    size?: CardSize | null
+    size?: CardSize
 }
 
 const projects: Partial<ProjectItem>[] = [
