@@ -1,6 +1,6 @@
-import * as React from 'react'
+import { useRef } from 'react'
 
-export interface IUnitHighlightProps {
+export type UnitHighlightProps = {
     style?: React.CSSProperties
     size?: 'default' | 'small'
     items: Array<{
@@ -11,9 +11,9 @@ export interface IUnitHighlightProps {
     }>
 }
 
-export const UnitHighlight: React.FC<IUnitHighlightProps> = ({ size = 'default', ...props }) => {
-    const dateFormatterRef = React.useRef(new Intl.DateTimeFormat('ru-RU'))
-    const fontSizeRef = React.useRef({
+export const UnitHighlight: React.FC<UnitHighlightProps> = ({ size = 'default', ...props }) => {
+    const dateFormatterRef = useRef(new Intl.DateTimeFormat('ru-RU'))
+    const fontSizeRef = useRef({
         default: 'var(--font-normal-size)',
         small: 'var(--font-second-size)',
     })
@@ -74,7 +74,7 @@ export const UnitHighlight: React.FC<IUnitHighlightProps> = ({ size = 'default',
                         <span className={'link'}>
                             <a
                                 href={x.href}
-                                target={x.newTab ? '_blank' : null} rel="noreferrer"
+                                target={x.newTab ? '_blank' : undefined} rel="noreferrer"
                             >
                                 {x.text}
                             </a>

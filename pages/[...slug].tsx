@@ -6,8 +6,10 @@ import { getPageBySlug, getPages } from '@/api'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import { Image } from '@/components/Image'
+import type { ImageProps } from '@/components/Image'
 import { UnitHighlight } from '@/components/UnitHighlight'
 import { ImageSet } from '@/components/ImageSet'
+import type { ImageSetProps } from '@/components/ImageSet'
 import { WideBlock } from '@/components/WideBlock'
 import { HeterotopiaTitle } from '@/app/heterotopia/HeterotopiaTitle'
 import { HeterotopiaHighlight } from '@/app/heterotopia/HeterotopiaHighlight'
@@ -23,10 +25,10 @@ const DatavizStage = dynamic(import('@/app/oymyakon/DatavizStage'), { ssr: false
 const Carousel = dynamic(() => import('@/components/Carousel').then(x => x.Carousel))
 
 const mdxComponents = {
-    Image: props => (
+    Image: (props: ImageProps) => (
         <Image {...props} style={{ marginBottom: '2em' }} alt={props.alt ?? 'project image'} />
     ),
-    ImageSet: props => (
+    ImageSet: (props: ImageSetProps) => (
         <ImageSet {...props} style={{ marginBottom: '2em' }} />
     ),
     Carousel,
@@ -57,17 +59,22 @@ const Page: NextPage<Props> = props => {
     return (
         <>
             <NextSeo
-                title={props.title}
+                title={props.title ?? undefined}
                 description={props.excerpt}
                 openGraph={{
-                    title: props.title,
+                    title: props.title ?? undefined,
                     description: props.excerpt,
                     url: `https://unit4.io${props.slug}`,
-                    images: [
+                    images: !props.cover ? [] : [
                         {
                             url: props.cover,
+                            type: 'image/jpeg',
                         },
                     ],
+                }}
+                // telegram will show big image with this option
+                twitter={{
+                    cardType: 'summary_large_image',
                 }}
             />
 
@@ -115,30 +122,32 @@ export const getStaticProps: GetStaticProps<Props> = async ctx => {
         props: {
             ...def,
             source,
-            contentLocale,
+            contentLocale: contentLocale!,
         },
     }
 }
 
-export const getStaticPaths: GetStaticPaths = async ctx => {
+export const getStaticPaths: GetStaticPaths = async () => {
     const pages = await getPages()
-
     return {
         paths: pages
-            .reduce((acc, { slug, locale }) => {
-                const slugNoSlash = slug.split('/').slice(1)
+            .map(({ slug }) => {
+                // trim beginning slash
+                // /path/to/page -> path/to/page
+                return slug.split('/').slice(1)
+            })
+            .flatMap(slug => {
                 return [
-                    ...acc,
                     {
-                        params: { slug: slugNoSlash },
+                        params: { slug },
                         locale: 'ru',
                     },
                     {
-                        params: { slug: slugNoSlash },
+                        params: { slug },
                         locale: 'en',
                     },
                 ]
-            }, []),
+            }),
         fallback: false,
     }
 }

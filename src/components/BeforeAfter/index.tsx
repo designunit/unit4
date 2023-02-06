@@ -1,6 +1,11 @@
 import ReactCompareImage from 'react-compare-image'
 
-export const BeforeAfter = ({ before, after, ...props }) => {
+export type BeforeAfterProps = {
+    before: string
+    after: string
+}
+
+export const BeforeAfter: React.FC<BeforeAfterProps> = ({ before, after, ...props }) => {
     return (
         <ReactCompareImage
             {...props}
