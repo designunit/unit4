@@ -15,10 +15,14 @@ type ProjectItem = {
     href: string
     caption?: string
     tags: string[]
-    size?: CardSize
+    size?: CardSize | null
 }
 
 const projects: Partial<ProjectItem>[] = [
+    {
+        href: '/skysoul',
+        size: null,
+    },
     {
         href: '/mesto',
         size: 2,
