@@ -1,7 +1,8 @@
 import { Line } from '@/components/IndexLines/Line'
 import { RunningLine } from '@/components/RunningLine'
+import type { NextPage } from 'next'
 
-function Error({ statusCode }) {
+const Error: NextPage<{ statusCode: number | string }> = ({ statusCode }) => {
     return (
         <>
             <div style={{
@@ -35,11 +36,6 @@ function Error({ statusCode }) {
             </div>
         </>
     )
-}
-
-Error.getInitialProps = ({ res, err }) => {
-    const statusCode = res ? res.statusCode : err ? err.statusCode : 404
-    return { statusCode }
 }
 
 export default Error
