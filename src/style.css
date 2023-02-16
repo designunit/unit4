@@ -208,6 +208,10 @@ article iframe {
     max-width: 100%;
     margin-bottom: 2em;
     padding: var(--content-padding);
+
+    width: 100%;
+    aspect-ratio: 16/ 9;
+    border: none;
 }
 
 /* margin for custom mdx blocks like <Image> */
