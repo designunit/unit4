@@ -8,6 +8,7 @@ export interface IImageSetProps {
     style?: React.CSSProperties
     width?: number
     height?: number
+    alt?: string
 }
 
 export const ImageColumnsLayout: React.FC<IImageSetProps> = ({ style, items, span, width, height = width, ...props }) => (
@@ -28,6 +29,7 @@ export const ImageColumnsLayout: React.FC<IImageSetProps> = ({ style, items, spa
                     src={x}
                     width={width}
                     height={height}
+                    alt={props.alt ?? 'image in set of images'}
                 />
             ))}
         </div>

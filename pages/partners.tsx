@@ -106,6 +106,14 @@ const items = [
         src: '/static/partners/kinglab.png',
         href: 'https://kinglab.com/',
     },
+    {
+        src: '/static/partners/sol.png',
+        href: 'https://soliletsk.ru/',
+    },
+    {
+        src: '/static/partners/institut.png',
+        href: 'https://genplanmos.ru/',
+    },
 ]
 
 const Page: NextPage = () => {

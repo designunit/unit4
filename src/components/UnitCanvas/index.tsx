@@ -89,10 +89,13 @@ export default class UnitCanvas extends React.Component<IUnitCanvasProps, {}> {
                     ref={this.onRef}
                 />
 
-                <img
-                    ref={this.imgRef}
-                    src={'/static/logo_full.png'}
-                />
+                <picture>
+                    <img
+                        ref={this.imgRef}
+                        src={'/static/logo_full.png'}
+                        alt='design unit logo'
+                    />
+                </picture>
             </div>
         )
     }

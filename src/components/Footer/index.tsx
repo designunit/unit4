@@ -31,7 +31,7 @@ export const Footer: React.FC = () => (
             }
         `}</style>
 
-        <section>© 2017-2022 design unit 4</section>
+        <section>© 2017-2023 design : : unit 4</section>
         <section className={'right'}>
             <a
                 href='mailto:inbox@unit4.io'

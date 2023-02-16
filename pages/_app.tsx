@@ -8,6 +8,7 @@ import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
 import '@/i18n'
+import { NextSeo } from 'next-seo'
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter()
@@ -35,6 +36,21 @@ function MyApp({ Component, pageProps }: AppProps) {
                     account={'47295549'}
                 />
             </Head>
+
+            <NextSeo
+                title={'design : : unit 4'}
+                description={''}
+                openGraph={{
+                    title: 'design : : unit 4',
+                    description: '',
+                    url: `https://unit4.io${router.asPath}`,
+                    images: [
+                        {
+                            url: '/static/logo_unit4.jpg',
+                        },
+                    ],
+                }}
+            />
 
             <DefaultLayout
                 showHeader={true}
