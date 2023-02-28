@@ -10,7 +10,7 @@ import { useEffect } from 'react'
 import '@/i18n'
 import { NextSeo } from 'next-seo'
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     const router = useRouter()
     const { i18n } = useTranslation()
 
