@@ -1,4 +1,3 @@
-import cx from 'classnames'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
@@ -20,7 +19,7 @@ export const LangButton: React.FC<LangButtonProps> = props => {
                     <span className={s.button} key={locale}>{t(locale)}</span>
                 ) : (
                     <Link key={locale} href={router.asPath} locale={locale}>
-                        <a className={cx(s.button, s.active)}>
+                        <a className={`${s.button} ${s.active}`}>
                             {t(locale)}
                         </a>
                     </Link>

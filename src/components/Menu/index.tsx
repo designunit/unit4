@@ -1,5 +1,4 @@
-import className from 'classnames'
-import * as React from 'react'
+import { useState, useEffect } from 'react'
 import Media from 'react-media'
 import { Logo } from '../Logo'
 import { MenuItem } from './MenuItem'
@@ -14,9 +13,9 @@ export interface IMenuProps {
 }
 
 export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
-    const [mobileOpen, setMobileOpen] = React.useState(false)
+    const [mobileOpen, setMobileOpen] = useState(false)
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (!document) {
             return
         }
@@ -57,7 +56,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                                 left: mobileOpen ? 0 : '100vw',
                             }}
                         >
-                            <menu className={className(s.menu, s.mobileMenu)}>
+                            <menu className={`${s.menu} ${s.mobileMenu}`}>
                                 {items.map((x, i) => (
                                     <MenuItem
                                         key={i}
@@ -87,7 +86,7 @@ export const Menu: React.FC<IMenuProps> = ({ items, vertical = false }) => {
                         </div>
                     </>
                 ) : (
-                    <menu className={className(s.menu, vertical && s.vertical)}>
+                    <menu className={`${s.menu} ${vertical ? s.vertical : ''}`}>
                         {items.map((x, i) => (
                             <MenuItem
                                 key={i}

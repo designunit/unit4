@@ -1,6 +1,5 @@
 import s from './index.module.css'
 import Head from 'next/head'
-import cx from 'classnames'
 import { createElement } from 'react'
 
 export type TitleProps = {
@@ -22,7 +21,7 @@ export const Title: React.FC<TitleProps> = ({ as = 'h1', caption, children, writ
 
             {title}
 
-            <p className={cx(s['title-caption'])}>
+            <p className={s.caption}>
                 {caption}
             </p>
         </div>

@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.title-caption {
+.caption {
     margin: 0;
     line-height: var(--font-second-size);
 }

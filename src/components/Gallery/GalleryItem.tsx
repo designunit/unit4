@@ -1,4 +1,3 @@
-import cx from 'classnames'
 import Link from 'next/link'
 import s from './GalleryItem.module.css'
 import Image from 'next/image'
@@ -25,7 +24,7 @@ export type GalleryItemProps = {
 export const GalleryItem: React.FC<GalleryItemProps> = ({ href, size, tags, title, ...props }) => {
     return (
         <Link href={href}>
-            <a className={cx(s.container, sizeClassNameMap[size])}>
+            <a className={`${s.container} ${sizeClassNameMap[size]}`}>
                 <div
                     className={s.image}
                 >

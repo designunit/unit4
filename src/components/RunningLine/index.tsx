@@ -1,4 +1,3 @@
-import classNames from 'classnames'
 import s from './runningLine.module.css'
 
 export type RunningLineProps = {
@@ -10,13 +9,16 @@ export type RunningLineProps = {
 
 export const RunningLine: React.FC<RunningLineProps> = ({ children, style, direction = 'left', animationDuration = '20s' }) => {
     return (
-        <div className={classNames(s.container, direction == 'left' && s.left, direction == 'right' && s.right)} style={style} >
+        <div
+            className={`${s.container} ${direction == 'left' ? s.left : s.right}`}
+            style={style}
+        >
             <span style={{ animationDuration }}>
                 {children}
             </span>
             <span style={{ animationDuration }}>
                 {children}
             </span>
-        </div>
+        </div >
     )
 }
