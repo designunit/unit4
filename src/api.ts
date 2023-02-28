@@ -13,7 +13,7 @@ const defaultLocale: Lang = 'ru'
 
 const postsDirectory = join(process.cwd(), 'data')
 
-export async function getPages() {
+export async function getPages(): Promise<{path: string, slug: string, locale: string}[]> {
     const pattern = join(process.cwd(), 'data', '**/*.md?(x)')
     const files = await getFilesByPattern(pattern, {})
 
@@ -29,7 +29,7 @@ export async function getPages() {
     })
 }
 
-async function getFilesByPattern(pattern: string, options: any) {
+async function getFilesByPattern(pattern: string, options: any): Promise<string[]> {
     return new Promise<string[]>((resolve, reject) => {
         glob(pattern, options, function(err, files: string[]) {
             if (err) {
@@ -61,7 +61,7 @@ function getLocaleFromPath(path: string): string {
     return m[1]
 }
 
-export async function getPageBySlug(lang: Lang | undefined, slug: string) {
+export async function getPageBySlug(lang: Lang | undefined, slug: string): Promise<PageDefinition | null> {
     let path = join(postsDirectory, `${slug}.${lang}.mdx`)
     let page = await getPage(path)
     
@@ -110,7 +110,7 @@ async function getPage(path: string): Promise<PageDefinition | null> {
     }
 }
 
-function getTitle(data: string) {
+function getTitle(data: string): string | null  {
     const rows = data.split('\n')
     const p = /#\s?(.*)/
     for (const row of rows) {
