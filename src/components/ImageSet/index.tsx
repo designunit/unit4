@@ -1,4 +1,5 @@
-import { constant, times } from 'lodash'
+import times from 'lodash/times'
+import constant from 'lodash/constant'
 import { ImageColumnsLayout } from './ImageColumnsLayout'
 
 export interface IImageSetLayout {

@@ -1,4 +1,6 @@
-import { initial, tail, zip } from 'lodash'
+import initial from 'lodash/initial'
+import tail from 'lodash/tail'
+import zip from 'lodash/zip'
 
 export function moveItemByIndex<T>(items: T[], index: number, direction: number): T[] {
     const item = items[index]

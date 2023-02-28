@@ -1,4 +1,4 @@
-import { flatMap } from 'lodash'
+import flatMap from 'lodash/flatMap'
 import type { INivoLink } from '@/components/Dataviz/Sankey'
 import { arrayToDomains } from '@/lib/array'
 
