@@ -1,27 +1,28 @@
 import { Title } from '@/components/Title'
-import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { useRouter } from 'next/router'
-import type { PageDefinition } from '@/types'
 import { getPageBySlug, getPages } from '@/api'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import { Image } from '@/components/Image'
-import type { ImageProps } from '@/components/Image'
 import { UnitHighlight } from '@/components/UnitHighlight'
 import { ImageSet } from '@/components/ImageSet'
-import type { ImageSetProps } from '@/components/ImageSet'
 import { WideBlock } from '@/components/WideBlock'
-import { HeterotopiaTitle } from '@/app/heterotopia/HeterotopiaTitle'
 import { HeterotopiaHighlight } from '@/app/heterotopia/HeterotopiaHighlight'
 import { NextSeo } from 'next-seo'
 import { Flex } from '@/components/Flex'
 import { BlackHighlight } from '@/components/BlackHighlight'
 import { BeforeAfter } from '@/components/BeforeAfter'
+
 import dynamic from 'next/dynamic'
 
-const DatavizStage = dynamic(import('@/app/oymyakon/DatavizStage'), { ssr: false })
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import type { PageDefinition } from '@/types'
+import type { ImageProps } from '@/components/Image'
+import type { ImageSetProps } from '@/components/ImageSet'
 
+const DatavizStage = dynamic(import('@/app/oymyakon/DatavizStage'), { ssr: false })
 const Carousel = dynamic(() => import('@/components/Carousel').then(x => x.Carousel))
+const HeterotopiaTitle = dynamic(() => import('@/app/heterotopia/HeterotopiaTitle').then(x => x.HeterotopiaTitle))
 
 const mdxComponents = {
     Image: (props: ImageProps) => (
