@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-function getMetrika(account: string) {
+function getMetrika(account: string): string {
     return `
         <!-- Yandex.Metrika counter -->
         (function (d, w, c) {
