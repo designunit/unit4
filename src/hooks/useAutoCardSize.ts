@@ -1,7 +1,9 @@
 import { useCallback } from 'react'
 import { CardSize } from '@/types'
 
-export function useAutoCardSize(module: number) {
+export type AutoCardSizeFunction = (i: number) => CardSize
+
+export function useAutoCardSize(module: number): AutoCardSizeFunction {
     const fn = useCallback((i: number): CardSize => {
         const indexCycled = i % module
         switch (indexCycled) {
