@@ -25,6 +25,13 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         }
     }, [router.asPath])
 
+    const themeColor: string | undefined = pageProps.themeColor ?? 'white'
+    useEffect(() => {
+        if (themeColor) {
+            document.documentElement.style.setProperty('--color-background', themeColor)
+        }
+    }, [themeColor])
+
     return (
         <>
             <Head>
@@ -35,6 +42,10 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
                 <YMetrika
                     account={'47295549'}
                 />
+
+                {!themeColor ? null : (
+                    <meta name="theme-color" content={themeColor} />
+                )}
             </Head>
 
             <NextSeo

@@ -9,6 +9,7 @@ export type PageDefinition = {
     title: string | null
     date: string | null
     slug: string
+    themeColor?: string
     [name: string]: any
 }
 
