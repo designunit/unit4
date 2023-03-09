@@ -15,7 +15,7 @@ export const Image: React.FC<ImageProps> = ({ width = 16, height = 10, ...props 
         >
             <NextImage
                 src={props.src}
-                alt={props.alt}
+                alt={props.alt ?? 'one of image'} // TODO: use actual alt
                 width={width}
                 height={height}
                 layout={'responsive'}

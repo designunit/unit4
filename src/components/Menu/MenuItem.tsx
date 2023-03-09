@@ -55,8 +55,7 @@ export const MenuItem: React.FC<IMenuItemProps> = ({ href, text, onClick }) => {
                 }
             }
         `}</style>
-
-            <LinkActive href={href} passHref>
+            <LinkActive href={href} passHref legacyBehavior={true}>
                 {active => active
                     ? (
                         <span className='link-body active'

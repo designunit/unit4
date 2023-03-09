@@ -103,29 +103,19 @@ const table = [
     },
 ].reverse()
 
-export const Table = () => (
+export const Table: React.FC = () => (
     <div
         className={s.container}
     >
         {table.map((x, i) => (
             <React.Fragment key={i}>
-                <Link
-                    href={x.href}
-                >
-                    <a
-                        className={s.name}
-                    >
-                        {x.name}
-                    </a>
+                <Link href={x.href} className={s.name}>
+                    {x.name}
                 </Link>
-                <div
-                    className={s.status}
-                >
+                <div className={s.status}>
                     {x.status}
                 </div>
-                <div
-                    className={`${s.mobileHidden} ${s.year}`}
-                >
+                <div className={`${s.mobileHidden} ${s.year}`}>
                     {x.year}
                 </div>
                 <div

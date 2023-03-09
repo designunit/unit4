@@ -11,16 +11,14 @@ export interface IGalleryItemProps {
 }
 
 export const GalleryPartnersItem: React.FC<IGalleryItemProps> = ({ href, src, ...props }) => (
-    <Link href={href}>
-        <a className={s.container}>
-            <AspectRatio ratio={1}>
-                <Image
-                    src={src}
-                    alt={''}
-                    layout='fill'
-                    objectFit='contain'
-                />
-            </AspectRatio>
-        </a>
+    <Link href={href} className={s.container}>
+        <AspectRatio ratio={1}>
+            <Image
+                src={src}
+                alt={''}
+                layout='fill'
+                objectFit='contain'
+            />
+        </AspectRatio>
     </Link>
 )

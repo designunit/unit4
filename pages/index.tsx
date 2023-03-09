@@ -13,7 +13,7 @@ type ProjectItem = {
     coverSrc: string
     title: string
     href: string
-    caption?: string
+    caption: string
     tags: string[]
     size?: CardSize
 }
@@ -222,6 +222,7 @@ const Page: NextPage<IPageProps> = ({ projects }) => {
                     <GalleryItem
                         key={x.href}
                         src={x.coverSrc}
+                        alt={x.caption}
                         title={x.title}
                         tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
                         href={x.href}
@@ -248,10 +249,12 @@ export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
             ...(page?.year ? [page?.year] : []),
             ...page?.tags ?? [],
         ] as string[]
+        const caption = '' // TODO: use actual data here
 
         return {
             href: project.href!,
             size: project.size,
+            caption,
             coverSrc,
             title,
             tags,
