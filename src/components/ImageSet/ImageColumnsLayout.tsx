@@ -1,37 +1,38 @@
 import s from './image-set.module.css'
 
-import { Image } from '@/components/Image'
+import Image from 'next/image'
 
-export interface IImageSetProps {
-    items: string[]
+export type ImageColumnsLayoutProps = {
+    items: { src: string, alt: string }[]
     span: number[]
     style?: React.CSSProperties
     width?: number
     height?: number
-    alt?: string
 }
 
-export const ImageColumnsLayout: React.FC<IImageSetProps> = ({ style, items, span, width, height = width, ...props }) => (
-    <>
-        <div
-            className={s.container}
-            style={{
-                gap: 16,
-                ...style,
-            }}
-        >
-            {items.map((x, i) => (
-                <Image
-                    key={i}
-                    style={{
-                        gridColumnEnd: `span ${span[i]}`,
-                    }}
-                    src={x}
-                    width={width}
-                    height={height}
-                    alt={props.alt ?? 'image in set of images'}
-                />
-            ))}
-        </div>
-    </>
+export const ImageColumnsLayout: React.FC<ImageColumnsLayoutProps> = ({ style, items, span, width, height }) => (
+    <div
+        className={s.container}
+        style={{
+            gap: 16,
+            ...style,
+        }}
+    >
+        {items.map((x, i) => (
+            <Image
+                key={i}
+                src={x.src}
+                alt={x.alt}
+                width={width}
+                height={height}
+                style={{
+                    gridColumnEnd: `span ${span[i]}`,
+
+                    objectFit: 'cover',
+                    width: '100%',
+                    height: 'auto',
+                }}
+            />
+        ))}
+    </div>
 )

@@ -8,14 +8,7 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
 
-export type CarouselProps = {
-    children: React.ReactNode
-    size?: number
-    images: ImageProps[]
-    style?: React.CSSProperties
-}
-
-const Arrows = () => {
+const Arrows: React.FC = () => {
     const swiper = useSwiper()
     return (
         <>
@@ -29,6 +22,13 @@ const Arrows = () => {
             />
         </>
     )
+}
+
+export type CarouselProps = {
+    children: React.ReactNode
+    size?: number
+    images: ImageProps[]
+    style?: React.CSSProperties
 }
 
 export const Carousel: React.FC<CarouselProps> = ({ children }) => {
