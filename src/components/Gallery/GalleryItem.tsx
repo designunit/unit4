@@ -14,7 +14,7 @@ const sizeClassNameMap: Record<CardSize, string> = {
 
 export type GalleryItemProps = {
     src: string
-    alt?: string
+    alt: string
     href: string
     title: string | React.ReactNode
     tags?: string[]
@@ -23,32 +23,29 @@ export type GalleryItemProps = {
 
 export const GalleryItem: React.FC<GalleryItemProps> = ({ href, size, tags, title, ...props }) => {
     return (
-        <Link href={href}>
-            <a className={`${s.container} ${sizeClassNameMap[size]}`}>
-                <div
-                    className={s.image}
-                >
-                    <Image
-                        src={props.src}
-                        alt={props.alt}
-                        layout='fill'
-                        objectFit='cover'
-                        className={s.img}
-                    />
-                </div>
-                <div className={s.label}>
+        <Link href={href} className={`${s.container} ${sizeClassNameMap[size]}`}>
+            <div className={s.image}>
+                <Image
+                    src={props.src}
+                    alt={props.alt}
+                    layout='fill'
+                    objectFit='cover'
+                    className={s.img}
+                />
+            </div>
+            <div className={s.label}>
+                <span>
                     <span>
-                        <span>
-                            {title}
-                        </span>
+                        {title}
                     </span>
-                    {!tags ? null : (
-                        <Tags
-                            items={tags}
-                        />
-                    )}
-                </div>
-            </a>
+                </span>
+                {!tags ? null : (
+                    <Tags
+                        items={tags}
+                    />
+                )}
+            </div>
         </Link>
     )
 }
+

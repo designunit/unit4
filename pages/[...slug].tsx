@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { getPageBySlug, getPages } from '@/api'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
-import { Image } from '@/components/Image'
+import Image from 'next/image'
 import { UnitHighlight } from '@/components/UnitHighlight'
 import { ImageSet } from '@/components/ImageSet'
 import { WideBlock } from '@/components/WideBlock'
@@ -17,7 +17,7 @@ import dynamic from 'next/dynamic'
 
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import type { PageDefinition } from '@/types'
-import type { ImageProps } from '@/components/Image'
+import type { ImageProps } from 'next/image'
 import type { ImageSetProps } from '@/components/ImageSet'
 
 const DatavizStage = dynamic(import('@/app/oymyakon/DatavizStage'), { ssr: false })
@@ -26,10 +26,24 @@ const HeterotopiaTitle = dynamic(() => import('@/app/heterotopia/HeterotopiaTitl
 
 const mdxComponents = {
     Image: (props: ImageProps) => (
-        <Image {...props} style={{ marginBottom: '2em' }} alt={props.alt ?? 'project image'} />
+        <Image {...props}
+            style={{
+                marginBottom: '2em',
+                objectFit: 'cover',
+                width: '100%',
+                height: 'auto',
+            }}
+            alt={props.alt ?? 'project'} // TODO: do something with optional alt
+            width={props.width ?? 1920}
+            height={props.height ?? 1200}
+        />
     ),
     ImageSet: (props: ImageSetProps) => (
-        <ImageSet {...props} style={{ marginBottom: '2em' }} />
+        <ImageSet {...props}
+            style={{ marginBottom: '2em' }}
+            width={props.width ?? 1920}
+            height={props.height ?? 1200}
+        />
     ),
     Carousel,
     UnitHighlight,

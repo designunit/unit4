@@ -6,7 +6,7 @@ export interface IImageItem {
     src: string
     width: number
     height: number
-    alt?: string
+    alt: string
     buttonText?: string
 }
 
