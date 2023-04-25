@@ -26,17 +26,19 @@ const HeterotopiaTitle = dynamic(() => import('@/app/heterotopia/HeterotopiaTitl
 
 const mdxComponents = {
     Image: (props: ImageProps) => (
-        <Image {...props}
-            style={{
-                marginBottom: '2em',
-                objectFit: 'cover',
-                width: '100%',
-                height: 'auto',
-            }}
-            alt={props.alt ?? 'project'} // TODO: do something with optional alt
-            width={props.width ?? 1920}
-            height={props.height ?? 1200}
-        />
+        <div>
+            <Image {...props}
+                style={{
+                    marginBottom: '2em',
+                    objectFit: 'cover',
+                    width: '100%',
+                    height: 'auto',
+                }}
+                alt={props.alt ?? 'project'} // TODO: do something with optional alt
+                width={props.width ?? 1920}
+                height={props.height ?? 1200}
+            />
+        </div>
     ),
     ImageSet: (props: ImageSetProps) => (
         <ImageSet {...props}
