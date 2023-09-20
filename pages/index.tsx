@@ -20,6 +20,26 @@ type ProjectItem = {
 
 const projects: Partial<ProjectItem>[] = [
     {
+        href: '/nefteyugansk',
+        size: 4,
+    },
+    {
+        href: '/verhoturie',
+        size: 2,
+    },
+    {
+        href: '/verhnyayatura',
+        size: 2,
+    },
+    {
+        href: '/volokolamsk-2',
+        size: 2,
+    },
+    {
+        href: '/yakutsk',
+        size: 1,
+    },
+    {
         href: '/photostream',
         size: 4,
     },
