@@ -235,8 +235,6 @@ const Page: NextPage<IPageProps> = ({ projects }) => {
 
     return (
         <>
-            <IndexLines />
-
             <Gallery>
                 {projects.map((x, i) => (
                     <GalleryItem
