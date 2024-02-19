@@ -5,9 +5,6 @@ import { useTranslation } from 'react-i18next'
 import { GalleryItem } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
 import { useAutoCardSize } from '@/hooks/useAutoCardSize'
-import dynamic from 'next/dynamic'
-
-const IndexLines = dynamic(import( '@/components/IndexLines').then(m => m.IndexLines))
 
 type ProjectItem = {
     coverSrc: string
