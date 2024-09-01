@@ -1,8 +1,12 @@
-.git
+Dockerfile
 .dockerignore
-.vscode
-.next
 node_modules
-out
+npm-debug.log
 README.md
-*.tar
+.next
+!.next/static
+!.next/standalone
+.git
+
+*.py
+*.db

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    output: 'standalone',
     images: {
         deviceSizes: [320, 420, 768, 1024, 2000, 2800],
         domains: ['unitcdn.tmshv.com', 'unit4.io'],

@@ -10,7 +10,6 @@
         "build": "next build",
         "lint": "next lint",
         "format": "next lint -- --fix",
-        "start": "NODE_ENV=production node build/server/server.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
