@@ -3,7 +3,7 @@ const nextConfig = {
     output: 'standalone',
     images: {
         deviceSizes: [320, 420, 768, 1024, 2000, 2800],
-        domains: ['unitcdn.tmshv.com', 'unit4.io'],
+        domains: ['unitcdn.tmshv.com', 'unit4.io', 'designunit-unit4-45de.twc1.net'],
     },
     redirects: async () => {
         const rewrites = [
