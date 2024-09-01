@@ -28,10 +28,6 @@ RUN npm run build
 FROM base AS runner
 WORKDIR /app
 
-# sharp is required to be installed in standalone mode for the image optimization to function correctly.
-# Read more at: https://nextjs.org/docs/messages/sharp-missing-in-production
-RUN npm install sharp
-
 ENV NODE_ENV=production
 # Uncomment the following line in case you want to disable telemetry during runtime.
 ENV NEXT_TELEMETRY_DISABLED=1
