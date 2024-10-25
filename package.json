@@ -25,8 +25,8 @@
     "homepage": "https://github.com/destroytheimage/designunit4#readme",
     "dependencies": {
         "@babel/helper-call-delegate": "^7.12.13",
-        "@mdi/js": "^6.4.95",
-        "@mdi/react": "^1.4.0",
+        "@mdi/js": "^7.4.47",
+        "@mdi/react": "^1.6.1",
         "@nivo/core": "^0.80.0",
         "@nivo/sankey": "^0.80.0",
         "glob": "^11.0.0",
