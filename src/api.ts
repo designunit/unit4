@@ -1,7 +1,7 @@
 import { promisify } from 'util'
 import * as fs from 'fs'
 import { join, relative } from 'path'
-import glob from 'glob'
+import { glob } from 'glob'
 import matter from 'gray-matter'
 import { parse } from 'date-fns'
 import type { PageDefinition } from '@/types'
@@ -15,7 +15,7 @@ const postsDirectory = join(process.cwd(), 'data')
 
 export async function getPages(): Promise<{path: string, slug: string, locale: string}[]> {
     const pattern = join(process.cwd(), 'data', '**/*.md?(x)')
-    const files = await getFilesByPattern(pattern, {})
+    const files = await glob(pattern, {})
 
     return files.map(path => {
         const slug = getSlugFromPath(path)
@@ -26,18 +26,6 @@ export async function getPages(): Promise<{path: string, slug: string, locale: s
             slug,
             locale,
         }
-    })
-}
-
-async function getFilesByPattern(pattern: string, options: any): Promise<string[]> {
-    return new Promise<string[]>((resolve, reject) => {
-        glob(pattern, options, function(err, files: string[]) {
-            if (err) {
-                return reject(err)
-            }
-
-            resolve(files)
-        })
     })
 }
 
