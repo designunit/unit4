@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import s from './GalleryItem.module.css'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import type { CardSize } from '@/types'
 import dynamic from 'next/dynamic'
 

@@ -1,5 +1,5 @@
 import { Button } from '../Button'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { useCallback, useMemo, useState } from 'react'
 
 export interface IImageItem {

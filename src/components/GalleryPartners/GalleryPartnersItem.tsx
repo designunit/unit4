@@ -2,7 +2,7 @@ import Link from 'next/link'
 import * as React from 'react'
 import s from './GalleryPartnersItem.module.css'
 import { AspectRatio } from 'react-aspect-ratio'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 export interface IGalleryItemProps {
     src: string
