@@ -1,6 +1,6 @@
 import s from './image-set.module.css'
 
-import Image from "next/legacy/image"
+import Image from 'next/legacy/image'
 
 export type ImageColumnsLayoutProps = {
     items: { src: string, alt: string }[]
