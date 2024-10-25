@@ -64,7 +64,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
             />
 
             <DefaultLayout
-                showHeader={true}
                 center={true}
                 title={'design unit4'}
             >
