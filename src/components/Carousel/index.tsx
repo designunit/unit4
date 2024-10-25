@@ -48,6 +48,6 @@ export const Carousel: React.FC<CarouselProps> = ({ children }) => {
                     {child}
                 </SwiperSlide>
             ))}
-        </Swiper >
+        </Swiper>
     )
 }
