@@ -1,0 +1,25 @@
+.logo {
+    display: block;
+
+    width: 180px;
+    height: 36px;
+
+    --color-link: var(--color-background-opposite);
+    --color-logo: var(--color-text-opposite);
+}
+
+.logo:hover .cls0 {
+    --color-link: var(--link-color-active);
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.cls0 {
+    fill: var(--color-link);
+}
+
+.cls1 {
+    fill: var(--color-logo);
+}
