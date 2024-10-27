@@ -1,5 +1,5 @@
 import flatMap from 'lodash/flatMap'
-import type { INivoLink } from '@/components/Dataviz/Sankey'
+import type { INivoLink } from './Sankey'
 import { arrayToDomains } from '@/lib/array'
 
 export function collect(transitions: Array<[number, string[]]>): INivoLink[] {

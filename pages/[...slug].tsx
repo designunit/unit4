@@ -20,7 +20,7 @@ import type { PageDefinition } from '@/types'
 import type { ImageProps } from 'next/image'
 import type { ImageSetProps } from '@/components/ImageSet'
 
-const DatavizStage = dynamic(import('@/app/oymyakon/DatavizStage'), { ssr: false })
+const OymyakonSankey = dynamic(import('@/special/oymyakon/OymyakonSankey'), { ssr: false })
 const Carousel = dynamic(() => import('@/components/Carousel').then(x => x.Carousel))
 const HeterotopiaTitle = dynamic(() => import('@/app/heterotopia/HeterotopiaTitle').then(x => x.HeterotopiaTitle))
 
@@ -50,7 +50,7 @@ const mdxComponents = {
     Carousel,
     UnitHighlight,
     Title,
-    DatavizStage,
+    OymyakonSankey,
     WideBlock,
     HeterotopiaHighlight,
     HeterotopiaTitle,
