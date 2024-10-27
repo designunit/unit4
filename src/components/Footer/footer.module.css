@@ -6,20 +6,6 @@
     font-size: var(--font-second-size);
 }
 
-.footer a {
-    color: var(--color-light);
-}
-
-.footer a:hover {
-    color: var(--link-color-active);
-}
-
-.footer section {
-    display: flex;
-    color: var(--color-light);
-    flex-direction: column;
-}
-
-.footer section.right {
+.right {
     align-items: flex-end;
 }
