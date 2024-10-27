@@ -1,8 +1,7 @@
 import { GalleryPartners, Item } from '@/components/GalleryPartners'
-import { resizeImage } from '@/lib/image'
 import type { NextPage } from 'next'
 import React from 'react'
-import { Title } from '../src/components/Title'
+import { Title } from '@/components/Title'
 
 const items = [
     {
@@ -115,27 +114,25 @@ const items = [
     },
 ]
 
-const Page: NextPage = () => {
-    return (
-        <>
-            <Title>
-                С нами работают
-            </Title>
+const Page: NextPage = () => (
+    <>
+        <Title>
+            С нами работают
+        </Title>
 
-            <GalleryPartners style={{
-                marginBottom: 50,
-            }}>
-                {items.map((x, i) => (
-                    <Item
-                        key={x.src}
-                        src={resizeImage(x.src, { w: 600, h: 600 })}
-                        alt={''}
-                        href={x.href}
-                    />
-                ))}
-            </GalleryPartners>
-        </>
-    )
-}
+        <GalleryPartners style={{
+            marginBottom: 50,
+        }}>
+            {items.map((x, i) => (
+                <Item
+                    key={x.src}
+                    src={x.src}
+                    alt={''}
+                    href={x.href}
+                />
+            ))}
+        </GalleryPartners>
+    </>
+)
 
 export default Page
