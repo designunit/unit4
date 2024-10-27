@@ -129,6 +129,7 @@ const Page: NextPage = () => {
                     <Item
                         key={x.src}
                         src={resizeImage(x.src, { w: 600, h: 600 })}
+                        alt={''}
                         href={x.href}
                     />
                 ))}
