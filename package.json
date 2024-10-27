@@ -16,6 +16,9 @@
         "type": "git",
         "url": "git+https://github.com/destroytheimage/designunit4.git"
     },
+    "engines": {
+        "node": "22.x"
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
