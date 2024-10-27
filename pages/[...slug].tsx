@@ -7,7 +7,6 @@ import Image from 'next/image'
 import { UnitHighlight } from '@/components/UnitHighlight'
 import { ImageSet } from '@/components/ImageSet'
 import { WideBlock } from '@/components/WideBlock'
-import { HeterotopiaHighlight } from '@/app/heterotopia/HeterotopiaHighlight'
 import { NextSeo } from 'next-seo'
 import { Flex } from '@/components/Flex'
 import { BlackHighlight } from '@/components/BlackHighlight'
@@ -22,7 +21,8 @@ import type { ImageSetProps } from '@/components/ImageSet'
 
 const OymyakonSankey = dynamic(import('@/special/oymyakon/OymyakonSankey'), { ssr: false })
 const Carousel = dynamic(() => import('@/components/Carousel').then(x => x.Carousel))
-const HeterotopiaTitle = dynamic(() => import('@/app/heterotopia/HeterotopiaTitle').then(x => x.HeterotopiaTitle))
+const HeterotopiaTitle = dynamic(() => import('@/special/heterotopia/Title'), { ssr: false })
+const HeterotopiaHighlight = dynamic(() => import('@/special/heterotopia/Highlight'), { ssr: false })
 
 const mdxComponents = {
     Image: (props: ImageProps) => (

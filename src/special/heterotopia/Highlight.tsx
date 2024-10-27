@@ -1,8 +1,8 @@
-export type HeterotopiaHighlightProps = {
+export type HighlightProps = {
     children: React.ReactNode
 }
 
-export const HeterotopiaHighlight: React.FC<HeterotopiaHighlightProps> = props => (
+const Highlight: React.FC<HighlightProps> = ({ children }) => (
     <b>
         <style jsx>{`
             b {
@@ -13,6 +13,8 @@ export const HeterotopiaHighlight: React.FC<HeterotopiaHighlightProps> = props =
             }
         `}</style>
 
-        {props.children}
+        {children}
     </b>
 )
+
+export default Highlight

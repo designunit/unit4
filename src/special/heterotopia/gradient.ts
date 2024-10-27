@@ -1,4 +1,4 @@
-export function useHeterotopiaGradient(): string {
+export function createGradient(): string {
     const angle = 90
     let colors: Array<[number, string]> = [
         [Math.random(), '#ff00ff'],
