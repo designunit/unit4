@@ -56,7 +56,7 @@ const nextConfig = {
     i18n: {
         localeDetection: false,
         locales: ['ru', 'en'],
-        defaultLocale: 'ru'
+        defaultLocale: 'ru',
     },
 }
 
