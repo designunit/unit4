@@ -4,7 +4,9 @@ import Image from 'next/legacy/image'
 import type { CardSize } from '@/types'
 import dynamic from 'next/dynamic'
 
-const Tags = dynamic(import('./Tags').then(m => m.Tags))
+const Tags = dynamic(import('./Tags').then(m => m.Tags), {
+    ssr: false,
+})
 
 const sizeClassNameMap: Record<CardSize, string> = {
     1: s.col1,
