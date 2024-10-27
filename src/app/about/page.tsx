@@ -1,14 +1,12 @@
-import type { NextPage } from 'next'
 import { Title } from '@/components/Title'
-import React from 'react'
 import { Table } from '@/components/Index/Table'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
 import { RunningLine } from '@/components/RunningLine'
 import { Flex } from '@/components/Flex'
 import { Loud } from '@/components/Loud'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 
-const Page: NextPage = () => {
+const Page: React.FC = () => {
     const vertOffset = '6rem'
 
     return (
@@ -244,14 +242,4 @@ const Page: NextPage = () => {
     )
 }
 
-// export const getStaticProps: GetStaticProps = async () => {
-// export const setServerSideProps: GetServerSideProps = async () => {
-//     return {
-//         props: {
-//             namespacesRequired: ['common'],
-//         }
-//     }
-// }
-
-// export default withTranslation('common')(Page)
 export default Page
