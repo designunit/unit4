@@ -1,33 +1,50 @@
+import Image from 'next/image'
 import times from 'lodash/times'
 import constant from 'lodash/constant'
-import { ImageColumnsLayout } from './ImageColumnsLayout'
 
-export type ImageSetLayout = {
-    span: number[]
-}
+import s from './image-set.module.css'
 
 export type ImageSetProps = {
-    items: string[]
-    layout?: ImageSetLayout
+    items: string[] | {src: string, alt: string}[]
+    span?: number[]
     style?: React.CSSProperties
     width?: number
     height?: number
 }
 
-export const ImageSet: React.FC<ImageSetProps> = props => {
-    const length = props.items.length
-    const layout = props.layout as ImageSetLayout
-    const span = layout === undefined || layout.span === undefined
-        ? times(length, constant(24 / length))
-        : layout.span
+export const ImageSet: React.FC<ImageSetProps> = ({items, span, style, width, height}) => {
+    const length = items.length
+    const spans = span ?? times(length, constant(24 / length))
 
     return (
-        <ImageColumnsLayout
-            items={props.items.map(src => ({ src, alt: 'image' }))} // TODO: use real alt
-            span={span}
-            style={props.style}
-            width={props.width}
-            height={props.height}
-        />
+        <div
+            className={s.container}
+            style={{
+                gap: 16,
+                ...style,
+            }}
+        >
+            {items
+                .map(x => typeof x === 'object' ? x : {
+                    src: x,
+                    alt: x,
+                })
+                .map((x, i) => (
+                    <Image
+                        key={i}
+                        src={x.src}
+                        alt={x.alt}
+                        width={width}
+                        height={height}
+                        style={{
+                            gridColumnEnd: `span ${spans[i]}`,
+        
+                            objectFit: 'cover',
+                            width: '100%',
+                            height: 'auto',
+                        }}
+                    />
+                ))}
+        </div>
     )
 }
