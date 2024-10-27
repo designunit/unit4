@@ -1,5 +1,4 @@
-import { GalleryPartners } from '@/components/GalleryPartners'
-import { GalleryPartnersItem } from '@/components/GalleryPartners/GalleryPartnersItem'
+import { GalleryPartners, Item } from '@/components/GalleryPartners'
 import { resizeImage } from '@/lib/image'
 import type { NextPage } from 'next'
 import React from 'react'
@@ -123,9 +122,11 @@ const Page: NextPage = () => {
                 С нами работают
             </Title>
 
-            <GalleryPartners>
+            <GalleryPartners style={{
+                marginBottom: 50,
+            }}>
                 {items.map((x, i) => (
-                    <GalleryPartnersItem
+                    <Item
                         key={x.src}
                         src={resizeImage(x.src, { w: 600, h: 600 })}
                         href={x.href}

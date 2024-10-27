@@ -1,5 +1,7 @@
 import s from './index.module.css'
 
+export { Item } from './Item'
+
 export type GalleryProps = {
     children: React.ReactNode
     style?: React.CSSProperties
