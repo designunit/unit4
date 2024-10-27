@@ -1,0 +1,32 @@
+.left {
+    transform: rotate(180deg);
+    left: 10px;
+}
+.left:hover {
+    left: 0;
+}
+
+.right {
+    right: 10px;
+}
+.right:hover {
+    right: 0;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 100ms linear;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.bullet {
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-color: black;
+    --swiper-pagination-bullet-border-radius: 0;
+}

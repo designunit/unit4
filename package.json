@@ -44,7 +44,7 @@
         "remark": "^13.0.0",
         "remark-html": "^13.0.2",
         "date-fns": "^2.28.0",
-        "swiper": "^9.4.1"
+        "swiper": "^11.1.0"
     },
     "devDependencies": {
         "@types/lodash": "^4.17.12",
