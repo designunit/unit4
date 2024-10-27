@@ -58,7 +58,6 @@ const nextConfig = {
         locales: ['ru', 'en'],
         defaultLocale: 'ru'
     },
-    assetPrefix: '.',
 }
 
 export default nextConfig
