@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
-import { DefaultLayout } from '@/components/DefaultLayout'
 import { YMetrika } from '@/components/YMetrika'
 import { Menu } from '@/components/Menu'
 import { Footer } from '@/components/Footer'
