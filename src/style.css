@@ -1,8 +1,7 @@
-
 :root {
     --color-light: #b3b3b3;
 
-    --font-family: 'Roboto', sans-serif;
+    --font-family: "Roboto", sans-serif;
 
     --color-text: black;
     --color-text-opposite: white;
@@ -150,12 +149,12 @@ a:hover svg {
 /* ARTICLE STYLE */
 
 article {
-    margin-bottom: 50px;
-    
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 1000px;
+    /* margin-bottom: 50px; */
+
+    /* position: relative; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* max-width: 1000px; */
 }
 
 article h1 {
@@ -181,10 +180,10 @@ article ul {
     margin-bottom: 2em;
 }
 article :is(ul, ol) li {
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
 }
 article ul li:before {
-    content: '/';
+    content: "/";
     display: block;
     float: left;
     width: 0.75em;
@@ -215,7 +214,7 @@ article iframe {
 }
 
 /* margin for custom mdx blocks like <Image> */
-article > div { 
+article > div {
     margin-bottom: 1em;
 }
 div > p {
@@ -232,11 +231,7 @@ p > p {
         --content-padding: 0 0.5rem;
     }
 
-    article > :is(
-        h1,
-        h2,
-        h3,
-    ) {
+    article > :is(h1, h2, h3, ) {
         padding: var(--content-padding);
     }
 
