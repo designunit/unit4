@@ -1,3 +1,5 @@
+'use client'
+
 import type { ImageProps } from '@/types'
 import s from './carousel.module.css'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
@@ -49,12 +51,13 @@ export type CarouselProps = {
     style?: React.CSSProperties
 }
 
-export const Carousel: React.FC<CarouselProps> = ({ children }) => {
+const Carousel: React.FC<CarouselProps> = ({ children }) => {
     return (
         <>
             <Swiper
                 modules={[Autoplay, Pagination]}
                 autoplay={{ delay: 7000 }}
+                effect={'fade'}
                 pagination={{
                     bulletClass: `${s.bullet} swiper-pagination-bullet`,
                     // bulletClass: s.bullet,
@@ -72,3 +75,5 @@ export const Carousel: React.FC<CarouselProps> = ({ children }) => {
         </>
     )
 }
+
+export default Carousel

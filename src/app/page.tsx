@@ -1,7 +1,6 @@
-import type { GetStaticProps, NextPage } from 'next'
 import type { CardSize } from '@/types'
 import { Gallery } from '@/components/Gallery'
-import { useTranslation } from 'react-i18next'
+// import { useTranslation } from 'react-i18next'
 import { GalleryItem } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
 import { useAutoCardSize } from '@/hooks/useAutoCardSize'
@@ -222,41 +221,12 @@ const projects: Partial<ProjectItem>[] = [
     },
 ]
 
-interface IPageProps {
-    projects: ProjectItem[]
-}
-
-const Page: NextPage<IPageProps> = ({ projects }) => {
-    const { t } = useTranslation()
-    const autosize = useAutoCardSize(6)
-
-    return (
-        <>
-            <Gallery>
-                {projects.map((x, i) => (
-                    <GalleryItem
-                        key={x.href}
-                        src={x.coverSrc}
-                        alt={x.caption}
-                        title={x.title}
-                        tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
-                        href={x.href}
-                        size={x?.size ?? autosize(i)}
-                    />
-                ))}
-            </Gallery>
-        </>
-    )
-}
-
-export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
+function loadProjects(): ProjectItem[] {
+    const locale = 'ru'
     const defaultSrc = '/static/logo_unit4.jpg'
-    const pages = await Promise.all(
-        projects.map(async project => getPageBySlug(ctx.locale, project.href!))
-    )
-
-    const data = projects.map<ProjectItem>((project, i) => {
-        const page = pages[i]
+    return projects
+        .map((project, i) => {
+        const page = getPageBySlug(locale, project.href!)
         const coverSrc = page?.cover ?? defaultSrc
         const title = page?.title ?? ''
         const tags = [
@@ -275,12 +245,30 @@ export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
             tags,
         }
     })
+}
 
-    return {
-        props: {
-            projects: data,
-        },
-    }
+const Page: React.FC = () => {
+    // const { t } = useTranslation()
+    const autosize = useAutoCardSize(6)
+    const projects = loadProjects()
+
+    return (
+        <>
+            <Gallery>
+                {projects.map((x, i) => (
+                    <GalleryItem
+                        key={x.href}
+                        src={x.coverSrc}
+                        alt={x.caption}
+                        title={x.title}
+                        // tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
+                        href={x.href}
+                        size={x?.size ?? autosize(i)}
+                    />
+                ))}
+            </Gallery>
+        </>
+    )
 }
 
 export default Page

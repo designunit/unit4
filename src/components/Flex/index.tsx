@@ -1,4 +1,4 @@
-import s from './index.module.css'
+import s from './flex.module.css'
 
 export type FlexProps = {
     children: React.ReactNode

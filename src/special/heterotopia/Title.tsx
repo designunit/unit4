@@ -1,3 +1,5 @@
+'use client'
+
 import { createGradient } from './gradient'
 
 export type TitleProps = {

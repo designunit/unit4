@@ -1,8 +1,7 @@
 import { Title } from '@/components/Title'
-import { useRouter } from 'next/router'
 import { getPageBySlug, getPages } from '@/api'
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
+// import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote/rsc'
 import Image from 'next/image'
 import { UnitHighlight } from '@/components/UnitHighlight'
 import { ImageSet } from '@/components/ImageSet'
@@ -18,11 +17,12 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import type { PageDefinition } from '@/types'
 import type { ImageProps } from 'next/image'
 import type { ImageSetProps } from '@/components/ImageSet'
+import { notFound } from 'next/navigation'
 
-const OymyakonSankey = dynamic(import('@/special/oymyakon/OymyakonSankey'), { ssr: false })
-const Carousel = dynamic(() => import('@/components/Carousel').then(x => x.Carousel))
-const HeterotopiaTitle = dynamic(() => import('@/special/heterotopia/Title'), { ssr: false })
-const HeterotopiaHighlight = dynamic(() => import('@/special/heterotopia/Highlight'), { ssr: false })
+const OymyakonSankey = dynamic(import('@/special/oymyakon/OymyakonSankey'))
+const Carousel = dynamic(() => import('@/components/Carousel'))
+const HeterotopiaTitle = dynamic(() => import('@/special/heterotopia/Title'))
+const HeterotopiaHighlight = dynamic(() => import('@/special/heterotopia/Highlight'))
 
 const mdxComponents = {
     Image: (props: ImageProps) => (
@@ -59,21 +59,49 @@ const mdxComponents = {
     BeforeAfter,
 }
 
+function loadPage(slug: string) {
+    // if (ctx.params) {
+    //     slug = (ctx.params!.slug! as string[]).join('/')
+    // }
+    // slug = '/' + slug
+
+    // let contentLocale = ctx.locale
+    let contentLocale = 'ru'
+    let page = getPageBySlug(contentLocale, slug)
+    if (!page) {
+        return null
+    //     page = await getPageBySlug('ru', slug)
+    //     contentLocale = 'ru'
+    }
+
+    // const { content, ...def } = page
+    // const source = await serialize(content)
+    // const source = await serialize(`# HI MDX`)
+    // if (!source) {
+        // return null
+    // }
+
+    return {
+        ...page,
+        // source,
+        contentLocale: contentLocale!,
+    }
+}
+
 type Props = PageDefinition & {
     contentLocale: string
 }
 
-const Page: NextPage<Props> = props => {
-    const router = useRouter()
-    if (router.isFallback) {
-        return (
-            <div>loading</div>
-        )
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params
+    const page = loadPage(slug)
+    if (!page) {
+        return notFound()
     }
 
     return (
         <>
-            <NextSeo
+            {/* <NextSeo
                 title={props.title ?? undefined}
                 description={props.excerpt}
                 openGraph={{
@@ -91,7 +119,7 @@ const Page: NextPage<Props> = props => {
                 twitter={{
                     cardType: 'summary_large_image',
                 }}
-            />
+            /> */}
 
             {/* TODO */}
             {/* {props.contentLocale === router.locale ? null : (
@@ -99,51 +127,30 @@ const Page: NextPage<Props> = props => {
             )} */}
 
             <article>
-                <MDXRemote {...props.source} components={mdxComponents} />
+                <MDXRemote
+                    source={page.content!}
+                    components={mdxComponents}
+                />
             </article>
         </>
     )
 }
 
-export const getStaticProps: GetStaticProps<Props> = async ctx => {
-    let slug = ''
-    if (ctx.params) {
-        slug = (ctx.params!.slug! as string[]).join('/')
-    }
-    slug = '/' + slug
+export async function generateStaticParams() {
+    return [
+        { slug: 'photostream' },
+        { slug: 'oymyakon' },
+        { slug: 'shelter' },
+    ]
+  // const posts = getAllPosts();
 
-    let contentLocale = ctx.locale
-    let page = await getPageBySlug(ctx.locale, slug)
-    if (!page) {
-        page = await getPageBySlug('ru', slug)
-        contentLocale = 'ru'
-    }
-    if (!page) {
-        return {
-            notFound: true,
-        }
-    }
+//   return posts.map((post) => ({
+//     slug: post.slug,
+//   }));
+// }
 
-    const { content, ...def } = page
-    const source = await serialize(content)
-    if (!source) {
-        return {
-            notFound: true,
-        }
-    }
-
-    return {
-        // revalidate: 30,
-        props: {
-            ...def,
-            source,
-            contentLocale: contentLocale!,
-        },
-    }
-}
-
-export const getStaticPaths: GetStaticPaths = async () => {
-    const pages = await getPages()
+// export const getStaticPaths: GetStaticPaths = async () => {
+    const pages = getPages()
     return {
         paths: pages
             .map(({ slug }) => {
@@ -151,20 +158,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
                 // /path/to/page -> path/to/page
                 return slug.split('/').slice(1)
             })
-            .flatMap(slug => {
-                return [
-                    {
-                        params: { slug },
-                        locale: 'ru',
-                    },
-                    {
-                        params: { slug },
-                        locale: 'en',
-                    },
-                ]
-            }),
-        fallback: false,
+            .map(slug => { slug })
+            // .flatMap(slug => {
+            //     return [
+            //         {
+            //             params: { slug },
+            //             locale: 'ru',
+            //         },
+            //         {
+            //             params: { slug },
+            //             locale: 'en',
+            //         },
+            //     ]
+            // }),
+        // fallback: false,
     }
 }
-
-export default Page

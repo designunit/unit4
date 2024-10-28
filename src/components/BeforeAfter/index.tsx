@@ -1,3 +1,5 @@
+'use client'
+
 import ReactCompareImage from 'react-compare-image'
 
 export type BeforeAfterProps = {
