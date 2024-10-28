@@ -17,7 +17,7 @@
         "url": "git+https://github.com/destroytheimage/designunit4.git"
     },
     "engines": {
-        "node": "22.x"
+        "node": ">=18.x"
     },
     "keywords": [],
     "author": "",
