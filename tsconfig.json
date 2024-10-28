@@ -1,33 +1,20 @@
 {
-    "compilerOptions": {
-        "paths": {
-            "@/*": ["./src/*"]
-        },
-        "target": "ESNext",
-        "lib": ["dom", "dom.iterable", "esnext"],
-        "allowJs": true,
-        "skipLibCheck": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "esModuleInterop": true,
-        "module": "preserve",
-        "noEmit": true,
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "incremental": true,
-        "jsx": "preserve",
-        "plugins": [
-            {
-                "name": "next"
-            }
-        ]
+  "extends": "@tsconfig/next/tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
     },
-    "exclude": ["node_modules"],
-    "include": [
-        "next-env.d.ts",
-        "typings/*.d.ts",
-        "**/*.ts",
-        "**/*.tsx",
-        ".next/types/**/*.ts"
-    ]
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "ES2017"
+  },
+  "include": [
+    "node_modules/@tsconfig/next/next-env.d.ts",
+    "node_modules/@tsconfig/next/**/*.ts",
+    "node_modules/@tsconfig/next/**/*.tsx",
+    "node_modules/@tsconfig/next/.next/types/**/*.ts",
+    ".next/types/**/*.ts"
+  ]
 }
