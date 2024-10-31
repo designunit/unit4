@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import s from './GalleryItem.module.css'
 import Image from 'next/legacy/image'
