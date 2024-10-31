@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import { resizeImage } from '../../lib/image'
 
 export type MetaProps = {
@@ -11,7 +10,6 @@ export type MetaProps = {
 }
 
 export const Meta: React.FC<MetaProps> = ({ type = 'website', ...props }) => {
-    const { locale } = useRouter()
     const image = resizeImage(props.image, {
         fit: 'cover',
         h: 1200,
@@ -31,7 +29,7 @@ export const Meta: React.FC<MetaProps> = ({ type = 'website', ...props }) => {
 
             {/* Open Graph general (Facebook, Pinterest & Google+) */}
             <meta property='og:type' content={type} />
-            <meta property='og:locale' content={locale} />
+            <meta property='og:locale' content={'ru'} />
             <meta property='og:title' content={props.title} />
             <meta property='og:image' content={image} />
             <meta property='og:url' content={props.url} />

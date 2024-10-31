@@ -1,5 +1,3 @@
-// import { LangButton } from '@/components/LangButton'
-
 import s from './footer.module.css'
 
 export const Footer: React.FC = () => (
@@ -13,10 +11,6 @@ export const Footer: React.FC = () => (
             >
                 inbox@unit4.io
             </a>
-
-            {/* <LangButton style={{
-                marginTop: 10,
-            }}/> */}
         </section>
     </footer>
 )
