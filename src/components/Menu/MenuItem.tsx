@@ -9,7 +9,7 @@ export interface IMenuItemProps {
 }
 
 export const MenuItem: React.FC<IMenuItemProps> = ({ href, text, onClick }) => {
-    const { t } = useTranslation('menu')
+    // const { t } = useTranslation('menu')
 
     return (
         <li>
@@ -61,13 +61,13 @@ export const MenuItem: React.FC<IMenuItemProps> = ({ href, text, onClick }) => {
                         <span className='link-body active'
                             onClick={onClick}
                         >
-                            {t(text)}
+                            {text}
                         </span>
                     ) : (
                         <a className='link-body'
                             onClick={onClick}
                         >
-                            {t(text)}
+                            {text}
                         </a>
                     )
                 }
