@@ -1,14 +1,8 @@
-'use client'
-
 import Link from 'next/link'
 import s from './GalleryItem.module.css'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
+import {Tags} from '@/components/Tags'
 import type { CardSize } from '@/types'
-import dynamic from 'next/dynamic'
-
-const Tags = dynamic(import('./Tags').then(m => m.Tags), {
-    ssr: false,
-})
 
 const sizeClassNameMap: Record<CardSize, string> = {
     1: s.col1,
@@ -30,10 +24,9 @@ export const GalleryItem: React.FC<GalleryItemProps> = ({ href, size, tags, titl
         <Link href={href} className={`${s.container} ${sizeClassNameMap[size]}`}>
             <div className={s.image}>
                 <Image
+                    fill
                     src={props.src}
                     alt={props.alt}
-                    layout='fill'
-                    objectFit='cover'
                     className={s.img}
                 />
             </div>
@@ -44,12 +37,11 @@ export const GalleryItem: React.FC<GalleryItemProps> = ({ href, size, tags, titl
                     </span>
                 </span>
                 {!tags ? null : (
-                    <Tags
-                        items={tags}
-                    />
+                    <Tags>
+                        {tags}
+                    </Tags>
                 )}
             </div>
         </Link>
     )
 }
-

@@ -24,7 +24,11 @@
 }
 
 .img {
-    transition: filter var(--animation-time) ease, transform var(--animation-time) ease;
+    object-fit: cover;
+
+    transition:
+        filter var(--animation-time) ease,
+        transform var(--animation-time) ease;
 }
 
 .label {
