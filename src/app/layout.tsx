@@ -33,14 +33,14 @@ export const metadata: Metadata = {
 //     }}
 // />
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     const themeColor = "ff0066";
     return (
-        <html lang="en">
+        <html lang="ru">
             <head>
                 <meta
                     name="viewport"
@@ -64,11 +64,11 @@ export default function RootLayout({
             </head>
 
             <body className={`${s.layout} ${font.className}`}>
-                    <header>
-                        <Menu items={menu} />
-                    </header>
-                    <main className={s.content}>{children}</main>
-                    <Footer />
+                <header>
+                    <Menu items={menu} />
+                </header>
+                <main className={s.content}>{children}</main>
+                <Footer />
             </body>
         </html>
     );

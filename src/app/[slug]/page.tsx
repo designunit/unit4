@@ -63,7 +63,7 @@ function loadPage(locale: string, slug: string) {
 
     return {
         ...page,
-        locale: locale!,
+        locale: locale,
     }
 }
 

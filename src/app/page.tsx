@@ -1,6 +1,5 @@
 import type { CardSize } from '@/types'
 import { Gallery } from '@/components/Gallery'
-// import { useTranslation } from 'react-i18next'
 import { GalleryItem } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
 import { useAutoCardSize } from '@/hooks/useAutoCardSize'
@@ -248,26 +247,23 @@ function loadProjects(): ProjectItem[] {
 }
 
 const Page: React.FC = () => {
-    // const { t } = useTranslation()
     const autosize = useAutoCardSize(6)
     const projects = loadProjects()
 
     return (
-        <>
-            <Gallery>
-                {projects.map((x, i) => (
-                    <GalleryItem
-                        key={x.href}
-                        src={x.coverSrc}
-                        alt={x.caption}
-                        title={x.title}
-                        // tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
-                        href={x.href}
-                        size={x?.size ?? autosize(i)}
-                    />
-                ))}
-            </Gallery>
-        </>
+        <Gallery>
+            {projects.map((x, i) => (
+                <GalleryItem
+                    key={x.href}
+                    src={x.coverSrc}
+                    alt={x.caption}
+                    title={x.title}
+                    tags={x.tags}
+                    href={x.href}
+                    size={x?.size ?? autosize(i)}
+                />
+            ))}
+        </Gallery>
     )
 }
 

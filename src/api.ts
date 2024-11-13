@@ -5,10 +5,23 @@ import matter from 'gray-matter'
 import { parse } from 'date-fns'
 import type { PageDefinition } from '@/types'
 
+import ru from '@/ru.json' with { type: 'json' }
+type MessageNS = keyof typeof ru
+
 export type Lang = string
 const defaultLocale: Lang = 'ru'
 
 const postsDirectory = join(process.cwd(), 'data')
+
+function t(value: string, lang: Lang, ns: MessageNS): string {
+    switch (lang){
+        case 'ru':
+            const dict: Record<string, string> = ru[ns]
+            return dict[value] ?? value
+        default:
+        return value
+    }
+}
 
 export function getPages(): {path: string, slug: string, locale: string}[] {
     const pattern = join(postsDirectory, '*.md?(x)')
@@ -39,7 +52,11 @@ function getLocaleFromPath(path: string): string {
 
 export function getPageBySlug(lang: Lang, slug: string): PageDefinition | null {
     let path = join(postsDirectory, `${slug}.${lang}.mdx`)
-    return getPage(path)
+    const page = getPage(path)
+    if (page) {
+        page.tags = page.tags.map(tag => t(tag, lang, 'tags'))
+    }
+    return page
 }
 
 function getPage(path: string): PageDefinition | null {
