@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import { YMetrika } from '@/components/YMetrika'
+import { Logo } from '@/components/Logo'
 import { Menu } from '@/components/Menu'
 import { Footer } from '@/components/Footer'
 
@@ -65,6 +66,10 @@ export default async function RootLayout({
 
             <body className={`${s.layout} ${font.className}`}>
                 <header>
+                    <Logo
+                        href={'/'}
+                        invert={false}
+                    />
                     <Menu items={menu} />
                 </header>
                 <main className={s.content}>{children}</main>
