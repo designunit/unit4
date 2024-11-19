@@ -27,19 +27,17 @@ export const Burger: React.FC<BurgerProps> = ({ children, open, onClick }) => {
                 {open ? (
                     <Icon
                         path={mdiClose}
-                        className={s.cross}
+                        color={'var(--color-background)'}
                     />
                 ) : (
                     <Icon
                         path={mdiDragHorizontalVariant}
-                        style={{
-                            fill: 'var(--color-background-opposite)',
-                        }}
+                        color={'var(--color-background-opposite)'}
                     />
                 )}
             </button>
 
-            <div className={s.mobileMenuContainer}
+            <div className={s.overlay}
                 style={{
                     left: open ? 0 : '100vw',
                 }}

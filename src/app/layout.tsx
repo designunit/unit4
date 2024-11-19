@@ -71,6 +71,7 @@ export default async function RootLayout({
                         invert={false}
                     />
                     <Menu items={menu} />
+                    <Menu items={menu} mobile />
                 </header>
                 <main className={s.content}>{children}</main>
                 <Footer />

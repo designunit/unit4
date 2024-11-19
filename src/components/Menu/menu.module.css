@@ -5,7 +5,6 @@
     padding: 0;
 
     display: flex;
-    gap: 28px;
 }
 
 .menu.desktop {
@@ -14,10 +13,40 @@
 
     color: var(--color-text);
     background-color: var(--color-background);
+    gap: 28px;
 }
 
-.menu.vertical {
+.menu.mobile {
     flex-direction: column;
+}
+
+.item {
+    margin: 0;
+    margin-top: 2px;
+}
+
+.item a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.item a:hover {
+    color: var(--link-color-active);
+}
+
+.item a:active {
+    color: var(--link-color-active);
+}
+
+.link {
+    font-family: var(--font-second-family);
+    font-size: var(--font-second-size);
+    padding: 3px 10px;
+}
+
+.link.active {
+    background-color: var(--color-background-opposite);
+    color: var(--color-text-opposite);
 }
 
 .burger {
@@ -31,64 +60,66 @@
     padding: 0;
 }
 
-.mobileMenuContainer {
-    position: absolute;
+.overlay {
     z-index: 0;
+    position: fixed;
     top: 0;
-    bottom: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 100px 20px 0;
+    padding: 80px 20px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     --color-text: var(--color-text-opposite);
-
     background: var(--color-background-opposite);
     color: var(--color-text-opposite);
 
     transition: left 0.5s ease;
 }
 
-.mobileMenu {
-    top: 0;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    background: none;
-    display: flex;
-    flex-flow: column;
-}
-
-.contacts {
-    /* position: absolute;
-    bottom: 4rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: var(--content-padding);
-    padding-bottom: 1rem; */
-}
 .links {
     display: flex;
     flex-flow: column;
     gap: 8px;
     text-align: right;
 }
-.icons {
-    display: flex;
-    align-items: flex-end;
-    gap: 16px;
-}
-.icons > a,
+
 .links > a {
     color: var(--color-text-opposite);
 }
 
-.cross > path {
-    fill: var(--color-background) !important;
+@media screen and (max-width: 700px) {
+    .menu.mobile {
+        gap: 36px;
+    }
 }
 
-@media screen and (max-width: 31.25em) {
-    .menu {
-        gap: 52px;
+@media screen and (max-width: 700px) {
+    .item > :is(a, span) {
+        font-size: 36px;
+        color: var(--color-text-opposite);
+        text-transform: uppercase;
+    }
+    .active {
+        text-decoration: underline;
+        text-decoration-color: var(--color-text-opposite);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .menu.desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .burger {
+        display: none;
+    }
+    .overlay {
+        display: none;
     }
 }
