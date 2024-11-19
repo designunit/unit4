@@ -100,11 +100,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                 }}
             /> */}
 
-            {/* TODO */}
-            {/* {props.contentLocale === router.locale ? null : (
-                <div>Warning! Locale is different</div>
-            )} */}
-
             <article>
                 <MDXRemote
                     source={page.content!}
