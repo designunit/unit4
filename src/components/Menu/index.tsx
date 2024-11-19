@@ -2,7 +2,6 @@
 
 import { MenuItem } from './MenuItem'
 import type { IMenuItemProps } from './MenuItem'
-import {useMediaQuery} from 'react-responsive'
 import { Burger } from './Burger'
 
 import s from './menu.module.css'
