@@ -3,7 +3,6 @@ import { Roboto } from 'next/font/google'
 import { YMetrika } from '@/components/YMetrika'
 import { Logo } from '@/components/Logo'
 import { Menu } from '@/components/Menu'
-import { Footer } from '@/components/Footer'
 
 import s from './layout.module.css'
 import '@/style.css'
@@ -74,7 +73,18 @@ export default async function RootLayout({
                     <Menu items={menu} mobile />
                 </header>
                 <main className={s.content}>{children}</main>
-                <Footer />
+                <footer>
+                    <section>© 2017-2024 design unit 4</section>
+                    <section className={s.right}>
+                        <a
+                            href='mailto:inbox@unit4.io'
+                            target={'_blank'}
+                            rel="noreferrer"
+                        >
+                            inbox@unit4.io
+                        </a>
+                    </section>
+                </footer>
             </body>
         </html>
     );

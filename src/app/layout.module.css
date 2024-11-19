@@ -30,9 +30,14 @@
 .layout footer {
     width: var(--page-size);
     margin: 0 auto;
-
     padding: var(--content-padding);
-    padding-bottom: 1em;
+    padding-bottom: var(--margin-m);
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    font-size: var(--font-second-size);
 }
 
 .content {
@@ -48,7 +53,7 @@
 }
 
 @media screen and (max-width: 1280px) {
-    .content {
+    .layout {
         --page-size: 80%;
     }
     .layout header {
@@ -58,7 +63,7 @@
 }
 
 @media screen and (max-width: 960px) {
-    .content {
+    .layout {
         --page-size: 90%;
     }
     .layout header {
@@ -68,7 +73,7 @@
 }
 
 @media screen and (max-width: 31.25em) {
-    .content {
+    .layout {
         --page-size: 100%;
     }
     .layout header {
