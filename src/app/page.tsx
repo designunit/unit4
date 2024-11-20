@@ -226,25 +226,25 @@ function loadProjects(): ProjectItem[] {
     const locale = 'ru'
     return projects
         .map((project, i) => {
-        const page = getPageBySlug(locale, project.href!)
-        const coverSrc = page?.cover ?? DEFAULT_COVER
-        const title = page?.title ?? ''
-        const tags = [
-            ...(page?.location ? [page?.location] : []),
-            ...(page?.year ? [page?.year] : []),
-            ...page?.tags ?? [],
-        ] as string[]
-        const caption = '' // TODO: use actual data here
+            const page = getPageBySlug(locale, project.href!)
+            const coverSrc = page?.cover ?? DEFAULT_COVER
+            const title = page?.title ?? ''
+            const tags = [
+                ...(page?.location ? [page?.location] : []),
+                ...(page?.year ? [page?.year] : []),
+                ...page?.tags ?? [],
+            ] as string[]
+            const caption = '' // TODO: use actual data here
 
-        return {
-            href: project.href!,
-            size: project.size,
-            caption,
-            coverSrc,
-            title,
-            tags,
-        }
-    })
+            return {
+                href: project.href!,
+                size: project.size,
+                caption,
+                coverSrc,
+                title,
+                tags,
+            }
+        })
 }
 
 export const metadata: Metadata = {
@@ -255,7 +255,7 @@ export const metadata: Metadata = {
             DEFAULT_COVER,
         ],
     },
-};
+}
 
 const Page: React.FC = () => {
     const autosize = useAutoCardSize(6)

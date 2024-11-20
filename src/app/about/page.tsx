@@ -10,13 +10,13 @@ import { DEFAULT_COVER } from '@/constants'
 
 export const metadata: Metadata = {
     title: 'design unit 4',
-    description: `Студия средового дизайна`,
+    description: 'Студия средового дизайна',
     openGraph: {
         images: [
             DEFAULT_COVER,
         ],
     },
-};
+}
 
 const Page: React.FC = () => {
     const vertOffset = '6rem'

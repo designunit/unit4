@@ -19,7 +19,7 @@ function t(value: string, lang: Lang, ns: MessageNS): string {
             const dict: Record<string, string> = ru[ns]
             return dict[value] ?? value
         default:
-        return value
+            return value
     }
 }
 

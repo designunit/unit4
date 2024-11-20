@@ -1,6 +1,5 @@
 'use client'
 
-import type { ImageProps } from '@/types'
 import s from './carousel.module.css'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'

@@ -8,8 +8,7 @@ import { DEFAULT_COVER, MAILTO, MENU, YANDEX_METRIKA, YANDEX_VERIFICATION } from
 import '@/style.css'
 import s from './layout.module.css'
 
-
-const font = Roboto({ weight: ["400", "900"], subsets: ["cyrillic", "latin"] });
+const font = Roboto({ weight: ['400', '900'], subsets: ['cyrillic', 'latin'] })
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://unit4.io'),
@@ -21,16 +20,16 @@ export const metadata: Metadata = {
         ],
     },
     twitter: {
-        card: 'summary_large_image'
-    }
-};
+        card: 'summary_large_image',
+    },
+}
 
 export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const themeColor = "ff0066";
+    const themeColor = 'ff0066'
     return (
         <html lang="ru">
             <head>
@@ -75,5 +74,5 @@ export default async function RootLayout({
                 </footer>
             </body>
         </html>
-    );
+    )
 }

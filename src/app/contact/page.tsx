@@ -14,7 +14,7 @@ export const metadata: Metadata = {
             DEFAULT_COVER,
         ],
     },
-};
+}
 
 const Page: React.FC = () => (
     <>

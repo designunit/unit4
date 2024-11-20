@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { GalleryPartners, Item } from '@/components/GalleryPartners'
 import { Title } from '@/components/Title'
-import { DEFAULT_COVER } from '@/constants';
+import { DEFAULT_COVER } from '@/constants'
 
 const items = [
     {
@@ -122,7 +122,7 @@ export const metadata: Metadata = {
             DEFAULT_COVER,
         ],
     },
-};
+}
 
 const Page: React.FC = () => (
     <>
