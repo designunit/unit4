@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     title: 'design unit 4',
     description: 'Студия средового дизайна',
     openGraph: {
+        siteName: 'дизайн юнит 4',
         images: [
             DEFAULT_COVER,
         ],
