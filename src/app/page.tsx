@@ -4,7 +4,7 @@ import { Gallery } from '@/components/Gallery'
 import { GalleryItem } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
 import { useAutoCardSize } from '@/hooks/useAutoCardSize'
-import { DEFAULT_COVER } from '@/constants'
+import { DEFAULT_COVER, URL_BASE } from '@/constants'
 
 type ProjectItem = {
     coverSrc: string
@@ -251,6 +251,7 @@ export const metadata: Metadata = {
     title: 'design unit 4',
     description: 'Студия средового дизайна',
     openGraph: {
+        url: `${URL_BASE}/`,
         images: [
             DEFAULT_COVER,
         ],

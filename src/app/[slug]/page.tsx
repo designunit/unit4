@@ -3,7 +3,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
 import mdxComponents from './mdx'
 import type { Metadata } from 'next'
-import { DEFAULT_COVER } from '@/constants'
+import { DEFAULT_COVER, URL_BASE } from '@/constants'
 
 type MetadataProps = {
     params: Promise<{ slug: string }>
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: MetadataProps): Promise<Metad
         title: page!.title,
         description: page!.excerpt,
         openGraph: {
-            url: `https://unit4.io/${slug}`,
+            url: `${URL_BASE}/${slug}`,
             images: [page?.cover ?? DEFAULT_COVER],
         },
     }
