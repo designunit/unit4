@@ -6,37 +6,22 @@ import { Menu } from '@/components/Menu'
 
 import s from './layout.module.css'
 import '@/style.css'
-import { menu } from '@/constants'
+import { MAILTO, MENU, YANDEX_METRIKA, YANDEX_VERIFICATION } from '@/constants'
 
 const font = Roboto({ weight: ["400", "900"], subsets: ["cyrillic", "latin"] });
 
 export const metadata: Metadata = {
-    // title: `Next.js Blog Example with ${CMS_NAME}`,
-    // description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+    title: 'design unit 4',
+    description: 'Студия средового дизайна',
     openGraph: {
-        // images: [HOME_OG_IMAGE_URL],
         images: [
-            {
-                url: 'https://unit4.io/static/logo_unit4.jpg',
-            },
+            'https://unit4.io/static/2.jpg',
         ],
     },
+    twitter: {
+        card: 'summary_large_image'
+    }
 };
-
-// <NextSeo
-//     title={'design : : unit 4'}
-//     description={''}
-//     openGraph={{
-//         title: 'design : : unit 4',
-//         description: '',
-//         url: `https://unit4.io${router.asPath}`,
-//         images: [
-//             {
-//                 url: '/static/logo_unit4.jpg',
-//             },
-//         ],
-//     }}
-// />
 
 export default async function RootLayout({
     children,
@@ -57,8 +42,8 @@ export default async function RootLayout({
                     type="image/x-icon"
                 />
 
-                <meta name="yandex-verification" content="9248f3170aa2f950" />
-                {/* <YMetrika account={"47295549"} /> */}
+                <meta name="yandex-verification" content={YANDEX_VERIFICATION} />
+                <YMetrika account={YANDEX_METRIKA} />
                 <meta name="theme-color" content={themeColor} />
 
                 <link
@@ -74,15 +59,15 @@ export default async function RootLayout({
                         href={'/'}
                         invert={false}
                     />
-                    <Menu items={menu} />
-                    <Menu items={menu} mobile />
+                    <Menu items={MENU} />
+                    <Menu items={MENU} mobile />
                 </header>
                 <main className={s.content}>{children}</main>
                 <footer>
                     <section>© 2017-2024 design unit 4</section>
                     <section className={s.right}>
                         <a
-                            href='mailto:inbox@unit4.io'
+                            href={MAILTO}
                             target={'_blank'}
                             rel="noreferrer"
                         >

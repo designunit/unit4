@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { GalleryPartners, Item } from '@/components/GalleryPartners'
 import { Title } from '@/components/Title'
-import { defaultPageCoverSrc } from '@/constants';
+import { DEFAULT_COVER } from '@/constants';
 
 const items = [
     {
@@ -119,7 +119,7 @@ export const metadata: Metadata = {
     description: 'С нами работают',
     openGraph: {
         images: [
-            defaultPageCoverSrc,
+            DEFAULT_COVER,
         ],
     },
 };

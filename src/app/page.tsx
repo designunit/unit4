@@ -4,7 +4,7 @@ import { Gallery } from '@/components/Gallery'
 import { GalleryItem } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
 import { useAutoCardSize } from '@/hooks/useAutoCardSize'
-import { defaultPageCoverSrc } from '@/constants'
+import { DEFAULT_COVER } from '@/constants'
 
 type ProjectItem = {
     coverSrc: string
@@ -227,7 +227,7 @@ function loadProjects(): ProjectItem[] {
     return projects
         .map((project, i) => {
         const page = getPageBySlug(locale, project.href!)
-        const coverSrc = page?.cover ?? defaultPageCoverSrc
+        const coverSrc = page?.cover ?? DEFAULT_COVER
         const title = page?.title ?? ''
         const tags = [
             ...(page?.location ? [page?.location] : []),
@@ -252,7 +252,7 @@ export const metadata: Metadata = {
     description: 'Студия средового дизайна',
     openGraph: {
         images: [
-            defaultPageCoverSrc,
+            DEFAULT_COVER,
         ],
     },
 };

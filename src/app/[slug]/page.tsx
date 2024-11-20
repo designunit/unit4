@@ -25,9 +25,6 @@ export async function generateMetadata({ params }: MetadataProps, parent: Resolv
     const { slug } = await params
     const page = loadPage('ru', slug)
 
-    // fetch data
-    // const product = await fetch(`https://.../${id}`).then((res) => res.json())
-
     // optionally access and extend (rather than replace) parent metadata
     const previousImages = (await parent).openGraph?.images || []
 

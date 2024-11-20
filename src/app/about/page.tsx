@@ -6,14 +6,14 @@ import { RunningLine } from '@/components/RunningLine'
 import { Flex } from '@/components/Flex'
 import { Loud } from '@/components/Loud'
 import Image from 'next/legacy/image'
-import { defaultPageCoverSrc } from '@/constants'
+import { DEFAULT_COVER } from '@/constants'
 
 export const metadata: Metadata = {
     title: 'design unit 4',
     description: `Студия средового дизайна`,
     openGraph: {
         images: [
-            defaultPageCoverSrc,
+            DEFAULT_COVER,
         ],
     },
 };

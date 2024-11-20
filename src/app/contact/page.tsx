@@ -2,16 +2,16 @@ import type { Metadata } from 'next'
 import { TextBlock } from '@/components/TextBlock'
 import { Title } from '@/components/Title'
 import { Flex } from '@/components/Flex'
-import { defaultPageCoverSrc, mailto, tel, telephone, yandexLocation } from '@/constants'
+import { DEFAULT_COVER, MAILTO, TEL, TELEPHONE, YANDEX_LOCATION } from '@/constants'
 
 const name = 'ООО "дизайн юнит 4"'
 
 export const metadata: Metadata = {
     title: 'design unit 4',
-    description: `${telephone}`,
+    description: `${TELEPHONE}`,
     openGraph: {
         images: [
-            defaultPageCoverSrc,
+            DEFAULT_COVER,
         ],
     },
 };
@@ -35,14 +35,14 @@ const Page: React.FC = () => (
             </TextBlock>
 
             <TextBlock>
-                <a href={mailto}>
+                <a href={MAILTO}>
                     inbox@unit4.io
                 </a>
             </TextBlock>
 
             <TextBlock>
                 <a
-                    href={yandexLocation}
+                    href={YANDEX_LOCATION}
                     target='_blank' rel="noreferrer"
                 >
                     {name}<br />
@@ -53,8 +53,8 @@ const Page: React.FC = () => (
             </TextBlock>
 
             <TextBlock>
-                <a href={tel}>
-                    {telephone}
+                <a href={TEL}>
+                    {TELEPHONE}
                 </a>
             </TextBlock>
         </Flex>
