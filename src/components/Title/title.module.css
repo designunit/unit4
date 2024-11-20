@@ -14,7 +14,6 @@
     line-height: var(--font-second-size);
 }
 
-
 @media screen and (max-width: 31.25em) {
     .h1 {
         font-size: 34px;

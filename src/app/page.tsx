@@ -1,10 +1,10 @@
-import type { GetStaticProps, NextPage } from 'next'
+import type { Metadata } from 'next'
 import type { CardSize } from '@/types'
 import { Gallery } from '@/components/Gallery'
-import { useTranslation } from 'react-i18next'
 import { GalleryItem } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
 import { useAutoCardSize } from '@/hooks/useAutoCardSize'
+import { DEFAULT_COVER, URL_BASE } from '@/constants'
 
 type ProjectItem = {
     coverSrc: string
@@ -222,65 +222,61 @@ const projects: Partial<ProjectItem>[] = [
     },
 ]
 
-interface IPageProps {
-    projects: ProjectItem[]
+function loadProjects(): ProjectItem[] {
+    const locale = 'ru'
+    return projects
+        .map((project, i) => {
+            const page = getPageBySlug(locale, project.href!)
+            const coverSrc = page?.cover ?? DEFAULT_COVER
+            const title = page?.title ?? ''
+            const tags = [
+                ...(page?.location ? [page?.location] : []),
+                ...(page?.year ? [page?.year] : []),
+                ...page?.tags ?? [],
+            ] as string[]
+            const caption = '' // TODO: use actual data here
+
+            return {
+                href: project.href!,
+                size: project.size,
+                caption,
+                coverSrc,
+                title,
+                tags,
+            }
+        })
 }
 
-const Page: NextPage<IPageProps> = ({ projects }) => {
-    const { t } = useTranslation()
+export const metadata: Metadata = {
+    title: 'design unit 4',
+    description: 'Студия средового дизайна',
+    openGraph: {
+        url: `${URL_BASE}/`,
+        images: [
+            DEFAULT_COVER,
+        ],
+    },
+}
+
+const Page: React.FC = () => {
     const autosize = useAutoCardSize(6)
+    const projects = loadProjects()
 
     return (
-        <>
-            <Gallery>
-                {projects.map((x, i) => (
-                    <GalleryItem
-                        key={x.href}
-                        src={x.coverSrc}
-                        alt={x.caption}
-                        title={x.title}
-                        tags={x.tags.map(tag => t(tag, { ns: 'tags' }))}
-                        href={x.href}
-                        size={x?.size ?? autosize(i)}
-                    />
-                ))}
-            </Gallery>
-        </>
+        <Gallery>
+            {projects.map((x, i) => (
+                <GalleryItem
+                    key={x.href}
+                    src={x.coverSrc}
+                    alt={x.caption}
+                    title={x.title}
+                    tags={x.tags}
+                    href={x.href}
+                    size={x?.size ?? autosize(i)}
+                />
+            ))}
+        </Gallery>
     )
-}
-
-export const getStaticProps: GetStaticProps<IPageProps> = async ctx => {
-    const defaultSrc = '/static/logo_unit4.jpg'
-    const pages = await Promise.all(
-        projects.map(async project => getPageBySlug(ctx.locale, project.href!))
-    )
-
-    const data = projects.map<ProjectItem>((project, i) => {
-        const page = pages[i]
-        const coverSrc = page?.cover ?? defaultSrc
-        const title = page?.title ?? ''
-        const tags = [
-            ...(page?.location ? [page?.location] : []),
-            ...(page?.year ? [page?.year] : []),
-            ...page?.tags ?? [],
-        ] as string[]
-        const caption = '' // TODO: use actual data here
-
-        return {
-            href: project.href!,
-            size: project.size,
-            caption,
-            coverSrc,
-            title,
-            tags,
-        }
-    })
-
-    return {
-        props: {
-            projects: data,
-        },
-    }
 }
 
 export default Page

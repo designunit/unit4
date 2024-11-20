@@ -1,14 +1,24 @@
-import type { NextPage } from 'next'
+import type { Metadata } from 'next'
 import { Title } from '@/components/Title'
-import React from 'react'
 import { Table } from '@/components/Index/Table'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
 import { RunningLine } from '@/components/RunningLine'
 import { Flex } from '@/components/Flex'
 import { Loud } from '@/components/Loud'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
+import { DEFAULT_COVER } from '@/constants'
 
-const Page: NextPage = () => {
+export const metadata: Metadata = {
+    title: 'design unit 4',
+    description: 'Студия средового дизайна',
+    openGraph: {
+        images: [
+            DEFAULT_COVER,
+        ],
+    },
+}
+
+const Page: React.FC = () => {
     const vertOffset = '6rem'
 
     return (
@@ -244,14 +254,4 @@ const Page: NextPage = () => {
     )
 }
 
-// export const getStaticProps: GetStaticProps = async () => {
-// export const setServerSideProps: GetServerSideProps = async () => {
-//     return {
-//         props: {
-//             namespacesRequired: ['common'],
-//         }
-//     }
-// }
-
-// export default withTranslation('common')(Page)
 export default Page

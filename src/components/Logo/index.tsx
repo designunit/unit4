@@ -1,4 +1,4 @@
-import s from './style.module.css'
+import s from './logo.module.css'
 
 export type LogoProps = {
     href: string

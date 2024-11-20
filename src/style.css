@@ -1,8 +1,7 @@
-
 :root {
     --color-light: #b3b3b3;
 
-    --font-family: 'Roboto', sans-serif;
+    --font-family: "Roboto", sans-serif;
 
     --color-text: black;
     --color-text-opposite: white;
@@ -15,7 +14,7 @@
     --link-color-focus: #ff0066;
     --font-main-family: var(--font-family);
     --font-main-size: 2em;
-    --font-main-line-height: 1.15em;
+    --font-main-line-height: 1.5em;
     --font-h2-family: var(--font-family);
     --font-h2-size: 1.5em;
     --font-h2-line-height: 1.2em;
@@ -29,9 +28,8 @@
     --animation-scale-factor: 1.1;
     --animation-time: 0.25s;
 
-    --margin-s: 1em;
+    --margin-s: 0.75em;
     --margin-m: 3em;
-    --margin-l: 5em;
 
     --content-padding: 0;
 }
@@ -150,12 +148,12 @@ a:hover svg {
 /* ARTICLE STYLE */
 
 article {
-    margin-bottom: 50px;
-    
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 1000px;
+    /* margin-bottom: 50px; */
+
+    /* position: relative; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* max-width: 1000px; */
 }
 
 article h1 {
@@ -181,10 +179,10 @@ article ul {
     margin-bottom: 2em;
 }
 article :is(ul, ol) li {
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
 }
 article ul li:before {
-    content: '/';
+    content: "/";
     display: block;
     float: left;
     width: 0.75em;
@@ -215,7 +213,7 @@ article iframe {
 }
 
 /* margin for custom mdx blocks like <Image> */
-article > div { 
+article > div {
     margin-bottom: 1em;
 }
 div > p {
@@ -225,18 +223,29 @@ p > p {
     margin-bottom: 0;
 }
 
+/* affects mdx components  */
+article figure {
+    padding: 0;
+    margin: 0 0 var(--margin-m);
+}
+
+/* affects mdx components  */
+article figure > figcaption {
+    text-align: center;
+    font-style: italic;
+}
+
 /* MOBILE STYLE */
 
 @media screen and (max-width: 31.25em) {
     :root {
-        --content-padding: 0 0.5rem;
+        --margin-s: 0.75em;
+        --margin-m: 1em;
+
+        --content-padding: 0 1rem;
     }
 
-    article > :is(
-        h1,
-        h2,
-        h3,
-    ) {
+    article > :is(h1, h2, h3, ) {
         padding: var(--content-padding);
     }
 

@@ -6,6 +6,8 @@ export type PageDefinition = {
     excerpt: string
     tags: string[]
 
+    content?: string
+
     title: string | null
     date: string | null
     slug: string

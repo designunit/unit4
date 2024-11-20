@@ -1,42 +1,43 @@
-import { promisify } from 'util'
-import * as fs from 'fs'
-import { join, relative } from 'path'
-import { glob } from 'glob'
+import { readFileSync } from 'node:fs'
+import { join, relative } from 'node:path'
+import { globSync } from 'glob'
 import matter from 'gray-matter'
 import { parse } from 'date-fns'
 import type { PageDefinition } from '@/types'
 
-const readFile = promisify(fs.readFile)
+import ru from '@/ru.json' with { type: 'json' }
+type MessageNS = keyof typeof ru
 
 export type Lang = string
 const defaultLocale: Lang = 'ru'
 
 const postsDirectory = join(process.cwd(), 'data')
 
-export async function getPages(): Promise<{path: string, slug: string, locale: string}[]> {
-    const pattern = join(process.cwd(), 'data', '**/*.md?(x)')
-    const files = await glob(pattern, {})
+function t(value: string, lang: Lang, ns: MessageNS): string {
+    switch (lang){
+        case 'ru':
+            const dict: Record<string, string> = ru[ns]
+            return dict[value] ?? value
+        default:
+            return value
+    }
+}
 
-    return files.map(path => {
-        const slug = getSlugFromPath(path)
-        const locale = getLocaleFromPath(path)
-
-        return {
+export function getPages(): {path: string, slug: string, locale: string}[] {
+    const pattern = join(postsDirectory, '*.md?(x)')
+    return globSync(pattern, {})
+        .map(path => ({
             path,
-            slug,
-            locale,
-        }
-    })
+            slug: getSlugFromPath(path),
+            locale: getLocaleFromPath(path),
+        }))
 }
 
 function getSlugFromPath(path: string): string {
-    const rel = relative(postsDirectory, path)
-    const realSlug = rel
+    return relative(postsDirectory, path)
         .replace(/\w{2}\.mdx?$/, '')
         .replace(/\.$/, '')
         .replace(/\/$/, '')
-
-    return `/${realSlug}`
 }
 
 function getLocaleFromPath(path: string): string {
@@ -49,26 +50,19 @@ function getLocaleFromPath(path: string): string {
     return m[1]
 }
 
-export async function getPageBySlug(lang: Lang | undefined, slug: string): Promise<PageDefinition | null> {
+export function getPageBySlug(lang: Lang, slug: string): PageDefinition | null {
     let path = join(postsDirectory, `${slug}.${lang}.mdx`)
-    let page = await getPage(path)
-    
-    if (!page) {
-        path = join(postsDirectory, `${slug}.${'ru'}.mdx`)
-        page = await getPage(path)
-    }
-
+    const page = getPage(path)
     if (page) {
-        return page
+        page.tags = page.tags.map(tag => t(tag, lang, 'tags'))
     }
-
-    return null
+    return page
 }
 
-async function getPage(path: string): Promise<PageDefinition | null> {
+function getPage(path: string): PageDefinition | null {
     const slug = getSlugFromPath(path)
     try {
-        const fileContents = await readFile(path, 'utf8')
+        const fileContents = readFileSync(path, 'utf8')
         const { data, content } = matter(fileContents)
 
         const title = getTitle(content)

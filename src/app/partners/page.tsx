@@ -1,8 +1,7 @@
+import type { Metadata } from 'next'
 import { GalleryPartners, Item } from '@/components/GalleryPartners'
-import { resizeImage } from '@/lib/image'
-import type { NextPage } from 'next'
-import React from 'react'
-import { Title } from '../src/components/Title'
+import { Title } from '@/components/Title'
+import { DEFAULT_COVER } from '@/constants'
 
 const items = [
     {
@@ -115,27 +114,35 @@ const items = [
     },
 ]
 
-const Page: NextPage = () => {
-    return (
-        <>
-            <Title>
-                С нами работают
-            </Title>
-
-            <GalleryPartners style={{
-                marginBottom: 50,
-            }}>
-                {items.map((x, i) => (
-                    <Item
-                        key={x.src}
-                        src={resizeImage(x.src, { w: 600, h: 600 })}
-                        alt={''}
-                        href={x.href}
-                    />
-                ))}
-            </GalleryPartners>
-        </>
-    )
+export const metadata: Metadata = {
+    title: 'Партнеры design unit 4',
+    description: 'С нами работают',
+    openGraph: {
+        images: [
+            DEFAULT_COVER,
+        ],
+    },
 }
+
+const Page: React.FC = () => (
+    <>
+        <Title>
+            С нами работают
+        </Title>
+
+        <GalleryPartners style={{
+            marginBottom: 50,
+        }}>
+            {items.map((x, i) => (
+                <Item
+                    key={x.src}
+                    src={x.src}
+                    alt={''}
+                    href={x.href}
+                />
+            ))}
+        </GalleryPartners>
+    </>
+)
 
 export default Page

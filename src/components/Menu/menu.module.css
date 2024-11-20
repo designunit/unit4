@@ -1,0 +1,109 @@
+.menu {
+    text-align: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+}
+
+.menu.desktop {
+    position: relative;
+    left: 10px;
+
+    color: var(--color-text);
+    background-color: var(--color-background);
+    gap: 28px;
+}
+
+.menu.mobile {
+    flex-direction: column;
+}
+
+.link {
+    color: var(--color-text);
+    font-family: var(--font-second-family);
+    font-size: var(--font-second-size);
+    padding: 3px 10px;
+    text-decoration: none;
+}
+
+.link.active {
+    color: var(--color-text-opposite);
+    background-color: var(--color-background-opposite);
+}
+
+.burger {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    z-index: 1;
+
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.overlay {
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 80px 20px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: var(--color-background-opposite);
+    color: var(--color-text-opposite);
+
+    transition: left 0.5s ease;
+}
+
+.links {
+    display: flex;
+    flex-flow: column;
+    gap: 8px;
+    text-align: right;
+}
+
+.links > a {
+    color: var(--color-text-opposite);
+}
+
+@media screen and (max-width: 700px) {
+    .menu.mobile {
+        gap: 36px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .link {
+        color: var(--color-text-opposite);
+        font-size: 36px;
+        text-decoration: none;
+    }
+
+    .link.active {
+        background-color: var(--color-background);
+        color: var(--color-text);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .menu.desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .burger {
+        display: none;
+    }
+    .overlay {
+        display: none;
+    }
+}
