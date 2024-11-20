@@ -8,7 +8,7 @@ export interface IMenuItemProps {
 }
 
 export const MenuItem: React.FC<IMenuItemProps> = ({ href, text, onClick }) => (
-    <li className={s.item}>
+    <li>
         <LinkActive href={href} passHref legacyBehavior={true}>
             {active => active
                 ? (

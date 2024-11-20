@@ -20,33 +20,17 @@
     flex-direction: column;
 }
 
-.item {
-    margin: 0;
-    margin-top: 2px;
-}
-
-.item a {
-    color: var(--color-text);
-    text-decoration: none;
-}
-
-.item a:hover {
-    color: var(--link-color-active);
-}
-
-.item a:active {
-    color: var(--link-color-active);
-}
-
 .link {
+    color: var(--color-text);
     font-family: var(--font-second-family);
     font-size: var(--font-second-size);
     padding: 3px 10px;
+    text-decoration: none;
 }
 
 .link.active {
-    background-color: var(--color-background-opposite);
     color: var(--color-text-opposite);
+    background-color: var(--color-background-opposite);
 }
 
 .burger {
@@ -73,7 +57,6 @@
     flex-direction: column;
     justify-content: space-between;
 
-    --color-text: var(--color-text-opposite);
     background: var(--color-background-opposite);
     color: var(--color-text-opposite);
 
@@ -98,14 +81,15 @@
 }
 
 @media screen and (max-width: 700px) {
-    .item > :is(a, span) {
-        font-size: 36px;
+    .link {
         color: var(--color-text-opposite);
-        text-transform: uppercase;
+        font-size: 36px;
+        text-decoration: none;
     }
-    .active {
-        text-decoration: underline;
-        text-decoration-color: var(--color-text-opposite);
+
+    .link.active {
+        background-color: var(--color-background);
+        color: var(--color-text);
     }
 }
 
