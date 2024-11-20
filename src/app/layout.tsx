@@ -1,12 +1,13 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Roboto } from 'next/font/google'
 import { YMetrika } from '@/components/YMetrika'
 import { Logo } from '@/components/Logo'
 import { Menu } from '@/components/Menu'
-import { DEFAULT_COVER, MAILTO, MENU, YANDEX_METRIKA, YANDEX_VERIFICATION } from '@/constants'
+import { DEFAULT_COVER, MAILTO, MENU, THEME_COLOR, YANDEX_METRIKA, YANDEX_VERIFICATION } from '@/constants'
 
 import '@/style.css'
 import s from './layout.module.css'
+import { getPageBySlug } from '@/api'
 
 const font = Roboto({ weight: ['400', '900'], subsets: ['cyrillic', 'latin'] })
 
@@ -25,12 +26,20 @@ export const metadata: Metadata = {
     },
 }
 
+export function generateViewport({ params }: { params: { slug: string }}): Viewport {
+    const { slug } = params
+    const page = getPageBySlug('ru', slug)
+    const themeColor = page?.themeColor ?? THEME_COLOR
+    return {
+        themeColor,
+    }
+}
+
 export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const themeColor = 'ff0066'
     return (
         <html lang="ru">
             <head>
@@ -42,7 +51,6 @@ export default async function RootLayout({
 
                 <meta name="yandex-verification" content={YANDEX_VERIFICATION} />
                 <YMetrika account={YANDEX_METRIKA} />
-                <meta name="theme-color" content={themeColor} />
 
                 <link
                     rel="alternate"
