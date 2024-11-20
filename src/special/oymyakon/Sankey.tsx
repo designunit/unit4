@@ -25,7 +25,6 @@ interface ISankeyProps {
 }
 
 const NivoSankey = ResponsiveSankey as any
-// const Sankey = ResponsiveSankey
 
 export const Sankey: React.FC<ISankeyProps> = ({
     layout = 'horizontal',
