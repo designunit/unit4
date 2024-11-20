@@ -7,7 +7,6 @@ import { DEFAULT_COVER, MAILTO, MENU, THEME_COLOR, YANDEX_METRIKA, YANDEX_VERIFI
 
 import '@/style.css'
 import s from './layout.module.css'
-import { getPageBySlug } from '@/api'
 
 const font = Roboto({ weight: ['400', '900'], subsets: ['cyrillic', 'latin'] })
 
@@ -26,13 +25,8 @@ export const metadata: Metadata = {
     },
 }
 
-export function generateViewport({ params }: { params: { slug: string }}): Viewport {
-    const { slug } = params
-    const page = getPageBySlug('ru', slug)
-    const themeColor = page?.themeColor ?? THEME_COLOR
-    return {
-        themeColor,
-    }
+export const viewport: Viewport = {
+    themeColor: THEME_COLOR,
 }
 
 export default async function RootLayout({
