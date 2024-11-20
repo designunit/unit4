@@ -6,7 +6,7 @@ import { Menu } from '@/components/Menu'
 
 import s from './layout.module.css'
 import '@/style.css'
-import { MAILTO, MENU, YANDEX_METRIKA, YANDEX_VERIFICATION } from '@/constants'
+import { DEFAULT_COVER, MAILTO, MENU, YANDEX_METRIKA, YANDEX_VERIFICATION } from '@/constants'
 
 const font = Roboto({ weight: ["400", "900"], subsets: ["cyrillic", "latin"] });
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Студия средового дизайна',
     openGraph: {
         images: [
-            'https://unit4.io/static/2.jpg',
+            DEFAULT_COVER,
         ],
     },
     twitter: {
