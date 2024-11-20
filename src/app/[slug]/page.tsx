@@ -17,7 +17,11 @@ function loadPage(locale: string, slug: string) {
     }
 }
 
-export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+type MetadataProps = {
+    params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: MetadataProps, parent: ResolvingMetadata): Promise<Metadata> {
     const { slug } = await params
     const page = loadPage('ru', slug)
 
