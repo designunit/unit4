@@ -3,6 +3,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
 import mdxComponents from './mdx'
 import type { PageDefinition } from '@/types'
+import type { Metadata, ResolvingMetadata } from 'next'
 
 function loadPage(locale: string, slug: string) {
     let page = getPageBySlug(locale, slug)
@@ -16,6 +17,25 @@ function loadPage(locale: string, slug: string) {
     }
 }
 
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+    const { slug } = await params
+    const page = loadPage('ru', slug)
+
+    // fetch data
+    // const product = await fetch(`https://.../${id}`).then((res) => res.json())
+
+    // optionally access and extend (rather than replace) parent metadata
+    const previousImages = (await parent).openGraph?.images || []
+
+    return {
+        title: page!.title,
+        description: page!.excerpt,
+        openGraph: {
+            url: `https://unit4.io/${slug}`,
+            images: [page!.cover!, ...previousImages],
+        },
+    }
+}
 
 export async function generateStaticParams() {
     return getPages()
