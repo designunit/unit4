@@ -41,8 +41,6 @@
         "react": "^18.3.1",
         "react-compare-image": "^3.4.0",
         "react-dom": "^18.3.1",
-        "remark": "^13.0.0",
-        "remark-html": "^13.0.2",
         "swiper": "^11.1.0"
     },
     "devDependencies": {
