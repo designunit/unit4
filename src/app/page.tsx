@@ -1,8 +1,10 @@
+import type { Metadata } from 'next'
 import type { CardSize } from '@/types'
 import { Gallery } from '@/components/Gallery'
 import { GalleryItem } from '@/components/Gallery/GalleryItem'
 import { getPageBySlug } from '@/api'
 import { useAutoCardSize } from '@/hooks/useAutoCardSize'
+import { defaultPageCoverSrc } from '@/constants'
 
 type ProjectItem = {
     coverSrc: string
@@ -222,11 +224,10 @@ const projects: Partial<ProjectItem>[] = [
 
 function loadProjects(): ProjectItem[] {
     const locale = 'ru'
-    const defaultSrc = '/static/logo_unit4.jpg'
     return projects
         .map((project, i) => {
         const page = getPageBySlug(locale, project.href!)
-        const coverSrc = page?.cover ?? defaultSrc
+        const coverSrc = page?.cover ?? defaultPageCoverSrc
         const title = page?.title ?? ''
         const tags = [
             ...(page?.location ? [page?.location] : []),
@@ -245,6 +246,16 @@ function loadProjects(): ProjectItem[] {
         }
     })
 }
+
+export const metadata: Metadata = {
+    title: 'design unit 4',
+    description: 'Студия средового дизайна',
+    openGraph: {
+        images: [
+            defaultPageCoverSrc,
+        ],
+    },
+};
 
 const Page: React.FC = () => {
     const autosize = useAutoCardSize(6)

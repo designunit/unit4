@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { Title } from '@/components/Title'
 import { Table } from '@/components/Index/Table'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
@@ -5,6 +6,17 @@ import { RunningLine } from '@/components/RunningLine'
 import { Flex } from '@/components/Flex'
 import { Loud } from '@/components/Loud'
 import Image from 'next/legacy/image'
+import { defaultPageCoverSrc } from '@/constants'
+
+export const metadata: Metadata = {
+    title: 'design unit 4',
+    description: `Студия средового дизайна`,
+    openGraph: {
+        images: [
+            defaultPageCoverSrc,
+        ],
+    },
+};
 
 const Page: React.FC = () => {
     const vertOffset = '6rem'

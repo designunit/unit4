@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     // description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
     openGraph: {
         // images: [HOME_OG_IMAGE_URL],
+        images: [
+            {
+                url: 'https://unit4.io/static/logo_unit4.jpg',
+            },
+        ],
     },
 };
 

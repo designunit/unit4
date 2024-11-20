@@ -1,12 +1,22 @@
-import type { NextPage } from 'next'
+import type { Metadata } from 'next'
 import { TextBlock } from '@/components/TextBlock'
 import { Title } from '@/components/Title'
 import { Flex } from '@/components/Flex'
-import { mailto, tel, yandexLocation } from '@/constants'
+import { defaultPageCoverSrc, mailto, tel, telephone, yandexLocation } from '@/constants'
 
 const name = 'ООО "дизайн юнит 4"'
 
-const Page: NextPage = () => (
+export const metadata: Metadata = {
+    title: 'design unit 4',
+    description: `${telephone}`,
+    openGraph: {
+        images: [
+            defaultPageCoverSrc,
+        ],
+    },
+};
+
+const Page: React.FC = () => (
     <>
         <Title>
             КОНТАКТЫ
@@ -44,7 +54,7 @@ const Page: NextPage = () => (
 
             <TextBlock>
                 <a href={tel}>
-                    +7 921 9980303
+                    {telephone}
                 </a>
             </TextBlock>
         </Flex>

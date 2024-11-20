@@ -1,7 +1,7 @@
+import type { Metadata } from 'next'
 import { GalleryPartners, Item } from '@/components/GalleryPartners'
-import type { NextPage } from 'next'
-import React from 'react'
 import { Title } from '@/components/Title'
+import { defaultPageCoverSrc } from '@/constants';
 
 const items = [
     {
@@ -114,7 +114,17 @@ const items = [
     },
 ]
 
-const Page: NextPage = () => (
+export const metadata: Metadata = {
+    title: 'Партнеры design unit 4',
+    description: 'С нами работают',
+    openGraph: {
+        images: [
+            defaultPageCoverSrc,
+        ],
+    },
+};
+
+const Page: React.FC = () => (
     <>
         <Title>
             С нами работают
