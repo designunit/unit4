@@ -28,9 +28,8 @@
     --animation-scale-factor: 1.1;
     --animation-time: 0.25s;
 
-    --margin-s: 1em;
+    --margin-s: 0.75em;
     --margin-m: 3em;
-    --margin-l: 5em;
 
     --content-padding: 0;
 }
@@ -240,7 +239,10 @@ article figure > figcaption {
 
 @media screen and (max-width: 31.25em) {
     :root {
-        --content-padding: 0 0.5rem;
+        --margin-s: 0.75em;
+        --margin-m: 1em;
+
+        --content-padding: 0 1rem;
     }
 
     article > :is(h1, h2, h3, ) {

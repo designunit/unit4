@@ -15,12 +15,12 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: var(--content-padding);
 
     padding: 15%;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
+    padding-top: var(--margin-s);
+    padding-bottom: var(--margin-s);
 }
 
 .layout main {
@@ -31,7 +31,7 @@
     width: var(--page-size);
     margin: 0 auto;
     padding: var(--content-padding);
-    padding-bottom: var(--margin-m);
+    padding-bottom: var(--margin-s);
 
     display: flex;
     justify-content: space-between;
@@ -78,7 +78,5 @@
     }
     .layout header {
         padding: var(--content-padding);
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
     }
 }
