@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
 
 export async function generateStaticParams() {
     return getPages()
+        .filter(({ locale }) => locale === 'ru')
         .map(({ slug }) => ({ slug }))
 }
 
