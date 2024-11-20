@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import mdxComponents from './mdx'
 import type { PageDefinition } from '@/types'
 import type { Metadata, ResolvingMetadata } from 'next'
+import { DEFAULT_COVER } from '@/constants'
 
 function loadPage(locale: string, slug: string) {
     let page = getPageBySlug(locale, slug)
@@ -21,19 +22,16 @@ type MetadataProps = {
     params: Promise<{ slug: string }>
 }
 
-export async function generateMetadata({ params }: MetadataProps, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata({ params }: MetadataProps): Promise<Metadata> {
     const { slug } = await params
     const page = loadPage('ru', slug)
-
-    // optionally access and extend (rather than replace) parent metadata
-    const previousImages = (await parent).openGraph?.images || []
 
     return {
         title: page!.title,
         description: page!.excerpt,
         openGraph: {
             url: `https://unit4.io/${slug}`,
-            images: [page!.cover!, ...previousImages],
+            images: [page?.cover ?? DEFAULT_COVER],
         },
     }
 }
