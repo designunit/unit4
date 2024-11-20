@@ -11,6 +11,7 @@ import { DEFAULT_COVER, MAILTO, MENU, YANDEX_METRIKA, YANDEX_VERIFICATION } from
 const font = Roboto({ weight: ["400", "900"], subsets: ["cyrillic", "latin"] });
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://unit4.io'),
     title: 'design unit 4',
     description: 'Студия средового дизайна',
     openGraph: {
