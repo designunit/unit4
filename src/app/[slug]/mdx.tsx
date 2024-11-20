@@ -16,11 +16,10 @@ const HeterotopiaTitle = dynamic(() => import('@/special/heterotopia/Title'))
 const HeterotopiaHighlight = dynamic(() => import('@/special/heterotopia/Highlight'))
 
 const mdxComponents = {
-    Image: (props: ImageProps) => (
-        <div>
+    Image: (props: ImageProps & { caption?: string }) => (
+        <figure>
             <Image {...props}
                 style={{
-                    marginBottom: '2em',
                     objectFit: 'cover',
                     width: '100%',
                     height: 'auto',
@@ -29,7 +28,10 @@ const mdxComponents = {
                 width={props.width ?? 1920}
                 height={props.height ?? 1200}
             />
-        </div>
+            {!props.caption ? null : (
+                <figcaption>{props.caption}</figcaption>
+            )}
+        </figure>
     ),
     ImageSet: (props: ImageSetProps) => (
         <ImageSet {...props}

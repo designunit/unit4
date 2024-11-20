@@ -3,10 +3,11 @@ import { Roboto } from 'next/font/google'
 import { YMetrika } from '@/components/YMetrika'
 import { Logo } from '@/components/Logo'
 import { Menu } from '@/components/Menu'
-
-import s from './layout.module.css'
-import '@/style.css'
 import { DEFAULT_COVER, MAILTO, MENU, YANDEX_METRIKA, YANDEX_VERIFICATION } from '@/constants'
+
+import '@/style.css'
+import s from './layout.module.css'
+
 
 const font = Roboto({ weight: ["400", "900"], subsets: ["cyrillic", "latin"] });
 
