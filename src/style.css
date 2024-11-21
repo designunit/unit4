@@ -147,15 +147,6 @@ a:hover svg {
 
 /* ARTICLE STYLE */
 
-article {
-    /* margin-bottom: 50px; */
-
-    /* position: relative; */
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
-    /* max-width: 1000px; */
-}
-
 article h1 {
     margin-top: 2rem;
 }
