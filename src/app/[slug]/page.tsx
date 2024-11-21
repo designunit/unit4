@@ -41,11 +41,9 @@ export default async function Page({ params }: Props) {
     }
 
     return (
-        <article>
-            <MDXRemote
-                source={page.content!}
-                components={mdxComponents}
-            />
-        </article>
+        <MDXRemote
+            source={page.content!}
+            components={mdxComponents}
+        />
     )
 }

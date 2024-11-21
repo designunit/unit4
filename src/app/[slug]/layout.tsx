@@ -29,7 +29,9 @@ export default async function SlugLayout({ children, params }: { children: React
                     `}
                 </style>
             )}
-            {children}
+            <article>
+                {children}
+            </article>
         </>
     )
 }
