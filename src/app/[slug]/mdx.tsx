@@ -10,7 +10,7 @@ import { BeforeAfter } from '@/components/BeforeAfter'
 import type { ImageProps } from 'next/image'
 import type { ImageSetProps } from '@/components/ImageSet'
 
-const OymyakonSankey = dynamic(import('@/special/oymyakon/OymyakonSankey'))
+const OymyakonSankey = dynamic(() => import('@/special/oymyakon/OymyakonSankey'))
 const Carousel = dynamic(() => import('@/components/Carousel'))
 const HeterotopiaTitle = dynamic(() => import('@/special/heterotopia/Title'))
 const HeterotopiaHighlight = dynamic(() => import('@/special/heterotopia/Highlight'))

@@ -1,3 +1,5 @@
+'use client'
+
 import { Sankey } from './Sankey'
 import { WideBlock } from '@/components/WideBlock'
 

@@ -1,5 +1,3 @@
-'use client'
-
 import { ResponsiveSankey } from '@nivo/sankey'
 
 export interface INivoNode {
