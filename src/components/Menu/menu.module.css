@@ -51,7 +51,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 80px 20px;
+    padding: 120px var(--margin-m);
 
     display: flex;
     flex-direction: column;
