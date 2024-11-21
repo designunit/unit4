@@ -27,7 +27,6 @@
 
 @media screen and (max-width: 31.25em) {
     .gallery {
-        --item-right-margin: 0;
         --cell-size-min: 150px;
         --grid-gap: 8px;
         --padding: 0 8px;

@@ -62,7 +62,7 @@ export default async function RootLayout({
                     <Menu items={MENU} />
                     <Menu items={MENU} mobile />
                 </header>
-                <main className={s.content}>{children}</main>
+                <main>{children}</main>
                 <footer>
                     <section>© 2017-2024 design unit 4</section>
                     <section className={s.right}>
