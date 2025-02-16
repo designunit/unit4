@@ -10,7 +10,7 @@ const items = [
     },
     {
         src: '/static/partners/mla.png',
-        href: 'https://www.mlaplus.com/',
+        href: 'https://mlaplus.ru/',
     },
     {
         src: '/static/partners/centr-100.jpg',
