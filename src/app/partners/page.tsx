@@ -14,15 +14,15 @@ const items = [
     },
     {
         src: '/static/partners/centr-100.jpg',
-        href: 'https://www.centeragency.org/ru',
+        href: 'https://centeragency.org/ru',
     },
     {
         src: '/static/partners/zeitplan.png',
-        href: 'https://www.instagram.com/zeitplan_team/',
+        href: 'https://instagram.com/zeitplan_team/',
     },
     {
         src: '/static/partners/kf.png',
-        href: 'https://www.knightfrank.ru/',
+        href: 'https://knightfrank.ru/',
     },
     {
         src: '/static/partners/centr comp-100.jpg',
@@ -34,7 +34,7 @@ const items = [
     },
     {
         src: '/static/partners/admin-nya.png',
-        href: 'http://www.admnyagan.ru/',
+        href: 'http://admnyagan.ru/',
     },
     {
         src: '/static/partners/uray.png',
@@ -42,7 +42,7 @@ const items = [
     },
     {
         src: '/static/partners/centr myrmansk-100.jpg', // 10
-        href: 'https://www.instagram.com/centrgoroda51/',
+        href: 'https://instagram.com/centrgoroda51/',
     },
     {
         src: '/static/partners/volokalamsk.png',
@@ -54,7 +54,7 @@ const items = [
     },
     {
         src: '/static/partners/admin-tura.png',
-        href: 'https://www.v-tura.ru/',
+        href: 'https://v-tura.ru/',
     },
     {
         src: '/static/partners/institut nn-100.jpg',
@@ -70,7 +70,7 @@ const items = [
     },
     {
         src: '/static/partners/ispring.png',
-        href: 'https://www.ispring.ru/',
+        href: 'https://ispring.ru/',
     },
     {
         src: '/static/partners/kiselev-100.jpg',
@@ -86,7 +86,7 @@ const items = [
     },
     {
         src: '/static/partners/mishin.png',
-        href: 'https://www.facebook.com/StudioMishin/',
+        href: 'https://facebook.com/StudioMishin/',
     },
     {
         src: '/static/partners/epishkola-100.jpg',
@@ -94,11 +94,11 @@ const items = [
     },
     {
         src: '/static/partners/knappt.png',
-        href: 'http://www.knappt.com/',
+        href: 'http://knappt.com/',
     },
     {
         src: '/static/partners/8l.png',
-        href: 'http://www.llllllll.ru/',
+        href: 'http://llllllll.ru/',
     },
     {
         src: '/static/partners/kinglab.png',
