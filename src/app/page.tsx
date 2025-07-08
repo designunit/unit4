@@ -8,6 +8,7 @@ import { Loud } from '@/components/Loud'
 import Image from 'next/legacy/image'
 import { DEFAULT_COVER, MAILTO, TEL, TELEPHONE, YANDEX_LOCATION } from '@/constants'
 import { TextBlock } from '@/components/TextBlock'
+import { Partners } from '@/components/Partners'
 
 export const metadata: Metadata = {
     title: 'design unit 4',
@@ -251,6 +252,15 @@ const Page: React.FC = () => {
             <div style={{
                 marginTop: vertOffset,
             }} />
+
+            <div
+                id='partners'
+                style={{
+                    position: 'relative',
+                    top: '-2rem',
+                }}
+            />
+            <Partners />
 
             <div id='contacts' />
             <Title >
