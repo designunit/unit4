@@ -6,7 +6,8 @@ import { RunningLine } from '@/components/RunningLine'
 import { Flex } from '@/components/Flex'
 import { Loud } from '@/components/Loud'
 import Image from 'next/legacy/image'
-import { DEFAULT_COVER } from '@/constants'
+import { DEFAULT_COVER, MAILTO, TEL, TELEPHONE, YANDEX_LOCATION } from '@/constants'
+import { TextBlock } from '@/components/TextBlock'
 
 export const metadata: Metadata = {
     title: 'design unit 4',
@@ -250,6 +251,47 @@ const Page: React.FC = () => {
             <div style={{
                 marginTop: vertOffset,
             }} />
+
+            <Title>
+                КОНТАКТЫ
+            </Title>
+
+            <Flex col
+                style={{
+                    padding: 'var(--content-padding)',
+                    gap: '1rem',
+                }}
+            >
+                <TextBlock>
+                    <b>
+                        {'ООО "дизайн юнит 4"'}
+                    </b>
+                </TextBlock>
+
+                <TextBlock>
+                    <a href={MAILTO}>
+                        inbox@unit4.io
+                    </a>
+                </TextBlock>
+
+                <TextBlock>
+                    <a
+                        href={YANDEX_LOCATION}
+                        target='_blank' rel="noreferrer"
+                    >
+                        {'ООО "дизайн юнит 4"'}<br />
+                        Гражданская улица, 13-15<br />
+                        Санкт-Петербург<br />
+                        Россия
+                    </a>
+                </TextBlock>
+
+                <TextBlock>
+                    <a href={TEL}>
+                        {TELEPHONE}
+                    </a>
+                </TextBlock>
+            </Flex>
         </>
     )
 }
