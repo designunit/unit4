@@ -1,23 +1,28 @@
 .container {
     display: grid;
-    grid-template-columns: 50fr 20fr 10fr 20fr;
+    grid-template-columns: 30fr 25fr 25fr 10fr 10fr;
     gap: 0 1px;
 }
 
 .name {
-    flex: 1 0 50%;
+    flex: 1 0 30%;
 }
 
-.status {
-    flex: 1 0 20%;
+.client,
+.partners {
+    flex: 1 0 25%;
 }
 
-.year { 
+.location {
+    flex: 1 0 10%;
+}
+
+.year {
     flex: 1 0 10%;
     justify-content: center;
 }
 
-.container > * {
+.container>* {
     padding: 1rem;
     display: flex;
     justify-content: baseline;
@@ -27,11 +32,15 @@
 .name {
     padding-left: 0;
 }
-.container > *:last-child {
+
+.container>*:last-child {
     padding-right: 0;
 }
 
-.name, .status, .year {
+.name,
+.client,
+.partners,
+.year {
     border-right: solid 1px var(--color-background-opposite);
 }
 
@@ -39,11 +48,14 @@
     .container {
         grid-template-columns: 2fr 1fr;
     }
-    .container > * {
+
+    .container>* {
         padding: 1rem 8px;
     }
 
-    .status {
+    .client,
+    .partners,
+    .year {
         border-right: none;
     }
 
@@ -51,7 +63,9 @@
         padding-left: 0;
     }
 
-    .status {
+    .client,
+    .partners,
+    .year {
         padding-right: 0;
     }
 
