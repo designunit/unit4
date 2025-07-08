@@ -252,7 +252,8 @@ const Page: React.FC = () => {
                 marginTop: vertOffset,
             }} />
 
-            <Title>
+            <div id='contacts' />
+            <Title >
                 КОНТАКТЫ
             </Title>
 
