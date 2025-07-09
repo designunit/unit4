@@ -78,7 +78,7 @@ const items = [
 
 export const Partners: React.FC = () => (
     <>
-        <Title>
+        <Title as='h2'>
             С нами работают
         </Title>
 

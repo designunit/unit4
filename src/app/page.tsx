@@ -2,13 +2,14 @@ import type { Metadata } from 'next'
 import { Title } from '@/components/Title'
 import { Table } from '@/components/Index/Table'
 import { DoubleBlock } from '@/components/Index/DoubleBlock'
-import { RunningLine } from '@/components/RunningLine'
 import { Flex } from '@/components/Flex'
 import { Loud } from '@/components/Loud'
 import Image from 'next/legacy/image'
 import { DEFAULT_COVER, MAILTO, TEL, TELEPHONE, YANDEX_LOCATION } from '@/constants'
 import { TextBlock } from '@/components/TextBlock'
 import { Partners } from '@/components/Partners'
+import Carousel from '@/components/Carousel'
+import { WideBlock } from '@/components/WideBlock'
 
 export const metadata: Metadata = {
     title: 'design unit 4',
@@ -600,164 +601,198 @@ const Page: React.FC = () => {
 
     return (
         <>
-            <Loud as={'h1'}>
+            {/* <Loud as={'h1'}>
                 студия средового дизайна
-            </Loud>
+            </Loud> */}
+
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'stretch',
+                gap: '5rem',
+                padding: `${vertOffset} 0`,
+                minHeight: 'calc(100vh - 3rem)',
+                // justifyContent: 'center',
+            }}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.08 9.52"
+                    style={{
+                        width: 'auto',
+                        maxWidth: 'max(50vw, 300px)',
+                        margin: '0 auto',
+                        filter: 'invert(1)',
+                    }}
+                >
+                    <rect width="52.08" height="9.52" fill='white' />
+                    <rect x="35.28" y="6.16" width="1.68" height="1.68" />
+                    <polygon
+                        points="3.36 1.68 3.36 6.16 6.16 6.16 6.16 1.68 7.84 1.68 7.84 7.84 1.68 7.84 1.68 1.68 3.36 1.68"
+                    />
+                    <polygon
+                        points="8.4 1.68 12.32 1.68 12.32 6.16 12.88 6.16 12.88 1.68 14.56 1.68 14.56 7.84 10.64 7.84 10.64 3.36 10.08 3.36 10.08 7.84 8.4 7.84 8.4 1.68"
+                    />
+                    <path
+                        d="m15.12,5.6v-1.68h3.36v1.4c0,.46.38.84.84.84h1.96v1.68h-1.96c-1.3,0-2.36-.98-2.5-2.24h-1.69Zm1.68-3.92h1.68v1.68h-1.68v-1.68Z"
+                    />
+                    <polygon
+                        points="21.84 1.68 28 1.68 28 3.36 25.83 3.36 27.78 5.32 26.6 6.5 25.76 5.67 25.76 7.84 24.08 7.84 24.08 5.67 23.24 6.5 22.05 5.32 24.01 3.36 21.84 3.36 21.84 1.68"
+                    />
+                    {/* <g> */}
+                    <path
+                        d="m37.52,5.6v-1.68h3.36v1.4c0,.46.38.84.84.84h1.96v1.68h-1.96c-1.3,0-2.36-.98-2.5-2.24h-1.69Zm1.68-3.92h1.68v1.68h-1.68v-1.68Z"
+                    />
+                    <path
+                        d="m50.4,7.84h-6.16V1.68h6.16v6.16Zm-1.68-4.48h-2.8v2.8h2.8v-2.8Z"
+                    />
+                    {/* </g> */}
+                    <polygon
+                        points="34.72 3.91 32.48 3.91 32.48 1.68 30.79 1.68 30.79 3.91 30.25 3.91 30.25 1.68 28.56 1.68 28.56 3.91 28.56 5.6 30.25 5.6 30.79 5.6 30.79 7.84 32.48 7.84 32.48 5.6 34.72 5.6 34.72 3.91"
+                    />
+                </svg>
+                <p style={{
+                    fontSize: '1.5rem',
+                }}>
+                    <span style={{ fontWeight: 'bold' }}>архитектурная студия</span> из Санкт-Петербурга. Работаем с 2017 года
+                    Мы - команда экспертов пространственного развития, архитекторов и конструкторов, ГИС-аналитиков и разработчиков цифровых продуктов, специалистов по социокультурному проектированию и ландшафтных инженеров.
+                </p>
+                <div style={{
+                    display: 'flex',
+                    gap: '1rem',
+                    justifyContent: 'center',
+                    fontSize: '3rem',
+                    fontWeight: 'bold',
+                    lineHeight: '3rem',
+                    textAlign: 'center',
+                    // display: 'none', // in presentation uncoment to fix mobile 
+                }}>
+                    <div>
+                        25+<br />
+                        регионов
+                    </div>
+                    <div>
+                        8 лет<br />
+                        развиваем города
+                    </div>
+                    <div>
+                        70+ проектов<br />
+                        разных масштабов
+                    </div>
+                </div>
+            </div>
+
 
             <div style={{
                 position: 'relative',
             }}>
-                <div style={{
-                    marginTop: vertOffset,
-                }} />
+            </div>
+            <WideBlock>
+                <Carousel>
+                    <Image src="/static/1.jpg" width={1920} height={1080} alt="" />
+                    <Image src="/static/2.jpg" width={1920} height={1080} alt="" />
+                    <Image src="/static/3.jpg" width={1920} height={1080} alt="" />
+                </Carousel>
+            </WideBlock>
 
+            <div style={{
+                position: 'relative',
+                scrollBehavior: 'smooth',
+                paddingTop: vertOffset,
+            }}>
                 <div
                     style={{
-                        position: 'relative',
-                        height: 250,
-                        marginBottom: '4rem',
+                        position: 'sticky',
+                        top: '3.75rem',
+                        background: 'white',
+                        zIndex: 1,
+                        padding: '.5rem 0',
                     }}
                 >
-                    <Image
-                        quality={100}
-                        src={'/static/1.jpg'}
-                        alt={''}
-                        layout='fill'
-                        objectFit='cover'
-                    />
+                    <Flex>
+                        <a href='#masterplans'
+                            style={{
+                                textAlign: 'center',
+                                textDecoration: 'none',
+                                fontWeight: 'bold',
+                                fontSize: '1.5rem',
+                            }}
+                        >
+                            мастерпланы
+                        </a>
+                        <a href='#cityspace'
+                            style={{
+                                textAlign: 'center',
+                                textDecoration: 'none',
+                                fontWeight: 'bold',
+                                fontSize: '1.5rem',
+                            }}
+                        >
+                            городская среда
+                        </a>
+                        <a href='#digitalspace'
+                            style={{
+                                textAlign: 'center',
+                                textDecoration: 'none',
+                                fontWeight: 'bold',
+                                fontSize: '1.5rem',
+                            }}
+                        >
+                            цифровая среда
+                        </a>
+                    </Flex>
                 </div>
 
+                <div id='masterplans' />
                 <Title as='h2'>
-                    Средовое <br />
-                    проектирование
+                    <>
+                        мастер-планы
+                        <div style={{
+                            fontSize: '1rem',
+                            lineHeight: '1.5',
+                        }}>
+                            дизайн-код / стратегические документы и рамочные концепции / комплексное развитие территорий / архитектурно-градостроительные концепции / цифровой двойник / WEB 3д-модель
+                        </div>
+                    </>
                 </Title>
 
-                <div>
-                    <DoubleBlock
-                        left={[
-                            'проекты городской среды',
-                            'мастерпланы развития территорий',
-                            'экспертиза средовых проектов',
-                            'разработка дизайн-кода',
-                            'проекты образовательных сред',
-                        ]}
-                        right={(
-                            <>
-                                <div>
-                                    Сейчас по нашим проектам реализуются центральные пространства в нескольких городах: городской пляж и приморский парк в Дербенте, главная улица и скверы Питкяранты, набережная в Урае, лесопарк в Нягани, центральная улица в Волоколамске, а также территории двух жилых комплексов в Москве.
-                                </div>
-                                <div>
-                                    В Чистополе под нашим авторским надзором реализован проект реконструкции бульвара по Президентской программе Республики Татарстан. В результате мы прошли путь от первых скетчей до реализации с разработкой деталей уличного оборудования и уже три года получаем фидбек от проекта, который продолжает развиваться.
-                                </div>
-                            </>
-                        )}
-                    />
-                </div>
+                <Table data={tableDataMp} />
 
-                <div
-                    style={{
-                        margin: '4rem 0',
-                    }}
-                />
-
-                <div
-                    style={{
-                        position: 'relative',
-                        height: 250,
-                        marginBottom: '4rem',
-                    }}
-                >
-                    <Image
-                        quality={100}
-                        src={'/static/2.jpg'}
-                        layout='fill'
-                        objectFit='cover'
-                        objectPosition='left center'
-                        alt='design unit team'
-                    />
-                </div>
-
-                <Title as={'h2'}>
-                    Образование
+                <div id='cityspace' />
+                <Title as='h2'>
+                    <>
+                        городская среда
+                        <div style={{
+                            fontSize: '1rem',
+                            lineHeight: '1.5',
+                        }}>
+                            благоустройство территорий: концепция, ЭП, ПСД, РД, авторский надзор / проекты ФКГС / конкурсные заявки МГиИП / разработка уникальных объектов и МАФ / соучастие и социокультурное программирование / экспертиза средовых проектов
+                        </div>
+                    </>
                 </Title>
 
-                <div>
-                    <DoubleBlock
-                        left={[
-                            'образовательные программы',
-                            'профессиональные воркшопы',
-                            'тематические экскурсии',
-                            'организация цеховых конференций',
-                        ]}
-                        right={(
-                            <>
-                                <div>
-                                    Образование во всех смыслах становится базовым компонентом жизни студии: как внутри, так и снаружи. Создание обучающих программ, конференций и воркшопов, экспертное участие в международных грантовых проектах и конкурсах интегрируются в рабочий процесс, становясь его неотъемлемой частью.
-                                </div>
-                            </>
-                        )}
-                    />
-                </div>
+                <Table data={tableDataGs} />
 
-                <div
-                    style={{
-                        margin: '4rem 0',
-                    }}
-                />
-
-                <div
-                    style={{
-                        position: 'relative',
-                        height: 250,
-                        marginBottom: '4rem',
-                    }}
-                >
-                    <Image
-                        quality={100}
-                        src={'/static/3.jpg'}
-                        layout='fill'
-                        objectFit='cover'
-                        alt='design unit project'
-                    />
-                </div>
-
-                <Title as={'h2'}>
-                    Софт
+                <div id='digitalspace' />
+                <Title as='h2'>
+                    <>
+                        цифровая среда
+                        <div style={{
+                            fontSize: '1rem',
+                            lineHeight: '1.5',
+                        }}>
+                            цифровой двойник / WEB 3д-модель / инструменты городских исследований / анализ цифрового следа / онлайн платформа сбора мнений
+                        </div>
+                    </>
                 </Title>
 
-                <div>
-                    <DoubleBlock
-                        left={[
-                            'инструменты городских исследований ',
-                            'софт оптимизации процесса проектирования',
-                        ]}
-                        right={(
-                            <>
-                                <div>
-                                    В каждом проекте мы стремимся создавать особые фичи для оптимизации процесса проектирования. Такая специфика предприятия позволяет сфокусироваться на деталях дизайн-решений.
-                                </div>
-                            </>
-                        )}
-                    />
-                </div>
+                <Table data={tableDataCs} />
             </div>
 
-            <div style={{ height: vertOffset, paddingTop: '4rem' }} >
-                <RunningLine>
-                    <h2
-                        style={{
-                            textTransform: 'uppercase',
-                            fontSize: 46,
-                            margin: '0',
-                            color: 'black',
-                        }}
-                    >
-                        команда студии / plug-in структура / команда студии / plug-in структура / команда студии / plug-in структура / команда студии / plug-in структура /
-                    </h2>
-                </RunningLine>
-            </div>
-
-            <div style={{ height: '12rem' }} />
+            <div id='team' style={{
+                position: 'relative',
+                top: '-2rem',
+            }} />
+            <Title as='h2'>
+                команда
+            </Title>
 
             <Flex>
                 <ul>
@@ -800,47 +835,6 @@ const Page: React.FC = () => {
                 marginTop: vertOffset,
             }} />
 
-            {/* <Title as={'h2'}>
-                Победы в конкурсах
-            </Title> */}
-
-            <DoubleBlock
-                left={[]}
-                right={(
-                    <>
-                        <div
-                            style={{
-                                margin: '4rem 0',
-                            }}
-                        >
-                            В своих проектах мы создаем добавленное качество материального окружения. Важно конструировать такие пространства, которые не только поддерживают уже сложившиеся практики, но и инициируют новые.
-                        </div>
-                    </>
-                )}
-            />
-
-            <div style={{
-                marginTop: vertOffset,
-            }} />
-
-            <Title as='h2'>
-                table MP
-            </Title>
-
-            <Table data={tableDataMp} />
-
-            <Title as='h2'>
-                table GS
-            </Title>
-
-            <Table data={tableDataGs} />
-
-            <Title as='h2'>
-                table CS
-            </Title>
-
-            <Table data={tableDataCs} />
-
             <div
                 id='partners'
                 style={{
@@ -851,7 +845,7 @@ const Page: React.FC = () => {
             <Partners />
 
             <div id='contacts' />
-            <Title >
+            <Title as='h2' >
                 КОНТАКТЫ
             </Title>
 
