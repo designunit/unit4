@@ -1,5 +1,5 @@
 export const MENU = [
-        {
+    {
         href: '/#team',
         translationKey: 'about',
         text: 'команда',

@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
 import { Title } from '@/components/Title'
 import { Table } from '@/components/Index/Table'
-import { DoubleBlock } from '@/components/Index/DoubleBlock'
 import { Flex } from '@/components/Flex'
-import { Loud } from '@/components/Loud'
 import Image from 'next/legacy/image'
 import { DEFAULT_COVER, MAILTO, TEL, TELEPHONE, YANDEX_LOCATION } from '@/constants'
 import { TextBlock } from '@/components/TextBlock'
@@ -662,7 +660,7 @@ const Page: React.FC = () => {
                     fontWeight: 'bold',
                     lineHeight: '3rem',
                     textAlign: 'center',
-                    // display: 'none', // in presentation uncoment to fix mobile 
+                    // display: 'none', // in presentation uncoment to fix mobile
                 }}>
                     <div>
                         25+<br />
@@ -678,7 +676,6 @@ const Page: React.FC = () => {
                     </div>
                 </div>
             </div>
-
 
             <div style={{
                 position: 'relative',
