@@ -8,6 +8,10 @@ import { TextBlock } from '@/components/TextBlock'
 import { Partners } from '@/components/Partners'
 import Carousel from '@/components/Carousel'
 import { WideBlock } from '@/components/WideBlock'
+import { Hero } from '@/components/Index/Hero'
+import { TableButtons } from '@/components/Index/TableButtons'
+import Link from 'next/link'
+import s from '@/index.module.css'
 
 export const metadata: Metadata = {
     title: 'design unit 4',
@@ -598,84 +602,12 @@ const Page: React.FC = () => {
     const vertOffset = '6rem'
 
     return (
-        <>
+        <div className={s.container}>
             {/* <Loud as={'h1'}>
                 студия средового дизайна
             </Loud> */}
 
-            <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'stretch',
-                gap: '5rem',
-                padding: `${vertOffset} 0`,
-                minHeight: 'calc(100vh - 3rem)',
-                // justifyContent: 'center',
-            }}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.08 9.52"
-                    style={{
-                        width: 'auto',
-                        maxWidth: 'max(50vw, 300px)',
-                        margin: '0 auto',
-                        filter: 'invert(1)',
-                    }}
-                >
-                    <rect width="52.08" height="9.52" fill='white' />
-                    <rect x="35.28" y="6.16" width="1.68" height="1.68" />
-                    <polygon
-                        points="3.36 1.68 3.36 6.16 6.16 6.16 6.16 1.68 7.84 1.68 7.84 7.84 1.68 7.84 1.68 1.68 3.36 1.68"
-                    />
-                    <polygon
-                        points="8.4 1.68 12.32 1.68 12.32 6.16 12.88 6.16 12.88 1.68 14.56 1.68 14.56 7.84 10.64 7.84 10.64 3.36 10.08 3.36 10.08 7.84 8.4 7.84 8.4 1.68"
-                    />
-                    <path
-                        d="m15.12,5.6v-1.68h3.36v1.4c0,.46.38.84.84.84h1.96v1.68h-1.96c-1.3,0-2.36-.98-2.5-2.24h-1.69Zm1.68-3.92h1.68v1.68h-1.68v-1.68Z"
-                    />
-                    <polygon
-                        points="21.84 1.68 28 1.68 28 3.36 25.83 3.36 27.78 5.32 26.6 6.5 25.76 5.67 25.76 7.84 24.08 7.84 24.08 5.67 23.24 6.5 22.05 5.32 24.01 3.36 21.84 3.36 21.84 1.68"
-                    />
-                    {/* <g> */}
-                    <path
-                        d="m37.52,5.6v-1.68h3.36v1.4c0,.46.38.84.84.84h1.96v1.68h-1.96c-1.3,0-2.36-.98-2.5-2.24h-1.69Zm1.68-3.92h1.68v1.68h-1.68v-1.68Z"
-                    />
-                    <path
-                        d="m50.4,7.84h-6.16V1.68h6.16v6.16Zm-1.68-4.48h-2.8v2.8h2.8v-2.8Z"
-                    />
-                    {/* </g> */}
-                    <polygon
-                        points="34.72 3.91 32.48 3.91 32.48 1.68 30.79 1.68 30.79 3.91 30.25 3.91 30.25 1.68 28.56 1.68 28.56 3.91 28.56 5.6 30.25 5.6 30.79 5.6 30.79 7.84 32.48 7.84 32.48 5.6 34.72 5.6 34.72 3.91"
-                    />
-                </svg>
-                <p style={{
-                    fontSize: '1.5rem',
-                }}>
-                    <span style={{ fontWeight: 'bold' }}>архитектурная студия</span> из Санкт-Петербурга. Работаем с 2017 года
-                    Мы - команда экспертов пространственного развития, архитекторов и конструкторов, ГИС-аналитиков и разработчиков цифровых продуктов, специалистов по социокультурному проектированию и ландшафтных инженеров.
-                </p>
-                <div style={{
-                    display: 'flex',
-                    gap: '1rem',
-                    justifyContent: 'center',
-                    fontSize: '3rem',
-                    fontWeight: 'bold',
-                    lineHeight: '3rem',
-                    textAlign: 'center',
-                    // display: 'none', // in presentation uncoment to fix mobile
-                }}>
-                    <div>
-                        25+<br />
-                        регионов
-                    </div>
-                    <div>
-                        8 лет<br />
-                        развиваем города
-                    </div>
-                    <div>
-                        70+ проектов<br />
-                        разных масштабов
-                    </div>
-                </div>
-            </div>
+            <Hero />
 
             <div style={{
                 position: 'relative',
@@ -692,50 +624,9 @@ const Page: React.FC = () => {
             <div style={{
                 position: 'relative',
                 scrollBehavior: 'smooth',
-                paddingTop: vertOffset,
+                // paddingTop: vertOffset,
             }}>
-                <div
-                    style={{
-                        position: 'sticky',
-                        top: '3.75rem',
-                        background: 'white',
-                        zIndex: 1,
-                        padding: '.5rem 0',
-                    }}
-                >
-                    <Flex>
-                        <a href='#masterplans'
-                            style={{
-                                textAlign: 'center',
-                                textDecoration: 'none',
-                                fontWeight: 'bold',
-                                fontSize: '1.5rem',
-                            }}
-                        >
-                            мастерпланы
-                        </a>
-                        <a href='#cityspace'
-                            style={{
-                                textAlign: 'center',
-                                textDecoration: 'none',
-                                fontWeight: 'bold',
-                                fontSize: '1.5rem',
-                            }}
-                        >
-                            городская среда
-                        </a>
-                        <a href='#digitalspace'
-                            style={{
-                                textAlign: 'center',
-                                textDecoration: 'none',
-                                fontWeight: 'bold',
-                                fontSize: '1.5rem',
-                            }}
-                        >
-                            цифровая среда
-                        </a>
-                    </Flex>
-                </div>
+                <TableButtons />
 
                 <div id='masterplans' />
                 <Title as='h2'>
@@ -794,10 +685,10 @@ const Page: React.FC = () => {
             <Flex>
                 <ul>
                     {[
-                        ['Данияр Юсупов', 'главный архитектор студии'],
-                        ['Владимир Петросян', 'генеральный директор'],
-                        ['Надежда Кузнецова', 'главный архитектор'],
-                        ['Елизавета Владимирова', 'главный архитектор'],
+                        ['Данияр Юсупов', 'эксперт по стратегическому развитию  и пространственному планированию'],
+                        ['Владимир Петросян', 'генеральный директор, выпусник программы Архитекторы.рф 2021'],
+                        ['Елизавета Владимирова', 'главный архитектор проектов'],
+                        ['Надежда Кузнецова', 'соучредитель'],
                     ].map(([name, rang], i) => (
                         <div key={i}>
                             <span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}
@@ -806,19 +697,28 @@ const Page: React.FC = () => {
                 </ul>
                 <ul>
                     {[
-                        ['Сергей Барышев', 'дизайнер'],
-                        ['Роман Тимашев', 'разработчик'],
-                        ['Григорий Балуев', 'разработчик'],
-                        ['Арсений Юсупов', 'разработчик'],
-                        ['Александр Петросян', 'разработчик'],
-                        ['Алена Чеусова', 'архитектор'],
-                        ['Анастасия Матюшонок', 'архитектор'],
-                        ['Виктория Бинковская', 'архитектор'],
-                        ['Роберт Галиакбаров', 'архитектор'],
-                        ['Валентина Ермолаева', 'координатор'],
+                        ['Анастасия Эсмонтова', 'ведущий архитектор, конструктор'],
+                        ['Елизавета Антониади', 'ведущий архитектор, ГИС-аналитик'],
+                        ['Денис Мамедов', 'архитектор, ГИС-аналитик'],
+                        ['Павел Советников', 'архитектор'],
+                        ['Евгений Шестаков', 'архитектор'],
+                        ['Юля Кубракова', 'архитектор'],
+                        ['Полина Артемченко', 'архитектор'],
+                        ['Полина Мошель', 'архитектор'],
+                        ['Александра Мусина', 'архитектор'],
+                        ['Виктор Сергеев', 'консультант по развитию'],
+                        ['Сергей Барышев', 'графический дизайнер'],
+                        ['Роман Тимашев', 'фулстек-разработчик'],
+                        ['Арсений Юсупов', 'фронтенд-разработчик'],
+                        ['Александр Петросян', 'бэкенд-разработчик'],
+                        ['SISU', 'робот'],
                     ].map(([name, rang], i) => (
                         <div key={i}>
-                            <span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}
+                            {name == 'SISU' ? (
+                                <><Link href={'/sisu'} style={{ fontWeight: 'bold' }}>{name}</Link> : : {rang}</>
+                            ) : (
+                                <><span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}</>
+                            )}
                         </div>
                     ))}
                 </ul>
@@ -882,7 +782,7 @@ const Page: React.FC = () => {
                     </a>
                 </TextBlock>
             </Flex>
-        </>
+        </div>
     )
 }
 
