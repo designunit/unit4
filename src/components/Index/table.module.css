@@ -1,6 +1,7 @@
 .container {
+    position: relative;
     display: grid;
-    grid-template-columns: 30fr 25fr 25fr 10fr 10fr;
+    grid-template-columns: 40fr 25fr 10fr 25fr;
     gap: 0 1px;
 }
 
@@ -19,7 +20,6 @@
 
 .year {
     flex: 1 0 10%;
-    justify-content: center;
 }
 
 .container>* {
@@ -29,7 +29,8 @@
     align-items: baseline;
 }
 
-.name {
+.name,
+.header:nth-child(1) {
     padding-left: 0;
 }
 
@@ -40,17 +41,28 @@
 .name,
 .client,
 .partners,
-.year {
+.year,
+.header:not(:nth-child(4)) {
     border-right: solid 1px var(--color-background-opposite);
+}
+
+.header {
+    position: sticky;
+    top: calc(3.75rem + 4rem);
+    width: 100%;
+    font-weight: bold;
+    background: white;
+    z-index: 1;
 }
 
 @media screen and (max-width: 960px) {
     .container {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2fr;
     }
 
     .container>* {
         padding: 1rem 8px;
+        border-right: none;
     }
 
     .client,
@@ -69,8 +81,13 @@
         padding-right: 0;
     }
 
-    .mobileHidden {
+    .mobileHidden,
+    .header {
         display: none;
+    }
+
+    .header {
+        top: 3.75rem;
     }
 }
 

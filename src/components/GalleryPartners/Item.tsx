@@ -1,5 +1,4 @@
 import s from './item.module.css'
-import Link from 'next/link'
 import Image from 'next/image'
 
 export type ItemProps = {
@@ -9,7 +8,7 @@ export type ItemProps = {
 }
 
 export const Item: React.FC<ItemProps> = ({ href, src, alt }) => (
-    <Link href={href} className={s.item}>
+    <div className={s.item}>
         <Image
             src={src}
             alt={alt}
@@ -18,5 +17,5 @@ export const Item: React.FC<ItemProps> = ({ href, src, alt }) => (
                 objectFit: 'contain',
             }}
         />
-    </Link>
+    </div>
 )

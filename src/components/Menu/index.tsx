@@ -15,7 +15,7 @@ export type MenuProps = {
 export const Menu: React.FC<MenuProps> = ({ items, mobile = false }) => {
     if (mobile) {
         return (
-            <Mob items={items}/>
+            <Mob items={items} />
         )
     }
 
@@ -52,16 +52,16 @@ const Mob: React.FC<MenuProps> = ({ items }) => {
 
             <div className={s.links}>
                 <a
-                    href='mailto:inbox@unit4.io'
-                    target={'_blank'} rel="noreferrer"
-                >
-                    inbox@unit4.io
-                </a>
-                <a
                     href='tel:+79219980303'
                     target={'_blank'} rel="noreferrer"
                 >
                     +7 921 9980303
+                </a>
+                <a
+                    href='mailto:inbox@unit4.io'
+                    target={'_blank'} rel="noreferrer"
+                >
+                    inbox@unit4.io
                 </a>
             </div>
         </Burger>

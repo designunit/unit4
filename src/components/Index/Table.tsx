@@ -6,6 +6,18 @@ export const Table: React.FC<{ data: any[] }> = ({ data }) => (
     <div
         className={s.container}
     >
+        <div className={s.header}>
+            проект
+        </div>
+        <div className={s.header}>
+            клиент
+        </div>
+        <div className={s.header}>
+            год
+        </div>
+        <div className={s.header}>
+            локация
+        </div>
         {data.map((x, i) => (
             <React.Fragment key={i}>
                 {!!x.href ? (
@@ -20,10 +32,7 @@ export const Table: React.FC<{ data: any[] }> = ({ data }) => (
                 <div className={`${s.client} ${s.mobileHidden}`}>
                     {x.client}
                 </div>
-                <div className={`${s.partners} ${s.mobileHidden}`}>
-                    {x.partners}
-                </div>
-                <div className={s.year}>
+                <div className={`${s.year} ${s.mobileHidden}`}>
                     {x.year}
                 </div>
                 <div

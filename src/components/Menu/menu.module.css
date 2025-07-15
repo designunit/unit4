@@ -24,7 +24,7 @@
     color: var(--color-text);
     font-family: var(--font-second-family);
     font-size: var(--font-second-size);
-    padding: 3px 10px;
+    padding: 3px 0px;
     text-decoration: none;
 }
 
@@ -51,7 +51,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 120px var(--margin-m);
+    padding: 80px var(--margin-m) 120px;
 
     display: flex;
     flex-direction: column;
@@ -65,12 +65,12 @@
 
 .links {
     display: flex;
-    flex-flow: column;
+    justify-content: space-between;
     gap: 8px;
     text-align: right;
 }
 
-.links > a {
+.links>a {
     color: var(--color-text-opposite);
 }
 
@@ -103,6 +103,7 @@
     .burger {
         display: none;
     }
+
     .overlay {
         display: none;
     }
