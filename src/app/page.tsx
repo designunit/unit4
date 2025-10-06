@@ -1,15 +1,14 @@
 import type { Metadata } from 'next'
 import { Title } from '@/components/Title'
 import { Flex } from '@/components/Flex'
-import Image from 'next/legacy/image'
 import { DEFAULT_COVER, MAILTO, TEL, TELEPHONE, YANDEX_LOCATION } from '@/constants'
 import { TextBlock } from '@/components/TextBlock'
 import { Partners } from '@/components/Partners'
-import Carousel from '@/components/Carousel'
 import { Hero } from '@/components/Index/Hero'
 import { IndexTables } from '@/components/Index/IndexTables'
 import Link from 'next/link'
 import s from '@/index.module.css'
+import { IndexGallery } from '@/components/Index/IndexGallery'
 
 export const metadata: Metadata = {
     title: 'design unit 4',
@@ -26,21 +25,13 @@ const Page: React.FC = () => {
 
     return (
         <div className={s.container}>
-            {/* <Loud as={'h1'}>
-                студия средового дизайна
-            </Loud> */}
-
             <Hero />
 
             <div style={{
                 position: 'relative',
             }}>
             </div>
-            <Carousel>
-                <Image src="/static/1.jpg" width={1920} height={1080} alt="" />
-                <Image src="/static/2.jpg" width={1920} height={1080} alt="" />
-                <Image src="/static/3.jpg" width={1920} height={1080} alt="" />
-            </Carousel>
+            <IndexGallery />
 
             <IndexTables />
 
