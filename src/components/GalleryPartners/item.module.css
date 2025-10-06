@@ -3,14 +3,9 @@
     display: flex;
     flex-flow: column;
     overflow: hidden;
+    margin: 1rem;
 
     text-decoration: none;
 
-    /* border: solid 1px var(--color-background-opposite); */
-    /* transition: all 0.5s ease; */
     filter: grayscale(1);
-}
-
-.item:hover {
-    border-color: var(--link-color-active);
 }
