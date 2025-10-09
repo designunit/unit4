@@ -137,8 +137,6 @@ const Page: React.FC = () => (
                 <Item
                     key={x.src}
                     src={x.src}
-                    alt={''}
-                    href={x.href}
                 />
             ))}
         </GalleryPartners>
