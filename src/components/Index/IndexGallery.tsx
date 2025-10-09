@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Image from 'next/image'
 import { Autoplay, EffectCoverflow, Grid } from 'swiper/modules'
+import { type FC } from 'react'
 
 import s from './indexGallery.module.css'
 import 'swiper/css'
@@ -13,7 +14,7 @@ import { useIsMobile } from '@/hooks/useIsMobile'
 const images = Array(18).fill(null)
     .map((_, i) => `/index/${i + 1}.${[2, 11].includes(i + 1) ? 'gif' : 'png'}`)
 
-export const IndexGallery = () => {
+export const IndexGallery: FC = () => {
     const isMobile = useIsMobile()
     return (
         <>
@@ -21,7 +22,7 @@ export const IndexGallery = () => {
                 modules={[Autoplay, Grid, EffectCoverflow]}
                 loop
                 centeredSlides
-                slidesPerView={isMobile ? 2 : 3.5}
+                slidesPerView={isMobile ? 1.5 : 3.5}
                 autoHeight
                 effect='coverflow'
                 coverflowEffect={{
@@ -29,7 +30,7 @@ export const IndexGallery = () => {
                     rotate: 0,
                     slideShadows: false,
                     modifier: 1,
-                    scale: .6,
+                    scale: .7,
                     stretch: 0,
                 }}
                 autoplay={{
