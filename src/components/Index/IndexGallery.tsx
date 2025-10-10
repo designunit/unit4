@@ -22,7 +22,7 @@ export const IndexGallery: FC = () => {
                 modules={[Autoplay, Grid, EffectCoverflow]}
                 loop
                 centeredSlides
-                slidesPerView={isMobile ? 1.5 : 3.5}
+                slidesPerView={isMobile ? 1.5 : 2.5}
                 autoHeight
                 effect='coverflow'
                 coverflowEffect={{
@@ -30,7 +30,7 @@ export const IndexGallery: FC = () => {
                     rotate: 0,
                     slideShadows: false,
                     modifier: 1,
-                    scale: .7,
+                    scale: .8,
                     stretch: 0,
                 }}
                 autoplay={{

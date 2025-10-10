@@ -8,17 +8,12 @@ export const Hero: React.FC = () => {
         >
             <p style={{
                 fontSize: '1.5rem',
-                maxWidth: 'max(75vw, 500px)',
-                margin: '0 auto',
-                fontWeight: 'bold',
-            }}>
-                unit4.io — архитектурная студия из Санкт-Петербурга.
-            </p>
-            <p style={{
-                fontSize: '1.5rem',
-                maxWidth: 'max(75vw, 500px)',
+                maxWidth: 'max(55vw, 500px)',
                 margin: '0 auto',
             }}>
+                <span style={{ fontWeight: 'bold', }}>
+                    {'unit4.io — архитектурная студия из Санкт-Петербурга. '}
+                </span>
                 Работаем с 2017 года. Мы - команда экспертов пространственного развития, архитекторов и конструкторов, ГИС-аналитиков и разработчиков цифровых продуктов, специалистов по социокультурному проектированию и ландшафтных инженеров.
             </p>
             <div className={s.three}>

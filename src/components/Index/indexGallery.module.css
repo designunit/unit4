@@ -6,6 +6,6 @@
 }
 
 .slide {
-    min-height: min(50vh, 40vw);
+    min-height: min(70vh, 60vw);
     transform-origin: top center;
 }
