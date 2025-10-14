@@ -1,5 +1,6 @@
 import { Flex } from '../Flex'
 import s from './hero.module.css'
+import { IndexGallery } from './IndexGallery'
 
 export const Hero: React.FC = () => {
     return (
@@ -16,6 +17,9 @@ export const Hero: React.FC = () => {
                 </span>
                 Работаем с 2017 года. Мы - команда экспертов пространственного развития, архитекторов и конструкторов, ГИС-аналитиков и разработчиков цифровых продуктов, специалистов по социокультурному проектированию и ландшафтных инженеров.
             </p>
+
+            <IndexGallery />
+
             <div className={s.three}>
                 <Flex>
                     <div>

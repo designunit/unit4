@@ -8,7 +8,6 @@ import { Hero } from '@/components/Index/Hero'
 import { IndexTables } from '@/components/Index/IndexTables'
 import Link from 'next/link'
 import s from '@/index.module.css'
-import { IndexGallery } from '@/components/Index/IndexGallery'
 
 export const metadata: Metadata = {
     title: 'design unit 4',
@@ -26,12 +25,6 @@ const Page: React.FC = () => {
     return (
         <div className={s.container}>
             <Hero />
-
-            <div style={{
-                position: 'relative',
-            }}>
-            </div>
-            <IndexGallery />
 
             <IndexTables />
 

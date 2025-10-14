@@ -5,7 +5,6 @@
     align-items: stretch;
     gap: max(8rem, 15%);
     padding: 6rem 0;
-    min-height: max(min(100vh, 100vw) - 3rem, 100%);
 }
 
 .three {
@@ -16,7 +15,6 @@
     font-weight: bold;
     line-height: 3rem;
     text-align: center;
-    /* display: none; // in presentation uncomment to fix mobile */
 }
 
 .three>div {

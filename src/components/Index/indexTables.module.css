@@ -24,6 +24,12 @@
     background-color: var(--color-background-opposite);
     color: var(--color-text-opposite);
     padding: 0.5rem 1rem;
+    transition: background-color .25s;
+    ;
+}
+
+.container a:hover {
+    background-color: var(--link-color-focus);
 }
 
 .container>div {
