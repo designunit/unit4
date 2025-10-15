@@ -39,7 +39,7 @@ export const Burger: React.FC<BurgerProps> = ({ children, open, onClick }) => {
 
             <div className={s.overlay}
                 style={{
-                    left: open ? 0 : '100vw',
+                    left: open ? 0 : 'calc(100vw + 52px)',
                 }}
             >
                 {children}

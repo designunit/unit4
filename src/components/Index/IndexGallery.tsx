@@ -33,10 +33,11 @@ export const IndexGallery: FC = () => {
                     scale: .8,
                     stretch: 0,
                 }}
-                autoplay={{
-                    delay: 3000,
-                    pauseOnMouseEnter: true,
-                }}
+                spaceBetween={isMobile ? '-6.5%' : '-4%'}
+                // autoplay={{
+                //     delay: 3000,
+                //     pauseOnMouseEnter: true,
+                // }}
                 className={s.swiper}
             >
                 {images.map((x, i) => (
@@ -49,7 +50,7 @@ export const IndexGallery: FC = () => {
                             alt={''}
                             fill
                             style={{
-                                objectFit: 'contain',
+                                objectFit: 'cover',
                                 objectPosition: 'top center',
                             }}
                         />

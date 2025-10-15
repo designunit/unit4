@@ -90,9 +90,3 @@
         top: 3.75rem;
     }
 }
-
-@media screen and (max-width: 31.25em) {
-    .container {
-        padding: 0 16px;
-    }
-}

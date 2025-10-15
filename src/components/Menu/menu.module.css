@@ -8,9 +8,6 @@
 }
 
 .menu.desktop {
-    position: relative;
-    left: 10px;
-
     color: var(--color-text);
     background-color: var(--color-background);
     gap: 28px;
@@ -49,8 +46,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: max(100%, 100vw);
+    height: max(100%, 100vh);
     padding: 80px var(--margin-m) 120px;
 
     display: flex;
