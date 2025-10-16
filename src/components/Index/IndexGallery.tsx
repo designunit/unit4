@@ -12,7 +12,7 @@ import 'swiper/css/effect-coverflow'
 import { useIsMobile } from '@/hooks/useIsMobile'
 
 const images = Array(18).fill(null)
-    .map((_, i) => `/index/${i + 1}.${[2, 11].includes(i + 1) ? 'gif' : 'png'}`)
+    .map((_, i) => `/index/${i + 1}.${[6, 11].includes(i + 1) ? 'gif' : 'jpg'}`)
 
 export const IndexGallery: FC = () => {
     const isMobile = useIsMobile()

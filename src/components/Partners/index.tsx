@@ -10,7 +10,7 @@ const items = [
     '/static/partners/5.svg',
     '/static/partners/6.svg',
     '/static/partners/7.png',
-    '/static/partners/8.png',
+    '/static/partners/8.svg',
     '/static/partners/9.svg',
     '/static/partners/10.png',
     '/static/partners/11.svg',
