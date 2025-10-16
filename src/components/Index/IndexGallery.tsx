@@ -34,10 +34,10 @@ export const IndexGallery: FC = () => {
                     stretch: 0,
                 }}
                 spaceBetween={isMobile ? '-6.5%' : '-4%'}
-                // autoplay={{
-                //     delay: 3000,
-                //     pauseOnMouseEnter: true,
-                // }}
+                autoplay={{
+                    delay: 3000,
+                    pauseOnMouseEnter: true,
+                }}
                 className={s.swiper}
             >
                 {images.map((x, i) => (

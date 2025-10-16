@@ -20,7 +20,6 @@ const items = [
     '/static/partners/15.svg',
     '/static/partners/16.svg',
     '/static/partners/17.svg',
-    '/static/partners/18.svg',
 ]
 
 export const Partners: React.FC = () => (
