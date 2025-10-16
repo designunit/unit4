@@ -104,7 +104,7 @@ const Page: React.FC = () => {
             >
                 <TextBlock>
                     <b>
-                        {'ООО "дизайн юнит 4"'}
+                        {'ООО «дизайн юнит 4»'}
                     </b>
                 </TextBlock>
 
@@ -119,7 +119,7 @@ const Page: React.FC = () => {
                         href={YANDEX_LOCATION}
                         target='_blank' rel="noreferrer"
                     >
-                        {'ООО "дизайн юнит 4"'}<br />
+                        {'ООО «дизайн юнит 4»'}<br />
                         Гражданская улица, 13-15<br />
                         Санкт-Петербург<br />
                         Россия
