@@ -1,21 +1,16 @@
 export const MENU = [
     {
-        href: '/',
-        translationKey: 'projects',
-        text: 'проекты',
-    },
-    {
-        href: '/about',
+        href: '/#team',
         translationKey: 'about',
-        text: 'о нас',
+        text: 'команда',
     },
     {
-        href: '/partners',
+        href: '/#partners',
         translationKey: 'partners',
         text: 'партнеры',
     },
     {
-        href: '/contact',
+        href: '/#contacts',
         translationKey: 'contacts',
         text: 'контакты',
     },

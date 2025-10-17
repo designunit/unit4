@@ -1,5 +1,5 @@
 declare module 'next-link-active' {
-    import * as React from 'react'
+    import type * as React from 'react'
 
     interface ILinkActiveProps {
         children(active: boolean): React.ReactNode

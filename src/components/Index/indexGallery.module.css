@@ -1,0 +1,11 @@
+.swiper {
+    position: relative;
+    left: calc(var(--page-padding) * -1.5);
+    width: 100vw;
+    overflow: visible;
+}
+
+.slide {
+    transform-origin: top center;
+    min-height: min(50vh, 40vw);
+}

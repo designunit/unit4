@@ -8,9 +8,6 @@
 }
 
 .menu.desktop {
-    position: relative;
-    left: 10px;
-
     color: var(--color-text);
     background-color: var(--color-background);
     gap: 28px;
@@ -24,7 +21,7 @@
     color: var(--color-text);
     font-family: var(--font-second-family);
     font-size: var(--font-second-size);
-    padding: 3px 10px;
+    padding: 3px 0px;
     text-decoration: none;
 }
 
@@ -49,9 +46,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 120px var(--margin-m);
+    width: max(100%, 100vw);
+    height: max(100%, 100vh);
+    padding: 80px var(--margin-m) 120px;
 
     display: flex;
     flex-direction: column;
@@ -65,12 +62,12 @@
 
 .links {
     display: flex;
-    flex-flow: column;
+    justify-content: space-between;
     gap: 8px;
     text-align: right;
 }
 
-.links > a {
+.links>a {
     color: var(--color-text-opposite);
 }
 
@@ -103,6 +100,7 @@
     .burger {
         display: none;
     }
+
     .overlay {
         display: none;
     }

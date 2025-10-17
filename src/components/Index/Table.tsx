@@ -2,131 +2,45 @@ import Link from 'next/link'
 import React from 'react'
 import s from './table.module.css'
 
-const table = [
-    {
-        name: 'Открытый международный конкурс Москомархитектуры и ГК «А101» на разработку концепции общественных пространств 100 га территории ЖК «Скандинавия»',
-        href: 'https://architime.ru/competition/2017/competition280917nm.htm',
-        status: 'первое место',
-        year: '2017',
-        location: 'Москва',
-    },
-    {
-        name: 'Бульвар по ул. Карла Маркса Всероссийский конкурс лучших проектов создания комфортной городской среды Минстрой РФ',
-        href: 'https://konkurs2018.gorodsreda.ru/',
-        status: 'победитель грант 100 млн руб.',
-        year: '2018',
-        location: 'г. Чистополь, Республика Татарстан',
-    },
-    {
-        name: 'Открытый всероссийский конкурс с международным участием на создание концепции туристского кластера',
-        href: 'https://oymyakon.world/',
-        status: 'второе место',
-        year: '2019',
-        location: 'с. Оймякон, Республика Саха (Якутия)',
-    },
-    {
-        name: '«Московский тракт — купеческая улица древнейшего города» Всероссийский конкурс лучших проектов создания комфортной городской среды Минстрой РФ',
-        href: 'https://konkurs2020.gorodsreda.ru/february',
-        status: 'абсолютный победитель грант 50 млн. руб.',
-        year: '2020',
-        location: 'г. Волоколамск, Московская область',
-    },
-    {
-        name: '«Центральный лес культуры и отдыха» Всероссийский конкурс лучших проектов создания комфортной городской среды Минстрой РФ',
-        href: 'https://konkurs2020.gorodsreda.ru/',
-        status: 'абсолютный победитель грант 100 млн. руб.',
-        year: '2020',
-        location: 'г. Нягань, Ханты-Мансийский автономный округ',
-    },
-    {
-        name: '«Берег Сури - набережная реки Конда» Всероссийский конкурс лучших проектов создания комфортной городской среды Минстрой РФ',
-        href: 'https://konkurs2020.gorodsreda.ru/',
-        status: 'грант 80 млн. руб.',
-        year: '2020',
-        location: 'г. Урай, Ханты-Мансийский автономный округ',
-    },
-    {
-        name: '«Питкяранта для людей» Всероссийский конкурс лучших проектов создания комфортной городской среды Минстрой РФ',
-        href: 'https://konkurs2020.gorodsreda.ru/',
-        status: 'грант 49,5 млн. руб.',
-        year: '2020',
-        location: 'г. Питкяранта, Республика Карелия',
-    },
-    {
-        name: '«Верхнетуринская панорама» Всероссийский конкурс лучших проектов создания комфортной городской среды Минстрой РФ',
-        href: 'https://konkurs.gorodsreda.ru/',
-        status: 'грант 50 млн. руб.',
-        year: '2021',
-        location: 'г. Верхняя Тура, Свердловская область',
-    },
-    {
-        name: '«Жемчужная площадь» Всероссийский конкурс лучших проектов создания комфортной городской среды Минстрой РФ',
-        href: 'https://konkurs.gorodsreda.ru/',
-        status: 'грант 50 млн. руб.',
-        year: '2021',
-        location: 'г. Кемь, Республика Карелия',
-    },
-    {
-        name: 'Открытый международный конкурс на разработку архитектурно-градостроительной концепции нового города в Сахалинской области',
-        href: 'https://sakhalinecopolis.ru/',
-        status: 'второе место',
-        year: '2021',
-        location: 'г. Корсаков, Сахалинская область',
-    },
-    {
-        name: '"Набережная реки Песчанка" Всероссийский конкурс лучших проектов создания комфортной городской среды Минстрой РФ',
-        href: 'https://konkurs.gorodsreda.ru/konkurs1-2022',
-        status: 'грант 85 млн. руб.',
-        year: '2022',
-        location: 'г. Соль-Илецк, Оренбургская область',
-    },
-    {
-        name: 'Открытый всероссийский конкурс по созданию мастер-плана города Якутска',
-        href: 'https://masterplan-yakutsk.ru/',
-        status: 'первое место',
-        year: '2022',
-        location: 'г. Якутск, Республика Саха (Якутия)',
-    },
-    {
-        name: '"Современная история древнего города: Улицы Школьная и Парковая" Всероссийский конкурс лучших проектов создания комфортной городской среды Минстрой РФ',
-        href: 'https://youtu.be/83rdDV2CozM?t=4655',
-        status: 'победитель',
-        year: '2022',
-        location: 'г. Волоколамск, Московская область',
-    },
-    {
-        name: 'Архитектурно-градостроительный конкурс «Ресурс периферии» на эскизный проект благоустройства территории вблизи Шуваловского карьера',
-        href: 'https://www.gov.spb.ru/gov/otrasl/architecture/news/251205/',
-        status: 'второе место',
-        year: '2022',
-        location: 'г. Санкт-Петербург',
-    },
-].reverse()
-
-export const Table: React.FC = () => (
+export const Table: React.FC<{ data: any[] }> = ({ data }) => (
     <div
         className={s.container}
     >
-        {table.map((x, i) => (
+        <div className={s.header}>
+            проект
+        </div>
+        <div className={s.header}>
+            клиент
+        </div>
+        <div className={s.header}>
+            год
+        </div>
+        <div className={s.header}>
+            локация
+        </div>
+        {data.map((x, i) => (
             <React.Fragment key={i}>
-                <Link href={x.href} className={s.name}>
-                    {x.name}
-                </Link>
-                <div className={s.status}>
-                    {x.status}
+                {!!x.href ? (
+                    <Link href={x.href} className={s.name}>
+                        {x.name}
+                    </Link>
+                ) : (
+                    <div className={s.name}>
+                        {x.name}
+                    </div>
+                )}
+                <div className={`${s.client} ${s.mobileHidden}`}>
+                    {x.client}
                 </div>
-                <div className={`${s.mobileHidden} ${s.year}`}>
+                <div className={`${s.year} ${s.mobileHidden}`}>
                     {x.year}
                 </div>
                 <div
-                    className={s.mobileHidden}
-                    style={{
-                        flex: '1 0 20%',
-                    }}
+                    className={`${s.location} ${s.mobileHidden}`}
                 >
                     {x.location}
                 </div>
-            </React.Fragment>
+            </React.Fragment >
         ))}
-    </div>
+    </div >
 )

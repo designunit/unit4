@@ -1,257 +1,18 @@
 import type { Metadata } from 'next'
-import type { CardSize } from '@/types'
-import { Gallery } from '@/components/Gallery'
-import { GalleryItem } from '@/components/Gallery/GalleryItem'
-import { getPageBySlug } from '@/api'
-import { useAutoCardSize } from '@/hooks/useAutoCardSize'
-import { DEFAULT_COVER, URL_BASE } from '@/constants'
-
-type ProjectItem = {
-    coverSrc: string
-    title: string
-    href: string
-    caption: string
-    tags: string[]
-    size?: CardSize
-}
-
-const projects: Partial<ProjectItem>[] = [
-    {
-        href: '/nefteyugansk',
-        size: 4,
-    },
-    {
-        href: '/verhoturie',
-        size: 2,
-    },
-    {
-        href: '/verhnyayatura',
-        size: 2,
-    },
-    {
-        href: '/volokolamsk-2',
-        size: 2,
-    },
-    {
-        href: '/yakutsk',
-        size: 1,
-    },
-    {
-        href: '/photostream',
-        size: 4,
-    },
-    {
-        href: '/shvl-spb',
-        size: 2,
-    },
-    {
-        href: '/skysoul',
-        size: 2,
-    },
-    {
-        href: '/mesto',
-        size: 2,
-    },
-    {
-        href: '/perm',
-        size: 2,
-    },
-    {
-        href: '/mur-shmidta',
-        size: 4,
-    },
-    {
-        href: '/volkhov',
-        size: 2,
-    },
-    {
-        href: '/sisu',
-        size: 2,
-    },
-    {
-        href: '/v-tura',
-        size: 2,
-    },
-    {
-        href: '/pitkyaranta',
-        size: 2,
-    },
-    {
-        href: '/derbent',
-        size: 4,
-    },
-    {
-        href: '/zapolyarniy',
-        size: 1,
-    },
-    {
-        href: '/gyumri',
-        size: 1,
-    },
-    {
-        href: '/kandelaki',
-        size: 2,
-    },
-    {
-        href: '/bereguray',
-        size: 2,
-    },
-    {
-        href: '/sreda800',
-        size: 2,
-    },
-    {
-        href: '/nyagan',
-        size: 4,
-    },
-    {
-        href: '/epischool',
-        size: 2,
-    },
-    {
-        href: '/parnas',
-        size: 1,
-    },
-    {
-        href: '/whatever',
-        size: 1,
-    },
-    {
-        href: '/krasnokamsk',
-        size: 1,
-    },
-    {
-        href: '/heterotopia',
-        size: 1,
-    },
-    {
-        href: '/ugra-edu',
-        size: 2,
-    },
-    {
-        href: '/volokolamsk',
-        size: 4,
-    },
-    {
-        href: '/uray-ppi',
-        size: 2,
-    },
-    {
-        href: '/delta',
-        size: 2,
-    },
-    {
-        href: '/hovrinka',
-        size: 1,
-    },
-    {
-        href: '/gorprojects-spb',
-        size: 1,
-    },
-    {
-        href: '/application-manual',
-        size: 2,
-    },
-    {
-        href: '/oymyakon',
-        size: 4,
-    },
-    {
-        href: '/yoshkola',
-        size: 2,
-    },
-    {
-        href: '/scnd-boulevard',
-        size: 1,
-    },
-    {
-        href: '/scnd-park',
-        size: 1,
-    },
-    {
-        href: '/shelter',
-        size: 1,
-    },
-    {
-        href: '/swarm',
-        size: 1,
-    },
-    {
-        href: '/scnd-dc',
-        size: 2,
-    },
-    {
-        href: '/scnd-gb',
-        size: 4,
-    },
-    {
-        href: '/samarapark',
-        size: 2,
-    },
-    {
-        href: '/scnd-d',
-        size: 2,
-    },
-    {
-        href: '/garagescreen',
-        size: 1,
-    },
-    {
-        href: '/krvostok',
-        size: 1,
-    },
-    {
-        href: '/chistopol2',
-        size: 2,
-    },
-    {
-        href: '/trollgardens',
-        size: 4,
-    },
-    {
-        href: '/kemb',
-        size: 2,
-    },
-    {
-        href: '/model4',
-        size: 2,
-    },
-    {
-        href: '/chistopol',
-        size: 2,
-    },
-]
-
-function loadProjects(): ProjectItem[] {
-    const locale = 'ru'
-    return projects
-        .map((project, i) => {
-            const page = getPageBySlug(locale, project.href!)
-            const coverSrc = page?.cover ?? DEFAULT_COVER
-            const title = page?.title ?? ''
-            const tags = [
-                ...(page?.location ? [page?.location] : []),
-                ...(page?.year ? [page?.year] : []),
-                ...page?.tags ?? [],
-            ] as string[]
-            const caption = '' // TODO: use actual data here
-
-            return {
-                href: project.href!,
-                size: project.size,
-                caption,
-                coverSrc,
-                title,
-                tags,
-            }
-        })
-}
+import { Title } from '@/components/Title'
+import { Flex } from '@/components/Flex'
+import { DEFAULT_COVER, MAILTO, TEL, TELEPHONE, YANDEX_LOCATION } from '@/constants'
+import { TextBlock } from '@/components/TextBlock'
+import { Partners } from '@/components/Partners'
+import { Hero } from '@/components/Index/Hero'
+import { IndexTables } from '@/components/Index/IndexTables'
+import Link from 'next/link'
+import s from '@/index.module.css'
 
 export const metadata: Metadata = {
     title: 'design unit 4',
     description: 'Студия средового дизайна',
     openGraph: {
-        url: `${URL_BASE}/`,
         images: [
             DEFAULT_COVER,
         ],
@@ -259,23 +20,119 @@ export const metadata: Metadata = {
 }
 
 const Page: React.FC = () => {
-    const autosize = useAutoCardSize(6)
-    const projects = loadProjects()
+    const vertOffset = '6rem'
 
     return (
-        <Gallery>
-            {projects.map((x, i) => (
-                <GalleryItem
-                    key={x.href}
-                    src={x.coverSrc}
-                    alt={x.caption}
-                    title={x.title}
-                    tags={x.tags}
-                    href={x.href}
-                    size={x?.size ?? autosize(i)}
-                />
-            ))}
-        </Gallery>
+        <div className={s.container}>
+            <Hero />
+
+            <IndexTables />
+
+            <div id='team' style={{
+                position: 'relative',
+                top: '-2rem',
+            }} />
+            <Title as='h2'>
+                команда
+            </Title>
+
+            <Flex>
+                <ul>
+                    {[
+                        ['Данияр Юсупов', 'эксперт по стратегическому развитию  и пространственному планированию'],
+                        ['Владимир Петросян', 'генеральный директор, выпусник программы Архитекторы.рф 2021'],
+                        ['Елизавета Владимирова', 'главный архитектор проектов'],
+                        ['Надежда Кузнецова', 'соучредитель'],
+                    ].map(([name, rang], i) => (
+                        <div key={i}>
+                            <span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}
+                        </div>
+                    ))}
+                </ul>
+                <ul>
+                    {[
+                        ['Елизавета Антониади', 'ведущий архитектор, ГИС-аналитик'],
+                        ['Денис Мамедов', 'архитектор, ГИС-аналитик'],
+                        ['Евгений Шестаков', 'архитектор'],
+                        ['Юля Кубракова', 'архитектор'],
+                        ['Полина Артемченко', 'архитектор'],
+                        ['Александра Мусина', 'архитектор'],
+                        ['Сергей Барышев', 'графический дизайнер'],
+                        ['Роман Тимашев', 'фулстек-разработчик'],
+                        ['Арсений Юсупов', 'фронтенд-разработчик'],
+                        ['Александр Петросян', 'бэкенд-разработчик'],
+                        ['SISU', 'робот'],
+                    ].map(([name, rang], i) => (
+                        <div key={i}>
+                            {name == 'SISU' ? (
+                                <><Link href={'/sisu'} style={{ fontWeight: 'bold' }}>{name}</Link> : : {rang}</>
+                            ) : (
+                                <><span style={{ fontWeight: 'bold' }}>{name}</span> : : {rang}</>
+                            )}
+                        </div>
+                    ))}
+                </ul>
+            </Flex>
+
+            <p style={{ padding: 'var(--content-padding)' }}>
+                С нами работали: Анастасия Славина, Анита Попова, Артем Никитин, Валера Газаров, Вероника Серебрякова, Виктор Сергеев, Даниил Савинский, Джульетта Боброва, Катя Попова, Евгений Щукин, Елизавета Челнокова, Кирилл Петров, Максим Птица, Марина Цай, Михаил Палькин, Никита Сидоров, Николай Медведенко, Оля Чернякова, Петр Шуба, Соня Шишкина, Эдуард Лефлер, Анастасия Эсмонтова, Павел Советников, Виктор Сергеев, Полина Мошель
+            </p>
+
+            <div style={{
+                marginTop: vertOffset,
+            }} />
+
+            <div
+                id='partners'
+                style={{
+                    position: 'relative',
+                    top: '-2rem',
+                }}
+            />
+            <Partners />
+
+            <div id='contacts' />
+            <Title as='h2' >
+                КОНТАКТЫ
+            </Title>
+
+            <Flex col
+                style={{
+                    padding: 'var(--content-padding)',
+                    gap: '1rem',
+                }}
+            >
+                <TextBlock>
+                    <b>
+                        {'ООО «дизайн юнит 4»'}
+                    </b>
+                </TextBlock>
+
+                <TextBlock>
+                    <a href={MAILTO}>
+                        inbox@unit4.io
+                    </a>
+                </TextBlock>
+
+                <TextBlock>
+                    <a
+                        href={YANDEX_LOCATION}
+                        target='_blank' rel="noreferrer"
+                    >
+                        {'ООО «дизайн юнит 4»'}<br />
+                        Гражданская улица, 13-15<br />
+                        Санкт-Петербург<br />
+                        Россия
+                    </a>
+                </TextBlock>
+
+                <TextBlock>
+                    <a href={TEL}>
+                        {TELEPHONE}
+                    </a>
+                </TextBlock>
+            </Flex>
+        </div>
     )
 }
 
