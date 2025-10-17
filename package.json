@@ -28,8 +28,6 @@
     "homepage": "https://github.com/destroytheimage/designunit4#readme",
     "dependencies": {
         "@babel/helper-call-delegate": "^7.12.13",
-        "@mdi/js": "^7.4.47",
-        "@mdi/react": "^1.6.1",
         "@nivo/core": "^0.88.0",
         "@nivo/sankey": "^0.88.0",
         "date-fns": "^2.28.0",

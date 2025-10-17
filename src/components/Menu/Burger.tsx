@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import s from './menu.module.css'
-import Icon from '@mdi/react'
-import { mdiDragHorizontalVariant, mdiClose } from '@mdi/js'
+import Image from 'next/image'
 
 export type BurgerProps = {
     open: boolean
@@ -25,14 +24,27 @@ export const Burger: React.FC<BurgerProps> = ({ children, open, onClick }) => {
         <>
             <button className={s.burger} onClick={onClick}>
                 {open ? (
-                    <Icon
-                        path={mdiClose}
-                        color={'var(--color-background)'}
+                    <Image
+                        src={'/static/closeMenu.svg'}
+                        width={33}
+                        height={33}
+                        alt={''}
+                        style={{
+                            filter: 'invert(1)',
+                            outline: 'none',
+                            padding: 4,
+                        }}
                     />
                 ) : (
-                    <Icon
-                        path={mdiDragHorizontalVariant}
-                        color={'var(--color-background-opposite)'}
+                    <Image
+                        src={'/static/menu.svg'}
+                        width={33}
+                        height={33}
+                        alt={''}
+                        style={{
+                            outline: 'none',
+                            padding: 4,
+                        }}
                     />
                 )}
             </button>
