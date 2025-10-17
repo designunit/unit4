@@ -61,10 +61,10 @@ export default async function RootLayout({
                     />
                     <Menu items={MENU} />
                     <Menu
-                        items={MENU.concat([
+                        items={[
                             {
                                 href: '/#masterplans',
-                                text: 'мастерпланы',
+                                text: 'мастер-планы',
                                 translationKey: '',
                             },
                             {
@@ -74,10 +74,10 @@ export default async function RootLayout({
                             },
                             {
                                 href: '/#цифровая среда',
-                                text: 'мастерпланы',
+                                text: 'цифровая среда',
                                 translationKey: '',
                             },
-                        ])}
+                        ].concat(MENU)}
                         mobile
                     />
                 </header>
