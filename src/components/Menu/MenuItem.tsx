@@ -1,13 +1,13 @@
 import { LinkActive } from '@/components/LinkActive'
 import s from './menu.module.css'
 
-export interface IMenuItemProps {
+export interface MenuItemProps {
     href: string
     text: string
     onClick?: () => void
 }
 
-export const MenuItem: React.FC<IMenuItemProps> = ({ href, text, onClick }) => (
+export const MenuItem: React.FC<MenuItemProps> = ({ href, text, onClick }) => (
     <li>
         <LinkActive href={href} passHref legacyBehavior={true}>
             {active => active

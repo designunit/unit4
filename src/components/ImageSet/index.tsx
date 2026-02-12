@@ -31,7 +31,7 @@ export const ImageSet: React.FC<ImageSetProps> = ({items, span, style, width, he
                 })
                 .map((x, i) => (
                     <Image
-                        key={i}
+                        key={x.src}
                         src={x.src}
                         alt={x.alt}
                         width={width}

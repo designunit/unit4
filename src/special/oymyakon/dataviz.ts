@@ -1,8 +1,8 @@
 import flatMap from 'lodash/flatMap'
-import type { INivoLink } from './Sankey'
+import type { NivoLink } from './Sankey'
 import { arrayToDomains } from '@/lib/array'
 
-export function collect(transitions: Array<[number, string[]]>): INivoLink[] {
+export function collect(transitions: Array<[number, string[]]>): NivoLink[] {
     const result = flatMap(transitions, link => {
         const value = link[0] as number
         const transition = link[1] as string[]
@@ -27,7 +27,7 @@ export function collect(transitions: Array<[number, string[]]>): INivoLink[] {
             value,
         })
         return acc
-    }, new Map<string, INivoLink>())
+    }, new Map<string, NivoLink>())
 
     return Array.from(
         result.values(),

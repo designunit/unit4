@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import { moveItemByIndex, arrayToDomains } from './array'
 
 describe('lib array', () => {
@@ -21,7 +22,7 @@ describe('lib array', () => {
         })
     })
     
-    describe('moveItemByIndex', () => {
+    describe('arrayToDomains', () => {
         it('should properly map items to domains', () => {
             const sample = arrayToDomains(['q', 'w', 'e', 'r', 't', 'y'])
             

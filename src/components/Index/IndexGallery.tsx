@@ -40,9 +40,9 @@ export const IndexGallery: FC = () => {
                 }}
                 className={s.swiper}
             >
-                {images.map((x, i) => (
+                {images.map((x) => (
                     <SwiperSlide
-                        key={i}
+                        key={x}
                         className={s.slide}
                     >
                         <Image

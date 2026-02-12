@@ -10,7 +10,7 @@
         "build": "next build",
         "lint": "next lint",
         "format": "next lint -- --fix",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "vitest run"
     },
     "repository": {
         "type": "git",
@@ -51,6 +51,7 @@
         "eslint": "^8.33.0",
         "eslint-config-next": "^15.5.0",
         "eslint-plugin-import": "^2.26.0",
-        "typescript": "^5.6.3"
+        "typescript": "^5.6.3",
+        "vitest": "^4.0.18"
     }
 }

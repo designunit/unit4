@@ -1,20 +1,20 @@
 import { ResponsiveSankey } from '@nivo/sankey'
 
-export interface INivoNode {
+export interface NivoNode {
     id: string,
     color?: string,
 }
 
-export interface INivoLink {
+export interface NivoLink {
     source: string,
     target: string,
     value: number,
 }
 
-interface ISankeyProps {
+interface SankeyProps {
     data: {
-        links: INivoLink[]
-        nodes: INivoNode[],
+        links: NivoLink[]
+        nodes: NivoNode[],
     }
     defaultColorSet: string[]
     showLegend: boolean
@@ -24,7 +24,7 @@ interface ISankeyProps {
 
 const NivoSankey = ResponsiveSankey as any
 
-export const Sankey: React.FC<ISankeyProps> = ({
+export const Sankey: React.FC<SankeyProps> = ({
     layout = 'horizontal',
     labelLayout = 'horizontal',
     ...props },
