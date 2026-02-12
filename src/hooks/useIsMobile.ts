@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 type UseIsMobile = (breakpoint?: number, ssrDefault?: boolean) => boolean
 
-export const useIsMobile: UseIsMobile = (breakpoint = 960, ssrDefault = true) => {
+export const useIsMobile: UseIsMobile = (breakpoint = 960, ssrDefault = false) => {
     const [isMobile, setIsMobile] = useState(ssrDefault)
 
     useEffect(() => {

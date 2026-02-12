@@ -1,10 +1,10 @@
 import * as React from 'react'
 
-export interface IUnitCanvasProps {
+export interface UnitCanvasProps {
     style?: React.CSSProperties
 }
 
-export default class UnitCanvas extends React.Component<IUnitCanvasProps, {}> {
+export default class UnitCanvas extends React.Component<UnitCanvasProps, {}> {
     public running = false
 
     private angle: number
@@ -17,7 +17,7 @@ export default class UnitCanvas extends React.Component<IUnitCanvasProps, {}> {
     private imgRef: React.RefObject<HTMLImageElement>
     private stopTimeout: NodeJS.Timeout | null
 
-    constructor(props: IUnitCanvasProps) {
+    constructor(props: UnitCanvasProps) {
         super(props)
 
         this.frameId = 0

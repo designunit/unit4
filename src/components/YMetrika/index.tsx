@@ -31,11 +31,11 @@ function getMetrika(account: string): string {
     `
 }
 
-export interface IYMetrikaProps {
+export interface YMetrikaProps {
     account: string
 }
 
-export const YMetrika: React.FC<IYMetrikaProps> = props => {
+export const YMetrika: React.FC<YMetrikaProps> = props => {
     const script = getMetrika(props.account)
 
     return (

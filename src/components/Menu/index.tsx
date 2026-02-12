@@ -1,14 +1,15 @@
 'use client'
 
 import { MenuItem } from './MenuItem'
-import type { IMenuItemProps } from './MenuItem'
+import type { MenuItemProps } from './MenuItem'
 import { Burger } from './Burger'
+import { MAILTO, TEL, TELEPHONE } from '@/constants'
 
 import s from './menu.module.css'
 import { useState } from 'react'
 
 export type MenuProps = {
-    items: IMenuItemProps[]
+    items: MenuItemProps[]
     mobile?: boolean
 }
 
@@ -21,9 +22,9 @@ export const Menu: React.FC<MenuProps> = ({ items, mobile = false }) => {
 
     return (
         <menu className={`${s.menu} ${s.desktop}`}>
-            {items.map((x, i) => (
+            {items.map((x) => (
                 <MenuItem
-                    key={i}
+                    key={x.href}
                     {...x}
                 />
             ))}
@@ -39,9 +40,9 @@ const Mob: React.FC<MenuProps> = ({ items }) => {
             setMobileOpen(!open)
         }}>
             <menu className={`${s.menu} ${s.mobile}`}>
-                {items.map((x, i) => (
+                {items.map((x) => (
                     <MenuItem
-                        key={i}
+                        key={x.href}
                         {...x}
                         onClick={() => {
                             setMobileOpen(false)
@@ -52,13 +53,13 @@ const Mob: React.FC<MenuProps> = ({ items }) => {
 
             <div className={s.links}>
                 <a
-                    href='tel:+79219980303'
+                    href={TEL}
                     target={'_blank'} rel="noreferrer"
                 >
-                    +7 921 9980303
+                    {TELEPHONE}
                 </a>
                 <a
-                    href='mailto:inbox@unit4.io'
+                    href={MAILTO}
                     target={'_blank'} rel="noreferrer"
                 >
                     inbox@unit4.io

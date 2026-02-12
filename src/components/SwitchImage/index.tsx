@@ -2,7 +2,7 @@ import { Button } from '../Button'
 import Image from 'next/legacy/image'
 import { useCallback, useMemo, useState } from 'react'
 
-export interface IImageItem {
+export interface ImageItem {
     src: string
     width: number
     height: number
@@ -10,15 +10,15 @@ export interface IImageItem {
     buttonText?: string
 }
 
-export function useSwitchImage(images: IImageItem[]): [IImageItem, () => void] {
+export function useSwitchImage(images: ImageItem[]): [ImageItem, () => void] {
     const [index, setIndex] = useState(0)
     const switchImage = useCallback(
         () => {
             setIndex(
-                (index + 1) % images.length,
+                prev => (prev + 1) % images.length,
             )
         },
-        [index, images],
+        [images.length],
     )
     const image = useMemo(
         () => images[index],
@@ -28,11 +28,11 @@ export function useSwitchImage(images: IImageItem[]): [IImageItem, () => void] {
     return [image, switchImage]
 }
 
-export interface ISwitchImageProps {
-    images: IImageItem[]
+export interface SwitchImageProps {
+    images: ImageItem[]
 }
 
-export const SwitchImage: React.FC<ISwitchImageProps> = props => {
+export const SwitchImage: React.FC<SwitchImageProps> = props => {
     const [image, switchImage] = useSwitchImage(props.images)
     const buttonText = useMemo(
         () => image.buttonText ? image.buttonText : 'Click',
